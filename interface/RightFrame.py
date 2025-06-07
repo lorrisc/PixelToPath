@@ -12,11 +12,10 @@ import shutil
 import subprocess
 import sys
 
-from moteur.potrace_utils import find_potrace
 from moteur.image_utils import png_to_pbm, optimize_svg
 
 # Chemin relatif vers le dossier 'bin' contenant les DLL de GTK/Cairo dans ton projet
-gtk_bin_path = os.path.join(os.path.dirname(sys.argv[0]), "gtk-bin")
+gtk_bin_path = os.path.join(os.path.dirname(sys.argv[0]), "bin/gtk-bin")
 
 # Ajout temporaire au PATH
 os.environ["PATH"] = gtk_bin_path + os.pathsep + os.environ.get("PATH", "")
@@ -238,39 +237,36 @@ class RightFrame(ctk.CTkFrame):
         with open(self.temp_svg_path, "wb") as f:
             pass
 
-        status_potrace = self.check_potrace()
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.abspath(os.path.join(current_dir, '..'))
+        self.potrace_path = os.path.join(project_root, "bin", "potrace-bin", "potrace.exe")
 
-        if status_potrace:
-            cmd = [
-                self.potrace_path,
-                '--svg',
-                '--output', self.temp_svg_path,
-                '--turdsize', str(turdsize),
-                '--alphamax', str(alphamax),
-                '--tight',
-                self.temp_pbm_path
-            ]
+        cmd = [
+            self.potrace_path,
+            '--svg',
+            '--output', self.temp_svg_path,
+            '--turdsize', str(turdsize),
+            '--alphamax', str(alphamax),
+            '--tight',
+            self.temp_pbm_path
+        ]
 
-            # Exécuter la commande potrace
-            result = subprocess.run(cmd, capture_output=True, text=True)
-            if result.returncode != 0:
-                self.error_label.configure(text=f"Erreur durant la vectorisation.")
-                return
+        print("Potrace path:", self.potrace_path)
+        print("Exists?", os.path.exists(self.potrace_path))
 
-            status_optimisation = optimize_svg(self.temp_svg_path)
-            if not status_optimisation:
-                self.error_label.configure(text="Erreur lors de l'optimisation du SVG.")
-                return
+        # Exécuter la commande potrace
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode != 0:
+            self.error_label.configure(text=f"Erreur durant la vectorisation.")
+            return
 
-            # Afficher le SVG dans l'espace 3
-            self.render_svg_preview()
+        status_optimisation = optimize_svg(self.temp_svg_path)
+        if not status_optimisation:
+            self.error_label.configure(text="Erreur lors de l'optimisation du SVG.")
+            return
 
-    def check_potrace(self):
-        self.potrace_path = find_potrace()
-        if not self.potrace_path:
-            self.error_label.configure(text="Potrace non trouvé !\nVérifiez que 'potrace.exe' est bien installé et accessible.")
-            return False
-        return True
+        # Afficher le SVG dans l'espace 3
+        self.render_svg_preview()
 
     def build_espace3(self):
         espace3 = ctk.CTkFrame(self)
