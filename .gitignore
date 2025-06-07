@@ -1,6 +1,4 @@
 /env
 /__pycache__
 /interface/__pycache__
-/interface/widgets/__pycache__
 /moteur/__pycache__
-/moteur/utils/__pycache__
