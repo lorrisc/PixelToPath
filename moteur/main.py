@@ -2,7 +2,7 @@ import os
 import sys
 import logging
 
-from logging_config import setup_logging
+from moteur.logging_config import setup_logging
 from utils.potrace_utils import find_potrace
 from utils.file_utils import choose_file_interactively, process_file
 
