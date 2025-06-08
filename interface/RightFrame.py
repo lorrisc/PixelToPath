@@ -1,32 +1,25 @@
 import customtkinter as ctk
 from PIL import Image, ImageTk
 from tkinter import filedialog
-from tkhtmlview import HTMLLabel
-from svglib.svglib import svg2rlg
-from reportlab.graphics import renderPM
 from tkinterdnd2 import DND_FILES
 
 import uuid
 import os
 import shutil
 import subprocess
-import sys
 
 from moteur.image_utils import png_to_pbm, optimize_svg
 from interface.utils import resource_path
 
-# Utilise resource_path pour localiser gtk-bin
 gtk_bin_path = resource_path("bin/gtk-bin")
 
 # Ajoute gtk-bin au PATH pour que les DLL soient détectées
 os.environ["PATH"] = gtk_bin_path + os.pathsep + os.environ.get("PATH", "")
 
-# Maintenant tu peux importer cairosvg ou utiliser Cairo
 import cairosvg
 
-
 class RightFrame(ctk.CTkFrame):
-    """Zone de droite avec les 3 espaces."""
+    """Zone de droite avec les 3 espaces (configuration, btn execution, rendu)."""
 
     def __init__(self, parent, app_temp_dir):
         super().__init__(parent)
@@ -43,7 +36,6 @@ class RightFrame(ctk.CTkFrame):
         self.build_espace4()
 
     def build_espace1(self):
-        # Frame principal de l'espace 1
         espace1 = ctk.CTkFrame(self, height=300)
         espace1.configure(fg_color="#ebebeb")
         espace1.pack(fill="x", pady=0, padx=10)
@@ -58,15 +50,8 @@ class RightFrame(ctk.CTkFrame):
         self.build_espace1_controls(container)
         self.build_espace1_preview(container)
 
-        # Init chemin temporaire de sortie
-        self.temp_pbm_path = None
-
-        # Variables pour fichier source
-        self.loaded_image_path = None
-
 
     def build_espace1_dropzone(self, parent):
-        # 1) Dropzone / Input File
         self.dropzone_frame = ctk.CTkFrame(parent, width=300, height=300, fg_color="#dbdbdb")
         self.dropzone_frame.pack(side="left", padx=10, pady=0)
         self.dropzone_frame.pack_propagate(False)  # Fixe la taille du frame
@@ -133,6 +118,7 @@ class RightFrame(ctk.CTkFrame):
         self.preview_label = ctk.CTkLabel(preview_frame, text="Prévisualisation")
         self.preview_label.pack(expand=True)
 
+
     def load_image_from_path(self, filepath):
         if not filepath:
             return
@@ -159,7 +145,6 @@ class RightFrame(ctk.CTkFrame):
         with open(self.temp_pbm_path, "wb") as f:
             pass
 
-        # Appeler png_to_pbm avec valeurs par défaut
         self.update_preview()
 
     def load_image(self, event=None):
@@ -202,7 +187,7 @@ class RightFrame(ctk.CTkFrame):
             img.thumbnail((280, 280), Image.Resampling.LANCZOS)
 
             # Créer un fond pour centrer l'image
-            bg = Image.new("L", (280, 280), 219)  # même couleur que preview
+            bg = Image.new("L", (280, 280), 219)
             x = (280 - img.width) // 2
             y = (280 - img.height) // 2
             bg.paste(img, (x, y))
@@ -249,9 +234,6 @@ class RightFrame(ctk.CTkFrame):
             '--tight',
             self.temp_pbm_path
         ]
-
-        print("Potrace path:", self.potrace_path)
-        print("Exists?", os.path.exists(self.potrace_path))
 
         # Exécuter la commande potrace
         result = subprocess.run(cmd, capture_output=True, text=True)

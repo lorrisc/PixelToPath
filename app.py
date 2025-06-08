@@ -1,12 +1,11 @@
 import customtkinter as ctk
-from tkinterdnd2 import TkinterDnD, DND_FILES
-
-from interface.LeftFrame import LeftFrame
-from interface.RightFrame import RightFrame
+from tkinterdnd2 import TkinterDnD
 
 import os
 import tempfile
 
+from interface.LeftFrame import LeftFrame
+from interface.RightFrame import RightFrame
 from interface.utils import resource_path
 
 # Configuration générale
