@@ -1,49 +1,65 @@
-# Vectoriseur PNG vers SVG avec Potrace
+# PixelToPath
 
-Ce script Python permet de vectoriser des images au format PNG en fichiers SVG en utilisant l'outil Potrace. Il offre plusieurs options pour ajuster la qualité et le style de la vectorisation.
+Ce logiciel permet de vectoriser des images au format PNG en fichier SVG en utilisant l'outil [Potrace](https://potrace.sourceforge.net/). Il offre plusieurs options pour ajuster la qualité et le style de la vectorisation.
 
-## Prérequis
+## Version empaquetée
 
-- Système Windows
-- Python 3.x
-- Bibliothèque Python Pillow (`pip install Pillow`)
-- Bibliothèque Python NumPy (`pip install numpy`)
-- Potrace installé et accessible dans votre système
+Une version packagée de PixelToPath est disponible dans la section [Releases](https://github.com/lorrisc/PixelToPath/releases/) du dépôt GitHub. Cette version ne nécessite pas d'installation de Python ni de configuration préalable.
 
-## Installation
+### Téléchargement
+
+1. Rendez-vous sur la page des [Releases](https://github.com/lorrisc/PixelToPath/releases/) ;
+2. Télécharge le fichier EXE correspondant à la dernière version stable.
+
+### Utilisation
+
+1. Double-cliquez sur PixelToPath.exe ;
+2. L’interface graphique s’ouvrira automatiquement ;
+3. Vous pouvez importer une image PNG, configurer les paramètres de vectorisation, puis exporter le fichier au format SVG.
+
+### Remarques
+
+- Cette version est compatible avec Windows 64 bits uniquement.
+- Potrace est intégré dans l'exécutable : aucune installation supplémentaire n'est nécessaire.
+- Si votre antivirus bloque l’application, vous pouvez vérifier l’intégrité du fichier ou l’ajouter à votre liste de confiance (les exécutables générés avec pyinstaller sont parfois faussement détectés comme suspects).
+
+## Version sources
+
+### Prérequis
+
+- Système Windows x64
+- Python 3.11.0
+
+### Installation
 
 1. Assurez-vous que Python est installé sur votre système.
-2. Installez les bibliothèques nécessaires avec pip :
+2. Créer un environnement et l'activer
+```bash
+python -m venv env
+source env/bin/activate
+```
+3. Installez les bibliothèques nécessaires avec pip
 
 ```bash
-pip install Pillow numpy
+pip install -r requirements.txt
 ```
 
-3. Téléchargez et installez Potrace depuis le [site officiel](https://potrace.sourceforge.net/) ou via un gestionnaire de paquets comme apt-get ou brew.
+### Utilisation
 
-## Utilisation
-
-1. Placez votre fichier PNG dans un répertoire "input".
-2. Exécutez le script :
+1. Exécutez le script :
 
 ```bash
-python script.py
+python app.py
 ```
 
-3. Le script analysera l'image et générera plusieurs versions SVG avec différents paramètres pour vous permettre de choisir la meilleure option.
+1. Vous pouvez importer une image PNG, configurer les paramètres de vectorisation, puis exporter le fichier au format SVG.
 
-## Fonctions
+## Exemple
 
-- **find_potrace() :** Localise l'exécutable Potrace sur votre système.
-png_to_pbm(png_path, pbm_path, threshold=128, invert=False, preview=False) : Convertit une image PNG en PBM pour la vectorisation.
+Voici ci-dessous un exemple de l'utilisation de PixelToPath.
 
-- **png_to_svg_potrace(potrace_path, png_path, svg_path, turdsize=2, alphamax=1.0, threshold=128, invert=False, preview=True, version_name="") :** Vectorise une image PNG en SVG en utilisant Potrace.
-  
-- **optimize_svg(svg_path) :** Optimise le fichier SVG généré en supprimant les espaces inutiles.
+- L'image en haut à gauche représente la zone d'import ;
+- L'image en haut à droite est une prévisualisation de l'image SVG (il s'agit actuellement d'une image PBM, qui est un format d'image noir et blanc, potrace utilisera cette image pour le calcul)
+- L'image en bas est le SVG final (il s'agit en réalité d'une image PNG qui vient de la conversion du fichier SVG).
 
-## Conseils
-
-Vérifiez les fichiers **_preview.png** pour voir la binarisation avant la vectorisation.
-Si le résultat contient trop de blanc, essayez la version inversée.
-Ajustez **turdsize** pour supprimer les petits détails indésirables.
-Modifiez **alphamax** pour lisser les angles et obtenir des courbes plus douces.
+![Exemple d'utilisation de PixelToPath](captures/utilisation.png)
