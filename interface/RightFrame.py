@@ -13,11 +13,12 @@ import subprocess
 import sys
 
 from moteur.image_utils import png_to_pbm, optimize_svg
+from interface.utils import resource_path
 
-# Chemin relatif vers le dossier 'bin' contenant les DLL de GTK/Cairo dans ton projet
-gtk_bin_path = os.path.join(os.path.dirname(sys.argv[0]), "bin/gtk-bin")
+# Utilise resource_path pour localiser gtk-bin
+gtk_bin_path = resource_path("bin/gtk-bin")
 
-# Ajout temporaire au PATH
+# Ajoute gtk-bin au PATH pour que les DLL soient détectées
 os.environ["PATH"] = gtk_bin_path + os.pathsep + os.environ.get("PATH", "")
 
 # Maintenant tu peux importer cairosvg ou utiliser Cairo
@@ -237,9 +238,7 @@ class RightFrame(ctk.CTkFrame):
         with open(self.temp_svg_path, "wb") as f:
             pass
 
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-        project_root = os.path.abspath(os.path.join(current_dir, '..'))
-        self.potrace_path = os.path.join(project_root, "bin", "potrace-bin", "potrace.exe")
+        self.potrace_path = resource_path("bin/potrace-bin/potrace.exe")
 
         cmd = [
             self.potrace_path,

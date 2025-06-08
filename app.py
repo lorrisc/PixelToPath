@@ -7,9 +7,11 @@ from interface.RightFrame import RightFrame
 import os
 import tempfile
 
+from interface.utils import resource_path
+
 # Configuration générale
 ctk.set_appearance_mode("Light")
-ctk.set_default_color_theme("interface/themes/yellow.json")
+ctk.set_default_color_theme(resource_path("interface/themes/yellow.json"))
 
 class App(TkinterDnD.Tk):
     """Fenêtre principale."""
@@ -58,6 +60,6 @@ if __name__ == "__main__":
     app = App()
 
     # Favicon
-    app.wm_iconbitmap("interface/assets/logo.ico")
+    app.wm_iconbitmap(resource_path("interface/assets/logo.ico"))
 
     app.mainloop()
