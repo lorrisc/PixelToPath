@@ -36,7 +36,7 @@ Une version packagée de PixelToPath est disponible dans la section [Releases](h
 2. Créer un environnement et l'activer
 ```bash
 python -m venv env
-source env/bin/activate
+.\env\Scripts\Activate
 ```
 3. Installez les bibliothèques nécessaires avec pip
 
