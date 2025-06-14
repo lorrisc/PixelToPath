@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from tkinterdnd2 import TkinterDnD
+import tkinter as tk
 
 import os
 import tempfile
@@ -58,7 +59,11 @@ class App(TkinterDnD.Tk):
 if __name__ == "__main__":
     app = App()
 
-    # Favicon
-    app.wm_iconbitmap(resource_path("interface/assets/logo.ico"))
+    icon_path = resource_path("interface/assets/app_icon.png")
+
+    icon = tk.PhotoImage(file=icon_path)
+    app.iconphoto(True, icon)
+
+    app._icon = icon
 
     app.mainloop()

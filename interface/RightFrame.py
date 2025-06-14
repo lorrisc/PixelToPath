@@ -7,15 +7,16 @@ import uuid
 import os
 import shutil
 import subprocess
+import sys
 
 from moteur.image_utils import png_to_pbm, optimize_svg
 from interface.utils import resource_path
+from utils_system import get_potrace_path
 
-gtk_bin_path = resource_path("bin/gtk-bin")
-
-# Ajoute gtk-bin au PATH pour que les DLL soient détectées
-os.environ["PATH"] = gtk_bin_path + os.pathsep + os.environ.get("PATH", "")
-
+if sys.platform == "win32":
+    gtk_bin_path = resource_path("bin/gtk-bin")
+    os.environ["PATH"] = gtk_bin_path + os.pathsep + os.environ.get("PATH", "")
+    
 import cairosvg
 
 class RightFrame(ctk.CTkFrame):
@@ -223,10 +224,8 @@ class RightFrame(ctk.CTkFrame):
         with open(self.temp_svg_path, "wb") as f:
             pass
 
-        self.potrace_path = resource_path("bin/potrace-bin/potrace.exe")
-
         cmd = [
-            self.potrace_path,
+            get_potrace_path(),
             '--svg',
             '--output', self.temp_svg_path,
             '--turdsize', str(turdsize),

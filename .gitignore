@@ -1,9 +1,5 @@
-/env
-/__pycache__
-/interface/__pycache__
-/moteur/__pycache__
+/env*
 /dist/
 /build/
 *.exe
-*.spec
-notes_package.txt
+*__pycache__

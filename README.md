@@ -9,7 +9,7 @@ Une version packagée de PixelToPath est disponible dans la section [Releases](h
 ### Téléchargement
 
 1. Rendez-vous sur la page des [Releases](https://github.com/lorrisc/PixelToPath/releases/) ;
-2. Télécharge le fichier EXE correspondant à la dernière version stable.
+2. Télécharge le fichier correspondant à la dernière version stable et à votre système.
 
 ### Utilisation
 
@@ -19,7 +19,6 @@ Une version packagée de PixelToPath est disponible dans la section [Releases](h
 
 ### Remarques
 
-- Cette version est compatible avec Windows 64 bits uniquement.
 - Potrace est intégré dans l'exécutable : aucune installation supplémentaire n'est nécessaire.
 - Si votre antivirus bloque l’application, vous pouvez vérifier l’intégrité du fichier ou l’ajouter à votre liste de confiance (les exécutables générés avec pyinstaller sont parfois faussement détectés comme suspects).
 
@@ -27,7 +26,7 @@ Une version packagée de PixelToPath est disponible dans la section [Releases](h
 
 ### Prérequis
 
-- Système Windows x64
+- Système Windows x64 ou Linux
 - Python 3.11.0
 
 ### Installation
@@ -44,12 +43,23 @@ python -m venv env
 pip install -r requirements.txt
 ```
 
+### Commande Linux
+
+1. Installer Potrace
+```bash
+sudo apt install potrace
+```
+
 ### Utilisation
 
 1. Exécutez le script :
 
 ```bash
+# Windows
 python app.py
+
+# Linux
+python3 app.py
 ```
 
 1. Vous pouvez importer une image PNG, configurer les paramètres de vectorisation, puis exporter le fichier au format SVG.
