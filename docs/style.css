@@ -1,0 +1,81 @@
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #ffa500;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+h1,
+h2 {
+    margin-bottom: 0.5rem;
+}
+
+.description,
+.downloads,
+.donate {
+    margin-bottom: 2rem;
+}
+
+.download-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffa500;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #dd9000;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #eee;
+    font-size: 0.9rem;
+}
+
+.logo {
+    max-width: 100px;
+    margin-bottom: 1rem;
+}
+
+.screenshot-img {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.github-btn {
+    background: #24292e;
+    color: white;
+    font-weight: bold;
+}
+
+.github-btn:hover {
+    background: #444c56;
+}

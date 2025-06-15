@@ -24,45 +24,74 @@ Une version packagée de PixelToPath est disponible dans la section [Releases](h
 
 ## Version sources
 
-### Prérequis
+### Windows
 
-- Système Windows x64 ou Linux
+#### Prérequis
+
 - Python 3.11.0
 
-### Installation
+#### Installation
 
-1. Assurez-vous que Python est installé sur votre système.
-2. Créer un environnement et l'activer
+1. Créer un environnement et l'activer
+   
 ```bash
 python -m venv env
 .\env\Scripts\Activate
 ```
-3. Installez les bibliothèques nécessaires avec pip
+
+2. Installez les bibliothèques nécessaires avec pip
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Commande Linux
-
-1. Installer Potrace
-```bash
-sudo apt install potrace
-```
-
-### Utilisation
+#### Utilisation
 
 1. Exécutez le script :
 
 ```bash
-# Windows
 python app.py
+```
 
-# Linux
+2. Vous pouvez importer une image PNG, configurer les paramètres de vectorisation, puis exporter le fichier au format SVG.
+   
+### Linux
+
+#### Prérequis
+
+- Python 3.11.0
+
+#### Installation
+
+1. Créer un environnement et l'activer
+   
+```bash
+python3 -m venv env
+source env/bin/activate
+```
+
+2. Installez les bibliothèques nécessaires avec pip
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Installer Potrace et TKinter
+
+```bash
+sudo apt install potrace
+sudo apt install tkinter
+```
+
+#### Utilisation
+
+1. Exécutez le script :
+
+```bash
 python3 app.py
 ```
 
-1. Vous pouvez importer une image PNG, configurer les paramètres de vectorisation, puis exporter le fichier au format SVG.
+2. Vous pouvez importer une image PNG, configurer les paramètres de vectorisation, puis exporter le fichier au format SVG.
 
 ## Exemple
 
