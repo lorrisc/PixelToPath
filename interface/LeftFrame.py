@@ -1,4 +1,6 @@
 import customtkinter as ctk
+from PIL import Image
+import webbrowser
 
 class LeftFrame(ctk.CTkFrame):
     """Zone de gauche contenant la documentation."""
@@ -8,7 +10,7 @@ class LeftFrame(ctk.CTkFrame):
 
     def build(self):
         # Titre
-        titre = ctk.CTkLabel(self, text="À propos du logiciel", font=ctk.CTkFont(size=18, weight="bold"))
+        titre = ctk.CTkLabel(self, text="About the Software", font=ctk.CTkFont(size=18, weight="bold"))
         titre.pack(pady=(10, 5))
 
         # Description
@@ -18,7 +20,7 @@ class LeftFrame(ctk.CTkFrame):
         )
         lebel_titre_description.pack(pady=(0, 5))
 
-        texte_description = "PixelToPath transforme vos images PNG en graphiques vectoriels SVG de haute qualité en utilisant Potrace. "
+        texte_description = "PixelToPath transforms your PNG images into high-quality SVG vector graphics using Potrace."
 
         label_texte_description = ctk.CTkLabel(
             self, text=texte_description,
@@ -28,7 +30,7 @@ class LeftFrame(ctk.CTkFrame):
 
         # Paramètres
         label_titre_parametre = ctk.CTkLabel(
-            self, text="Paramètres",
+            self, text="Settings",
             font=ctk.CTkFont(size=14, weight="bold")
         )
         label_titre_parametre.pack(pady=(0, 5))
@@ -50,8 +52,31 @@ class LeftFrame(ctk.CTkFrame):
             )
             label_desc.pack(anchor="w")
 
-        add_parameters(self, "Threshold", "Seuil de binarisation manuel. Les pixels au-dessus deviennent blancs, en dessous noirs.")
-        add_parameters(self, "Threshold Auto", "Active la détection automatique du seuil idéal pour la binarisation.")
-        add_parameters(self, "Invert", "Inverse les couleurs de l'image avant vectorisation (noir devient blanc et vice versa).")
-        add_parameters(self, "Turdsize", "Ignore les petits objets en dessous de cette taille (en pixels). Valeur plus élevée = moins de bruit. Preview impossible : opération sur SVG uniquement !")
-        add_parameters(self, "Alphamax", "Contrôle la courbure des contours vectoriels. Valeur plus élevée = contours plus lisses. Preview impossible : opération sur SVG uniquement !")
+        add_parameters(self, "Threshold", "Manual binarization threshold. Pixels above become white, below become black.")
+        add_parameters(self, "Threshold Auto", "Enables automatic detection of the ideal threshold for binarization.")
+        add_parameters(self, "Invert", "Inverts the colors of the image before vectorization (black becomes white and vice versa).")
+        add_parameters(self, "Turdsize", "Ignores small objects below this size (in pixels). Higher value = less noise. Preview not available: operation on SVG only!")
+        add_parameters(self, "Alphamax", "Controls the curvature of vector contours. Higher value = smoother contours. Preview not available: operation on SVG only!")
+
+        # Spacer pour pousser le bouton en bas
+        spacer = ctk.CTkLabel(self, text="")
+        spacer.pack(expand=True)
+
+        # Ouvre le lien PayPal dans le navigateur
+        def open_paypal():
+            webbrowser.open("https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL")
+
+        # Charge l'image du bouton PayPal
+        paypal_image = ctk.CTkImage(
+            light_image=Image.open("interface/assets/paypal.png"),
+            dark_image=Image.open("interface/assets/paypal.png"),
+            size=(200, 78.5)
+        )
+
+        # Bouton cliquable
+        paypal_button = ctk.CTkButton(
+            self, image=paypal_image,
+            text="", command=open_paypal,
+            width=200, height=78.5, fg_color="transparent", hover=False
+        )
+        paypal_button.pack(pady=20)

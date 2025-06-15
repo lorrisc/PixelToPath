@@ -59,7 +59,7 @@ class RightFrame(ctk.CTkFrame):
 
         self.dropzone_label = ctk.CTkLabel(
             self.dropzone_frame,
-            text="Glissez un PNG ici\nou cliquez pour choisir",
+            text="Drag a PNG here\nor click to choose",
             justify="center"
         )
         self.dropzone_label.pack(expand=True)
@@ -79,7 +79,7 @@ class RightFrame(ctk.CTkFrame):
         controls_frame.pack_propagate(False)
 
         # Slider 1 : Seuil (Threshold)
-        label3 = ctk.CTkLabel(controls_frame, text="Seuil (Threshold)")
+        label3 = ctk.CTkLabel(controls_frame, text="Threshold")
         label3.pack(anchor="w", pady=(5,0))
         self.slider_threshold = ctk.CTkSlider(controls_frame, from_=0, to=255, number_of_steps=255)
         self.slider_threshold.set(128)
@@ -87,24 +87,24 @@ class RightFrame(ctk.CTkFrame):
         self.slider_threshold.bind("<ButtonRelease-1>", lambda e: self.update_preview())
 
         # Checkbox 1 : Seuil automatique
-        self.checkbox_auto_threshold = ctk.CTkCheckBox(controls_frame, text="Seuil automatique")
+        self.checkbox_auto_threshold = ctk.CTkCheckBox(controls_frame, text="Threshold Auto")
         self.checkbox_auto_threshold.pack(anchor="w", pady=5)
         self.checkbox_auto_threshold.configure(command=self.update_preview)
 
         # Checkbox 2 : Inverser les couleurs
-        self.checkbox_invert = ctk.CTkCheckBox(controls_frame, text="Inverser les couleurs")
+        self.checkbox_invert = ctk.CTkCheckBox(controls_frame, text="Invert")
         self.checkbox_invert.pack(anchor="w", pady=5)
         self.checkbox_invert.configure(command=self.update_preview)
 
         # Slider 2 : Taille minimale (Turdsize)
-        label1 = ctk.CTkLabel(controls_frame, text="Taille minimale (Turdsize)")
+        label1 = ctk.CTkLabel(controls_frame, text="Turdsize")
         label1.pack(anchor="w", pady=(45,0))
         self.slider_turdsize = ctk.CTkSlider(controls_frame, from_=0, to=10, number_of_steps=100)
         self.slider_turdsize.set(2)
         self.slider_turdsize.pack(fill="x", pady=(0,10))
 
         # Slider 3 : Lissage (Alphamax)
-        label2 = ctk.CTkLabel(controls_frame, text="Lissage (Alphamax)")
+        label2 = ctk.CTkLabel(controls_frame, text="Alphamax")
         label2.pack(anchor="w", pady=(5,0))
         self.slider_alphamax = ctk.CTkSlider(controls_frame, from_=0, to=1.334, number_of_steps=1000)
         self.slider_alphamax.set(1)
@@ -116,7 +116,7 @@ class RightFrame(ctk.CTkFrame):
         preview_frame.pack(side="left", padx=10, pady=0)
         preview_frame.pack_propagate(False)
 
-        self.preview_label = ctk.CTkLabel(preview_frame, text="Prévisualisation")
+        self.preview_label = ctk.CTkLabel(preview_frame, text="Preview")
         self.preview_label.pack(expand=True)
 
 
@@ -160,7 +160,7 @@ class RightFrame(ctk.CTkFrame):
             # Remplace le filedialog : injecte manuellement le path
             self.load_image_from_path(filepath)
         else:
-            self.error_label.configure(text="Seuls les fichiers PNG sont acceptés")
+            self.error_label.configure(text="Only PNG files are accepted")
 
     def update_preview(self):
         if not self.loaded_image_path or not self.temp_pbm_path:
@@ -203,7 +203,7 @@ class RightFrame(ctk.CTkFrame):
         # Bouton centré
         convert_button = ctk.CTkButton(
             espace2,
-            text="Convertir en SVG",
+            text="Convert to SVG",
             height=40,
             width=200,
             command=self.convert_to_svg 
@@ -212,7 +212,7 @@ class RightFrame(ctk.CTkFrame):
 
     def convert_to_svg(self):
         if not self.temp_pbm_path:
-            self.error_label.configure(text="Aucun fichier PBM à convertir.")
+            self.error_label.configure(text="No PBM files to convert.")
             return
         
         # Récupérer les paramètres actuels depuis sliders/checks
@@ -237,12 +237,12 @@ class RightFrame(ctk.CTkFrame):
         # Exécuter la commande potrace
         result = subprocess.run(cmd, capture_output=True, text=True)
         if result.returncode != 0:
-            self.error_label.configure(text=f"Erreur durant la vectorisation.")
+            self.error_label.configure(text=f"Error during vectorization.")
             return
 
         status_optimisation = optimize_svg(self.temp_svg_path)
         if not status_optimisation:
-            self.error_label.configure(text="Erreur lors de l'optimisation du SVG.")
+            self.error_label.configure(text="Error during SVG optimization.")
             return
 
         # Afficher le SVG dans l'espace 3
@@ -254,13 +254,13 @@ class RightFrame(ctk.CTkFrame):
         espace3.pack(fill="x", expand=False, padx=20, pady=0, anchor="w")
 
         # Label pour afficher l'aperçu PNG généré depuis le SVG
-        self.svg_preview_label = ctk.CTkLabel(espace3, text="Aperçu SVG non disponible")
+        self.svg_preview_label = ctk.CTkLabel(espace3, text="SVG preview not available")
         self.svg_preview_label.pack(expand=True, pady=0, anchor="w")
 
         # Bouton de téléchargement
         download_button = ctk.CTkButton(
             espace3,
-            text="Télécharger le SVG",
+            text="Download SVG",
             command=self.download_svg,
             width=180,
             height=36
@@ -269,7 +269,7 @@ class RightFrame(ctk.CTkFrame):
 
     def render_svg_preview(self):
         if not self.temp_svg_path:
-            self.svg_preview_label.configure(image=None, text="Aucun SVG généré")
+            self.svg_preview_label.configure(image=None, text="No SVG generated")
             return
 
         try:
@@ -295,18 +295,18 @@ class RightFrame(ctk.CTkFrame):
             # Nettoyer le PNG temporaire
             os.remove(temp_png_path)
         except Exception as e:
-            self.svg_preview_label.configure(image=None, text=f"Erreur SVG : {e}")
+            self.svg_preview_label.configure(image=None, text=f"SVG error : {e}")
 
 
     def download_svg(self):
         if not hasattr(self, 'temp_svg_path') or not self.temp_svg_path:
-            self.error_label.configure(text="Aucun SVG généré à télécharger.")
+            self.error_label.configure(text="No SVG generated to download.")
             return
 
         save_path = filedialog.asksaveasfilename(
             defaultextension=".svg",
             filetypes=[("Fichiers SVG", "*.svg")],
-            title="Enregistrer sous..."
+            title="Save as..."
         )
 
         if save_path:
