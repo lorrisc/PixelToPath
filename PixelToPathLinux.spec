@@ -1,7 +1,6 @@
-# PixelToPath.spec
-
+# PixelToPath-onefile.spec
 from PyInstaller.utils.hooks import collect_submodules
-from PyInstaller.building.build_main import Analysis, PYZ, EXE, COLLECT
+from PyInstaller.building.build_main import Analysis, PYZ, EXE
 import sys
 import os
 
@@ -18,6 +17,11 @@ a = Analysis(
     hiddenimports=[
         'PIL._tkinter_finder',
         *collect_submodules('cairosvg'),
+        *collect_submodules('customtkinter'),
+        'tkinter',
+        'tkinter.ttk',
+        'tkinter.filedialog',
+        'tkinter.messagebox',
     ],
     hookspath=[],
     runtime_hooks=[],
@@ -33,22 +37,17 @@ pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 exe = EXE(
     pyz,
     a.scripts,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
     [],
-    exclude_binaries=True,
     name='PixelToPath',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
-    console=False,  # garde caché le terminal (équivalent --noconsole)
-)
-
-coll = COLLECT(
-    exe,
-    a.binaries,
-    a.zipfiles,
-    a.datas,
-    strip=False,
-    upx=True,
-    name='PixelToPath'
-)
+    upx_exclude=[],
+    runtime_tmpdir=None,    
+    console=False,
+    icon='interface/assets/app_icon.ico',
+)   
