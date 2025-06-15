@@ -1,6 +1,7 @@
 import customtkinter as ctk
 from PIL import Image
 import webbrowser
+from interface.utils import resource_path
 
 class LeftFrame(ctk.CTkFrame):
     """Zone de gauche contenant la documentation."""
@@ -68,8 +69,8 @@ class LeftFrame(ctk.CTkFrame):
 
         # Charge l'image du bouton PayPal
         paypal_image = ctk.CTkImage(
-            light_image=Image.open("interface/assets/paypal.png"),
-            dark_image=Image.open("interface/assets/paypal.png"),
+            light_image=Image.open(resource_path("interface/assets/paypal.png")),
+            dark_image=Image.open(resource_path("interface/assets/paypal.png")),
             size=(200, 78.5)
         )
 
