@@ -37,25 +37,27 @@ class RightFrame(ctk.CTkFrame):
         self.build_espace4()
 
     def build_espace1(self):
-        espace1 = ctk.CTkFrame(self, height=300)
-        espace1.configure(fg_color="#ebebeb")
-        espace1.pack(fill="x", pady=0, padx=10)
+        espace1 = ctk.CTkFrame(self, height=300, fg_color="#ebebeb")
+        espace1.pack(fill="x", padx=10)
 
-        # Container horizontal qui contiendra dropzone, contrôles, preview
-        container = ctk.CTkFrame(espace1)
-        container.configure(fg_color="#ebebeb")
+        # Container grid
+        container = ctk.CTkFrame(espace1, fg_color="#ebebeb")
         container.pack(fill="x", expand=True)
 
-        # Construire les élements de l'espace 1
+        container.columnconfigure(0, weight=3)
+        container.columnconfigure(1, weight=2)
+        container.columnconfigure(2, weight=3)
+
         self.build_espace1_dropzone(container)
         self.build_espace1_controls(container)
         self.build_espace1_preview(container)
 
 
     def build_espace1_dropzone(self, parent):
-        self.dropzone_frame = ctk.CTkFrame(parent, width=300, height=300, fg_color="#dbdbdb")
-        self.dropzone_frame.pack(side="left", padx=10, pady=0)
-        self.dropzone_frame.pack_propagate(False)  # Fixe la taille du frame
+        self.dropzone_frame = ctk.CTkFrame(parent, fg_color="#dbdbdb")
+        self.dropzone_frame.grid(row=0, column=0, sticky="nsew", padx=10, pady=5)
+        self.dropzone_frame.configure(height=300)
+        self.dropzone_frame.grid_propagate(False)
 
         self.dropzone_label = ctk.CTkLabel(
             self.dropzone_frame,
@@ -64,21 +66,18 @@ class RightFrame(ctk.CTkFrame):
         )
         self.dropzone_label.pack(expand=True)
 
-        # Clic sur dropzone pour ouvrir dialog fichier
         self.dropzone_frame.bind("<Button-1>", self.load_image)
         self.dropzone_label.bind("<Button-1>", self.load_image)
 
-        # Activation du drag-and-drop
         self.dropzone_frame.drop_target_register(DND_FILES)
         self.dropzone_frame.dnd_bind("<<Drop>>", self.on_file_drop)
 
 
     def build_espace1_controls(self, parent):
-        controls_frame = ctk.CTkFrame(parent, width=300, fg_color="#ebebeb")
-        controls_frame.pack(side="left", fill="y", padx=10, pady=0)
-        controls_frame.pack_propagate(False)
+        controls_frame = ctk.CTkFrame(parent, fg_color="#ebebeb")
+        controls_frame.grid(row=0, column=1, sticky="nsew", padx=10, pady=5)
+        controls_frame.grid_propagate(False)
 
-        # Slider 1 : Seuil (Threshold)
         label3 = ctk.CTkLabel(controls_frame, text="Threshold")
         label3.pack(anchor="w", pady=(5,0))
         self.slider_threshold = ctk.CTkSlider(controls_frame, from_=0, to=255, number_of_steps=255)
@@ -86,24 +85,20 @@ class RightFrame(ctk.CTkFrame):
         self.slider_threshold.pack(fill="x", pady=(0,10))
         self.slider_threshold.bind("<ButtonRelease-1>", lambda e: self.update_preview())
 
-        # Checkbox 1 : Seuil automatique
         self.checkbox_auto_threshold = ctk.CTkCheckBox(controls_frame, text="Threshold Auto")
         self.checkbox_auto_threshold.pack(anchor="w", pady=5)
         self.checkbox_auto_threshold.configure(command=self.update_preview)
 
-        # Checkbox 2 : Inverser les couleurs
         self.checkbox_invert = ctk.CTkCheckBox(controls_frame, text="Invert")
         self.checkbox_invert.pack(anchor="w", pady=5)
         self.checkbox_invert.configure(command=self.update_preview)
 
-        # Slider 2 : Taille minimale (Turdsize)
         label1 = ctk.CTkLabel(controls_frame, text="Turdsize")
         label1.pack(anchor="w", pady=(45,0))
         self.slider_turdsize = ctk.CTkSlider(controls_frame, from_=0, to=10, number_of_steps=100)
         self.slider_turdsize.set(2)
         self.slider_turdsize.pack(fill="x", pady=(0,10))
 
-        # Slider 3 : Lissage (Alphamax)
         label2 = ctk.CTkLabel(controls_frame, text="Alphamax")
         label2.pack(anchor="w", pady=(5,0))
         self.slider_alphamax = ctk.CTkSlider(controls_frame, from_=0, to=1.334, number_of_steps=1000)
@@ -112,9 +107,10 @@ class RightFrame(ctk.CTkFrame):
 
 
     def build_espace1_preview(self, parent):
-        preview_frame = ctk.CTkFrame(parent, width=300, height=300, fg_color="#dbdbdb")
-        preview_frame.pack(side="left", padx=10, pady=0)
-        preview_frame.pack_propagate(False)
+        preview_frame = ctk.CTkFrame(parent, fg_color="#dbdbdb")
+        preview_frame.grid(row=0, column=2, sticky="nsew", padx=10, pady=5)
+        preview_frame.configure(height=300)
+        preview_frame.grid_propagate(False)
 
         self.preview_label = ctk.CTkLabel(preview_frame, text="Preview")
         self.preview_label.pack(expand=True)
@@ -208,7 +204,7 @@ class RightFrame(ctk.CTkFrame):
             width=200,
             command=self.convert_to_svg 
         )
-        convert_button.pack(pady=0, anchor="w")
+        convert_button.pack(pady=0)
 
     def convert_to_svg(self):
         if not self.temp_pbm_path:
@@ -255,7 +251,8 @@ class RightFrame(ctk.CTkFrame):
 
         # Label pour afficher l'aperçu PNG généré depuis le SVG
         self.svg_preview_label = ctk.CTkLabel(espace3, text="SVG preview not available")
-        self.svg_preview_label.pack(expand=True, pady=0, anchor="w")
+        self.svg_preview_label.pack(pady=10)
+        self.svg_preview_label.pack_configure(anchor="center")
 
         # Bouton de téléchargement
         download_button = ctk.CTkButton(
@@ -265,7 +262,8 @@ class RightFrame(ctk.CTkFrame):
             width=180,
             height=36
         )
-        download_button.pack(pady=15, anchor="w")
+        download_button.pack(pady=15)
+        download_button.pack_configure(anchor="center")
 
     def render_svg_preview(self):
         if not self.temp_svg_path:
@@ -320,6 +318,7 @@ class RightFrame(ctk.CTkFrame):
 
         # Message d'erreur
         self.error_label = ctk.CTkLabel(espace4, text="", text_color="red")
-        self.error_label.pack(expand=True, pady=0, anchor="w")
+        self.error_label.pack(pady=0)
+        self.error_label.pack_configure(anchor="center")
 
         

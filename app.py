@@ -18,7 +18,14 @@ class App(TkinterDnD.Tk):
     def __init__(self):
         super().__init__()
         self.title("PixelToPath")
-        self.geometry("1350x900+30+30")
+
+        screen_width = self.winfo_screenwidth()
+        screen_height = self.winfo_screenheight()
+
+        app_width = int(screen_width * 0.8)
+        app_height = int(screen_height * 0.8)
+
+        self.geometry(f"{app_width}x{app_height}+30+30")
 
         # Création d'un répertoire temporaire pour l'application
         self.app_temp_dir = os.path.join(tempfile.gettempdir(), "PixelToPath")
@@ -26,18 +33,34 @@ class App(TkinterDnD.Tk):
 
         self.build_interface()
         self.protocol("WM_DELETE_WINDOW", self.on_close)
-
+    
     def build_interface(self):
+        self.rowconfigure(0, weight=1)
+        self.columnconfigure(0, weight=1)
+
         frame_principal = ctk.CTkFrame(self, fg_color="#ebebeb")
-        frame_principal.pack(fill="both", expand=True, padx=10, pady=10)
+        frame_principal.grid(row=0, column=0, sticky="nsew", padx=10, pady=10)
+        frame_principal.columnconfigure(0, weight=1)
+        frame_principal.columnconfigure(1, weight=5)
+        frame_principal.rowconfigure(0, weight=1)
 
         self.doc_frame = LeftFrame(frame_principal)
-        self.doc_frame.configure(fg_color="#dbdbdb")  # gauche gris foncé
-        self.doc_frame.pack(side="left", fill="y", padx=(0, 10))
+        self.doc_frame.grid(row=0, column=0, sticky="nsew", padx=(0, 10))
 
         self.right_frame = RightFrame(frame_principal, app_temp_dir=self.app_temp_dir)
-        self.right_frame.configure(fg_color="#ebebeb")  # droite même couleur que fond app
-        self.right_frame.pack(side="right", fill="both", expand=True)
+        self.right_frame.grid(row=0, column=1, sticky="nsew")
+        self.right_frame.configure(fg_color="#ebebeb")
+
+        # frame_principal = ctk.CTkFrame(self, fg_color="#ebebeb")
+        # frame_principal.pack(fill="both", expand=True, padx=10, pady=10)
+
+        # self.doc_frame = LeftFrame(frame_principal)
+        # self.doc_frame.configure(fg_color="#dbdbdb")  # gauche gris foncé
+        # self.doc_frame.pack(side="left", fill="y", padx=(0, 10))
+
+        # self.right_frame = RightFrame(frame_principal, app_temp_dir=self.app_temp_dir)
+        # self.right_frame.configure(fg_color="#ebebeb")  # droite même couleur que fond app
+        # self.right_frame.pack(side="right", fill="both", expand=True)
 
     def on_close(self):
         # Nettoyer les fichiers temporaires
