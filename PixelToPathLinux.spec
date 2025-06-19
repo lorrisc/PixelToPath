@@ -13,6 +13,7 @@ a = Analysis(
     datas=[
         ('interface', 'interface'),
         ('moteur', 'moteur'),
+        ('bin/potrace-1.16.linux-x86_64/potrace', 'bin/potrace-1.16.linux-x86_64/'),
     ],
     hiddenimports=[
         'PIL._tkinter_finder',

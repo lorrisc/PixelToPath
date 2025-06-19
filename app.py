@@ -78,8 +78,17 @@ class App(TkinterDnD.Tk):
 
         self.destroy()  # Fermer la fenêtre
 
+def get_scale():
+    root = tk.Tk()
+    dpi = root.winfo_fpixels('1i')
+    root.destroy()
+    return dpi / 96
 
 if __name__ == "__main__":
+    scale = get_scale()
+    ctk.set_widget_scaling(scale)
+    ctk.set_window_scaling(scale)
+
     app = App()
 
     icon_path = resource_path("interface/assets/app_icon.png")
