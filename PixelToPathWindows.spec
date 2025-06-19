@@ -1,5 +1,6 @@
 # PixelToPath.spec
 
+from PyInstaller.building.build_main import COLLECT
 from PyInstaller.utils.hooks import collect_submodules
 from PyInstaller.building.build_main import Analysis, PYZ, EXE
 import sys
@@ -35,13 +36,23 @@ pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 exe = EXE(
     pyz,
     a.scripts,
-    a.binaries + a.zipfiles + a.datas,  # on inclut tout ici
-    exclude_binaries=False,  # IMPORTANT pour mode onefile
+    [],
+    exclude_binaries=True,  # Important pour onedir
     name='PixelToPath',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
     upx=False,
-    console=False,  # pas de terminal
+    console=False,
+    icon='interface/assets/app_icon.ico'
 )
 
+coll = COLLECT(
+    exe,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
+    strip=False,
+    upx=False,
+    name='PixelToPath'
+)
