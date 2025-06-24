@@ -1,0 +1,2 @@
+# ignorer les dossiers de binaires
+bin/** linguist-vendored
