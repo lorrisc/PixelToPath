@@ -28,16 +28,64 @@ class RightFrame(ctk.CTkFrame):
         self.temp_pbm_path = None # Chemin temporaire pour le fichier PBM
         self.loaded_image_path = None  # Chemin de l'image chargée
         self.temp_svg_path = None  # Chemin temporaire pour le fichier SVG
+
+        # Ajout d'un canvas + scrollbar
+        self.canvas = ctk.CTkCanvas(self, borderwidth=0, highlightthickness=0, bg="#ebebeb")
+        self.scrollbar = ctk.CTkScrollbar(self, orientation="vertical", command=self.canvas.yview)
+        self.scrollable_frame = ctk.CTkFrame(self.canvas, fg_color="#ebebeb")
+
+        self.scrollable_frame.bind(
+            "<Configure>",
+            lambda e: self.canvas.configure(
+                scrollregion=self.canvas.bbox("all")
+            )
+        )
+
+        self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
+        self.window_frame = self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
+        self.canvas.configure(yscrollcommand=self.scrollbar.set)
+        self.canvas.bind("<Configure>", self._on_canvas_configure)
+
+        self.canvas.pack(side="left", fill="both", expand=True)
+        self.scrollbar.pack(side="right", fill="y")
+
+        # Pour le scroll à la molette
+        self.canvas.bind_all("<MouseWheel>", self._on_mousewheel)
+        self.canvas.bind("<Enter>", self._bind_mousewheel)
+        self.canvas.bind("<Leave>", self._unbind_mousewheel)
+
         self.build()
 
-    def build(self):
-        self.build_espace1()
-        self.build_espace2()
-        self.build_espace3()
-        self.build_espace4()
+    def _on_canvas_configure(self, event):
+        # Ajuster la largeur du frame scrollable à celle du canvas
+        canvas_width = event.width
+        self.canvas.itemconfig(self.window_frame, width=canvas_width)
+        
+    def _on_mousewheel(self, event):
+        # Empêche le scroll négatif
+        first, last = self.canvas.yview()
+        if event.delta > 0 and first <= 0:
+            return
+        if event.delta < 0 and last >= 1:
+            return
+        self.canvas.yview_scroll(int(-1*(event.delta/120)), "units")
 
-    def build_espace1(self):
-        espace1 = ctk.CTkFrame(self, height=300, fg_color="#ebebeb")
+        
+    def _bind_mousewheel(self, event):
+        self.canvas.bind_all("<MouseWheel>", self._on_mousewheel)
+
+    def _unbind_mousewheel(self, event):
+        self.canvas.unbind_all("<MouseWheel>")
+
+    def build(self):
+        # Remplacer self par self.scrollable_frame pour tout builder dedans
+        self.build_espace1(self.scrollable_frame)
+        self.build_espace2(self.scrollable_frame)
+        self.build_espace3(self.scrollable_frame)
+        self.build_espace4(self.scrollable_frame)
+
+    def build_espace1(self, parent):
+        espace1 = ctk.CTkFrame(parent, height=300, fg_color="#ebebeb")
         espace1.pack(fill="x", padx=10)
 
         # Container grid
@@ -191,8 +239,8 @@ class RightFrame(ctk.CTkFrame):
             self.tk_preview_image = ImageTk.PhotoImage(bg)
             self.preview_label.configure(image=self.tk_preview_image, text="")
 
-    def build_espace2(self):
-        espace2 = ctk.CTkFrame(self)
+    def build_espace2(self, parent):
+        espace2 = ctk.CTkFrame(parent)
         espace2.configure(fg_color="#ebebeb")
         espace2.pack(fill="x", padx=20, pady=30, anchor="w")
 
@@ -244,8 +292,8 @@ class RightFrame(ctk.CTkFrame):
         # Afficher le SVG dans l'espace 3
         self.render_svg_preview()
 
-    def build_espace3(self):
-        espace3 = ctk.CTkFrame(self)
+    def build_espace3(self, parent):
+        espace3 = ctk.CTkFrame(parent)
         espace3.configure(fg_color="#ebebeb")
         espace3.pack(fill="x", expand=False, padx=20, pady=0, anchor="w")
 
@@ -311,8 +359,8 @@ class RightFrame(ctk.CTkFrame):
             shutil.copyfile(self.temp_svg_path, save_path)
 
 
-    def build_espace4(self):
-        espace4 = ctk.CTkFrame(self)
+    def build_espace4(self, parent):
+        espace4 = ctk.CTkFrame(parent)
         espace4.configure(fg_color="#ebebeb")
         espace4.pack(fill="x", padx=20, pady=30, anchor="w")
 
@@ -321,4 +369,3 @@ class RightFrame(ctk.CTkFrame):
         self.error_label.pack(pady=0)
         self.error_label.pack_configure(anchor="center")
 
-        

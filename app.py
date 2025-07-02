@@ -40,12 +40,12 @@ class App(TkinterDnD.Tk):
 
         frame_principal = ctk.CTkFrame(self, fg_color="#ebebeb")
         frame_principal.grid(row=0, column=0, sticky="nsew", padx=10, pady=10)
-        frame_principal.columnconfigure(0, weight=1)
-        frame_principal.columnconfigure(1, weight=5)
+        frame_principal.columnconfigure(0, weight=0)
+        frame_principal.columnconfigure(1, weight=1)
         frame_principal.rowconfigure(0, weight=1)
 
         self.doc_frame = LeftFrame(frame_principal)
-        self.doc_frame.grid(row=0, column=0, sticky="nsew", padx=(0, 10))
+        self.doc_frame.grid(row=0, column=0, sticky="ns", padx=(0, 10))
 
         self.right_frame = RightFrame(frame_principal, app_temp_dir=self.app_temp_dir)
         self.right_frame.grid(row=0, column=1, sticky="nsew")
