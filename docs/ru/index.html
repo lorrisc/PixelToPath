@@ -1,47 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1.15.0/tarteaucitron.min.js"></script>
-    <script>
-    tarteaucitron.init({
-    privacyUrl: "/privacy.html", // optionnel mais recommandé
-    hashtag: "#tarteaucitron",
-    cookieName: "tarteaucitron",
-    orientation: "bottom",
-    showAlertSmall: false,
-    cookieslist: true,
-    adblocker: false,
-    AcceptAllCta: true,
-    highPrivacy: true, // consentement explicite
-    handleBrowserDNTRequest: false,
-    removeCredit: true,
-    moreInfoLink: true,
-    useExternalCss: false
-    });
-    </script>
-    <script>
-    tarteaucitron.services.gtag = {
-    key: "gtag",
-    type: "analytic",
-    name: "Google Analytics",
-    uri: "https://policies.google.com/privacy",
-    needConsent: true,
-    cookies: ['_ga', '_gid'],
-    js: function () {
-        "use strict";
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VMKNTZ9DWL';
-        document.getElementsByTagName('head')[0].appendChild(s);
+<script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1.15.0/tarteaucitron.min.js"></script>
 
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-VMKNTZ9DWL', { anonymize_ip: true });
-    }
-    };
+<script>
+tarteaucitron.init({
+    "privacyUrl": "/privacy.html",
+    "hashtag": "#tarteaucitron",
+    "cookieName": "tarteaucitron",
+    "orientation": "bottom",
+    "groupServices": false, // Optionnel : groupe les services par catégorie
+    "showAlertSmall": false,
+    "cookieslist": true,
+    "closePopup": false,
+    "showIcon": true,
+    "iconPosition": "BottomRight",
+    "adblocker": false,
+    "AcceptAllCta": true,
+    "highPrivacy": true,
+    "handleBrowserDNTRequest": false,
+    "removeCredit": true,
+    "moreInfoLink": true,
+    "useExternalCss": false
+});
+</script>
+
+<script type="text/javascript">
+    // On définit l'ID avant de lancer le job
+    tarteaucitron.user.gtagUa = 'G-VMKNTZ9DWL';
+    tarteaucitron.user.gtagMore = { 'anonymize_ip': true };
+    
+    // On ajoute le service GA4 à la liste des jobs
     (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
-    </script>
+</script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
