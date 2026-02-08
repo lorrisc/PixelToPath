@@ -1,139 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PixelToPath - PNG to SVG Converter</title>
-        <meta
-            name="description"
-            content="PixelToPath is a free tool that converts PNG images to high-quality SVG vector graphics using Potrace."
-        />
-        <meta
-            name="keywords"
-            content="PixelToPath, PNG to SVG, image converter, vector graphics, Potrace, open source, download software"
-        />
-        <meta name="author" content="Your Name" />
-        <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>PixelToPath - Free PNG to SVG Converter | Open Source Software</title>
+    <meta name="description" content="Download PixelToPath, the best free offline software to convert PNG images to SVG vectors. Unlimited conversions, privacy-focused, based on Potrace. Windows & Linux.">
+    <meta name="keywords" content="PNG to SVG, raster to vector, image converter, Potrace GUI, free svg converter, offline vectorizer, open source design tool">
+    <meta name="author" content="Lorris C.">
+    
+    <meta property="og:title" content="PixelToPath - Turn Pixels into Vectors">
+    <meta property="og:description" content="Stop using slow online converters. Get PixelToPath for free. Fast, private, and unlimited PNG to SVG conversion.">
+    <meta property="og:image" content="https://votre-site.com/images/screenshot.png">
+    <meta property="og:url" content="https://votre-site.com/">
+    <meta property="og:type" content="website">
 
-        <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-        <link rel="shortcut icon" href="favicon/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="PixelToPath" />
-        <link rel="manifest" href="favicon/site.webmanifest" />
-    </head>
-    <body>
-        <header>
-            <img src="images/logo.png" alt="PixelToPath Logo" class="logo" />
-            <h1>PixelToPath: convert PNG to SVG</h1>
-            <p>
-                Convert your PNG images to clean, scalable SVG vector graphics
-            </p>
-        </header>
+    <link rel="canonical" href="https://votre-site.com/" />
+    <link rel="alternate" hreflang="en" href="https://votre-site.com/" />
+    <link rel="alternate" hreflang="fr" href="https://votre-site.com/fr/" />
+    <link rel="alternate" hreflang="x-default" href="https://votre-site.com/" />
 
-        <main>
-            <section class="description">
-                <h2>About</h2>
-                <p>
-                    PixelToPath is a lightweight, cross-platform tool that uses
-                    Potrace to convert bitmap PNG images into precise and clean
-                    SVG vector graphics. Ideal for designers, developers, and
-                    anyone needing high-quality vectorization.
-                </p>
-            </section>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+</head>
+<body>
 
-            <section class="downloads">
-                <h2>Download</h2>
-                <div class="download-links">
-                    <a
-                        href="https://github.com/lorrisc/PixelToPath/releases/download/v1.0.0/PixelToPath-v1.0.0_Windows.zip"
-                        class="btn"
-                        >Download for Windows (.zip)</a
-                    >
-                    <a
-                        href="https://github.com/lorrisc/PixelToPath/releases/download/v1.0.0/PixelToPath-v1.0.0_Linux.tar.gz"
-                        class="btn"
-                        >Download for Linux (.tar.gz)</a
-                    >
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand">
+                <img src="images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+                PixelToPath
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#guide">How to Use</a>
+                <a href="#download" class="nav-btn">Download</a>
+                <div class="lang-switch">
+                    <span>🇺🇸 EN</span>
+                    <div class="lang-dropdown">
+                        <a href="index.html">🇺🇸 English</a>
+                        <a href="fr/index.html">🇫🇷 Français</a>
+                        <a href="es/index.html">🇪🇸 Español</a>
+                        <a href="de/index.html">🇩🇪 Deutsch</a>
+                        <a href="pt/index.html">🇧🇷 Português (Brasil)</a>
+                        <a href="zh/index.html">🇨🇳 中文 (简体)</a>
+                        <a href="ar/index.html">🇸🇦 العربية</a>
+                        <a href="ru/index.html">🇷🇺 Русский</a>
+                        <a href="ja/index.html">🇯🇵 日本語</a>
+                        <a href="hi/index.html">🇮🇳 हिन्दी</a>
+                    </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </nav>
 
-            <section class="sourceforge">
-                <h2>Download on SourceForge</h2>
-                <p>
-                    You can also download PixelToPath from SourceForge:
-                </p>
-                <a
-                    href="https://sourceforge.net/projects/pixeltopath/"
-                    target="_blank"
-                    class="btn sourceforge-btn"
-                >
-                    <img
-                        src="images/logo.png"
-                        alt="SourceForge"
-                        style="
-                            width: 20px;
-                            vertical-align: middle;
-                            margin-right: 8px;
-                        "
-                    />
-                    Download on SourceForge
+    <header class="hero">
+        <div class="container hero-content">
+            <h1>Convert PNG to SVG Instantly & Privately</h1>
+            <p class="hero-text">
+                PixelToPath is a free, open-source desktop tool that transforms your bitmap images into clean, scalable vector graphics. No file uploads, no waiting lists, no subscription fees.
+            </p>
+            <div class="double-buttons">
+                <a href="#download" class="btn primary-btn">Download Now (Free)</a>
+                <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="btn secondary-btn">View Source Code</a>
+            </div>
+            <img src="images/screenshot.png" alt="PixelToPath software interface converting an image" class="hero-image shadow">
+        </div>
+    </header>
+
+    <main>
+        <section class="trust-strip">
+            <div class="container">
+                <p>Powered by <strong>Potrace</strong> technology • 100% <strong>Open Source</strong> • <strong>Offline</strong> Privacy</p>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <div class="container">
+                <h2 class="section-title">Why Choose PixelToPath over Online Converters?</h2>
+                <div class="grid-3">
+                    <article class="card">
+                        <h3>🔒 100% Private & Offline</h3>
+                        <p>Most online converters upload your images to a remote server. PixelToPath runs locally on your computer. Your designs, logos, and photos never leave your device.</p>
+                    </article>
+                    <article class="card">
+                        <h3>⚡ Lightning Fast Results</h3>
+                        <p>Don't wait for upload bars or processing queues. Built with lightweight code, PixelToPath converts images in milliseconds using the powerful Potrace algorithm.</p>
+                    </article>
+                    <article class="card">
+                        <h3>♾️ Unlimited Conversions</h3>
+                        <p>No "3 free credits per day" limits. Convert as many PNGs as you want, whenever you want. Ideal for batch processing assets for web development or graphic design.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="guide" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">How to Convert Raster to Vector</h2>
+                <div class="guide-wrapper">
+                    <div class="guide-text">
+                        <p>Vectorization is essential for designers who need to scale logos without losing quality. Here is how to use PixelToPath:</p>
+                        <ol class="steps-list">
+                            <li><strong>Download and Install:</strong> Get the version for Windows or Linux below.</li>
+                            <li><strong>Select Image:</strong> Launch the app and pick your .PNG file.</li>
+                            <li><strong>Configure:</strong> Adjust settings if needed (simplification, opacity).</li>
+                            <li><strong>Export:</strong> Click "Convert" and save your new .SVG file.</li>
+                        </ol>
+                        <p>The resulting SVG path is compatible with Adobe Illustrator, Inkscape, Figma, and web browsers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="section download-section">
+            <div class="container text-center">
+                <h2>Get PixelToPath Today</h2>
+                <p>Join thousands of users converting images simply.</p>
+                
+                <div class="double-buttons">
+                    <a href="https://github.com/lorrisc/PixelToPath/releases/download/v1.0.0/PixelToPath-v1.0.0_Windows.zip" class="btn big-btn win-btn">
+                        <span>Download for <strong>Windows</strong></span>
+                        <small>.zip (64-bit)</small>
+                    </a>
+                    <a href="https://github.com/lorrisc/PixelToPath/releases/download/v1.0.0/PixelToPath-v1.0.0_Linux.tar.gz" class="btn big-btn lin-btn">
+                        <span>Download for <strong>Linux</strong></span>
+                        <small>.tar.gz</small>
+                    </a>
+                </div>
+
+                <div class="alternative-downloads">
+                    <p>Also available on: 
+                        <a href="https://sourceforge.net/projects/pixeltopath/" target="_blank">SourceForge</a> | 
+                        <a href="https://github.com/lorrisc/PixelToPath/releases" target="_blank">GitHub Releases</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+            <div class="container">
+                <h3>Support Open Source Development</h3>
+                <p>PixelToPath is free to use. If this tool helped you save time, consider buying me a coffee.</p>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">
+                    ❤️ Donate via PayPal
                 </a>
-            </section>
+            </div>
+        </section>
+    </main>
 
-            <section class="github">
-                <h2>Source Code</h2>
-                <p>
-                    PixelToPath is open source! You can view the code, report
-                    issues, or contribute via GitHub:
-                </p>
-                <a
-                    href="https://github.com/lorrisc/PixelToPath"
-                    target="_blank"
-                    class="btn github-btn"
-                >
-                    <img
-                        src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                        alt="GitHub"
-                        style="
-                            width: 20px;
-                            vertical-align: middle;
-                            margin-right: 8px;
-                        "
-                    />
-                    View on GitHub
-                </a>
-            </section>
-
-            <section class="screenshot">
-                <h2>Screenshot</h2>
-                <img
-                    src="images/screenshot.png"
-                    alt="PixelToPath screenshot"
-                    class="screenshot-img"
-                />
-            </section>
-
-            <section class="donate">
-                <h2>Support Development</h2>
-                <p>
-                    If you like PixelToPath, consider making a donation via
-                    PayPal:
-                </p>
-                <a
-                    href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL"
-                    target="_blank"
-                >
-                    <img
-                        src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
-                        alt="Donate with PayPal"
-                    />
-                </a>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 PixelToPath — All rights reserved.</p>
-        </footer>
-    </body>
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 PixelToPath. Open Source License (MIT).</p>
+            <p>
+                <a href="https://github.com/lorrisc/PixelToPath">GitHub</a> | 
+                <a href="#">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+</body>
 </html>
