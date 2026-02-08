@@ -1,6 +1,48 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1.15.0/tarteaucitron.min.js"></script>
+    <script>
+    tarteaucitron.init({
+    privacyUrl: "/privacy.html", // optionnel mais recommandé
+    hashtag: "#tarteaucitron",
+    cookieName: "tarteaucitron",
+    orientation: "bottom",
+    showAlertSmall: false,
+    cookieslist: true,
+    adblocker: false,
+    AcceptAllCta: true,
+    highPrivacy: true, // consentement explicite
+    handleBrowserDNTRequest: false,
+    removeCredit: true,
+    moreInfoLink: true,
+    useExternalCss: false
+    });
+    </script>
+    <script>
+    tarteaucitron.services.gtag = {
+    key: "gtag",
+    type: "analytic",
+    name: "Google Analytics",
+    uri: "https://policies.google.com/privacy",
+    needConsent: true,
+    cookies: ['_ga', '_gid'],
+    js: function () {
+        "use strict";
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VMKNTZ9DWL';
+        document.getElementsByTagName('head')[0].appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VMKNTZ9DWL', { anonymize_ip: true });
+    }
+    };
+    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -11,21 +53,22 @@
     
     <meta property="og:title" content="PixelToPath - पिक्सल को वेक्टर में बदलें">
     <meta property="og:description" content="धीमे ऑनलाइन कनवर्टर का उपयोग करना बंद करें। PixelToPath मुफ्त में प्राप्त करें। तेज़, निजी और असीमित PNG से SVG रूपांतरण।">
-    <meta property="og:image" content="https://votre-site.com/images/screenshot.png">
-    <meta property="og:url" content="https://votre-site.com/">
+    <meta property="og:image" content="https://pixel-to-path.com/images/screenshot.png">
+    <meta property="og:url" content="https://pixel-to-path.com/">
     <meta property="og:type" content="website">
 
-    <link rel="canonical" href="https://votre-site.com/" />
-    <link rel="alternate" hreflang="en" href="https://votre-site.com/" />
-    <link rel="alternate" hreflang="fr" href="https://votre-site.com/fr/" />
-    <link rel="alternate" hreflang="es" href="https://votre-site.com/es/" />
-    <link rel="alternate" hreflang="ar" href="https://votre-site.com/ar/" />
-    <link rel="alternate" hreflang="de" href="https://votre-site.com/de/" />
-    <link rel="alternate" hreflang="pt-BR" href="https://votre-site.com/pt/" />
-    <link rel="alternate" hreflang="ru" href="https://votre-site.com/ru/" />
-    <link rel="alternate" hreflang="ja" href="https://votre-site.com/ja/" />
-    <link rel="alternate" hreflang="hi" href="https://votre-site.com/hi/" />
-    <link rel="alternate" hreflang="x-default" href="https://votre-site.com/" />
+    <link rel="canonical" href="https://pixel-to-path.com/hi/" />
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/" />
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/" />
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/" />
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/" />
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://pixel-to-path.com/zh/" />
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/" />
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/" />
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/" />
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
