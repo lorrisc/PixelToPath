@@ -1,0 +1,8 @@
+PixelToPath
+-----------
+Author: Lorrisc
+Website: https://pixel-to-path.com
+GitHub: https://github.com/lorrisc/PixelToPath
+
+Open source PNG to SVG converter.
+Built with ❤️ for designers and developers.
