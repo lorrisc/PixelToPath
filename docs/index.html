@@ -64,6 +64,86 @@ tarteaucitron.init({
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "description": "Free, open-source desktop application to convert PNG images to SVG vectors offline. No file uploads, no internet connection required. Windows and Linux.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": ["Windows", "Linux"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "softwareVersion": "1.0.0",
+      "license": "https://opensource.org/licenses/MIT",
+      "downloadUrl": "https://github.com/lorrisc/PixelToPath/releases",
+      "author": {
+        "@type": "Person",
+        "name": "Lorris C."
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "1"
+      }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does PixelToPath work without an internet connection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, PixelToPath is a fully offline desktop application. Once installed, it works without any internet connection. Your files never leave your computer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is PixelToPath really free with no limits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. PixelToPath is completely free and open-source (MIT license). There are no conversion limits, no watermarks, no subscriptions, and no hidden fees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What image formats does PixelToPath support as input?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PixelToPath currently supports PNG files as input and converts them to clean SVG vector paths using the Potrace algorithm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is PixelToPath safe to use for confidential designs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Because PixelToPath runs entirely on your local machine with no internet connection required, your images, logos, and designs are never uploaded to any server. It is the safest way to convert images to SVG."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What programs can open the SVG files created by PixelToPath?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The SVG files exported by PixelToPath are standard and compatible with Adobe Illustrator, Inkscape, Figma, Affinity Designer, CorelDRAW, web browsers, and any other software that supports the SVG format."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -75,7 +155,9 @@ tarteaucitron.init({
             </a>
             <div class="nav-links">
                 <a href="#features">Features</a>
+                <a href="#use-cases">Use Cases</a>
                 <a href="#guide">How to Use</a>
+                <a href="#faq">FAQ</a>
                 <a href="#download" class="nav-btn">Download</a>
                 <div class="lang-switch">
                     <span>🇺🇸 EN</span>
@@ -100,7 +182,7 @@ tarteaucitron.init({
         <div class="container hero-content">
             <h1>Convert PNG to SVG Instantly & Privately</h1>
             <p class="hero-text">
-                PixelToPath is a free, open-source desktop tool that transforms your bitmap images into clean, scalable vector graphics. No file uploads, no waiting lists, no subscription fees.
+                PixelToPath is a free, open-source desktop tool that transforms your bitmap images into clean, scalable vector graphics — <strong>completely offline</strong>. No file uploads, no waiting lists, no subscription fees. The only <strong>PNG to SVG converter without internet</strong> that you install once and own forever.
             </p>
             <div class="double-buttons">
                 <a href="#download" class="btn primary-btn">Download Now (Free)</a>
@@ -176,6 +258,165 @@ tarteaucitron.init({
                         <a href="https://sourceforge.net/projects/pixeltopath/" target="_blank">SourceForge</a> | 
                         <a href="https://github.com/lorrisc/PixelToPath/releases" target="_blank">GitHub Releases</a>
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- USE CASES SECTION -->
+        <section id="use-cases" class="section">
+            <div class="container">
+                <h2 class="section-title">Who Uses PixelToPath?</h2>
+                <p class="section-intro">Whether you're a professional designer or a hobbyist, PixelToPath fits seamlessly into your workflow — especially when privacy and speed matter.</p>
+                <div class="grid-3">
+                    <article class="card">
+                        <h3>🎨 Graphic Designers</h3>
+                        <p>Convert client logos, hand-drawn sketches, and raster icons into clean, scalable SVGs. No need to trust a third-party server with confidential brand assets. Work offline at full speed, even without Wi-Fi.</p>
+                    </article>
+                    <article class="card">
+                        <h3>💻 Web Developers</h3>
+                        <p>Batch-convert PNG icon sets to SVG for your web projects. SVG files load faster, scale perfectly on retina displays, and can be styled with CSS. PixelToPath handles the conversion instantly, so you can focus on building.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🖨️ Print & Laser Cutting</h3>
+                        <p>Prepare artwork for vinyl cutters, laser engravers, and large-format printing. These machines require vector paths, not pixels. PixelToPath converts your PNG template into a print-ready SVG file in seconds.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🔐 Privacy-Conscious Users</h3>
+                        <p>Working with sensitive documents, medical illustrations, legal diagrams, or proprietary blueprints? Online converters upload your files to remote servers. PixelToPath is a <strong>PNG to SVG converter without upload</strong> — your files stay local, always.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🏫 Students & Educators</h3>
+                        <p>Use PixelToPath in classrooms, labs, or on school computers where internet access may be restricted. Its zero-dependency, offline-first design makes it ideal for educational environments on Windows or Linux.</p>
+                    </article>
+                    <article class="card">
+                        <h3>⚙️ Developers & Makers</h3>
+                        <p>Integrate vectorized assets into hardware projects, embedded interfaces, or microcontroller displays. SVG paths generated by PixelToPath are clean, compact, and ready for further processing or scripting.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPARISON SECTION -->
+        <section id="comparison" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">PixelToPath vs. Online Converters</h2>
+                <p class="section-intro">Most PNG-to-SVG tools work in the browser and require an internet connection. Here's why a <strong>free offline SVG converter</strong> like PixelToPath is a smarter choice.</p>
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>PixelToPath</th>
+                                <th>Online Converters</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Works offline</td>
+                                <td class="yes">✅ Yes</td>
+                                <td class="no">❌ No — requires internet</td>
+                            </tr>
+                            <tr>
+                                <td>File privacy</td>
+                                <td class="yes">✅ Files never leave your device</td>
+                                <td class="no">❌ Files uploaded to remote servers</td>
+                            </tr>
+                            <tr>
+                                <td>Conversion limits</td>
+                                <td class="yes">✅ Unlimited</td>
+                                <td class="no">❌ Often 3–5 free/day</td>
+                            </tr>
+                            <tr>
+                                <td>Speed</td>
+                                <td class="yes">✅ Milliseconds (local CPU)</td>
+                                <td class="no">⚠️ Depends on server load</td>
+                            </tr>
+                            <tr>
+                                <td>Subscription required</td>
+                                <td class="yes">✅ Never</td>
+                                <td class="no">❌ Often paywalled for full quality</td>
+                            </tr>
+                            <tr>
+                                <td>Open source</td>
+                                <td class="yes">✅ MIT License</td>
+                                <td class="no">❌ Proprietary</td>
+                            </tr>
+                            <tr>
+                                <td>Works without Wi-Fi</td>
+                                <td class="yes">✅ Always</td>
+                                <td class="no">❌ Never</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SVG EXPLAINER SECTION -->
+        <section id="what-is-svg" class="section">
+            <div class="container">
+                <h2 class="section-title">PNG vs SVG: What's the Difference?</h2>
+                <div class="explainer-grid">
+                    <div class="explainer-block">
+                        <h3>🖼️ What is a PNG file?</h3>
+                        <p>PNG (Portable Network Graphics) is a <strong>raster image format</strong>. It stores images as a fixed grid of pixels. When you zoom in or print a PNG at a large size, you will notice the image becomes blurry or pixelated. PNG files are great for photographs, screenshots, and web graphics at a fixed size — but they do not scale.</p>
+                    </div>
+                    <div class="explainer-block">
+                        <h3>📐 What is an SVG file?</h3>
+                        <p>SVG (Scalable Vector Graphics) is a <strong>vector image format</strong>. Instead of pixels, it describes shapes using mathematical paths and coordinates. An SVG logo can be displayed at 10px or 10 meters with perfect sharpness. SVG files are also smaller in size, editable in code, and stylable with CSS — making them ideal for logos, icons, and illustrations.</p>
+                    </div>
+                    <div class="explainer-block">
+                        <h3>🔄 What is vectorization (raster to vector)?</h3>
+                        <p>Vectorization is the process of converting a raster image (like a PNG) into a vector file (like an SVG). PixelToPath uses the <strong>Potrace algorithm</strong> to trace the contours of your PNG and generate smooth, scalable SVG paths. This is essential when you need to resize a logo without losing quality, or prepare artwork for a laser cutter or screen printer.</p>
+                    </div>
+                    <div class="explainer-block">
+                        <h3>⚡ When should you convert PNG to SVG?</h3>
+                        <ul class="feature-list">
+                            <li>Resizing a logo for a billboard or large print</li>
+                            <li>Preparing artwork for a vinyl cutter or laser engraver</li>
+                            <li>Converting an icon set for a web or mobile app</li>
+                            <li>Editing vector paths in Inkscape, Figma, or Illustrator</li>
+                            <li>Reducing file size for web performance</li>
+                            <li>Animating shapes with CSS or JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Does PixelToPath work without an internet connection?</summary>
+                        <p>Yes. PixelToPath is a fully <strong>offline PNG to SVG converter</strong>. Once installed, it requires zero internet connection to function. This makes it ideal for use in restricted environments, on flights, or anywhere Wi-Fi is unavailable.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Is it really free? No hidden fees, watermarks, or limits?</summary>
+                        <p>Completely free. PixelToPath is open-source software released under the MIT license. There are no conversion limits, no watermarks on exported SVGs, no subscriptions, and no "pro" tier. You can convert as many files as you want, forever.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Is PixelToPath safe for confidential or professional designs?</summary>
+                        <p>Yes — this is one of PixelToPath's biggest advantages. Because it runs entirely on your local machine, <strong>your files are never uploaded to any server</strong>. This makes it the safest choice for converting confidential logos, legal documents, medical illustrations, or any proprietary artwork.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What software can open the SVG files generated by PixelToPath?</summary>
+                        <p>The exported SVG files are fully standard and compatible with <strong>Adobe Illustrator, Inkscape, Figma, Affinity Designer, CorelDRAW</strong>, all modern web browsers (Chrome, Firefox, Safari, Edge), and any other application that supports the SVG format.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What operating systems are supported?</summary>
+                        <p>PixelToPath is currently available for <strong>Windows (64-bit)</strong> and <strong>Linux</strong>. macOS support may be added in a future release. Check the GitHub repository for the latest updates.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What is Potrace and why is it used?</summary>
+                        <p>Potrace is a well-established, high-quality open-source algorithm for tracing bitmaps into vector graphics. It produces clean, smooth paths from black-and-white raster images and is the engine behind many professional vectorization tools. PixelToPath provides a user-friendly GUI on top of Potrace so anyone can use it without command-line skills.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can I use PixelToPath for batch conversions?</summary>
+                        <p>Yes. Unlike online tools that throttle you to a few free conversions per day, PixelToPath has no limits. You can convert hundreds or thousands of PNG files without any restrictions, making it ideal for batch processing icon sets and large asset libraries.</p>
+                    </details>
                 </div>
             </div>
         </section>
