@@ -1,62 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pixel-to-path.com/</loc>
+    <loc>https://pixel-to-path.com/bn/</loc>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <url>
-    <loc>https://pixel-to-path.com/fr/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://pixel-to-path.com/es/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
   <url>
     <loc>https://pixel-to-path.com/de/</loc>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://pixel-to-path.com/pt/</loc>
+    <loc>https://pixel-to-path.com/</loc>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://pixel-to-path.com/ru/</loc>
+    <loc>https://pixel-to-path.com/es/</loc>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://pixel-to-path.com/zh/</loc>
+    <loc>https://pixel-to-path.com/fa/</loc>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://pixel-to-path.com/ja/</loc>
+    <loc>https://pixel-to-path.com/fr/</loc>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://pixel-to-path.com/hi/</loc>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://pixel-to-path.com/ar/</loc>
+    <loc>https://pixel-to-path.com/id/</loc>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pixel-to-path.com/ja/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pixel-to-path.com/ko/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pixel-to-path.com/nl/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pixel-to-path.com/pl/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pixel-to-path.com/pt/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pixel-to-path.com/ru/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pixel-to-path.com/th/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pixel-to-path.com/tr/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pixel-to-path.com/uk/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pixel-to-path.com/vi/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pixel-to-path.com/zh/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
 </urlset>
