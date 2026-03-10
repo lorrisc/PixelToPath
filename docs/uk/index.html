@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+
+    <script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//www.stats.annebettencourt.fr/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>PixelToPath - Безкоштовний конвертер PNG у SVG | Програмне забезпечення з відкритим кодом</title>
+    <meta name="description" content="Завантажте PixelToPath, найкраще безкоштовне офлайн-програмне забезпечення для перетворення зображень PNG у вектори SVG. Необмежена кількість конвертацій, конфіденційність, на базі Potrace. Windows та Linux.">
+    <meta name="keywords" content="PNG у SVG, растр у вектор, конвертер зображень, графічний інтерфейс Potrace, безкоштовний конвертер svg, офлайн векторизатор, інструмент дизайну з відкритим кодом">
+    <meta name="author" content="Lorris C.">
+    
+    <meta property="og:title" content="PixelToPath - Безкоштовний конвертер PNG у SVG | Програмне забезпечення з відкритим кодом">
+    <meta property="og:description" content="Завантажте PixelToPath, найкраще безкоштовне офлайн-програмне забезпечення для перетворення зображень PNG у вектори SVG. Необмежена кількість конвертацій, конфіденційність, на базі Potrace. Windows та Linux.">
+    <meta property="og:image" content="https://pixel-to-path.com//images/screenshot.png">
+    <meta property="og:url" content="https://pixel-to-path.com//">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://pixel-to-path.com/uk/" />
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/" />
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/" />
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/" />
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/" />
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/" />
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/" />
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/" />
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/" />
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/" />
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/" />
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/" />
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/" />
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/" />
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/" />
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/" />
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/" />
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/" />
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/" />
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/" />
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "description": "Завантажте PixelToPath, найкраще безкоштовне офлайн-програмне забезпечення для перетворення зображень PNG у вектори SVG. Необмежена кількість конвертацій, конфіденційність, на базі Potrace. Windows та Linux.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": ["Windows", "Linux"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "softwareVersion": "1.0.0",
+      "license": "https://opensource.org/licenses/MIT",
+      "downloadUrl": "https://github.com/lorrisc/PixelToPath/releases",
+      "author": {
+        "@type": "Person",
+        "name": "Lorris C."
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "1"
+      }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Чи працює PixelToPath без підключення до Інтернету?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Так, PixelToPath — це повністю офлайн-додаток для робочого столу. Після встановлення він працює без жодного підключення до Інтернету. Ваші файли ніколи не залишають ваш комп&#39;ютер."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чи справді PixelToPath безкоштовний і не має обмежень?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Так. PixelToPath повністю безкоштовний і має відкритий вихідний код (ліцензія MIT). Немає жодних обмежень на конвертацію, водяних знаків, підписок і прихованих платежів."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Які формати зображень підтримує PixelToPath на вході?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Наразі PixelToPath підтримує файли PNG на вході та перетворює їх на чисті векторні контури SVG за допомогою алгоритму Potrace."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чи безпечно використовувати PixelToPath для конфіденційних дизайнів?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Абсолютно. Оскільки PixelToPath працює повністю на вашому локальному комп&#39;ютері і не потребує підключення до Інтернету, ваші зображення, логотипи та дизайни ніколи не завантажуються на жоден сервер. Це найбезпечніший спосіб конвертації зображень у SVG."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Які програми можуть відкрити файли SVG, створені в PixelToPath?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Файли SVG, експортовані за допомогою PixelToPath, є стандартними і сумісними з Adobe Illustrator, Inkscape, Figma, Affinity Designer, CorelDRAW, веб-браузерами та будь-яким іншим програмним забезпеченням, яке підтримує формат SVG."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand">
+                <img src="../images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+                PixelToPath
+            </a>
+            <div class="nav-links">
+                <a href="#features">Особливості</a>
+                <a href="#use-cases">Використання</a>
+                <a href="#guide">Як користуватися</a>
+                <a href="#faq">FAQ</a>
+                <a href="#download" class="nav-btn">Завантажити</a>
+                <div class="lang-switch">
+                    <span>🇺🇦 UK</span>
+                    
+                    <div class="lang-dropdown">
+                        
+                            <a href="https://pixel-to-path.com/bn/">🇧🇩 বাংলা</a>
+                        
+                            <a href="https://pixel-to-path.com/de/">🇩🇪 Deutsch</a>
+                        
+                            <a href="https://pixel-to-path.com/">🇺🇸 English</a>
+                        
+                            <a href="https://pixel-to-path.com/es/">🇪🇸 Español</a>
+                        
+                            <a href="https://pixel-to-path.com/fa/">🇮🇷 فارسی</a>
+                        
+                            <a href="https://pixel-to-path.com/fr/">🇫🇷 Français</a>
+                        
+                            <a href="https://pixel-to-path.com/hi/">🇨🇳 中文 (简体)</a>
+                        
+                            <a href="https://pixel-to-path.com/id/">🇮🇩 Bahasa Indonesia</a>
+                        
+                            <a href="https://pixel-to-path.com/ja/">🇯🇵 日本語</a>
+                        
+                            <a href="https://pixel-to-path.com/ko/">🇰🇷 한국어</a>
+                        
+                            <a href="https://pixel-to-path.com/nl/">🇳🇱 Nederlands</a>
+                        
+                            <a href="https://pixel-to-path.com/pl/">🇵🇱 Polski</a>
+                        
+                            <a href="https://pixel-to-path.com/pt/">🇧🇷 Português (Brasil)</a>
+                        
+                            <a href="https://pixel-to-path.com/ru/">🇷🇺 Русский</a>
+                        
+                            <a href="https://pixel-to-path.com/th/">🇹🇭 ไทย</a>
+                        
+                            <a href="https://pixel-to-path.com/tr/">🇹🇷 Türkçe</a>
+                        
+                            <a href="https://pixel-to-path.com/uk/">🇺🇦 Українська</a>
+                        
+                            <a href="https://pixel-to-path.com/vi/">🇻🇳 Tiếng Việt</a>
+                        
+                            <a href="https://pixel-to-path.com/zh/">🇨🇳 中文 (简体)</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <h1>Миттєво та конфіденційно перетворюйте PNG у SVG</h1>
+            <p class="hero-text">PixelToPath — це безкоштовний настільний інструмент з відкритим вихідним кодом, який перетворює ваші растрові зображення на чисту векторну графіку, що масштабується — <strong>повністю офлайн</strong>. Жодних завантажень файлів, списків очікування чи абонентської плати. Єдиний <strong>конвертер PNG у SVG без Інтернету</strong>, який ви встановлюєте один раз і володієте ним назавжди.</p>
+            <div class="double-buttons">
+                <a href="#download" class="btn primary-btn">Завантажити зараз (Безкоштовно)</a>
+                <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="btn secondary-btn">Переглянути вихідний код</a>
+            </div>
+            <img src="../images/screenshot.png" alt="Інтерфейс програми PixelToPath під час конвертації зображення" class="hero-image shadow">
+        </div>
+    </header>
+
+    <main>
+        <section class="trust-strip">
+            <div class="container">
+                <p>На базі технології <strong>Potrace</strong> • 100% <strong>Open Source</strong> • <strong>Офлайн</strong> конфіденційність</p>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <div class="container">
+                <h2 class="section-title">Чому варто обрати PixelToPath замість онлайн-конвертерів?</h2>
+                <div class="grid-3">
+                    <article class="card">
+                        <h3>🔒 100% Приватно та Офлайн</h3>
+                        <p>Більшість онлайн-конвертерів завантажують ваші зображення на віддалений сервер. PixelToPath працює локально на вашому комп'ютері. Ваші дизайни, логотипи та фотографії ніколи не залишають ваш пристрій.</p>
+                    </article>
+                    <article class="card">
+                        <h3>⚡ Блискавично швидкі результати</h3>
+                        <p>Не чекайте на індикатори завантаження або черги обробки. Створений з легким кодом, PixelToPath конвертує зображення за мілісекунди за допомогою потужного алгоритму Potrace.</p>
+                    </article>
+                    <article class="card">
+                        <h3>♾️ Необмежені конвертації</h3>
+                        <p>Жодних лімітів на кшталт «3 безкоштовних кредити на день». Конвертуйте стільки PNG, скільки хочете, і коли хочете. Ідеально підходить для пакетної обробки ресурсів для веб-розробки або графічного дизайну.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="guide" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Як перетворити растр у вектор</h2>
+                <div class="guide-wrapper">
+                    <div class="guide-text">
+                        <p>Векторизація є важливою для дизайнерів, яким потрібно масштабувати логотипи без втрати якості. Ось як користуватися PixelToPath:</p>
+                        <ol class="steps-list">
+                            <li><strong>Завантажте та встановіть:</strong> Отримайте версію для Windows або Linux нижче.</li>
+                            <li><strong>Виберіть зображення:</strong> Запустіть програму та виберіть файл .PNG.</li>
+                            <li><strong>Налаштуйте:</strong> За потреби відрегулюйте налаштування (спрощення, непрозорість).</li>
+                            <li><strong>Експортуйте:</strong> Натисніть «Конвертувати» та збережіть новий файл .SVG.</li>
+                        </ol>
+                        <p>Отриманий контур SVG сумісний з Adobe Illustrator, Inkscape, Figma та веб-браузерами.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="section download-section">
+            <div class="container text-center">
+                <h2>Отримайте PixelToPath вже сьогодні</h2>
+                <p>Приєднуйтесь до тисяч користувачів, які легко конвертують зображення.</p>
+                
+                <div class="double-buttons">
+                    <a href="https://github.com/lorrisc/PixelToPath/releases/download/v1.0.0/PixelToPath-v1.0.0_Windows.zip" class="btn big-btn win-btn"><span>Завантажити для <strong>Windows</strong></span><small>.zip (64-bit)</small></a>
+                    <a href="https://github.com/lorrisc/PixelToPath/releases/download/v1.0.0/PixelToPath-v1.0.0_Linux.tar.gz" class="btn big-btn lin-btn"><span>Завантажити для <strong>Linux</strong></span><small>.tar.gz</small></a>
+                </div>
+
+                <div class="alternative-downloads">
+                    <p>Також доступно на:
+                        <a href="https://sourceforge.net/projects/pixeltopath/" target="_blank">SourceForge</a> | 
+                        <a href="https://github.com/lorrisc/PixelToPath/releases" target="_blank">GitHub Releases</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- USE CASES SECTION -->
+        <section id="use-cases" class="section">
+            <div class="container">
+                <h2 class="section-title">Хто використовує PixelToPath?</h2>
+                <p class="section-intro">Незалежно від того, чи ви професійний дизайнер, чи любитель, PixelToPath ідеально вписується у ваш робочий процес — особливо коли конфіденційність та швидкість мають значення.</p>
+                <div class="grid-3">
+                    <article class="card">
+                        <h3>🎨 Графічні дизайнери</h3>
+                        <p>Перетворюйте логотипи клієнтів, намальовані від руки ескізи та растрові іконки на чисті файли SVG, що масштабуються. Не потрібно довіряти конфіденційні активи бренду сторонньому серверу. Працюйте офлайн на повній швидкості, навіть без Wi-Fi.</p>
+                    </article>
+                    <article class="card">
+                        <h3>💻 Веб-розробники</h3>
+                        <p>Пакетно конвертуйте набори іконок PNG у SVG для ваших веб-проектів. Файли SVG завантажуються швидше, ідеально масштабуються на дисплеях retina і можуть стилізуватися за допомогою CSS. PixelToPath обробляє конвертацію миттєво, тому ви можете зосередитися на розробці.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🖨️ Друк та лазерне різання</h3>
+                        <p>Готуйте макети для вінілових плотерів, лазерних граверів та широкоформатного друку. Цим машинам потрібні векторні контури, а не пікселі. PixelToPath перетворює ваш шаблон PNG у готовий до друку файл SVG за лічені секунди.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🔐 Користувачі, які дбають про конфіденційність</h3>
+                        <p>Працюєте з конфіденційними документами, медичними ілюстраціями, юридичними схемами або пропрієтарними кресленнями? Онлайн-конвертери завантажують ваші файли на віддалені сервери. PixelToPath — це <strong>конвертер PNG у SVG без завантаження в Інтернет</strong> — ваші файли завжди залишаються локальними.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🏫 Студенти та викладачі</h3>
+                        <p>Використовуйте PixelToPath у класах, лабораторіях або на шкільних комп'ютерах, де доступ до Інтернету може бути обмеженим. Його незалежний дизайн, орієнтований на офлайн, робить його ідеальним для освітнього середовища у Windows або Linux.</p>
+                    </article>
+                    <article class="card">
+                        <h3>⚙️ Розробники та мейкери</h3>
+                        <p>Інтегруйте векторизовані ресурси в апаратні проекти, вбудовані інтерфейси або дисплеї мікроконтролерів. Контури SVG, згенеровані PixelToPath, є чистими, компактними та готовими до подальшої обробки або використання у скриптах.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPARISON SECTION -->
+        <section id="comparison" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">PixelToPath проти Онлайн-конвертерів</h2>
+                <p class="section-intro">Більшість інструментів для перетворення PNG у SVG працюють у браузері та потребують підключення до Інтернету. Ось чому <strong>безкоштовний офлайн-конвертер SVG</strong>, такий як PixelToPath, є розумнішим вибором.</p>
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Функція</th>
+                                <th>PixelToPath</th>
+                                <th>Онлайн-конвертери</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Працює офлайн</td>
+                                <td class="yes">✅ Так</td>
+                                <td class="no">❌ Ні - потрібен інтернет</td>
+                            </tr>
+                            <tr>
+                                <td>Конфіденційність файлів</td>
+                                <td class="yes">✅ Файли ніколи не залишають ваш пристрій</td>
+                                <td class="no">❌ Файли завантажуються на віддалені сервери</td>
+                            </tr>
+                            <tr>
+                                <td>Ліміти конвертації</td>
+                                <td class="yes">✅ Необмежено</td>
+                                <td class="no">❌ Часто 3–5 безкоштовно на день</td>
+                            </tr>
+                            <tr>
+                                <td>Швидкість</td>
+                                <td class="yes">✅ Мілісекунди (локальний процесор)</td>
+                                <td class="no">⚠️ Залежить від навантаження сервера</td>
+                            </tr>
+                            <tr>
+                                <td>Потрібна підписка</td>
+                                <td class="yes">✅ Ніколи</td>
+                                <td class="no">❌ Часто платно за найкращу якість</td>
+                            </tr>
+                            <tr>
+                                <td>Відкритий код</td>
+                                <td class="yes">✅ Ліцензія MIT</td>
+                                <td class="no">❌ Пропрієтарний</td>
+                            </tr>
+                            <tr>
+                                <td>Працює без Wi-Fi</td>
+                                <td class="yes">✅ Завжди</td>
+                                <td class="no">❌ Ніколи</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SVG EXPLAINER SECTION -->
+        <section id="what-is-svg" class="section">
+            <div class="container">
+                <h2 class="section-title">PNG проти SVG: У чому різниця?</h2>
+                <div class="explainer-grid">
+                    <div class="explainer-block">
+                        <h3>🖼️ Що таке файл PNG?</h3>
+                        <p>PNG (Portable Network Graphics) — це <strong>формат растрового зображення</strong>. Він зберігає зображення як фіксовану сітку пікселів. Коли ви збільшуєте масштаб або друкуєте PNG у великому розмірі, ви помітите, що зображення стає розмитим або пікселізованим. Файли PNG чудово підходять для фотографій, скріншотів та веб-графіки фіксованого розміру — але вони не масштабуються.</p>
+                    </div>
+                    <div class="explainer-block">
+                        <h3>📐 Що таке файл SVG?</h3>
+                        <p>SVG (Scalable Vector Graphics) — це <strong>формат векторного зображення</strong>. Замість пікселів він описує форми за допомогою математичних контурів та координат. Логотип SVG може відображатися з ідеальною чіткістю при розмірі 10px або 10 метрів. Файли SVG також мають менший розмір, їх можна редагувати в коді та стилізувати за допомогою CSS — що робить їх ідеальними для логотипів, іконок та ілюстрацій.</p>
+                    </div>
+                    <div class="explainer-block">
+                        <h3>🔄 Що таке векторизація (від растра до вектора)?</h3>
+                        <p>Векторизація — це процес перетворення растрового зображення (наприклад, PNG) у векторний файл (наприклад, SVG). PixelToPath використовує <strong>алгоритм Potrace</strong>, щоб обвести контури вашого PNG і створити гладкі, масштабовані контури SVG. Це важливо, коли вам потрібно змінити розмір логотипа без втрати якості, або підготувати макет для лазерного різака чи трафаретного друку.</p>
+                    </div>
+                    <div class="explainer-block">
+                        <h3>⚡ Коли слід перетворювати PNG у SVG?</h3>
+                        <ul class="feature-list">
+                            <li>Зміна розміру логотипа для білборда або великого друку</li>
+                            <li>Підготовка макета для вінілового плотера або лазерного гравера</li>
+                            <li>Конвертація набору іконок для веб- або мобільного додатка</li>
+                            <li>Редагування векторних контурів у Inkscape, Figma або Illustrator</li>
+                            <li>Зменшення розміру файлу для підвищення продуктивності сайту</li>
+                            <li>Анімація форм за допомогою CSS або JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Часті запитання</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Чи працює PixelToPath без підключення до Інтернету?</summary>
+                        <p>Так. PixelToPath — це повністю <strong>офлайн-конвертер PNG у SVG</strong>. Після встановлення йому взагалі не потрібне підключення до Інтернету для роботи. Це робить його ідеальним для використання в обмежених середовирях, під час польотів або будь-де, де немає Wi-Fi.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Це справді безкоштовно? Жодних прихованих платежів, водяних знаків чи лімітів?</summary>
+                        <p>Повністю безкоштовно. PixelToPath — це програмне забезпечення з відкритим вихідним кодом, випущене під ліцензією MIT. Немає обмежень на конвертацію, жодних водяних знаків на експортованих SVG, підписок і статусу "pro". Ви можете конвертувати стільки файлів, скільки захочете, назавжди.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Чи безпечний PixelToPath для конфіденційних або професійних дизайнів?</summary>
+                        <p>Так — це одна з найбільших переваг PixelToPath. Оскільки він працює повністю на вашому локальному комп'ютері, <strong>ваші файли ніколи не завантажуються на жоден сервер</strong>. Це робить його найбезпечнішим вибором для конвертації конфіденційних логотипів, юридичних документів, медичних ілюстрацій або будь-яких пропрієтарних творів мистецтва.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Яке програмне забезпечення може відкрити файли SVG, згенеровані PixelToPath?</summary>
+                        <p>Експортовані файли SVG є повністю стандартними та сумісними з <strong>Adobe Illustrator, Inkscape, Figma, Affinity Designer, CorelDRAW</strong>, усіма сучасними веб-браузерами (Chrome, Firefox, Safari, Edge) та будь-якою іншою програмою, яка підтримує формат SVG.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Які операційні системи підтримуються?</summary>
+                        <p>PixelToPath наразі доступний для <strong>Windows (64-bit)</strong> та <strong>Linux</strong>. Підтримка macOS може бути додана в наступних версіях. Перевіряйте репозиторій GitHub на наявність останніх оновлень.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Що таке Potrace і чому його використовують?</summary>
+                        <p>Potrace — це добре відомий, високоякісний алгоритм з відкритим кодом для трасування бітмапів у векторну графіку. Він створює чисті, плавні контури з чорно-білих растрових зображень і є рушієм багатьох професійних інструментів векторизації. PixelToPath надає зручний графічний інтерфейс поверх Potrace, щоб кожен міг користуватися ним без навичок роботи з командним рядком.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Чи можу я використовувати PixelToPath для пакетної конвертації?</summary>
+                        <p>Так. На відміну від онлайн-інструментів, які обмежують вас кількома безкоштовними конвертаціями на день, PixelToPath не має жодних обмежень. Ви можете конвертувати сотні або тисячі файлів PNG без будь-яких обмежень, що робить його ідеальним для пакетної обробки наборів іконок та великих бібліотек ресурсів.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+            <div class="container">
+                <h3>Підтримайте розробку Open Source</h3>
+                <p>PixelToPath є безкоштовним для використання. Якщо цей інструмент допоміг вам заощадити час, подумайте про те, щоб пригостити мене кавою.</p>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Пожертвувати через PayPal</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 PixelToPath. Open Source License (MIT).</p>
+            <p>
+                <a href="https://github.com/lorrisc/PixelToPath">GitHub</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
