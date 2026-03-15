@@ -1,6 +1,6 @@
 [Setup]
 AppName=PixelToPath
-AppVersion=1.0.0
+AppVersion=2.0.0
 DefaultDirName={pf}\PixelToPath
 DefaultGroupName=PixelToPath
 OutputDir=output
