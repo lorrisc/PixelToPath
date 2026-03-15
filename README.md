@@ -1,104 +1,96 @@
 # PixelToPath
 
-Ce logiciel permet de vectoriser des images au format PNG en fichier SVG en utilisant l'outil [Potrace](https://potrace.sourceforge.net/). Il offre plusieurs options pour ajuster la qualité et le style de la vectorisation.
+PixelToPath converts raster images (PNG, JPG, BMP, WebP) into high-quality SVG vector graphics using [VTracer](https://github.com/visioncortex/vtracer), an open-source Rust-based tracer that handles both color and black-and-white images natively.
 
-## Version empaquetée
+## Packaged version
 
-Une version packagée de PixelToPath est disponible dans la section [Releases](https://github.com/lorrisc/PixelToPath/releases/) du dépôt GitHub. Cette version ne nécessite pas d'installation de Python ni de configuration préalable.
+A packaged version of PixelToPath is available in the [Releases](https://github.com/lorrisc/PixelToPath/releases/) section of the GitHub repository. This version requires no Python installation or prior configuration.
 
-### Téléchargement
+### Download
 
-1. Rendez-vous sur la page des [Releases](https://github.com/lorrisc/PixelToPath/releases/) ;
-2. Télécharge le fichier correspondant à la dernière version stable et à votre système.
+1. Go to the [Releases](https://github.com/lorrisc/PixelToPath/releases/) page;
+2. Download the file matching the latest stable version for your system:
+   - `PixelToPath-vX.X.X_Windows.zip` for Windows
+   - `PixelToPath-vX.X.X_Linux.tar.gz` for Linux
 
-### Utilisation
+### Usage
 
-1. Double-cliquez sur PixelToPath.exe ;
-2. L’interface graphique s’ouvrira automatiquement ;
-3. Vous pouvez importer une image PNG, configurer les paramètres de vectorisation, puis exporter le fichier au format SVG.
+1. Launch PixelToPath;
+2. Drag and drop an image or click the import area;
+3. Choose a preset (B&W, Poster, Photo) or fine-tune parameters via Advanced mode;
+4. The SVG preview updates automatically in real time;
+5. Click **Download SVG** to export the file.
+   
+![usage](captures/utilisation_v2.0.png)
 
-### Remarques
+### Notes
 
-- Potrace est intégré dans l'exécutable : aucune installation supplémentaire n'est nécessaire.
-- Si votre antivirus bloque l’application, vous pouvez vérifier l’intégrité du fichier ou l’ajouter à votre liste de confiance (les exécutables générés avec pyinstaller sont parfois faussement détectés comme suspects).
+- VTracer is bundled inside the executable — no additional installation required.
+- If your antivirus blocks the application, you can verify the file integrity or add it to your trusted list (executables built with PyInstaller are sometimes incorrectly flagged as suspicious).
 
-## Version sources
+## Features
+
+- **Supported formats**: PNG, JPG, BMP, WebP
+- **Color mode**: multi-layer vectorization with control over color precision and layer difference
+- **Black & white mode**: perceptual grayscale conversion with optional invert switch
+- **Live preview**: SVG recomputes automatically on every parameter change
+- **Presets**: B&W, Poster, Photo for quick results without manual configuration
+- **Advanced mode**: access to fine-tuning parameters (Curve Fitting, Filter Speckle, Corner Threshold…)
+- **Focus mode**: hides the About panel and the original image to focus on the result (press `Esc` to exit)
+
+## Source version
 
 ### Windows
 
-#### Prérequis
+#### Prerequisites
 
-- Python 3.11.0
+- Python 3.11+
 
 #### Installation
 
-1. Créer un environnement et l'activer
-   
+1. Create a virtual environment and activate it
 ```bash
 python -m venv env
 .\env\Scripts\Activate
 ```
 
-2. Installez les bibliothèques nécessaires avec pip
-
+2. Install dependencies
 ```bash
-pip install -r requirements.txt
+pip install vtracer cairosvg customtkinter tkinterdnd2 Pillow numpy
 ```
 
-#### Utilisation
+3. Install GTK DLLs for cairosvg (required on Windows) — place the contents of `bin/gtk-bin/` into the `bin/gtk-bin/` folder of the project.
 
-1. Exécutez le script :
-
+#### Usage
 ```bash
 python app.py
 ```
 
-2. Vous pouvez importer une image PNG, configurer les paramètres de vectorisation, puis exporter le fichier au format SVG.
-   
 ### Linux
 
-#### Prérequis
+#### Prerequisites
 
-- Python 3.11.0
+- Python 3.11+
 
 #### Installation
 
-1. Créer un environnement et l'activer
-   
+1. Install system dependencies
+```bash
+sudo apt install python3-tk python3-venv libcairo2-dev
+```
+
+2. Create a virtual environment and activate it
 ```bash
 python3 -m venv env
 source env/bin/activate
 ```
 
-2. Installez les bibliothèques nécessaires avec pip
-
+3. Install Python dependencies
 ```bash
-pip install -r requirements.txt
+pip install vtracer cairosvg customtkinter tkinterdnd2 Pillow numpy
 ```
 
-3. Installer Potrace et TKinter
-
-```bash
-sudo apt install potrace
-sudo apt install tkinter
-```
-
-#### Utilisation
-
-1. Exécutez le script :
-
+#### Usage
 ```bash
 python3 app.py
 ```
-
-2. Vous pouvez importer une image PNG, configurer les paramètres de vectorisation, puis exporter le fichier au format SVG.
-
-## Exemple
-
-Voici ci-dessous un exemple de l'utilisation de PixelToPath.
-
-- L'image en haut à gauche représente la zone d'import ;
-- L'image en haut à droite est une prévisualisation de l'image SVG (il s'agit actuellement d'une image PBM, qui est un format d'image noir et blanc, potrace utilisera cette image pour le calcul)
-- L'image en bas est le SVG final (il s'agit en réalité d'une image PNG qui vient de la conversion du fichier SVG).
-
-![Exemple d'utilisation de PixelToPath](captures/utilisation.png)

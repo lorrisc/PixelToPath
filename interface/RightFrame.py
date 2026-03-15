@@ -1,371 +1,676 @@
 import customtkinter as ctk
-from PIL import Image, ImageTk
+from PIL import Image, ImageOps
 from tkinter import filedialog
 from tkinterdnd2 import DND_FILES
 
-import uuid
-import os
-import shutil
-import subprocess
-import sys
+import uuid, os, shutil, threading, sys
 
-from moteur.image_utils import png_to_pbm, optimize_svg
+from moteur.image_utils import convert_to_svg, PRESETS
 from interface.utils import resource_path
-from utils_system import get_potrace_path
 
 if sys.platform == "win32":
     gtk_bin_path = resource_path("bin/gtk-bin")
     os.environ["PATH"] = gtk_bin_path + os.pathsep + os.environ.get("PATH", "")
-    
+
 import cairosvg
 
-class RightFrame(ctk.CTkFrame):
-    """Zone de droite avec les 3 espaces (configuration, btn execution, rendu)."""
+# ── Palette ───────────────────────────────────────────────────────────────────
+_BG = "#ebebeb"
+_CARD = "#f5f5f5"
+_BORDER = "#d8d8d8"
+_MUTED = "#999999"
+_GREEN = "#22aa55"
+_AMBER = "#e09a00"
+_RED = "#cc3333"
+_CARD_H = 360 # hauteur dropzone
+_SPINNER = ["◐", "◓", "◑", "◒"]
 
-    def __init__(self, parent, app_temp_dir):
-        super().__init__(parent)
-        self.app_temp_dir = app_temp_dir
-        self.temp_pbm_path = None # Chemin temporaire pour le fichier PBM
-        self.loaded_image_path = None  # Chemin de l'image chargée
-        self.temp_svg_path = None  # Chemin temporaire pour le fichier SVG
-
-        # Ajout d'un canvas + scrollbar
-        self.canvas = ctk.CTkCanvas(self, borderwidth=0, highlightthickness=0, bg="#ebebeb")
-        self.scrollbar = ctk.CTkScrollbar(self, orientation="vertical", command=self.canvas.yview)
-        self.scrollable_frame = ctk.CTkFrame(self.canvas, fg_color="#ebebeb")
-
-        self.scrollable_frame.bind(
-            "<Configure>",
-            lambda e: self.canvas.configure(
-                scrollregion=self.canvas.bbox("all")
-            )
+class _Card(ctk.CTkFrame):
+    def __init__(self, parent, **kw):
+        super().__init__(
+            parent, fg_color=_CARD,
+            corner_radius=12, border_width=1, border_color=_BORDER, **kw,
         )
 
-        self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
-        self.window_frame = self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
-        self.canvas.configure(yscrollcommand=self.scrollbar.set)
-        self.canvas.bind("<Configure>", self._on_canvas_configure)
+class RightFrame(ctk.CTkFrame):
 
-        self.canvas.pack(side="left", fill="both", expand=True)
-        self.scrollbar.pack(side="right", fill="y")
+    def __init__(self, parent, app_temp_dir: str, on_focus_toggle=None):
+        super().__init__(parent)
+        self.app_temp_dir = app_temp_dir
+        self._on_focus_toggle = on_focus_toggle
+        self._focus_mode = False
 
-        # Pour le scroll à la molette
-        self.canvas.bind_all("<MouseWheel>", self._on_mousewheel)
-        self.canvas.bind("<Enter>", self._bind_mousewheel)
-        self.canvas.bind("<Leave>", self._unbind_mousewheel)
+        self.loaded_image_path: str | None = None
+        self.temp_svg_path: str | None = None
+        self._orig_pil: Image.Image | None = None
+        self._svg_pil:  Image.Image | None = None
 
-        self.build()
+        self._preview_id = None
+        self._resize_id = None
+        self._gen = 0
+        self._is_busy = False
+        self._spinner_id = None
+        self._spinner_i = 0
+        self._advanced_open = False
+        self._sliders: dict = {}
 
-    def _on_canvas_configure(self, event):
-        # Ajuster la largeur du frame scrollable à celle du canvas
-        canvas_width = event.width
-        self.canvas.itemconfig(self.window_frame, width=canvas_width)
-        
+        # ── Canvas scrollable ─────────────────────────────────────────────
+        self._canvas = ctk.CTkCanvas(self, bd=0, highlightthickness=0, bg=_BG)
+        self._vbar   = ctk.CTkScrollbar(
+            self, orientation="vertical", command=self._canvas.yview
+        )
+        self.sf = ctk.CTkFrame(self._canvas, fg_color=_BG)
+
+        self.sf.bind(
+            "<Configure>",
+            lambda e: self._canvas.configure(
+                scrollregion=self._canvas.bbox("all")
+            ),
+        )
+        self._win = self._canvas.create_window((0, 0), window=self.sf, anchor="nw")
+        self._canvas.configure(yscrollcommand=self._vbar.set)
+        self._canvas.bind(
+            "<Configure>",
+            lambda e: (
+                self._canvas.itemconfig(self._win, width=e.width),
+                self._canvas.itemconfig(self._win, height=e.height),
+            ),
+        )
+        self._canvas.pack(side="left", fill="both", expand=True)
+        self._vbar.pack(side="right", fill="y")
+        self._canvas.bind(
+            "<Enter>",
+            lambda e: self._canvas.bind_all("<MouseWheel>", self._on_mousewheel),
+        )
+        self._canvas.bind(
+            "<Leave>",
+            lambda e: self._canvas.unbind_all("<MouseWheel>"),
+        )
+
+        self._build()
+
     def _on_mousewheel(self, event):
-        # Empêche le scroll négatif
-        first, last = self.canvas.yview()
+        first, last = self._canvas.yview()
         if event.delta > 0 and first <= 0:
             return
         if event.delta < 0 and last >= 1:
             return
-        self.canvas.yview_scroll(int(-1*(event.delta/120)), "units")
+        self._canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
 
-        
-    def _bind_mousewheel(self, event):
-        self.canvas.bind_all("<MouseWheel>", self._on_mousewheel)
+    def _build(self):
+        # Statusbar en bas en premier (avant expand) pour ne pas être écrasée
+        self._build_statusbar(self.sf)
 
-    def _unbind_mousewheel(self, event):
-        self.canvas.unbind_all("<MouseWheel>")
+        # Grille principale 2 colonnes — remplit toute la hauteur disponible
+        self._main = ctk.CTkFrame(self.sf, fg_color=_BG)
+        self._main.pack(fill="both", expand=True, padx=12, pady=(4, 0))
+        self._main.columnconfigure(0, weight=2, minsize=200)
+        self._main.columnconfigure(1, weight=3, minsize=280)
+        self._main.rowconfigure(0, weight=1)
 
-    def build(self):
-        # Remplacer self par self.scrollable_frame pour tout builder dedans
-        self.build_espace1(self.scrollable_frame)
-        self.build_espace2(self.scrollable_frame)
-        self.build_espace3(self.scrollable_frame)
-        self.build_espace4(self.scrollable_frame)
+        # Colonne gauche : dropzone (hauteur fixe) + contrôles (s'étire)
+        self._left_col = ctk.CTkFrame(self._main, fg_color=_BG)
+        self._left_col.grid(row=0, column=0, sticky="nsew", padx=(0, 6), pady=4)
+        self._left_col.rowconfigure(1, weight=1)
+        self._left_col.columnconfigure(0, weight=1)
+        self._build_drop_card(self._left_col)
+        self._build_controls_card(self._left_col)
 
-    def build_espace1(self, parent):
-        espace1 = ctk.CTkFrame(parent, height=300, fg_color="#ebebeb")
-        espace1.pack(fill="x", padx=10)
+        # Colonne droite : SVG pleine hauteur
+        self._build_svg_card(self._main)
 
-        # Container grid
-        container = ctk.CTkFrame(espace1, fg_color="#ebebeb")
-        container.pack(fill="x", expand=True)
+    def _build_drop_card(self, parent):
+        self._drop_card = _Card(parent, height=_CARD_H)
+        card = self._drop_card
+        card.grid(row=0, column=0, sticky="ew", pady=(0, 6))
+        card.grid_propagate(False)
+        card.rowconfigure(1, weight=1)
+        card.columnconfigure(0, weight=1)
 
-        container.columnconfigure(0, weight=3)
-        container.columnconfigure(1, weight=2)
-        container.columnconfigure(2, weight=3)
+        hdr = ctk.CTkFrame(card, fg_color="transparent")
+        hdr.grid(row=0, column=0, sticky="ew", padx=14, pady=(12, 0))
+        ctk.CTkLabel(
+            hdr, text="ORIGINAL",
+            font=ctk.CTkFont(size=9, weight="bold"), text_color=_MUTED,
+        ).pack(side="left")
 
-        self.build_espace1_dropzone(container)
-        self.build_espace1_controls(container)
-        self.build_espace1_preview(container)
-
-
-    def build_espace1_dropzone(self, parent):
-        self.dropzone_frame = ctk.CTkFrame(parent, fg_color="#dbdbdb")
-        self.dropzone_frame.grid(row=0, column=0, sticky="nsew", padx=10, pady=5)
-        self.dropzone_frame.configure(height=300)
-        self.dropzone_frame.grid_propagate(False)
-
-        self.dropzone_label = ctk.CTkLabel(
-            self.dropzone_frame,
-            text="Drag a PNG here\nor click to choose",
-            justify="center"
+        self.lbl_orig = ctk.CTkLabel(
+            card, text="Drag an image here\nor click to choose",
+            justify="center", text_color=_MUTED,
         )
-        self.dropzone_label.pack(expand=True)
+        self.lbl_orig.grid(row=1, column=0, sticky="nsew", padx=14, pady=6)
+        self.lbl_orig.bind("<Configure>", self._on_resize)
 
-        self.dropzone_frame.bind("<Button-1>", self.load_image)
-        self.dropzone_label.bind("<Button-1>", self.load_image)
+        foot = ctk.CTkFrame(card, fg_color="transparent")
+        foot.grid(row=2, column=0, sticky="ew", padx=14, pady=(0, 12))
+        self.lbl_filename = ctk.CTkLabel(
+            foot, text="PNG · JPG · BMP · WebP",
+            font=ctk.CTkFont(size=10), text_color=_MUTED,
+        )
+        self.lbl_filename.pack()
 
-        self.dropzone_frame.drop_target_register(DND_FILES)
-        self.dropzone_frame.dnd_bind("<<Drop>>", self.on_file_drop)
+        for w in (card, self.lbl_orig):
+            w.bind("<Button-1>", self.load_image)
+        card.drop_target_register(DND_FILES)
+        card.dnd_bind("<<Drop>>", self.on_file_drop)
 
+    def _build_controls_card(self, parent):
+        self._controls_card = _Card(parent)
+        card = self._controls_card
+        card.grid(row=1, column=0, sticky="nsew")
 
-    def build_espace1_controls(self, parent):
-        controls_frame = ctk.CTkFrame(parent, fg_color="#ebebeb")
-        controls_frame.grid(row=0, column=1, sticky="nsew", padx=10, pady=5)
-        controls_frame.grid_propagate(False)
+        # Scrollable interne pour que le contenu ne déborde pas
+        inner = ctk.CTkScrollableFrame(
+            card, fg_color="transparent",
+            scrollbar_button_color=_BORDER,
+            scrollbar_button_hover_color=_MUTED,
+        )
+        inner.pack(fill="both", expand=True, padx=8, pady=8)
 
-        label3 = ctk.CTkLabel(controls_frame, text="Threshold")
-        label3.pack(anchor="w", pady=(5,0))
-        self.slider_threshold = ctk.CTkSlider(controls_frame, from_=0, to=255, number_of_steps=255)
-        self.slider_threshold.set(128)
-        self.slider_threshold.pack(fill="x", pady=(0,10))
-        self.slider_threshold.bind("<ButtonRelease-1>", lambda e: self.update_preview())
+        # ── Presets ───────────────────────────────────────────────────────
+        self._section(inner, "Presets")
+        pr = ctk.CTkFrame(inner, fg_color="transparent")
+        pr.pack(fill="x", padx=16, pady=(4, 10))
+        for lbl, key in [("B&W", "bw"), ("Poster", "poster"), ("Photo", "photo")]:
+            ctk.CTkButton(
+                pr, text=lbl, width=68, height=30,
+                command=lambda k=key: self._apply_preset(k),
+            ).pack(side="left", padx=(0, 6))
 
-        self.checkbox_auto_threshold = ctk.CTkCheckBox(controls_frame, text="Threshold Auto")
-        self.checkbox_auto_threshold.pack(anchor="w", pady=5)
-        self.checkbox_auto_threshold.configure(command=self.update_preview)
+        # ── Bouton Advanced ───────────────────────────────────────────────
+        adv_wrap = ctk.CTkFrame(inner, fg_color="transparent")
+        adv_wrap.pack(fill="x", padx=16, pady=(6, 4))
+        self._btn_adv = ctk.CTkButton(
+            adv_wrap,
+            text="⚙  Advanced  ▾",
+            height=28, fg_color="transparent",
+            border_width=1, border_color=_BORDER,
+            text_color=_MUTED, hover_color=_BORDER,
+            command=self._toggle_advanced,
+        )
+        self._btn_adv.pack(fill="x")
 
-        self.checkbox_invert = ctk.CTkCheckBox(controls_frame, text="Invert")
-        self.checkbox_invert.pack(anchor="w", pady=5)
-        self.checkbox_invert.configure(command=self.update_preview)
+        # ── Frame Advanced (masqué par défaut) ────────────────────────────
+        self._frame_adv = ctk.CTkFrame(inner, fg_color="transparent")
 
-        label1 = ctk.CTkLabel(controls_frame, text="Turdsize")
-        label1.pack(anchor="w", pady=(45,0))
-        self.slider_turdsize = ctk.CTkSlider(controls_frame, from_=0, to=10, number_of_steps=100)
-        self.slider_turdsize.set(2)
-        self.slider_turdsize.pack(fill="x", pady=(0,10))
+        # Color Mode (dans advanced)
+        self._section(self._frame_adv, "Color Mode")
+        self.seg_colormode = ctk.CTkSegmentedButton(
+            self._frame_adv, values=["Color", "Binary"],
+            command=self._on_param_change,
+        )
+        self.seg_colormode.set("Color")
+        self.seg_colormode.pack(fill="x", padx=16, pady=(4, 8))
 
-        label2 = ctk.CTkLabel(controls_frame, text="Alphamax")
-        label2.pack(anchor="w", pady=(5,0))
-        self.slider_alphamax = ctk.CTkSlider(controls_frame, from_=0, to=1.334, number_of_steps=1000)
-        self.slider_alphamax.set(1)
-        self.slider_alphamax.pack(fill="x", pady=(0,10))
+        # Invert switch (Binary uniquement, dans advanced)
+        self._invert_row = ctk.CTkFrame(self._frame_adv, fg_color="transparent")
+        ir_lbl = ctk.CTkFrame(self._invert_row, fg_color="transparent")
+        ir_lbl.pack(fill="x", padx=16, pady=(2, 0))
+        ir_lbl.columnconfigure(0, weight=1)
+        ctk.CTkLabel(
+            ir_lbl, text="Invert",
+            font=ctk.CTkFont(size=12), anchor="w",
+        ).grid(row=0, column=0, sticky="w")
+        ctk.CTkLabel(
+            ir_lbl, text="Swap black ↔ white",
+            font=ctk.CTkFont(size=10), text_color=_MUTED, anchor="e",
+        ).grid(row=0, column=1, sticky="e")
+        self.switch_invert = ctk.CTkSwitch(
+            self._invert_row, text="",
+            command=self._on_param_change, width=42, height=22,
+        )
+        self.switch_invert.pack(anchor="w", padx=16, pady=(2, 8))
 
+        # Params couleur (dans advanced)
+        self._frame_color = ctk.CTkFrame(self._frame_adv, fg_color="transparent")
+        self._frame_color.pack(fill="x")
+        self._make_slider(
+            self._frame_color, "color_precision",
+            "Color Precision", 1, 8, 6, 7, "{:.0f}")
+        self._make_slider(
+            self._frame_color, "layer_difference",
+            "Layer Difference", 1, 64, 16, 63, "{:.0f}")
+        self._section(self._frame_color, "Hierarchical")
+        self.seg_hierarchical = ctk.CTkSegmentedButton(
+            self._frame_color, values=["Stacked", "Cutout"],
+            command=self._on_param_change,
+        )
+        self.seg_hierarchical.set("Stacked")
+        self.seg_hierarchical.pack(fill="x", padx=16, pady=(4, 8))
 
-    def build_espace1_preview(self, parent):
-        preview_frame = ctk.CTkFrame(parent, fg_color="#dbdbdb")
-        preview_frame.grid(row=0, column=2, sticky="nsew", padx=10, pady=5)
-        preview_frame.configure(height=300)
-        preview_frame.grid_propagate(False)
+        # Curve Fitting
+        self._section(self._frame_adv, "Curve Fitting")
+        self.seg_mode = ctk.CTkSegmentedButton(
+            self._frame_adv, values=["Spline", "Polygon", "Pixel"],
+            command=self._on_param_change,
+        )
+        self.seg_mode.set("Spline")
+        self.seg_mode.pack(fill="x", padx=16, pady=(4, 8))
 
-        self.preview_label = ctk.CTkLabel(preview_frame, text="Preview")
-        self.preview_label.pack(expand=True)
+        self._make_slider(
+            self._frame_adv, "filter_speckle",
+            "Filter Speckle", 0, 16, 4, 16, "{:.0f}")
+        self._make_slider(
+            self._frame_adv, "corner_threshold",
+            "Corner Threshold", 0, 180, 60, 180, "{:.0f}")
+        self._make_slider(
+            self._frame_adv, "length_threshold",
+            "Length Threshold", 3.5, 10.0, 4.0, 65, "{:.1f}")
 
+        self._section(self._frame_adv, "Fine-tuning")
+        self._make_slider(
+            self._frame_adv, "splice_threshold",
+            "Splice Threshold", 0, 180, 45, 180, "{:.0f}")
+        self._make_slider(
+            self._frame_adv, "max_iterations",
+            "Max Iterations", 1, 20, 10, 19, "{:.0f}")
 
-    def load_image_from_path(self, filepath):
+        ctk.CTkFrame(inner, fg_color="transparent", height=8).pack()
+
+    # ── Carte SVG (col droite, pleine hauteur) ────────────────────────────
+
+    def _build_svg_card(self, parent):
+        self._svg_card = _Card(parent)
+        self._svg_card.grid(row=0, column=1, sticky="nsew", padx=(6, 0), pady=4)
+        card = self._svg_card
+        card.rowconfigure(1, weight=1)
+        card.columnconfigure(0, weight=1)
+
+        # En-tête
+        hdr = ctk.CTkFrame(card, fg_color="transparent")
+        hdr.grid(row=0, column=0, sticky="ew", padx=14, pady=(12, 0))
+        ctk.CTkLabel(
+            hdr, text="SVG PREVIEW",
+            font=ctk.CTkFont(size=9, weight="bold"), text_color=_MUTED,
+        ).pack(side="left")
+        self.lbl_live = ctk.CTkLabel(
+            hdr, text="● live",
+            font=ctk.CTkFont(size=10), text_color=_GREEN,
+        )
+        self.lbl_live.pack(side="right")
+
+        # Image SVG (s'étire)
+        self.lbl_svg = ctk.CTkLabel(
+            card, text="Waiting for image…",
+            justify="center", text_color=_MUTED,
+        )
+        self.lbl_svg.grid(row=1, column=0, sticky="nsew", padx=14, pady=6)
+        self.lbl_svg.bind("<Configure>", self._on_resize)
+
+        # Pied : info + download + statut save
+        foot = ctk.CTkFrame(card, fg_color="transparent")
+        foot.grid(row=2, column=0, sticky="ew", padx=14, pady=(0, 14))
+
+        self.lbl_svg_info = ctk.CTkLabel(
+            foot, text="",
+            font=ctk.CTkFont(size=10), text_color=_MUTED,
+        )
+        self.lbl_svg_info.pack(pady=(0, 6))
+
+        self.btn_download = ctk.CTkButton(
+            foot, text="↓  Download SVG",
+            height=36, width=180,
+            command=self.download_svg, state="disabled",
+        )
+        self.btn_download.pack(pady=(0, 4))
+
+        self.lbl_save_status = ctk.CTkLabel(
+            foot, text="",
+            font=ctk.CTkFont(size=10), text_color=_GREEN,
+        )
+        self.lbl_save_status.pack()
+
+    # ── Barre de statut ───────────────────────────────────────────────────
+
+    def _build_statusbar(self, parent):
+        bar = ctk.CTkFrame(parent, fg_color=_BG)
+        bar.pack(fill="x", padx=14, pady=(8, 6))
+
+        self.lbl_status = ctk.CTkLabel(
+            bar, text="", font=ctk.CTkFont(size=12), anchor="w",
+        )
+        self.lbl_status.pack(side="left", padx=2)
+
+        self._btn_focus = ctk.CTkButton(
+            bar,
+            text="⛶  Focus",
+            height=30, width=100,
+            fg_color="transparent",
+            border_width=1, border_color=_BORDER,
+            text_color=_MUTED, hover_color=_BORDER,
+            command=self._toggle_focus,
+        )
+        self._btn_focus.pack(side="right", padx=2)
+
+    # ══════════════════════════════════════════════════════════════════════
+    # Helpers widgets
+    # ══════════════════════════════════════════════════════════════════════
+
+    def _section(self, parent, text: str):
+        f = ctk.CTkFrame(parent, fg_color="transparent")
+        f.pack(fill="x", padx=16, pady=(10, 0))
+        ctk.CTkLabel(
+            f, text=text.upper(),
+            font=ctk.CTkFont(size=9, weight="bold"),
+            text_color=_MUTED, anchor="w",
+        ).pack(side="left")
+        ctk.CTkFrame(f, height=1, fg_color=_BORDER).pack(
+            side="right", fill="x", expand=True, padx=(6, 0), pady=5,
+        )
+
+    def _make_slider(self, parent, key, label, lo, hi, default, steps, fmt):
+        row = ctk.CTkFrame(parent, fg_color="transparent")
+        row.pack(fill="x", padx=16, pady=(4, 0))
+        row.columnconfigure(0, weight=1)
+        ctk.CTkLabel(
+            row, text=label, anchor="w", font=ctk.CTkFont(size=12),
+        ).grid(row=0, column=0, sticky="w")
+        val_lbl = ctk.CTkLabel(
+            row, text=fmt.format(default),
+            anchor="e", font=ctk.CTkFont(size=11), text_color=_MUTED,
+        )
+        val_lbl.grid(row=0, column=1, sticky="e")
+
+        sl = ctk.CTkSlider(parent, from_=lo, to=hi, number_of_steps=steps)
+        sl.set(default)
+        sl.pack(fill="x", padx=16, pady=(2, 4))
+        sl.configure(
+            command=lambda v, l=val_lbl, f=fmt: (
+                l.configure(text=f.format(v)),
+                self._on_param_change(),
+            )
+        )
+        self._sliders[key] = (sl, val_lbl, fmt)
+
+    def _set_slider(self, key, value):
+        s, lbl, fmt = self._sliders[key]
+        s.set(value)
+        lbl.configure(text=fmt.format(value))
+
+    # ══════════════════════════════════════════════════════════════════════
+    # Visibilité
+    # ══════════════════════════════════════════════════════════════════════
+
+    def _toggle_focus(self):
+        self._focus_mode = not self._focus_mode
+        if self._focus_mode:
+            self._drop_card.grid_remove()
+            self._btn_focus.configure(text="⛶  Exit Focus")
+            self.winfo_toplevel().bind("<Escape>", lambda e: self._exit_focus())
+        else:
+            self._drop_card.grid()
+            self._btn_focus.configure(text="⛶  Focus")
+            self.winfo_toplevel().unbind("<Escape>")
+        if self._on_focus_toggle:
+            self._on_focus_toggle()
+
+    def _exit_focus(self):
+        """Appelé par Escape — sort du focus mode si actif."""
+        if self._focus_mode:
+            self._toggle_focus()
+
+    def _on_colormode_vis(self, mode: str):
+        """Affiche/masque Invert et les params couleur dans Advanced."""
+        if mode == "Color":
+            self._invert_row.pack_forget()
+            self._frame_color.pack(fill="x")
+        else:
+            self._frame_color.pack_forget()
+            self._invert_row.pack(fill="x", after=self.seg_colormode)
+
+    def _toggle_advanced(self):
+        self._advanced_open = not self._advanced_open
+        if self._advanced_open:
+            self._frame_adv.pack(fill="x", after=self._btn_adv.master)
+            self._btn_adv.configure(text="⚙  Advanced  ▴")
+            self._on_colormode_vis(self.seg_colormode.get())
+        else:
+            self._frame_adv.pack_forget()
+            self._btn_adv.configure(text="⚙  Advanced  ▾")
+
+    def _on_param_change(self, *_):
+        self._on_colormode_vis(self.seg_colormode.get())
+        self._schedule_preview()
+
+    def _apply_preset(self, key: str):
+        p = PRESETS[key]
+        cm = p.get("colormode", "color")
+        self.seg_colormode.set("Color" if cm == "color" else "Binary")
+        self._on_colormode_vis(self.seg_colormode.get())
+
+        if "color_precision"  in p: self._set_slider("color_precision",  p["color_precision"])
+        if "layer_difference" in p: self._set_slider("layer_difference", p["layer_difference"])
+        if "hierarchical"     in p: self.seg_hierarchical.set(p["hierarchical"].capitalize())
+
+        mode_map = {"spline": "Spline", "polygon": "Polygon", "none": "Pixel"}
+        self.seg_mode.set(mode_map.get(p.get("mode", "spline"), "Spline"))
+
+        for k in ("filter_speckle", "corner_threshold", "length_threshold",
+                  "splice_threshold", "max_iterations"):
+            if k in p:
+                self._set_slider(k, p[k])
+
+        self._schedule_preview()
+
+    # ══════════════════════════════════════════════════════════════════════
+    # Chargement d'image
+    # ══════════════════════════════════════════════════════════════════════
+
+    _EXTS = (".png", ".jpg", ".jpeg", ".bmp", ".webp")
+
+    def load_image_from_path(self, filepath: str):
         if not filepath:
             return
-
         self.loaded_image_path = filepath
+        self._orig_pil = Image.open(filepath).convert("RGBA")
+        self._show_pil(self.lbl_orig, self._orig_pil, "_ctk_orig")
 
-        # Charger l'image et conserver le ratio
-        image = Image.open(filepath)
-        image = image.convert("RGBA")
-        image.thumbnail((280, 280), Image.Resampling.LANCZOS)
+        name = os.path.basename(filepath)
+        w, h = self._orig_pil.size
+        self.lbl_filename.configure(text=f"{name}  —  {w} × {h} px")
 
-        # Créer un fond pour centrer l'image
-        bg = Image.new("RGBA", (280, 280), (219, 219, 219, 255))  # couleur dropzone
-        x = (280 - image.width) // 2
-        y = (280 - image.height) // 2
-        bg.paste(image, (x, y), image)
-        self.tk_image = ImageTk.PhotoImage(bg)
-
-        # Mettre à jour la dropzone avec l'image
-        self.dropzone_label.configure(image=self.tk_image, text="")
-
-        # Créer un fichier temporaire pour la sortie PBM
-        self.temp_pbm_path = os.path.join(self.app_temp_dir, f"{uuid.uuid4().hex}.pbm")
-        with open(self.temp_pbm_path, "wb") as f:
-            pass
-
-        self.update_preview()
+        self._svg_pil = None
+        self.lbl_svg.configure(image=None, text="Converting…", text_color=_MUTED)
+        self.lbl_svg_info.configure(text="")
+        self.lbl_save_status.configure(text="")
+        self.btn_download.configure(state="disabled")
+        self._schedule_preview()
 
     def load_image(self, event=None):
-        filepath = filedialog.askopenfilename(filetypes=[("PNG files", "*.png")])
-        self.load_image_from_path(filepath)
+        fp = filedialog.askopenfilename(
+            filetypes=[("Images", "*.png *.jpg *.jpeg *.bmp *.webp")]
+        )
+        self.load_image_from_path(fp)
 
     def on_file_drop(self, event):
-        # Nettoie le chemin de fichier
-        filepath = event.data.strip("{}")
-
-        if filepath.lower().endswith(".png"):
-            # Remplace le filedialog : injecte manuellement le path
-            self.load_image_from_path(filepath)
+        fp = event.data.strip("{}")
+        if fp.lower().endswith(self._EXTS):
+            self.load_image_from_path(fp)
         else:
-            self.error_label.configure(text="Only PNG files are accepted")
+            self._set_status_error("Format not accepted — use PNG, JPG, BMP or WebP")
 
-    def update_preview(self):
-        if not self.loaded_image_path or not self.temp_pbm_path:
+    # ══════════════════════════════════════════════════════════════════════
+    # Affichage CTkImage
+    # ══════════════════════════════════════════════════════════════════════
+
+    def _show_pil(self, label: ctk.CTkLabel, pil_img: Image.Image, ref: str):
+        if pil_img is None:
             return
-
-        # Récupérer les paramètres actuels depuis sliders/checks
-        threshold = self.slider_threshold.get()
-        auto_threshold = self.checkbox_auto_threshold.get()
-        invert_colors = self.checkbox_invert.get()
-
-        threshold_param = "auto" if auto_threshold else threshold
-
-        png_to_pbm(
-            png_path=self.loaded_image_path,
-            pbm_path=self.temp_pbm_path,
-            threshold=threshold_param,
-            invert=invert_colors,
-            preview=True
+        lw = max(label.winfo_width()  - 28, 80)
+        lh = max(label.winfo_height() - 28, 80)
+        img = pil_img.copy()
+        img.thumbnail((lw, lh), Image.Resampling.LANCZOS)
+        ctk_img = ctk.CTkImage(
+            light_image=img, dark_image=img, size=(img.width, img.height),
         )
+        label.configure(image=ctk_img, text="")
+        setattr(self, ref, ctk_img)
 
-        # Charger l'image PBM de sortie et afficher dans preview
-        if os.path.exists(self.temp_pbm_path):
-            img = Image.open(self.temp_pbm_path)
-            img = img.convert("L")
-            img.thumbnail((280, 280), Image.Resampling.LANCZOS)
+    def _on_resize(self, event=None):
+        if self._resize_id:
+            self.after_cancel(self._resize_id)
+        self._resize_id = self.after(120, self._redisplay_images)
 
-            # Créer un fond pour centrer l'image
-            bg = Image.new("L", (280, 280), 219)
-            x = (280 - img.width) // 2
-            y = (280 - img.height) // 2
-            bg.paste(img, (x, y))
-            self.tk_preview_image = ImageTk.PhotoImage(bg)
-            self.preview_label.configure(image=self.tk_preview_image, text="")
+    def _redisplay_images(self):
+        if self._orig_pil:
+            self._show_pil(self.lbl_orig, self._orig_pil, "_ctk_orig")
+        if self._svg_pil:
+            self._show_pil(self.lbl_svg, self._svg_pil, "_ctk_svg")
 
-    def build_espace2(self, parent):
-        espace2 = ctk.CTkFrame(parent)
-        espace2.configure(fg_color="#ebebeb")
-        espace2.pack(fill="x", padx=20, pady=30, anchor="w")
+    # ══════════════════════════════════════════════════════════════════════
+    # Live preview
+    # ══════════════════════════════════════════════════════════════════════
 
-        # Bouton centré
-        convert_button = ctk.CTkButton(
-            espace2,
-            text="Convert to SVG",
-            height=40,
-            width=200,
-            command=self.convert_to_svg 
+    def _schedule_preview(self):
+        if not self.loaded_image_path:
+            return
+        if self._preview_id:
+            self.after_cancel(self._preview_id)
+        self._preview_id = self.after(600, self._run_conversion)
+
+    def _prepare_input(self) -> str:
+        tmp = os.path.join(self.app_temp_dir, f"input_{uuid.uuid4().hex}.png")
+        img = self._orig_pil.convert("RGBA")
+        if self.seg_colormode.get() == "Binary":
+            bg = Image.new("RGB", img.size, (255, 255, 255))
+            bg.paste(img, mask=img.split()[3])
+            img = bg.convert("L").convert("RGB")
+            if self.switch_invert.get():
+                img = ImageOps.invert(img)
+        img.save(tmp, "PNG")
+        return tmp
+
+    def _collect_params(self) -> dict:
+        colormode = self.seg_colormode.get().lower()
+        mode_map  = {"Spline": "spline", "Polygon": "polygon", "Pixel": "none"}
+        p = dict(
+            colormode        = colormode,
+            mode             = mode_map.get(self.seg_mode.get(), "spline"),
+            filter_speckle   = int(self._sliders["filter_speckle"][0].get()),
+            corner_threshold = int(self._sliders["corner_threshold"][0].get()),
+            length_threshold = round(self._sliders["length_threshold"][0].get(), 2),
+            splice_threshold = int(self._sliders["splice_threshold"][0].get()),
+            max_iterations   = int(self._sliders["max_iterations"][0].get()),
+            path_precision   = 3,
         )
-        convert_button.pack(pady=0)
+        if colormode == "color":
+            p["hierarchical"]     = self.seg_hierarchical.get().lower()
+            p["color_precision"]  = int(self._sliders["color_precision"][0].get())
+            p["layer_difference"] = int(self._sliders["layer_difference"][0].get())
+        return p
 
-    def convert_to_svg(self):
-        if not self.temp_pbm_path:
-            self.error_label.configure(text="No PBM files to convert.")
+    def _run_conversion(self):
+        if not self.loaded_image_path or self._orig_pil is None:
             return
-        
-        # Récupérer les paramètres actuels depuis sliders/checks
-        turdsize = self.slider_turdsize.get()
-        alphamax = self.slider_alphamax.get()
+        self._gen += 1
+        gen    = self._gen
+        params = self._collect_params()
+        out    = os.path.join(self.app_temp_dir, f"{uuid.uuid4().hex}.svg")
+        self._start_spinner()
 
-        # Fichier SVG temporaire
-        self.temp_svg_path = os.path.join(self.app_temp_dir, f"{uuid.uuid4().hex}.pbm")
-        with open(self.temp_svg_path, "wb") as f:
-            pass
+        def _task():
+            tmp_in = None
+            try:
+                tmp_in = self._prepare_input()
+                convert_to_svg(tmp_in, out, **params)
+                self.after(0, lambda: self._on_done(gen, out))
+            except Exception as exc:
+                self.after(0, lambda e=exc: self._on_error(gen, str(e)))
+            finally:
+                if tmp_in and os.path.exists(tmp_in):
+                    try:
+                        os.remove(tmp_in)
+                    except OSError:
+                        pass
 
-        cmd = [
-            get_potrace_path(),
-            '--svg',
-            '--output', self.temp_svg_path,
-            '--turdsize', str(turdsize),
-            '--alphamax', str(alphamax),
-            '--tight',
-            self.temp_pbm_path
-        ]
+        threading.Thread(target=_task, daemon=True).start()
 
-        # Exécuter la commande potrace
-        result = subprocess.run(cmd, capture_output=True, text=True)
-        if result.returncode != 0:
-            self.error_label.configure(text=f"Error during vectorization.")
+    def _on_done(self, gen: int, path: str):
+        if gen != self._gen:
             return
+        self._stop_spinner()
+        self.temp_svg_path = path
+        self._render_svg_preview()
+        self._set_status_ok()
+        self.btn_download.configure(state="normal")
+        self.lbl_save_status.configure(text="")
 
-        status_optimisation = optimize_svg(self.temp_svg_path)
-        if not status_optimisation:
-            self.error_label.configure(text="Error during SVG optimization.")
+    def _on_error(self, gen: int, msg: str):
+        if gen != self._gen:
             return
+        self._stop_spinner()
+        self._set_status_error(msg)
 
-        # Afficher le SVG dans l'espace 3
-        self.render_svg_preview()
+    def _start_spinner(self):
+        self._is_busy   = True
+        self._spinner_i = 0
+        self._tick()
 
-    def build_espace3(self, parent):
-        espace3 = ctk.CTkFrame(parent)
-        espace3.configure(fg_color="#ebebeb")
-        espace3.pack(fill="x", expand=False, padx=20, pady=0, anchor="w")
+    def _tick(self):
+        if not self._is_busy:
+            return
+        c = _SPINNER[self._spinner_i % 4]
+        self.lbl_status.configure(text=f"{c}  Converting…", text_color=_MUTED)
+        self.lbl_live.configure(text="● converting", text_color=_AMBER)
+        self._spinner_i += 1
+        self._spinner_id = self.after(130, self._tick)
 
-        # Label pour afficher l'aperçu PNG généré depuis le SVG
-        self.svg_preview_label = ctk.CTkLabel(espace3, text="SVG preview not available")
-        self.svg_preview_label.pack(pady=10)
-        self.svg_preview_label.pack_configure(anchor="center")
+    def _stop_spinner(self):
+        self._is_busy = False
+        if self._spinner_id:
+            self.after_cancel(self._spinner_id)
+            self._spinner_id = None
 
-        # Bouton de téléchargement
-        download_button = ctk.CTkButton(
-            espace3,
-            text="Download SVG",
-            command=self.download_svg,
-            width=180,
-            height=36
-        )
-        download_button.pack(pady=15)
-        download_button.pack_configure(anchor="center")
+    def _set_status_ok(self):
+        self.lbl_status.configure(text="✓  Ready", text_color=_GREEN)
+        self.lbl_live.configure(text="● live", text_color=_GREEN)
 
-    def render_svg_preview(self):
+    def _set_status_error(self, msg: str):
+        short = msg if len(msg) < 90 else msg[:87] + "…"
+        self.lbl_status.configure(text=f"✕  {short}", text_color=_RED)
+        self.lbl_live.configure(text="● error", text_color=_RED)
+
+    # ══════════════════════════════════════════════════════════════════════
+    # Rendu SVG
+    # ══════════════════════════════════════════════════════════════════════
+
+    def _render_svg_preview(self):
         if not self.temp_svg_path:
-            self.svg_preview_label.configure(image=None, text="No SVG generated")
             return
-
         try:
-            # Convertir le SVG en PNG temporaire avec cairosvg
-            temp_png_path = os.path.join(self.app_temp_dir, f"{uuid.uuid4().hex}.pbm")
-            with open(temp_png_path, "wb") as f:
-                cairosvg.svg2png(url=self.temp_svg_path, write_to=temp_png_path)
-                pass
+            tmp = os.path.join(self.app_temp_dir, f"{uuid.uuid4().hex}.png")
+            cairosvg.svg2png(url=self.temp_svg_path, write_to=tmp)
+            self._svg_pil = Image.open(tmp).convert("RGBA")
+            os.remove(tmp)
+            self._show_pil(self.lbl_svg, self._svg_pil, "_ctk_svg")
+            size_kb = os.path.getsize(self.temp_svg_path) / 1024
+            self.lbl_svg_info.configure(text=f"{size_kb:.1f} KB  ·  SVG")
+        except Exception as exc:
+            self.lbl_svg.configure(
+                image=None, text=f"Preview error:\n{exc}", text_color=_RED,
+            )
 
-            # Charger le PNG et le redimensionner sans déformer
-            img = Image.open(temp_png_path)
-            img.thumbnail((280, 280), Image.Resampling.LANCZOS)
-
-            # Centrer sur un fond gris si besoin
-            bg = Image.new("RGBA", (280, 280), (219, 219, 219, 255))
-            x = (280 - img.width) // 2
-            y = (280 - img.height) // 2
-            bg.paste(img, (x, y), img if img.mode == "RGBA" else None)
-
-            self.tk_svg_preview = ImageTk.PhotoImage(bg)
-            self.svg_preview_label.configure(image=self.tk_svg_preview, text="")
-
-            # Nettoyer le PNG temporaire
-            os.remove(temp_png_path)
-        except Exception as e:
-            self.svg_preview_label.configure(image=None, text=f"SVG error : {e}")
-
+    # ══════════════════════════════════════════════════════════════════════
+    # Téléchargement
+    # ══════════════════════════════════════════════════════════════════════
 
     def download_svg(self):
-        if not hasattr(self, 'temp_svg_path') or not self.temp_svg_path:
-            self.error_label.configure(text="No SVG generated to download.")
+        if not self.temp_svg_path or not os.path.exists(self.temp_svg_path):
+            self.lbl_save_status.configure(
+                text="No SVG available.", text_color=_RED
+            )
             return
-
         save_path = filedialog.asksaveasfilename(
             defaultextension=".svg",
-            filetypes=[("Fichiers SVG", "*.svg")],
-            title="Save as..."
+            filetypes=[("SVG", "*.svg")],
+            title="Save SVG as…",
         )
-
         if save_path:
             shutil.copyfile(self.temp_svg_path, save_path)
-
-
-    def build_espace4(self, parent):
-        espace4 = ctk.CTkFrame(parent)
-        espace4.configure(fg_color="#ebebeb")
-        espace4.pack(fill="x", padx=20, pady=30, anchor="w")
-
-        # Message d'erreur
-        self.error_label = ctk.CTkLabel(espace4, text="", text_color="red")
-        self.error_label.pack(pady=0)
-        self.error_label.pack_configure(anchor="center")
-
+            name = os.path.basename(save_path)
+            self.lbl_save_status.configure(
+                text=f"✓  Saved: {name}", text_color=_GREEN,
+            )
+            self.lbl_status.configure(
+                text=f"✓  Saved: {name}", text_color=_GREEN,
+            )

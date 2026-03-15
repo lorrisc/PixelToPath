@@ -47,20 +47,21 @@ class App(TkinterDnD.Tk):
         self.doc_frame = LeftFrame(frame_principal)
         self.doc_frame.grid(row=0, column=0, sticky="ns", padx=(0, 10))
 
-        self.right_frame = RightFrame(frame_principal, app_temp_dir=self.app_temp_dir)
+        self.right_frame = RightFrame(
+            frame_principal,
+            app_temp_dir=self.app_temp_dir,
+            on_focus_toggle=self.toggle_focus_mode,
+        )
         self.right_frame.grid(row=0, column=1, sticky="nsew")
         self.right_frame.configure(fg_color="#ebebeb")
+        self._focus_mode = False
 
-        # frame_principal = ctk.CTkFrame(self, fg_color="#ebebeb")
-        # frame_principal.pack(fill="both", expand=True, padx=10, pady=10)
-
-        # self.doc_frame = LeftFrame(frame_principal)
-        # self.doc_frame.configure(fg_color="#dbdbdb")  # gauche gris foncé
-        # self.doc_frame.pack(side="left", fill="y", padx=(0, 10))
-
-        # self.right_frame = RightFrame(frame_principal, app_temp_dir=self.app_temp_dir)
-        # self.right_frame.configure(fg_color="#ebebeb")  # droite même couleur que fond app
-        # self.right_frame.pack(side="right", fill="both", expand=True)
+    def toggle_focus_mode(self):
+        self._focus_mode = not self._focus_mode
+        if self._focus_mode:
+            self.doc_frame.grid_remove()
+        else:
+            self.doc_frame.grid()
 
     def on_close(self):
         # Nettoyer les fichiers temporaires

@@ -8,6 +8,7 @@ OutputBaseFilename=Setup_PixelToPath
 SetupIconFile=PixelToPath\_internal\interface\assets\app_icon.ico
 Compression=lzma
 SolidCompression=yes
+PrivilegesRequired=admin
 
 [Files]
 Source: "PixelToPath\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs
@@ -18,3 +19,6 @@ Name: "{commondesktop}\PixelToPath"; Filename: "{app}\PixelToPath.exe"; IconFile
 
 [Tasks]
 Name: "desktopicon"; Description: "Créer un raccourci sur le bureau"; GroupDescription: "Icônes supplémentaires:"
+
+[Run]
+Filename: "{app}\PixelToPath.exe"; Description: "Lancer PixelToPath"; Flags: nowait postinstall skipifsilent

@@ -1,8 +1,11 @@
-# PixelToPath-onefile.spec
-from PyInstaller.utils.hooks import collect_submodules
+# PixelToPathLinux.spec
+# Prérequis : bootloader recompilé depuis les sources PyInstaller
+# pip install vtracer cairosvg customtkinter tkinterdnd2 Pillow numpy
+# Sur Linux, cairosvg utilise libcairo du système (pas besoin de gtk-bin)
+
 from PyInstaller.building.build_main import Analysis, PYZ, EXE
-import sys
-import os
+from PyInstaller.utils.hooks import collect_submodules
+import sys, os
 
 block_cipher = None
 
@@ -12,11 +15,11 @@ a = Analysis(
     binaries=[],
     datas=[
         ('interface', 'interface'),
-        ('moteur', 'moteur'),
-        ('bin/potrace-1.16.linux-x86_64/potrace', 'bin/potrace-1.16.linux-x86_64/'),
+        ('moteur',    'moteur'),
     ],
     hiddenimports=[
         'PIL._tkinter_finder',
+        'vtracer',
         *collect_submodules('cairosvg'),
         *collect_submodules('customtkinter'),
         'tkinter',
@@ -26,7 +29,10 @@ a = Analysis(
     ],
     hookspath=[],
     runtime_hooks=[],
-    excludes=[],
+    excludes=[
+        'matplotlib', 'scipy', 'pandas',
+        'IPython', 'jupyter',
+    ],
     win_no_prefer_redirects=False,
     win_private_assemblies=False,
     cipher=block_cipher,
@@ -46,9 +52,9 @@ exe = EXE(
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
-    upx=True,
+    upx=False,              # UPX déclenche les AV
     upx_exclude=[],
-    runtime_tmpdir=None,    
+    runtime_tmpdir=None,
     console=False,
     icon='interface/assets/app_icon.ico',
-)   
+)

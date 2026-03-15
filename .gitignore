@@ -3,3 +3,8 @@
 /build/
 *.exe
 *__pycache__
+*.pfx
+*.cer
+*.key
+/PixelToPath/
+/PixelToPath_windowsversion/
