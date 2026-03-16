@@ -179,107 +179,9 @@
       ]
     }
     </script>
-    
-
-<style>
-  .construction-loader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    height: 70vh;
-  }
-
-  .hourglass-wrap {
-    position: relative;
-    width: 80px;
-    height: 120px;
-    /* L'animation globale tourne le sablier tous les 3s */
-    animation: hg-rotate 3s ease-in-out infinite;
-    transform-origin: center center;
-  }
-
-  .hourglass-svg { 
-    width: 100%; 
-    height: 100%; 
-  }
-
-  /* Rotation du sablier de 180 degrés à la fin de l'écoulement */
-  @keyframes hg-rotate {
-    0%, 80%  { transform: rotate(0deg); }
-    100%     { transform: rotate(180deg); }
-  }
-
-  /* Animations des masques de sable (clip-path) */
-  .sand-top-clip {
-    animation: sand-empty 3s linear infinite;
-  }
-  .sand-bot-clip {
-    animation: sand-fill 3s linear infinite;
-  }
-  
-  /* Animation du filet de sable */
-  .sand-stream {
-    animation: stream-fall 3s linear infinite;
-  }
-
-  /* Le sable du haut se vide en descendant */
-  @keyframes sand-empty {
-    0%, 10%   { transform: translateY(0); }
-    75%, 100% { transform: translateY(40px); }
-  }
-
-  /* Le sable du bas se remplit en montant */
-  @keyframes sand-fill {
-    0%, 10%   { transform: translateY(0); }
-    75%, 100% { transform: translateY(-40px); }
-  }
-
-  /* Le filet de sable tombe, touche le fond, puis s'arrête net */
-  @keyframes stream-fall {
-    0%   { transform: scaleY(0); opacity: 1; transform-origin: top center; }
-    10%  { transform: scaleY(1); opacity: 1; transform-origin: top center; }
-    74%  { transform: scaleY(1); opacity: 1; transform-origin: top center; }
-    75%  { transform: scaleY(1); opacity: 1; transform-origin: bottom center; }
-    80%, 100% { transform: scaleY(0); opacity: 0; transform-origin: bottom center; }
-  }
-
-  /* --- Corrections pour le texte --- */
-  .launch-text-wrap {
-    text-align: center;
-  }
-  
-  .launch-label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gray);
-    margin-bottom: 4px; /* Petit espace ajouté pour aérer */
-  }
-  
-  .launch-date {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--dark);
-  }
-  
-  .launch-info {
-    font-size: 0.9rem;
-    color: var(--gray);
-    max-width: 320px;
-    text-align: center;
-    line-height: 1.6;
-  }
-</style>
 
     </head>
-    <body style="
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-">
+    <body>
         <nav class="navbar">
     <div class="container nav-container">
 
@@ -351,56 +253,293 @@
     </div>
 </nav> 
 
-        <main style="flex: 1; background: radial-gradient(circle at 50% 0%, #fffbf0 0%, #fff 65%);">
-          <div class="construction-loader">
+        <main>
 
-            <div class="hourglass-wrap">
-              <svg class="hourglass-svg" viewBox="0 0 70 100" xmlns="http://www.w3.org/2000/svg">
-                
-                <defs>
-                  <clipPath id="clip-top">
-                    <rect class="sand-top-clip" x="10" y="10" width="50" height="40"/>
-                  </clipPath>
-                  <clipPath id="clip-bot">
-                    <rect class="sand-bot-clip" x="10" y="90" width="50" height="40"/>
-                  </clipPath>
-                </defs>
-
-                <rect x="14" y="10" width="3" height="80" fill="#a67b5b" rx="1"/>
-                <rect x="53" y="10" width="3" height="80" fill="#a67b5b" rx="1"/>
-
-                <path d="M 15 10 C 15 35, 32 45, 35 50 C 38 45, 55 35, 55 10 Z" fill="#e0f2fe" fill-opacity="0.3"/>
-                <path d="M 35 50 C 32 55, 15 65, 15 90 L 55 90 C 55 65, 38 55, 35 50 Z" fill="#e0f2fe" fill-opacity="0.3"/>
-
-                <path d="M 15 10 C 15 35, 32 45, 35 50 C 38 45, 55 35, 55 10 Z" fill="#d4a373" clip-path="url(#clip-top)"/>
-                
-                <path d="M 35 50 C 32 55, 15 65, 15 90 L 55 90 C 55 65, 38 55, 35 50 Z" fill="#d4a373" clip-path="url(#clip-bot)"/>
-
-                <rect class="sand-stream" x="34" y="50" width="2" height="40" fill="#d4a373"/>
-
-                <path d="M 15 10 C 15 35, 32 45, 35 50 C 38 45, 55 35, 55 10 Z" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
-                <path d="M 35 50 C 32 55, 15 65, 15 90 L 55 90 C 55 65, 38 55, 35 50 Z" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
-                
-                <path d="M 18 15 C 18 30, 31 40, 33 45" stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                <path d="M 18 85 C 18 70, 31 60, 33 55" stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-
-                <rect x="12" y="6" width="46" height="4" rx="2" fill="#4a3b32"/>
-                <rect x="12" y="90" width="46" height="4" rx="2" fill="#4a3b32"/>
-
-              </svg>
+            <!-- Hero -->
+            <section class="tool-hero">
+            <div class="container">
+                <h1>免费在线 PNG 转 SVG 转换器</h1>
+                <p>几秒钟内将任何图像转换为可缩放的矢量图形 — 无需注册，没有限制，支持全彩。</p>
+                <div class="badges">
+                <span class="badge accent">✓ 永久免费</span>
+                <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
+                <span class="badge">实时预览</span>
+                <span class="badge">彩色 &amp; 黑白模式</span>
+                <span class="badge">无水印</span>
+                </div>
             </div>
+            </section>
 
-            <div class="launch-text-wrap">
-              <div class="launch-label">Coming soon</div>
-              <div class="launch-date">28 mars 2026</div>
+            <!-- Converter (full width) -->
+            <section class="converter-section">
+            <div class="converter-wrap">
+
+                <!-- Sidebar -->
+                <div class="conv-sidebar">
+                <div class="dropzone" id="dropzone">
+                    <div class="dz-hint">
+                    <span class="dz-icon">⬡</span>
+                    将图像拖放到此处<br>
+                    或 <u style="cursor:pointer;color:var(--primary)">浏览文件</u>
+                    </div>
+                </div>
+                <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
+
+                <div class="ps">预设</div>
+                <div class="presets">
+                    <button class="preset-btn" data-preset="bw">黑白</button>
+                    <button class="preset-btn active" data-preset="poster">海报</button>
+                    <button class="preset-btn" data-preset="photo">照片</button>
+                </div>
+
+                <button id="adv-toggle"><span>⚙ 高级设置</span><span id="adv-arrow">▾</span></button>
+                <div id="adv-content">
+
+                    <div class="ps">色彩模式</div>
+                    <div class="seg" id="seg-colormode">
+                    <button class="active" data-val="color">彩色</button>
+                    <button data-val="binary">二值化 (黑白)</button>
+                    </div>
+
+                    <div id="color-params">
+                    <div class="ps">颜色</div>
+                    <div class="sl-row"><span>颜色数量</span><span class="sl-val" id="v-num_colors">8</span></div>
+                    <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
+                    <div class="sl-row"><span>色彩精度</span><span class="sl-val" id="v-color_precision">6</span></div>
+                    <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
+                    <div class="sl-row"><span>图层差异</span><span class="sl-val" id="v-layer_difference">16</span></div>
+                    <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
+                    <div class="ps">层级</div>
+                    <div class="seg" id="seg-hierarchical">
+                        <button class="active" data-val="stacked">堆叠</button>
+                        <button data-val="cutout">镂空</button>
+                    </div>
+                    </div>
+
+                    <div id="binary-params" style="display:none">
+                    <div class="sw-row" style="margin-top:10px">
+                        <div><div class="sw-label">反色</div><div class="sw-sub">黑 ↔ 白 互换</div></div>
+                        <label class="sw"><input type="checkbox" id="sw-invert"><span class="sw-track"></span></label>
+                    </div>
+                    </div>
+
+                    <div class="ps">曲线拟合</div>
+                    <div class="seg" id="seg-mode">
+                    <button data-val="none">像素</button>
+                    <button data-val="polygon">多边形</button>
+                    <button class="active" data-val="spline">样条曲线 (Spline)</button>
+                    </div>
+
+                    <div class="sl-row"><span>斑点过滤</span><span class="sl-val" id="v-filter_speckle">4</span></div>
+                    <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
+                    <div class="sl-row"><span>拐角阈值</span><span class="sl-val" id="v-corner_threshold">60</span></div>
+                    <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
+                    <div class="sl-row"><span>长度阈值</span><span class="sl-val" id="v-length_threshold">4.0</span></div>
+                    <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
+                    <div class="sl-row"><span>拼接阈值</span><span class="sl-val" id="v-splice_threshold">45</span></div>
+                    <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
+                </div>
+                </div>
+
+                <!-- Preview -->
+                <div class="conv-preview">
+                <div class="preview-header">
+                    <span class="preview-title">SVG 预览</span>
+                    <div class="live-badge">
+                    <div class="live-dot" id="live-dot"></div>
+                    <span id="live-text">实时</span>
+                    </div>
+                </div>
+
+                <div class="preview-body">
+                    <div id="preview-svg-container">
+                    <div class="preview-placeholder" id="placeholder">
+                        <span class="preview-placeholder-icon">⬡</span>
+                        <p>上传图像以开始</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="preview-footer">
+                    <div id="status">准备就绪</div>
+                    <button id="btn-dl" disabled>↓ 下载 SVG</button>
+                </div>
+
+                <div class="conv-overlay" id="overlay">
+                    <div class="spinner"></div>
+                    <div class="overlay-text" id="overlay-text">正在转换...</div>
+                </div>
+                </div>
+
+            </div><!-- /converter-wrap -->
+            </section>
+
+            <!-- ── HOW IT WORKS ── -->
+            <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">工作原理</h2>
+                <p class="section-intro">无需配置，无需账号。上传、预览、下载 — 不到 10 秒即可完成。</p>
+                <div class="grid-3">
+                <div class="card" style="text-align:center">
+                    <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
+                    <h3>1. 上传</h3>
+                    <p>拖放或点击以上传任何 PNG、JPG、BMP 或 WebP 图像。也支持从剪贴板粘贴。</p>
+                </div>
+                <div class="card" style="text-align:center">
+                    <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
+                    <h3>2. 实时预览</h3>
+                    <p>当您更改设置时，SVG 会自动更新。一切都是即时的。</p>
+                </div>
+                <div class="card" style="text-align:center">
+                    <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
+                    <h3>3. 下载</h3>
+                    <p>点击下载 SVG 以获取矢量文件。可以在 Illustrator、Figma 中打开。</p>
+                </div>
+                </div>
             </div>
+            </section>
 
-            <p class="launch-info">
-              The online converter is on its way.<br>
-              In the meantime, <a href="/offline/" style="color: var(--primary); font-weight: 600;">download the desktop app</a>.
-            </p>
+            <!-- ── PRESETS EXPLAINED ── -->
+            <section class="section">
+            <div class="container">
+                <h2 class="section-title">你应该使用哪个预设？</h2>
+                <p class="section-intro">PixelToPath 提供三种优化的预设。您也可以手动微调每个参数。</p>
+                <div class="preset-explain-grid">
+                <div class="preset-explain-card bw">
+                    <h3><span class="preset-label">黑白</span> 黑白</h3>
+                    <p>在矢量化之前将图像转换为灰度。非常适合：</p>
+                    <ul>
+                    <li>Logo 和品牌标志</li>
+                    <li>图标和象形图</li>
+                    <li>线条画和草图</li>
+                    <li>刻字和激光雕刻</li>
+                    </ul>
+                </div>
+                <div class="preset-explain-card poster">
+                    <h3><span class="preset-label">海报</span> 扁平色彩</h3>
+                    <p>以高精度将图像追踪为多个堆叠的颜色图层。非常适合：</p>
+                    <ul>
+                    <li>扁平插画和卡通</li>
+                    <li>信息图表</li>
+                    <li>剪贴画</li>
+                    <li>数字艺术</li>
+                    </ul>
+                </div>
+                <div class="preset-explain-card photo">
+                    <h3><span class="preset-label">照片</span> 摄影照片</h3>
+                    <p>使用更广泛的颜色分组和噪点过滤来处理复杂的真实照片。非常适合：</p>
+                    <ul>
+                    <li>肖像和人脸</li>
+                    <li>风景照片</li>
+                    <li>产品照片</li>
+                    <li>渐变较多的复杂图像</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </section>
 
-          </div>
+            <!-- ── USE CASES ── -->
+            <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">你的 SVG 可以用来做什么？</h2>
+                <p class="section-intro">生成的文件是完全标准化的，可在任何地方使用。</p>
+                <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="uc-icon">🎨</div>
+                    <h3>在 Figma 或 Illustrator 中编辑</h3>
+                    <p>每个形状都是完全可编辑的路径，无损修改。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">🌐</div>
+                    <h3>在网站上使用</h3>
+                    <p>作为 <code>&lt;img&gt;</code> 标签使用，或使用 CSS 设置样式。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">🖨️</div>
+                    <h3>任意尺寸打印</h3>
+                    <p>从名片到广告牌，均不会出现像素模糊。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">✂️</div>
+                    <h3>激光切割</h3>
+                    <p>直接导入到 LightBurn 或 Cricut。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">💻</div>
+                    <h3>App 和 Web 图标</h3>
+                    <p>与 React、Vue 完美兼容。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">🎞️</div>
+                    <h3>CSS 和 JS 动画</h3>
+                    <p>将静态图像制作为动态矢量动画。</p>
+                </div>
+                </div>
+            </div>
+            </section>
+
+            <!-- ── FAQ ── -->
+            <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题</h2>
+                <div class="faq-list">
+                <details class="faq-item">
+                    <summary>这个工具真的是免费无限制的吗？</summary>
+                    <p>是的，完全免费。PixelToPath 是开源项目 (MIT)。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>是否支持彩色图像？</summary>
+                    <p>支持。我们使用 <strong>VTracer</strong> 引擎。彩色请选择 <strong>海报</strong> 或 <strong>照片</strong>。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>我的文件会被保存吗？</summary>
+                    <p>不会。文件在处理完成后会立即被删除。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>支持哪些格式？</summary>
+                    <p>PNG、JPG、JPEG、BMP 和 WebP (也支持 Ctrl+V)。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>最大文件大小是多少？</summary>
+                    <p>在线版最大 <strong>20 MB</strong>。处理大文件请下载 <a href="#download" style="color:var(--primary)">桌面应用</a>。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>为什么彩色图片的黑白结果看起来不对？</summary>
+                    <p>请在高级设置中开启 <strong>反色</strong>。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>样条曲线、多边形和像素模式有什么区别？</summary>
+                    <p><strong>样条曲线</strong> 适合平滑曲线。<strong>多边形</strong> 适合直线。<strong>像素</strong> 适合像素画。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>我可以用于商业项目吗？</summary>
+                    <p>可以，没有任何许可限制。</p>
+                </details>
+                </div>
+            </div>
+            </section>
+
+            <!-- ── CTA desktop ── -->
+            <section class="section bg-light">
+            <div class="container" style="text-align:center" id="download">
+                <h2 style="color:var(--dark);margin-bottom:1rem">需要离线无限制转换？</h2>
+                <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">桌面版完全在您的电脑上运行 — 无需互联网。</p>
+                <div class="double-buttons">
+                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ 下载 Windows 版</a>
+                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ 下载 Linux 版</a>
+                </div>
+            </div>
+            </section>
+
+            <section class="section donate-section">
+    <div class="container">
+        <h3>支持开源开发</h3>
+        <p>PixelToPath可免费使用。如果这个工具帮助您节省了时间，请考虑请我喝杯咖啡。</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ 通过PayPal捐款</a>
+    </div>
+</section>
+
         </main>
 
         <footer>
@@ -419,5 +558,6 @@
 </footer>
 
 
+        <script src="../../assets/online.js"></script>
     </body>
 </html>

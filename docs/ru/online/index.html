@@ -179,107 +179,9 @@
       ]
     }
     </script>
-    
-
-<style>
-  .construction-loader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    height: 70vh;
-  }
-
-  .hourglass-wrap {
-    position: relative;
-    width: 80px;
-    height: 120px;
-    /* L'animation globale tourne le sablier tous les 3s */
-    animation: hg-rotate 3s ease-in-out infinite;
-    transform-origin: center center;
-  }
-
-  .hourglass-svg { 
-    width: 100%; 
-    height: 100%; 
-  }
-
-  /* Rotation du sablier de 180 degrés à la fin de l'écoulement */
-  @keyframes hg-rotate {
-    0%, 80%  { transform: rotate(0deg); }
-    100%     { transform: rotate(180deg); }
-  }
-
-  /* Animations des masques de sable (clip-path) */
-  .sand-top-clip {
-    animation: sand-empty 3s linear infinite;
-  }
-  .sand-bot-clip {
-    animation: sand-fill 3s linear infinite;
-  }
-  
-  /* Animation du filet de sable */
-  .sand-stream {
-    animation: stream-fall 3s linear infinite;
-  }
-
-  /* Le sable du haut se vide en descendant */
-  @keyframes sand-empty {
-    0%, 10%   { transform: translateY(0); }
-    75%, 100% { transform: translateY(40px); }
-  }
-
-  /* Le sable du bas se remplit en montant */
-  @keyframes sand-fill {
-    0%, 10%   { transform: translateY(0); }
-    75%, 100% { transform: translateY(-40px); }
-  }
-
-  /* Le filet de sable tombe, touche le fond, puis s'arrête net */
-  @keyframes stream-fall {
-    0%   { transform: scaleY(0); opacity: 1; transform-origin: top center; }
-    10%  { transform: scaleY(1); opacity: 1; transform-origin: top center; }
-    74%  { transform: scaleY(1); opacity: 1; transform-origin: top center; }
-    75%  { transform: scaleY(1); opacity: 1; transform-origin: bottom center; }
-    80%, 100% { transform: scaleY(0); opacity: 0; transform-origin: bottom center; }
-  }
-
-  /* --- Corrections pour le texte --- */
-  .launch-text-wrap {
-    text-align: center;
-  }
-  
-  .launch-label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gray);
-    margin-bottom: 4px; /* Petit espace ajouté pour aérer */
-  }
-  
-  .launch-date {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--dark);
-  }
-  
-  .launch-info {
-    font-size: 0.9rem;
-    color: var(--gray);
-    max-width: 320px;
-    text-align: center;
-    line-height: 1.6;
-  }
-</style>
 
     </head>
-    <body style="
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-">
+    <body>
         <nav class="navbar">
     <div class="container nav-container">
 
@@ -351,56 +253,293 @@
     </div>
 </nav> 
 
-        <main style="flex: 1; background: radial-gradient(circle at 50% 0%, #fffbf0 0%, #fff 65%);">
-          <div class="construction-loader">
+        <main>
 
-            <div class="hourglass-wrap">
-              <svg class="hourglass-svg" viewBox="0 0 70 100" xmlns="http://www.w3.org/2000/svg">
-                
-                <defs>
-                  <clipPath id="clip-top">
-                    <rect class="sand-top-clip" x="10" y="10" width="50" height="40"/>
-                  </clipPath>
-                  <clipPath id="clip-bot">
-                    <rect class="sand-bot-clip" x="10" y="90" width="50" height="40"/>
-                  </clipPath>
-                </defs>
-
-                <rect x="14" y="10" width="3" height="80" fill="#a67b5b" rx="1"/>
-                <rect x="53" y="10" width="3" height="80" fill="#a67b5b" rx="1"/>
-
-                <path d="M 15 10 C 15 35, 32 45, 35 50 C 38 45, 55 35, 55 10 Z" fill="#e0f2fe" fill-opacity="0.3"/>
-                <path d="M 35 50 C 32 55, 15 65, 15 90 L 55 90 C 55 65, 38 55, 35 50 Z" fill="#e0f2fe" fill-opacity="0.3"/>
-
-                <path d="M 15 10 C 15 35, 32 45, 35 50 C 38 45, 55 35, 55 10 Z" fill="#d4a373" clip-path="url(#clip-top)"/>
-                
-                <path d="M 35 50 C 32 55, 15 65, 15 90 L 55 90 C 55 65, 38 55, 35 50 Z" fill="#d4a373" clip-path="url(#clip-bot)"/>
-
-                <rect class="sand-stream" x="34" y="50" width="2" height="40" fill="#d4a373"/>
-
-                <path d="M 15 10 C 15 35, 32 45, 35 50 C 38 45, 55 35, 55 10 Z" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
-                <path d="M 35 50 C 32 55, 15 65, 15 90 L 55 90 C 55 65, 38 55, 35 50 Z" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
-                
-                <path d="M 18 15 C 18 30, 31 40, 33 45" stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                <path d="M 18 85 C 18 70, 31 60, 33 55" stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-
-                <rect x="12" y="6" width="46" height="4" rx="2" fill="#4a3b32"/>
-                <rect x="12" y="90" width="46" height="4" rx="2" fill="#4a3b32"/>
-
-              </svg>
+            <!-- Hero -->
+            <section class="tool-hero">
+            <div class="container">
+                <h1>Бесплатный Онлайн Конвертер PNG в SVG</h1>
+                <p>Конвертируйте любое изображение в векторную графику за секунды — без регистрации, без ограничений, с полной поддержкой цвета.</p>
+                <div class="badges">
+                <span class="badge accent">✓ Навсегда бесплатно</span>
+                <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
+                <span class="badge">Предпросмотр онлайн</span>
+                <span class="badge">Цветной и Ч/Б режимы</span>
+                <span class="badge">Без водяных знаков</span>
+                </div>
             </div>
+            </section>
 
-            <div class="launch-text-wrap">
-              <div class="launch-label">Coming soon</div>
-              <div class="launch-date">28 mars 2026</div>
+            <!-- Converter (full width) -->
+            <section class="converter-section">
+            <div class="converter-wrap">
+
+                <!-- Sidebar -->
+                <div class="conv-sidebar">
+                <div class="dropzone" id="dropzone">
+                    <div class="dz-hint">
+                    <span class="dz-icon">⬡</span>
+                    Перетащите изображение сюда<br>
+                    или <u style="cursor:pointer;color:var(--primary)">выберите файл</u>
+                    </div>
+                </div>
+                <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
+
+                <div class="ps">Пресеты</div>
+                <div class="presets">
+                    <button class="preset-btn" data-preset="bw">Ч/Б</button>
+                    <button class="preset-btn active" data-preset="poster">Постер</button>
+                    <button class="preset-btn" data-preset="photo">Фото</button>
+                </div>
+
+                <button id="adv-toggle"><span>⚙ Дополнительные настройки</span><span id="adv-arrow">▾</span></button>
+                <div id="adv-content">
+
+                    <div class="ps">Цветовой режим</div>
+                    <div class="seg" id="seg-colormode">
+                    <button class="active" data-val="color">Цвет</button>
+                    <button data-val="binary">Бинарный</button>
+                    </div>
+
+                    <div id="color-params">
+                    <div class="ps">Цвет</div>
+                    <div class="sl-row"><span>Количество цветов</span><span class="sl-val" id="v-num_colors">8</span></div>
+                    <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
+                    <div class="sl-row"><span>Точность цвета</span><span class="sl-val" id="v-color_precision">6</span></div>
+                    <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
+                    <div class="sl-row"><span>Разница слоев</span><span class="sl-val" id="v-layer_difference">16</span></div>
+                    <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
+                    <div class="ps">Иерархический</div>
+                    <div class="seg" id="seg-hierarchical">
+                        <button class="active" data-val="stacked">Многослойный</button>
+                        <button data-val="cutout">Вырезка</button>
+                    </div>
+                    </div>
+
+                    <div id="binary-params" style="display:none">
+                    <div class="sw-row" style="margin-top:10px">
+                        <div><div class="sw-label">Инвертировать</div><div class="sw-sub">Поменять черный ↔ белый</div></div>
+                        <label class="sw"><input type="checkbox" id="sw-invert"><span class="sw-track"></span></label>
+                    </div>
+                    </div>
+
+                    <div class="ps">Аппроксимация кривых</div>
+                    <div class="seg" id="seg-mode">
+                    <button data-val="none">Пиксель</button>
+                    <button data-val="polygon">Полигон</button>
+                    <button class="active" data-val="spline">Сплайн</button>
+                    </div>
+
+                    <div class="sl-row"><span>Фильтр шума</span><span class="sl-val" id="v-filter_speckle">4</span></div>
+                    <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
+                    <div class="sl-row"><span>Порог угла</span><span class="sl-val" id="v-corner_threshold">60</span></div>
+                    <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
+                    <div class="sl-row"><span>Порог длины</span><span class="sl-val" id="v-length_threshold">4.0</span></div>
+                    <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
+                    <div class="sl-row"><span>Порог сплайна</span><span class="sl-val" id="v-splice_threshold">45</span></div>
+                    <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
+                </div>
+                </div>
+
+                <!-- Preview -->
+                <div class="conv-preview">
+                <div class="preview-header">
+                    <span class="preview-title">Предпросмотр SVG</span>
+                    <div class="live-badge">
+                    <div class="live-dot" id="live-dot"></div>
+                    <span id="live-text">вживую</span>
+                    </div>
+                </div>
+
+                <div class="preview-body">
+                    <div id="preview-svg-container">
+                    <div class="preview-placeholder" id="placeholder">
+                        <span class="preview-placeholder-icon">⬡</span>
+                        <p>Загрузите изображение для начала</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="preview-footer">
+                    <div id="status">Готово</div>
+                    <button id="btn-dl" disabled>↓ Скачать SVG</button>
+                </div>
+
+                <div class="conv-overlay" id="overlay">
+                    <div class="spinner"></div>
+                    <div class="overlay-text" id="overlay-text">Конвертация...</div>
+                </div>
+                </div>
+
+            </div><!-- /converter-wrap -->
+            </section>
+
+            <!-- ── HOW IT WORKS ── -->
+            <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Как это работает</h2>
+                <p class="section-intro">Без настроек и аккаунта. Загрузите, проверьте и скачайте — менее чем за 10 секунд.</p>
+                <div class="grid-3">
+                <div class="card" style="text-align:center">
+                    <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
+                    <h3>1. Загрузка</h3>
+                    <p>Перетащите или кликните, чтобы загрузить изображение PNG, JPG, BMP или WebP. Вставка из буфера обмена тоже работает.</p>
+                </div>
+                <div class="card" style="text-align:center">
+                    <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
+                    <h3>2. Предпросмотр онлайн</h3>
+                    <p>SVG обновляется автоматически при изменении настроек. Все происходит мгновенно.</p>
+                </div>
+                <div class="card" style="text-align:center">
+                    <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
+                    <h3>3. Скачивание</h3>
+                    <p>Нажмите «Скачать SVG», чтобы получить векторный файл. Откройте в Illustrator, Inkscape, Figma.</p>
+                </div>
+                </div>
             </div>
+            </section>
 
-            <p class="launch-info">
-              The online converter is on its way.<br>
-              In the meantime, <a href="/offline/" style="color: var(--primary); font-weight: 600;">download the desktop app</a>.
-            </p>
+            <!-- ── PRESETS EXPLAINED ── -->
+            <section class="section">
+            <div class="container">
+                <h2 class="section-title">Какой пресет выбрать?</h2>
+                <p class="section-intro">PixelToPath предлагает три пресета. Вы также можете настроить каждый параметр вручную.</p>
+                <div class="preset-explain-grid">
+                <div class="preset-explain-card bw">
+                    <h3><span class="preset-label">Ч/Б</span> Черно-белое</h3>
+                    <p>Преобразует в градации серого. Идеально для одноцветных контуров. Подходит для:</p>
+                    <ul>
+                    <li>Логотипов</li>
+                    <li>Иконок и пиктограмм</li>
+                    <li>Скетчей</li>
+                    <li>Лазерной гравировки</li>
+                    </ul>
+                </div>
+                <div class="preset-explain-card poster">
+                    <h3><span class="preset-label">Постер</span> Плоский цвет</h3>
+                    <p>Трассировка с наложением слоев с высокой точностью. Подходит для:</p>
+                    <ul>
+                    <li>Иллюстраций</li>
+                    <li>Инфографики</li>
+                    <li>Стикеров</li>
+                    <li>Цифровых артов</li>
+                    </ul>
+                </div>
+                <div class="preset-explain-card photo">
+                    <h3><span class="preset-label">Фото</span> Фотографии</h3>
+                    <p>Более широкая группировка цветов для обработки сложных реальных фото. Подходит для:</p>
+                    <ul>
+                    <li>Портретов</li>
+                    <li>Пейзажей</li>
+                    <li>Фото товаров</li>
+                    <li>Сложных изображений с градиентами</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </section>
 
-          </div>
+            <!-- ── USE CASES ── -->
+            <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Где использовать полученный SVG?</h2>
+                <p class="section-intro">Файлы SVG из PixelToPath стандартны и работают везде.</p>
+                <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="uc-icon">🎨</div>
+                    <h3>Редактирование в Figma или Illustrator</h3>
+                    <p>Каждая фигура является полностью редактируемым контуром без потери качества.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">🌐</div>
+                    <h3>Использование на сайтах</h3>
+                    <p>Используйте их как теги <code>&lt;img&gt;</code> или настраивайте через CSS.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">🖨️</div>
+                    <h3>Печать любого размера</h3>
+                    <p>Распечатайте SVG на любом формате без размытия и пикселей.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">✂️</div>
+                    <h3>Лазерная резка и плоттер</h3>
+                    <p>Импортируйте прямо в LightBurn, Cricut Design Space или RDWorks.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">💻</div>
+                    <h3>Иконки приложений</h3>
+                    <p>Идеально работает с React, Vue и всеми библиотеками компонентов.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">🎞️</div>
+                    <h3>Анимации CSS и JS</h3>
+                    <p>Оживите векторные элементы на вашем сайте.</p>
+                </div>
+                </div>
+            </div>
+            </section>
+
+            <!-- ── FAQ ── -->
+            <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">Частые вопросы</h2>
+                <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Это действительно бесплатно и без ограничений?</summary>
+                    <p>Да, полностью бесплатно. PixelToPath — это Open Source проект (MIT).</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Поддерживаются ли цветные изображения?</summary>
+                    <p>Да. Мы используем <strong>VTracer</strong>. Выберите <strong>Постер</strong> или <strong>Фото</strong> для цвета.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Сохраняются ли мои файлы?</summary>
+                    <p>Нет. Файлы удаляются сразу после обработки.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Какие форматы поддерживаются?</summary>
+                    <p>PNG, JPG, JPEG, BMP и WebP. Можно вставить из буфера обмена (Ctrl+V).</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Какой максимальный размер файла?</summary>
+                    <p>В онлайне — до <strong>20 МБ</strong>. Для больших файлов скачайте <a href="#download" style="color:var(--primary)">десктопное приложение</a>.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Почему Ч/Б результат выглядит неправильно?</summary>
+                    <p>Включите переключатель <strong>Инвертировать</strong> в дополнительных настройках.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>В чем разница между режимами Сплайн, Полигон и Пиксель?</summary>
+                    <p><strong>Сплайн</strong> для плавных кривых. <strong>Полигон</strong> для прямых линий. <strong>Пиксель</strong> без сглаживания (для пиксель-арта).</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Можно использовать SVG в коммерческих целях?</summary>
+                    <p>Да, без каких-либо лицензионных ограничений.</p>
+                </details>
+                </div>
+            </div>
+            </section>
+
+            <!-- ── CTA desktop ── -->
+            <section class="section bg-light">
+            <div class="container" style="text-align:center" id="download">
+                <h2 style="color:var(--dark);margin-bottom:1rem">Нужна офлайн-конвертация без лимитов?</h2>
+                <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">Десктопная версия работает локально и не требует интернета.</p>
+                <div class="double-buttons">
+                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Скачать для Windows</a>
+                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Скачать для Linux</a>
+                </div>
+            </div>
+            </section>
+
+            <section class="section donate-section">
+    <div class="container">
+        <h3>Поддержите разработку Open Source</h3>
+        <p>PixelToPath бесплатен для использования. Если этот инструмент помог вам сэкономить время, угостите меня кофе.</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Пожертвовать через PayPal</a>
+    </div>
+</section>
+
         </main>
 
         <footer>
@@ -419,5 +558,6 @@
 </footer>
 
 
+        <script src="../../assets/online.js"></script>
     </body>
 </html>

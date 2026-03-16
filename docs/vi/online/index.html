@@ -179,107 +179,9 @@
       ]
     }
     </script>
-    
-
-<style>
-  .construction-loader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    height: 70vh;
-  }
-
-  .hourglass-wrap {
-    position: relative;
-    width: 80px;
-    height: 120px;
-    /* L'animation globale tourne le sablier tous les 3s */
-    animation: hg-rotate 3s ease-in-out infinite;
-    transform-origin: center center;
-  }
-
-  .hourglass-svg { 
-    width: 100%; 
-    height: 100%; 
-  }
-
-  /* Rotation du sablier de 180 degrés à la fin de l'écoulement */
-  @keyframes hg-rotate {
-    0%, 80%  { transform: rotate(0deg); }
-    100%     { transform: rotate(180deg); }
-  }
-
-  /* Animations des masques de sable (clip-path) */
-  .sand-top-clip {
-    animation: sand-empty 3s linear infinite;
-  }
-  .sand-bot-clip {
-    animation: sand-fill 3s linear infinite;
-  }
-  
-  /* Animation du filet de sable */
-  .sand-stream {
-    animation: stream-fall 3s linear infinite;
-  }
-
-  /* Le sable du haut se vide en descendant */
-  @keyframes sand-empty {
-    0%, 10%   { transform: translateY(0); }
-    75%, 100% { transform: translateY(40px); }
-  }
-
-  /* Le sable du bas se remplit en montant */
-  @keyframes sand-fill {
-    0%, 10%   { transform: translateY(0); }
-    75%, 100% { transform: translateY(-40px); }
-  }
-
-  /* Le filet de sable tombe, touche le fond, puis s'arrête net */
-  @keyframes stream-fall {
-    0%   { transform: scaleY(0); opacity: 1; transform-origin: top center; }
-    10%  { transform: scaleY(1); opacity: 1; transform-origin: top center; }
-    74%  { transform: scaleY(1); opacity: 1; transform-origin: top center; }
-    75%  { transform: scaleY(1); opacity: 1; transform-origin: bottom center; }
-    80%, 100% { transform: scaleY(0); opacity: 0; transform-origin: bottom center; }
-  }
-
-  /* --- Corrections pour le texte --- */
-  .launch-text-wrap {
-    text-align: center;
-  }
-  
-  .launch-label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gray);
-    margin-bottom: 4px; /* Petit espace ajouté pour aérer */
-  }
-  
-  .launch-date {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--dark);
-  }
-  
-  .launch-info {
-    font-size: 0.9rem;
-    color: var(--gray);
-    max-width: 320px;
-    text-align: center;
-    line-height: 1.6;
-  }
-</style>
 
     </head>
-    <body style="
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-">
+    <body>
         <nav class="navbar">
     <div class="container nav-container">
 
@@ -351,56 +253,293 @@
     </div>
 </nav> 
 
-        <main style="flex: 1; background: radial-gradient(circle at 50% 0%, #fffbf0 0%, #fff 65%);">
-          <div class="construction-loader">
+        <main>
 
-            <div class="hourglass-wrap">
-              <svg class="hourglass-svg" viewBox="0 0 70 100" xmlns="http://www.w3.org/2000/svg">
-                
-                <defs>
-                  <clipPath id="clip-top">
-                    <rect class="sand-top-clip" x="10" y="10" width="50" height="40"/>
-                  </clipPath>
-                  <clipPath id="clip-bot">
-                    <rect class="sand-bot-clip" x="10" y="90" width="50" height="40"/>
-                  </clipPath>
-                </defs>
-
-                <rect x="14" y="10" width="3" height="80" fill="#a67b5b" rx="1"/>
-                <rect x="53" y="10" width="3" height="80" fill="#a67b5b" rx="1"/>
-
-                <path d="M 15 10 C 15 35, 32 45, 35 50 C 38 45, 55 35, 55 10 Z" fill="#e0f2fe" fill-opacity="0.3"/>
-                <path d="M 35 50 C 32 55, 15 65, 15 90 L 55 90 C 55 65, 38 55, 35 50 Z" fill="#e0f2fe" fill-opacity="0.3"/>
-
-                <path d="M 15 10 C 15 35, 32 45, 35 50 C 38 45, 55 35, 55 10 Z" fill="#d4a373" clip-path="url(#clip-top)"/>
-                
-                <path d="M 35 50 C 32 55, 15 65, 15 90 L 55 90 C 55 65, 38 55, 35 50 Z" fill="#d4a373" clip-path="url(#clip-bot)"/>
-
-                <rect class="sand-stream" x="34" y="50" width="2" height="40" fill="#d4a373"/>
-
-                <path d="M 15 10 C 15 35, 32 45, 35 50 C 38 45, 55 35, 55 10 Z" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
-                <path d="M 35 50 C 32 55, 15 65, 15 90 L 55 90 C 55 65, 38 55, 35 50 Z" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
-                
-                <path d="M 18 15 C 18 30, 31 40, 33 45" stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                <path d="M 18 85 C 18 70, 31 60, 33 55" stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-
-                <rect x="12" y="6" width="46" height="4" rx="2" fill="#4a3b32"/>
-                <rect x="12" y="90" width="46" height="4" rx="2" fill="#4a3b32"/>
-
-              </svg>
+            <!-- Hero -->
+            <section class="tool-hero">
+            <div class="container">
+                <h1>Chuyển Đổi PNG sang SVG Trực Tuyến Miễn Phí</h1>
+                <p>Chuyển đổi bất kỳ hình ảnh nào thành đồ họa vector có thể mở rộng trong vài giây — không cần đăng ký, không giới hạn, hỗ trợ đầy đủ màu sắc.</p>
+                <div class="badges">
+                <span class="badge accent">✓ Miễn phí vĩnh viễn</span>
+                <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
+                <span class="badge">Xem trước trực tiếp</span>
+                <span class="badge">Chế độ Màu &amp; Trắng Đen</span>
+                <span class="badge">Không có hình mờ</span>
+                </div>
             </div>
+            </section>
 
-            <div class="launch-text-wrap">
-              <div class="launch-label">Coming soon</div>
-              <div class="launch-date">28 mars 2026</div>
+            <!-- Converter (full width) -->
+            <section class="converter-section">
+            <div class="converter-wrap">
+
+                <!-- Sidebar -->
+                <div class="conv-sidebar">
+                <div class="dropzone" id="dropzone">
+                    <div class="dz-hint">
+                    <span class="dz-icon">⬡</span>
+                    Thả hình ảnh vào đây<br>
+                    hoặc <u style="cursor:pointer;color:var(--primary)">duyệt</u>
+                    </div>
+                </div>
+                <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
+
+                <div class="ps">Cài sẵn</div>
+                <div class="presets">
+                    <button class="preset-btn" data-preset="bw">Trắng & Đen</button>
+                    <button class="preset-btn active" data-preset="poster">Áp phích</button>
+                    <button class="preset-btn" data-preset="photo">Ảnh</button>
+                </div>
+
+                <button id="adv-toggle"><span>⚙ Cài đặt nâng cao</span><span id="adv-arrow">▾</span></button>
+                <div id="adv-content">
+
+                    <div class="ps">Chế độ Màu</div>
+                    <div class="seg" id="seg-colormode">
+                    <button class="active" data-val="color">Màu</button>
+                    <button data-val="binary">Nhị phân</button>
+                    </div>
+
+                    <div id="color-params">
+                    <div class="ps">Màu</div>
+                    <div class="sl-row"><span>Số lượng Màu</span><span class="sl-val" id="v-num_colors">8</span></div>
+                    <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
+                    <div class="sl-row"><span>Độ chính xác Màu</span><span class="sl-val" id="v-color_precision">6</span></div>
+                    <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
+                    <div class="sl-row"><span>Chênh lệch Lớp</span><span class="sl-val" id="v-layer_difference">16</span></div>
+                    <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
+                    <div class="ps">Phân cấp</div>
+                    <div class="seg" id="seg-hierarchical">
+                        <button class="active" data-val="stacked">Xếp chồng</button>
+                        <button data-val="cutout">Cắt tỉa</button>
+                    </div>
+                    </div>
+
+                    <div id="binary-params" style="display:none">
+                    <div class="sw-row" style="margin-top:10px">
+                        <div><div class="sw-label">Đảo ngược</div><div class="sw-sub">Hoán đổi đen ↔ trắng</div></div>
+                        <label class="sw"><input type="checkbox" id="sw-invert"><span class="sw-track"></span></label>
+                    </div>
+                    </div>
+
+                    <div class="ps">Khớp đường cong</div>
+                    <div class="seg" id="seg-mode">
+                    <button data-val="none">Pixel</button>
+                    <button data-val="polygon">Đa giác</button>
+                    <button class="active" data-val="spline">Spline</button>
+                    </div>
+
+                    <div class="sl-row"><span>Bộ lọc Đốm</span><span class="sl-val" id="v-filter_speckle">4</span></div>
+                    <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
+                    <div class="sl-row"><span>Ngưỡng Góc</span><span class="sl-val" id="v-corner_threshold">60</span></div>
+                    <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
+                    <div class="sl-row"><span>Ngưỡng Độ dài</span><span class="sl-val" id="v-length_threshold">4.0</span></div>
+                    <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
+                    <div class="sl-row"><span>Ngưỡng Ghép nối</span><span class="sl-val" id="v-splice_threshold">45</span></div>
+                    <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
+                </div>
+                </div>
+
+                <!-- Preview -->
+                <div class="conv-preview">
+                <div class="preview-header">
+                    <span class="preview-title">Xem trước SVG</span>
+                    <div class="live-badge">
+                    <div class="live-dot" id="live-dot"></div>
+                    <span id="live-text">trực tiếp</span>
+                    </div>
+                </div>
+
+                <div class="preview-body">
+                    <div id="preview-svg-container">
+                    <div class="preview-placeholder" id="placeholder">
+                        <span class="preview-placeholder-icon">⬡</span>
+                        <p>Tải hình ảnh lên để bắt đầu</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="preview-footer">
+                    <div id="status">Sẵn sàng</div>
+                    <button id="btn-dl" disabled>↓ Tải SVG</button>
+                </div>
+
+                <div class="conv-overlay" id="overlay">
+                    <div class="spinner"></div>
+                    <div class="overlay-text" id="overlay-text">Đang chuyển đổi...</div>
+                </div>
+                </div>
+
+            </div><!-- /converter-wrap -->
+            </section>
+
+            <!-- ── HOW IT WORKS ── -->
+            <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Cách thức Hoạt động</h2>
+                <p class="section-intro">Không cần thiết lập, không cần tài khoản. Tải lên, xem trước, tải xuống — dưới 10 giây.</p>
+                <div class="grid-3">
+                <div class="card" style="text-align:center">
+                    <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
+                    <h3>1. Tải lên</h3>
+                    <p>Kéo thả hoặc nhấp để tải lên bất kỳ hình ảnh PNG, JPG, BMP hoặc WebP nào. Có thể dán từ khay nhớ tạm.</p>
+                </div>
+                <div class="card" style="text-align:center">
+                    <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
+                    <h3>2. Xem trước trực tiếp</h3>
+                    <p>SVG tự động cập nhật khi bạn đổi cài đặt. Mọi thứ đều diễn ra ngay lập tức.</p>
+                </div>
+                <div class="card" style="text-align:center">
+                    <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
+                    <h3>3. Tải xuống</h3>
+                    <p>Nhấp Tải SVG để lấy tệp vector. Mở bằng Illustrator, Inkscape hoặc Figma.</p>
+                </div>
+                </div>
             </div>
+            </section>
 
-            <p class="launch-info">
-              The online converter is on its way.<br>
-              In the meantime, <a href="/offline/" style="color: var(--primary); font-weight: 600;">download the desktop app</a>.
-            </p>
+            <!-- ── PRESETS EXPLAINED ── -->
+            <section class="section">
+            <div class="container">
+                <h2 class="section-title">Nên sử dụng chế độ cài sẵn nào?</h2>
+                <p class="section-intro">PixelToPath cung cấp ba chế độ cài sẵn. Bạn cũng có thể tinh chỉnh từng thông số.</p>
+                <div class="preset-explain-grid">
+                <div class="preset-explain-card bw">
+                    <h3><span class="preset-label">T&Đ</span> Trắng &amp; Đen</h3>
+                    <p>Chuyển đổi hình ảnh sang thang độ xám. Tốt nhất cho:</p>
+                    <ul>
+                    <li>Logo và nhãn hiệu</li>
+                    <li>Biểu tượng và ký tự</li>
+                    <li>Bản phác thảo</li>
+                    <li>Cắt decal và khắc laser</li>
+                    </ul>
+                </div>
+                <div class="preset-explain-card poster">
+                    <h3><span class="preset-label">Áp phích</span> Màu phẳng</h3>
+                    <p>Truy xuất hình ảnh dưới dạng nhiều lớp màu xếp chồng lên nhau. Tốt nhất cho:</p>
+                    <ul>
+                    <li>Hình minh họa phẳng</li>
+                    <li>Đồ họa thông tin</li>
+                    <li>Clipart và nhãn dán</li>
+                    <li>Tác phẩm nghệ thuật kỹ thuật số</li>
+                    </ul>
+                </div>
+                <div class="preset-explain-card photo">
+                    <h3><span class="preset-label">Ảnh</span> Nhiếp ảnh</h3>
+                    <p>Sử dụng bộ lọc cho hình ảnh phức tạp. Tốt nhất cho:</p>
+                    <ul>
+                    <li>Chân dung</li>
+                    <li>Ảnh phong cảnh</li>
+                    <li>Ảnh sản phẩm</li>
+                    <li>Hình ảnh phức tạp với nhiều gradient</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </section>
 
-          </div>
+            <!-- ── USE CASES ── -->
+            <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Bạn có thể làm gì với SVG?</h2>
+                <p class="section-intro">Các tệp SVG từ PixelToPath hoạt động ở mọi nơi.</p>
+                <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="uc-icon">🎨</div>
+                    <h3>Chỉnh sửa trong Figma hoặc Illustrator</h3>
+                    <p>Mọi hình dạng đều có thể chỉnh sửa — thay đổi màu sắc và kích thước mà không giảm chất lượng.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">🌐</div>
+                    <h3>Sử dụng trên trang web</h3>
+                    <p>Sử dụng dưới dạng thẻ <code>&lt;img&gt;</code> hoặc tạo kiểu bằng CSS.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">🖨️</div>
+                    <h3>In ấn ở mọi kích thước</h3>
+                    <p>Từ danh thiếp đến biển quảng cáo mà không bị mờ.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">✂️</div>
+                    <h3>Cắt laser</h3>
+                    <p>Nhập thẳng vào LightBurn hoặc Cricut Design Space.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">💻</div>
+                    <h3>Biểu tượng Ứng dụng &amp; Web</h3>
+                    <p>Hoạt động hoàn hảo với React, Vue và các thư viện.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">🎞️</div>
+                    <h3>Hoạt ảnh CSS &amp; JS</h3>
+                    <p>Mang lại sự sống động cho hình ảnh tĩnh.</p>
+                </div>
+                </div>
+            </div>
+            </section>
+
+            <!-- ── FAQ ── -->
+            <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
+                <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Trình chuyển đổi này có thực sự miễn phí không giới hạn không?</summary>
+                    <p>Có, hoàn toàn miễn phí. PixelToPath là mã nguồn mở (Giấy phép MIT).</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Có hỗ trợ hình ảnh có màu không?</summary>
+                    <p>Có. Chúng tôi dùng <strong>VTracer</strong>. Hãy chọn <strong>Áp phích</strong> hoặc <strong>Ảnh</strong>.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Tệp của tôi có được lưu không?</summary>
+                    <p>Không. Xóa ngay sau khi chuyển đổi.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Hỗ trợ những định dạng nào?</summary>
+                    <p>PNG, JPG, JPEG, BMP và WebP (hoặc Ctrl+V).</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Kích thước tệp tối đa?</summary>
+                    <p>Bản trực tuyến lên tới <strong>20 MB</strong>. Tải <a href="#download" style="color:var(--primary)">ứng dụng máy tính bàn</a> để không bị giới hạn.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Tại sao kết quả Trắng Đen không đúng?</summary>
+                    <p>Hãy bật <strong>Đảo ngược</strong> trong Cài đặt nâng cao.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Khác biệt giữa Spline, Đa giác và Pixel?</summary>
+                    <p><strong>Spline</strong> cho đường cong, <strong>Đa giác</strong> cho đường thẳng, <strong>Pixel</strong> cho nghệ thuật pixel.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Có thể sử dụng cho thương mại không?</summary>
+                    <p>Có. Tệp xuất ra không bị giới hạn bản quyền.</p>
+                </details>
+                </div>
+            </div>
+            </section>
+
+            <!-- ── CTA desktop ── -->
+            <section class="section bg-light">
+            <div class="container" style="text-align:center" id="download">
+                <h2 style="color:var(--dark);margin-bottom:1rem">Cần chuyển đổi không giới hạn khi ngoại tuyến?</h2>
+                <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">Hoạt động hoàn toàn trên máy tính của bạn — không cần internet.</p>
+                <div class="double-buttons">
+                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Tải xuống cho Windows</a>
+                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Tải xuống cho Linux</a>
+                </div>
+            </div>
+            </section>
+
+            <section class="section donate-section">
+    <div class="container">
+        <h3>Hỗ trợ phát triển mã nguồn mở</h3>
+        <p>PixelToPath sử dụng miễn phí. Nếu công cụ này giúp bạn tiết kiệm thời gian, hãy cân nhắc mời tôi một tách cà phê.</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Quyên góp qua PayPal</a>
+    </div>
+</section>
+
         </main>
 
         <footer>
@@ -419,5 +558,6 @@
 </footer>
 
 
+        <script src="../../assets/online.js"></script>
     </body>
 </html>

@@ -179,107 +179,9 @@
       ]
     }
     </script>
-    
-
-<style>
-  .construction-loader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    height: 70vh;
-  }
-
-  .hourglass-wrap {
-    position: relative;
-    width: 80px;
-    height: 120px;
-    /* L'animation globale tourne le sablier tous les 3s */
-    animation: hg-rotate 3s ease-in-out infinite;
-    transform-origin: center center;
-  }
-
-  .hourglass-svg { 
-    width: 100%; 
-    height: 100%; 
-  }
-
-  /* Rotation du sablier de 180 degrés à la fin de l'écoulement */
-  @keyframes hg-rotate {
-    0%, 80%  { transform: rotate(0deg); }
-    100%     { transform: rotate(180deg); }
-  }
-
-  /* Animations des masques de sable (clip-path) */
-  .sand-top-clip {
-    animation: sand-empty 3s linear infinite;
-  }
-  .sand-bot-clip {
-    animation: sand-fill 3s linear infinite;
-  }
-  
-  /* Animation du filet de sable */
-  .sand-stream {
-    animation: stream-fall 3s linear infinite;
-  }
-
-  /* Le sable du haut se vide en descendant */
-  @keyframes sand-empty {
-    0%, 10%   { transform: translateY(0); }
-    75%, 100% { transform: translateY(40px); }
-  }
-
-  /* Le sable du bas se remplit en montant */
-  @keyframes sand-fill {
-    0%, 10%   { transform: translateY(0); }
-    75%, 100% { transform: translateY(-40px); }
-  }
-
-  /* Le filet de sable tombe, touche le fond, puis s'arrête net */
-  @keyframes stream-fall {
-    0%   { transform: scaleY(0); opacity: 1; transform-origin: top center; }
-    10%  { transform: scaleY(1); opacity: 1; transform-origin: top center; }
-    74%  { transform: scaleY(1); opacity: 1; transform-origin: top center; }
-    75%  { transform: scaleY(1); opacity: 1; transform-origin: bottom center; }
-    80%, 100% { transform: scaleY(0); opacity: 0; transform-origin: bottom center; }
-  }
-
-  /* --- Corrections pour le texte --- */
-  .launch-text-wrap {
-    text-align: center;
-  }
-  
-  .launch-label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gray);
-    margin-bottom: 4px; /* Petit espace ajouté pour aérer */
-  }
-  
-  .launch-date {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--dark);
-  }
-  
-  .launch-info {
-    font-size: 0.9rem;
-    color: var(--gray);
-    max-width: 320px;
-    text-align: center;
-    line-height: 1.6;
-  }
-</style>
 
     </head>
-    <body style="
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-">
+    <body>
         <nav class="navbar">
     <div class="container nav-container">
 
@@ -351,56 +253,293 @@
     </div>
 </nav> 
 
-        <main style="flex: 1; background: radial-gradient(circle at 50% 0%, #fffbf0 0%, #fff 65%);">
-          <div class="construction-loader">
+        <main>
 
-            <div class="hourglass-wrap">
-              <svg class="hourglass-svg" viewBox="0 0 70 100" xmlns="http://www.w3.org/2000/svg">
-                
-                <defs>
-                  <clipPath id="clip-top">
-                    <rect class="sand-top-clip" x="10" y="10" width="50" height="40"/>
-                  </clipPath>
-                  <clipPath id="clip-bot">
-                    <rect class="sand-bot-clip" x="10" y="90" width="50" height="40"/>
-                  </clipPath>
-                </defs>
-
-                <rect x="14" y="10" width="3" height="80" fill="#a67b5b" rx="1"/>
-                <rect x="53" y="10" width="3" height="80" fill="#a67b5b" rx="1"/>
-
-                <path d="M 15 10 C 15 35, 32 45, 35 50 C 38 45, 55 35, 55 10 Z" fill="#e0f2fe" fill-opacity="0.3"/>
-                <path d="M 35 50 C 32 55, 15 65, 15 90 L 55 90 C 55 65, 38 55, 35 50 Z" fill="#e0f2fe" fill-opacity="0.3"/>
-
-                <path d="M 15 10 C 15 35, 32 45, 35 50 C 38 45, 55 35, 55 10 Z" fill="#d4a373" clip-path="url(#clip-top)"/>
-                
-                <path d="M 35 50 C 32 55, 15 65, 15 90 L 55 90 C 55 65, 38 55, 35 50 Z" fill="#d4a373" clip-path="url(#clip-bot)"/>
-
-                <rect class="sand-stream" x="34" y="50" width="2" height="40" fill="#d4a373"/>
-
-                <path d="M 15 10 C 15 35, 32 45, 35 50 C 38 45, 55 35, 55 10 Z" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
-                <path d="M 35 50 C 32 55, 15 65, 15 90 L 55 90 C 55 65, 38 55, 35 50 Z" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
-                
-                <path d="M 18 15 C 18 30, 31 40, 33 45" stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                <path d="M 18 85 C 18 70, 31 60, 33 55" stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-
-                <rect x="12" y="6" width="46" height="4" rx="2" fill="#4a3b32"/>
-                <rect x="12" y="90" width="46" height="4" rx="2" fill="#4a3b32"/>
-
-              </svg>
+            <!-- Hero -->
+            <section class="tool-hero">
+            <div class="container">
+                <h1>मुफ़्त ऑनलाइन PNG से SVG कनवर्टर</h1>
+                <p>किसी भी छवि को सेकंडों में स्केलेबल वेक्टर ग्राफिक्स में कनवर्ट करें — कोई पंजीकरण नहीं, कोई सीमा नहीं, पूर्ण रंग समर्थन।</p>
+                <div class="badges">
+                <span class="badge accent">✓ हमेशा के लिए मुफ़्त</span>
+                <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
+                <span class="badge">लाइव प्रिव्यू</span>
+                <span class="badge">रंग &amp; श्वेत-श्याम मोड</span>
+                <span class="badge">कोई वॉटरमार्क नहीं</span>
+                </div>
             </div>
+            </section>
 
-            <div class="launch-text-wrap">
-              <div class="launch-label">Coming soon</div>
-              <div class="launch-date">28 mars 2026</div>
+            <!-- Converter (full width) -->
+            <section class="converter-section">
+            <div class="converter-wrap">
+
+                <!-- Sidebar -->
+                <div class="conv-sidebar">
+                <div class="dropzone" id="dropzone">
+                    <div class="dz-hint">
+                    <span class="dz-icon">⬡</span>
+                    यहाँ एक छवि छोड़ें<br>
+                    या <u style="cursor:pointer;color:var(--primary)">ब्राउज़ करें</u>
+                    </div>
+                </div>
+                <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
+
+                <div class="ps">प्रीसेट</div>
+                <div class="presets">
+                    <button class="preset-btn" data-preset="bw">श्वेत-श्याम</button>
+                    <button class="preset-btn active" data-preset="poster">पोस्टर</button>
+                    <button class="preset-btn" data-preset="photo">फोटो</button>
+                </div>
+
+                <button id="adv-toggle"><span>⚙ उन्नत सेटिंग्स</span><span id="adv-arrow">▾</span></button>
+                <div id="adv-content">
+
+                    <div class="ps">रंग मोड</div>
+                    <div class="seg" id="seg-colormode">
+                    <button class="active" data-val="color">रंग</button>
+                    <button data-val="binary">बाइनरी</button>
+                    </div>
+
+                    <div id="color-params">
+                    <div class="ps">रंग</div>
+                    <div class="sl-row"><span>रंगों की संख्या</span><span class="sl-val" id="v-num_colors">8</span></div>
+                    <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
+                    <div class="sl-row"><span>रंग सटीकता</span><span class="sl-val" id="v-color_precision">6</span></div>
+                    <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
+                    <div class="sl-row"><span>परत अंतर</span><span class="sl-val" id="v-layer_difference">16</span></div>
+                    <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
+                    <div class="ps">पदानुक्रमित</div>
+                    <div class="seg" id="seg-hierarchical">
+                        <button class="active" data-val="stacked">स्टैक्ड</button>
+                        <button data-val="cutout">कटआउट</button>
+                    </div>
+                    </div>
+
+                    <div id="binary-params" style="display:none">
+                    <div class="sw-row" style="margin-top:10px">
+                        <div><div class="sw-label">उलटें</div><div class="sw-sub">काला ↔ सफेद बदलें</div></div>
+                        <label class="sw"><input type="checkbox" id="sw-invert"><span class="sw-track"></span></label>
+                    </div>
+                    </div>
+
+                    <div class="ps">वक्र फिटिंग</div>
+                    <div class="seg" id="seg-mode">
+                    <button data-val="none">पिक्सेल</button>
+                    <button data-val="polygon">बहुभुज</button>
+                    <button class="active" data-val="spline">स्प्लाइन</button>
+                    </div>
+
+                    <div class="sl-row"><span>फ़िल्टर स्पेकल</span><span class="sl-val" id="v-filter_speckle">4</span></div>
+                    <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
+                    <div class="sl-row"><span>कोने की सीमा</span><span class="sl-val" id="v-corner_threshold">60</span></div>
+                    <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
+                    <div class="sl-row"><span>लंबाई की सीमा</span><span class="sl-val" id="v-length_threshold">4.0</span></div>
+                    <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
+                    <div class="sl-row"><span>स्प्लिस सीमा</span><span class="sl-val" id="v-splice_threshold">45</span></div>
+                    <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
+                </div>
+                </div>
+
+                <!-- Preview -->
+                <div class="conv-preview">
+                <div class="preview-header">
+                    <span class="preview-title">SVG प्रिव्यू</span>
+                    <div class="live-badge">
+                    <div class="live-dot" id="live-dot"></div>
+                    <span id="live-text">लाइव</span>
+                    </div>
+                </div>
+
+                <div class="preview-body">
+                    <div id="preview-svg-container">
+                    <div class="preview-placeholder" id="placeholder">
+                        <span class="preview-placeholder-icon">⬡</span>
+                        <p>शुरू करने के लिए एक छवि अपलोड करें</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="preview-footer">
+                    <div id="status">तैयार</div>
+                    <button id="btn-dl" disabled>↓ SVG डाउनलोड करें</button>
+                </div>
+
+                <div class="conv-overlay" id="overlay">
+                    <div class="spinner"></div>
+                    <div class="overlay-text" id="overlay-text">कनवर्ट हो रहा है...</div>
+                </div>
+                </div>
+
+            </div><!-- /converter-wrap -->
+            </section>
+
+            <!-- ── HOW IT WORKS ── -->
+            <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">यह कैसे काम करता है</h2>
+                <p class="section-intro">कोई सेटअप नहीं, कोई खाता नहीं। अपलोड, प्रिव्यू, डाउनलोड — 10 सेकंड के अंदर।</p>
+                <div class="grid-3">
+                <div class="card" style="text-align:center">
+                    <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
+                    <h3>1. अपलोड करें</h3>
+                    <p>किसी भी PNG, JPG, BMP या WebP को अपलोड करने के लिए ड्रैग और ड्रॉप करें। क्लिपबोर्ड से पेस्ट (Ctrl+V) भी काम करता है।</p>
+                </div>
+                <div class="card" style="text-align:center">
+                    <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
+                    <h3>2. लाइव प्रिव्यू</h3>
+                    <p>जैसे ही आप सेटिंग्स बदलते हैं SVG अपडेट हो जाता है। सब कुछ तुरंत होता है।</p>
+                </div>
+                <div class="card" style="text-align:center">
+                    <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
+                    <h3>3. डाउनलोड करें</h3>
+                    <p>वेक्टर फ़ाइल प्राप्त करने के लिए SVG डाउनलोड करें पर क्लिक करें। Figma, Illustrator में खोलें।</p>
+                </div>
+                </div>
             </div>
+            </section>
 
-            <p class="launch-info">
-              The online converter is on its way.<br>
-              In the meantime, <a href="/offline/" style="color: var(--primary); font-weight: 600;">download the desktop app</a>.
-            </p>
+            <!-- ── PRESETS EXPLAINED ── -->
+            <section class="section">
+            <div class="container">
+                <h2 class="section-title">आपको कौन सा प्रीसेट उपयोग करना चाहिए?</h2>
+                <p class="section-intro">PixelToPath तीन अनुकूलित प्रीसेट प्रदान करता है। आप मैन्युअल रूप से भी एडजस्ट कर सकते हैं।</p>
+                <div class="preset-explain-grid">
+                <div class="preset-explain-card bw">
+                    <h3><span class="preset-label">श्वेत-श्याम</span> ब्लैक एंड व्हाइट</h3>
+                    <p>छवि को ग्रेस्केल में कनवर्ट करता है। इसके लिए सर्वश्रेष्ठ:</p>
+                    <ul>
+                    <li>लोगो और ब्रांड</li>
+                    <li>आइकन</li>
+                    <li>स्केच</li>
+                    <li>लेजर कटिंग</li>
+                    </ul>
+                </div>
+                <div class="preset-explain-card poster">
+                    <h3><span class="preset-label">पोस्टर</span> फ़्लैट कलर</h3>
+                    <p>उच्च सटीकता के साथ स्टैक्ड परतों के रूप में ट्रेस करता है। इसके लिए सर्वश्रेष्ठ:</p>
+                    <ul>
+                    <li>चित्रण</li>
+                    <li>इन्फोग्राफिक्स</li>
+                    <li>क्लिपआर्ट</li>
+                    <li>डिजिटल आर्ट</li>
+                    </ul>
+                </div>
+                <div class="preset-explain-card photo">
+                    <h3><span class="preset-label">फोटो</span> तस्वीरें</h3>
+                    <p>असली तस्वीरों की जटिलता के लिए शोर फ़िल्टरिंग का उपयोग करता है। इसके लिए सर्वश्रेष्ठ:</p>
+                    <ul>
+                    <li>पोर्ट्रेट</li>
+                    <li>लैंडस्केप</li>
+                    <li>उत्पाद फ़ोटो</li>
+                    <li>ग्रेडिएंट वाली जटिल छवियां</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </section>
 
-          </div>
+            <!-- ── USE CASES ── -->
+            <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">आप अपने SVG के साथ क्या कर सकते हैं?</h2>
+                <p class="section-intro">फ़ाइलें पूरी तरह से मानक हैं और हर जगह काम करती हैं।</p>
+                <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="uc-icon">🎨</div>
+                    <h3>Figma या Illustrator में संपादित करें</h3>
+                    <p>प्रत्येक आकार पूरी तरह से संपादन योग्य पथ है।</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">🌐</div>
+                    <h3>वेबसाइटों पर उपयोग करें</h3>
+                    <p><code>&lt;img&gt;</code> टैग के रूप में उपयोग करें या CSS के साथ स्टाइल करें।</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">🖨️</div>
+                    <h3>किसी भी आकार में प्रिंट करें</h3>
+                    <p>बिज़नेस कार्ड से लेकर बिलबोर्ड तक, बिना पिक्सेलेशन के।</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">✂️</div>
+                    <h3>लेजर कटिंग</h3>
+                    <p>LightBurn या Cricut में सीधे आयात करें।</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">💻</div>
+                    <h3>ऐप &amp; वेब आइकन</h3>
+                    <p>React, Vue के साथ पूरी तरह से काम करता है।</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="uc-icon">🎞️</div>
+                    <h3>CSS और JS एनीमेशन</h3>
+                    <p>स्थिर छवि को वेक्टर में एनिमेट करें।</p>
+                </div>
+                </div>
+            </div>
+            </section>
+
+            <!-- ── FAQ ── -->
+            <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">अक्सर पूछे जाने वाले प्रश्न</h2>
+                <div class="faq-list">
+                <details class="faq-item">
+                    <summary>क्या यह वास्तव में बिना सीमा के मुफ़्त है?</summary>
+                    <p>हाँ। PixelToPath एक ओपन-सोर्स प्रोजेक्ट (MIT) है।</p>
+                </details>
+                <details class="faq-item">
+                    <summary>क्या यह रंगीन छवियों का समर्थन करता है?</summary>
+                    <p>हाँ। <strong>VTracer</strong> का उपयोग करता है। रंग के लिए <strong>पोस्टर</strong> या <strong>फोटो</strong> चुनें।</p>
+                </details>
+                <details class="faq-item">
+                    <summary>क्या मेरी फ़ाइलें सहेजी जाती हैं?</summary>
+                    <p>नहीं। संसाधन के तुरंत बाद हटा दी जाती हैं।</p>
+                </details>
+                <details class="faq-item">
+                    <summary>कौन से प्रारूप समर्थित हैं?</summary>
+                    <p>PNG, JPG, JPEG, BMP और WebP (और Ctrl+V)।</p>
+                </details>
+                <details class="faq-item">
+                    <summary>फ़ाइल का अधिकतम आकार क्या है?</summary>
+                    <p>ऑनलाइन <strong>20 MB</strong>। बड़ी फ़ाइलों के लिए <a href="#download" style="color:var(--primary)">डेस्कटॉप ऐप</a> डाउनलोड करें।</p>
+                </details>
+                <details class="faq-item">
+                    <summary>श्वेत-श्याम परिणाम गलत क्यों दिखता है?</summary>
+                    <p>उन्नत सेटिंग्स में <strong>उलटें</strong> चालू करें।</p>
+                </details>
+                <details class="faq-item">
+                    <summary>स्प्लाइन, बहुभुज और पिक्सेल में क्या अंतर है?</summary>
+                    <p><strong>स्प्लाइन</strong> चिकनी रेखाओं के लिए। <strong>बहुभुज</strong> सीधी रेखाओं के लिए। <strong>पिक्सेल</strong> पिक्सेल आर्ट के लिए।</p>
+                </details>
+                <details class="faq-item">
+                    <summary>क्या मैं वाणिज्यिक परियोजनाओं के लिए उपयोग कर सकता हूँ?</summary>
+                    <p>हाँ, कोई लाइसेंस प्रतिबंध नहीं है।</p>
+                </details>
+                </div>
+            </div>
+            </section>
+
+            <!-- ── CTA desktop ── -->
+            <section class="section bg-light">
+            <div class="container" style="text-align:center" id="download">
+                <h2 style="color:var(--dark);margin-bottom:1rem">ऑफ़लाइन असीमित रूपांतरण चाहिए?</h2>
+                <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">डेस्कटॉप संस्करण पूरी तरह से आपके कंप्यूटर पर चलता है - इंटरनेट की आवश्यकता नहीं है।</p>
+                <div class="double-buttons">
+                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Windows के लिए डाउनलोड करें</a>
+                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Linux के लिए डाउनलोड करें</a>
+                </div>
+            </div>
+            </section>
+
+            <section class="section donate-section">
+    <div class="container">
+        <h3>支持开源开发</h3>
+        <p>PixelToPath可免费使用。如果这个工具帮助您节省了时间，请考虑请我喝杯咖啡。</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ 通过PayPal捐款</a>
+    </div>
+</section>
+
         </main>
 
         <footer>
@@ -419,5 +558,6 @@
 </footer>
 
 
+        <script src="../../assets/online.js"></script>
     </body>
 </html>

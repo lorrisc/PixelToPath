@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8000/convert";
+const API_URL = "https://api.pixel-to-path.com/convert";
 
 let currentFile = null;
 let currentSvg = null;
