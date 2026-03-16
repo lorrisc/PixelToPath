@@ -74,7 +74,11 @@
     <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/online/" />
 
     <link rel="stylesheet" href="../../assets/style.css">
-    <link rel="stylesheet" href="../../assets/online_style.css">
+    <link rel="stylesheet" href="../../assets/components.css">
+    <link rel="stylesheet" href="../../assets/containers.css">
+    <link rel="stylesheet" href="../../assets/footer.css">
+    <link rel="stylesheet" href="../../assets/donate.css">
+    <link rel="stylesheet" href="../../assets/online.css">
     <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
     <!-- Schema.org Structured Data -->
@@ -85,10 +89,10 @@
       "name": "PixelToPath Online SVG Converter",
       "url": "https://pixel-to-path.com/online/",
       "description": "Konvertieren Sie PNG, JPG, BMP oder WebP online in SVG — kostenlos, sofort, ohne Registrierung. Angetrieben von VTracer mit Farb- und Schwarzweiß-Modi. Live-Vorschau.",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Any",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
     }
     </script>
 
@@ -98,10 +102,10 @@
         "@type": "HowTo",
         "name": "Wie man PNG online kostenlos in SVG konvertiert",
         "step": [
-        { "@type": "HowToStep", "name": "Laden Sie Ihr Bild hoch", "text": "Ziehen und ablegen oder klicken, um eine PNG-, JPG-, BMP- oder WebP-Datei hochzuladen. Keine Registrierung erforderlich." },
-        { "@type": "HowToStep", "name": "Wählen Sie eine Voreinstellung", "text": "Wählen Sie S&amp;W für Logos und Symbole, Poster für Illustrationen oder Foto für komplexe Fotografien." },
-        { "@type": "HowToStep", "name": "Live-Vorschau des Ergebnisses", "text": "Die SVG-Vorschau aktualisiert sich automatisch, wenn Sie Einstellungen anpassen. Kein Klick auf Konvertieren nötig." },
-        { "@type": "HowToStep", "name": "Laden Sie Ihre SVG-Datei herunter", "text": "Klicken Sie auf den Button SVG herunterladen, um Ihre Vektordatei sofort zu speichern, bereit für Illustrator, Figma oder Inkscape." }
+            { "@type": "HowToStep", "name": "Laden Sie Ihr Bild hoch", "text": "Ziehen und ablegen oder klicken, um eine PNG-, JPG-, BMP- oder WebP-Datei hochzuladen. Keine Registrierung erforderlich." },
+            { "@type": "HowToStep", "name": "Wählen Sie eine Voreinstellung", "text": "Wählen Sie S&amp;W für Logos und Symbole, Poster für Illustrationen oder Foto für komplexe Fotografien." },
+            { "@type": "HowToStep", "name": "Live-Vorschau des Ergebnisses", "text": "Die SVG-Vorschau aktualisiert sich automatisch, wenn Sie Einstellungen anpassen. Kein Klick auf Konvertieren nötig." },
+            { "@type": "HowToStep", "name": "Laden Sie Ihre SVG-Datei herunter", "text": "Klicken Sie auf den Button SVG herunterladen, um Ihre Vektordatei sofort zu speichern, bereit für Illustrator, Figma oder Inkscape." }
         ]
     }
     </script>
@@ -252,284 +256,317 @@
 
     </div>
 </nav> 
-
         <main>
-
             <!-- Hero -->
             <section class="tool-hero">
-            <div class="container">
-                <h1>Kostenloser Online PNG zu SVG Konverter</h1>
-                <p>Konvertieren Sie jedes Bild in Sekundenschnelle in skalierbare Vektorgrafiken — keine Registrierung, keine Limits, volle Farbunterstützung.</p>
-                <div class="badges">
-                <span class="badge accent">✓ Für immer kostenlos</span>
-                <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
-                <span class="badge">Live-Vorschau</span>
-                <span class="badge">Farbe &amp; S&amp;W-Modi</span>
-                <span class="badge">Keine Wasserzeichen</span>
+                <div class="container">
+                    <h1>Kostenloser Online PNG zu SVG Konverter</h1>
+                    <p>Konvertieren Sie jedes Bild in Sekundenschnelle in skalierbare Vektorgrafiken — keine Registrierung, keine Limits, volle Farbunterstützung.</p>
+                    <div class="badges">
+                        <span class="badge accent">✓ Für immer kostenlos</span>
+                        <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
+                        <span class="badge">Live-Vorschau</span>
+                        <span class="badge">Farbe &amp; S&amp;W-Modi</span>
+                        <span class="badge">Keine Wasserzeichen</span>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <!-- Converter (full width) -->
             <section class="converter-section">
-            <div class="converter-wrap">
+                <div class="converter-wrap">
 
-                <!-- Sidebar -->
-                <div class="conv-sidebar">
-                <div class="dropzone" id="dropzone">
-                    <div class="dz-hint">
-                    <span class="dz-icon">⬡</span>
-                    Bild hier ablegen<br>
-                    oder <u style="cursor:pointer;color:var(--primary)">durchsuchen</u>
+                    <!-- Sidebar -->
+                    <div class="conv-sidebar">
+                        <div class="dropzone" id="dropzone">
+                            <div class="dz-hint">
+                                <span class="dz-icon">⬡</span>
+                                Bild hier ablegen<br>
+                                oder <u style="cursor:pointer;color:var(--primary)">durchsuchen</u>
+                            </div>
+                        </div>
+                        <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
+
+                        <div class="ps">Voreinstellungen</div>
+                        <div class="presets">
+                            <button class="preset-btn" data-preset="bw">S&amp;W</button>
+                            <button class="preset-btn active" data-preset="poster">Poster</button>
+                            <button class="preset-btn" data-preset="photo">Foto</button>
+                        </div>
+
+                        <button id="adv-toggle"><span>⚙ Erweiterte Einstellungen</span><span id="adv-arrow">▾</span></button>
+                        <div id="adv-content">
+
+                            <div class="ps">Farbmodus</div>
+                            <div class="seg" id="seg-colormode">
+                                <button class="active" data-val="color">Farbe</button>
+                                <button data-val="binary">Binär</button>
+                            </div>
+
+                            <div id="color-params">
+                                <div class="ps">Farbe</div>
+                                
+                                <div class="sl-row">
+                                    <span>Anzahl der Farben</span>
+                                    <span class="sl-val" id="v-num_colors">8</span>
+                                </div>
+                                <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
+
+                                <div class="sl-row">
+                                    <span>Farbpräzision</span>
+                                    <span class="sl-val" id="v-color_precision">6</span>
+                                </div>
+                                <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
+                                
+                                <div class="sl-row">
+                                    <span>Ebenendifferenz</span>
+                                    <span class="sl-val" id="v-layer_difference">16</span>
+                                </div>
+                                <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
+                                
+                                <div class="ps">Hierarchisch</div>
+                                <div class="seg" id="seg-hierarchical">
+                                    <button class="active" data-val="stacked">Gestapelt</button>
+                                    <button data-val="cutout">Ausschnitt</button>
+                                </div>
+                            </div>
+
+                            <div id="binary-params" style="display:none">
+                                <div class="sw-row" style="margin-top:10px">
+                                    <div>
+                                        <div class="sw-label">Invertieren</div>
+                                        <div class="sw-sub">Schwarz ↔ Weiß tauschen</div>
+                                    </div>
+                                    <label class="sw">
+                                        <input type="checkbox" id="sw-invert">
+                                        <span class="sw-track"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="ps">Kurvenanpassung</div>
+                            <div class="seg" id="seg-mode">
+                                <button data-val="none">Pixel</button>
+                                <button data-val="polygon">Polygon</button>
+                                <button class="active" data-val="spline">Spline</button>
+                            </div>
+
+                            <div class="sl-row">
+                                <span>Fleckenfilter</span>
+                                <span class="sl-val" id="v-filter_speckle">4</span>
+                            </div>
+                            <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
+
+                            <div class="sl-row">
+                                <span>Eckenschwellenwert</span>
+                                <span class="sl-val" id="v-corner_threshold">60</span>
+                            </div>
+                            <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
+
+                            <div class="sl-row">
+                                <span>Längenschwellenwert</span>
+                                <span class="sl-val" id="v-length_threshold">4.0</span>
+                            </div>
+                            
+                            <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
+                            
+                            <div class="sl-row">
+                                <span>Spleißschwellenwert</span>
+                                <span class="sl-val" id="v-splice_threshold">45</span>
+                            </div>
+                            <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
+                        </div>
                     </div>
+
+                    <!-- Preview -->
+                    <div class="conv-preview">
+                        <div class="preview-header">
+                            <span class="preview-title">SVG-Vorschau</span>
+                            <div class="live-badge">
+                                <div class="live-dot" id="live-dot"></div>
+                                <span id="live-text">live</span>
+                            </div>
+                        </div>
+
+                        <div class="preview-body">
+                            <div id="preview-svg-container">
+                                <div class="preview-placeholder" id="placeholder">
+                                    <span class="preview-placeholder-icon">⬡</span>
+                                    <p>Laden Sie ein Bild hoch, um zu beginnen</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="preview-footer">
+                            <div id="status">Bereit</div>
+                            <button id="btn-dl" disabled>↓ SVG herunterladen</button>
+                        </div>
+
+                        <div class="conv-overlay" id="overlay">
+                            <div class="spinner"></div>
+                            <div class="overlay-text" id="overlay-text">Konvertieren...</div>
+                        </div>
+                    </div>
+
                 </div>
-                <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
-
-                <div class="ps">Voreinstellungen</div>
-                <div class="presets">
-                    <button class="preset-btn" data-preset="bw">S&amp;W</button>
-                    <button class="preset-btn active" data-preset="poster">Poster</button>
-                    <button class="preset-btn" data-preset="photo">Foto</button>
-                </div>
-
-                <button id="adv-toggle"><span>⚙ Erweiterte Einstellungen</span><span id="adv-arrow">▾</span></button>
-                <div id="adv-content">
-
-                    <div class="ps">Farbmodus</div>
-                    <div class="seg" id="seg-colormode">
-                    <button class="active" data-val="color">Farbe</button>
-                    <button data-val="binary">Binär</button>
-                    </div>
-
-                    <div id="color-params">
-                    <div class="ps">Farbe</div>
-                    <div class="sl-row"><span>Anzahl der Farben</span><span class="sl-val" id="v-num_colors">8</span></div>
-                    <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
-                    <div class="sl-row"><span>Farbpräzision</span><span class="sl-val" id="v-color_precision">6</span></div>
-                    <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
-                    <div class="sl-row"><span>Ebenendifferenz</span><span class="sl-val" id="v-layer_difference">16</span></div>
-                    <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
-                    <div class="ps">Hierarchisch</div>
-                    <div class="seg" id="seg-hierarchical">
-                        <button class="active" data-val="stacked">Gestapelt</button>
-                        <button data-val="cutout">Ausschnitt</button>
-                    </div>
-                    </div>
-
-                    <div id="binary-params" style="display:none">
-                    <div class="sw-row" style="margin-top:10px">
-                        <div><div class="sw-label">Invertieren</div><div class="sw-sub">Schwarz ↔ Weiß tauschen</div></div>
-                        <label class="sw"><input type="checkbox" id="sw-invert"><span class="sw-track"></span></label>
-                    </div>
-                    </div>
-
-                    <div class="ps">Kurvenanpassung</div>
-                    <div class="seg" id="seg-mode">
-                    <button data-val="none">Pixel</button>
-                    <button data-val="polygon">Polygon</button>
-                    <button class="active" data-val="spline">Spline</button>
-                    </div>
-
-                    <div class="sl-row"><span>Fleckenfilter</span><span class="sl-val" id="v-filter_speckle">4</span></div>
-                    <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
-                    <div class="sl-row"><span>Eckenschwellenwert</span><span class="sl-val" id="v-corner_threshold">60</span></div>
-                    <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
-                    <div class="sl-row"><span>Längenschwellenwert</span><span class="sl-val" id="v-length_threshold">4.0</span></div>
-                    <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
-                    <div class="sl-row"><span>Spleißschwellenwert</span><span class="sl-val" id="v-splice_threshold">45</span></div>
-                    <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
-                </div>
-                </div>
-
-                <!-- Preview -->
-                <div class="conv-preview">
-                <div class="preview-header">
-                    <span class="preview-title">SVG-Vorschau</span>
-                    <div class="live-badge">
-                    <div class="live-dot" id="live-dot"></div>
-                    <span id="live-text">live</span>
-                    </div>
-                </div>
-
-                <div class="preview-body">
-                    <div id="preview-svg-container">
-                    <div class="preview-placeholder" id="placeholder">
-                        <span class="preview-placeholder-icon">⬡</span>
-                        <p>Laden Sie ein Bild hoch, um zu beginnen</p>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="preview-footer">
-                    <div id="status">Bereit</div>
-                    <button id="btn-dl" disabled>↓ SVG herunterladen</button>
-                </div>
-
-                <div class="conv-overlay" id="overlay">
-                    <div class="spinner"></div>
-                    <div class="overlay-text" id="overlay-text">Konvertieren...</div>
-                </div>
-                </div>
-
-            </div><!-- /converter-wrap -->
             </section>
 
             <!-- ── HOW IT WORKS ── -->
             <section class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">Wie es funktioniert</h2>
-                <p class="section-intro">Kein Setup, kein Konto. Hochladen, vorschauen, herunterladen — in unter 10 Sekunden.</p>
-                <div class="grid-3">
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
-                    <h3>1. Hochladen</h3>
-                    <p>Ziehen und ablegen oder klicken, um ein beliebiges PNG, JPG, BMP oder WebP hochzuladen. Einfügen aus der Zwischenablage funktioniert auch.</p>
+                <div class="container">
+                    <h2 class="section-title">Wie es funktioniert</h2>
+                    <p class="section-intro">Kein Setup, kein Konto. Hochladen, vorschauen, herunterladen — in unter 10 Sekunden.</p>
+                    <div class="grid-3">
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
+                            <h3>1. Hochladen</h3>
+                            <p>Ziehen und ablegen oder klicken, um ein beliebiges PNG, JPG, BMP oder WebP hochzuladen. Einfügen aus der Zwischenablage funktioniert auch.</p>
+                        </div>
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
+                            <h3>2. Live-Vorschau</h3>
+                            <p>Das SVG aktualisiert sich automatisch, wenn Sie Einstellungen ändern. Kein Klick auf einen Konvertieren-Button nötig — alles ist sofort.</p>
+                        </div>
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
+                            <h3>3. Herunterladen</h3>
+                            <p>Klicken Sie auf SVG herunterladen für Ihre Vektordatei. Öffnen Sie sie in Illustrator, Inkscape, Figma oder einem modernen Browser.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
-                    <h3>2. Live-Vorschau</h3>
-                    <p>Das SVG aktualisiert sich automatisch, wenn Sie Einstellungen ändern. Kein Klick auf einen Konvertieren-Button nötig — alles ist sofort.</p>
-                </div>
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
-                    <h3>3. Herunterladen</h3>
-                    <p>Klicken Sie auf SVG herunterladen für Ihre Vektordatei. Öffnen Sie sie in Illustrator, Inkscape, Figma oder einem modernen Browser.</p>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── PRESETS EXPLAINED ── -->
             <section class="section">
-            <div class="container">
-                <h2 class="section-title">Welche Voreinstellung sollten Sie verwenden?</h2>
-                <p class="section-intro">PixelToPath bietet drei optimierte Voreinstellungen. Sie können auch jeden Parameter manuell feinabstimmen.</p>
-                <div class="preset-explain-grid">
-                <div class="preset-explain-card bw">
-                    <h3><span class="preset-label">S&W</span> Schwarz &amp; Weiß</h3>
-                    <p>Konvertiert das Bild vor dem Nachzeichnen in Graustufen. Erzeugt saubere, einfarbige Pfade. Am besten für:</p>
-                    <ul>
-                    <li>Logos und Marken</li>
-                    <li>Symbole und Piktogramme</li>
-                    <li>Strichzeichnungen und Skizzen</li>
-                    <li>Vinylschnitt und Lasergravur</li>
-                    </ul>
+                <div class="container">
+                    <h2 class="section-title">Welche Voreinstellung sollten Sie verwenden?</h2>
+                    <p class="section-intro">PixelToPath bietet drei optimierte Voreinstellungen. Sie können auch jeden Parameter manuell feinabstimmen.</p>
+                    <div class="preset-explain-grid">
+                        <div class="preset-explain-card bw">
+                            <h3><span class="preset-label">S&W</span> Schwarz &amp; Weiß</h3>
+                            <p>Konvertiert das Bild vor dem Nachzeichnen in Graustufen. Erzeugt saubere, einfarbige Pfade. Am besten für:</p>
+                            <ul>
+                                <li>Logos und Marken</li>
+                                <li>Symbole und Piktogramme</li>
+                                <li>Strichzeichnungen und Skizzen</li>
+                                <li>Vinylschnitt und Lasergravur</li>
+                            </ul>
+                        </div>
+                        <div class="preset-explain-card poster">
+                            <h3><span class="preset-label">Poster</span> Flache Farbe</h3>
+                            <p>Zeichnet das Bild als mehrere gestapelte Farbebenen mit hoher Farbpräzision nach. Am besten für:</p>
+                            <ul>
+                                <li>Flache Illustrationen und Cartoons</li>
+                                <li>Infografiken und Diagramme</li>
+                                <li>Clipart und Aufkleber</li>
+                                <li>Digitale Kunst mit klaren Farben</li>
+                            </ul>
+                        </div>
+                        <div class="preset-explain-card photo">
+                            <h3><span class="preset-label">Foto</span> Fotografien</h3>
+                            <p>Verwendet eine breitere Farbgruppierung und Rauschfilterung für echte Fotos. Am besten für:</p>
+                            <ul>
+                                <li>Porträts und Gesichter</li>
+                                <li>Landschaftsfotografien</li>
+                                <li>Produktfotos</li>
+                                <li>Komplexe Bilder mit vielen Verläufen</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="preset-explain-card poster">
-                    <h3><span class="preset-label">Poster</span> Flache Farbe</h3>
-                    <p>Zeichnet das Bild als mehrere gestapelte Farbebenen mit hoher Farbpräzision nach. Am besten für:</p>
-                    <ul>
-                    <li>Flache Illustrationen und Cartoons</li>
-                    <li>Infografiken und Diagramme</li>
-                    <li>Clipart und Aufkleber</li>
-                    <li>Digitale Kunst mit klaren Farben</li>
-                    </ul>
-                </div>
-                <div class="preset-explain-card photo">
-                    <h3><span class="preset-label">Foto</span> Fotografien</h3>
-                    <p>Verwendet eine breitere Farbgruppierung und Rauschfilterung für echte Fotos. Am besten für:</p>
-                    <ul>
-                    <li>Porträts und Gesichter</li>
-                    <li>Landschaftsfotografien</li>
-                    <li>Produktfotos</li>
-                    <li>Komplexe Bilder mit vielen Verläufen</li>
-                    </ul>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── USE CASES ── -->
             <section class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">Was können Sie mit Ihrem SVG machen?</h2>
-                <p class="section-intro">SVG-Dateien von PixelToPath sind voll standardisiert. Hier sind die häufigsten Anwendungsfälle.</p>
-                <div class="use-cases-grid">
-                <div class="use-case-card">
-                    <div class="uc-icon">🎨</div>
-                    <h3>In Figma oder Illustrator bearbeiten</h3>
-                    <p>Importieren Sie das SVG direkt in Ihr Design-Tool. Jede Form ist ein bearbeitbarer Pfad ohne Qualitätsverlust.</p>
+                <div class="container">
+                    <h2 class="section-title">Was können Sie mit Ihrem SVG machen?</h2>
+                    <p class="section-intro">SVG-Dateien von PixelToPath sind voll standardisiert. Hier sind die häufigsten Anwendungsfälle.</p>
+                    <div class="use-cases-grid">
+                        <div class="use-case-card">
+                            <div class="uc-icon">🎨</div>
+                            <h3>In Figma oder Illustrator bearbeiten</h3>
+                            <p>Importieren Sie das SVG direkt in Ihr Design-Tool. Jede Form ist ein bearbeitbarer Pfad ohne Qualitätsverlust.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🌐</div>
+                            <h3>Auf Websites verwenden</h3>
+                            <p>SVG-Dateien sind auflösungsunabhängig und laden schneller als PNGs. Verwenden Sie sie als <code>&lt;img&gt;</code>-Tags oder mit CSS.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🖨️</div>
+                            <h3>In jeder Größe drucken</h3>
+                            <p>Senden Sie Ihr SVG an eine Druckerei und erhalten Sie perfekte Ergebnisse in jeder Größe — von der Visitenkarte bis zur Plakatwand.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">✂️</div>
+                            <h3>Laserschneiden &amp; Vinylplotten</h3>
+                            <p>Schneidemaschinen benötigen Vektorpfade. Konvertieren Sie Ihr PNG zu SVG für LightBurn, Cricut Design Space oder RDWorks.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">💻</div>
+                            <h3>App- &amp; Web-Icons</h3>
+                            <p>Konvertieren Sie ein PNG-Iconset einmal zu SVG und skalieren Sie es von 16px auf 512px. Funktioniert perfekt mit React, Vue.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🎞️</div>
+                            <h3>Animationen mit CSS &amp; JS</h3>
+                            <p>SVG-Elemente können animiert werden. Verwandeln Sie Ihr statisches PNG in ein SVG und erwecken Sie es auf Ihrer Website zum Leben.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🌐</div>
-                    <h3>Auf Websites verwenden</h3>
-                    <p>SVG-Dateien sind auflösungsunabhängig und laden schneller als PNGs. Verwenden Sie sie als <code>&lt;img&gt;</code>-Tags oder mit CSS.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🖨️</div>
-                    <h3>In jeder Größe drucken</h3>
-                    <p>Senden Sie Ihr SVG an eine Druckerei und erhalten Sie perfekte Ergebnisse in jeder Größe — von der Visitenkarte bis zur Plakatwand.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">✂️</div>
-                    <h3>Laserschneiden &amp; Vinylplotten</h3>
-                    <p>Schneidemaschinen benötigen Vektorpfade. Konvertieren Sie Ihr PNG zu SVG für LightBurn, Cricut Design Space oder RDWorks.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">💻</div>
-                    <h3>App- &amp; Web-Icons</h3>
-                    <p>Konvertieren Sie ein PNG-Iconset einmal zu SVG und skalieren Sie es von 16px auf 512px. Funktioniert perfekt mit React, Vue.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🎞️</div>
-                    <h3>Animationen mit CSS &amp; JS</h3>
-                    <p>SVG-Elemente können animiert werden. Verwandeln Sie Ihr statisches PNG in ein SVG und erwecken Sie es auf Ihrer Website zum Leben.</p>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── FAQ ── -->
             <section class="section" id="faq">
-            <div class="container">
-                <h2 class="section-title">Häufig gestellte Fragen</h2>
-                <div class="faq-list">
-                <details class="faq-item">
-                    <summary>Ist dieser Online-SVG-Konverter wirklich kostenlos ohne Limits?</summary>
-                    <p>Ja, komplett kostenlos. Keine Registrierung, keine Wasserzeichen, keine täglichen Limits. PixelToPath ist Open Source (MIT).</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Unterstützt dieser Konverter Farbbilder?</summary>
-                    <p>Ja. PixelToPath verwendet <strong>VTracer</strong>, das nativ Vollfarbbilder verarbeitet. Wählen Sie das <strong>Poster</strong>- oder <strong>Foto</strong>-Preset.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Werden meine hochgeladenen Dateien gespeichert oder geteilt?</summary>
-                    <p>Nein. Dateien werden nach der SVG-Generierung sofort gelöscht. Wir speichern oder teilen keine hochgeladenen Bilder.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Welche Bildformate werden unterstützt?</summary>
-                    <p>PNG, JPG, JPEG, BMP und WebP. Sie können auch ein Bild direkt aus Ihrer Zwischenablage einfügen (Strg+V).</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Was ist die maximale Dateigröße?</summary>
-                    <p>Der Online-Konverter akzeptiert Dateien bis zu <strong>20 MB</strong>. Für größere Dateien laden Sie die <a href="#download" style="color:var(--primary)">Desktop-App</a> herunter.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Warum sieht das S&W-Ergebnis bei meinem farbigen Bild falsch aus?</summary>
-                    <p>Im Binär-Modus wird das Bild zuerst in Graustufen umgewandelt. Aktivieren Sie den Schalter <strong>Invertieren</strong>, wenn das Ergebnis zu hell ist.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Was ist der Unterschied zwischen Spline-, Polygon- und Pixel-Modus?</summary>
-                    <p><strong>Spline</strong> erzeugt weiche Bézierkurven. <strong>Polygon</strong> verwendet gerade Liniensegmente. <strong>Pixel</strong> zeichnet die exakte Pixelgrenze nach (perfekt für Pixel-Art).</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Kann ich das konvertierte SVG für kommerzielle Projekte verwenden?</summary>
-                    <p>Ja. Sie können die generierten Dateien für jeden Zweck frei verwenden, es gibt keine Lizenzbeschränkungen.</p>
-                </details>
+                <div class="container">
+                    <h2 class="section-title">Häufig gestellte Fragen</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>Ist dieser Online-SVG-Konverter wirklich kostenlos ohne Limits?</summary>
+                            <p>Ja, komplett kostenlos. Keine Registrierung, keine Wasserzeichen, keine täglichen Limits. PixelToPath ist Open Source (MIT).</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Unterstützt dieser Konverter Farbbilder?</summary>
+                            <p>Ja. PixelToPath verwendet <strong>VTracer</strong>, das nativ Vollfarbbilder verarbeitet. Wählen Sie das <strong>Poster</strong>- oder <strong>Foto</strong>-Preset.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Werden meine hochgeladenen Dateien gespeichert oder geteilt?</summary>
+                            <p>Nein. Dateien werden nach der SVG-Generierung sofort gelöscht. Wir speichern oder teilen keine hochgeladenen Bilder.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Welche Bildformate werden unterstützt?</summary>
+                            <p>PNG, JPG, JPEG, BMP und WebP. Sie können auch ein Bild direkt aus Ihrer Zwischenablage einfügen (Strg+V).</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Was ist die maximale Dateigröße?</summary>
+                            <p>Der Online-Konverter akzeptiert Dateien bis zu <strong>20 MB</strong>. Für größere Dateien laden Sie die <a href="#download" style="color:var(--primary)">Desktop-App</a> herunter.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Warum sieht das S&W-Ergebnis bei meinem farbigen Bild falsch aus?</summary>
+                            <p>Im Binär-Modus wird das Bild zuerst in Graustufen umgewandelt. Aktivieren Sie den Schalter <strong>Invertieren</strong>, wenn das Ergebnis zu hell ist.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Was ist der Unterschied zwischen Spline-, Polygon- und Pixel-Modus?</summary>
+                            <p><strong>Spline</strong> erzeugt weiche Bézierkurven. <strong>Polygon</strong> verwendet gerade Liniensegmente. <strong>Pixel</strong> zeichnet die exakte Pixelgrenze nach (perfekt für Pixel-Art).</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Kann ich das konvertierte SVG für kommerzielle Projekte verwenden?</summary>
+                            <p>Ja. Sie können die generierten Dateien für jeden Zweck frei verwenden, es gibt keine Lizenzbeschränkungen.</p>
+                        </details>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <!-- ── CTA desktop ── -->
             <section class="section bg-light">
-            <div class="container" style="text-align:center" id="download">
-                <h2 style="color:var(--dark);margin-bottom:1rem">Benötigen Sie unbegrenzte Konvertierungen offline?</h2>
-                <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">Die Desktop-Version läuft komplett auf Ihrem Computer — kein Internet erforderlich, keine Größenlimits.</p>
-                <div class="double-buttons">
-                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Download für Windows</a>
-                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Download für Linux</a>
+                <div class="container" style="text-align:center" id="download">
+                    <h2 style="color:var(--dark);margin-bottom:1rem">Benötigen Sie unbegrenzte Konvertierungen offline?</h2>
+                    <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">Die Desktop-Version läuft komplett auf Ihrem Computer — kein Internet erforderlich, keine Größenlimits.</p>
+                    <div class="double-buttons">
+                        <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Download für Windows</a>
+                        <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Download für Linux</a>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <section class="section donate-section">
@@ -545,15 +582,9 @@
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

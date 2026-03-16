@@ -74,7 +74,10 @@
         <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
         <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/home_style.css">
+        <link rel="stylesheet" href="../assets/components.css">
+        <link rel="stylesheet" href="../assets/footer.css">
+        <link rel="stylesheet" href="../assets/donate.css">
+        <link rel="stylesheet" href="../assets/home.css">
         <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
         <!-- Schema.org Structured Data -->
@@ -178,96 +181,92 @@
 
     </div>
 </nav> 
-
         <main>
             <!-- Hero -->
             <section class="home-hero">
-            <div class="container">
-                <h1>تبدیل تصاویر به <span>SVG</span><br>رایگان &amp; متن باز</h1>
-                <p class="hero-sub">PixelToPath تصاویر PNG، JPG، BMP و WebP را به گرافیک‌های برداری مقیاس‌پذیر تبدیل می‌کند - با پشتیبانی کامل از رنگ، پیش‌نمایش زنده و بدون واترمارک.</p>
-                <div class="formats-row">
-                <span class="fmt in">PNG</span>
-                <span class="fmt in">JPG</span>
-                <span class="fmt in">BMP</span>
-                <span class="fmt in">WebP</span>
-                <span class="fmt-arrow">→</span>
-                <span class="fmt out">SVG</span>
+                <div class="container">
+                    <h1 class="c-dark">تبدیل تصاویر به <span>SVG</span><br>رایگان &amp; متن باز</h1>
+                    <p class="hero-sub c-gray">PixelToPath تصاویر PNG، JPG، BMP و WebP را به گرافیک‌های برداری مقیاس‌پذیر تبدیل می‌کند - با پشتیبانی کامل از رنگ، پیش‌نمایش زنده و بدون واترمارک.</p>
+                    <div class="formats-row">
+                        <span class="fmt in">PNG</span>
+                        <span class="fmt in">JPG</span>
+                        <span class="fmt in">BMP</span>
+                        <span class="fmt in">WebP</span>
+                        <span class="fmt-arrow">→</span>
+                        <span class="fmt out">SVG</span>
+                    </div>
+                    <div class="badges" id="home__badges">
+                        <span class="badge accent">✓ ۱۰۰٪ رایگان</span>
+                        <span class="badge">بدون نیاز به ثبت نام</span>
+                        <span class="badge">بدون واترمارک</span>
+                        <span class="badge">پشتیبانی کامل از رنگ</span>
+                        <span class="badge">متن باز - MIT</span>
+                    </div>
                 </div>
-                <div class="trust-pills">
-                <span class="pill orange">✓ ۱۰۰٪ رایگان</span>
-                <span class="pill">بدون نیاز به ثبت نام</span>
-                <span class="pill">بدون واترمارک</span>
-                <span class="pill">پشتیبانی کامل از رنگ</span>
-                <span class="pill">متن باز - MIT</span>
-                </div>
-            </div>
             </section>
 
             <!-- Feature strip -->
-            <div class="feature-strip">
-            <div class="fs-item">
-                <div class="fs-icon">🎨</div>
-                <h3>پشتیبانی کامل از رنگ</h3>
-                <p>طراحی شده توسط VTracer - نه فقط سیاه &amp; سفید</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">⚡</div>
-                <h3>پیش‌نمایش زنده</h3>
-                <p>با تغییر تنظیمات، SVG بروزرسانی می‌شود</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">🔒</div>
-                <h3>حریم خصوصی در اولویت</h3>
-                <p>دسکتاپ: فایل‌ها هرگز از دستگاه شما خارج نمی‌شوند</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">♾️</div>
-                <h3>بدون محدودیت</h3>
-                <p>تبدیل‌های نامحدود، همیشه رایگان</p>
-            </div>
-            </div>
+            <section class="feature-strip">
+                <div class="fs-item">
+                    <div class="fs-icon">🎨</div>
+                    <h3>پشتیبانی کامل از رنگ</h3>
+                    <p>طراحی شده توسط VTracer - نه فقط سیاه &amp; سفید</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">⚡</div>
+                    <h3>پیش‌نمایش زنده</h3>
+                    <p>با تغییر تنظیمات، SVG بروزرسانی می‌شود</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">🔒</div>
+                    <h3>حریم خصوصی در اولویت</h3>
+                    <p>دسکتاپ: فایل‌ها هرگز از دستگاه شما خارج نمی‌شوند</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">♾️</div>
+                    <h3>بدون محدودیت</h3>
+                    <p>تبدیل‌های نامحدود، همیشه رایگان</p>
+                </div>
+            </section>
 
             <!-- Choice -->
             <section class="choice-section">
-            <div class="container">
-                <h2 class="section-title">نسخه خود را انتخاب کنید</h2>
-                <p class="choice-subtitle">همان موتور قدرتمند - فرمتی را انتخاب کنید که با گردش کار شما مطابقت دارد.</p>
-                <div class="choice-grid">
+                <div class="container">
+                    <h2 class="section-title">نسخه خود را انتخاب کنید</h2>
+                    <p class="choice-subtitle">همان موتور قدرتمند - فرمتی را انتخاب کنید که با گردش کار شما مطابقت دارد.</p>
+                    <div class="choice-grid">
+                        <div class="choice-card online">
+                            <div class="choice-icon">🌐</div>
+                            <span class="choice-tag">بدون نیاز به نصب</span>
+                            <h2>ابزار آنلاین</h2>
+                            <p>تصاویر را مستقیماً در مرورگر خود تبدیل کنید. بدون نیاز به نصب یا ایجاد حساب کاربری. فقط آپلود و دانلود کنید.</p>
+                            <ul class="choice-features">
+                                <li>کار بر روی هر دستگاه &amp; سیستم عامل</li>
+                                <li>حالت‌های تمام رنگی &amp; سیاه و سفید</li>
+                                <li>پیش‌نمایش زنده SVG</li>
+                                <li>حالت‌های از پیش تنظیم شده: سیاه &amp; سفید، پوستر، عکس</li>
+                                <li>تنظیم پیشرفته پارامترها</li>
+                            </ul>
+                            <a href="/online/" class="choice-cta">استفاده از ابزار آنلاین →</a>
+                        </div>
 
-                <div class="choice-card online">
-                    <div class="choice-icon">🌐</div>
-                    <span class="choice-tag">بدون نیاز به نصب</span>
-                    <h2>ابزار آنلاین</h2>
-                    <p>تصاویر را مستقیماً در مرورگر خود تبدیل کنید. بدون نیاز به نصب یا ایجاد حساب کاربری. فقط آپلود و دانلود کنید.</p>
-                    <ul class="choice-features">
-                    <li>کار بر روی هر دستگاه &amp; سیستم عامل</li>
-                    <li>حالت‌های تمام رنگی &amp; سیاه و سفید</li>
-                    <li>پیش‌نمایش زنده SVG</li>
-                    <li>حالت‌های از پیش تنظیم شده: سیاه &amp; سفید، پوستر، عکس</li>
-                    <li>تنظیم پیشرفته پارامترها</li>
-                    </ul>
-                    <a href="/online/" class="choice-cta">استفاده از ابزار آنلاین →</a>
+                        <div class="choice-card offline">
+                            <div class="choice-icon">💻</div>
+                            <span class="choice-tag">ویندوز &amp; لینوکس</span>
+                            <h2>برنامه دسکتاپ</h2>
+                            <p>یک بار نصب کنید و فایل‌ها را کاملاً آفلاین تبدیل کنید. تصاویر شما هرگز از رایانه خارج نمی‌شوند - ایده‌آل برای کارهای حساس یا حرفه‌ای.</p>
+                            <ul class="choice-features">
+                                <li>۱۰۰٪ آفلاین - بدون نیاز به اینترنت</li>
+                                <li>فایل‌ها هرگز در جایی آپلود نمی‌شوند</li>
+                                <li>بدون محدودیت حجم فایل</li>
+                                <li>حالت تمرکز برای استفاده بدون حواس‌پرتی</li>
+                                <li>همان پیش‌نمایش زنده &amp; تنظیمات اولیه</li>
+                            </ul>
+                            <a href="/offline/" class="choice-cta">دانلود برنامه دسکتاپ →</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="choice-card offline">
-                    <div class="choice-icon">💻</div>
-                    <span class="choice-tag">ویندوز &amp; لینوکس</span>
-                    <h2>برنامه دسکتاپ</h2>
-                    <p>یک بار نصب کنید و فایل‌ها را کاملاً آفلاین تبدیل کنید. تصاویر شما هرگز از رایانه خارج نمی‌شوند - ایده‌آل برای کارهای حساس یا حرفه‌ای.</p>
-                    <ul class="choice-features">
-                    <li>۱۰۰٪ آفلاین - بدون نیاز به اینترنت</li>
-                    <li>فایل‌ها هرگز در جایی آپلود نمی‌شوند</li>
-                    <li>بدون محدودیت حجم فایل</li>
-                    <li>حالت تمرکز برای استفاده بدون حواس‌پرتی</li>
-                    <li>همان پیش‌نمایش زنده &amp; تنظیمات اولیه</li>
-                    </ul>
-                    <a href="/offline/" class="choice-cta">دانلود برنامه دسکتاپ →</a>
-                </div>
-
-                </div>
-            </div>
             </section>
-
             <section class="section donate-section">
     <div class="container">
         <h3>حمایت از توسعه متن‌باز</h3>
@@ -275,21 +274,13 @@
         <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ حمایت مالی از طریق PayPal</a>
     </div>
 </section>
-            
         </main>
-
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

@@ -74,7 +74,10 @@
         <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
         <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/home_style.css">
+        <link rel="stylesheet" href="../assets/components.css">
+        <link rel="stylesheet" href="../assets/footer.css">
+        <link rel="stylesheet" href="../assets/donate.css">
+        <link rel="stylesheet" href="../assets/home.css">
         <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
         <!-- Schema.org Structured Data -->
@@ -178,96 +181,92 @@
 
     </div>
 </nav> 
-
         <main>
             <!-- Hero -->
             <section class="home-hero">
-            <div class="container">
-                <h1>이미지를 <span>SVG</span>로 변환<br>무료 &amp; 오픈 소스</h1>
-                <p class="hero-sub">PixelToPath는 PNG, JPG, BMP 및 WebP 이미지를 확장 가능한 벡터 그래픽으로 변환합니다. 풀 컬러 지원, 라이브 미리보기 및 워터마크 없음.</p>
-                <div class="formats-row">
-                <span class="fmt in">PNG</span>
-                <span class="fmt in">JPG</span>
-                <span class="fmt in">BMP</span>
-                <span class="fmt in">WebP</span>
-                <span class="fmt-arrow">→</span>
-                <span class="fmt out">SVG</span>
+                <div class="container">
+                    <h1 class="c-dark">이미지를 <span>SVG</span>로 변환<br>무료 &amp; 오픈 소스</h1>
+                    <p class="hero-sub c-gray">PixelToPath는 PNG, JPG, BMP 및 WebP 이미지를 확장 가능한 벡터 그래픽으로 변환합니다. 풀 컬러 지원, 라이브 미리보기 및 워터마크 없음.</p>
+                    <div class="formats-row">
+                        <span class="fmt in">PNG</span>
+                        <span class="fmt in">JPG</span>
+                        <span class="fmt in">BMP</span>
+                        <span class="fmt in">WebP</span>
+                        <span class="fmt-arrow">→</span>
+                        <span class="fmt out">SVG</span>
+                    </div>
+                    <div class="badges" id="home__badges">
+                        <span class="badge accent">✓ 100% 무료</span>
+                        <span class="badge">가입 불필요</span>
+                        <span class="badge">워터마크 없음</span>
+                        <span class="badge">풀 컬러 지원</span>
+                        <span class="badge">오픈 소스 - MIT</span>
+                    </div>
                 </div>
-                <div class="trust-pills">
-                <span class="pill orange">✓ 100% 무료</span>
-                <span class="pill">가입 불필요</span>
-                <span class="pill">워터마크 없음</span>
-                <span class="pill">풀 컬러 지원</span>
-                <span class="pill">오픈 소스 - MIT</span>
-                </div>
-            </div>
             </section>
 
             <!-- Feature strip -->
-            <div class="feature-strip">
-            <div class="fs-item">
-                <div class="fs-icon">🎨</div>
-                <h3>풀 컬러 지원</h3>
-                <p>VTracer 기반 - 흑백뿐만 아니라 풀컬러 지원</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">⚡</div>
-                <h3>라이브 미리보기</h3>
-                <p>설정을 조정하면 SVG가 실시간 업데이트됩니다</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">🔒</div>
-                <h3>개인 정보 보호 최우선</h3>
-                <p>데스크톱: 파일이 기기 외부로 유출되지 않습니다</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">♾️</div>
-                <h3>제한 없음</h3>
-                <p>무제한 변환, 평생 무료</p>
-            </div>
-            </div>
+            <section class="feature-strip">
+                <div class="fs-item">
+                    <div class="fs-icon">🎨</div>
+                    <h3>풀 컬러 지원</h3>
+                    <p>VTracer 기반 - 흑백뿐만 아니라 풀컬러 지원</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">⚡</div>
+                    <h3>라이브 미리보기</h3>
+                    <p>설정을 조정하면 SVG가 실시간 업데이트됩니다</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">🔒</div>
+                    <h3>개인 정보 보호 최우선</h3>
+                    <p>데스크톱: 파일이 기기 외부로 유출되지 않습니다</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">♾️</div>
+                    <h3>제한 없음</h3>
+                    <p>무제한 변환, 평생 무료</p>
+                </div>
+            </section>
 
             <!-- Choice -->
             <section class="choice-section">
-            <div class="container">
-                <h2 class="section-title">버전 선택</h2>
-                <p class="choice-subtitle">동일한 강력한 엔진 - 워크플로에 맞는 형식을 선택하세요.</p>
-                <div class="choice-grid">
+                <div class="container">
+                    <h2 class="section-title">버전 선택</h2>
+                    <p class="choice-subtitle">동일한 강력한 엔진 - 워크플로에 맞는 형식을 선택하세요.</p>
+                    <div class="choice-grid">
+                        <div class="choice-card online">
+                            <div class="choice-icon">🌐</div>
+                            <span class="choice-tag">설치 불필요</span>
+                            <h2>온라인 도구</h2>
+                            <p>브라우저에서 직접 이미지를 변환하세요. 설치할 필요도, 계정도 필요 없습니다. 업로드하고 다운로드하기만 하면 됩니다.</p>
+                            <ul class="choice-features">
+                                <li>모든 기기 &amp; OS에서 작동</li>
+                                <li>풀 컬러 &amp; 흑백 모드</li>
+                                <li>라이브 SVG 미리보기</li>
+                                <li>사전 설정 모드: 흑백, 포스터, 사진</li>
+                                <li>고급 매개변수 조정</li>
+                            </ul>
+                            <a href="/online/" class="choice-cta">온라인 도구 사용 →</a>
+                        </div>
 
-                <div class="choice-card online">
-                    <div class="choice-icon">🌐</div>
-                    <span class="choice-tag">설치 불필요</span>
-                    <h2>온라인 도구</h2>
-                    <p>브라우저에서 직접 이미지를 변환하세요. 설치할 필요도, 계정도 필요 없습니다. 업로드하고 다운로드하기만 하면 됩니다.</p>
-                    <ul class="choice-features">
-                    <li>모든 기기 &amp; OS에서 작동</li>
-                    <li>풀 컬러 &amp; 흑백 모드</li>
-                    <li>라이브 SVG 미리보기</li>
-                    <li>사전 설정 모드: 흑백, 포스터, 사진</li>
-                    <li>고급 매개변수 조정</li>
-                    </ul>
-                    <a href="/online/" class="choice-cta">온라인 도구 사용 →</a>
+                        <div class="choice-card offline">
+                            <div class="choice-icon">💻</div>
+                            <span class="choice-tag">Windows &amp; Linux</span>
+                            <h2>데스크톱 앱</h2>
+                            <p>한 번 설치하면 파일을 완전히 오프라인으로 변환할 수 있습니다. 이미지가 컴퓨터 외부로 나가지 않으므로 민감하거나 전문적인 작업에 이상적입니다.</p>
+                            <ul class="choice-features">
+                                <li>100% 오프라인 - 인터넷 불필요</li>
+                                <li>파일이 절대 어디에도 업로드되지 않음</li>
+                                <li>파일 크기 제한 없음</li>
+                                <li>방해받지 않고 사용할 수 있는 포커스 모드</li>
+                                <li>동일한 라이브 미리보기 &amp; 사전 설정</li>
+                            </ul>
+                            <a href="/offline/" class="choice-cta">데스크톱 앱 다운로드 →</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="choice-card offline">
-                    <div class="choice-icon">💻</div>
-                    <span class="choice-tag">Windows &amp; Linux</span>
-                    <h2>데스크톱 앱</h2>
-                    <p>한 번 설치하면 파일을 완전히 오프라인으로 변환할 수 있습니다. 이미지가 컴퓨터 외부로 나가지 않으므로 민감하거나 전문적인 작업에 이상적입니다.</p>
-                    <ul class="choice-features">
-                    <li>100% 오프라인 - 인터넷 불필요</li>
-                    <li>파일이 절대 어디에도 업로드되지 않음</li>
-                    <li>파일 크기 제한 없음</li>
-                    <li>방해받지 않고 사용할 수 있는 포커스 모드</li>
-                    <li>동일한 라이브 미리보기 &amp; 사전 설정</li>
-                    </ul>
-                    <a href="/offline/" class="choice-cta">데스크톱 앱 다운로드 →</a>
-                </div>
-
-                </div>
-            </div>
             </section>
-
             <section class="section donate-section">
     <div class="container">
         <h3>오픈 소스 개발 지원</h3>
@@ -275,21 +274,13 @@
         <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ PayPal을 통해 후원하기</a>
     </div>
 </section>
-            
         </main>
-
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

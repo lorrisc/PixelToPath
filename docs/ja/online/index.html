@@ -74,7 +74,11 @@
     <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/online/" />
 
     <link rel="stylesheet" href="../../assets/style.css">
-    <link rel="stylesheet" href="../../assets/online_style.css">
+    <link rel="stylesheet" href="../../assets/components.css">
+    <link rel="stylesheet" href="../../assets/containers.css">
+    <link rel="stylesheet" href="../../assets/footer.css">
+    <link rel="stylesheet" href="../../assets/donate.css">
+    <link rel="stylesheet" href="../../assets/online.css">
     <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
     <!-- Schema.org Structured Data -->
@@ -85,10 +89,10 @@
       "name": "PixelToPath Online SVG Converter",
       "url": "https://pixel-to-path.com/online/",
       "description": "PNG、JPG、BMP、WebP をオンラインで SVG に変換します — 無料、即時、登録不要。カラーと白黒モードを備えた VTracer を搭載。ライブプレビュー。",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Any",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
     }
     </script>
 
@@ -98,10 +102,10 @@
         "@type": "HowTo",
         "name": "無料で PNG を SVG にオンライン変換する方法",
         "step": [
-        { "@type": "HowToStep", "name": "画像をアップロード", "text": "ドラッグ＆ドロップまたはクリックして、PNG、JPG、BMP、WebP ファイルをアップロードします。登録は不要です。" },
-        { "@type": "HowToStep", "name": "プリセットを選択", "text": "ロゴやアイコンには「白黒」、イラストには「ポスター」、複雑な写真には「写真」を選択します。" },
-        { "@type": "HowToStep", "name": "結果をライブプレビュー", "text": "設定を調整すると、SVG プレビューが自動的に更新されます。「変換」をクリックする必要はありません。" },
-        { "@type": "HowToStep", "name": "SVG ファイルをダウンロード", "text": "「SVG をダウンロード」ボタンをクリックしてベクターファイルを即座に保存します。Illustrator、Figma、Inkscape でそのまま使用できます。" }
+            { "@type": "HowToStep", "name": "画像をアップロード", "text": "ドラッグ＆ドロップまたはクリックして、PNG、JPG、BMP、WebP ファイルをアップロードします。登録は不要です。" },
+            { "@type": "HowToStep", "name": "プリセットを選択", "text": "ロゴやアイコンには「白黒」、イラストには「ポスター」、複雑な写真には「写真」を選択します。" },
+            { "@type": "HowToStep", "name": "結果をライブプレビュー", "text": "設定を調整すると、SVG プレビューが自動的に更新されます。「変換」をクリックする必要はありません。" },
+            { "@type": "HowToStep", "name": "SVG ファイルをダウンロード", "text": "「SVG をダウンロード」ボタンをクリックしてベクターファイルを即座に保存します。Illustrator、Figma、Inkscape でそのまま使用できます。" }
         ]
     }
     </script>
@@ -252,284 +256,317 @@
 
     </div>
 </nav> 
-
         <main>
-
             <!-- Hero -->
             <section class="tool-hero">
-            <div class="container">
-                <h1>無料オンライン PNG から SVG へのコンバーター</h1>
-                <p>あらゆる画像を数秒でスケーラブルなベクターグラフィックスに変換します。登録不要、制限なし、フルカラー対応。</p>
-                <div class="badges">
-                <span class="badge accent">✓ 永久無料</span>
-                <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
-                <span class="badge">ライブプレビュー</span>
-                <span class="badge">カラー &amp; 白黒モード</span>
-                <span class="badge">ウォーターマークなし</span>
+                <div class="container">
+                    <h1>無料オンライン PNG から SVG へのコンバーター</h1>
+                    <p>あらゆる画像を数秒でスケーラブルなベクターグラフィックスに変換します。登録不要、制限なし、フルカラー対応。</p>
+                    <div class="badges">
+                        <span class="badge accent">✓ 永久無料</span>
+                        <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
+                        <span class="badge">ライブプレビュー</span>
+                        <span class="badge">カラー &amp; 白黒モード</span>
+                        <span class="badge">ウォーターマークなし</span>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <!-- Converter (full width) -->
             <section class="converter-section">
-            <div class="converter-wrap">
+                <div class="converter-wrap">
 
-                <!-- Sidebar -->
-                <div class="conv-sidebar">
-                <div class="dropzone" id="dropzone">
-                    <div class="dz-hint">
-                    <span class="dz-icon">⬡</span>
-                    ここに画像をドロップ<br>
-                    または<u style="cursor:pointer;color:var(--primary)">参照</u>
+                    <!-- Sidebar -->
+                    <div class="conv-sidebar">
+                        <div class="dropzone" id="dropzone">
+                            <div class="dz-hint">
+                                <span class="dz-icon">⬡</span>
+                                ここに画像をドロップ<br>
+                                または<u style="cursor:pointer;color:var(--primary)">参照</u>
+                            </div>
+                        </div>
+                        <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
+
+                        <div class="ps">プリセット</div>
+                        <div class="presets">
+                            <button class="preset-btn" data-preset="bw">白黒</button>
+                            <button class="preset-btn active" data-preset="poster">ポスター</button>
+                            <button class="preset-btn" data-preset="photo">写真</button>
+                        </div>
+
+                        <button id="adv-toggle"><span>⚙ 詳細設定</span><span id="adv-arrow">▾</span></button>
+                        <div id="adv-content">
+
+                            <div class="ps">カラーモード</div>
+                            <div class="seg" id="seg-colormode">
+                                <button class="active" data-val="color">カラー</button>
+                                <button data-val="binary">バイナリ</button>
+                            </div>
+
+                            <div id="color-params">
+                                <div class="ps">カラー</div>
+                                
+                                <div class="sl-row">
+                                    <span>色数</span>
+                                    <span class="sl-val" id="v-num_colors">8</span>
+                                </div>
+                                <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
+
+                                <div class="sl-row">
+                                    <span>カラー精度</span>
+                                    <span class="sl-val" id="v-color_precision">6</span>
+                                </div>
+                                <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
+                                
+                                <div class="sl-row">
+                                    <span>レイヤーの差分</span>
+                                    <span class="sl-val" id="v-layer_difference">16</span>
+                                </div>
+                                <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
+                                
+                                <div class="ps">階層的</div>
+                                <div class="seg" id="seg-hierarchical">
+                                    <button class="active" data-val="stacked">スタック</button>
+                                    <button data-val="cutout">カットアウト</button>
+                                </div>
+                            </div>
+
+                            <div id="binary-params" style="display:none">
+                                <div class="sw-row" style="margin-top:10px">
+                                    <div>
+                                        <div class="sw-label">反転</div>
+                                        <div class="sw-sub">黒 ↔ 白 を入れ替え</div>
+                                    </div>
+                                    <label class="sw">
+                                        <input type="checkbox" id="sw-invert">
+                                        <span class="sw-track"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="ps">カーブフィッティング</div>
+                            <div class="seg" id="seg-mode">
+                                <button data-val="none">ピクセル</button>
+                                <button data-val="polygon">ポリゴン</button>
+                                <button class="active" data-val="spline">スプライン</button>
+                            </div>
+
+                            <div class="sl-row">
+                                <span>斑点フィルター</span>
+                                <span class="sl-val" id="v-filter_speckle">4</span>
+                            </div>
+                            <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
+
+                            <div class="sl-row">
+                                <span>角のしきい値</span>
+                                <span class="sl-val" id="v-corner_threshold">60</span>
+                            </div>
+                            <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
+
+                            <div class="sl-row">
+                                <span>長さのしきい値</span>
+                                <span class="sl-val" id="v-length_threshold">4.0</span>
+                            </div>
+                            
+                            <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
+                            
+                            <div class="sl-row">
+                                <span>スプライスしきい値</span>
+                                <span class="sl-val" id="v-splice_threshold">45</span>
+                            </div>
+                            <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
+                        </div>
                     </div>
+
+                    <!-- Preview -->
+                    <div class="conv-preview">
+                        <div class="preview-header">
+                            <span class="preview-title">SVG プレビュー</span>
+                            <div class="live-badge">
+                                <div class="live-dot" id="live-dot"></div>
+                                <span id="live-text">ライブ</span>
+                            </div>
+                        </div>
+
+                        <div class="preview-body">
+                            <div id="preview-svg-container">
+                                <div class="preview-placeholder" id="placeholder">
+                                    <span class="preview-placeholder-icon">⬡</span>
+                                    <p>開始するには画像をアップロードしてください</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="preview-footer">
+                            <div id="status">準備完了</div>
+                            <button id="btn-dl" disabled>↓ SVG をダウンロード</button>
+                        </div>
+
+                        <div class="conv-overlay" id="overlay">
+                            <div class="spinner"></div>
+                            <div class="overlay-text" id="overlay-text">変換中...</div>
+                        </div>
+                    </div>
+
                 </div>
-                <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
-
-                <div class="ps">プリセット</div>
-                <div class="presets">
-                    <button class="preset-btn" data-preset="bw">白黒</button>
-                    <button class="preset-btn active" data-preset="poster">ポスター</button>
-                    <button class="preset-btn" data-preset="photo">写真</button>
-                </div>
-
-                <button id="adv-toggle"><span>⚙ 詳細設定</span><span id="adv-arrow">▾</span></button>
-                <div id="adv-content">
-
-                    <div class="ps">カラーモード</div>
-                    <div class="seg" id="seg-colormode">
-                    <button class="active" data-val="color">カラー</button>
-                    <button data-val="binary">バイナリ</button>
-                    </div>
-
-                    <div id="color-params">
-                    <div class="ps">カラー</div>
-                    <div class="sl-row"><span>色数</span><span class="sl-val" id="v-num_colors">8</span></div>
-                    <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
-                    <div class="sl-row"><span>カラー精度</span><span class="sl-val" id="v-color_precision">6</span></div>
-                    <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
-                    <div class="sl-row"><span>レイヤーの差分</span><span class="sl-val" id="v-layer_difference">16</span></div>
-                    <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
-                    <div class="ps">階層的</div>
-                    <div class="seg" id="seg-hierarchical">
-                        <button class="active" data-val="stacked">スタック</button>
-                        <button data-val="cutout">カットアウト</button>
-                    </div>
-                    </div>
-
-                    <div id="binary-params" style="display:none">
-                    <div class="sw-row" style="margin-top:10px">
-                        <div><div class="sw-label">反転</div><div class="sw-sub">黒 ↔ 白 を入れ替え</div></div>
-                        <label class="sw"><input type="checkbox" id="sw-invert"><span class="sw-track"></span></label>
-                    </div>
-                    </div>
-
-                    <div class="ps">カーブフィッティング</div>
-                    <div class="seg" id="seg-mode">
-                    <button data-val="none">ピクセル</button>
-                    <button data-val="polygon">ポリゴン</button>
-                    <button class="active" data-val="spline">スプライン</button>
-                    </div>
-
-                    <div class="sl-row"><span>斑点フィルター</span><span class="sl-val" id="v-filter_speckle">4</span></div>
-                    <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
-                    <div class="sl-row"><span>角のしきい値</span><span class="sl-val" id="v-corner_threshold">60</span></div>
-                    <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
-                    <div class="sl-row"><span>長さのしきい値</span><span class="sl-val" id="v-length_threshold">4.0</span></div>
-                    <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
-                    <div class="sl-row"><span>スプライスしきい値</span><span class="sl-val" id="v-splice_threshold">45</span></div>
-                    <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
-                </div>
-                </div>
-
-                <!-- Preview -->
-                <div class="conv-preview">
-                <div class="preview-header">
-                    <span class="preview-title">SVG プレビュー</span>
-                    <div class="live-badge">
-                    <div class="live-dot" id="live-dot"></div>
-                    <span id="live-text">ライブ</span>
-                    </div>
-                </div>
-
-                <div class="preview-body">
-                    <div id="preview-svg-container">
-                    <div class="preview-placeholder" id="placeholder">
-                        <span class="preview-placeholder-icon">⬡</span>
-                        <p>開始するには画像をアップロードしてください</p>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="preview-footer">
-                    <div id="status">準備完了</div>
-                    <button id="btn-dl" disabled>↓ SVG をダウンロード</button>
-                </div>
-
-                <div class="conv-overlay" id="overlay">
-                    <div class="spinner"></div>
-                    <div class="overlay-text" id="overlay-text">変換中...</div>
-                </div>
-                </div>
-
-            </div><!-- /converter-wrap -->
             </section>
 
             <!-- ── HOW IT WORKS ── -->
             <section class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">仕組み</h2>
-                <p class="section-intro">セットアップもアカウントも不要。アップロード、プレビュー、ダウンロードが10秒以内に完了。</p>
-                <div class="grid-3">
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
-                    <h3>1. アップロード</h3>
-                    <p>ドラッグ＆ドロップまたはクリックで PNG、JPG、BMP、WebP をアップロード。クリップボードからの貼り付けも可能です。</p>
+                <div class="container">
+                    <h2 class="section-title">仕組み</h2>
+                    <p class="section-intro">セットアップもアカウントも不要。アップロード、プレビュー、ダウンロードが10秒以内に完了。</p>
+                    <div class="grid-3">
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
+                            <h3>1. アップロード</h3>
+                            <p>ドラッグ＆ドロップまたはクリックで PNG、JPG、BMP、WebP をアップロード。クリップボードからの貼り付けも可能です。</p>
+                        </div>
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
+                            <h3>2. ライブプレビュー</h3>
+                            <p>設定を変更すると SVG が自動的に更新されます。変換ボタンをクリックする必要はありません。</p>
+                        </div>
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
+                            <h3>3. ダウンロード</h3>
+                            <p>SVG をダウンロードをクリックしてベクターファイルを取得します。Illustrator、Inkscape、Figmaで開けます。</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
-                    <h3>2. ライブプレビュー</h3>
-                    <p>設定を変更すると SVG が自動的に更新されます。変換ボタンをクリックする必要はありません。</p>
-                </div>
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
-                    <h3>3. ダウンロード</h3>
-                    <p>SVG をダウンロードをクリックしてベクターファイルを取得します。Illustrator、Inkscape、Figmaで開けます。</p>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── PRESETS EXPLAINED ── -->
             <section class="section">
-            <div class="container">
-                <h2 class="section-title">PixelToPath は3つの最適化されたプリセットを提供します。パラメータを手動で調整することも可能です。</h2>
-                <p class="section-intro"></p>
-                <div class="preset-explain-grid">
-                <div class="preset-explain-card bw">
-                    <h3><span class="preset-label">白黒</span> 白黒</h3>
-                    <p>トレース前に画像をグレースケールに変換します。単色のクリーンなパスを生成します。最適:</p>
-                    <ul>
-                    <li>ロゴとブランドマーク</li>
-                    <li>アイコンとピクトグラム</li>
-                    <li>線画とスケッチ</li>
-                    <li>カッティングシートとレーザー彫刻</li>
-                    </ul>
+                <div class="container">
+                    <h2 class="section-title">PixelToPath は3つの最適化されたプリセットを提供します。パラメータを手動で調整することも可能です。</h2>
+                    <p class="section-intro"></p>
+                    <div class="preset-explain-grid">
+                        <div class="preset-explain-card bw">
+                            <h3><span class="preset-label">白黒</span> 白黒</h3>
+                            <p>トレース前に画像をグレースケールに変換します。単色のクリーンなパスを生成します。最適:</p>
+                            <ul>
+                                <li>ロゴとブランドマーク</li>
+                                <li>アイコンとピクトグラム</li>
+                                <li>線画とスケッチ</li>
+                                <li>カッティングシートとレーザー彫刻</li>
+                            </ul>
+                        </div>
+                        <div class="preset-explain-card poster">
+                            <h3><span class="preset-label">ポスター</span> フラットカラー</h3>
+                            <p>高い精度で複数のカラーレイヤーが重なり合ったものとしてトレースします。最適:</p>
+                            <ul>
+                                <li>フラットなイラストとカートゥーン</li>
+                                <li>インフォグラフィック</li>
+                                <li>クリップアート</li>
+                                <li>明確な色を持つデジタルアート</li>
+                            </ul>
+                        </div>
+                        <div class="preset-explain-card photo">
+                            <h3><span class="preset-label">写真</span> 写真</h3>
+                            <p>実際の写真の複雑さを処理するために広範なグループ化とノイズフィルタリングを使用します。最適:</p>
+                            <ul>
+                                <li>ポートレートと顔</li>
+                                <li>風景写真</li>
+                                <li>商品写真</li>
+                                <li>グラデーションが多い複雑な画像</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="preset-explain-card poster">
-                    <h3><span class="preset-label">ポスター</span> フラットカラー</h3>
-                    <p>高い精度で複数のカラーレイヤーが重なり合ったものとしてトレースします。最適:</p>
-                    <ul>
-                    <li>フラットなイラストとカートゥーン</li>
-                    <li>インフォグラフィック</li>
-                    <li>クリップアート</li>
-                    <li>明確な色を持つデジタルアート</li>
-                    </ul>
-                </div>
-                <div class="preset-explain-card photo">
-                    <h3><span class="preset-label">写真</span> 写真</h3>
-                    <p>実際の写真の複雑さを処理するために広範なグループ化とノイズフィルタリングを使用します。最適:</p>
-                    <ul>
-                    <li>ポートレートと顔</li>
-                    <li>風景写真</li>
-                    <li>商品写真</li>
-                    <li>グラデーションが多い複雑な画像</li>
-                    </ul>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── USE CASES ── -->
             <section class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">SVG で何ができますか？</h2>
-                <p class="section-intro">PixelToPath で生成された SVG は標準的で、どこでも機能します。</p>
-                <div class="use-cases-grid">
-                <div class="use-case-card">
-                    <div class="uc-icon">🎨</div>
-                    <h3>Figma または Illustrator で編集</h3>
-                    <p>すべての図形は完全に編集可能なパスです。品質を落とさずに色を変更したりサイズを変更できます。</p>
+                <div class="container">
+                    <h2 class="section-title">SVG で何ができますか？</h2>
+                    <p class="section-intro">PixelToPath で生成された SVG は標準的で、どこでも機能します。</p>
+                    <div class="use-cases-grid">
+                        <div class="use-case-card">
+                            <div class="uc-icon">🎨</div>
+                            <h3>Figma または Illustrator で編集</h3>
+                            <p>すべての図形は完全に編集可能なパスです。品質を落とさずに色を変更したりサイズを変更できます。</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🌐</div>
+                            <h3>Web サイトで使用</h3>
+                            <p><code>&lt;img&gt;</code> タグとして使用するか、CSS でスタイルを設定します。PNG より高速に読み込まれます。</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🖨️</div>
+                            <h3>任意のサイズで印刷</h3>
+                            <p>名刺からビルボードまで、どんなサイズでもぼやけずに完璧な結果を得られます。</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">✂️</div>
+                            <h3>レーザーカット</h3>
+                            <p>LightBurn や Cricut Design Space に直接インポートできます。</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">💻</div>
+                            <h3>アプリと Web アイコン</h3>
+                            <p>React、Vue で完璧に機能します。</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🎞️</div>
+                            <h3>CSS と JS のアニメーション</h3>
+                            <p>静的な画像をベクターアニメーションに変えます。</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🌐</div>
-                    <h3>Web サイトで使用</h3>
-                    <p><code>&lt;img&gt;</code> タグとして使用するか、CSS でスタイルを設定します。PNG より高速に読み込まれます。</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🖨️</div>
-                    <h3>任意のサイズで印刷</h3>
-                    <p>名刺からビルボードまで、どんなサイズでもぼやけずに完璧な結果を得られます。</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">✂️</div>
-                    <h3>レーザーカット</h3>
-                    <p>LightBurn や Cricut Design Space に直接インポートできます。</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">💻</div>
-                    <h3>アプリと Web アイコン</h3>
-                    <p>React、Vue で完璧に機能します。</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🎞️</div>
-                    <h3>CSS と JS のアニメーション</h3>
-                    <p>静的な画像をベクターアニメーションに変えます。</p>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── FAQ ── -->
             <section class="section" id="faq">
-            <div class="container">
-                <h2 class="section-title">よくある質問</h2>
-                <div class="faq-list">
-                <details class="faq-item">
-                    <summary>制限なしで本当に無料ですか？</summary>
-                    <p>はい、完全無料です。PixelToPath はオープンソース (MIT) プロジェクトです。</p>
-                </details>
-                <details class="faq-item">
-                    <summary>カラー画像に対応していますか？</summary>
-                    <p>はい。<strong>VTracer</strong> を使用しています。カラーには <strong>ポスター</strong> または <strong>写真</strong> を選択してください。</p>
-                </details>
-                <details class="faq-item">
-                    <summary>ファイルは保存されますか？</summary>
-                    <p>いいえ。処理後すぐに削除されます。</p>
-                </details>
-                <details class="faq-item">
-                    <summary>サポートされているフォーマットは何ですか？</summary>
-                    <p>PNG、JPG、JPEG、BMP、WebP (Ctrl+V も可)。</p>
-                </details>
-                <details class="faq-item">
-                    <summary>最大ファイルサイズは？</summary>
-                    <p>オンラインは <strong>20 MB</strong> まで。無制限に使用するには<a href="#download" style="color:var(--primary)">デスクトップアプリ</a>をダウンロードしてください。</p>
-                </details>
-                <details class="faq-item">
-                    <summary>白黒の結果がおかしいのはなぜですか？</summary>
-                    <p>詳細設定で <strong>反転</strong> をオンにしてください。</p>
-                </details>
-                <details class="faq-item">
-                    <summary>スプライン、ポリゴン、ピクセルの違いは何ですか？</summary>
-                    <p><strong>スプライン</strong> は滑らかな曲線。<strong>ポリゴン</strong> は直線。<strong>ピクセル</strong> はピクセルアート用です。</p>
-                </details>
-                <details class="faq-item">
-                    <summary>商用プロジェクトで使用できますか？</summary>
-                    <p>はい、ライセンス制限はありません。</p>
-                </details>
+                <div class="container">
+                    <h2 class="section-title">よくある質問</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>制限なしで本当に無料ですか？</summary>
+                            <p>はい、完全無料です。PixelToPath はオープンソース (MIT) プロジェクトです。</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>カラー画像に対応していますか？</summary>
+                            <p>はい。<strong>VTracer</strong> を使用しています。カラーには <strong>ポスター</strong> または <strong>写真</strong> を選択してください。</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>ファイルは保存されますか？</summary>
+                            <p>いいえ。処理後すぐに削除されます。</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>サポートされているフォーマットは何ですか？</summary>
+                            <p>PNG、JPG、JPEG、BMP、WebP (Ctrl+V も可)。</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>最大ファイルサイズは？</summary>
+                            <p>オンラインは <strong>20 MB</strong> まで。無制限に使用するには<a href="#download" style="color:var(--primary)">デスクトップアプリ</a>をダウンロードしてください。</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>白黒の結果がおかしいのはなぜですか？</summary>
+                            <p>詳細設定で <strong>反転</strong> をオンにしてください。</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>スプライン、ポリゴン、ピクセルの違いは何ですか？</summary>
+                            <p><strong>スプライン</strong> は滑らかな曲線。<strong>ポリゴン</strong> は直線。<strong>ピクセル</strong> はピクセルアート用です。</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>商用プロジェクトで使用できますか？</summary>
+                            <p>はい、ライセンス制限はありません。</p>
+                        </details>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <!-- ── CTA desktop ── -->
             <section class="section bg-light">
-            <div class="container" style="text-align:center" id="download">
-                <h2 style="color:var(--dark);margin-bottom:1rem">オフラインで無制限の変換が必要ですか？</h2>
-                <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">デスクトップ版はコンピューター上で完全に動作し、インターネットは不要です。</p>
-                <div class="double-buttons">
-                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Windows 版をダウンロード</a>
-                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Linux 版をダウンロード</a>
+                <div class="container" style="text-align:center" id="download">
+                    <h2 style="color:var(--dark);margin-bottom:1rem">オフラインで無制限の変換が必要ですか？</h2>
+                    <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">デスクトップ版はコンピューター上で完全に動作し、インターネットは不要です。</p>
+                    <div class="double-buttons">
+                        <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Windows 版をダウンロード</a>
+                        <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Linux 版をダウンロード</a>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <section class="section donate-section">
@@ -545,15 +582,9 @@
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

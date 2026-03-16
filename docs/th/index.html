@@ -74,7 +74,10 @@
         <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
         <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/home_style.css">
+        <link rel="stylesheet" href="../assets/components.css">
+        <link rel="stylesheet" href="../assets/footer.css">
+        <link rel="stylesheet" href="../assets/donate.css">
+        <link rel="stylesheet" href="../assets/home.css">
         <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
         <!-- Schema.org Structured Data -->
@@ -178,96 +181,92 @@
 
     </div>
 </nav> 
-
         <main>
             <!-- Hero -->
             <section class="home-hero">
-            <div class="container">
-                <h1>แปลงรูปภาพเป็น <span>SVG</span><br>ฟรี &amp; โอเพ่นซอร์ส</h1>
-                <p class="hero-sub">PixelToPath แปลงรูปภาพ PNG, JPG, BMP และ WebP ให้เป็นกราฟิกเวกเตอร์ที่ปรับขนาดได้ - รองรับสีเต็มรูปแบบ ดูตัวอย่างแบบเรียลไทม์ และไม่มีลายน้ำ</p>
-                <div class="formats-row">
-                <span class="fmt in">PNG</span>
-                <span class="fmt in">JPG</span>
-                <span class="fmt in">BMP</span>
-                <span class="fmt in">WebP</span>
-                <span class="fmt-arrow">→</span>
-                <span class="fmt out">SVG</span>
+                <div class="container">
+                    <h1 class="c-dark">แปลงรูปภาพเป็น <span>SVG</span><br>ฟรี &amp; โอเพ่นซอร์ส</h1>
+                    <p class="hero-sub c-gray">PixelToPath แปลงรูปภาพ PNG, JPG, BMP และ WebP ให้เป็นกราฟิกเวกเตอร์ที่ปรับขนาดได้ - รองรับสีเต็มรูปแบบ ดูตัวอย่างแบบเรียลไทม์ และไม่มีลายน้ำ</p>
+                    <div class="formats-row">
+                        <span class="fmt in">PNG</span>
+                        <span class="fmt in">JPG</span>
+                        <span class="fmt in">BMP</span>
+                        <span class="fmt in">WebP</span>
+                        <span class="fmt-arrow">→</span>
+                        <span class="fmt out">SVG</span>
+                    </div>
+                    <div class="badges" id="home__badges">
+                        <span class="badge accent">✓ ฟรี 100%</span>
+                        <span class="badge">ไม่ต้องลงทะเบียน</span>
+                        <span class="badge">ไม่มีลายน้ำ</span>
+                        <span class="badge">รองรับสีเต็มรูปแบบ</span>
+                        <span class="badge">โอเพ่นซอร์ส - MIT</span>
+                    </div>
                 </div>
-                <div class="trust-pills">
-                <span class="pill orange">✓ ฟรี 100%</span>
-                <span class="pill">ไม่ต้องลงทะเบียน</span>
-                <span class="pill">ไม่มีลายน้ำ</span>
-                <span class="pill">รองรับสีเต็มรูปแบบ</span>
-                <span class="pill">โอเพ่นซอร์ส - MIT</span>
-                </div>
-            </div>
             </section>
 
             <!-- Feature strip -->
-            <div class="feature-strip">
-            <div class="fs-item">
-                <div class="fs-icon">🎨</div>
-                <h3>รองรับสีเต็มรูปแบบ</h3>
-                <p>ขับเคลื่อนโดย VTracer - ไม่ใช่แค่ขาวดำ</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">⚡</div>
-                <h3>ดูตัวอย่างแบบเรียลไทม์</h3>
-                <p>SVG อัปเดตเมื่อคุณปรับการตั้งค่า</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">🔒</div>
-                <h3>ความเป็นส่วนตัวต้องมาก่อน</h3>
-                <p>เดสก์ท็อป: ไฟล์จะไม่ออกจากอุปกรณ์ของคุณ</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">♾️</div>
-                <h3>ไม่มีขีดจำกัด</h3>
-                <p>แปลงไฟล์ได้ไม่จำกัด ฟรีตลอดไป</p>
-            </div>
-            </div>
+            <section class="feature-strip">
+                <div class="fs-item">
+                    <div class="fs-icon">🎨</div>
+                    <h3>รองรับสีเต็มรูปแบบ</h3>
+                    <p>ขับเคลื่อนโดย VTracer - ไม่ใช่แค่ขาวดำ</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">⚡</div>
+                    <h3>ดูตัวอย่างแบบเรียลไทม์</h3>
+                    <p>SVG อัปเดตเมื่อคุณปรับการตั้งค่า</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">🔒</div>
+                    <h3>ความเป็นส่วนตัวต้องมาก่อน</h3>
+                    <p>เดสก์ท็อป: ไฟล์จะไม่ออกจากอุปกรณ์ของคุณ</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">♾️</div>
+                    <h3>ไม่มีขีดจำกัด</h3>
+                    <p>แปลงไฟล์ได้ไม่จำกัด ฟรีตลอดไป</p>
+                </div>
+            </section>
 
             <!-- Choice -->
             <section class="choice-section">
-            <div class="container">
-                <h2 class="section-title">เลือกเวอร์ชันของคุณ</h2>
-                <p class="choice-subtitle">เครื่องมือทรงพลังตัวเดียวกัน - เลือกรูปแบบที่เหมาะกับขั้นตอนการทำงานของคุณ</p>
-                <div class="choice-grid">
+                <div class="container">
+                    <h2 class="section-title">เลือกเวอร์ชันของคุณ</h2>
+                    <p class="choice-subtitle">เครื่องมือทรงพลังตัวเดียวกัน - เลือกรูปแบบที่เหมาะกับขั้นตอนการทำงานของคุณ</p>
+                    <div class="choice-grid">
+                        <div class="choice-card online">
+                            <div class="choice-icon">🌐</div>
+                            <span class="choice-tag">ไม่ต้องติดตั้ง</span>
+                            <h2>เครื่องมือออนไลน์</h2>
+                            <p>แปลงรูปภาพได้โดยตรงในเบราว์เซอร์ของคุณ ไม่ต้องติดตั้งอะไร ไม่ต้องมีบัญชี เพียงแค่อัปโหลดและดาวน์โหลด</p>
+                            <ul class="choice-features">
+                                <li>ทำงานบนอุปกรณ์ &amp; ระบบปฏิบัติการใดก็ได้</li>
+                                <li>โหมดสีเต็มรูปแบบ &amp; ขาวดำ</li>
+                                <li>ดูตัวอย่าง SVG แบบเรียลไทม์</li>
+                                <li>โหมดพรีเซ็ต: ขาวดำ, โปสเตอร์, ภาพถ่าย</li>
+                                <li>การปรับแต่งพารามิเตอร์ขั้นสูง</li>
+                            </ul>
+                            <a href="/online/" class="choice-cta">ใช้เครื่องมือออนไลน์ →</a>
+                        </div>
 
-                <div class="choice-card online">
-                    <div class="choice-icon">🌐</div>
-                    <span class="choice-tag">ไม่ต้องติดตั้ง</span>
-                    <h2>เครื่องมือออนไลน์</h2>
-                    <p>แปลงรูปภาพได้โดยตรงในเบราว์เซอร์ของคุณ ไม่ต้องติดตั้งอะไร ไม่ต้องมีบัญชี เพียงแค่อัปโหลดและดาวน์โหลด</p>
-                    <ul class="choice-features">
-                    <li>ทำงานบนอุปกรณ์ &amp; ระบบปฏิบัติการใดก็ได้</li>
-                    <li>โหมดสีเต็มรูปแบบ &amp; ขาวดำ</li>
-                    <li>ดูตัวอย่าง SVG แบบเรียลไทม์</li>
-                    <li>โหมดพรีเซ็ต: ขาวดำ, โปสเตอร์, ภาพถ่าย</li>
-                    <li>การปรับแต่งพารามิเตอร์ขั้นสูง</li>
-                    </ul>
-                    <a href="/online/" class="choice-cta">ใช้เครื่องมือออนไลน์ →</a>
+                        <div class="choice-card offline">
+                            <div class="choice-icon">💻</div>
+                            <span class="choice-tag">Windows &amp; Linux</span>
+                            <h2>แอปเดสก์ท็อป</h2>
+                            <p>ติดตั้งครั้งเดียวและแปลงไฟล์แบบออฟไลน์ทั้งหมด รูปภาพของคุณจะไม่ออกจากคอมพิวเตอร์ของคุณ - เหมาะสำหรับงานที่ละเอียดอ่อนหรืองานระดับมืออาชีพ</p>
+                            <ul class="choice-features">
+                                <li>ออฟไลน์ 100% - ไม่ต้องใช้อินเทอร์เน็ต</li>
+                                <li>ไฟล์ไม่เคยถูกอัปโหลดไปที่ใด</li>
+                                <li>ไม่จำกัดขนาดไฟล์</li>
+                                <li>โหมดโฟกัสเพื่อการใช้งานที่ไม่มีสิ่งรบกวน</li>
+                                <li>ดูตัวอย่าง &amp; พรีเซ็ตแบบเดียวกัน</li>
+                            </ul>
+                            <a href="/offline/" class="choice-cta">ดาวน์โหลดแอปเดสก์ท็อป →</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="choice-card offline">
-                    <div class="choice-icon">💻</div>
-                    <span class="choice-tag">Windows &amp; Linux</span>
-                    <h2>แอปเดสก์ท็อป</h2>
-                    <p>ติดตั้งครั้งเดียวและแปลงไฟล์แบบออฟไลน์ทั้งหมด รูปภาพของคุณจะไม่ออกจากคอมพิวเตอร์ของคุณ - เหมาะสำหรับงานที่ละเอียดอ่อนหรืองานระดับมืออาชีพ</p>
-                    <ul class="choice-features">
-                    <li>ออฟไลน์ 100% - ไม่ต้องใช้อินเทอร์เน็ต</li>
-                    <li>ไฟล์ไม่เคยถูกอัปโหลดไปที่ใด</li>
-                    <li>ไม่จำกัดขนาดไฟล์</li>
-                    <li>โหมดโฟกัสเพื่อการใช้งานที่ไม่มีสิ่งรบกวน</li>
-                    <li>ดูตัวอย่าง &amp; พรีเซ็ตแบบเดียวกัน</li>
-                    </ul>
-                    <a href="/offline/" class="choice-cta">ดาวน์โหลดแอปเดสก์ท็อป →</a>
-                </div>
-
-                </div>
-            </div>
             </section>
-
             <section class="section donate-section">
     <div class="container">
         <h3>สนับสนุนการพัฒนาโอเพนซอร์ส</h3>
@@ -275,21 +274,13 @@
         <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ บริจาคผ่าน PayPal</a>
     </div>
 </section>
-            
         </main>
-
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

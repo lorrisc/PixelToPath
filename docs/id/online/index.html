@@ -74,7 +74,11 @@
     <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/online/" />
 
     <link rel="stylesheet" href="../../assets/style.css">
-    <link rel="stylesheet" href="../../assets/online_style.css">
+    <link rel="stylesheet" href="../../assets/components.css">
+    <link rel="stylesheet" href="../../assets/containers.css">
+    <link rel="stylesheet" href="../../assets/footer.css">
+    <link rel="stylesheet" href="../../assets/donate.css">
+    <link rel="stylesheet" href="../../assets/online.css">
     <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
     <!-- Schema.org Structured Data -->
@@ -85,10 +89,10 @@
       "name": "PixelToPath Online SVG Converter",
       "url": "https://pixel-to-path.com/online/",
       "description": "Konversi PNG, JPG, BMP, atau WebP ke SVG secara online — gratis, instan, tanpa pendaftaran. Didukung oleh VTracer dengan mode warna dan hitam-putih. Pratinjau langsung.",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Any",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
     }
     </script>
 
@@ -98,10 +102,10 @@
         "@type": "HowTo",
         "name": "Cara mengonversi PNG ke SVG online secara gratis",
         "step": [
-        { "@type": "HowToStep", "name": "Unggah gambar Anda", "text": "Seret dan jatuhkan atau klik untuk mengunggah file PNG, JPG, BMP, atau WebP. Tidak perlu registrasi." },
-        { "@type": "HowToStep", "name": "Pilih prasetel", "text": "Pilih H&amp;P untuk logo dan ikon, Poster untuk ilustrasi, atau Foto untuk foto yang kompleks." },
-        { "@type": "HowToStep", "name": "Pratinjau hasil secara langsung", "text": "Pratinjau SVG diperbarui secara otomatis saat Anda menyesuaikan pengaturan. Tidak perlu mengklik Konversi." },
-        { "@type": "HowToStep", "name": "Unduh file SVG Anda", "text": "Klik tombol Unduh SVG untuk menyimpan file vektor Anda secara instan, siap untuk Illustrator, Figma, atau Inkscape." }
+            { "@type": "HowToStep", "name": "Unggah gambar Anda", "text": "Seret dan jatuhkan atau klik untuk mengunggah file PNG, JPG, BMP, atau WebP. Tidak perlu registrasi." },
+            { "@type": "HowToStep", "name": "Pilih prasetel", "text": "Pilih H&amp;P untuk logo dan ikon, Poster untuk ilustrasi, atau Foto untuk foto yang kompleks." },
+            { "@type": "HowToStep", "name": "Pratinjau hasil secara langsung", "text": "Pratinjau SVG diperbarui secara otomatis saat Anda menyesuaikan pengaturan. Tidak perlu mengklik Konversi." },
+            { "@type": "HowToStep", "name": "Unduh file SVG Anda", "text": "Klik tombol Unduh SVG untuk menyimpan file vektor Anda secara instan, siap untuk Illustrator, Figma, atau Inkscape." }
         ]
     }
     </script>
@@ -252,284 +256,317 @@
 
     </div>
 </nav> 
-
         <main>
-
             <!-- Hero -->
             <section class="tool-hero">
-            <div class="container">
-                <h1>Konverter PNG ke SVG Online Gratis</h1>
-                <p>Ubah gambar apa pun menjadi grafik vektor skalabel dalam hitungan detik — tanpa pendaftaran, tanpa batas, dukungan warna penuh.</p>
-                <div class="badges">
-                <span class="badge accent">✓ Gratis selamanya</span>
-                <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
-                <span class="badge">Pratinjau langsung</span>
-                <span class="badge">Mode Warna &amp; H&amp;P</span>
-                <span class="badge">Tanpa tanda air</span>
+                <div class="container">
+                    <h1>Konverter PNG ke SVG Online Gratis</h1>
+                    <p>Ubah gambar apa pun menjadi grafik vektor skalabel dalam hitungan detik — tanpa pendaftaran, tanpa batas, dukungan warna penuh.</p>
+                    <div class="badges">
+                        <span class="badge accent">✓ Gratis selamanya</span>
+                        <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
+                        <span class="badge">Pratinjau langsung</span>
+                        <span class="badge">Mode Warna &amp; H&amp;P</span>
+                        <span class="badge">Tanpa tanda air</span>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <!-- Converter (full width) -->
             <section class="converter-section">
-            <div class="converter-wrap">
+                <div class="converter-wrap">
 
-                <!-- Sidebar -->
-                <div class="conv-sidebar">
-                <div class="dropzone" id="dropzone">
-                    <div class="dz-hint">
-                    <span class="dz-icon">⬡</span>
-                    Jatuhkan gambar di sini<br>
-                    atau <u style="cursor:pointer;color:var(--primary)">telusuri</u>
+                    <!-- Sidebar -->
+                    <div class="conv-sidebar">
+                        <div class="dropzone" id="dropzone">
+                            <div class="dz-hint">
+                                <span class="dz-icon">⬡</span>
+                                Jatuhkan gambar di sini<br>
+                                atau <u style="cursor:pointer;color:var(--primary)">telusuri</u>
+                            </div>
+                        </div>
+                        <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
+
+                        <div class="ps">Prasetel</div>
+                        <div class="presets">
+                            <button class="preset-btn" data-preset="bw">H&amp;P</button>
+                            <button class="preset-btn active" data-preset="poster">Poster</button>
+                            <button class="preset-btn" data-preset="photo">Foto</button>
+                        </div>
+
+                        <button id="adv-toggle"><span>⚙ Pengaturan lanjutan</span><span id="adv-arrow">▾</span></button>
+                        <div id="adv-content">
+
+                            <div class="ps">Mode Warna</div>
+                            <div class="seg" id="seg-colormode">
+                                <button class="active" data-val="color">Warna</button>
+                                <button data-val="binary">Biner</button>
+                            </div>
+
+                            <div id="color-params">
+                                <div class="ps">Warna</div>
+                                
+                                <div class="sl-row">
+                                    <span>Jumlah Warna</span>
+                                    <span class="sl-val" id="v-num_colors">8</span>
+                                </div>
+                                <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
+
+                                <div class="sl-row">
+                                    <span>Presisi Warna</span>
+                                    <span class="sl-val" id="v-color_precision">6</span>
+                                </div>
+                                <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
+                                
+                                <div class="sl-row">
+                                    <span>Perbedaan Lapisan</span>
+                                    <span class="sl-val" id="v-layer_difference">16</span>
+                                </div>
+                                <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
+                                
+                                <div class="ps">Hierarkis</div>
+                                <div class="seg" id="seg-hierarchical">
+                                    <button class="active" data-val="stacked">Bertumpuk</button>
+                                    <button data-val="cutout">Potongan</button>
+                                </div>
+                            </div>
+
+                            <div id="binary-params" style="display:none">
+                                <div class="sw-row" style="margin-top:10px">
+                                    <div>
+                                        <div class="sw-label">Balikkan</div>
+                                        <div class="sw-sub">Tukar hitam ↔ putih</div>
+                                    </div>
+                                    <label class="sw">
+                                        <input type="checkbox" id="sw-invert">
+                                        <span class="sw-track"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="ps">Penyesuaian Kurva</div>
+                            <div class="seg" id="seg-mode">
+                                <button data-val="none">Piksel</button>
+                                <button data-val="polygon">Poligon</button>
+                                <button class="active" data-val="spline">Spline</button>
+                            </div>
+
+                            <div class="sl-row">
+                                <span>Filter Bercak</span>
+                                <span class="sl-val" id="v-filter_speckle">4</span>
+                            </div>
+                            <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
+
+                            <div class="sl-row">
+                                <span>Ambang Sudut</span>
+                                <span class="sl-val" id="v-corner_threshold">60</span>
+                            </div>
+                            <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
+
+                            <div class="sl-row">
+                                <span>Ambang Panjang</span>
+                                <span class="sl-val" id="v-length_threshold">4.0</span>
+                            </div>
+                            
+                            <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
+                            
+                            <div class="sl-row">
+                                <span>Ambang Sambungan</span>
+                                <span class="sl-val" id="v-splice_threshold">45</span>
+                            </div>
+                            <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
+                        </div>
                     </div>
+
+                    <!-- Preview -->
+                    <div class="conv-preview">
+                        <div class="preview-header">
+                            <span class="preview-title">Pratinjau SVG</span>
+                            <div class="live-badge">
+                                <div class="live-dot" id="live-dot"></div>
+                                <span id="live-text">langsung</span>
+                            </div>
+                        </div>
+
+                        <div class="preview-body">
+                            <div id="preview-svg-container">
+                                <div class="preview-placeholder" id="placeholder">
+                                    <span class="preview-placeholder-icon">⬡</span>
+                                    <p>Unggah gambar untuk memulai</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="preview-footer">
+                            <div id="status">Siap</div>
+                            <button id="btn-dl" disabled>↓ Unduh SVG</button>
+                        </div>
+
+                        <div class="conv-overlay" id="overlay">
+                            <div class="spinner"></div>
+                            <div class="overlay-text" id="overlay-text">Mengonversi...</div>
+                        </div>
+                    </div>
+
                 </div>
-                <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
-
-                <div class="ps">Prasetel</div>
-                <div class="presets">
-                    <button class="preset-btn" data-preset="bw">H&amp;P</button>
-                    <button class="preset-btn active" data-preset="poster">Poster</button>
-                    <button class="preset-btn" data-preset="photo">Foto</button>
-                </div>
-
-                <button id="adv-toggle"><span>⚙ Pengaturan lanjutan</span><span id="adv-arrow">▾</span></button>
-                <div id="adv-content">
-
-                    <div class="ps">Mode Warna</div>
-                    <div class="seg" id="seg-colormode">
-                    <button class="active" data-val="color">Warna</button>
-                    <button data-val="binary">Biner</button>
-                    </div>
-
-                    <div id="color-params">
-                    <div class="ps">Warna</div>
-                    <div class="sl-row"><span>Jumlah Warna</span><span class="sl-val" id="v-num_colors">8</span></div>
-                    <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
-                    <div class="sl-row"><span>Presisi Warna</span><span class="sl-val" id="v-color_precision">6</span></div>
-                    <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
-                    <div class="sl-row"><span>Perbedaan Lapisan</span><span class="sl-val" id="v-layer_difference">16</span></div>
-                    <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
-                    <div class="ps">Hierarkis</div>
-                    <div class="seg" id="seg-hierarchical">
-                        <button class="active" data-val="stacked">Bertumpuk</button>
-                        <button data-val="cutout">Potongan</button>
-                    </div>
-                    </div>
-
-                    <div id="binary-params" style="display:none">
-                    <div class="sw-row" style="margin-top:10px">
-                        <div><div class="sw-label">Balikkan</div><div class="sw-sub">Tukar hitam ↔ putih</div></div>
-                        <label class="sw"><input type="checkbox" id="sw-invert"><span class="sw-track"></span></label>
-                    </div>
-                    </div>
-
-                    <div class="ps">Penyesuaian Kurva</div>
-                    <div class="seg" id="seg-mode">
-                    <button data-val="none">Piksel</button>
-                    <button data-val="polygon">Poligon</button>
-                    <button class="active" data-val="spline">Spline</button>
-                    </div>
-
-                    <div class="sl-row"><span>Filter Bercak</span><span class="sl-val" id="v-filter_speckle">4</span></div>
-                    <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
-                    <div class="sl-row"><span>Ambang Sudut</span><span class="sl-val" id="v-corner_threshold">60</span></div>
-                    <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
-                    <div class="sl-row"><span>Ambang Panjang</span><span class="sl-val" id="v-length_threshold">4.0</span></div>
-                    <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
-                    <div class="sl-row"><span>Ambang Sambungan</span><span class="sl-val" id="v-splice_threshold">45</span></div>
-                    <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
-                </div>
-                </div>
-
-                <!-- Preview -->
-                <div class="conv-preview">
-                <div class="preview-header">
-                    <span class="preview-title">Pratinjau SVG</span>
-                    <div class="live-badge">
-                    <div class="live-dot" id="live-dot"></div>
-                    <span id="live-text">langsung</span>
-                    </div>
-                </div>
-
-                <div class="preview-body">
-                    <div id="preview-svg-container">
-                    <div class="preview-placeholder" id="placeholder">
-                        <span class="preview-placeholder-icon">⬡</span>
-                        <p>Unggah gambar untuk memulai</p>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="preview-footer">
-                    <div id="status">Siap</div>
-                    <button id="btn-dl" disabled>↓ Unduh SVG</button>
-                </div>
-
-                <div class="conv-overlay" id="overlay">
-                    <div class="spinner"></div>
-                    <div class="overlay-text" id="overlay-text">Mengonversi...</div>
-                </div>
-                </div>
-
-            </div><!-- /converter-wrap -->
             </section>
 
             <!-- ── HOW IT WORKS ── -->
             <section class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">Cara Kerjanya</h2>
-                <p class="section-intro">Tanpa instalasi, tanpa akun. Unggah, pratinjau, unduh — di bawah 10 detik.</p>
-                <div class="grid-3">
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
-                    <h3>1. Unggah</h3>
-                    <p>Seret dan jatuhkan atau klik untuk mengunggah gambar PNG, JPG, BMP, atau WebP. Tempel dari clipboard juga bisa.</p>
+                <div class="container">
+                    <h2 class="section-title">Cara Kerjanya</h2>
+                    <p class="section-intro">Tanpa instalasi, tanpa akun. Unggah, pratinjau, unduh — di bawah 10 detik.</p>
+                    <div class="grid-3">
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
+                            <h3>1. Unggah</h3>
+                            <p>Seret dan jatuhkan atau klik untuk mengunggah gambar PNG, JPG, BMP, atau WebP. Tempel dari clipboard juga bisa.</p>
+                        </div>
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
+                            <h3>2. Pratinjau langsung</h3>
+                            <p>SVG diperbarui otomatis saat Anda mengubah pengaturan. Semua instan.</p>
+                        </div>
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
+                            <h3>3. Unduh</h3>
+                            <p>Klik Unduh SVG untuk mendapatkan file vektor Anda. Buka di Illustrator, Inkscape, atau Figma.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
-                    <h3>2. Pratinjau langsung</h3>
-                    <p>SVG diperbarui otomatis saat Anda mengubah pengaturan. Semua instan.</p>
-                </div>
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
-                    <h3>3. Unduh</h3>
-                    <p>Klik Unduh SVG untuk mendapatkan file vektor Anda. Buka di Illustrator, Inkscape, atau Figma.</p>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── PRESETS EXPLAINED ── -->
             <section class="section">
-            <div class="container">
-                <h2 class="section-title">Prasetel Mana yang Harus Anda Gunakan?</h2>
-                <p class="section-intro">PixelToPath menawarkan tiga prasetel yang dioptimalkan. Anda juga dapat menyempurnakannya secara manual.</p>
-                <div class="preset-explain-grid">
-                <div class="preset-explain-card bw">
-                    <h3><span class="preset-label">H&P</span> Hitam &amp; Putih</h3>
-                    <p>Mengonversi gambar ke skala abu-abu sebelum menelusuri. Terbaik untuk:</p>
-                    <ul>
-                    <li>Logo dan merek</li>
-                    <li>Ikon dan piktogram</li>
-                    <li>Seni garis dan sketsa</li>
-                    <li>Pemotongan vinil dan ukiran laser</li>
-                    </ul>
+                <div class="container">
+                    <h2 class="section-title">Prasetel Mana yang Harus Anda Gunakan?</h2>
+                    <p class="section-intro">PixelToPath menawarkan tiga prasetel yang dioptimalkan. Anda juga dapat menyempurnakannya secara manual.</p>
+                    <div class="preset-explain-grid">
+                        <div class="preset-explain-card bw">
+                            <h3><span class="preset-label">H&P</span> Hitam &amp; Putih</h3>
+                            <p>Mengonversi gambar ke skala abu-abu sebelum menelusuri. Terbaik untuk:</p>
+                            <ul>
+                                <li>Logo dan merek</li>
+                                <li>Ikon dan piktogram</li>
+                                <li>Seni garis dan sketsa</li>
+                                <li>Pemotongan vinil dan ukiran laser</li>
+                            </ul>
+                        </div>
+                        <div class="preset-explain-card poster">
+                            <h3><span class="preset-label">Poster</span> Warna datar</h3>
+                            <p>Menelusuri lapisan warna bertumpuk dengan presisi warna tinggi. Terbaik untuk:</p>
+                            <ul>
+                                <li>Ilustrasi datar dan kartun</li>
+                                <li>Infografis dan diagram</li>
+                                <li>Clipart dan stiker</li>
+                                <li>Karya seni digital dengan warna jelas</li>
+                            </ul>
+                        </div>
+                        <div class="preset-explain-card photo">
+                            <h3><span class="preset-label">Foto</span> Fotografi</h3>
+                            <p>Menggunakan filter yang lebih luas untuk foto asli yang kompleks. Terbaik untuk:</p>
+                            <ul>
+                                <li>Potret dan wajah</li>
+                                <li>Foto lanskap</li>
+                                <li>Foto produk</li>
+                                <li>Gambar kompleks dengan banyak gradien</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="preset-explain-card poster">
-                    <h3><span class="preset-label">Poster</span> Warna datar</h3>
-                    <p>Menelusuri lapisan warna bertumpuk dengan presisi warna tinggi. Terbaik untuk:</p>
-                    <ul>
-                    <li>Ilustrasi datar dan kartun</li>
-                    <li>Infografis dan diagram</li>
-                    <li>Clipart dan stiker</li>
-                    <li>Karya seni digital dengan warna jelas</li>
-                    </ul>
-                </div>
-                <div class="preset-explain-card photo">
-                    <h3><span class="preset-label">Foto</span> Fotografi</h3>
-                    <p>Menggunakan filter yang lebih luas untuk foto asli yang kompleks. Terbaik untuk:</p>
-                    <ul>
-                    <li>Potret dan wajah</li>
-                    <li>Foto lanskap</li>
-                    <li>Foto produk</li>
-                    <li>Gambar kompleks dengan banyak gradien</li>
-                    </ul>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── USE CASES ── -->
             <section class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">Apa yang Bisa Dilakukan dengan SVG Anda?</h2>
-                <p class="section-intro">File SVG dari PixelToPath bekerja di mana saja. Berikut kasus penggunaan umum.</p>
-                <div class="use-cases-grid">
-                <div class="use-case-card">
-                    <div class="uc-icon">🎨</div>
-                    <h3>Edit di Figma atau Illustrator</h3>
-                    <p>Setiap bentuk adalah jalur yang dapat diedit sepenuhnya — tanpa kehilangan kualitas.</p>
+                <div class="container">
+                    <h2 class="section-title">Apa yang Bisa Dilakukan dengan SVG Anda?</h2>
+                    <p class="section-intro">File SVG dari PixelToPath bekerja di mana saja. Berikut kasus penggunaan umum.</p>
+                    <div class="use-cases-grid">
+                        <div class="use-case-card">
+                            <div class="uc-icon">🎨</div>
+                            <h3>Edit di Figma atau Illustrator</h3>
+                            <p>Setiap bentuk adalah jalur yang dapat diedit sepenuhnya — tanpa kehilangan kualitas.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🌐</div>
+                            <h3>Gunakan di situs web</h3>
+                            <p>Gunakan sebagai tag <code>&lt;img&gt;</code> atau gayakan dengan CSS.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🖨️</div>
+                            <h3>Cetak ukuran apa pun</h3>
+                            <p>Dapatkan hasil sempurna di ukuran berapa pun — dari kartu nama hingga baliho.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">✂️</div>
+                            <h3>Pemotongan laser</h3>
+                            <p>Impor ke LightBurn, Cricut Design Space atau RDWorks.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">💻</div>
+                            <h3>Ikon Aplikasi &amp; Web</h3>
+                            <p>Bekerja sempurna dengan React, Vue, dan pustaka komponen lainnya.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🎞️</div>
+                            <h3>Animasi CSS &amp; JS</h3>
+                            <p>Hidupkan gambar statis Anda di situs web.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🌐</div>
-                    <h3>Gunakan di situs web</h3>
-                    <p>Gunakan sebagai tag <code>&lt;img&gt;</code> atau gayakan dengan CSS.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🖨️</div>
-                    <h3>Cetak ukuran apa pun</h3>
-                    <p>Dapatkan hasil sempurna di ukuran berapa pun — dari kartu nama hingga baliho.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">✂️</div>
-                    <h3>Pemotongan laser</h3>
-                    <p>Impor ke LightBurn, Cricut Design Space atau RDWorks.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">💻</div>
-                    <h3>Ikon Aplikasi &amp; Web</h3>
-                    <p>Bekerja sempurna dengan React, Vue, dan pustaka komponen lainnya.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🎞️</div>
-                    <h3>Animasi CSS &amp; JS</h3>
-                    <p>Hidupkan gambar statis Anda di situs web.</p>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── FAQ ── -->
             <section class="section" id="faq">
-            <div class="container">
-                <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
-                <div class="faq-list">
-                <details class="faq-item">
-                    <summary>Apakah konverter ini benar-benar gratis tanpa batas?</summary>
-                    <p>Ya, sepenuhnya gratis. PixelToPath adalah proyek sumber terbuka (Lisensi MIT).</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Apakah mendukung gambar berwarna?</summary>
-                    <p>Ya. Kami menggunakan <strong>VTracer</strong>. Pilih prasetel <strong>Poster</strong> atau <strong>Foto</strong>.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Apakah file saya disimpan?</summary>
-                    <p>Tidak. Segera dihapus dari server setelah konversi selesai.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Format apa saja yang didukung?</summary>
-                    <p>PNG, JPG, JPEG, BMP, dan WebP. Anda juga bisa menempelkannya (Ctrl+V).</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Berapa ukuran file maksimum?</summary>
-                    <p>Online hingga <strong>20 MB</strong>. Unduh <a href="#download" style="color:var(--primary)">aplikasi desktop</a> untuk tanpa batas.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Mengapa hasil H&P salah pada gambar berwarna saya?</summary>
-                    <p>Aktifkan opsi <strong>Balikkan</strong> di Pengaturan Lanjutan.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Apa bedanya Spline, Poligon, dan Piksel?</summary>
-                    <p><strong>Spline</strong> untuk kurva halus. <strong>Poligon</strong> untuk garis lurus. <strong>Piksel</strong> untuk batas piksel asli (pixel art).</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Bisakah SVG digunakan untuk proyek komersial?</summary>
-                    <p>Ya. Tidak ada batasan lisensi sama sekali.</p>
-                </details>
+                <div class="container">
+                    <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>Apakah konverter ini benar-benar gratis tanpa batas?</summary>
+                            <p>Ya, sepenuhnya gratis. PixelToPath adalah proyek sumber terbuka (Lisensi MIT).</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Apakah mendukung gambar berwarna?</summary>
+                            <p>Ya. Kami menggunakan <strong>VTracer</strong>. Pilih prasetel <strong>Poster</strong> atau <strong>Foto</strong>.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Apakah file saya disimpan?</summary>
+                            <p>Tidak. Segera dihapus dari server setelah konversi selesai.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Format apa saja yang didukung?</summary>
+                            <p>PNG, JPG, JPEG, BMP, dan WebP. Anda juga bisa menempelkannya (Ctrl+V).</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Berapa ukuran file maksimum?</summary>
+                            <p>Online hingga <strong>20 MB</strong>. Unduh <a href="#download" style="color:var(--primary)">aplikasi desktop</a> untuk tanpa batas.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Mengapa hasil H&P salah pada gambar berwarna saya?</summary>
+                            <p>Aktifkan opsi <strong>Balikkan</strong> di Pengaturan Lanjutan.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Apa bedanya Spline, Poligon, dan Piksel?</summary>
+                            <p><strong>Spline</strong> untuk kurva halus. <strong>Poligon</strong> untuk garis lurus. <strong>Piksel</strong> untuk batas piksel asli (pixel art).</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Bisakah SVG digunakan untuk proyek komersial?</summary>
+                            <p>Ya. Tidak ada batasan lisensi sama sekali.</p>
+                        </details>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <!-- ── CTA desktop ── -->
             <section class="section bg-light">
-            <div class="container" style="text-align:center" id="download">
-                <h2 style="color:var(--dark);margin-bottom:1rem">Butuh konversi tak terbatas offline?</h2>
-                <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">Versi desktop berjalan sepenuhnya di komputer Anda — tidak butuh internet.</p>
-                <div class="double-buttons">
-                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Unduh untuk Windows</a>
-                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Unduh untuk Linux</a>
+                <div class="container" style="text-align:center" id="download">
+                    <h2 style="color:var(--dark);margin-bottom:1rem">Butuh konversi tak terbatas offline?</h2>
+                    <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">Versi desktop berjalan sepenuhnya di komputer Anda — tidak butuh internet.</p>
+                    <div class="double-buttons">
+                        <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Unduh untuk Windows</a>
+                        <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Unduh untuk Linux</a>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <section class="section donate-section">
@@ -545,15 +582,9 @@
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

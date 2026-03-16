@@ -1,0 +1,55 @@
+/* Comparison Table */
+.comparison-table-wrapper {
+    overflow-x: auto;
+}
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+.comparison-table thead tr {
+    background: var(--dark);
+    color: #fff;
+}
+.comparison-table th, .comparison-table td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+.comparison-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+.comparison-table tbody tr:hover {
+    background: #fff8ee;
+}
+.comparison-table td.yes { color: #2e7d32; font-weight: bold; }
+.comparison-table td.no  { color: #b71c1c; }
+
+
+/* SVG Explainer Grid */
+.explainer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.explainer-block {
+    padding: 2rem;
+    background: var(--light);
+    border-radius: var(--radius);
+    border-left: 4px solid var(--primary);
+}
+.explainer-block h3 {
+    margin-bottom: 0.75rem;
+    color: var(--dark);
+}
+.feature-list {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+    color: var(--text);
+}
+.feature-list li {
+    margin-bottom: 0.4rem;
+}

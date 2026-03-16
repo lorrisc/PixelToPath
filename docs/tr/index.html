@@ -74,7 +74,10 @@
         <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
         <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/home_style.css">
+        <link rel="stylesheet" href="../assets/components.css">
+        <link rel="stylesheet" href="../assets/footer.css">
+        <link rel="stylesheet" href="../assets/donate.css">
+        <link rel="stylesheet" href="../assets/home.css">
         <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
         <!-- Schema.org Structured Data -->
@@ -178,96 +181,92 @@
 
     </div>
 </nav> 
-
         <main>
             <!-- Hero -->
             <section class="home-hero">
-            <div class="container">
-                <h1>Görüntüleri <span>SVG</span>'ye Dönüştür<br>Ücretsiz &amp; Açık Kaynak</h1>
-                <p class="hero-sub">PixelToPath, PNG, JPG, BMP ve WebP görüntülerini ölçeklenebilir vektör grafiklerine dönüştürür - tam renk desteği, canlı önizleme ve sıfır filigran ile.</p>
-                <div class="formats-row">
-                <span class="fmt in">PNG</span>
-                <span class="fmt in">JPG</span>
-                <span class="fmt in">BMP</span>
-                <span class="fmt in">WebP</span>
-                <span class="fmt-arrow">→</span>
-                <span class="fmt out">SVG</span>
+                <div class="container">
+                    <h1 class="c-dark">Görüntüleri <span>SVG</span>'ye Dönüştür<br>Ücretsiz &amp; Açık Kaynak</h1>
+                    <p class="hero-sub c-gray">PixelToPath, PNG, JPG, BMP ve WebP görüntülerini ölçeklenebilir vektör grafiklerine dönüştürür - tam renk desteği, canlı önizleme ve sıfır filigran ile.</p>
+                    <div class="formats-row">
+                        <span class="fmt in">PNG</span>
+                        <span class="fmt in">JPG</span>
+                        <span class="fmt in">BMP</span>
+                        <span class="fmt in">WebP</span>
+                        <span class="fmt-arrow">→</span>
+                        <span class="fmt out">SVG</span>
+                    </div>
+                    <div class="badges" id="home__badges">
+                        <span class="badge accent">✓ %100 ücretsiz</span>
+                        <span class="badge">Kayıt yok</span>
+                        <span class="badge">Filigran yok</span>
+                        <span class="badge">Tam renk desteği</span>
+                        <span class="badge">Açık kaynak - MIT</span>
+                    </div>
                 </div>
-                <div class="trust-pills">
-                <span class="pill orange">✓ %100 ücretsiz</span>
-                <span class="pill">Kayıt yok</span>
-                <span class="pill">Filigran yok</span>
-                <span class="pill">Tam renk desteği</span>
-                <span class="pill">Açık kaynak - MIT</span>
-                </div>
-            </div>
             </section>
 
             <!-- Feature strip -->
-            <div class="feature-strip">
-            <div class="fs-item">
-                <div class="fs-icon">🎨</div>
-                <h3>Tam renk desteği</h3>
-                <p>VTracer ile güçlendirildi - sadece siyah &amp; beyaz değil</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">⚡</div>
-                <h3>Canlı önizleme</h3>
-                <p>Ayarları değiştirdiğinizde SVG güncellenir</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">🔒</div>
-                <h3>Önce gizlilik</h3>
-                <p>Masaüstü: dosyalar cihazınızdan asla ayrılmaz</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">♾️</div>
-                <h3>Sınır yok</h3>
-                <p>Sınırsız dönüşüm, sonsuza dek ücretsiz</p>
-            </div>
-            </div>
+            <section class="feature-strip">
+                <div class="fs-item">
+                    <div class="fs-icon">🎨</div>
+                    <h3>Tam renk desteği</h3>
+                    <p>VTracer ile güçlendirildi - sadece siyah &amp; beyaz değil</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">⚡</div>
+                    <h3>Canlı önizleme</h3>
+                    <p>Ayarları değiştirdiğinizde SVG güncellenir</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">🔒</div>
+                    <h3>Önce gizlilik</h3>
+                    <p>Masaüstü: dosyalar cihazınızdan asla ayrılmaz</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">♾️</div>
+                    <h3>Sınır yok</h3>
+                    <p>Sınırsız dönüşüm, sonsuza dek ücretsiz</p>
+                </div>
+            </section>
 
             <!-- Choice -->
             <section class="choice-section">
-            <div class="container">
-                <h2 class="section-title">Sürümünüzü Seçin</h2>
-                <p class="choice-subtitle">Aynı güçlü motor - iş akışınıza uyan formatı seçin.</p>
-                <div class="choice-grid">
+                <div class="container">
+                    <h2 class="section-title">Sürümünüzü Seçin</h2>
+                    <p class="choice-subtitle">Aynı güçlü motor - iş akışınıza uyan formatı seçin.</p>
+                    <div class="choice-grid">
+                        <div class="choice-card online">
+                            <div class="choice-icon">🌐</div>
+                            <span class="choice-tag">Kurulum gerektirmez</span>
+                            <h2>Çevrimiçi Araç</h2>
+                            <p>Görüntüleri doğrudan tarayıcınızda dönüştürün. Yüklenecek hiçbir şey yok, hesap gerekmiyor. Sadece yükleyin ve indirin.</p>
+                            <ul class="choice-features">
+                                <li>Her cihazda &amp; işletim sisteminde çalışır</li>
+                                <li>Tam renkli &amp; siyah &amp; beyaz modları</li>
+                                <li>Canlı SVG önizleme</li>
+                                <li>Ön ayarlı modlar: siyah &amp; beyaz, Poster, Fotoğraf</li>
+                                <li>Gelişmiş parametre ayarı</li>
+                            </ul>
+                            <a href="/online/" class="choice-cta">Çevrimiçi Aracı Kullan →</a>
+                        </div>
 
-                <div class="choice-card online">
-                    <div class="choice-icon">🌐</div>
-                    <span class="choice-tag">Kurulum gerektirmez</span>
-                    <h2>Çevrimiçi Araç</h2>
-                    <p>Görüntüleri doğrudan tarayıcınızda dönüştürün. Yüklenecek hiçbir şey yok, hesap gerekmiyor. Sadece yükleyin ve indirin.</p>
-                    <ul class="choice-features">
-                    <li>Her cihazda &amp; işletim sisteminde çalışır</li>
-                    <li>Tam renkli &amp; siyah &amp; beyaz modları</li>
-                    <li>Canlı SVG önizleme</li>
-                    <li>Ön ayarlı modlar: siyah &amp; beyaz, Poster, Fotoğraf</li>
-                    <li>Gelişmiş parametre ayarı</li>
-                    </ul>
-                    <a href="/online/" class="choice-cta">Çevrimiçi Aracı Kullan →</a>
+                        <div class="choice-card offline">
+                            <div class="choice-icon">💻</div>
+                            <span class="choice-tag">Windows &amp; Linux</span>
+                            <h2>Masaüstü Uygulaması</h2>
+                            <p>Bir kez kurun ve dosyaları tamamen çevrimdışı dönüştürün. Görüntüleriniz bilgisayarınızdan asla ayrılmaz - hassas veya profesyonel işler için idealdir.</p>
+                            <ul class="choice-features">
+                                <li>%100 çevrimdışı - internet gerekmez</li>
+                                <li>Dosyalar asla hiçbir yere yüklenmez</li>
+                                <li>Dosya boyutu sınırı yok</li>
+                                <li>Dikkatin dağılmadığı bir kullanım için odak modu</li>
+                                <li>Aynı canlı önizleme &amp; ön ayarlar</li>
+                            </ul>
+                            <a href="/offline/" class="choice-cta">Masaüstü Uygulamasını İndir →</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="choice-card offline">
-                    <div class="choice-icon">💻</div>
-                    <span class="choice-tag">Windows &amp; Linux</span>
-                    <h2>Masaüstü Uygulaması</h2>
-                    <p>Bir kez kurun ve dosyaları tamamen çevrimdışı dönüştürün. Görüntüleriniz bilgisayarınızdan asla ayrılmaz - hassas veya profesyonel işler için idealdir.</p>
-                    <ul class="choice-features">
-                    <li>%100 çevrimdışı - internet gerekmez</li>
-                    <li>Dosyalar asla hiçbir yere yüklenmez</li>
-                    <li>Dosya boyutu sınırı yok</li>
-                    <li>Dikkatin dağılmadığı bir kullanım için odak modu</li>
-                    <li>Aynı canlı önizleme &amp; ön ayarlar</li>
-                    </ul>
-                    <a href="/offline/" class="choice-cta">Masaüstü Uygulamasını İndir →</a>
-                </div>
-
-                </div>
-            </div>
             </section>
-
             <section class="section donate-section">
     <div class="container">
         <h3>Açık Kaynak Geliştirmeyi Destekleyin</h3>
@@ -275,21 +274,13 @@
         <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ PayPal üzerinden bağış yap</a>
     </div>
 </section>
-            
         </main>
-
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

@@ -74,7 +74,10 @@
         <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
         <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/home_style.css">
+        <link rel="stylesheet" href="../assets/components.css">
+        <link rel="stylesheet" href="../assets/footer.css">
+        <link rel="stylesheet" href="../assets/donate.css">
+        <link rel="stylesheet" href="../assets/home.css">
         <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
         <!-- Schema.org Structured Data -->
@@ -178,96 +181,92 @@
 
     </div>
 </nav> 
-
         <main>
             <!-- Hero -->
             <section class="home-hero">
-            <div class="container">
-                <h1>将图像转换为 <span>SVG</span><br>免费 &amp; 开源</h1>
-                <p class="hero-sub">PixelToPath 将 PNG、JPG、BMP 和 WebP 图像转换为可缩放的矢量图形 - 支持全彩、实时预览且无水印。</p>
-                <div class="formats-row">
-                <span class="fmt in">PNG</span>
-                <span class="fmt in">JPG</span>
-                <span class="fmt in">BMP</span>
-                <span class="fmt in">WebP</span>
-                <span class="fmt-arrow">→</span>
-                <span class="fmt out">SVG</span>
+                <div class="container">
+                    <h1 class="c-dark">将图像转换为 <span>SVG</span><br>免费 &amp; 开源</h1>
+                    <p class="hero-sub c-gray">PixelToPath 将 PNG、JPG、BMP 和 WebP 图像转换为可缩放的矢量图形 - 支持全彩、实时预览且无水印。</p>
+                    <div class="formats-row">
+                        <span class="fmt in">PNG</span>
+                        <span class="fmt in">JPG</span>
+                        <span class="fmt in">BMP</span>
+                        <span class="fmt in">WebP</span>
+                        <span class="fmt-arrow">→</span>
+                        <span class="fmt out">SVG</span>
+                    </div>
+                    <div class="badges" id="home__badges">
+                        <span class="badge accent">✓ 100% 免费</span>
+                        <span class="badge">无需注册</span>
+                        <span class="badge">无水印</span>
+                        <span class="badge">全彩支持</span>
+                        <span class="badge">开源 - MIT</span>
+                    </div>
                 </div>
-                <div class="trust-pills">
-                <span class="pill orange">✓ 100% 免费</span>
-                <span class="pill">无需注册</span>
-                <span class="pill">无水印</span>
-                <span class="pill">全彩支持</span>
-                <span class="pill">开源 - MIT</span>
-                </div>
-            </div>
             </section>
 
             <!-- Feature strip -->
-            <div class="feature-strip">
-            <div class="fs-item">
-                <div class="fs-icon">🎨</div>
-                <h3>全彩支持</h3>
-                <p>由 VTracer 驱动 - 不仅仅是黑白</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">⚡</div>
-                <h3>实时预览</h3>
-                <p>当您调整设置时 SVG 会实时更新</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">🔒</div>
-                <h3>隐私优先</h3>
-                <p>桌面版：文件永远不会离开您的设备</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">♾️</div>
-                <h3>无限制</h3>
-                <p>无限制转换，永久免费</p>
-            </div>
-            </div>
+            <section class="feature-strip">
+                <div class="fs-item">
+                    <div class="fs-icon">🎨</div>
+                    <h3>全彩支持</h3>
+                    <p>由 VTracer 驱动 - 不仅仅是黑白</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">⚡</div>
+                    <h3>实时预览</h3>
+                    <p>当您调整设置时 SVG 会实时更新</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">🔒</div>
+                    <h3>隐私优先</h3>
+                    <p>桌面版：文件永远不会离开您的设备</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">♾️</div>
+                    <h3>无限制</h3>
+                    <p>无限制转换，永久免费</p>
+                </div>
+            </section>
 
             <!-- Choice -->
             <section class="choice-section">
-            <div class="container">
-                <h2 class="section-title">选择您的版本</h2>
-                <p class="choice-subtitle">同样强大的引擎 - 选择适合您工作流程的格式。</p>
-                <div class="choice-grid">
+                <div class="container">
+                    <h2 class="section-title">选择您的版本</h2>
+                    <p class="choice-subtitle">同样强大的引擎 - 选择适合您工作流程的格式。</p>
+                    <div class="choice-grid">
+                        <div class="choice-card online">
+                            <div class="choice-icon">🌐</div>
+                            <span class="choice-tag">免安装</span>
+                            <h2>在线工具</h2>
+                            <p>直接在浏览器中转换图像。无需安装任何内容，也无需帐户。只需上传并下载即可。</p>
+                            <ul class="choice-features">
+                                <li>适用于任何设备 &amp; 操作系统</li>
+                                <li>全彩 &amp; 黑白模式</li>
+                                <li>实时 SVG 预览</li>
+                                <li>预设模式：黑白、海报、照片</li>
+                                <li>高级参数微调</li>
+                            </ul>
+                            <a href="/online/" class="choice-cta">使用在线工具 →</a>
+                        </div>
 
-                <div class="choice-card online">
-                    <div class="choice-icon">🌐</div>
-                    <span class="choice-tag">免安装</span>
-                    <h2>在线工具</h2>
-                    <p>直接在浏览器中转换图像。无需安装任何内容，也无需帐户。只需上传并下载即可。</p>
-                    <ul class="choice-features">
-                    <li>适用于任何设备 &amp; 操作系统</li>
-                    <li>全彩 &amp; 黑白模式</li>
-                    <li>实时 SVG 预览</li>
-                    <li>预设模式：黑白、海报、照片</li>
-                    <li>高级参数微调</li>
-                    </ul>
-                    <a href="/online/" class="choice-cta">使用在线工具 →</a>
+                        <div class="choice-card offline">
+                            <div class="choice-icon">💻</div>
+                            <span class="choice-tag">Windows &amp; Linux</span>
+                            <h2>桌面应用</h2>
+                            <p>安装一次即可完全离线转换文件。您的图像永远不会离开您的计算机 - 非常适合敏感或专业工作。</p>
+                            <ul class="choice-features">
+                                <li>100% 离线 - 无需互联网</li>
+                                <li>文件永远不会上传到任何地方</li>
+                                <li>无文件大小限制</li>
+                                <li>专注模式，使用无干扰</li>
+                                <li>相同的实时预览 &amp; 预设</li>
+                            </ul>
+                            <a href="/offline/" class="choice-cta">下载桌面应用 →</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="choice-card offline">
-                    <div class="choice-icon">💻</div>
-                    <span class="choice-tag">Windows &amp; Linux</span>
-                    <h2>桌面应用</h2>
-                    <p>安装一次即可完全离线转换文件。您的图像永远不会离开您的计算机 - 非常适合敏感或专业工作。</p>
-                    <ul class="choice-features">
-                    <li>100% 离线 - 无需互联网</li>
-                    <li>文件永远不会上传到任何地方</li>
-                    <li>无文件大小限制</li>
-                    <li>专注模式，使用无干扰</li>
-                    <li>相同的实时预览 &amp; 预设</li>
-                    </ul>
-                    <a href="/offline/" class="choice-cta">下载桌面应用 →</a>
-                </div>
-
-                </div>
-            </div>
             </section>
-
             <section class="section donate-section">
     <div class="container">
         <h3>支持开源开发</h3>
@@ -275,21 +274,13 @@
         <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ 通过PayPal捐款</a>
     </div>
 </section>
-            
         </main>
-
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

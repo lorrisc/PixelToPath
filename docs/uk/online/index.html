@@ -74,7 +74,11 @@
     <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/online/" />
 
     <link rel="stylesheet" href="../../assets/style.css">
-    <link rel="stylesheet" href="../../assets/online_style.css">
+    <link rel="stylesheet" href="../../assets/components.css">
+    <link rel="stylesheet" href="../../assets/containers.css">
+    <link rel="stylesheet" href="../../assets/footer.css">
+    <link rel="stylesheet" href="../../assets/donate.css">
+    <link rel="stylesheet" href="../../assets/online.css">
     <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
     <!-- Schema.org Structured Data -->
@@ -85,10 +89,10 @@
       "name": "PixelToPath Online SVG Converter",
       "url": "https://pixel-to-path.com/online/",
       "description": "Конвертуйте PNG, JPG, BMP або WebP у SVG онлайн — безкоштовно, миттєво, без реєстрації. На базі VTracer з кольоровим та чорно-білим режимами. Попередній перегляд наживо.",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Any",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
     }
     </script>
 
@@ -98,10 +102,10 @@
         "@type": "HowTo",
         "name": "Як безкоштовно конвертувати PNG у SVG онлайн",
         "step": [
-        { "@type": "HowToStep", "name": "Завантажте ваше зображення", "text": "Перетягніть або натисніть, щоб завантажити файл PNG, JPG, BMP або WebP. Реєстрація не потрібна." },
-        { "@type": "HowToStep", "name": "Оберіть пресет", "text": "Оберіть Ч/Б для логотипів та іконок, Постер для ілюстрацій або Фото для складних фотографій." },
-        { "@type": "HowToStep", "name": "Попередній перегляд результату наживо", "text": "Попередній перегляд SVG оновлюється автоматично під час зміни налаштувань. Не потрібно натискати «Конвертувати»." },
-        { "@type": "HowToStep", "name": "Завантажте ваш файл SVG", "text": "Натисніть кнопку «Завантажити SVG», щоб миттєво зберегти ваш векторний файл, готовий для Illustrator, Figma або Inkscape." }
+            { "@type": "HowToStep", "name": "Завантажте ваше зображення", "text": "Перетягніть або натисніть, щоб завантажити файл PNG, JPG, BMP або WebP. Реєстрація не потрібна." },
+            { "@type": "HowToStep", "name": "Оберіть пресет", "text": "Оберіть Ч/Б для логотипів та іконок, Постер для ілюстрацій або Фото для складних фотографій." },
+            { "@type": "HowToStep", "name": "Попередній перегляд результату наживо", "text": "Попередній перегляд SVG оновлюється автоматично під час зміни налаштувань. Не потрібно натискати «Конвертувати»." },
+            { "@type": "HowToStep", "name": "Завантажте ваш файл SVG", "text": "Натисніть кнопку «Завантажити SVG», щоб миттєво зберегти ваш векторний файл, готовий для Illustrator, Figma або Inkscape." }
         ]
     }
     </script>
@@ -252,284 +256,317 @@
 
     </div>
 </nav> 
-
         <main>
-
             <!-- Hero -->
             <section class="tool-hero">
-            <div class="container">
-                <h1>Безкоштовний Онлайн Конвертер PNG у SVG</h1>
-                <p>Конвертуйте будь-яке зображення у векторну графіку за лічені секунди — без реєстрації, без лімітів, з повною підтримкою кольору.</p>
-                <div class="badges">
-                <span class="badge accent">✓ Назавжди безкоштовно</span>
-                <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
-                <span class="badge">Попередній перегляд</span>
-                <span class="badge">Кольоровий та Ч/Б режими</span>
-                <span class="badge">Без водяних знаків</span>
+                <div class="container">
+                    <h1>Безкоштовний Онлайн Конвертер PNG у SVG</h1>
+                    <p>Конвертуйте будь-яке зображення у векторну графіку за лічені секунди — без реєстрації, без лімітів, з повною підтримкою кольору.</p>
+                    <div class="badges">
+                        <span class="badge accent">✓ Назавжди безкоштовно</span>
+                        <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
+                        <span class="badge">Попередній перегляд</span>
+                        <span class="badge">Кольоровий та Ч/Б режими</span>
+                        <span class="badge">Без водяних знаків</span>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <!-- Converter (full width) -->
             <section class="converter-section">
-            <div class="converter-wrap">
+                <div class="converter-wrap">
 
-                <!-- Sidebar -->
-                <div class="conv-sidebar">
-                <div class="dropzone" id="dropzone">
-                    <div class="dz-hint">
-                    <span class="dz-icon">⬡</span>
-                    Перетягніть зображення сюди<br>
-                    або <u style="cursor:pointer;color:var(--primary)">оберіть файл</u>
+                    <!-- Sidebar -->
+                    <div class="conv-sidebar">
+                        <div class="dropzone" id="dropzone">
+                            <div class="dz-hint">
+                                <span class="dz-icon">⬡</span>
+                                Перетягніть зображення сюди<br>
+                                або <u style="cursor:pointer;color:var(--primary)">оберіть файл</u>
+                            </div>
+                        </div>
+                        <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
+
+                        <div class="ps">Пресети</div>
+                        <div class="presets">
+                            <button class="preset-btn" data-preset="bw">Ч/Б</button>
+                            <button class="preset-btn active" data-preset="poster">Постер</button>
+                            <button class="preset-btn" data-preset="photo">Фото</button>
+                        </div>
+
+                        <button id="adv-toggle"><span>⚙ Додаткові налаштування</span><span id="adv-arrow">▾</span></button>
+                        <div id="adv-content">
+
+                            <div class="ps">Режим кольору</div>
+                            <div class="seg" id="seg-colormode">
+                                <button class="active" data-val="color">Колір</button>
+                                <button data-val="binary">Бінарний</button>
+                            </div>
+
+                            <div id="color-params">
+                                <div class="ps">Колір</div>
+                                
+                                <div class="sl-row">
+                                    <span>Кількість кольорів</span>
+                                    <span class="sl-val" id="v-num_colors">8</span>
+                                </div>
+                                <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
+
+                                <div class="sl-row">
+                                    <span>Точність кольору</span>
+                                    <span class="sl-val" id="v-color_precision">6</span>
+                                </div>
+                                <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
+                                
+                                <div class="sl-row">
+                                    <span>Різниця шарів</span>
+                                    <span class="sl-val" id="v-layer_difference">16</span>
+                                </div>
+                                <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
+                                
+                                <div class="ps">Ієрархічний</div>
+                                <div class="seg" id="seg-hierarchical">
+                                    <button class="active" data-val="stacked">Багатошаровий</button>
+                                    <button data-val="cutout">Вирізаний</button>
+                                </div>
+                            </div>
+
+                            <div id="binary-params" style="display:none">
+                                <div class="sw-row" style="margin-top:10px">
+                                    <div>
+                                        <div class="sw-label">Інвертувати</div>
+                                        <div class="sw-sub">Поміняти чорний ↔ білий</div>
+                                    </div>
+                                    <label class="sw">
+                                        <input type="checkbox" id="sw-invert">
+                                        <span class="sw-track"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="ps">Апроксимація кривих</div>
+                            <div class="seg" id="seg-mode">
+                                <button data-val="none">Піксель</button>
+                                <button data-val="polygon">Полігон</button>
+                                <button class="active" data-val="spline">Сплайн</button>
+                            </div>
+
+                            <div class="sl-row">
+                                <span>Фільтр плям</span>
+                                <span class="sl-val" id="v-filter_speckle">4</span>
+                            </div>
+                            <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
+
+                            <div class="sl-row">
+                                <span>Поріг кута</span>
+                                <span class="sl-val" id="v-corner_threshold">60</span>
+                            </div>
+                            <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
+
+                            <div class="sl-row">
+                                <span>Поріг довжини</span>
+                                <span class="sl-val" id="v-length_threshold">4.0</span>
+                            </div>
+                            
+                            <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
+                            
+                            <div class="sl-row">
+                                <span>Поріг сплайна</span>
+                                <span class="sl-val" id="v-splice_threshold">45</span>
+                            </div>
+                            <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
+                        </div>
                     </div>
+
+                    <!-- Preview -->
+                    <div class="conv-preview">
+                        <div class="preview-header">
+                            <span class="preview-title">Попередній перегляд SVG</span>
+                            <div class="live-badge">
+                                <div class="live-dot" id="live-dot"></div>
+                                <span id="live-text">наживо</span>
+                            </div>
+                        </div>
+
+                        <div class="preview-body">
+                            <div id="preview-svg-container">
+                                <div class="preview-placeholder" id="placeholder">
+                                    <span class="preview-placeholder-icon">⬡</span>
+                                    <p>Завантажте зображення для початку</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="preview-footer">
+                            <div id="status">Готово</div>
+                            <button id="btn-dl" disabled>↓ Завантажити SVG</button>
+                        </div>
+
+                        <div class="conv-overlay" id="overlay">
+                            <div class="spinner"></div>
+                            <div class="overlay-text" id="overlay-text">Конвертація...</div>
+                        </div>
+                    </div>
+
                 </div>
-                <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
-
-                <div class="ps">Пресети</div>
-                <div class="presets">
-                    <button class="preset-btn" data-preset="bw">Ч/Б</button>
-                    <button class="preset-btn active" data-preset="poster">Постер</button>
-                    <button class="preset-btn" data-preset="photo">Фото</button>
-                </div>
-
-                <button id="adv-toggle"><span>⚙ Додаткові налаштування</span><span id="adv-arrow">▾</span></button>
-                <div id="adv-content">
-
-                    <div class="ps">Режим кольору</div>
-                    <div class="seg" id="seg-colormode">
-                    <button class="active" data-val="color">Колір</button>
-                    <button data-val="binary">Бінарний</button>
-                    </div>
-
-                    <div id="color-params">
-                    <div class="ps">Колір</div>
-                    <div class="sl-row"><span>Кількість кольорів</span><span class="sl-val" id="v-num_colors">8</span></div>
-                    <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
-                    <div class="sl-row"><span>Точність кольору</span><span class="sl-val" id="v-color_precision">6</span></div>
-                    <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
-                    <div class="sl-row"><span>Різниця шарів</span><span class="sl-val" id="v-layer_difference">16</span></div>
-                    <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
-                    <div class="ps">Ієрархічний</div>
-                    <div class="seg" id="seg-hierarchical">
-                        <button class="active" data-val="stacked">Багатошаровий</button>
-                        <button data-val="cutout">Вирізаний</button>
-                    </div>
-                    </div>
-
-                    <div id="binary-params" style="display:none">
-                    <div class="sw-row" style="margin-top:10px">
-                        <div><div class="sw-label">Інвертувати</div><div class="sw-sub">Поміняти чорний ↔ білий</div></div>
-                        <label class="sw"><input type="checkbox" id="sw-invert"><span class="sw-track"></span></label>
-                    </div>
-                    </div>
-
-                    <div class="ps">Апроксимація кривих</div>
-                    <div class="seg" id="seg-mode">
-                    <button data-val="none">Піксель</button>
-                    <button data-val="polygon">Полігон</button>
-                    <button class="active" data-val="spline">Сплайн</button>
-                    </div>
-
-                    <div class="sl-row"><span>Фільтр плям</span><span class="sl-val" id="v-filter_speckle">4</span></div>
-                    <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
-                    <div class="sl-row"><span>Поріг кута</span><span class="sl-val" id="v-corner_threshold">60</span></div>
-                    <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
-                    <div class="sl-row"><span>Поріг довжини</span><span class="sl-val" id="v-length_threshold">4.0</span></div>
-                    <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
-                    <div class="sl-row"><span>Поріг сплайна</span><span class="sl-val" id="v-splice_threshold">45</span></div>
-                    <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
-                </div>
-                </div>
-
-                <!-- Preview -->
-                <div class="conv-preview">
-                <div class="preview-header">
-                    <span class="preview-title">Попередній перегляд SVG</span>
-                    <div class="live-badge">
-                    <div class="live-dot" id="live-dot"></div>
-                    <span id="live-text">наживо</span>
-                    </div>
-                </div>
-
-                <div class="preview-body">
-                    <div id="preview-svg-container">
-                    <div class="preview-placeholder" id="placeholder">
-                        <span class="preview-placeholder-icon">⬡</span>
-                        <p>Завантажте зображення для початку</p>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="preview-footer">
-                    <div id="status">Готово</div>
-                    <button id="btn-dl" disabled>↓ Завантажити SVG</button>
-                </div>
-
-                <div class="conv-overlay" id="overlay">
-                    <div class="spinner"></div>
-                    <div class="overlay-text" id="overlay-text">Конвертація...</div>
-                </div>
-                </div>
-
-            </div><!-- /converter-wrap -->
             </section>
 
             <!-- ── HOW IT WORKS ── -->
             <section class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">Як це працює</h2>
-                <p class="section-intro">Без налаштувань та акаунта. Завантажте, перегляньте та збережіть — менш ніж за 10 секунд.</p>
-                <div class="grid-3">
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
-                    <h3>1. Завантаження</h3>
-                    <p>Перетягніть або клікніть, щоб завантажити PNG, JPG, BMP або WebP. Вставлення з буфера обміну теж працює.</p>
+                <div class="container">
+                    <h2 class="section-title">Як це працює</h2>
+                    <p class="section-intro">Без налаштувань та акаунта. Завантажте, перегляньте та збережіть — менш ніж за 10 секунд.</p>
+                    <div class="grid-3">
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
+                            <h3>1. Завантаження</h3>
+                            <p>Перетягніть або клікніть, щоб завантажити PNG, JPG, BMP або WebP. Вставлення з буфера обміну теж працює.</p>
+                        </div>
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
+                            <h3>2. Попередній перегляд</h3>
+                            <p>SVG оновлюється автоматично під час зміни налаштувань. Усе відбувається миттєво.</p>
+                        </div>
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
+                            <h3>3. Завантаження</h3>
+                            <p>Натисніть «Завантажити SVG», щоб отримати векторний файл. Відкрийте у Figma, Illustrator.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
-                    <h3>2. Попередній перегляд</h3>
-                    <p>SVG оновлюється автоматично під час зміни налаштувань. Усе відбувається миттєво.</p>
-                </div>
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
-                    <h3>3. Завантаження</h3>
-                    <p>Натисніть «Завантажити SVG», щоб отримати векторний файл. Відкрийте у Figma, Illustrator.</p>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── PRESETS EXPLAINED ── -->
             <section class="section">
-            <div class="container">
-                <h2 class="section-title">Який пресет обрати?</h2>
-                <p class="section-intro">PixelToPath пропонує три пресети. Також можна налаштувати параметри вручну.</p>
-                <div class="preset-explain-grid">
-                <div class="preset-explain-card bw">
-                    <h3><span class="preset-label">Ч/Б</span> Чорно-біле</h3>
-                    <p>Перетворює на відтінки сірого перед трасуванням. Найкраще для:</p>
-                    <ul>
-                    <li>Логотипів</li>
-                    <li>Іконок</li>
-                    <li>Скетчів</li>
-                    <li>Лазерного гравіювання</li>
-                    </ul>
+                <div class="container">
+                    <h2 class="section-title">Який пресет обрати?</h2>
+                    <p class="section-intro">PixelToPath пропонує три пресети. Також можна налаштувати параметри вручну.</p>
+                    <div class="preset-explain-grid">
+                        <div class="preset-explain-card bw">
+                            <h3><span class="preset-label">Ч/Б</span> Чорно-біле</h3>
+                            <p>Перетворює на відтінки сірого перед трасуванням. Найкраще для:</p>
+                            <ul>
+                                <li>Логотипів</li>
+                                <li>Іконок</li>
+                                <li>Скетчів</li>
+                                <li>Лазерного гравіювання</li>
+                            </ul>
+                        </div>
+                        <div class="preset-explain-card poster">
+                            <h3><span class="preset-label">Постер</span> Плоский колір</h3>
+                            <p>Трасування з накладанням шарів з високою точністю кольору. Найкраще для:</p>
+                            <ul>
+                                <li>Ілюстрацій</li>
+                                <li>Інфографіки</li>
+                                <li>Стікерів</li>
+                                <li>Цифрових артів</li>
+                            </ul>
+                        </div>
+                        <div class="preset-explain-card photo">
+                            <h3><span class="preset-label">Фото</span> Фотографії</h3>
+                            <p>Використовує ширше групування кольорів і фільтрацію шуму. Найкраще для:</p>
+                            <ul>
+                                <li>Портретів</li>
+                                <li>Пейзажів</li>
+                                <li>Фото товарів</li>
+                                <li>Складних зображень з градієнтами</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="preset-explain-card poster">
-                    <h3><span class="preset-label">Постер</span> Плоский колір</h3>
-                    <p>Трасування з накладанням шарів з високою точністю кольору. Найкраще для:</p>
-                    <ul>
-                    <li>Ілюстрацій</li>
-                    <li>Інфографіки</li>
-                    <li>Стікерів</li>
-                    <li>Цифрових артів</li>
-                    </ul>
-                </div>
-                <div class="preset-explain-card photo">
-                    <h3><span class="preset-label">Фото</span> Фотографії</h3>
-                    <p>Використовує ширше групування кольорів і фільтрацію шуму. Найкраще для:</p>
-                    <ul>
-                    <li>Портретів</li>
-                    <li>Пейзажів</li>
-                    <li>Фото товарів</li>
-                    <li>Складних зображень з градієнтами</li>
-                    </ul>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── USE CASES ── -->
             <section class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">Що робити зі збереженим SVG?</h2>
-                <p class="section-intro">Файли SVG з PixelToPath працюють усюди.</p>
-                <div class="use-cases-grid">
-                <div class="use-case-card">
-                    <div class="uc-icon">🎨</div>
-                    <h3>Редагування у Figma чи Illustrator</h3>
-                    <p>Усі форми є контурами — змінюйте розміри та кольори без втрати якості.</p>
+                <div class="container">
+                    <h2 class="section-title">Що робити зі збереженим SVG?</h2>
+                    <p class="section-intro">Файли SVG з PixelToPath працюють усюди.</p>
+                    <div class="use-cases-grid">
+                        <div class="use-case-card">
+                            <div class="uc-icon">🎨</div>
+                            <h3>Редагування у Figma чи Illustrator</h3>
+                            <p>Усі форми є контурами — змінюйте розміри та кольори без втрати якості.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🌐</div>
+                            <h3>Для веб-сайтів</h3>
+                            <p>Використовуйте як теги <code>&lt;img&gt;</code> або через CSS.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🖨️</div>
+                            <h3>Друк будь-якого розміру</h3>
+                            <p>Від візитівки до білборда — без розмиття.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">✂️</div>
+                            <h3>Лазерна різка та плоттер</h3>
+                            <p>Імпортуйте в LightBurn або Cricut Design Space.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">💻</div>
+                            <h3>Іконки додатків</h3>
+                            <p>Масштабуйте від 16px до 512px. Працює з React, Vue.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🎞️</div>
+                            <h3>Анімація CSS і JS</h3>
+                            <p>Оживіть елементи на сайті.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🌐</div>
-                    <h3>Для веб-сайтів</h3>
-                    <p>Використовуйте як теги <code>&lt;img&gt;</code> або через CSS.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🖨️</div>
-                    <h3>Друк будь-якого розміру</h3>
-                    <p>Від візитівки до білборда — без розмиття.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">✂️</div>
-                    <h3>Лазерна різка та плоттер</h3>
-                    <p>Імпортуйте в LightBurn або Cricut Design Space.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">💻</div>
-                    <h3>Іконки додатків</h3>
-                    <p>Масштабуйте від 16px до 512px. Працює з React, Vue.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🎞️</div>
-                    <h3>Анімація CSS і JS</h3>
-                    <p>Оживіть елементи на сайті.</p>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── FAQ ── -->
             <section class="section" id="faq">
-            <div class="container">
-                <h2 class="section-title">Часті запитання</h2>
-                <div class="faq-list">
-                <details class="faq-item">
-                    <summary>Це дійсно безкоштовно та без лімітів?</summary>
-                    <p>Так, повністю безкоштовно (ліцензія MIT).</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Чи підтримуються кольорові зображення?</summary>
-                    <p>Так. Ми використовуємо <strong>VTracer</strong>. Оберіть пресет <strong>Постер</strong> або <strong>Фото</strong>.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Чи зберігаються мої файли?</summary>
-                    <p>Ні. Вони видаляються одразу після обробки.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Які формати підтримуються?</summary>
-                    <p>PNG, JPG, JPEG, BMP і WebP. (Ctrl+V також працює).</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Який максимальний розмір файлу?</summary>
-                    <p>В онлайні до <strong>20 МБ</strong>. Для більших завантажте <a href="#download" style="color:var(--primary)">десктопний додаток</a>.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Чому Ч/Б результат має поганий вигляд?</summary>
-                    <p>Увімкніть <strong>Інвертувати</strong> у додаткових налаштуваннях.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>У чому різниця між режимами Сплайн, Полігон і Піксель?</summary>
-                    <p><strong>Сплайн</strong> для плавних кривих. <strong>Полігон</strong> для прямих. <strong>Піксель</strong> для піксель-арту.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Чи можна використовувати SVG у комерційних цілях?</summary>
-                    <p>Так, без ліцензійних обмежень.</p>
-                </details>
+                <div class="container">
+                    <h2 class="section-title">Часті запитання</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>Це дійсно безкоштовно та без лімітів?</summary>
+                            <p>Так, повністю безкоштовно (ліцензія MIT).</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Чи підтримуються кольорові зображення?</summary>
+                            <p>Так. Ми використовуємо <strong>VTracer</strong>. Оберіть пресет <strong>Постер</strong> або <strong>Фото</strong>.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Чи зберігаються мої файли?</summary>
+                            <p>Ні. Вони видаляються одразу після обробки.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Які формати підтримуються?</summary>
+                            <p>PNG, JPG, JPEG, BMP і WebP. (Ctrl+V також працює).</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Який максимальний розмір файлу?</summary>
+                            <p>В онлайні до <strong>20 МБ</strong>. Для більших завантажте <a href="#download" style="color:var(--primary)">десктопний додаток</a>.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Чому Ч/Б результат має поганий вигляд?</summary>
+                            <p>Увімкніть <strong>Інвертувати</strong> у додаткових налаштуваннях.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>У чому різниця між режимами Сплайн, Полігон і Піксель?</summary>
+                            <p><strong>Сплайн</strong> для плавних кривих. <strong>Полігон</strong> для прямих. <strong>Піксель</strong> для піксель-арту.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Чи можна використовувати SVG у комерційних цілях?</summary>
+                            <p>Так, без ліцензійних обмежень.</p>
+                        </details>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <!-- ── CTA desktop ── -->
             <section class="section bg-light">
-            <div class="container" style="text-align:center" id="download">
-                <h2 style="color:var(--dark);margin-bottom:1rem">Потрібні офлайн конвертації без обмежень?</h2>
-                <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">Десктопна версія працює локально та не має обмежень за розміром.</p>
-                <div class="double-buttons">
-                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Завантажити для Windows</a>
-                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Завантажити для Linux</a>
+                <div class="container" style="text-align:center" id="download">
+                    <h2 style="color:var(--dark);margin-bottom:1rem">Потрібні офлайн конвертації без обмежень?</h2>
+                    <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">Десктопна версія працює локально та не має обмежень за розміром.</p>
+                    <div class="double-buttons">
+                        <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Завантажити для Windows</a>
+                        <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Завантажити для Linux</a>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <section class="section donate-section">
@@ -545,15 +582,9 @@
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

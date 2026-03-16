@@ -74,7 +74,10 @@
         <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
         <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/home_style.css">
+        <link rel="stylesheet" href="../assets/components.css">
+        <link rel="stylesheet" href="../assets/footer.css">
+        <link rel="stylesheet" href="../assets/donate.css">
+        <link rel="stylesheet" href="../assets/home.css">
         <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
         <!-- Schema.org Structured Data -->
@@ -178,96 +181,92 @@
 
     </div>
 </nav> 
-
         <main>
             <!-- Hero -->
             <section class="home-hero">
-            <div class="container">
-                <h1>Ubah Gambar ke <span>SVG</span><br>Gratis &amp; Sumber Terbuka</h1>
-                <p class="hero-sub">PixelToPath mengubah gambar PNG, JPG, BMP, dan WebP menjadi grafik vektor yang dapat diskalakan - dengan dukungan warna penuh, pratinjau langsung, dan tanpa tanda air.</p>
-                <div class="formats-row">
-                <span class="fmt in">PNG</span>
-                <span class="fmt in">JPG</span>
-                <span class="fmt in">BMP</span>
-                <span class="fmt in">WebP</span>
-                <span class="fmt-arrow">→</span>
-                <span class="fmt out">SVG</span>
+                <div class="container">
+                    <h1 class="c-dark">Ubah Gambar ke <span>SVG</span><br>Gratis &amp; Sumber Terbuka</h1>
+                    <p class="hero-sub c-gray">PixelToPath mengubah gambar PNG, JPG, BMP, dan WebP menjadi grafik vektor yang dapat diskalakan - dengan dukungan warna penuh, pratinjau langsung, dan tanpa tanda air.</p>
+                    <div class="formats-row">
+                        <span class="fmt in">PNG</span>
+                        <span class="fmt in">JPG</span>
+                        <span class="fmt in">BMP</span>
+                        <span class="fmt in">WebP</span>
+                        <span class="fmt-arrow">→</span>
+                        <span class="fmt out">SVG</span>
+                    </div>
+                    <div class="badges" id="home__badges">
+                        <span class="badge accent">✓ 100% gratis</span>
+                        <span class="badge">Tanpa pendaftaran</span>
+                        <span class="badge">Tanpa tanda air</span>
+                        <span class="badge">Dukungan warna penuh</span>
+                        <span class="badge">Sumber terbuka - MIT</span>
+                    </div>
                 </div>
-                <div class="trust-pills">
-                <span class="pill orange">✓ 100% gratis</span>
-                <span class="pill">Tanpa pendaftaran</span>
-                <span class="pill">Tanpa tanda air</span>
-                <span class="pill">Dukungan warna penuh</span>
-                <span class="pill">Sumber terbuka - MIT</span>
-                </div>
-            </div>
             </section>
 
             <!-- Feature strip -->
-            <div class="feature-strip">
-            <div class="fs-item">
-                <div class="fs-icon">🎨</div>
-                <h3>Dukungan warna penuh</h3>
-                <p>Didukung oleh VTracer - bukan hanya hitam &amp; putih</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">⚡</div>
-                <h3>Pratinjau langsung</h3>
-                <p>SVG diperbarui saat Anda menyesuaikan pengaturan</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">🔒</div>
-                <h3>Privasi utama</h3>
-                <p>Desktop: file tidak pernah meninggalkan perangkat Anda</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">♾️</div>
-                <h3>Tanpa batas</h3>
-                <p>Konversi tak terbatas, gratis selamanya</p>
-            </div>
-            </div>
+            <section class="feature-strip">
+                <div class="fs-item">
+                    <div class="fs-icon">🎨</div>
+                    <h3>Dukungan warna penuh</h3>
+                    <p>Didukung oleh VTracer - bukan hanya hitam &amp; putih</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">⚡</div>
+                    <h3>Pratinjau langsung</h3>
+                    <p>SVG diperbarui saat Anda menyesuaikan pengaturan</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">🔒</div>
+                    <h3>Privasi utama</h3>
+                    <p>Desktop: file tidak pernah meninggalkan perangkat Anda</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">♾️</div>
+                    <h3>Tanpa batas</h3>
+                    <p>Konversi tak terbatas, gratis selamanya</p>
+                </div>
+            </section>
 
             <!-- Choice -->
             <section class="choice-section">
-            <div class="container">
-                <h2 class="section-title">Pilih Versi Anda</h2>
-                <p class="choice-subtitle">Mesin tangguh yang sama - pilih format yang sesuai dengan alur kerja Anda.</p>
-                <div class="choice-grid">
+                <div class="container">
+                    <h2 class="section-title">Pilih Versi Anda</h2>
+                    <p class="choice-subtitle">Mesin tangguh yang sama - pilih format yang sesuai dengan alur kerja Anda.</p>
+                    <div class="choice-grid">
+                        <div class="choice-card online">
+                            <div class="choice-icon">🌐</div>
+                            <span class="choice-tag">Tidak perlu instal</span>
+                            <h2>Alat Online</h2>
+                            <p>Konversi gambar langsung di browser Anda. Tidak ada yang perlu diinstal, tidak perlu akun. Cukup unggah dan unduh.</p>
+                            <ul class="choice-features">
+                                <li>Bekerja pada perangkat &amp; OS apa pun</li>
+                                <li>Mode warna penuh &amp; hitam &amp; putih</li>
+                                <li>Pratinjau SVG langsung</li>
+                                <li>Mode prasetel: hitam &amp; putih, Poster, Foto</li>
+                                <li>Penyesuaian parameter lanjutan</li>
+                            </ul>
+                            <a href="/online/" class="choice-cta">Gunakan Alat Online →</a>
+                        </div>
 
-                <div class="choice-card online">
-                    <div class="choice-icon">🌐</div>
-                    <span class="choice-tag">Tidak perlu instal</span>
-                    <h2>Alat Online</h2>
-                    <p>Konversi gambar langsung di browser Anda. Tidak ada yang perlu diinstal, tidak perlu akun. Cukup unggah dan unduh.</p>
-                    <ul class="choice-features">
-                    <li>Bekerja pada perangkat &amp; OS apa pun</li>
-                    <li>Mode warna penuh &amp; hitam &amp; putih</li>
-                    <li>Pratinjau SVG langsung</li>
-                    <li>Mode prasetel: hitam &amp; putih, Poster, Foto</li>
-                    <li>Penyesuaian parameter lanjutan</li>
-                    </ul>
-                    <a href="/online/" class="choice-cta">Gunakan Alat Online →</a>
+                        <div class="choice-card offline">
+                            <div class="choice-icon">💻</div>
+                            <span class="choice-tag">Windows &amp; Linux</span>
+                            <h2>Aplikasi Desktop</h2>
+                            <p>Instal sekali dan konversi file sepenuhnya offline. Gambar Anda tidak pernah meninggalkan komputer Anda - ideal untuk pekerjaan sensitif atau profesional.</p>
+                            <ul class="choice-features">
+                                <li>100% offline - tidak butuh internet</li>
+                                <li>File tidak pernah diunggah ke mana pun</li>
+                                <li>Tanpa batas ukuran file</li>
+                                <li>Mode fokus untuk penggunaan tanpa gangguan</li>
+                                <li>Pratinjau langsung &amp; prasetel yang sama</li>
+                            </ul>
+                            <a href="/offline/" class="choice-cta">Unduh Aplikasi Desktop →</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="choice-card offline">
-                    <div class="choice-icon">💻</div>
-                    <span class="choice-tag">Windows &amp; Linux</span>
-                    <h2>Aplikasi Desktop</h2>
-                    <p>Instal sekali dan konversi file sepenuhnya offline. Gambar Anda tidak pernah meninggalkan komputer Anda - ideal untuk pekerjaan sensitif atau profesional.</p>
-                    <ul class="choice-features">
-                    <li>100% offline - tidak butuh internet</li>
-                    <li>File tidak pernah diunggah ke mana pun</li>
-                    <li>Tanpa batas ukuran file</li>
-                    <li>Mode fokus untuk penggunaan tanpa gangguan</li>
-                    <li>Pratinjau langsung &amp; prasetel yang sama</li>
-                    </ul>
-                    <a href="/offline/" class="choice-cta">Unduh Aplikasi Desktop →</a>
-                </div>
-
-                </div>
-            </div>
             </section>
-
             <section class="section donate-section">
     <div class="container">
         <h3>Dukung Pengembangan Open Source</h3>
@@ -275,21 +274,13 @@
         <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Donasi via PayPal</a>
     </div>
 </section>
-            
         </main>
-
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

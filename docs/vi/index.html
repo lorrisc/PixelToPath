@@ -74,7 +74,10 @@
         <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
         <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/home_style.css">
+        <link rel="stylesheet" href="../assets/components.css">
+        <link rel="stylesheet" href="../assets/footer.css">
+        <link rel="stylesheet" href="../assets/donate.css">
+        <link rel="stylesheet" href="../assets/home.css">
         <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
         <!-- Schema.org Structured Data -->
@@ -178,96 +181,92 @@
 
     </div>
 </nav> 
-
         <main>
             <!-- Hero -->
             <section class="home-hero">
-            <div class="container">
-                <h1>Chuyển đổi Hình ảnh sang <span>SVG</span><br>Miễn phí &amp; Mã nguồn mở</h1>
-                <p class="hero-sub">PixelToPath biến đổi hình ảnh PNG, JPG, BMP và WebP thành đồ họa vector có thể mở rộng - hỗ trợ đầy đủ màu sắc, xem trước trực tiếp và không có hình mờ.</p>
-                <div class="formats-row">
-                <span class="fmt in">PNG</span>
-                <span class="fmt in">JPG</span>
-                <span class="fmt in">BMP</span>
-                <span class="fmt in">WebP</span>
-                <span class="fmt-arrow">→</span>
-                <span class="fmt out">SVG</span>
+                <div class="container">
+                    <h1 class="c-dark">Chuyển đổi Hình ảnh sang <span>SVG</span><br>Miễn phí &amp; Mã nguồn mở</h1>
+                    <p class="hero-sub c-gray">PixelToPath biến đổi hình ảnh PNG, JPG, BMP và WebP thành đồ họa vector có thể mở rộng - hỗ trợ đầy đủ màu sắc, xem trước trực tiếp và không có hình mờ.</p>
+                    <div class="formats-row">
+                        <span class="fmt in">PNG</span>
+                        <span class="fmt in">JPG</span>
+                        <span class="fmt in">BMP</span>
+                        <span class="fmt in">WebP</span>
+                        <span class="fmt-arrow">→</span>
+                        <span class="fmt out">SVG</span>
+                    </div>
+                    <div class="badges" id="home__badges">
+                        <span class="badge accent">✓ 100% miễn phí</span>
+                        <span class="badge">Không cần đăng ký</span>
+                        <span class="badge">Không có hình mờ</span>
+                        <span class="badge">Hỗ trợ đầy đủ màu sắc</span>
+                        <span class="badge">Mã nguồn mở - MIT</span>
+                    </div>
                 </div>
-                <div class="trust-pills">
-                <span class="pill orange">✓ 100% miễn phí</span>
-                <span class="pill">Không cần đăng ký</span>
-                <span class="pill">Không có hình mờ</span>
-                <span class="pill">Hỗ trợ đầy đủ màu sắc</span>
-                <span class="pill">Mã nguồn mở - MIT</span>
-                </div>
-            </div>
             </section>
 
             <!-- Feature strip -->
-            <div class="feature-strip">
-            <div class="fs-item">
-                <div class="fs-icon">🎨</div>
-                <h3>Hỗ trợ đầy đủ màu sắc</h3>
-                <p>Được cung cấp bởi VTracer - không chỉ trắng &amp; đen</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">⚡</div>
-                <h3>Xem trước trực tiếp</h3>
-                <p>SVG cập nhật khi bạn điều chỉnh cài đặt</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">🔒</div>
-                <h3>Ưu tiên quyền riêng tư</h3>
-                <p>Máy tính bàn: tệp không bao giờ rời khỏi thiết bị của bạn</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">♾️</div>
-                <h3>Không giới hạn</h3>
-                <p>Chuyển đổi không giới hạn, miễn phí vĩnh viễn</p>
-            </div>
-            </div>
+            <section class="feature-strip">
+                <div class="fs-item">
+                    <div class="fs-icon">🎨</div>
+                    <h3>Hỗ trợ đầy đủ màu sắc</h3>
+                    <p>Được cung cấp bởi VTracer - không chỉ trắng &amp; đen</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">⚡</div>
+                    <h3>Xem trước trực tiếp</h3>
+                    <p>SVG cập nhật khi bạn điều chỉnh cài đặt</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">🔒</div>
+                    <h3>Ưu tiên quyền riêng tư</h3>
+                    <p>Máy tính bàn: tệp không bao giờ rời khỏi thiết bị của bạn</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">♾️</div>
+                    <h3>Không giới hạn</h3>
+                    <p>Chuyển đổi không giới hạn, miễn phí vĩnh viễn</p>
+                </div>
+            </section>
 
             <!-- Choice -->
             <section class="choice-section">
-            <div class="container">
-                <h2 class="section-title">Chọn Phiên bản Của Bạn</h2>
-                <p class="choice-subtitle">Cùng một công cụ mạnh mẽ - chọn định dạng phù hợp với quy trình làm việc của bạn.</p>
-                <div class="choice-grid">
+                <div class="container">
+                    <h2 class="section-title">Chọn Phiên bản Của Bạn</h2>
+                    <p class="choice-subtitle">Cùng một công cụ mạnh mẽ - chọn định dạng phù hợp với quy trình làm việc của bạn.</p>
+                    <div class="choice-grid">
+                        <div class="choice-card online">
+                            <div class="choice-icon">🌐</div>
+                            <span class="choice-tag">Không cần cài đặt</span>
+                            <h2>Công cụ Trực tuyến</h2>
+                            <p>Chuyển đổi hình ảnh trực tiếp trên trình duyệt của bạn. Không cần cài đặt gì, không yêu cầu tài khoản. Chỉ cần tải lên và tải xuống.</p>
+                            <ul class="choice-features">
+                                <li>Hoạt động trên mọi thiết bị &amp; hệ điều hành</li>
+                                <li>Chế độ đầy đủ màu sắc &amp; trắng đen</li>
+                                <li>Xem trước SVG trực tiếp</li>
+                                <li>Chế độ cài sẵn: trắng &amp; đen, Áp phích, Ảnh</li>
+                                <li>Tùy chỉnh thông số nâng cao</li>
+                            </ul>
+                            <a href="/online/" class="choice-cta">Sử dụng Công cụ Trực tuyến →</a>
+                        </div>
 
-                <div class="choice-card online">
-                    <div class="choice-icon">🌐</div>
-                    <span class="choice-tag">Không cần cài đặt</span>
-                    <h2>Công cụ Trực tuyến</h2>
-                    <p>Chuyển đổi hình ảnh trực tiếp trên trình duyệt của bạn. Không cần cài đặt gì, không yêu cầu tài khoản. Chỉ cần tải lên và tải xuống.</p>
-                    <ul class="choice-features">
-                    <li>Hoạt động trên mọi thiết bị &amp; hệ điều hành</li>
-                    <li>Chế độ đầy đủ màu sắc &amp; trắng đen</li>
-                    <li>Xem trước SVG trực tiếp</li>
-                    <li>Chế độ cài sẵn: trắng &amp; đen, Áp phích, Ảnh</li>
-                    <li>Tùy chỉnh thông số nâng cao</li>
-                    </ul>
-                    <a href="/online/" class="choice-cta">Sử dụng Công cụ Trực tuyến →</a>
+                        <div class="choice-card offline">
+                            <div class="choice-icon">💻</div>
+                            <span class="choice-tag">Windows &amp; Linux</span>
+                            <h2>Ứng dụng Máy tính bàn</h2>
+                            <p>Cài đặt một lần và chuyển đổi tệp hoàn toàn ngoại tuyến. Hình ảnh của bạn không bao giờ rời khỏi máy tính - lý tưởng cho các công việc nhạy cảm hoặc chuyên nghiệp.</p>
+                            <ul class="choice-features">
+                                <li>100% ngoại tuyến - không cần internet</li>
+                                <li>Tệp không bao giờ được tải lên bất cứ đâu</li>
+                                <li>Không giới hạn kích thước tệp</li>
+                                <li>Chế độ tập trung để sử dụng không bị phân tâm</li>
+                                <li>Cùng chế độ xem trước &amp; cài sẵn trực tiếp</li>
+                            </ul>
+                            <a href="/offline/" class="choice-cta">Tải Ứng dụng Máy tính bàn →</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="choice-card offline">
-                    <div class="choice-icon">💻</div>
-                    <span class="choice-tag">Windows &amp; Linux</span>
-                    <h2>Ứng dụng Máy tính bàn</h2>
-                    <p>Cài đặt một lần và chuyển đổi tệp hoàn toàn ngoại tuyến. Hình ảnh của bạn không bao giờ rời khỏi máy tính - lý tưởng cho các công việc nhạy cảm hoặc chuyên nghiệp.</p>
-                    <ul class="choice-features">
-                    <li>100% ngoại tuyến - không cần internet</li>
-                    <li>Tệp không bao giờ được tải lên bất cứ đâu</li>
-                    <li>Không giới hạn kích thước tệp</li>
-                    <li>Chế độ tập trung để sử dụng không bị phân tâm</li>
-                    <li>Cùng chế độ xem trước &amp; cài sẵn trực tiếp</li>
-                    </ul>
-                    <a href="/offline/" class="choice-cta">Tải Ứng dụng Máy tính bàn →</a>
-                </div>
-
-                </div>
-            </div>
             </section>
-
             <section class="section donate-section">
     <div class="container">
         <h3>Hỗ trợ phát triển mã nguồn mở</h3>
@@ -275,21 +274,13 @@
         <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Quyên góp qua PayPal</a>
     </div>
 </section>
-            
         </main>
-
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

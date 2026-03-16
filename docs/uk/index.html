@@ -74,7 +74,10 @@
         <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
         <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/home_style.css">
+        <link rel="stylesheet" href="../assets/components.css">
+        <link rel="stylesheet" href="../assets/footer.css">
+        <link rel="stylesheet" href="../assets/donate.css">
+        <link rel="stylesheet" href="../assets/home.css">
         <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
         <!-- Schema.org Structured Data -->
@@ -178,96 +181,92 @@
 
     </div>
 </nav> 
-
         <main>
             <!-- Hero -->
             <section class="home-hero">
-            <div class="container">
-                <h1>Конвертуйте зображення у <span>SVG</span><br>Безкоштовно &amp; Open Source</h1>
-                <p class="hero-sub">PixelToPath перетворює зображення PNG, JPG, BMP та WebP на масштабовану векторну графіку — з повною підтримкою кольору, попереднім переглядом та без водяних знаків.</p>
-                <div class="formats-row">
-                <span class="fmt in">PNG</span>
-                <span class="fmt in">JPG</span>
-                <span class="fmt in">BMP</span>
-                <span class="fmt in">WebP</span>
-                <span class="fmt-arrow">→</span>
-                <span class="fmt out">SVG</span>
+                <div class="container">
+                    <h1 class="c-dark">Конвертуйте зображення у <span>SVG</span><br>Безкоштовно &amp; Open Source</h1>
+                    <p class="hero-sub c-gray">PixelToPath перетворює зображення PNG, JPG, BMP та WebP на масштабовану векторну графіку — з повною підтримкою кольору, попереднім переглядом та без водяних знаків.</p>
+                    <div class="formats-row">
+                        <span class="fmt in">PNG</span>
+                        <span class="fmt in">JPG</span>
+                        <span class="fmt in">BMP</span>
+                        <span class="fmt in">WebP</span>
+                        <span class="fmt-arrow">→</span>
+                        <span class="fmt out">SVG</span>
+                    </div>
+                    <div class="badges" id="home__badges">
+                        <span class="badge accent">✓ 100% безкоштовно</span>
+                        <span class="badge">Без реєстрації</span>
+                        <span class="badge">Без водяних знаків</span>
+                        <span class="badge">Повна підтримка кольору</span>
+                        <span class="badge">Open source - MIT</span>
+                    </div>
                 </div>
-                <div class="trust-pills">
-                <span class="pill orange">✓ 100% безкоштовно</span>
-                <span class="pill">Без реєстрації</span>
-                <span class="pill">Без водяних знаків</span>
-                <span class="pill">Повна підтримка кольору</span>
-                <span class="pill">Open source - MIT</span>
-                </div>
-            </div>
             </section>
 
             <!-- Feature strip -->
-            <div class="feature-strip">
-            <div class="fs-item">
-                <div class="fs-icon">🎨</div>
-                <h3>Повна підтримка кольору</h3>
-                <p>На базі VTracer - не лише чорно-біле</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">⚡</div>
-                <h3>Попередній перегляд</h3>
-                <p>SVG оновлюється під час зміни налаштувань</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">🔒</div>
-                <h3>Конфіденційність</h3>
-                <p>Десктоп: файли ніколи не залишають ваш пристрій</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">♾️</div>
-                <h3>Без обмежень</h3>
-                <p>Необмежена конвертація, завжди безкоштовно</p>
-            </div>
-            </div>
+            <section class="feature-strip">
+                <div class="fs-item">
+                    <div class="fs-icon">🎨</div>
+                    <h3>Повна підтримка кольору</h3>
+                    <p>На базі VTracer - не лише чорно-біле</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">⚡</div>
+                    <h3>Попередній перегляд</h3>
+                    <p>SVG оновлюється під час зміни налаштувань</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">🔒</div>
+                    <h3>Конфіденційність</h3>
+                    <p>Десктоп: файли ніколи не залишають ваш пристрій</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">♾️</div>
+                    <h3>Без обмежень</h3>
+                    <p>Необмежена конвертація, завжди безкоштовно</p>
+                </div>
+            </section>
 
             <!-- Choice -->
             <section class="choice-section">
-            <div class="container">
-                <h2 class="section-title">Оберіть свою версію</h2>
-                <p class="choice-subtitle">Той самий потужний рушій - виберіть формат для вашої роботи.</p>
-                <div class="choice-grid">
+                <div class="container">
+                    <h2 class="section-title">Оберіть свою версію</h2>
+                    <p class="choice-subtitle">Той самий потужний рушій - виберіть формат для вашої роботи.</p>
+                    <div class="choice-grid">
+                        <div class="choice-card online">
+                            <div class="choice-icon">🌐</div>
+                            <span class="choice-tag">Не потребує встановлення</span>
+                            <h2>Онлайн-інструмент</h2>
+                            <p>Конвертуйте зображення прямо у браузері. Не потрібно нічого встановлювати чи створювати акаунт. Просто завантажте і збережіть.</p>
+                            <ul class="choice-features">
+                                <li>Працює на будь-якому пристрої &amp; ОС</li>
+                                <li>Повноколірний &amp; чорно-білий режими</li>
+                                <li>Попередній перегляд SVG наживо</li>
+                                <li>Пресети: чорно-біле, Постер, Фото</li>
+                                <li>Розширене налаштування параметрів</li>
+                            </ul>
+                            <a href="/online/" class="choice-cta">Використовувати онлайн →</a>
+                        </div>
 
-                <div class="choice-card online">
-                    <div class="choice-icon">🌐</div>
-                    <span class="choice-tag">Не потребує встановлення</span>
-                    <h2>Онлайн-інструмент</h2>
-                    <p>Конвертуйте зображення прямо у браузері. Не потрібно нічого встановлювати чи створювати акаунт. Просто завантажте і збережіть.</p>
-                    <ul class="choice-features">
-                    <li>Працює на будь-якому пристрої &amp; ОС</li>
-                    <li>Повноколірний &amp; чорно-білий режими</li>
-                    <li>Попередній перегляд SVG наживо</li>
-                    <li>Пресети: чорно-біле, Постер, Фото</li>
-                    <li>Розширене налаштування параметрів</li>
-                    </ul>
-                    <a href="/online/" class="choice-cta">Використовувати онлайн →</a>
+                        <div class="choice-card offline">
+                            <div class="choice-icon">💻</div>
+                            <span class="choice-tag">Windows &amp; Linux</span>
+                            <h2>Десктопний додаток</h2>
+                            <p>Встановіть один раз і конвертуйте файли повністю офлайн. Ваші зображення не залишають комп'ютер — ідеально для конфіденційної або професійної роботи.</p>
+                            <ul class="choice-features">
+                                <li>100% офлайн - інтернет не потрібен</li>
+                                <li>Файли нікуди не завантажуються</li>
+                                <li>Без обмежень розміру файлу</li>
+                                <li>Режим фокусування без відволікань</li>
+                                <li>Ті ж пресети &amp; попередній перегляд</li>
+                            </ul>
+                            <a href="/offline/" class="choice-cta">Завантажити додаток →</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="choice-card offline">
-                    <div class="choice-icon">💻</div>
-                    <span class="choice-tag">Windows &amp; Linux</span>
-                    <h2>Десктопний додаток</h2>
-                    <p>Встановіть один раз і конвертуйте файли повністю офлайн. Ваші зображення не залишають комп'ютер — ідеально для конфіденційної або професійної роботи.</p>
-                    <ul class="choice-features">
-                    <li>100% офлайн - інтернет не потрібен</li>
-                    <li>Файли нікуди не завантажуються</li>
-                    <li>Без обмежень розміру файлу</li>
-                    <li>Режим фокусування без відволікань</li>
-                    <li>Ті ж пресети &amp; попередній перегляд</li>
-                    </ul>
-                    <a href="/offline/" class="choice-cta">Завантажити додаток →</a>
-                </div>
-
-                </div>
-            </div>
             </section>
-
             <section class="section donate-section">
     <div class="container">
         <h3>Підтримайте розробку Open Source</h3>
@@ -275,21 +274,13 @@
         <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Пожертвувати через PayPal</a>
     </div>
 </section>
-            
         </main>
-
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

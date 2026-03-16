@@ -74,7 +74,10 @@
         <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
         <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/home_style.css">
+        <link rel="stylesheet" href="../assets/components.css">
+        <link rel="stylesheet" href="../assets/footer.css">
+        <link rel="stylesheet" href="../assets/donate.css">
+        <link rel="stylesheet" href="../assets/home.css">
         <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
         <!-- Schema.org Structured Data -->
@@ -178,96 +181,92 @@
 
     </div>
 </nav> 
-
         <main>
             <!-- Hero -->
             <section class="home-hero">
-            <div class="container">
-                <h1>画像を<span>SVG</span>に変換<br>無料 &amp; オープンソース</h1>
-                <p class="hero-sub">PixelToPathは、PNG、JPG、BMP、WebP画像をスケーラブルなベクターグラフィックスに変換します。フルカラー対応、ライブプレビュー、ウォーターマークなし。</p>
-                <div class="formats-row">
-                <span class="fmt in">PNG</span>
-                <span class="fmt in">JPG</span>
-                <span class="fmt in">BMP</span>
-                <span class="fmt in">WebP</span>
-                <span class="fmt-arrow">→</span>
-                <span class="fmt out">SVG</span>
+                <div class="container">
+                    <h1 class="c-dark">画像を<span>SVG</span>に変換<br>無料 &amp; オープンソース</h1>
+                    <p class="hero-sub c-gray">PixelToPathは、PNG、JPG、BMP、WebP画像をスケーラブルなベクターグラフィックスに変換します。フルカラー対応、ライブプレビュー、ウォーターマークなし。</p>
+                    <div class="formats-row">
+                        <span class="fmt in">PNG</span>
+                        <span class="fmt in">JPG</span>
+                        <span class="fmt in">BMP</span>
+                        <span class="fmt in">WebP</span>
+                        <span class="fmt-arrow">→</span>
+                        <span class="fmt out">SVG</span>
+                    </div>
+                    <div class="badges" id="home__badges">
+                        <span class="badge accent">✓ 100% 無料</span>
+                        <span class="badge">登録不要</span>
+                        <span class="badge">ウォーターマークなし</span>
+                        <span class="badge">フルカラー対応</span>
+                        <span class="badge">オープンソース - MIT</span>
+                    </div>
                 </div>
-                <div class="trust-pills">
-                <span class="pill orange">✓ 100% 無料</span>
-                <span class="pill">登録不要</span>
-                <span class="pill">ウォーターマークなし</span>
-                <span class="pill">フルカラー対応</span>
-                <span class="pill">オープンソース - MIT</span>
-                </div>
-            </div>
             </section>
 
             <!-- Feature strip -->
-            <div class="feature-strip">
-            <div class="fs-item">
-                <div class="fs-icon">🎨</div>
-                <h3>フルカラー対応</h3>
-                <p>VTracer搭載 - 白黒だけではありません</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">⚡</div>
-                <h3>ライブプレビュー</h3>
-                <p>設定を調整するとSVGが更新されます</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">🔒</div>
-                <h3>プライバシー第一</h3>
-                <p>デスクトップ：ファイルがデバイスから送信されることはありません</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">♾️</div>
-                <h3>制限なし</h3>
-                <p>無制限の変換、永久に無料</p>
-            </div>
-            </div>
+            <section class="feature-strip">
+                <div class="fs-item">
+                    <div class="fs-icon">🎨</div>
+                    <h3>フルカラー対応</h3>
+                    <p>VTracer搭載 - 白黒だけではありません</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">⚡</div>
+                    <h3>ライブプレビュー</h3>
+                    <p>設定を調整するとSVGが更新されます</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">🔒</div>
+                    <h3>プライバシー第一</h3>
+                    <p>デスクトップ：ファイルがデバイスから送信されることはありません</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">♾️</div>
+                    <h3>制限なし</h3>
+                    <p>無制限の変換、永久に無料</p>
+                </div>
+            </section>
 
             <!-- Choice -->
             <section class="choice-section">
-            <div class="container">
-                <h2 class="section-title">バージョンを選択</h2>
-                <p class="choice-subtitle">同じ強力なエンジン - ワークフローに合った形式を選択してください。</p>
-                <div class="choice-grid">
+                <div class="container">
+                    <h2 class="section-title">バージョンを選択</h2>
+                    <p class="choice-subtitle">同じ強力なエンジン - ワークフローに合った形式を選択してください。</p>
+                    <div class="choice-grid">
+                        <div class="choice-card online">
+                            <div class="choice-icon">🌐</div>
+                            <span class="choice-tag">インストール不要</span>
+                            <h2>オンラインツール</h2>
+                            <p>ブラウザで直接画像を変換します。インストールするものやアカウントは必要ありません。アップロードしてダウンロードするだけです。</p>
+                            <ul class="choice-features">
+                                <li>任意のデバイス &amp; OSで動作</li>
+                                <li>フルカラー &amp; 白黒モード</li>
+                                <li>ライブSVGプレビュー</li>
+                                <li>プリセットモード：白黒、ポスター、写真</li>
+                                <li>高度なパラメータチューニング</li>
+                            </ul>
+                            <a href="/online/" class="choice-cta">オンラインツールを使用 →</a>
+                        </div>
 
-                <div class="choice-card online">
-                    <div class="choice-icon">🌐</div>
-                    <span class="choice-tag">インストール不要</span>
-                    <h2>オンラインツール</h2>
-                    <p>ブラウザで直接画像を変換します。インストールするものやアカウントは必要ありません。アップロードしてダウンロードするだけです。</p>
-                    <ul class="choice-features">
-                    <li>任意のデバイス &amp; OSで動作</li>
-                    <li>フルカラー &amp; 白黒モード</li>
-                    <li>ライブSVGプレビュー</li>
-                    <li>プリセットモード：白黒、ポスター、写真</li>
-                    <li>高度なパラメータチューニング</li>
-                    </ul>
-                    <a href="/online/" class="choice-cta">オンラインツールを使用 →</a>
+                        <div class="choice-card offline">
+                            <div class="choice-icon">💻</div>
+                            <span class="choice-tag">Windows &amp; Linux</span>
+                            <h2>デスクトップアプリ</h2>
+                            <p>一度インストールすれば、完全にオフラインでファイルを変換できます。画像がコンピュータから送信されることはなく、機密性の高い作業やプロの作業に最適です。</p>
+                            <ul class="choice-features">
+                                <li>100%オフライン - インターネット不要</li>
+                                <li>ファイルがどこかにアップロードされることはありません</li>
+                                <li>ファイルサイズの制限なし</li>
+                                <li>気を散らすことなく使用できるフォーカスモード</li>
+                                <li>同じライブプレビュー &amp; プリセット</li>
+                            </ul>
+                            <a href="/offline/" class="choice-cta">デスクトップアプリをダウンロード →</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="choice-card offline">
-                    <div class="choice-icon">💻</div>
-                    <span class="choice-tag">Windows &amp; Linux</span>
-                    <h2>デスクトップアプリ</h2>
-                    <p>一度インストールすれば、完全にオフラインでファイルを変換できます。画像がコンピュータから送信されることはなく、機密性の高い作業やプロの作業に最適です。</p>
-                    <ul class="choice-features">
-                    <li>100%オフライン - インターネット不要</li>
-                    <li>ファイルがどこかにアップロードされることはありません</li>
-                    <li>ファイルサイズの制限なし</li>
-                    <li>気を散らすことなく使用できるフォーカスモード</li>
-                    <li>同じライブプレビュー &amp; プリセット</li>
-                    </ul>
-                    <a href="/offline/" class="choice-cta">デスクトップアプリをダウンロード →</a>
-                </div>
-
-                </div>
-            </div>
             </section>
-
             <section class="section donate-section">
     <div class="container">
         <h3>オープンソース開発をサポートする</h3>
@@ -275,21 +274,13 @@
         <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ PayPalで寄付する</a>
     </div>
 </section>
-            
         </main>
-
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

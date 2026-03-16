@@ -74,7 +74,10 @@
         <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
         <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/home_style.css">
+        <link rel="stylesheet" href="../assets/components.css">
+        <link rel="stylesheet" href="../assets/footer.css">
+        <link rel="stylesheet" href="../assets/donate.css">
+        <link rel="stylesheet" href="../assets/home.css">
         <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
         <!-- Schema.org Structured Data -->
@@ -178,96 +181,92 @@
 
     </div>
 </nav> 
-
         <main>
             <!-- Hero -->
             <section class="home-hero">
-            <div class="container">
-                <h1>ছবিগুলিকে <span>SVG</span>-তে রূপান্তর করুন<br>বিনামূল্যে &amp; ওপেন সোর্স</h1>
-                <p class="hero-sub">PixelToPath PNG, JPG, BMP এবং WebP ছবিগুলিকে স্কেলেবল ভেক্টর গ্রাফিক্সে রূপান্তরিত করে - ফুল কালার সাপোর্ট, লাইভ প্রিভিউ এবং জিরো ওয়াটারমার্ক সহ।</p>
-                <div class="formats-row">
-                <span class="fmt in">PNG</span>
-                <span class="fmt in">JPG</span>
-                <span class="fmt in">BMP</span>
-                <span class="fmt in">WebP</span>
-                <span class="fmt-arrow">→</span>
-                <span class="fmt out">SVG</span>
+                <div class="container">
+                    <h1 class="c-dark">ছবিগুলিকে <span>SVG</span>-তে রূপান্তর করুন<br>বিনামূল্যে &amp; ওপেন সোর্স</h1>
+                    <p class="hero-sub c-gray">PixelToPath PNG, JPG, BMP এবং WebP ছবিগুলিকে স্কেলেবল ভেক্টর গ্রাফিক্সে রূপান্তরিত করে - ফুল কালার সাপোর্ট, লাইভ প্রিভিউ এবং জিরো ওয়াটারমার্ক সহ।</p>
+                    <div class="formats-row">
+                        <span class="fmt in">PNG</span>
+                        <span class="fmt in">JPG</span>
+                        <span class="fmt in">BMP</span>
+                        <span class="fmt in">WebP</span>
+                        <span class="fmt-arrow">→</span>
+                        <span class="fmt out">SVG</span>
+                    </div>
+                    <div class="badges" id="home__badges">
+                        <span class="badge accent">✓ ১০০% বিনামূল্যে</span>
+                        <span class="badge">কোনো রেজিস্ট্রেশন নেই</span>
+                        <span class="badge">কোনো ওয়াটারমার্ক নেই</span>
+                        <span class="badge">ফুল কালার সাপোর্ট</span>
+                        <span class="badge">ওপেন সোর্স - MIT</span>
+                    </div>
                 </div>
-                <div class="trust-pills">
-                <span class="pill orange">✓ ১০০% বিনামূল্যে</span>
-                <span class="pill">কোনো রেজিস্ট্রেশন নেই</span>
-                <span class="pill">কোনো ওয়াটারমার্ক নেই</span>
-                <span class="pill">ফুল কালার সাপোর্ট</span>
-                <span class="pill">ওপেন সোর্স - MIT</span>
-                </div>
-            </div>
             </section>
 
             <!-- Feature strip -->
-            <div class="feature-strip">
-            <div class="fs-item">
-                <div class="fs-icon">🎨</div>
-                <h3>ফুল কালার সাপোর্ট</h3>
-                <p>VTracer দ্বারা চালিত - শুধুমাত্র সাদাকালো নয়</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">⚡</div>
-                <h3>লাইভ প্রিভিউ</h3>
-                <p>আপনি সেটিংস পরিবর্তন করার সাথে সাথে SVG আপডেট হয়</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">🔒</div>
-                <h3>গোপনীয়তা প্রথমে</h3>
-                <p>ডেস্কটপ: ফাইলগুলি কখনও আপনার ডিভাইস ছেড়ে যায় না</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">♾️</div>
-                <h3>কোনো সীমা নেই</h3>
-                <p>আনলিমিটেড রূপান্তর, চিরতরে বিনামূল্যে</p>
-            </div>
-            </div>
+            <section class="feature-strip">
+                <div class="fs-item">
+                    <div class="fs-icon">🎨</div>
+                    <h3>ফুল কালার সাপোর্ট</h3>
+                    <p>VTracer দ্বারা চালিত - শুধুমাত্র সাদাকালো নয়</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">⚡</div>
+                    <h3>লাইভ প্রিভিউ</h3>
+                    <p>আপনি সেটিংস পরিবর্তন করার সাথে সাথে SVG আপডেট হয়</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">🔒</div>
+                    <h3>গোপনীয়তা প্রথমে</h3>
+                    <p>ডেস্কটপ: ফাইলগুলি কখনও আপনার ডিভাইস ছেড়ে যায় না</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">♾️</div>
+                    <h3>কোনো সীমা নেই</h3>
+                    <p>আনলিমিটেড রূপান্তর, চিরতরে বিনামূল্যে</p>
+                </div>
+            </section>
 
             <!-- Choice -->
             <section class="choice-section">
-            <div class="container">
-                <h2 class="section-title">আপনার সংস্করণ চয়ন করুন</h2>
-                <p class="choice-subtitle">একই শক্তিশালী ইঞ্জিন - আপনার কাজের প্রবাহের সাথে মানানসই ফর্ম্যাটটি বেছে নিন।</p>
-                <div class="choice-grid">
+                <div class="container">
+                    <h2 class="section-title">আপনার সংস্করণ চয়ন করুন</h2>
+                    <p class="choice-subtitle">একই শক্তিশালী ইঞ্জিন - আপনার কাজের প্রবাহের সাথে মানানসই ফর্ম্যাটটি বেছে নিন।</p>
+                    <div class="choice-grid">
+                        <div class="choice-card online">
+                            <div class="choice-icon">🌐</div>
+                            <span class="choice-tag">কোনো ইনস্টলেশনের প্রয়োজন নেই</span>
+                            <h2>অনলাইন টুল</h2>
+                            <p>সরাসরি আপনার ব্রাউজারে ছবিগুলি রূপান্তর করুন। ইনস্টল করার কিছু নেই, কোনো অ্যাকাউন্টের প্রয়োজন নেই। শুধু আপলোড করুন এবং ডাউনলোড করুন।</p>
+                            <ul class="choice-features">
+                                <li>যেকোনো ডিভাইস &amp; অপারেটিং সিস্টেমে কাজ করে</li>
+                                <li>ফুল কালার &amp; সাদাকালো মোড</li>
+                                <li>লাইভ SVG প্রিভিউ</li>
+                                <li>প্রিসেট মোড: সাদাকালো, পোস্টার, ছবি</li>
+                                <li>উন্নত প্যারামিটার টিউনিং</li>
+                            </ul>
+                            <a href="/online/" class="choice-cta">অনলাইন টুল ব্যবহার করুন →</a>
+                        </div>
 
-                <div class="choice-card online">
-                    <div class="choice-icon">🌐</div>
-                    <span class="choice-tag">কোনো ইনস্টলেশনের প্রয়োজন নেই</span>
-                    <h2>অনলাইন টুল</h2>
-                    <p>সরাসরি আপনার ব্রাউজারে ছবিগুলি রূপান্তর করুন। ইনস্টল করার কিছু নেই, কোনো অ্যাকাউন্টের প্রয়োজন নেই। শুধু আপলোড করুন এবং ডাউনলোড করুন।</p>
-                    <ul class="choice-features">
-                    <li>যেকোনো ডিভাইস &amp; অপারেটিং সিস্টেমে কাজ করে</li>
-                    <li>ফুল কালার &amp; সাদাকালো মোড</li>
-                    <li>লাইভ SVG প্রিভিউ</li>
-                    <li>প্রিসেট মোড: সাদাকালো, পোস্টার, ছবি</li>
-                    <li>উন্নত প্যারামিটার টিউনিং</li>
-                    </ul>
-                    <a href="/online/" class="choice-cta">অনলাইন টুল ব্যবহার করুন →</a>
+                        <div class="choice-card offline">
+                            <div class="choice-icon">💻</div>
+                            <span class="choice-tag">Windows &amp; Linux</span>
+                            <h2>ডেস্কটপ অ্যাপ</h2>
+                            <p>একবার ইনস্টল করুন এবং ফাইলগুলি সম্পূর্ণ অফলাইনে রূপান্তর করুন। আপনার ছবিগুলি কখনও আপনার কম্পিউটার ছেড়ে যায় না - সংবেদনশীল বা পেশাদার কাজের জন্য আদর্শ।</p>
+                            <ul class="choice-features">
+                                <li>১০০% অফলাইন - কোনো ইন্টারনেটের প্রয়োজন নেই</li>
+                                <li>ফাইলগুলো কখনও কোথাও আপলোড করা হয় না</li>
+                                <li>ফাইলের আকারের কোনো সীমা নেই</li>
+                                <li>বিক্ষেপমুক্ত ব্যবহারের জন্য ফোকাস মোড</li>
+                                <li>একই লাইভ প্রিভিউ &amp; প্রিসেট</li>
+                            </ul>
+                            <a href="/offline/" class="choice-cta">ডেস্কটপ অ্যাপ ডাউনলোড করুন →</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="choice-card offline">
-                    <div class="choice-icon">💻</div>
-                    <span class="choice-tag">Windows &amp; Linux</span>
-                    <h2>ডেস্কটপ অ্যাপ</h2>
-                    <p>একবার ইনস্টল করুন এবং ফাইলগুলি সম্পূর্ণ অফলাইনে রূপান্তর করুন। আপনার ছবিগুলি কখনও আপনার কম্পিউটার ছেড়ে যায় না - সংবেদনশীল বা পেশাদার কাজের জন্য আদর্শ।</p>
-                    <ul class="choice-features">
-                    <li>১০০% অফলাইন - কোনো ইন্টারনেটের প্রয়োজন নেই</li>
-                    <li>ফাইলগুলো কখনও কোথাও আপলোড করা হয় না</li>
-                    <li>ফাইলের আকারের কোনো সীমা নেই</li>
-                    <li>বিক্ষেপমুক্ত ব্যবহারের জন্য ফোকাস মোড</li>
-                    <li>একই লাইভ প্রিভিউ &amp; প্রিসেট</li>
-                    </ul>
-                    <a href="/offline/" class="choice-cta">ডেস্কটপ অ্যাপ ডাউনলোড করুন →</a>
-                </div>
-
-                </div>
-            </div>
             </section>
-
             <section class="section donate-section">
     <div class="container">
         <h3>ওপেন সোর্স ডেভেলপমেন্ট সমর্থন করুন</h3>
@@ -275,21 +274,13 @@
         <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ পেপ্যালের মাধ্যমে দান করুন</a>
     </div>
 </section>
-            
         </main>
-
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

@@ -74,7 +74,11 @@
     <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/online/" />
 
     <link rel="stylesheet" href="../../assets/style.css">
-    <link rel="stylesheet" href="../../assets/online_style.css">
+    <link rel="stylesheet" href="../../assets/components.css">
+    <link rel="stylesheet" href="../../assets/containers.css">
+    <link rel="stylesheet" href="../../assets/footer.css">
+    <link rel="stylesheet" href="../../assets/donate.css">
+    <link rel="stylesheet" href="../../assets/online.css">
     <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
     <!-- Schema.org Structured Data -->
@@ -85,10 +89,10 @@
       "name": "PixelToPath Online SVG Converter",
       "url": "https://pixel-to-path.com/online/",
       "description": "PNG, JPG, BMP veya WebP&#39;yi çevrimiçi olarak SVG&#39;ye dönüştürün — ücretsiz, anında, kayıt yok. Renkli ve siyah beyaz modlarla VTracer tarafından desteklenmektedir. Canlı önizleme.",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Any",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
     }
     </script>
 
@@ -98,10 +102,10 @@
         "@type": "HowTo",
         "name": "Ücretsiz çevrimiçi PNG&#39;den SVG&#39;ye nasıl dönüştürülür",
         "step": [
-        { "@type": "HowToStep", "name": "Resminizi yükleyin", "text": "Bir PNG, JPG, BMP veya WebP dosyası yüklemek için sürükleyip bırakın veya tıklayın. Kayıt gerekmez." },
-        { "@type": "HowToStep", "name": "Bir ön ayar seçin", "text": "Logolar ve simgeler için S&amp;B, illüstrasyonlar için Poster veya karmaşık fotoğraflar için Fotoğraf&#39;ı seçin." },
-        { "@type": "HowToStep", "name": "Sonucu canlı önizleyin", "text": "Ayarları değiştirdiğinizde SVG önizlemesi otomatik olarak güncellenir. Dönüştür&#39;e tıklamanıza gerek yok." },
-        { "@type": "HowToStep", "name": "SVG dosyanızı indirin", "text": "Vektör dosyanızı anında kaydetmek için SVG İndir düğmesine tıklayın, Illustrator, Figma veya Inkscape için hazır." }
+            { "@type": "HowToStep", "name": "Resminizi yükleyin", "text": "Bir PNG, JPG, BMP veya WebP dosyası yüklemek için sürükleyip bırakın veya tıklayın. Kayıt gerekmez." },
+            { "@type": "HowToStep", "name": "Bir ön ayar seçin", "text": "Logolar ve simgeler için S&amp;B, illüstrasyonlar için Poster veya karmaşık fotoğraflar için Fotoğraf&#39;ı seçin." },
+            { "@type": "HowToStep", "name": "Sonucu canlı önizleyin", "text": "Ayarları değiştirdiğinizde SVG önizlemesi otomatik olarak güncellenir. Dönüştür&#39;e tıklamanıza gerek yok." },
+            { "@type": "HowToStep", "name": "SVG dosyanızı indirin", "text": "Vektör dosyanızı anında kaydetmek için SVG İndir düğmesine tıklayın, Illustrator, Figma veya Inkscape için hazır." }
         ]
     }
     </script>
@@ -252,284 +256,317 @@
 
     </div>
 </nav> 
-
         <main>
-
             <!-- Hero -->
             <section class="tool-hero">
-            <div class="container">
-                <h1>Ücretsiz Çevrimiçi PNG - SVG Dönüştürücü</h1>
-                <p>Herhangi bir görüntüyü saniyeler içinde ölçeklenebilir vektör grafiklerine dönüştürün — kayıt yok, sınır yok, tam renk desteği.</p>
-                <div class="badges">
-                <span class="badge accent">✓ Sonsuza dek ücretsiz</span>
-                <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
-                <span class="badge">Canlı önizleme</span>
-                <span class="badge">Renk &amp; S&amp;B modları</span>
-                <span class="badge">Filigran yok</span>
+                <div class="container">
+                    <h1>Ücretsiz Çevrimiçi PNG - SVG Dönüştürücü</h1>
+                    <p>Herhangi bir görüntüyü saniyeler içinde ölçeklenebilir vektör grafiklerine dönüştürün — kayıt yok, sınır yok, tam renk desteği.</p>
+                    <div class="badges">
+                        <span class="badge accent">✓ Sonsuza dek ücretsiz</span>
+                        <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
+                        <span class="badge">Canlı önizleme</span>
+                        <span class="badge">Renk &amp; S&amp;B modları</span>
+                        <span class="badge">Filigran yok</span>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <!-- Converter (full width) -->
             <section class="converter-section">
-            <div class="converter-wrap">
+                <div class="converter-wrap">
 
-                <!-- Sidebar -->
-                <div class="conv-sidebar">
-                <div class="dropzone" id="dropzone">
-                    <div class="dz-hint">
-                    <span class="dz-icon">⬡</span>
-                    Bir resmi buraya bırakın<br>
-                    veya <u style="cursor:pointer;color:var(--primary)">göz atın</u>
+                    <!-- Sidebar -->
+                    <div class="conv-sidebar">
+                        <div class="dropzone" id="dropzone">
+                            <div class="dz-hint">
+                                <span class="dz-icon">⬡</span>
+                                Bir resmi buraya bırakın<br>
+                                veya <u style="cursor:pointer;color:var(--primary)">göz atın</u>
+                            </div>
+                        </div>
+                        <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
+
+                        <div class="ps">Ön Ayarlar</div>
+                        <div class="presets">
+                            <button class="preset-btn" data-preset="bw">S&amp;B</button>
+                            <button class="preset-btn active" data-preset="poster">Poster</button>
+                            <button class="preset-btn" data-preset="photo">Fotoğraf</button>
+                        </div>
+
+                        <button id="adv-toggle"><span>⚙ Gelişmiş ayarlar</span><span id="adv-arrow">▾</span></button>
+                        <div id="adv-content">
+
+                            <div class="ps">Renk Modu</div>
+                            <div class="seg" id="seg-colormode">
+                                <button class="active" data-val="color">Renk</button>
+                                <button data-val="binary">İkili (Binary)</button>
+                            </div>
+
+                            <div id="color-params">
+                                <div class="ps">Renk</div>
+                                
+                                <div class="sl-row">
+                                    <span>Renk Sayısı</span>
+                                    <span class="sl-val" id="v-num_colors">8</span>
+                                </div>
+                                <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
+
+                                <div class="sl-row">
+                                    <span>Renk Hassasiyeti</span>
+                                    <span class="sl-val" id="v-color_precision">6</span>
+                                </div>
+                                <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
+                                
+                                <div class="sl-row">
+                                    <span>Katman Farkı</span>
+                                    <span class="sl-val" id="v-layer_difference">16</span>
+                                </div>
+                                <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
+                                
+                                <div class="ps">Hiyerarşik</div>
+                                <div class="seg" id="seg-hierarchical">
+                                    <button class="active" data-val="stacked">Yığılmış</button>
+                                    <button data-val="cutout">Kesilmiş</button>
+                                </div>
+                            </div>
+
+                            <div id="binary-params" style="display:none">
+                                <div class="sw-row" style="margin-top:10px">
+                                    <div>
+                                        <div class="sw-label">Tersine Çevir</div>
+                                        <div class="sw-sub">Siyah ↔ beyaz değiştir</div>
+                                    </div>
+                                    <label class="sw">
+                                        <input type="checkbox" id="sw-invert">
+                                        <span class="sw-track"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="ps">Eğri Uydurma</div>
+                            <div class="seg" id="seg-mode">
+                                <button data-val="none">Piksel</button>
+                                <button data-val="polygon">Çokgen</button>
+                                <button class="active" data-val="spline">Spline</button>
+                            </div>
+
+                            <div class="sl-row">
+                                <span>Benek Filtresi</span>
+                                <span class="sl-val" id="v-filter_speckle">4</span>
+                            </div>
+                            <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
+
+                            <div class="sl-row">
+                                <span>Köşe Eşiği</span>
+                                <span class="sl-val" id="v-corner_threshold">60</span>
+                            </div>
+                            <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
+
+                            <div class="sl-row">
+                                <span>Uzunluk Eşiği</span>
+                                <span class="sl-val" id="v-length_threshold">4.0</span>
+                            </div>
+                            
+                            <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
+                            
+                            <div class="sl-row">
+                                <span>Ekleme Eşiği</span>
+                                <span class="sl-val" id="v-splice_threshold">45</span>
+                            </div>
+                            <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
+                        </div>
                     </div>
+
+                    <!-- Preview -->
+                    <div class="conv-preview">
+                        <div class="preview-header">
+                            <span class="preview-title">SVG Önizleme</span>
+                            <div class="live-badge">
+                                <div class="live-dot" id="live-dot"></div>
+                                <span id="live-text">canlı</span>
+                            </div>
+                        </div>
+
+                        <div class="preview-body">
+                            <div id="preview-svg-container">
+                                <div class="preview-placeholder" id="placeholder">
+                                    <span class="preview-placeholder-icon">⬡</span>
+                                    <p>Başlamak için bir resim yükleyin</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="preview-footer">
+                            <div id="status">Hazır</div>
+                            <button id="btn-dl" disabled>↓ SVG İndir</button>
+                        </div>
+
+                        <div class="conv-overlay" id="overlay">
+                            <div class="spinner"></div>
+                            <div class="overlay-text" id="overlay-text">Dönüştürülüyor...</div>
+                        </div>
+                    </div>
+
                 </div>
-                <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
-
-                <div class="ps">Ön Ayarlar</div>
-                <div class="presets">
-                    <button class="preset-btn" data-preset="bw">S&amp;B</button>
-                    <button class="preset-btn active" data-preset="poster">Poster</button>
-                    <button class="preset-btn" data-preset="photo">Fotoğraf</button>
-                </div>
-
-                <button id="adv-toggle"><span>⚙ Gelişmiş ayarlar</span><span id="adv-arrow">▾</span></button>
-                <div id="adv-content">
-
-                    <div class="ps">Renk Modu</div>
-                    <div class="seg" id="seg-colormode">
-                    <button class="active" data-val="color">Renk</button>
-                    <button data-val="binary">İkili (Binary)</button>
-                    </div>
-
-                    <div id="color-params">
-                    <div class="ps">Renk</div>
-                    <div class="sl-row"><span>Renk Sayısı</span><span class="sl-val" id="v-num_colors">8</span></div>
-                    <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
-                    <div class="sl-row"><span>Renk Hassasiyeti</span><span class="sl-val" id="v-color_precision">6</span></div>
-                    <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
-                    <div class="sl-row"><span>Katman Farkı</span><span class="sl-val" id="v-layer_difference">16</span></div>
-                    <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
-                    <div class="ps">Hiyerarşik</div>
-                    <div class="seg" id="seg-hierarchical">
-                        <button class="active" data-val="stacked">Yığılmış</button>
-                        <button data-val="cutout">Kesilmiş</button>
-                    </div>
-                    </div>
-
-                    <div id="binary-params" style="display:none">
-                    <div class="sw-row" style="margin-top:10px">
-                        <div><div class="sw-label">Tersine Çevir</div><div class="sw-sub">Siyah ↔ beyaz değiştir</div></div>
-                        <label class="sw"><input type="checkbox" id="sw-invert"><span class="sw-track"></span></label>
-                    </div>
-                    </div>
-
-                    <div class="ps">Eğri Uydurma</div>
-                    <div class="seg" id="seg-mode">
-                    <button data-val="none">Piksel</button>
-                    <button data-val="polygon">Çokgen</button>
-                    <button class="active" data-val="spline">Spline</button>
-                    </div>
-
-                    <div class="sl-row"><span>Benek Filtresi</span><span class="sl-val" id="v-filter_speckle">4</span></div>
-                    <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
-                    <div class="sl-row"><span>Köşe Eşiği</span><span class="sl-val" id="v-corner_threshold">60</span></div>
-                    <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
-                    <div class="sl-row"><span>Uzunluk Eşiği</span><span class="sl-val" id="v-length_threshold">4.0</span></div>
-                    <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
-                    <div class="sl-row"><span>Ekleme Eşiği</span><span class="sl-val" id="v-splice_threshold">45</span></div>
-                    <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
-                </div>
-                </div>
-
-                <!-- Preview -->
-                <div class="conv-preview">
-                <div class="preview-header">
-                    <span class="preview-title">SVG Önizleme</span>
-                    <div class="live-badge">
-                    <div class="live-dot" id="live-dot"></div>
-                    <span id="live-text">canlı</span>
-                    </div>
-                </div>
-
-                <div class="preview-body">
-                    <div id="preview-svg-container">
-                    <div class="preview-placeholder" id="placeholder">
-                        <span class="preview-placeholder-icon">⬡</span>
-                        <p>Başlamak için bir resim yükleyin</p>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="preview-footer">
-                    <div id="status">Hazır</div>
-                    <button id="btn-dl" disabled>↓ SVG İndir</button>
-                </div>
-
-                <div class="conv-overlay" id="overlay">
-                    <div class="spinner"></div>
-                    <div class="overlay-text" id="overlay-text">Dönüştürülüyor...</div>
-                </div>
-                </div>
-
-            </div><!-- /converter-wrap -->
             </section>
 
             <!-- ── HOW IT WORKS ── -->
             <section class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">Nasıl Çalışır</h2>
-                <p class="section-intro">Kurulum yok, hesap yok. Yükleyin, önizleyin, indirin — 10 saniyenin altında.</p>
-                <div class="grid-3">
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
-                    <h3>1. Yükle</h3>
-                    <p>PNG, JPG, BMP veya WebP yüklemek için sürükleyip bırakın veya tıklayın. Panodan yapıştırma da çalışır.</p>
+                <div class="container">
+                    <h2 class="section-title">Nasıl Çalışır</h2>
+                    <p class="section-intro">Kurulum yok, hesap yok. Yükleyin, önizleyin, indirin — 10 saniyenin altında.</p>
+                    <div class="grid-3">
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
+                            <h3>1. Yükle</h3>
+                            <p>PNG, JPG, BMP veya WebP yüklemek için sürükleyip bırakın veya tıklayın. Panodan yapıştırma da çalışır.</p>
+                        </div>
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
+                            <h3>2. Canlı önizleme</h3>
+                            <p>Ayarları değiştirdikçe SVG otomatik güncellenir. Dönüştür butonuna basmaya gerek yok.</p>
+                        </div>
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
+                            <h3>3. İndir</h3>
+                            <p>Vektör dosyanızı almak için SVG İndir'e tıklayın. Illustrator, Inkscape veya Figma'da açın.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
-                    <h3>2. Canlı önizleme</h3>
-                    <p>Ayarları değiştirdikçe SVG otomatik güncellenir. Dönüştür butonuna basmaya gerek yok.</p>
-                </div>
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
-                    <h3>3. İndir</h3>
-                    <p>Vektör dosyanızı almak için SVG İndir'e tıklayın. Illustrator, Inkscape veya Figma'da açın.</p>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── PRESETS EXPLAINED ── -->
             <section class="section">
-            <div class="container">
-                <h2 class="section-title">Hangi Ön Ayarı Kullanmalısınız?</h2>
-                <p class="section-intro">PixelToPath resminizin doğasına göre üç optimize edilmiş ön ayar sunar.</p>
-                <div class="preset-explain-grid">
-                <div class="preset-explain-card bw">
-                    <h3><span class="preset-label">S&B</span> Siyah &amp; Beyaz</h3>
-                    <p>Görüntüyü izlemeden önce gri tonlamaya dönüştürür. Şunlar için en iyisi:</p>
-                    <ul>
-                    <li>Logolar ve markalar</li>
-                    <li>Simgeler ve piktogramlar</li>
-                    <li>Çizgi film ve eskizler</li>
-                    <li>Vinil kesim ve lazer kazıma</li>
-                    </ul>
+                <div class="container">
+                    <h2 class="section-title">Hangi Ön Ayarı Kullanmalısınız?</h2>
+                    <p class="section-intro">PixelToPath resminizin doğasına göre üç optimize edilmiş ön ayar sunar.</p>
+                    <div class="preset-explain-grid">
+                        <div class="preset-explain-card bw">
+                            <h3><span class="preset-label">S&B</span> Siyah &amp; Beyaz</h3>
+                            <p>Görüntüyü izlemeden önce gri tonlamaya dönüştürür. Şunlar için en iyisi:</p>
+                            <ul>
+                                <li>Logolar ve markalar</li>
+                                <li>Simgeler ve piktogramlar</li>
+                                <li>Çizgi film ve eskizler</li>
+                                <li>Vinil kesim ve lazer kazıma</li>
+                            </ul>
+                        </div>
+                        <div class="preset-explain-card poster">
+                            <h3><span class="preset-label">Poster</span> Düz renk</h3>
+                            <p>Yüksek hassasiyetle üst üste yığılmış çoklu renk katmanları oluşturur. Şunlar için en iyisi:</p>
+                            <ul>
+                                <li>Düz illüstrasyonlar ve karikatürler</li>
+                                <li>İnfografikler ve diyagramlar</li>
+                                <li>Küçük resimler (Clipart)</li>
+                                <li>Belirgin renklere sahip dijital çizimler</li>
+                            </ul>
+                        </div>
+                        <div class="preset-explain-card photo">
+                            <h3><span class="preset-label">Fotoğraf</span> Fotoğraflar</h3>
+                            <p>Gerçek fotoğraflar için daha geniş renk gruplaması kullanır. Şunlar için en iyisi:</p>
+                            <ul>
+                                <li>Portreler ve yüzler</li>
+                                <li>Manzara fotoğrafları</li>
+                                <li>Ürün fotoğrafları</li>
+                                <li>Gradyanlı karmaşık görüntüler</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="preset-explain-card poster">
-                    <h3><span class="preset-label">Poster</span> Düz renk</h3>
-                    <p>Yüksek hassasiyetle üst üste yığılmış çoklu renk katmanları oluşturur. Şunlar için en iyisi:</p>
-                    <ul>
-                    <li>Düz illüstrasyonlar ve karikatürler</li>
-                    <li>İnfografikler ve diyagramlar</li>
-                    <li>Küçük resimler (Clipart)</li>
-                    <li>Belirgin renklere sahip dijital çizimler</li>
-                    </ul>
-                </div>
-                <div class="preset-explain-card photo">
-                    <h3><span class="preset-label">Fotoğraf</span> Fotoğraflar</h3>
-                    <p>Gerçek fotoğraflar için daha geniş renk gruplaması kullanır. Şunlar için en iyisi:</p>
-                    <ul>
-                    <li>Portreler ve yüzler</li>
-                    <li>Manzara fotoğrafları</li>
-                    <li>Ürün fotoğrafları</li>
-                    <li>Gradyanlı karmaşık görüntüler</li>
-                    </ul>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── USE CASES ── -->
             <section class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">SVG'niz İle Ne Yapabilirsiniz?</h2>
-                <p class="section-intro">PixelToPath dosyaları tamamen standarttır ve her yerde çalışır.</p>
-                <div class="use-cases-grid">
-                <div class="use-case-card">
-                    <div class="uc-icon">🎨</div>
-                    <h3>Figma veya Illustrator'da düzenleyin</h3>
-                    <p>Tasarım aracınıza aktarın. Her şekil tam olarak düzenlenebilir yollardır.</p>
+                <div class="container">
+                    <h2 class="section-title">SVG'niz İle Ne Yapabilirsiniz?</h2>
+                    <p class="section-intro">PixelToPath dosyaları tamamen standarttır ve her yerde çalışır.</p>
+                    <div class="use-cases-grid">
+                        <div class="use-case-card">
+                            <div class="uc-icon">🎨</div>
+                            <h3>Figma veya Illustrator'da düzenleyin</h3>
+                            <p>Tasarım aracınıza aktarın. Her şekil tam olarak düzenlenebilir yollardır.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🌐</div>
+                            <h3>Web sitelerinde kullanın</h3>
+                            <p><code>&lt;img&gt;</code> etiketleri olarak kullanın veya CSS ile şekillendirin.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🖨️</div>
+                            <h3>Her boyutta yazdırın</h3>
+                            <p>Kartvizitten reklam panosuna kadar her boyutta mükemmel sonuçlar alın.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">✂️</div>
+                            <h3>Lazer kesim &amp; vinil çizim</h3>
+                            <p>LightBurn, Cricut Design Space veya RDWorks'e aktarın.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">💻</div>
+                            <h3>Uygulama &amp; web simgeleri</h3>
+                            <p>16px'den 512px'e kalite kaybı olmadan ölçeklendirin.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🎞️</div>
+                            <h3>CSS &amp; JS ile animasyonlar</h3>
+                            <p>Statik PNG'nizi web sitenizde hareketlendirin.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🌐</div>
-                    <h3>Web sitelerinde kullanın</h3>
-                    <p><code>&lt;img&gt;</code> etiketleri olarak kullanın veya CSS ile şekillendirin.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🖨️</div>
-                    <h3>Her boyutta yazdırın</h3>
-                    <p>Kartvizitten reklam panosuna kadar her boyutta mükemmel sonuçlar alın.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">✂️</div>
-                    <h3>Lazer kesim &amp; vinil çizim</h3>
-                    <p>LightBurn, Cricut Design Space veya RDWorks'e aktarın.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">💻</div>
-                    <h3>Uygulama &amp; web simgeleri</h3>
-                    <p>16px'den 512px'e kalite kaybı olmadan ölçeklendirin.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🎞️</div>
-                    <h3>CSS &amp; JS ile animasyonlar</h3>
-                    <p>Statik PNG'nizi web sitenizde hareketlendirin.</p>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── FAQ ── -->
             <section class="section" id="faq">
-            <div class="container">
-                <h2 class="section-title">Sıkça Sorulan Sorular</h2>
-                <div class="faq-list">
-                <details class="faq-item">
-                    <summary>Bu çevrimiçi SVG dönüştürücü gerçekten sınırsız ve ücretsiz mi?</summary>
-                    <p>Evet, tamamen ücretsiz. Kayıt veya sınır yok. (MIT Lisansı).</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Bu dönüştürücü renkli resimleri destekler mi?</summary>
-                    <p>Evet. <strong>VTracer</strong> kullanıyoruz. Renk için <strong>Poster</strong> veya <strong>Fotoğraf</strong> seçin.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Yüklenen dosyalarım saklanıyor mu?</summary>
-                    <p>Hayır. İşlendikten hemen sonra silinir.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Hangi formatlar destekleniyor?</summary>
-                    <p>PNG, JPG, JPEG, BMP ve WebP (Ctrl+V ile yapıştırma dâhil).</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Maksimum dosya boyutu nedir?</summary>
-                    <p>Çevrimiçi için <strong>20 MB</strong>. Daha büyük dosyalar için <a href="#download" style="color:var(--primary)">masaüstü uygulamasını</a> indirin.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>S&B sonucu neden yanlış görünüyor?</summary>
-                    <p>Gelişmiş ayarlardan <strong>Tersine Çevir</strong> seçeneğini etkinleştirin.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Spline, Çokgen ve Piksel arasındaki fark nedir?</summary>
-                    <p><strong>Spline</strong> yumuşak eğriler, <strong>Çokgen</strong> düz çizgiler, <strong>Piksel</strong> ise piksel sanatı içindir.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Ticari projelerde kullanabilir miyim?</summary>
-                    <p>Evet, hiçbir lisans kısıtlaması yoktur.</p>
-                </details>
+                <div class="container">
+                    <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>Bu çevrimiçi SVG dönüştürücü gerçekten sınırsız ve ücretsiz mi?</summary>
+                            <p>Evet, tamamen ücretsiz. Kayıt veya sınır yok. (MIT Lisansı).</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Bu dönüştürücü renkli resimleri destekler mi?</summary>
+                            <p>Evet. <strong>VTracer</strong> kullanıyoruz. Renk için <strong>Poster</strong> veya <strong>Fotoğraf</strong> seçin.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Yüklenen dosyalarım saklanıyor mu?</summary>
+                            <p>Hayır. İşlendikten hemen sonra silinir.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Hangi formatlar destekleniyor?</summary>
+                            <p>PNG, JPG, JPEG, BMP ve WebP (Ctrl+V ile yapıştırma dâhil).</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Maksimum dosya boyutu nedir?</summary>
+                            <p>Çevrimiçi için <strong>20 MB</strong>. Daha büyük dosyalar için <a href="#download" style="color:var(--primary)">masaüstü uygulamasını</a> indirin.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>S&B sonucu neden yanlış görünüyor?</summary>
+                            <p>Gelişmiş ayarlardan <strong>Tersine Çevir</strong> seçeneğini etkinleştirin.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Spline, Çokgen ve Piksel arasındaki fark nedir?</summary>
+                            <p><strong>Spline</strong> yumuşak eğriler, <strong>Çokgen</strong> düz çizgiler, <strong>Piksel</strong> ise piksel sanatı içindir.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Ticari projelerde kullanabilir miyim?</summary>
+                            <p>Evet, hiçbir lisans kısıtlaması yoktur.</p>
+                        </details>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <!-- ── CTA desktop ── -->
             <section class="section bg-light">
-            <div class="container" style="text-align:center" id="download">
-                <h2 style="color:var(--dark);margin-bottom:1rem">Çevrimdışı Sınırsız Dönüşüme mi İhtiyacınız Var?</h2>
-                <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">Masaüstü sürüm, internet olmadan tamamen bilgisayarınızda çalışır.</p>
-                <div class="double-buttons">
-                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Windows için İndir</a>
-                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Linux için İndir</a>
+                <div class="container" style="text-align:center" id="download">
+                    <h2 style="color:var(--dark);margin-bottom:1rem">Çevrimdışı Sınırsız Dönüşüme mi İhtiyacınız Var?</h2>
+                    <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">Masaüstü sürüm, internet olmadan tamamen bilgisayarınızda çalışır.</p>
+                    <div class="double-buttons">
+                        <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Windows için İndir</a>
+                        <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Linux için İndir</a>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <section class="section donate-section">
@@ -545,15 +582,9 @@
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

@@ -74,7 +74,10 @@
         <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
         <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/home_style.css">
+        <link rel="stylesheet" href="../assets/components.css">
+        <link rel="stylesheet" href="../assets/footer.css">
+        <link rel="stylesheet" href="../assets/donate.css">
+        <link rel="stylesheet" href="../assets/home.css">
         <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
         <!-- Schema.org Structured Data -->
@@ -178,96 +181,92 @@
 
     </div>
 </nav> 
-
         <main>
             <!-- Hero -->
             <section class="home-hero">
-            <div class="container">
-                <h1>Bilder in <span>SVG</span> konvertieren<br>Kostenlos &amp; Open Source</h1>
-                <p class="hero-sub">PixelToPath wandelt PNG-, JPG-, BMP- und WebP-Bilder in skalierbare Vektorgrafiken um – mit voller Farbunterstützung, Live-Vorschau und ohne Wasserzeichen.</p>
-                <div class="formats-row">
-                <span class="fmt in">PNG</span>
-                <span class="fmt in">JPG</span>
-                <span class="fmt in">BMP</span>
-                <span class="fmt in">WebP</span>
-                <span class="fmt-arrow">→</span>
-                <span class="fmt out">SVG</span>
+                <div class="container">
+                    <h1 class="c-dark">Bilder in <span>SVG</span> konvertieren<br>Kostenlos &amp; Open Source</h1>
+                    <p class="hero-sub c-gray">PixelToPath wandelt PNG-, JPG-, BMP- und WebP-Bilder in skalierbare Vektorgrafiken um – mit voller Farbunterstützung, Live-Vorschau und ohne Wasserzeichen.</p>
+                    <div class="formats-row">
+                        <span class="fmt in">PNG</span>
+                        <span class="fmt in">JPG</span>
+                        <span class="fmt in">BMP</span>
+                        <span class="fmt in">WebP</span>
+                        <span class="fmt-arrow">→</span>
+                        <span class="fmt out">SVG</span>
+                    </div>
+                    <div class="badges" id="home__badges">
+                        <span class="badge accent">✓ 100% kostenlos</span>
+                        <span class="badge">Keine Registrierung</span>
+                        <span class="badge">Keine Wasserzeichen</span>
+                        <span class="badge">Volle Farbunterstützung</span>
+                        <span class="badge">Open Source - MIT</span>
+                    </div>
                 </div>
-                <div class="trust-pills">
-                <span class="pill orange">✓ 100% kostenlos</span>
-                <span class="pill">Keine Registrierung</span>
-                <span class="pill">Keine Wasserzeichen</span>
-                <span class="pill">Volle Farbunterstützung</span>
-                <span class="pill">Open Source - MIT</span>
-                </div>
-            </div>
             </section>
 
             <!-- Feature strip -->
-            <div class="feature-strip">
-            <div class="fs-item">
-                <div class="fs-icon">🎨</div>
-                <h3>Volle Farbunterstützung</h3>
-                <p>Angetrieben von VTracer - nicht nur schwarz &amp; weiß</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">⚡</div>
-                <h3>Live-Vorschau</h3>
-                <p>SVG aktualisiert sich beim Anpassen der Einstellungen</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">🔒</div>
-                <h3>Privatsphäre zuerst</h3>
-                <p>Desktop: Dateien verlassen niemals Ihr Gerät</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">♾️</div>
-                <h3>Keine Limits</h3>
-                <p>Unbegrenzte Konvertierungen, für immer kostenlos</p>
-            </div>
-            </div>
+            <section class="feature-strip">
+                <div class="fs-item">
+                    <div class="fs-icon">🎨</div>
+                    <h3>Volle Farbunterstützung</h3>
+                    <p>Angetrieben von VTracer - nicht nur schwarz &amp; weiß</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">⚡</div>
+                    <h3>Live-Vorschau</h3>
+                    <p>SVG aktualisiert sich beim Anpassen der Einstellungen</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">🔒</div>
+                    <h3>Privatsphäre zuerst</h3>
+                    <p>Desktop: Dateien verlassen niemals Ihr Gerät</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">♾️</div>
+                    <h3>Keine Limits</h3>
+                    <p>Unbegrenzte Konvertierungen, für immer kostenlos</p>
+                </div>
+            </section>
 
             <!-- Choice -->
             <section class="choice-section">
-            <div class="container">
-                <h2 class="section-title">Wählen Sie Ihre Version</h2>
-                <p class="choice-subtitle">Gleiche leistungsstarke Engine - wählen Sie das Format für Ihren Workflow.</p>
-                <div class="choice-grid">
+                <div class="container">
+                    <h2 class="section-title">Wählen Sie Ihre Version</h2>
+                    <p class="choice-subtitle">Gleiche leistungsstarke Engine - wählen Sie das Format für Ihren Workflow.</p>
+                    <div class="choice-grid">
+                        <div class="choice-card online">
+                            <div class="choice-icon">🌐</div>
+                            <span class="choice-tag">Keine Installation nötig</span>
+                            <h2>Online-Tool</h2>
+                            <p>Konvertieren Sie Bilder direkt in Ihrem Browser. Nichts zu installieren, kein Konto erforderlich. Einfach hochladen und herunterladen.</p>
+                            <ul class="choice-features">
+                                <li>Funktioniert auf jedem Gerät &amp; Betriebssystem</li>
+                                <li>Vollfarb- &amp; Schwarzweiß-Modi</li>
+                                <li>Live-SVG-Vorschau</li>
+                                <li>Voreinstellungen: Schwarz &amp; Weiß, Poster, Foto</li>
+                                <li>Erweiterte Parameteranpassung</li>
+                            </ul>
+                            <a href="/online/" class="choice-cta">Online-Tool nutzen →</a>
+                        </div>
 
-                <div class="choice-card online">
-                    <div class="choice-icon">🌐</div>
-                    <span class="choice-tag">Keine Installation nötig</span>
-                    <h2>Online-Tool</h2>
-                    <p>Konvertieren Sie Bilder direkt in Ihrem Browser. Nichts zu installieren, kein Konto erforderlich. Einfach hochladen und herunterladen.</p>
-                    <ul class="choice-features">
-                    <li>Funktioniert auf jedem Gerät &amp; Betriebssystem</li>
-                    <li>Vollfarb- &amp; Schwarzweiß-Modi</li>
-                    <li>Live-SVG-Vorschau</li>
-                    <li>Voreinstellungen: Schwarz &amp; Weiß, Poster, Foto</li>
-                    <li>Erweiterte Parameteranpassung</li>
-                    </ul>
-                    <a href="/online/" class="choice-cta">Online-Tool nutzen →</a>
+                        <div class="choice-card offline">
+                            <div class="choice-icon">💻</div>
+                            <span class="choice-tag">Windows &amp; Linux</span>
+                            <h2>Desktop-App</h2>
+                            <p>Einmal installieren und Dateien komplett offline konvertieren. Ihre Bilder verlassen nie Ihren Computer – ideal für sensible oder professionelle Arbeit.</p>
+                            <ul class="choice-features">
+                                <li>100% offline - kein Internet erforderlich</li>
+                                <li>Dateien werden nirgendwo hochgeladen</li>
+                                <li>Kein Dateigrößenlimit</li>
+                                <li>Fokusmodus für ablenkungsfreie Nutzung</li>
+                                <li>Gleiche Live-Vorschau &amp; Voreinstellungen</li>
+                            </ul>
+                            <a href="/offline/" class="choice-cta">Desktop-App herunterladen →</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="choice-card offline">
-                    <div class="choice-icon">💻</div>
-                    <span class="choice-tag">Windows &amp; Linux</span>
-                    <h2>Desktop-App</h2>
-                    <p>Einmal installieren und Dateien komplett offline konvertieren. Ihre Bilder verlassen nie Ihren Computer – ideal für sensible oder professionelle Arbeit.</p>
-                    <ul class="choice-features">
-                    <li>100% offline - kein Internet erforderlich</li>
-                    <li>Dateien werden nirgendwo hochgeladen</li>
-                    <li>Kein Dateigrößenlimit</li>
-                    <li>Fokusmodus für ablenkungsfreie Nutzung</li>
-                    <li>Gleiche Live-Vorschau &amp; Voreinstellungen</li>
-                    </ul>
-                    <a href="/offline/" class="choice-cta">Desktop-App herunterladen →</a>
-                </div>
-
-                </div>
-            </div>
             </section>
-
             <section class="section donate-section">
     <div class="container">
         <h3>Open-Source-Entwicklung unterstützen</h3>
@@ -275,21 +274,13 @@
         <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Spenden über PayPal</a>
     </div>
 </section>
-            
         </main>
-
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

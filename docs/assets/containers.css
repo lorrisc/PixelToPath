@@ -1,0 +1,17 @@
+.double-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .double-buttons {
+        flex-direction: column;
+    }
+    .double-buttons a {
+        width: 100%;
+    }
+}

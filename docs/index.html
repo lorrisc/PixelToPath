@@ -74,7 +74,10 @@
         <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
         <link rel="stylesheet" href="./assets/style.css">
-        <link rel="stylesheet" href="./assets/home_style.css">
+        <link rel="stylesheet" href="./assets/components.css">
+        <link rel="stylesheet" href="./assets/footer.css">
+        <link rel="stylesheet" href="./assets/donate.css">
+        <link rel="stylesheet" href="./assets/home.css">
         <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
 
         <!-- Schema.org Structured Data -->
@@ -178,96 +181,92 @@
 
     </div>
 </nav> 
-
         <main>
             <!-- Hero -->
             <section class="home-hero">
-            <div class="container">
-                <h1>Convert Images to <span>SVG</span><br>Free &amp; Open Source</h1>
-                <p class="hero-sub">PixelToPath transforms PNG, JPG, BMP and WebP images into scalable vector graphics - with full color support, live preview, and zero watermarks.</p>
-                <div class="formats-row">
-                <span class="fmt in">PNG</span>
-                <span class="fmt in">JPG</span>
-                <span class="fmt in">BMP</span>
-                <span class="fmt in">WebP</span>
-                <span class="fmt-arrow">→</span>
-                <span class="fmt out">SVG</span>
+                <div class="container">
+                    <h1 class="c-dark">Convert Images to <span>SVG</span><br>Free &amp; Open Source</h1>
+                    <p class="hero-sub c-gray">PixelToPath transforms PNG, JPG, BMP and WebP images into scalable vector graphics - with full color support, live preview, and zero watermarks.</p>
+                    <div class="formats-row">
+                        <span class="fmt in">PNG</span>
+                        <span class="fmt in">JPG</span>
+                        <span class="fmt in">BMP</span>
+                        <span class="fmt in">WebP</span>
+                        <span class="fmt-arrow">→</span>
+                        <span class="fmt out">SVG</span>
+                    </div>
+                    <div class="badges" id="home__badges">
+                        <span class="badge accent">✓ 100% free</span>
+                        <span class="badge">No registration</span>
+                        <span class="badge">No watermarks</span>
+                        <span class="badge">Full color support</span>
+                        <span class="badge">Open source - MIT</span>
+                    </div>
                 </div>
-                <div class="trust-pills">
-                <span class="pill orange">✓ 100% free</span>
-                <span class="pill">No registration</span>
-                <span class="pill">No watermarks</span>
-                <span class="pill">Full color support</span>
-                <span class="pill">Open source - MIT</span>
-                </div>
-            </div>
             </section>
 
             <!-- Feature strip -->
-            <div class="feature-strip">
-            <div class="fs-item">
-                <div class="fs-icon">🎨</div>
-                <h3>Full color support</h3>
-                <p>Powered by VTracer - not just black &amp; white</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">⚡</div>
-                <h3>Live preview</h3>
-                <p>SVG updates as you adjust settings</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">🔒</div>
-                <h3>Privacy first</h3>
-                <p>Desktop: files never leave your device</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">♾️</div>
-                <h3>No limits</h3>
-                <p>Unlimited conversions, forever free</p>
-            </div>
-            </div>
+            <section class="feature-strip">
+                <div class="fs-item">
+                    <div class="fs-icon">🎨</div>
+                    <h3>Full color support</h3>
+                    <p>Powered by VTracer - not just black &amp; white</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">⚡</div>
+                    <h3>Live preview</h3>
+                    <p>SVG updates as you adjust settings</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">🔒</div>
+                    <h3>Privacy first</h3>
+                    <p>Desktop: files never leave your device</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">♾️</div>
+                    <h3>No limits</h3>
+                    <p>Unlimited conversions, forever free</p>
+                </div>
+            </section>
 
             <!-- Choice -->
             <section class="choice-section">
-            <div class="container">
-                <h2 class="section-title">Choose Your Version</h2>
-                <p class="choice-subtitle">Same powerful engine - pick the format that fits your workflow.</p>
-                <div class="choice-grid">
+                <div class="container">
+                    <h2 class="section-title">Choose Your Version</h2>
+                    <p class="choice-subtitle">Same powerful engine - pick the format that fits your workflow.</p>
+                    <div class="choice-grid">
+                        <div class="choice-card online">
+                            <div class="choice-icon">🌐</div>
+                            <span class="choice-tag">No install needed</span>
+                            <h2>Online Tool</h2>
+                            <p>Convert images directly in your browser. Nothing to install, no account required. Just upload and download.</p>
+                            <ul class="choice-features">
+                                <li>Works on any device &amp; operating system</li>
+                                <li>Full color &amp; black &amp; white modes</li>
+                                <li>Live SVG preview</li>
+                                <li>Preset modes: black &amp; white, Poster, Photo</li>
+                                <li>Advanced parameter tuning</li>
+                            </ul>
+                            <a href="/online/" class="choice-cta">Use Online Tool →</a>
+                        </div>
 
-                <div class="choice-card online">
-                    <div class="choice-icon">🌐</div>
-                    <span class="choice-tag">No install needed</span>
-                    <h2>Online Tool</h2>
-                    <p>Convert images directly in your browser. Nothing to install, no account required. Just upload and download.</p>
-                    <ul class="choice-features">
-                    <li>Works on any device &amp; operating system</li>
-                    <li>Full color &amp; black &amp; white modes</li>
-                    <li>Live SVG preview</li>
-                    <li>Preset modes: black &amp; white, Poster, Photo</li>
-                    <li>Advanced parameter tuning</li>
-                    </ul>
-                    <a href="/online/" class="choice-cta">Use Online Tool →</a>
+                        <div class="choice-card offline">
+                            <div class="choice-icon">💻</div>
+                            <span class="choice-tag">Windows &amp; Linux</span>
+                            <h2>Desktop App</h2>
+                            <p>Install once and convert files entirely offline. Your images never leave your computer - ideal for sensitive or professional work.</p>
+                            <ul class="choice-features">
+                                <li>100% offline - no internet needed</li>
+                                <li>Files never uploaded anywhere</li>
+                                <li>No file size limit</li>
+                                <li>Focus mode for distraction-free use</li>
+                                <li>Same live preview &amp; presets</li>
+                            </ul>
+                            <a href="/offline/" class="choice-cta">Download Desktop App →</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="choice-card offline">
-                    <div class="choice-icon">💻</div>
-                    <span class="choice-tag">Windows &amp; Linux</span>
-                    <h2>Desktop App</h2>
-                    <p>Install once and convert files entirely offline. Your images never leave your computer - ideal for sensitive or professional work.</p>
-                    <ul class="choice-features">
-                    <li>100% offline - no internet needed</li>
-                    <li>Files never uploaded anywhere</li>
-                    <li>No file size limit</li>
-                    <li>Focus mode for distraction-free use</li>
-                    <li>Same live preview &amp; presets</li>
-                    </ul>
-                    <a href="/offline/" class="choice-cta">Download Desktop App →</a>
-                </div>
-
-                </div>
-            </div>
             </section>
-
             <section class="section donate-section">
     <div class="container">
         <h3>Support Open Source Development</h3>
@@ -275,21 +274,13 @@
         <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Donate via PayPal</a>
     </div>
 </section>
-            
         </main>
-
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

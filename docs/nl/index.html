@@ -74,7 +74,10 @@
         <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
         <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/home_style.css">
+        <link rel="stylesheet" href="../assets/components.css">
+        <link rel="stylesheet" href="../assets/footer.css">
+        <link rel="stylesheet" href="../assets/donate.css">
+        <link rel="stylesheet" href="../assets/home.css">
         <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
         <!-- Schema.org Structured Data -->
@@ -178,96 +181,92 @@
 
     </div>
 </nav> 
-
         <main>
             <!-- Hero -->
             <section class="home-hero">
-            <div class="container">
-                <h1>Converteer Afbeeldingen naar <span>SVG</span><br>Gratis &amp; Open Source</h1>
-                <p class="hero-sub">PixelToPath transformeert PNG, JPG, BMP en WebP afbeeldingen in schaalbare vector graphics - met volledige kleurondersteuning, live preview en zonder watermerken.</p>
-                <div class="formats-row">
-                <span class="fmt in">PNG</span>
-                <span class="fmt in">JPG</span>
-                <span class="fmt in">BMP</span>
-                <span class="fmt in">WebP</span>
-                <span class="fmt-arrow">→</span>
-                <span class="fmt out">SVG</span>
+                <div class="container">
+                    <h1 class="c-dark">Converteer Afbeeldingen naar <span>SVG</span><br>Gratis &amp; Open Source</h1>
+                    <p class="hero-sub c-gray">PixelToPath transformeert PNG, JPG, BMP en WebP afbeeldingen in schaalbare vector graphics - met volledige kleurondersteuning, live preview en zonder watermerken.</p>
+                    <div class="formats-row">
+                        <span class="fmt in">PNG</span>
+                        <span class="fmt in">JPG</span>
+                        <span class="fmt in">BMP</span>
+                        <span class="fmt in">WebP</span>
+                        <span class="fmt-arrow">→</span>
+                        <span class="fmt out">SVG</span>
+                    </div>
+                    <div class="badges" id="home__badges">
+                        <span class="badge accent">✓ 100% gratis</span>
+                        <span class="badge">Geen registratie</span>
+                        <span class="badge">Geen watermerken</span>
+                        <span class="badge">Volledige kleurondersteuning</span>
+                        <span class="badge">Open source - MIT</span>
+                    </div>
                 </div>
-                <div class="trust-pills">
-                <span class="pill orange">✓ 100% gratis</span>
-                <span class="pill">Geen registratie</span>
-                <span class="pill">Geen watermerken</span>
-                <span class="pill">Volledige kleurondersteuning</span>
-                <span class="pill">Open source - MIT</span>
-                </div>
-            </div>
             </section>
 
             <!-- Feature strip -->
-            <div class="feature-strip">
-            <div class="fs-item">
-                <div class="fs-icon">🎨</div>
-                <h3>Volledige kleurondersteuning</h3>
-                <p>Aangedreven door VTracer - niet alleen zwart &amp; wit</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">⚡</div>
-                <h3>Live preview</h3>
-                <p>SVG werkt bij als u instellingen aanpast</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">🔒</div>
-                <h3>Privacy voorop</h3>
-                <p>Desktop: bestanden verlaten uw apparaat nooit</p>
-            </div>
-            <div class="fs-item">
-                <div class="fs-icon">♾️</div>
-                <h3>Geen limieten</h3>
-                <p>Onbeperkte conversies, voor altijd gratis</p>
-            </div>
-            </div>
+            <section class="feature-strip">
+                <div class="fs-item">
+                    <div class="fs-icon">🎨</div>
+                    <h3>Volledige kleurondersteuning</h3>
+                    <p>Aangedreven door VTracer - niet alleen zwart &amp; wit</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">⚡</div>
+                    <h3>Live preview</h3>
+                    <p>SVG werkt bij als u instellingen aanpast</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">🔒</div>
+                    <h3>Privacy voorop</h3>
+                    <p>Desktop: bestanden verlaten uw apparaat nooit</p>
+                </div>
+                <div class="fs-item">
+                    <div class="fs-icon">♾️</div>
+                    <h3>Geen limieten</h3>
+                    <p>Onbeperkte conversies, voor altijd gratis</p>
+                </div>
+            </section>
 
             <!-- Choice -->
             <section class="choice-section">
-            <div class="container">
-                <h2 class="section-title">Kies Uw Versie</h2>
-                <p class="choice-subtitle">Dezelfde krachtige engine - kies het formaat dat bij uw workflow past.</p>
-                <div class="choice-grid">
+                <div class="container">
+                    <h2 class="section-title">Kies Uw Versie</h2>
+                    <p class="choice-subtitle">Dezelfde krachtige engine - kies het formaat dat bij uw workflow past.</p>
+                    <div class="choice-grid">
+                        <div class="choice-card online">
+                            <div class="choice-icon">🌐</div>
+                            <span class="choice-tag">Geen installatie nodig</span>
+                            <h2>Online Tool</h2>
+                            <p>Converteer afbeeldingen rechtstreeks in uw browser. Niets te installeren, geen account vereist. Gewoon uploaden en downloaden.</p>
+                            <ul class="choice-features">
+                                <li>Werkt op elk apparaat &amp; besturingssysteem</li>
+                                <li>Volledige kleur &amp; zwart-wit modi</li>
+                                <li>Live SVG preview</li>
+                                <li>Vooraf ingestelde modi: zwart &amp; wit, Poster, Foto</li>
+                                <li>Geavanceerde parameter afstemming</li>
+                            </ul>
+                            <a href="/online/" class="choice-cta">Gebruik Online Tool →</a>
+                        </div>
 
-                <div class="choice-card online">
-                    <div class="choice-icon">🌐</div>
-                    <span class="choice-tag">Geen installatie nodig</span>
-                    <h2>Online Tool</h2>
-                    <p>Converteer afbeeldingen rechtstreeks in uw browser. Niets te installeren, geen account vereist. Gewoon uploaden en downloaden.</p>
-                    <ul class="choice-features">
-                    <li>Werkt op elk apparaat &amp; besturingssysteem</li>
-                    <li>Volledige kleur &amp; zwart-wit modi</li>
-                    <li>Live SVG preview</li>
-                    <li>Vooraf ingestelde modi: zwart &amp; wit, Poster, Foto</li>
-                    <li>Geavanceerde parameter afstemming</li>
-                    </ul>
-                    <a href="/online/" class="choice-cta">Gebruik Online Tool →</a>
+                        <div class="choice-card offline">
+                            <div class="choice-icon">💻</div>
+                            <span class="choice-tag">Windows &amp; Linux</span>
+                            <h2>Desktop App</h2>
+                            <p>Installeer eenmaal en converteer bestanden volledig offline. Uw afbeeldingen verlaten uw computer nooit - ideaal voor gevoelig of professioneel werk.</p>
+                            <ul class="choice-features">
+                                <li>100% offline - geen internet nodig</li>
+                                <li>Bestanden worden nergens geüpload</li>
+                                <li>Geen bestandsgroottelimiet</li>
+                                <li>Focusmodus voor afleidingsvrij gebruik</li>
+                                <li>Dezelfde live preview &amp; presets</li>
+                            </ul>
+                            <a href="/offline/" class="choice-cta">Download Desktop App →</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="choice-card offline">
-                    <div class="choice-icon">💻</div>
-                    <span class="choice-tag">Windows &amp; Linux</span>
-                    <h2>Desktop App</h2>
-                    <p>Installeer eenmaal en converteer bestanden volledig offline. Uw afbeeldingen verlaten uw computer nooit - ideaal voor gevoelig of professioneel werk.</p>
-                    <ul class="choice-features">
-                    <li>100% offline - geen internet nodig</li>
-                    <li>Bestanden worden nergens geüpload</li>
-                    <li>Geen bestandsgroottelimiet</li>
-                    <li>Focusmodus voor afleidingsvrij gebruik</li>
-                    <li>Dezelfde live preview &amp; presets</li>
-                    </ul>
-                    <a href="/offline/" class="choice-cta">Download Desktop App →</a>
-                </div>
-
-                </div>
-            </div>
             </section>
-
             <section class="section donate-section">
     <div class="container">
         <h3>Ondersteun Open Source Ontwikkeling</h3>
@@ -275,21 +274,13 @@
         <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Doneer via PayPal</a>
     </div>
 </section>
-            
         </main>
-
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 

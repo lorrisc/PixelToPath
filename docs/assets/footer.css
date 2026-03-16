@@ -1,0 +1,33 @@
+footer {
+    background: var(--dark);
+    color: #ccc;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer .container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+footer .container > *:not(:first-child)::before {
+    content: "•";
+    margin-right: 15px;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .container > *:not(:first-child)::before {
+        content: none;
+    }
+}

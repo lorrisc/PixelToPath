@@ -74,7 +74,11 @@
     <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/online/" />
 
     <link rel="stylesheet" href="../../assets/style.css">
-    <link rel="stylesheet" href="../../assets/online_style.css">
+    <link rel="stylesheet" href="../../assets/components.css">
+    <link rel="stylesheet" href="../../assets/containers.css">
+    <link rel="stylesheet" href="../../assets/footer.css">
+    <link rel="stylesheet" href="../../assets/donate.css">
+    <link rel="stylesheet" href="../../assets/online.css">
     <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
     <!-- Schema.org Structured Data -->
@@ -85,10 +89,10 @@
       "name": "PixelToPath Online SVG Converter",
       "url": "https://pixel-to-path.com/online/",
       "description": "Converteer PNG, JPG, BMP of WebP online naar SVG — gratis, direct, geen registratie. Aangedreven door VTracer met kleur en zwart-wit modi. Live preview.",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Any",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
     }
     </script>
 
@@ -98,10 +102,10 @@
         "@type": "HowTo",
         "name": "Hoe u PNG gratis online naar SVG converteert",
         "step": [
-        { "@type": "HowToStep", "name": "Upload uw afbeelding", "text": "Sleep en zet neer of klik om een PNG, JPG, BMP of WebP bestand te uploaden. Geen registratie vereist." },
-        { "@type": "HowToStep", "name": "Kies een voorinstelling", "text": "Selecteer Z&amp;W voor logo&#39;s en iconen, Poster voor illustraties, of Foto voor complexe foto&#39;s." },
-        { "@type": "HowToStep", "name": "Bekijk het resultaat live", "text": "De SVG preview wordt automatisch bijgewerkt terwijl u de instellingen aanpast. U hoeft niet op Converteren te klikken." },
-        { "@type": "HowToStep", "name": "Download uw SVG-bestand", "text": "Klik op de knop Download SVG om uw vectorbestand direct op te slaan, klaar voor Illustrator, Figma of Inkscape." }
+            { "@type": "HowToStep", "name": "Upload uw afbeelding", "text": "Sleep en zet neer of klik om een PNG, JPG, BMP of WebP bestand te uploaden. Geen registratie vereist." },
+            { "@type": "HowToStep", "name": "Kies een voorinstelling", "text": "Selecteer Z&amp;W voor logo&#39;s en iconen, Poster voor illustraties, of Foto voor complexe foto&#39;s." },
+            { "@type": "HowToStep", "name": "Bekijk het resultaat live", "text": "De SVG preview wordt automatisch bijgewerkt terwijl u de instellingen aanpast. U hoeft niet op Converteren te klikken." },
+            { "@type": "HowToStep", "name": "Download uw SVG-bestand", "text": "Klik op de knop Download SVG om uw vectorbestand direct op te slaan, klaar voor Illustrator, Figma of Inkscape." }
         ]
     }
     </script>
@@ -252,284 +256,317 @@
 
     </div>
 </nav> 
-
         <main>
-
             <!-- Hero -->
             <section class="tool-hero">
-            <div class="container">
-                <h1>Gratis Online PNG naar SVG Converter</h1>
-                <p>Converteer elke afbeelding in seconden naar schaalbare vectorafbeeldingen — geen registratie, geen limieten, volledige kleurondersteuning.</p>
-                <div class="badges">
-                <span class="badge accent">✓ Altijd gratis</span>
-                <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
-                <span class="badge">Live preview</span>
-                <span class="badge">Kleur &amp; Z&amp;W modi</span>
-                <span class="badge">Geen watermerken</span>
+                <div class="container">
+                    <h1>Gratis Online PNG naar SVG Converter</h1>
+                    <p>Converteer elke afbeelding in seconden naar schaalbare vectorafbeeldingen — geen registratie, geen limieten, volledige kleurondersteuning.</p>
+                    <div class="badges">
+                        <span class="badge accent">✓ Altijd gratis</span>
+                        <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
+                        <span class="badge">Live preview</span>
+                        <span class="badge">Kleur &amp; Z&amp;W modi</span>
+                        <span class="badge">Geen watermerken</span>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <!-- Converter (full width) -->
             <section class="converter-section">
-            <div class="converter-wrap">
+                <div class="converter-wrap">
 
-                <!-- Sidebar -->
-                <div class="conv-sidebar">
-                <div class="dropzone" id="dropzone">
-                    <div class="dz-hint">
-                    <span class="dz-icon">⬡</span>
-                    Zet hier een afbeelding neer<br>
-                    of <u style="cursor:pointer;color:var(--primary)">bladeren</u>
+                    <!-- Sidebar -->
+                    <div class="conv-sidebar">
+                        <div class="dropzone" id="dropzone">
+                            <div class="dz-hint">
+                                <span class="dz-icon">⬡</span>
+                                Zet hier een afbeelding neer<br>
+                                of <u style="cursor:pointer;color:var(--primary)">bladeren</u>
+                            </div>
+                        </div>
+                        <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
+
+                        <div class="ps">Voorinstellingen</div>
+                        <div class="presets">
+                            <button class="preset-btn" data-preset="bw">Z&amp;W</button>
+                            <button class="preset-btn active" data-preset="poster">Poster</button>
+                            <button class="preset-btn" data-preset="photo">Foto</button>
+                        </div>
+
+                        <button id="adv-toggle"><span>⚙ Geavanceerde instellingen</span><span id="adv-arrow">▾</span></button>
+                        <div id="adv-content">
+
+                            <div class="ps">Kleurmodus</div>
+                            <div class="seg" id="seg-colormode">
+                                <button class="active" data-val="color">Kleur</button>
+                                <button data-val="binary">Binair</button>
+                            </div>
+
+                            <div id="color-params">
+                                <div class="ps">Kleur</div>
+                                
+                                <div class="sl-row">
+                                    <span>Aantal Kleuren</span>
+                                    <span class="sl-val" id="v-num_colors">8</span>
+                                </div>
+                                <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
+
+                                <div class="sl-row">
+                                    <span>Kleurprecisie</span>
+                                    <span class="sl-val" id="v-color_precision">6</span>
+                                </div>
+                                <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
+                                
+                                <div class="sl-row">
+                                    <span>Laagverschil</span>
+                                    <span class="sl-val" id="v-layer_difference">16</span>
+                                </div>
+                                <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
+                                
+                                <div class="ps">Hiërarchisch</div>
+                                <div class="seg" id="seg-hierarchical">
+                                    <button class="active" data-val="stacked">Gestapeld</button>
+                                    <button data-val="cutout">Uitsnede</button>
+                                </div>
+                            </div>
+
+                            <div id="binary-params" style="display:none">
+                                <div class="sw-row" style="margin-top:10px">
+                                    <div>
+                                        <div class="sw-label">Omkeren</div>
+                                        <div class="sw-sub">Wissel zwart ↔ wit</div>
+                                    </div>
+                                    <label class="sw">
+                                        <input type="checkbox" id="sw-invert">
+                                        <span class="sw-track"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="ps">Curve Aanpassing</div>
+                            <div class="seg" id="seg-mode">
+                                <button data-val="none">Pixel</button>
+                                <button data-val="polygon">Polygoon</button>
+                                <button class="active" data-val="spline">Spline</button>
+                            </div>
+
+                            <div class="sl-row">
+                                <span>Vlekfilter</span>
+                                <span class="sl-val" id="v-filter_speckle">4</span>
+                            </div>
+                            <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
+
+                            <div class="sl-row">
+                                <span>Hoekdrempel</span>
+                                <span class="sl-val" id="v-corner_threshold">60</span>
+                            </div>
+                            <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
+
+                            <div class="sl-row">
+                                <span>Lengtedrempel</span>
+                                <span class="sl-val" id="v-length_threshold">4.0</span>
+                            </div>
+                            
+                            <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
+                            
+                            <div class="sl-row">
+                                <span>Lasdrempel</span>
+                                <span class="sl-val" id="v-splice_threshold">45</span>
+                            </div>
+                            <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
+                        </div>
                     </div>
+
+                    <!-- Preview -->
+                    <div class="conv-preview">
+                        <div class="preview-header">
+                            <span class="preview-title">SVG Preview</span>
+                            <div class="live-badge">
+                                <div class="live-dot" id="live-dot"></div>
+                                <span id="live-text">live</span>
+                            </div>
+                        </div>
+
+                        <div class="preview-body">
+                            <div id="preview-svg-container">
+                                <div class="preview-placeholder" id="placeholder">
+                                    <span class="preview-placeholder-icon">⬡</span>
+                                    <p>Upload een afbeelding om te beginnen</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="preview-footer">
+                            <div id="status">Klaar</div>
+                            <button id="btn-dl" disabled>↓ Download SVG</button>
+                        </div>
+
+                        <div class="conv-overlay" id="overlay">
+                            <div class="spinner"></div>
+                            <div class="overlay-text" id="overlay-text">Converteren...</div>
+                        </div>
+                    </div>
+
                 </div>
-                <input type="file" id="file-input" accept="image/png,image/jpeg,image/bmp,image/webp">
-
-                <div class="ps">Voorinstellingen</div>
-                <div class="presets">
-                    <button class="preset-btn" data-preset="bw">Z&amp;W</button>
-                    <button class="preset-btn active" data-preset="poster">Poster</button>
-                    <button class="preset-btn" data-preset="photo">Foto</button>
-                </div>
-
-                <button id="adv-toggle"><span>⚙ Geavanceerde instellingen</span><span id="adv-arrow">▾</span></button>
-                <div id="adv-content">
-
-                    <div class="ps">Kleurmodus</div>
-                    <div class="seg" id="seg-colormode">
-                    <button class="active" data-val="color">Kleur</button>
-                    <button data-val="binary">Binair</button>
-                    </div>
-
-                    <div id="color-params">
-                    <div class="ps">Kleur</div>
-                    <div class="sl-row"><span>Aantal Kleuren</span><span class="sl-val" id="v-num_colors">8</span></div>
-                    <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
-                    <div class="sl-row"><span>Kleurprecisie</span><span class="sl-val" id="v-color_precision">6</span></div>
-                    <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
-                    <div class="sl-row"><span>Laagverschil</span><span class="sl-val" id="v-layer_difference">16</span></div>
-                    <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
-                    <div class="ps">Hiërarchisch</div>
-                    <div class="seg" id="seg-hierarchical">
-                        <button class="active" data-val="stacked">Gestapeld</button>
-                        <button data-val="cutout">Uitsnede</button>
-                    </div>
-                    </div>
-
-                    <div id="binary-params" style="display:none">
-                    <div class="sw-row" style="margin-top:10px">
-                        <div><div class="sw-label">Omkeren</div><div class="sw-sub">Wissel zwart ↔ wit</div></div>
-                        <label class="sw"><input type="checkbox" id="sw-invert"><span class="sw-track"></span></label>
-                    </div>
-                    </div>
-
-                    <div class="ps">Curve Aanpassing</div>
-                    <div class="seg" id="seg-mode">
-                    <button data-val="none">Pixel</button>
-                    <button data-val="polygon">Polygoon</button>
-                    <button class="active" data-val="spline">Spline</button>
-                    </div>
-
-                    <div class="sl-row"><span>Vlekfilter</span><span class="sl-val" id="v-filter_speckle">4</span></div>
-                    <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
-                    <div class="sl-row"><span>Hoekdrempel</span><span class="sl-val" id="v-corner_threshold">60</span></div>
-                    <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
-                    <div class="sl-row"><span>Lengtedrempel</span><span class="sl-val" id="v-length_threshold">4.0</span></div>
-                    <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
-                    <div class="sl-row"><span>Lasdrempel</span><span class="sl-val" id="v-splice_threshold">45</span></div>
-                    <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
-                </div>
-                </div>
-
-                <!-- Preview -->
-                <div class="conv-preview">
-                <div class="preview-header">
-                    <span class="preview-title">SVG Preview</span>
-                    <div class="live-badge">
-                    <div class="live-dot" id="live-dot"></div>
-                    <span id="live-text">live</span>
-                    </div>
-                </div>
-
-                <div class="preview-body">
-                    <div id="preview-svg-container">
-                    <div class="preview-placeholder" id="placeholder">
-                        <span class="preview-placeholder-icon">⬡</span>
-                        <p>Upload een afbeelding om te beginnen</p>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="preview-footer">
-                    <div id="status">Klaar</div>
-                    <button id="btn-dl" disabled>↓ Download SVG</button>
-                </div>
-
-                <div class="conv-overlay" id="overlay">
-                    <div class="spinner"></div>
-                    <div class="overlay-text" id="overlay-text">Converteren...</div>
-                </div>
-                </div>
-
-            </div><!-- /converter-wrap -->
             </section>
 
             <!-- ── HOW IT WORKS ── -->
             <section class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">Hoe het werkt</h2>
-                <p class="section-intro">Geen setup, geen account. Upload, bekijk, download — in minder dan 10 seconden.</p>
-                <div class="grid-3">
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
-                    <h3>1. Uploaden</h3>
-                    <p>Sleep of klik om elke PNG, JPG, BMP of WebP te uploaden. Plakken vanaf het klembord werkt ook.</p>
+                <div class="container">
+                    <h2 class="section-title">Hoe het werkt</h2>
+                    <p class="section-intro">Geen setup, geen account. Upload, bekijk, download — in minder dan 10 seconden.</p>
+                    <div class="grid-3">
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
+                            <h3>1. Uploaden</h3>
+                            <p>Sleep of klik om elke PNG, JPG, BMP of WebP te uploaden. Plakken vanaf het klembord werkt ook.</p>
+                        </div>
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
+                            <h3>2. Live preview</h3>
+                            <p>De SVG wordt automatisch bijgewerkt als u instellingen wijzigt. U hoeft niet op een Converteer-knop te klikken.</p>
+                        </div>
+                        <div class="card" style="text-align:center">
+                            <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
+                            <h3>3. Downloaden</h3>
+                            <p>Klik op Download SVG voor uw vectorbestand. Open het in Illustrator, Inkscape, Figma of een moderne browser.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
-                    <h3>2. Live preview</h3>
-                    <p>De SVG wordt automatisch bijgewerkt als u instellingen wijzigt. U hoeft niet op een Converteer-knop te klikken.</p>
-                </div>
-                <div class="card" style="text-align:center">
-                    <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
-                    <h3>3. Downloaden</h3>
-                    <p>Klik op Download SVG voor uw vectorbestand. Open het in Illustrator, Inkscape, Figma of een moderne browser.</p>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── PRESETS EXPLAINED ── -->
             <section class="section">
-            <div class="container">
-                <h2 class="section-title">Welke voorinstelling moet u gebruiken?</h2>
-                <p class="section-intro">PixelToPath biedt drie geoptimaliseerde voorinstellingen afhankelijk van de aard van uw afbeelding.</p>
-                <div class="preset-explain-grid">
-                <div class="preset-explain-card bw">
-                    <h3><span class="preset-label">Z&W</span> Zwart &amp; Wit</h3>
-                    <p>Converteert de afbeelding naar grijswaarden voor het overtrekken. Best voor:</p>
-                    <ul>
-                    <li>Logo's en merken</li>
-                    <li>Iconen en pictogrammen</li>
-                    <li>Lijntekeningen en schetsen</li>
-                    <li>Vinyl snijden en lasergraveren</li>
-                    </ul>
+                <div class="container">
+                    <h2 class="section-title">Welke voorinstelling moet u gebruiken?</h2>
+                    <p class="section-intro">PixelToPath biedt drie geoptimaliseerde voorinstellingen afhankelijk van de aard van uw afbeelding.</p>
+                    <div class="preset-explain-grid">
+                        <div class="preset-explain-card bw">
+                            <h3><span class="preset-label">Z&W</span> Zwart &amp; Wit</h3>
+                            <p>Converteert de afbeelding naar grijswaarden voor het overtrekken. Best voor:</p>
+                            <ul>
+                                <li>Logo's en merken</li>
+                                <li>Iconen en pictogrammen</li>
+                                <li>Lijntekeningen en schetsen</li>
+                                <li>Vinyl snijden en lasergraveren</li>
+                            </ul>
+                        </div>
+                        <div class="preset-explain-card poster">
+                            <h3><span class="preset-label">Poster</span> Vlakke kleur</h3>
+                            <p>Trekt de afbeelding over als meerdere kleurlagen op elkaar gestapeld met hoge precisie. Best voor:</p>
+                            <ul>
+                                <li>Vlakke illustraties en cartoons</li>
+                                <li>Infographics en diagrammen</li>
+                                <li>Clipart en stickers</li>
+                                <li>Digitale kunstwerken met duidelijke kleuren</li>
+                            </ul>
+                        </div>
+                        <div class="preset-explain-card photo">
+                            <h3><span class="preset-label">Foto</span> Foto's</h3>
+                            <p>Gebruikt bredere kleurgroepering en ruisfiltering voor echte foto's. Best voor:</p>
+                            <ul>
+                                <li>Portretten en gezichten</li>
+                                <li>Landschapsfoto's</li>
+                                <li>Productfoto's</li>
+                                <li>Complexe afbeeldingen met veel gradiënten</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="preset-explain-card poster">
-                    <h3><span class="preset-label">Poster</span> Vlakke kleur</h3>
-                    <p>Trekt de afbeelding over als meerdere kleurlagen op elkaar gestapeld met hoge precisie. Best voor:</p>
-                    <ul>
-                    <li>Vlakke illustraties en cartoons</li>
-                    <li>Infographics en diagrammen</li>
-                    <li>Clipart en stickers</li>
-                    <li>Digitale kunstwerken met duidelijke kleuren</li>
-                    </ul>
-                </div>
-                <div class="preset-explain-card photo">
-                    <h3><span class="preset-label">Foto</span> Foto's</h3>
-                    <p>Gebruikt bredere kleurgroepering en ruisfiltering voor echte foto's. Best voor:</p>
-                    <ul>
-                    <li>Portretten en gezichten</li>
-                    <li>Landschapsfoto's</li>
-                    <li>Productfoto's</li>
-                    <li>Complexe afbeeldingen met veel gradiënten</li>
-                    </ul>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── USE CASES ── -->
             <section class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">Wat kunt u doen met uw SVG?</h2>
-                <p class="section-intro">SVG-bestanden van PixelToPath werken overal. Hier zijn veelvoorkomende toepassingen.</p>
-                <div class="use-cases-grid">
-                <div class="use-case-card">
-                    <div class="uc-icon">🎨</div>
-                    <h3>Bewerken in Figma of Illustrator</h3>
-                    <p>Importeer de SVG in uw ontwerptool. Elke vorm is volledig aanpasbaar — wijzig kleuren en vergroot zonder kwaliteitsverlies.</p>
+                <div class="container">
+                    <h2 class="section-title">Wat kunt u doen met uw SVG?</h2>
+                    <p class="section-intro">SVG-bestanden van PixelToPath werken overal. Hier zijn veelvoorkomende toepassingen.</p>
+                    <div class="use-cases-grid">
+                        <div class="use-case-card">
+                            <div class="uc-icon">🎨</div>
+                            <h3>Bewerken in Figma of Illustrator</h3>
+                            <p>Importeer de SVG in uw ontwerptool. Elke vorm is volledig aanpasbaar — wijzig kleuren en vergroot zonder kwaliteitsverlies.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🌐</div>
+                            <h3>Gebruiken op websites</h3>
+                            <p>SVG-bestanden laden sneller dan PNG's. Gebruik ze als <code>&lt;img&gt;</code>-tags of style ze met CSS.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🖨️</div>
+                            <h3>Printen op elk formaat</h3>
+                            <p>Stuur uw SVG naar een drukkerij en krijg een perfect resultaat op elk formaat. Geen wazige prints meer.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">✂️</div>
+                            <h3>Lasersnijden &amp; vinyl plotten</h3>
+                            <p>Snijmachines hebben vectorpaden nodig. Converteer uw PNG naar SVG en importeer het in LightBurn of Cricut.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">💻</div>
+                            <h3>App- &amp; web-iconen</h3>
+                            <p>Schaal iconen van 16px tot 512px zonder kwaliteitsverlies. Werkt perfect met React en Vue.</p>
+                        </div>
+                        <div class="use-case-card">
+                            <div class="uc-icon">🎞️</div>
+                            <h3>Animaties met CSS &amp; JS</h3>
+                            <p>SVG-elementen kunnen worden geanimeerd met CSS en JavaScript. Breng uw ontwerp tot leven.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🌐</div>
-                    <h3>Gebruiken op websites</h3>
-                    <p>SVG-bestanden laden sneller dan PNG's. Gebruik ze als <code>&lt;img&gt;</code>-tags of style ze met CSS.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🖨️</div>
-                    <h3>Printen op elk formaat</h3>
-                    <p>Stuur uw SVG naar een drukkerij en krijg een perfect resultaat op elk formaat. Geen wazige prints meer.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">✂️</div>
-                    <h3>Lasersnijden &amp; vinyl plotten</h3>
-                    <p>Snijmachines hebben vectorpaden nodig. Converteer uw PNG naar SVG en importeer het in LightBurn of Cricut.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">💻</div>
-                    <h3>App- &amp; web-iconen</h3>
-                    <p>Schaal iconen van 16px tot 512px zonder kwaliteitsverlies. Werkt perfect met React en Vue.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="uc-icon">🎞️</div>
-                    <h3>Animaties met CSS &amp; JS</h3>
-                    <p>SVG-elementen kunnen worden geanimeerd met CSS en JavaScript. Breng uw ontwerp tot leven.</p>
-                </div>
-                </div>
-            </div>
             </section>
 
             <!-- ── FAQ ── -->
             <section class="section" id="faq">
-            <div class="container">
-                <h2 class="section-title">Veelgestelde Vragen</h2>
-                <div class="faq-list">
-                <details class="faq-item">
-                    <summary>Is deze online SVG converter echt gratis zonder limieten?</summary>
-                    <p>Ja, volledig gratis. Geen registratie of watermerken. PixelToPath is een open-source project (MIT).</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Ondersteunt deze converter kleurenafbeeldingen?</summary>
-                    <p>Ja. PixelToPath gebruikt <strong>VTracer</strong> dat native full-color afbeeldingen verwerkt. Kies <strong>Poster</strong> of <strong>Foto</strong>.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Worden mijn bestanden opgeslagen of gedeeld?</summary>
-                    <p>Nee. Uw bestanden worden direct na verwerking verwijderd van de server. We slaan geen afbeeldingen op.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Welke afbeeldingsformaten worden ondersteund?</summary>
-                    <p>PNG, JPG, JPEG, BMP en WebP. U kunt ook rechtstreeks plakken (Ctrl+V).</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Wat is de maximale bestandsgrootte?</summary>
-                    <p>Online tot <strong>20 MB</strong>. Download de <a href="#download" style="color:var(--primary)">desktop applicatie</a> voor onbeperkte groottes.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Waarom ziet Z&W er verkeerd uit op mijn kleurenafbeelding?</summary>
-                    <p>Schakel de optie <strong>Omkeren</strong> in de Geavanceerde instellingen in als de omzetting te licht is.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Wat is het verschil tussen Spline, Polygoon en Pixel?</summary>
-                    <p><strong>Spline</strong> is voor vloeiende curven. <strong>Polygoon</strong> is voor strakke lijnen. <strong>Pixel</strong> trekt exact de pixels over (perfect voor pixel art).</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Mag ik de SVG gebruiken voor commerciële projecten?</summary>
-                    <p>Ja. De gegenereerde SVG-bestanden zijn van u om vrij te gebruiken zonder licentiebeperkingen.</p>
-                </details>
+                <div class="container">
+                    <h2 class="section-title">Veelgestelde Vragen</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>Is deze online SVG converter echt gratis zonder limieten?</summary>
+                            <p>Ja, volledig gratis. Geen registratie of watermerken. PixelToPath is een open-source project (MIT).</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Ondersteunt deze converter kleurenafbeeldingen?</summary>
+                            <p>Ja. PixelToPath gebruikt <strong>VTracer</strong> dat native full-color afbeeldingen verwerkt. Kies <strong>Poster</strong> of <strong>Foto</strong>.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Worden mijn bestanden opgeslagen of gedeeld?</summary>
+                            <p>Nee. Uw bestanden worden direct na verwerking verwijderd van de server. We slaan geen afbeeldingen op.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Welke afbeeldingsformaten worden ondersteund?</summary>
+                            <p>PNG, JPG, JPEG, BMP en WebP. U kunt ook rechtstreeks plakken (Ctrl+V).</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Wat is de maximale bestandsgrootte?</summary>
+                            <p>Online tot <strong>20 MB</strong>. Download de <a href="#download" style="color:var(--primary)">desktop applicatie</a> voor onbeperkte groottes.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Waarom ziet Z&W er verkeerd uit op mijn kleurenafbeelding?</summary>
+                            <p>Schakel de optie <strong>Omkeren</strong> in de Geavanceerde instellingen in als de omzetting te licht is.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Wat is het verschil tussen Spline, Polygoon en Pixel?</summary>
+                            <p><strong>Spline</strong> is voor vloeiende curven. <strong>Polygoon</strong> is voor strakke lijnen. <strong>Pixel</strong> trekt exact de pixels over (perfect voor pixel art).</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Mag ik de SVG gebruiken voor commerciële projecten?</summary>
+                            <p>Ja. De gegenereerde SVG-bestanden zijn van u om vrij te gebruiken zonder licentiebeperkingen.</p>
+                        </details>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <!-- ── CTA desktop ── -->
             <section class="section bg-light">
-            <div class="container" style="text-align:center" id="download">
-                <h2 style="color:var(--dark);margin-bottom:1rem">Onbeperkt offline converteren?</h2>
-                <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">De desktopversie werkt volledig op uw computer — geen internet nodig, geen limieten.</p>
-                <div class="double-buttons">
-                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Download voor Windows</a>
-                <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Download voor Linux</a>
+                <div class="container" style="text-align:center" id="download">
+                    <h2 style="color:var(--dark);margin-bottom:1rem">Onbeperkt offline converteren?</h2>
+                    <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">De desktopversie werkt volledig op uw computer — geen internet nodig, geen limieten.</p>
+                    <div class="double-buttons">
+                        <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Download voor Windows</a>
+                        <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Download voor Linux</a>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <section class="section donate-section">
@@ -545,15 +582,9 @@
         <footer>
     <div class="container">
         <p>2025 PixelToPath</p>
-        <p>
-            <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
-        </p>
-        <p>
-            <a href="/online/">Online Tool</a>
-        </p>
-        <p>
-            <a href="/offline/">Desktop App</a>
-        </p>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
     </div>
 </footer>
 
