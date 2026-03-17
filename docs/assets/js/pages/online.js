@@ -44,8 +44,8 @@ const PRESETS = {
 function applyPreset(key) {
     const p = PRESETS[key];
     document
-        .querySelectorAll(".preset-btn")
-        .forEach((b) => b.classList.toggle("active", b.dataset.preset === key));
+        .querySelectorAll(".presets__btn")
+        .forEach((b) => b.classList.toggle("presets__btn--active", b.dataset.preset === key));
     setSegVal("seg-colormode", p.colormode);
     setSegVal("seg-mode", p.mode);
     [
@@ -148,7 +148,7 @@ async function runConversion() {
 }
 
 function renderSvg(svgStr) {
-    const container = document.getElementById("preview-svg-container");
+    const container = document.getElementById("preview__body__svg-container");
     document.getElementById("placeholder").style.display = "none";
     container.querySelectorAll("svg").forEach((n) => n.remove());
 
@@ -287,7 +287,7 @@ document.getElementById("adv-toggle").addEventListener("click", () => {
     document.getElementById("adv-arrow").textContent = open ? "▴" : "▾";
 });
 document
-    .querySelectorAll(".preset-btn")
+    .querySelectorAll(".presets__btn")
     .forEach((btn) =>
         btn.addEventListener("click", () => applyPreset(btn.dataset.preset)),
     );

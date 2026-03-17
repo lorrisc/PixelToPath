@@ -73,12 +73,16 @@
     
     <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/online/" />
 
-    <link rel="stylesheet" href="../../assets/style.css">
-    <link rel="stylesheet" href="../../assets/components.css">
-    <link rel="stylesheet" href="../../assets/containers.css">
-    <link rel="stylesheet" href="../../assets/footer.css">
-    <link rel="stylesheet" href="../../assets/donate.css">
-    <link rel="stylesheet" href="../../assets/online.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/containers.css">
+
+    <link rel="stylesheet" href="../../assets/css/partials/footer.css">
+    <link rel="stylesheet" href="../../assets/css/partials/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/partials/donate.css">
+
+    <link rel="stylesheet" href="../../assets/css/pages/online.css">
+
     <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
     <!-- Schema.org Structured Data -->
@@ -209,7 +213,6 @@
 
             <div class="lang-switch">
                 <span>🇻🇳 VI</span>
-                
                 <div class="lang-dropdown">
                     
                         <a href="https://pixel-to-path.com/bn/online/">🇧🇩 বাংলা</a>
@@ -254,8 +257,112 @@
             </div>
         </div>
 
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
     </div>
-</nav> 
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/vi/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Home</span>
+            </a>
+            <a href="/vi/online/"
+               class="mobile-link active">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Online Tool</span>
+            </a>
+            <a href="/vi/offline/"
+               class="mobile-link ">
+                <span class="mobile-link-number">03</span>
+                <span class="mobile-link-text">Desktop App</span>
+            </a>
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
+                <span class="mobile-link-number">04</span>
+                <span class="mobile-link-text">GitHub</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Language</span>
+                <div class="mobile-lang-options">
+                    
+                        <a href="https://pixel-to-path.com/bn/online/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    
+                        <a href="https://pixel-to-path.com/de/online/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    
+                        <a href="https://pixel-to-path.com/online/" class="mobile-lang-btn">🇺🇸 English</a>
+                    
+                        <a href="https://pixel-to-path.com/es/online/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    
+                        <a href="https://pixel-to-path.com/fa/online/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    
+                        <a href="https://pixel-to-path.com/fr/online/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    
+                        <a href="https://pixel-to-path.com/hi/online/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                    
+                        <a href="https://pixel-to-path.com/id/online/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    
+                        <a href="https://pixel-to-path.com/ja/online/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    
+                        <a href="https://pixel-to-path.com/ko/online/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    
+                        <a href="https://pixel-to-path.com/nl/online/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    
+                        <a href="https://pixel-to-path.com/pl/online/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    
+                        <a href="https://pixel-to-path.com/pt/online/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    
+                        <a href="https://pixel-to-path.com/ru/online/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    
+                        <a href="https://pixel-to-path.com/th/online/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    
+                        <a href="https://pixel-to-path.com/tr/online/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    
+                        <a href="https://pixel-to-path.com/uk/online/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    
+                        <a href="https://pixel-to-path.com/vi/online/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    
+                        <a href="https://pixel-to-path.com/zh/online/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script> 
         <main>
             <!-- Hero -->
             <section class="tool-hero">
@@ -263,16 +370,16 @@
                     <h1>Chuyển Đổi PNG sang SVG Trực Tuyến Miễn Phí</h1>
                     <p>Chuyển đổi bất kỳ hình ảnh nào thành đồ họa vector có thể mở rộng trong vài giây — không cần đăng ký, không giới hạn, hỗ trợ đầy đủ màu sắc.</p>
                     <div class="badges">
-                        <span class="badge accent">✓ Miễn phí vĩnh viễn</span>
-                        <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
-                        <span class="badge">Xem trước trực tiếp</span>
-                        <span class="badge">Chế độ Màu &amp; Trắng Đen</span>
-                        <span class="badge">Không có hình mờ</span>
+                        <span class="badge__item badge__item--accent">✓ Miễn phí vĩnh viễn</span>
+                        <span class="badge__item">PNG · JPG · BMP · WebP → SVG</span>
+                        <span class="badge__item">Xem trước trực tiếp</span>
+                        <span class="badge__item">Chế độ Màu &amp; Trắng Đen</span>
+                        <span class="badge__item">Không có hình mờ</span>
                     </div>
                 </div>
             </section>
 
-            <!-- Converter (full width) -->
+            <!-- Converter -->
             <section class="converter-section">
                 <div class="converter-wrap">
 
@@ -289,9 +396,9 @@
 
                         <div class="ps">Cài sẵn</div>
                         <div class="presets">
-                            <button class="preset-btn" data-preset="bw">Trắng & Đen</button>
-                            <button class="preset-btn active" data-preset="poster">Áp phích</button>
-                            <button class="preset-btn" data-preset="photo">Ảnh</button>
+                            <button class="presets__btn" data-preset="bw">Trắng & Đen</button>
+                            <button class="presets__btn presets__btn--active" data-preset="poster">Áp phích</button>
+                            <button class="presets__btn" data-preset="photo">Ảnh</button>
                         </div>
 
                         <button id="adv-toggle"><span>⚙ Cài đặt nâng cao</span><span id="adv-arrow">▾</span></button>
@@ -379,56 +486,56 @@
                     </div>
 
                     <!-- Preview -->
-                    <div class="conv-preview">
-                        <div class="preview-header">
-                            <span class="preview-title">Xem trước SVG</span>
+                    <div class="preview">
+                        <div class="preview__header">
+                            <span class="preview__title">Xem trước SVG</span>
                             <div class="live-badge">
                                 <div class="live-dot" id="live-dot"></div>
                                 <span id="live-text">trực tiếp</span>
                             </div>
                         </div>
 
-                        <div class="preview-body">
-                            <div id="preview-svg-container">
-                                <div class="preview-placeholder" id="placeholder">
-                                    <span class="preview-placeholder-icon">⬡</span>
+                        <div class="preview__body">
+                            <div id="preview__body__svg-container">
+                                <div class="preview__body__svg-container__placeholder" id="placeholder">
+                                    <span class="preview__body__svg-container__placeholder__icon">⬡</span>
                                     <p>Tải hình ảnh lên để bắt đầu</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="preview-footer">
+                        <div class="preview__footer">
                             <div id="status">Sẵn sàng</div>
                             <button id="btn-dl" disabled>↓ Tải SVG</button>
                         </div>
 
-                        <div class="conv-overlay" id="overlay">
+                        <div class="overlay" id="overlay">
                             <div class="spinner"></div>
-                            <div class="overlay-text" id="overlay-text">Đang chuyển đổi...</div>
+                            <div class="overlay__text" id="overlay-text">Đang chuyển đổi...</div>
                         </div>
                     </div>
 
                 </div>
             </section>
 
-            <!-- ── HOW IT WORKS ── -->
+            <!-- how it works -->
             <section class="section bg-light">
                 <div class="container">
                     <h2 class="section-title">Cách thức Hoạt động</h2>
                     <p class="section-intro">Không cần thiết lập, không cần tài khoản. Tải lên, xem trước, tải xuống — dưới 10 giây.</p>
-                    <div class="grid-3">
-                        <div class="card" style="text-align:center">
-                            <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
+                    <div class="grid-3" id="howItWorksCardContainer">
+                        <div class="card card--ta-center">
+                            <div class="howItWorksCardContainer__icon">📁</div>
                             <h3>1. Tải lên</h3>
                             <p>Kéo thả hoặc nhấp để tải lên bất kỳ hình ảnh PNG, JPG, BMP hoặc WebP nào. Có thể dán từ khay nhớ tạm.</p>
                         </div>
-                        <div class="card" style="text-align:center">
-                            <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
+                        <div class="card card--ta-center">
+                            <div class="howItWorksCardContainer__icon">⚡</div>
                             <h3>2. Xem trước trực tiếp</h3>
                             <p>SVG tự động cập nhật khi bạn đổi cài đặt. Mọi thứ đều diễn ra ngay lập tức.</p>
                         </div>
-                        <div class="card" style="text-align:center">
-                            <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
+                        <div class="card card--ta-center">
+                            <div class="howItWorksCardContainer__icon">💾</div>
                             <h3>3. Tải xuống</h3>
                             <p>Nhấp Tải SVG để lấy tệp vector. Mở bằng Illustrator, Inkscape hoặc Figma.</p>
                         </div>
@@ -436,13 +543,13 @@
                 </div>
             </section>
 
-            <!-- ── PRESETS EXPLAINED ── -->
+            <!-- presets explained -->
             <section class="section">
                 <div class="container">
                     <h2 class="section-title">Nên sử dụng chế độ cài sẵn nào?</h2>
                     <p class="section-intro">PixelToPath cung cấp ba chế độ cài sẵn. Bạn cũng có thể tinh chỉnh từng thông số.</p>
                     <div class="preset-explain-grid">
-                        <div class="preset-explain-card bw">
+                        <div class="preset-explain-grid__card bw">
                             <h3><span class="preset-label">T&Đ</span> Trắng &amp; Đen</h3>
                             <p>Chuyển đổi hình ảnh sang thang độ xám. Tốt nhất cho:</p>
                             <ul>
@@ -452,7 +559,7 @@
                                 <li>Cắt decal và khắc laser</li>
                             </ul>
                         </div>
-                        <div class="preset-explain-card poster">
+                        <div class="preset-explain-grid__card poster">
                             <h3><span class="preset-label">Áp phích</span> Màu phẳng</h3>
                             <p>Truy xuất hình ảnh dưới dạng nhiều lớp màu xếp chồng lên nhau. Tốt nhất cho:</p>
                             <ul>
@@ -462,7 +569,7 @@
                                 <li>Tác phẩm nghệ thuật kỹ thuật số</li>
                             </ul>
                         </div>
-                        <div class="preset-explain-card photo">
+                        <div class="preset-explain-grid__card photo">
                             <h3><span class="preset-label">Ảnh</span> Nhiếp ảnh</h3>
                             <p>Sử dụng bộ lọc cho hình ảnh phức tạp. Tốt nhất cho:</p>
                             <ul>
@@ -476,38 +583,38 @@
                 </div>
             </section>
 
-            <!-- ── USE CASES ── -->
+            <!-- Use cases -->
             <section class="section bg-light">
                 <div class="container">
                     <h2 class="section-title">Bạn có thể làm gì với SVG?</h2>
                     <p class="section-intro">Các tệp SVG từ PixelToPath hoạt động ở mọi nơi.</p>
                     <div class="use-cases-grid">
-                        <div class="use-case-card">
+                        <div class="use-case-grid__card">
                             <div class="uc-icon">🎨</div>
                             <h3>Chỉnh sửa trong Figma hoặc Illustrator</h3>
                             <p>Mọi hình dạng đều có thể chỉnh sửa — thay đổi màu sắc và kích thước mà không giảm chất lượng.</p>
                         </div>
-                        <div class="use-case-card">
+                        <div class="use-case-grid__card">
                             <div class="uc-icon">🌐</div>
                             <h3>Sử dụng trên trang web</h3>
                             <p>Sử dụng dưới dạng thẻ <code>&lt;img&gt;</code> hoặc tạo kiểu bằng CSS.</p>
                         </div>
-                        <div class="use-case-card">
+                        <div class="use-case-grid__card">
                             <div class="uc-icon">🖨️</div>
                             <h3>In ấn ở mọi kích thước</h3>
                             <p>Từ danh thiếp đến biển quảng cáo mà không bị mờ.</p>
                         </div>
-                        <div class="use-case-card">
+                        <div class="use-case-grid__card">
                             <div class="uc-icon">✂️</div>
                             <h3>Cắt laser</h3>
                             <p>Nhập thẳng vào LightBurn hoặc Cricut Design Space.</p>
                         </div>
-                        <div class="use-case-card">
+                        <div class="use-case-grid__card">
                             <div class="uc-icon">💻</div>
                             <h3>Biểu tượng Ứng dụng &amp; Web</h3>
                             <p>Hoạt động hoàn hảo với React, Vue và các thư viện.</p>
                         </div>
-                        <div class="use-case-card">
+                        <div class="use-case-grid__card">
                             <div class="uc-icon">🎞️</div>
                             <h3>Hoạt ảnh CSS &amp; JS</h3>
                             <p>Mang lại sự sống động cho hình ảnh tĩnh.</p>
@@ -557,11 +664,11 @@
                 </div>
             </section>
 
-            <!-- ── CTA desktop ── -->
-            <section class="section bg-light">
-                <div class="container" style="text-align:center" id="download">
-                    <h2 style="color:var(--dark);margin-bottom:1rem">Cần chuyển đổi không giới hạn khi ngoại tuyến?</h2>
-                    <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">Hoạt động hoàn toàn trên máy tính của bạn — không cần internet.</p>
+            <!-- Download desktop version -->
+            <section class="section bg-light" id="DownloadDesktopV">
+                <div class="container" id="download">
+                    <h2>Cần chuyển đổi không giới hạn khi ngoại tuyến?</h2>
+                    <p>Hoạt động hoàn toàn trên máy tính của bạn — không cần internet.</p>
                     <div class="double-buttons">
                         <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ Tải xuống cho Windows</a>
                         <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ Tải xuống cho Linux</a>
@@ -589,6 +696,6 @@
 </footer>
 
 
-        <script src="../../assets/online.js"></script>
+        <script src="../../assets/js/pages/online.js"></script>
     </body>
 </html>

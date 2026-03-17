@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     margin-top: 0.9rem;
 }
-.badge {
+.badge__item {
     background: #f5f5f5;
     border: 1px solid #e5e5e5;
     border-radius: 20px;
@@ -14,13 +14,39 @@
     font-size: 12px;
     color: var(--gray);
 }
-.badge.accent {
+.badge__item--accent {
     background: #fff8ee;
     border-color: var(--primary);
     color: var(--primary);
     font-weight: 600;
 }
 
+/* Badges plus gros */
+.big-badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-little);
+    flex-wrap: wrap;
+    margin: 1.2rem 0;
+}
+.big-badges__item {
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    border: 2px solid;
+}
+.big-badges__item--primary {
+    background: #fff8ee;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+.big-badges__item--success {
+    background: #f0f9f4;
+    border-color: #4caf7d;
+    color: #2e7d32;
+}
 
 /* FAQ */
 .faq-list {

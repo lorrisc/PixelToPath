@@ -73,12 +73,16 @@
     
     <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/online/" />
 
-    <link rel="stylesheet" href="../../assets/style.css">
-    <link rel="stylesheet" href="../../assets/components.css">
-    <link rel="stylesheet" href="../../assets/containers.css">
-    <link rel="stylesheet" href="../../assets/footer.css">
-    <link rel="stylesheet" href="../../assets/donate.css">
-    <link rel="stylesheet" href="../../assets/online.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/containers.css">
+
+    <link rel="stylesheet" href="../../assets/css/partials/footer.css">
+    <link rel="stylesheet" href="../../assets/css/partials/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/partials/donate.css">
+
+    <link rel="stylesheet" href="../../assets/css/pages/online.css">
+
     <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
     <!-- Schema.org Structured Data -->
@@ -209,7 +213,6 @@
 
             <div class="lang-switch">
                 <span>🇹🇭 TH</span>
-                
                 <div class="lang-dropdown">
                     
                         <a href="https://pixel-to-path.com/bn/online/">🇧🇩 বাংলা</a>
@@ -254,8 +257,112 @@
             </div>
         </div>
 
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
     </div>
-</nav> 
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/th/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Home</span>
+            </a>
+            <a href="/th/online/"
+               class="mobile-link active">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Online Tool</span>
+            </a>
+            <a href="/th/offline/"
+               class="mobile-link ">
+                <span class="mobile-link-number">03</span>
+                <span class="mobile-link-text">Desktop App</span>
+            </a>
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
+                <span class="mobile-link-number">04</span>
+                <span class="mobile-link-text">GitHub</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Language</span>
+                <div class="mobile-lang-options">
+                    
+                        <a href="https://pixel-to-path.com/bn/online/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    
+                        <a href="https://pixel-to-path.com/de/online/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    
+                        <a href="https://pixel-to-path.com/online/" class="mobile-lang-btn">🇺🇸 English</a>
+                    
+                        <a href="https://pixel-to-path.com/es/online/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    
+                        <a href="https://pixel-to-path.com/fa/online/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    
+                        <a href="https://pixel-to-path.com/fr/online/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    
+                        <a href="https://pixel-to-path.com/hi/online/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                    
+                        <a href="https://pixel-to-path.com/id/online/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    
+                        <a href="https://pixel-to-path.com/ja/online/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    
+                        <a href="https://pixel-to-path.com/ko/online/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    
+                        <a href="https://pixel-to-path.com/nl/online/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    
+                        <a href="https://pixel-to-path.com/pl/online/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    
+                        <a href="https://pixel-to-path.com/pt/online/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    
+                        <a href="https://pixel-to-path.com/ru/online/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    
+                        <a href="https://pixel-to-path.com/th/online/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    
+                        <a href="https://pixel-to-path.com/tr/online/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    
+                        <a href="https://pixel-to-path.com/uk/online/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    
+                        <a href="https://pixel-to-path.com/vi/online/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    
+                        <a href="https://pixel-to-path.com/zh/online/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script> 
         <main>
             <!-- Hero -->
             <section class="tool-hero">
@@ -263,16 +370,16 @@
                     <h1>โปรแกรมแปลง PNG เป็น SVG ออนไลน์ฟรี</h1>
                     <p>แปลงรูปภาพใดๆ เป็นกราฟิกเวกเตอร์ที่ปรับขนาดได้ภายในไม่กี่วินาที — ไม่ต้องลงทะเบียน ไม่มีขีดจำกัด รองรับสีเต็มรูปแบบ</p>
                     <div class="badges">
-                        <span class="badge accent">✓ ฟรีตลอดไป</span>
-                        <span class="badge">PNG · JPG · BMP · WebP → SVG</span>
-                        <span class="badge">ดูตัวอย่างแบบเรียลไทม์</span>
-                        <span class="badge">โหมดสี &amp; ขาวดำ</span>
-                        <span class="badge">ไม่มีลายน้ำ</span>
+                        <span class="badge__item badge__item--accent">✓ ฟรีตลอดไป</span>
+                        <span class="badge__item">PNG · JPG · BMP · WebP → SVG</span>
+                        <span class="badge__item">ดูตัวอย่างแบบเรียลไทม์</span>
+                        <span class="badge__item">โหมดสี &amp; ขาวดำ</span>
+                        <span class="badge__item">ไม่มีลายน้ำ</span>
                     </div>
                 </div>
             </section>
 
-            <!-- Converter (full width) -->
+            <!-- Converter -->
             <section class="converter-section">
                 <div class="converter-wrap">
 
@@ -289,9 +396,9 @@
 
                         <div class="ps">พรีเซ็ต</div>
                         <div class="presets">
-                            <button class="preset-btn" data-preset="bw">ขาวดำ</button>
-                            <button class="preset-btn active" data-preset="poster">โปสเตอร์</button>
-                            <button class="preset-btn" data-preset="photo">ภาพถ่าย</button>
+                            <button class="presets__btn" data-preset="bw">ขาวดำ</button>
+                            <button class="presets__btn presets__btn--active" data-preset="poster">โปสเตอร์</button>
+                            <button class="presets__btn" data-preset="photo">ภาพถ่าย</button>
                         </div>
 
                         <button id="adv-toggle"><span>⚙ การตั้งค่าขั้นสูง</span><span id="adv-arrow">▾</span></button>
@@ -379,56 +486,56 @@
                     </div>
 
                     <!-- Preview -->
-                    <div class="conv-preview">
-                        <div class="preview-header">
-                            <span class="preview-title">ดูตัวอย่าง SVG</span>
+                    <div class="preview">
+                        <div class="preview__header">
+                            <span class="preview__title">ดูตัวอย่าง SVG</span>
                             <div class="live-badge">
                                 <div class="live-dot" id="live-dot"></div>
                                 <span id="live-text">เรียลไทม์</span>
                             </div>
                         </div>
 
-                        <div class="preview-body">
-                            <div id="preview-svg-container">
-                                <div class="preview-placeholder" id="placeholder">
-                                    <span class="preview-placeholder-icon">⬡</span>
+                        <div class="preview__body">
+                            <div id="preview__body__svg-container">
+                                <div class="preview__body__svg-container__placeholder" id="placeholder">
+                                    <span class="preview__body__svg-container__placeholder__icon">⬡</span>
                                     <p>อัปโหลดรูปภาพเพื่อเริ่มต้น</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="preview-footer">
+                        <div class="preview__footer">
                             <div id="status">พร้อม</div>
                             <button id="btn-dl" disabled>↓ ดาวน์โหลด SVG</button>
                         </div>
 
-                        <div class="conv-overlay" id="overlay">
+                        <div class="overlay" id="overlay">
                             <div class="spinner"></div>
-                            <div class="overlay-text" id="overlay-text">กำลังแปลง...</div>
+                            <div class="overlay__text" id="overlay-text">กำลังแปลง...</div>
                         </div>
                     </div>
 
                 </div>
             </section>
 
-            <!-- ── HOW IT WORKS ── -->
+            <!-- how it works -->
             <section class="section bg-light">
                 <div class="container">
                     <h2 class="section-title">วิธีการทำงาน</h2>
                     <p class="section-intro">ไม่ต้องตั้งค่า ไม่มีบัญชี อัปโหลด ดูตัวอย่าง ดาวน์โหลด — ในเวลาไม่ถึง 10 วินาที</p>
-                    <div class="grid-3">
-                        <div class="card" style="text-align:center">
-                            <div style="font-size:2.5rem;margin-bottom:1rem">📁</div>
+                    <div class="grid-3" id="howItWorksCardContainer">
+                        <div class="card card--ta-center">
+                            <div class="howItWorksCardContainer__icon">📁</div>
                             <h3>1. อัปโหลด</h3>
                             <p>ลากและวางหรือคลิกเพื่ออัปโหลดรูปภาพ PNG, JPG, BMP หรือ WebP นอกจากนี้ยังวางจากคลิปบอร์ดได้</p>
                         </div>
-                        <div class="card" style="text-align:center">
-                            <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
+                        <div class="card card--ta-center">
+                            <div class="howItWorksCardContainer__icon">⚡</div>
                             <h3>2. ดูตัวอย่างแบบเรียลไทม์</h3>
                             <p>SVG จะอัปเดตอัตโนมัติเมื่อคุณเปลี่ยนการตั้งค่า ทุกอย่างเกิดขึ้นทันที</p>
                         </div>
-                        <div class="card" style="text-align:center">
-                            <div style="font-size:2.5rem;margin-bottom:1rem">💾</div>
+                        <div class="card card--ta-center">
+                            <div class="howItWorksCardContainer__icon">💾</div>
                             <h3>3. ดาวน์โหลด</h3>
                             <p>คลิกดาวน์โหลด SVG เพื่อรับไฟล์เวกเตอร์ เปิดใน Illustrator, Inkscape, Figma</p>
                         </div>
@@ -436,13 +543,13 @@
                 </div>
             </section>
 
-            <!-- ── PRESETS EXPLAINED ── -->
+            <!-- presets explained -->
             <section class="section">
                 <div class="container">
                     <h2 class="section-title">คุณควรใช้พรีเซ็ตไหน?</h2>
                     <p class="section-intro">PixelToPath มีสามพรีเซ็ต คุณยังสามารถปรับทุกพารามิเตอร์ได้เอง</p>
                     <div class="preset-explain-grid">
-                        <div class="preset-explain-card bw">
+                        <div class="preset-explain-grid__card bw">
                             <h3><span class="preset-label">ขาวดำ</span> ขาวและดำ</h3>
                             <p>แปลงรูปภาพเป็นสีเทาก่อนการวาดเส้น เหมาะที่สุดสำหรับ:</p>
                             <ul>
@@ -452,7 +559,7 @@
                                 <li>การตัดไวนิลและเลเซอร์</li>
                             </ul>
                         </div>
-                        <div class="preset-explain-card poster">
+                        <div class="preset-explain-grid__card poster">
                             <h3><span class="preset-label">โปสเตอร์</span> สีแบน</h3>
                             <p>วาดเส้นรูปภาพเป็นเลเยอร์สีซ้อนทับกัน เหมาะที่สุดสำหรับ:</p>
                             <ul>
@@ -462,7 +569,7 @@
                                 <li>งานศิลปะดิจิทัล</li>
                             </ul>
                         </div>
-                        <div class="preset-explain-card photo">
+                        <div class="preset-explain-grid__card photo">
                             <h3><span class="preset-label">ภาพถ่าย</span> ภาพถ่าย</h3>
                             <p>ใช้การจัดกลุ่มสีแบบกว้างและการกรองสัญญาณรบกวน เหมาะที่สุดสำหรับ:</p>
                             <ul>
@@ -476,38 +583,38 @@
                 </div>
             </section>
 
-            <!-- ── USE CASES ── -->
+            <!-- Use cases -->
             <section class="section bg-light">
                 <div class="container">
                     <h2 class="section-title">คุณทำอะไรกับ SVG ได้บ้าง?</h2>
                     <p class="section-intro">ไฟล์ SVG จาก PixelToPath เป็นมาตรฐานและทำงานได้ทุกที่</p>
                     <div class="use-cases-grid">
-                        <div class="use-case-card">
+                        <div class="use-case-grid__card">
                             <div class="uc-icon">🎨</div>
                             <h3>แก้ไขใน Figma หรือ Illustrator</h3>
                             <p>แก้ไขได้ทุกรูปร่าง — เปลี่ยนสีและปรับขนาดได้โดยไม่เสียคุณภาพ</p>
                         </div>
-                        <div class="use-case-card">
+                        <div class="use-case-grid__card">
                             <div class="uc-icon">🌐</div>
                             <h3>ใช้บนเว็บไซต์</h3>
                             <p>ใช้เป็นแท็ก <code>&lt;img&gt;</code> หรือปรับแต่งด้วย CSS</p>
                         </div>
-                        <div class="use-case-card">
+                        <div class="use-case-grid__card">
                             <div class="uc-icon">🖨️</div>
                             <h3>พิมพ์ได้ทุกขนาด</h3>
                             <p>ผลลัพธ์สมบูรณ์แบบในทุกขนาด — จากนามบัตรไปจนถึงป้ายบิลบอร์ด</p>
                         </div>
-                        <div class="use-case-card">
+                        <div class="use-case-grid__card">
                             <div class="uc-icon">✂️</div>
                             <h3>ตัดเลเซอร์</h3>
                             <p>นำเข้าไฟล์ไปที่ LightBurn หรือ Cricut Design Space โดยตรง</p>
                         </div>
-                        <div class="use-case-card">
+                        <div class="use-case-grid__card">
                             <div class="uc-icon">💻</div>
                             <h3>ไอคอนแอปและเว็บ</h3>
                             <p>ปรับขนาดจาก 16px ถึง 512px ได้เลย ทำงานกับ React และ Vue</p>
                         </div>
-                        <div class="use-case-card">
+                        <div class="use-case-grid__card">
                             <div class="uc-icon">🎞️</div>
                             <h3>แอนิเมชัน CSS &amp; JS</h3>
                             <p>ทำให้เวกเตอร์ของคุณเคลื่อนไหวได้</p>
@@ -557,11 +664,11 @@
                 </div>
             </section>
 
-            <!-- ── CTA desktop ── -->
-            <section class="section bg-light">
-                <div class="container" style="text-align:center" id="download">
-                    <h2 style="color:var(--dark);margin-bottom:1rem">ต้องการการแปลงออฟไลน์แบบไม่จำกัดหรือไม่?</h2>
-                    <p style="color:var(--gray);max-width:600px;margin:0 auto 2rem">แอปเดสก์ท็อปทำงานบนเครื่องของคุณ — ไม่ต้องใช้อินเทอร์เน็ต</p>
+            <!-- Download desktop version -->
+            <section class="section bg-light" id="DownloadDesktopV">
+                <div class="container" id="download">
+                    <h2>ต้องการการแปลงออฟไลน์แบบไม่จำกัดหรือไม่?</h2>
+                    <p>แอปเดสก์ท็อปทำงานบนเครื่องของคุณ — ไม่ต้องใช้อินเทอร์เน็ต</p>
                     <div class="double-buttons">
                         <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Windows.zip" class="btn big-btn win-btn">⬇ ดาวน์โหลดสำหรับ Windows</a>
                         <a href="https://github.com/lorrisc/PixelToPath/releases/download/v2.0.0/PixelToPath-v2.0.0_Linux.tar" class="btn big-btn lin-btn">⬇ ดาวน์โหลดสำหรับ Linux</a>
@@ -589,6 +696,6 @@
 </footer>
 
 
-        <script src="../../assets/online.js"></script>
+        <script src="../../assets/js/pages/online.js"></script>
     </body>
 </html>

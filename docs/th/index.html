@@ -73,11 +73,16 @@
         
         <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/" />
 
-        <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/components.css">
-        <link rel="stylesheet" href="../assets/footer.css">
-        <link rel="stylesheet" href="../assets/donate.css">
-        <link rel="stylesheet" href="../assets/home.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/components.css">
+        <link rel="stylesheet" href="../assets/css/containers.css">
+        
+        <link rel="stylesheet" href="../assets/css/partials/footer.css">
+        <link rel="stylesheet" href="../assets/css/partials/navbar.css">
+        <link rel="stylesheet" href="../assets/css/partials/donate.css">
+
+        <link rel="stylesheet" href="../assets/css/pages/home.css">
+        
         <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
 
         <!-- Schema.org Structured Data -->
@@ -134,7 +139,6 @@
 
             <div class="lang-switch">
                 <span>🇹🇭 TH</span>
-                
                 <div class="lang-dropdown">
                     
                         <a href="https://pixel-to-path.com/bn/">🇧🇩 বাংলা</a>
@@ -179,21 +183,132 @@
             </div>
         </div>
 
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
     </div>
-</nav> 
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/th/"
+               class="mobile-link active">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Home</span>
+            </a>
+            <a href="/th/online/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Online Tool</span>
+            </a>
+            <a href="/th/offline/"
+               class="mobile-link ">
+                <span class="mobile-link-number">03</span>
+                <span class="mobile-link-text">Desktop App</span>
+            </a>
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
+                <span class="mobile-link-number">04</span>
+                <span class="mobile-link-text">GitHub</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Language</span>
+                <div class="mobile-lang-options">
+                    
+                        <a href="https://pixel-to-path.com/bn/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    
+                        <a href="https://pixel-to-path.com/de/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    
+                        <a href="https://pixel-to-path.com/" class="mobile-lang-btn">🇺🇸 English</a>
+                    
+                        <a href="https://pixel-to-path.com/es/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    
+                        <a href="https://pixel-to-path.com/fa/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    
+                        <a href="https://pixel-to-path.com/fr/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    
+                        <a href="https://pixel-to-path.com/hi/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                    
+                        <a href="https://pixel-to-path.com/id/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    
+                        <a href="https://pixel-to-path.com/ja/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    
+                        <a href="https://pixel-to-path.com/ko/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    
+                        <a href="https://pixel-to-path.com/nl/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    
+                        <a href="https://pixel-to-path.com/pl/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    
+                        <a href="https://pixel-to-path.com/pt/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    
+                        <a href="https://pixel-to-path.com/ru/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    
+                        <a href="https://pixel-to-path.com/th/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    
+                        <a href="https://pixel-to-path.com/tr/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    
+                        <a href="https://pixel-to-path.com/uk/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    
+                        <a href="https://pixel-to-path.com/vi/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    
+                        <a href="https://pixel-to-path.com/zh/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script> 
         <main>
             <!-- Hero -->
             <section class="home-hero">
                 <div class="container">
                     <h1 class="c-dark">แปลงรูปภาพเป็น <span>SVG</span><br>ฟรี &amp; โอเพ่นซอร์ส</h1>
                     <p class="hero-sub c-gray">PixelToPath แปลงรูปภาพ PNG, JPG, BMP และ WebP ให้เป็นกราฟิกเวกเตอร์ที่ปรับขนาดได้ - รองรับสีเต็มรูปแบบ ดูตัวอย่างแบบเรียลไทม์ และไม่มีลายน้ำ</p>
-                    <div class="formats-row">
-                        <span class="fmt in">PNG</span>
-                        <span class="fmt in">JPG</span>
-                        <span class="fmt in">BMP</span>
-                        <span class="fmt in">WebP</span>
+                    <div class="big-badges">
+                        <span class="big-badges__item big-badges__item--primary">PNG</span>
+                        <span class="big-badges__item big-badges__item--primary">JPG</span>
+                        <span class="big-badges__item big-badges__item--primary">BMP</span>
+                        <span class="big-badges__item big-badges__item--primary">WebP</span>
                         <span class="fmt-arrow">→</span>
-                        <span class="fmt out">SVG</span>
+                        <span class="big-badges__item big-badges__item--success">SVG</span>
+                    </div>
+                    <div class="badges" id="home__badges">
+                        <span class="badge__item badge__item--accent">✓ ฟรี 100%</span>
+                        <span class="badge__item">ไม่ต้องลงทะเบียน</span>
+                        <span class="badge__item">ไม่มีลายน้ำ</span>
+                        <span class="badge__item">รองรับสีเต็มรูปแบบ</span>
+                        <span class="badge__item">โอเพ่นซอร์ส - MIT</span>
                     </div>
                     <div class="badges" id="home__badges">
                         <span class="badge accent">✓ ฟรี 100%</span>
@@ -207,23 +322,23 @@
 
             <!-- Feature strip -->
             <section class="feature-strip">
-                <div class="fs-item">
-                    <div class="fs-icon">🎨</div>
+                <div class="feature-strip__item">
+                    <div class="feature-strip__icon">🎨</div>
                     <h3>รองรับสีเต็มรูปแบบ</h3>
                     <p>ขับเคลื่อนโดย VTracer - ไม่ใช่แค่ขาวดำ</p>
                 </div>
-                <div class="fs-item">
-                    <div class="fs-icon">⚡</div>
+                <div class="feature-strip__item">
+                    <div class="feature-strip__icon">⚡</div>
                     <h3>ดูตัวอย่างแบบเรียลไทม์</h3>
                     <p>SVG อัปเดตเมื่อคุณปรับการตั้งค่า</p>
                 </div>
-                <div class="fs-item">
-                    <div class="fs-icon">🔒</div>
+                <div class="feature-strip__item">
+                    <div class="feature-strip__icon">🔒</div>
                     <h3>ความเป็นส่วนตัวต้องมาก่อน</h3>
                     <p>เดสก์ท็อป: ไฟล์จะไม่ออกจากอุปกรณ์ของคุณ</p>
                 </div>
-                <div class="fs-item">
-                    <div class="fs-icon">♾️</div>
+                <div class="feature-strip__item">
+                    <div class="feature-strip__icon">♾️</div>
                     <h3>ไม่มีขีดจำกัด</h3>
                     <p>แปลงไฟล์ได้ไม่จำกัด ฟรีตลอดไป</p>
                 </div>
@@ -233,36 +348,36 @@
             <section class="choice-section">
                 <div class="container">
                     <h2 class="section-title">เลือกเวอร์ชันของคุณ</h2>
-                    <p class="choice-subtitle">เครื่องมือทรงพลังตัวเดียวกัน - เลือกรูปแบบที่เหมาะกับขั้นตอนการทำงานของคุณ</p>
-                    <div class="choice-grid">
-                        <div class="choice-card online">
-                            <div class="choice-icon">🌐</div>
-                            <span class="choice-tag">ไม่ต้องติดตั้ง</span>
+                    <p class="choice-section__subtitle">เครื่องมือทรงพลังตัวเดียวกัน - เลือกรูปแบบที่เหมาะกับขั้นตอนการทำงานของคุณ</p>
+                    <div class="choice-section__grid">
+                        <div class="choice-section__card online">
+                            <div class="choice-section__icon">🌐</div>
+                            <span class="choice-section__tag">ไม่ต้องติดตั้ง</span>
                             <h2>เครื่องมือออนไลน์</h2>
                             <p>แปลงรูปภาพได้โดยตรงในเบราว์เซอร์ของคุณ ไม่ต้องติดตั้งอะไร ไม่ต้องมีบัญชี เพียงแค่อัปโหลดและดาวน์โหลด</p>
-                            <ul class="choice-features">
+                            <ul class="choice-section__features">
                                 <li>ทำงานบนอุปกรณ์ &amp; ระบบปฏิบัติการใดก็ได้</li>
                                 <li>โหมดสีเต็มรูปแบบ &amp; ขาวดำ</li>
                                 <li>ดูตัวอย่าง SVG แบบเรียลไทม์</li>
                                 <li>โหมดพรีเซ็ต: ขาวดำ, โปสเตอร์, ภาพถ่าย</li>
                                 <li>การปรับแต่งพารามิเตอร์ขั้นสูง</li>
                             </ul>
-                            <a href="/online/" class="choice-cta">ใช้เครื่องมือออนไลน์ →</a>
+                            <a href="/online/" class="choice-section__cta">ใช้เครื่องมือออนไลน์ →</a>
                         </div>
 
-                        <div class="choice-card offline">
-                            <div class="choice-icon">💻</div>
-                            <span class="choice-tag">Windows &amp; Linux</span>
+                        <div class="choice-section__card offline">
+                            <div class="choice-section__icon">💻</div>
+                            <span class="choice-section__tag">Windows &amp; Linux</span>
                             <h2>แอปเดสก์ท็อป</h2>
                             <p>ติดตั้งครั้งเดียวและแปลงไฟล์แบบออฟไลน์ทั้งหมด รูปภาพของคุณจะไม่ออกจากคอมพิวเตอร์ของคุณ - เหมาะสำหรับงานที่ละเอียดอ่อนหรืองานระดับมืออาชีพ</p>
-                            <ul class="choice-features">
+                            <ul class="choice-section__features">
                                 <li>ออฟไลน์ 100% - ไม่ต้องใช้อินเทอร์เน็ต</li>
                                 <li>ไฟล์ไม่เคยถูกอัปโหลดไปที่ใด</li>
                                 <li>ไม่จำกัดขนาดไฟล์</li>
                                 <li>โหมดโฟกัสเพื่อการใช้งานที่ไม่มีสิ่งรบกวน</li>
                                 <li>ดูตัวอย่าง &amp; พรีเซ็ตแบบเดียวกัน</li>
                             </ul>
-                            <a href="/offline/" class="choice-cta">ดาวน์โหลดแอปเดสก์ท็อป →</a>
+                            <a href="/offline/" class="choice-section__cta">ดาวน์โหลดแอปเดสก์ท็อป →</a>
                         </div>
                     </div>
                 </div>
