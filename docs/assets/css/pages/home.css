@@ -183,7 +183,7 @@
 }
 
 @media (max-width: 768px) {
-    .choice-grid {
+    .choice-section__grid {
         grid-template-columns: 1fr;
     }
     .home-hero h1 {
