@@ -202,6 +202,7 @@ function loadFile(file) {
     currentFile = file;
     currentSvg = null;
     document.getElementById("btn-dl").disabled = true;
+    document.getElementById("dropzone").classList.add("active")
     const reader = new FileReader();
     reader.onload = (ev) => {
         dz.querySelector(".dz-hint").style.display = "none";

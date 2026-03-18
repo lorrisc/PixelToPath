@@ -39,28 +39,116 @@
     background: #fafafa;
 }
 
+/* ── Dropzone ── */
+@keyframes dz-march {
+    to { stroke-dashoffset: -40; }
+}
+@keyframes dz-float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-5px); }
+}
+@keyframes dz-glow-pulse {
+    0%, 100% { opacity: 0; }
+    50%       { opacity: 1; }
+}
+@keyframes dz-shimmer {
+    0%   { transform: translateX(-100%) rotate(20deg); }
+    100% { transform: translateX(200%) rotate(20deg); }
+}
+
 .dropzone {
-    border: 2px dashed #ddd;
-    border-radius: 10px;
-    height: 140px;
+    border-radius: 12px;
+    height: 152px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 6px;
     cursor: pointer;
-    transition: 0.2s;
     position: relative;
     overflow: hidden;
     margin-bottom: 14px;
-    background: #fff;
+    background: linear-gradient(145deg, #fffdf9 0%, #fff8ee 100%);
     text-align: center;
+    /* soft orange shadow ring */
+    box-shadow: 0 0 0 1.5px #ffe0a0, 0 4px 18px rgba(255,153,0,0.10);
+    transition: box-shadow 0.25s, background 0.25s;
 }
+
+/* SVG animated border */
+.dropzone::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    /* drawn by the SVG overlay below — this layer adds the inner glow */
+    background: transparent;
+    pointer-events: none;
+}
+
+/* Marching-dashes via inline SVG injected by ::after trick */
+/* We use outline + clip-path workaround: SVG rect as background-image */
+.dropzone .dz-border-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-radius: 12px;
+    overflow: visible;
+}
+.dropzone .dz-border-svg rect {
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 2;
+    stroke-dasharray: 8 6;
+    stroke-linecap: round;
+    rx: 10;
+    ry: 10;
+    animation: dz-march 0.9s linear infinite;
+    opacity: 0.55;
+}
+.dropzone.active .dz-border-svg rect {
+    animation: none;
+}
+.dropzone.active:hover .dz-border-svg rect, .dropzone.active.drag-over .dz-border-svg rect {
+    animation: dz-march 0.9s linear infinite;
+}
+
+/* Shimmer sweep on hover */
+.dropzone::after {
+    content: "";
+    position: absolute;
+    top: -60%;
+    left: -40%;
+    width: 60%;
+    height: 220%;
+    background: linear-gradient(
+        105deg,
+        transparent 30%,
+        rgba(255,153,0,0.12) 50%,
+        transparent 70%
+    );
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.dropzone:hover::after {
+    opacity: 1;
+    animation: dz-shimmer 0.9s ease forwards;
+}
+
 .dropzone:hover,
 .dropzone.drag-over {
-    border-color: var(--primary);
-    background: #fff9f0;
+    background: linear-gradient(145deg, #fff8ee 0%, #fff1d6 100%);
+    box-shadow: 0 0 0 2px var(--primary), 0 6px 24px rgba(255,153,0,0.18);
 }
+.dropzone:hover .dz-border-svg rect,
+.dropzone.drag-over .dz-border-svg rect {
+    opacity: 1;
+    stroke-width: 2.5;
+}
+
 .dropzone img {
     position: absolute;
     inset: 0;
@@ -68,15 +156,27 @@
     height: 100%;
     object-fit: contain;
     padding: 8px;
+    z-index: 1;
 }
+
 .dropzone .dz-hint {
     color: var(--gray);
     font-size: 12px;
     line-height: 1.7;
+    position: relative;
+    z-index: 2;
 }
+
 .dropzone .dz-icon {
-    font-size: 26px;
+    font-size: 28px;
+    display: block;
+    position: relative;
+    z-index: 2;
+    /* floating bob */
+    animation: dz-float 2.6s ease-in-out infinite;
+    filter: drop-shadow(0 2px 6px rgba(255,153,0,0.35));
 }
+
 .dropzone .dz-fname {
     position: absolute;
     bottom: 0;
@@ -87,6 +187,7 @@
     font-size: 10px;
     padding: 3px 8px;
     text-align: center;
+    z-index: 3;
 }
 #file-input {
     display: none;
