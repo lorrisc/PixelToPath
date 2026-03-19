@@ -53,3 +53,80 @@
 .feature-list li {
     margin-bottom: 0.4rem;
 }
+
+
+
+/* ── Mobile : tableau → cartes ─────────────────────────────── */
+@media (max-width: 640px) {
+
+    /* Cacher le thead — les labels sont portés par data-label */
+    .comparison-table thead {
+        display: none;
+    }
+
+    .comparison-table,
+    .comparison-table tbody,
+    .comparison-table tr,
+    .comparison-table td {
+        display: block;
+        width: 100%;
+    }
+
+    /* Chaque ligne devient une carte */
+    .comparison-table tbody tr {
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: var(--radius);
+        margin-bottom: 1rem;
+        padding: 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+
+    .comparison-table tbody tr:nth-child(even) {
+        background: #fff;
+    }
+    
+    .comparison-table tbody tr:hover {
+        background: #fff;
+    }
+
+    /* Chaque cellule affiche son label via data-label */
+    .comparison-table td {
+        display: flex;
+        align-items: center;
+        padding: 10px 16px;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 0.9rem;
+        gap: 12px;
+    }
+
+    .comparison-table td:last-child {
+        border-bottom: none;
+    }
+
+    /* Label de colonne injecté via data-label */
+    .comparison-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: var(--dark);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        flex-shrink: 0;
+        min-width: 110px;
+    }
+
+    /* Première colonne (feature name) = titre de carte */
+    .comparison-table td:first-child {
+        background: var(--dark);
+        color: #fff;
+        border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+        font-weight: 700;
+        font-size: 0.9rem;
+        justify-content: center;
+    }
+
+    .comparison-table td:first-child::before {
+        display: none;
+    }
+}
