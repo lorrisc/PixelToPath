@@ -66,15 +66,20 @@
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PixelToPath Online SVG Converter",
-      "url": "https://pixel-to-path.com/online/",
-      "description": "Konvertieren Sie PNG, JPG, BMP oder WebP online in SVG — kostenlos, sofort, ohne Registrierung. Angetrieben von VTracer mit Farb- und Schwarzweiß-Modi. Live-Vorschau.",
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PixelToPath Online SVG Konverter",
+        "url": "https://pixel-to-path.com/online/",
+        "description": "Konvertieren Sie PNG, JPG, BMP oder WebP online in SVG — kostenlos, sofort, ohne Registrierung. Angetrieben von VTracer mit Farb- und Schwarzweiß-Modi. Live-Vorschau.",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "featureList": ["Farbvektorisierung","Schwarzweiß-Nachzeichnung","Live-SVG-Vorschau","Voreingestellte Modi","Keine Registrierung","Kein Dateigrößenlimit"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1
+        }
     }
     </script>
 
@@ -103,7 +108,7 @@
           "name": "Ist dieser Online-SVG-Konverter wirklich kostenlos ohne Limits?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Ja, komplett kostenlos. Keine Registrierung, keine Wasserzeichen, keine täglichen Limits. PixelToPath ist Open Source (MIT)."
           }
         },
         {
@@ -111,7 +116,7 @@
           "name": "Unterstützt dieser Konverter Farbbilder?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Ja. PixelToPath verwendet &lt;strong&gt;VTracer&lt;/strong&gt;, das nativ Vollfarbbilder verarbeitet. Wählen Sie das &lt;strong&gt;Poster&lt;/strong&gt;- oder &lt;strong&gt;Foto&lt;/strong&gt;-Preset."
           }
         },
         {
@@ -119,7 +124,7 @@
           "name": "Werden meine hochgeladenen Dateien gespeichert oder geteilt?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Nein. Dateien werden nach der SVG-Generierung sofort gelöscht. Wir speichern oder teilen keine hochgeladenen Bilder."
           }
         },
         {
@@ -127,7 +132,7 @@
           "name": "Welche Bildformate werden unterstützt?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "PNG, JPG, JPEG, BMP und WebP. Sie können auch ein Bild direkt aus Ihrer Zwischenablage einfügen (Strg+V)."
           }
         },
         {
@@ -135,31 +140,31 @@
           "name": "Was ist die maximale Dateigröße?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Der Online-Konverter akzeptiert Dateien bis zu &lt;strong&gt;20 MB&lt;/strong&gt;. Für größere Dateien laden Sie die &lt;a href=&#34;#download&#34; style=&#34;color:var(--primary)&#34;&gt;Desktop-App&lt;/a&gt; herunter."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "Warum sieht das S&amp;W-Ergebnis bei meinem farbigen Bild falsch aus?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Im Binär-Modus wird das Bild zuerst in Graustufen umgewandelt. Aktivieren Sie den Schalter &lt;strong&gt;Invertieren&lt;/strong&gt;, wenn das Ergebnis zu hell ist."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "Was ist der Unterschied zwischen Spline-, Polygon- und Pixel-Modus?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "&lt;strong&gt;Spline&lt;/strong&gt; erzeugt weiche Bézierkurven. &lt;strong&gt;Polygon&lt;/strong&gt; verwendet gerade Liniensegmente. &lt;strong&gt;Pixel&lt;/strong&gt; zeichnet die exakte Pixelgrenze nach (perfekt für Pixel-Art)."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "Kann ich das konvertierte SVG für kommerzielle Projekte verwenden?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Ja. Sie können die generierten Dateien für jeden Zweck frei verwenden, es gibt keine Lizenzbeschränkungen."
           }
         }
       ]

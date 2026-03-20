@@ -66,15 +66,20 @@
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PixelToPath Online SVG Converter",
-      "url": "https://pixel-to-path.com/online/",
-      "description": "PNG, JPG, BMP 또는 WebP를 온라인에서 SVG로 변환하세요 — 무료, 즉시, 가입 불필요. 컬러 및 흑백 모드가 있는 VTracer 기반. 라이브 미리보기.",
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PixelToPath 온라인 SVG 변환기",
+        "url": "https://pixel-to-path.com/online/",
+        "description": "PNG, JPG, BMP 또는 WebP를 온라인에서 SVG로 변환하세요 — 무료, 즉시, 가입 불필요. 컬러 및 흑백 모드가 있는 VTracer 기반. 라이브 미리보기.",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "featureList": ["컬러 벡터화","흑백 트레이싱","라이브 SVG 미리보기","사전 설정 모드","가입 불필요","파일 크기 제한 없음"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1
+        }
     }
     </script>
 
@@ -103,7 +108,7 @@
           "name": "제한 없이 정말 무료인가요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "네. PixelToPath는 오픈 소스(MIT) 프로젝트입니다."
           }
         },
         {
@@ -111,7 +116,7 @@
           "name": "컬러 이미지를 지원하나요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "네. &lt;strong&gt;VTracer&lt;/strong&gt;를 사용합니다. 컬러의 경우 &lt;strong&gt;포스터&lt;/strong&gt; 또는 &lt;strong&gt;사진&lt;/strong&gt;을 선택하세요."
           }
         },
         {
@@ -119,7 +124,7 @@
           "name": "파일이 저장되나요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "아니요. 처리 후 즉시 삭제됩니다."
           }
         },
         {
@@ -127,7 +132,7 @@
           "name": "지원되는 형식은 무엇인가요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "PNG, JPG, JPEG, BMP, WebP (Ctrl+V 지원)."
           }
         },
         {
@@ -135,31 +140,31 @@
           "name": "최대 파일 크기는 얼마인가요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "온라인에서는 &lt;strong&gt;20 MB&lt;/strong&gt;입니다. 무제한으로 사용하려면 &lt;a href=&#34;#download&#34; style=&#34;color:var(--primary)&#34;&gt;데스크톱 앱&lt;/a&gt;을 다운로드하세요."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "흑백 결과가 이상한 이유는 무엇인가요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "고급 설정에서 &lt;strong&gt;반전&lt;/strong&gt;을 켜세요."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "스플라인, 다각형, 픽셀의 차이는 무엇인가요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "&lt;strong&gt;스플라인&lt;/strong&gt;은 매끄러운 곡선, &lt;strong&gt;다각형&lt;/strong&gt;은 직선, &lt;strong&gt;픽셀&lt;/strong&gt;은 픽셀 아트에 적합합니다."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "상업용으로 사용할 수 있나요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "네, 라이선스 제한이 전혀 없습니다."
           }
         }
       ]

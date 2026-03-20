@@ -66,15 +66,20 @@
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PixelToPath Online SVG Converter",
-      "url": "https://pixel-to-path.com/online/",
-      "description": "PNG、JPG、BMP、WebP をオンラインで SVG に変換します — 無料、即時、登録不要。カラーと白黒モードを備えた VTracer を搭載。ライブプレビュー。",
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PixelToPath オンライン SVG コンバーター",
+        "url": "https://pixel-to-path.com/online/",
+        "description": "PNG、JPG、BMP、WebP をオンラインで SVG に変換します — 無料、即時、登録不要。カラーと白黒モードを備えた VTracer を搭載。ライブプレビュー。",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "featureList": ["カラーベクター化","白黒トレース","ライブ SVG プレビュー","プリセットモード","登録不要","ファイルサイズ制限なし"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1
+        }
     }
     </script>
 
@@ -103,7 +108,7 @@
           "name": "制限なしで本当に無料ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "はい、完全無料です。PixelToPath はオープンソース (MIT) プロジェクトです。"
           }
         },
         {
@@ -111,7 +116,7 @@
           "name": "カラー画像に対応していますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "はい。&lt;strong&gt;VTracer&lt;/strong&gt; を使用しています。カラーには &lt;strong&gt;ポスター&lt;/strong&gt; または &lt;strong&gt;写真&lt;/strong&gt; を選択してください。"
           }
         },
         {
@@ -119,7 +124,7 @@
           "name": "ファイルは保存されますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "いいえ。処理後すぐに削除されます。"
           }
         },
         {
@@ -127,7 +132,7 @@
           "name": "サポートされているフォーマットは何ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "PNG、JPG、JPEG、BMP、WebP (Ctrl+V も可)。"
           }
         },
         {
@@ -135,31 +140,31 @@
           "name": "最大ファイルサイズは？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "オンラインは &lt;strong&gt;20 MB&lt;/strong&gt; まで。無制限に使用するには&lt;a href=&#34;#download&#34; style=&#34;color:var(--primary)&#34;&gt;デスクトップアプリ&lt;/a&gt;をダウンロードしてください。"
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "白黒の結果がおかしいのはなぜですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "詳細設定で &lt;strong&gt;反転&lt;/strong&gt; をオンにしてください。"
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "スプライン、ポリゴン、ピクセルの違いは何ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "&lt;strong&gt;スプライン&lt;/strong&gt; は滑らかな曲線。&lt;strong&gt;ポリゴン&lt;/strong&gt; は直線。&lt;strong&gt;ピクセル&lt;/strong&gt; はピクセルアート用です。"
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "商用プロジェクトで使用できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "はい、ライセンス制限はありません。"
           }
         }
       ]

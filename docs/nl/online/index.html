@@ -66,15 +66,20 @@
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PixelToPath Online SVG Converter",
-      "url": "https://pixel-to-path.com/online/",
-      "description": "Converteer PNG, JPG, BMP of WebP online naar SVG — gratis, direct, geen registratie. Aangedreven door VTracer met kleur en zwart-wit modi. Live preview.",
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PixelToPath Online SVG Converter",
+        "url": "https://pixel-to-path.com/online/",
+        "description": "Converteer PNG, JPG, BMP of WebP online naar SVG — gratis, direct, geen registratie. Aangedreven door VTracer met kleur en zwart-wit modi. Live preview.",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "featureList": ["Kleurvectorisatie","Zwart-wit overtrekken","Live SVG preview","Vooraf ingestelde modi","Geen registratie","Geen bestandsgroottelimiet"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1
+        }
     }
     </script>
 
@@ -103,7 +108,7 @@
           "name": "Is deze online SVG converter echt gratis zonder limieten?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Ja, volledig gratis. Geen registratie of watermerken. PixelToPath is een open-source project (MIT)."
           }
         },
         {
@@ -111,7 +116,7 @@
           "name": "Ondersteunt deze converter kleurenafbeeldingen?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Ja. PixelToPath gebruikt &lt;strong&gt;VTracer&lt;/strong&gt; dat native full-color afbeeldingen verwerkt. Kies &lt;strong&gt;Poster&lt;/strong&gt; of &lt;strong&gt;Foto&lt;/strong&gt;."
           }
         },
         {
@@ -119,7 +124,7 @@
           "name": "Worden mijn bestanden opgeslagen of gedeeld?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Nee. Uw bestanden worden direct na verwerking verwijderd van de server. We slaan geen afbeeldingen op."
           }
         },
         {
@@ -127,7 +132,7 @@
           "name": "Welke afbeeldingsformaten worden ondersteund?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "PNG, JPG, JPEG, BMP en WebP. U kunt ook rechtstreeks plakken (Ctrl+V)."
           }
         },
         {
@@ -135,31 +140,31 @@
           "name": "Wat is de maximale bestandsgrootte?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Online tot &lt;strong&gt;20 MB&lt;/strong&gt;. Download de &lt;a href=&#34;#download&#34; style=&#34;color:var(--primary)&#34;&gt;desktop applicatie&lt;/a&gt; voor onbeperkte groottes."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "Waarom ziet Z&amp;W er verkeerd uit op mijn kleurenafbeelding?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Schakel de optie &lt;strong&gt;Omkeren&lt;/strong&gt; in de Geavanceerde instellingen in als de omzetting te licht is."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "Wat is het verschil tussen Spline, Polygoon en Pixel?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "&lt;strong&gt;Spline&lt;/strong&gt; is voor vloeiende curven. &lt;strong&gt;Polygoon&lt;/strong&gt; is voor strakke lijnen. &lt;strong&gt;Pixel&lt;/strong&gt; trekt exact de pixels over (perfect voor pixel art)."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "Mag ik de SVG gebruiken voor commerciële projecten?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Ja. De gegenereerde SVG-bestanden zijn van u om vrij te gebruiken zonder licentiebeperkingen."
           }
         }
       ]

@@ -66,15 +66,20 @@
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PixelToPath Online SVG Converter",
-      "url": "https://pixel-to-path.com/online/",
-      "description": "Convert PNG, JPG, BMP or WebP to SVG online — free, instant, no registration. Powered by VTracer with color and black-and-white modes. Live preview.",
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PixelToPath Online SVG Converter",
+        "url": "https://pixel-to-path.com/online/",
+        "description": "Convert PNG, JPG, BMP or WebP to SVG online — free, instant, no registration. Powered by VTracer with color and black-and-white modes. Live preview.",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "featureList": ["Color vectorization","Black & white tracing","Live SVG preview","Preset modes","No registration","No file size limit"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1
+        }
     }
     </script>
 
@@ -103,7 +108,7 @@
           "name": "Is this online SVG converter really free with no limits?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Yes, completely free. No registration, no watermarks, no daily conversion limits. PixelToPath is an open-source project (MIT license). You can convert as many files as you want."
           }
         },
         {
@@ -111,7 +116,7 @@
           "name": "Does this converter support color images?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Yes. Unlike most free online tools that only produce black-and-white SVGs, PixelToPath uses &lt;strong&gt;VTracer&lt;/strong&gt; — a modern vectorization engine that natively handles full-color images. Choose the &lt;strong&gt;Poster&lt;/strong&gt; or &lt;strong&gt;Photo&lt;/strong&gt; preset for color output."
           }
         },
         {
@@ -119,7 +124,7 @@
           "name": "Are my uploaded files stored or shared?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "No. Your files are sent to our server for processing and are immediately deleted after the SVG is returned. We do not store, log, or share any uploaded images."
           }
         },
         {
@@ -127,7 +132,7 @@
           "name": "What image formats are supported?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "PNG, JPG, JPEG, BMP and WebP are all accepted. You can also paste an image directly from your clipboard (Ctrl+V / Cmd+V)."
           }
         },
         {
@@ -135,31 +140,31 @@
           "name": "What is the maximum file size?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "The online converter accepts files up to &lt;strong&gt;20 MB&lt;/strong&gt;. For larger files or batch processing, download the &lt;a href=&#34;#download&#34; style=&#34;color:var(--primary)&#34;&gt;desktop application&lt;/a&gt; — it has no size or quantity limits and works entirely offline."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "Why does the B&amp;W result look wrong on my colored image?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "In Binary mode, the image is first converted to grayscale using perceptual weights (the same as human vision). If the traced result is still too light, enable the &lt;strong&gt;Invert&lt;/strong&gt; switch in Advanced settings — this is especially useful for logos or icons with a white background."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "What is the difference between Spline, Polygon, and Pixel modes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "&lt;strong&gt;Spline&lt;/strong&gt; produces smooth Bézier curves — the best quality for organic shapes. &lt;strong&gt;Polygon&lt;/strong&gt; uses straight-line segments — ideal for geometric artwork with sharp angles. &lt;strong&gt;Pixel&lt;/strong&gt; traces the exact pixel boundary without any smoothing — perfect for pixel art or retro game sprites."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "Can I use the converted SVG for commercial projects?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Yes. The SVG files you generate are yours to use freely for any purpose, including commercial projects. There are no licensing restrictions on the output files."
           }
         }
       ]

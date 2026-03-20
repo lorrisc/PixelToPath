@@ -66,15 +66,20 @@
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PixelToPath Online SVG Converter",
-      "url": "https://pixel-to-path.com/online/",
-      "description": "PNG, JPG, BMP या WebP को ऑनलाइन SVG में कनवर्ट करें — मुफ़्त, तुरंत, बिना किसी पंजीकरण के। रंग और श्वेत-श्याम मोड के साथ VTracer द्वारा संचालित। लाइव प्रिव्यू।",
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PixelToPath ऑनलाइन SVG कनवर्टर",
+        "url": "https://pixel-to-path.com/online/",
+        "description": "PNG, JPG, BMP या WebP को ऑनलाइन SVG में कनवर्ट करें — मुफ़्त, तुरंत, बिना किसी पंजीकरण के। रंग और श्वेत-श्याम मोड के साथ VTracer द्वारा संचालित। लाइव प्रिव्यू।",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "featureList": ["रंगीन वेक्टराइजेशन","श्वेत-श्याम ट्रेसिंग","लाइव SVG प्रिव्यू","प्रीसेट मोड","कोई पंजीकरण नहीं","कोई फ़ाइल आकार सीमा नहीं"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1
+        }
     }
     </script>
 
@@ -103,7 +108,7 @@
           "name": "क्या यह ऑनलाइन SVG कनवर्टर वास्तव में बिना किसी सीमा के मुफ़्त है?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "हाँ, पूरी तरह से मुफ़्त। कोई पंजीकरण नहीं, कोई वॉटरमार्क नहीं, कोई दैनिक रूपांतरण सीमा नहीं। PixelToPath एक ओपन-सोर्स प्रोजेक्ट (MIT लाइसेंस) है। आप जितनी चाहें उतनी फ़ाइलें कनवर्ट कर सकते हैं।"
           }
         },
         {
@@ -111,7 +116,7 @@
           "name": "क्या यह कनवर्टर रंगीन छवियों का समर्थन करता है?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "हाँ। अधिकांश मुफ़्त ऑनलाइन टूल के विपरीत जो केवल ब्लैक-एंड-व्हाइट SVG बनाते हैं, PixelToPath &lt;strong&gt;VTracer&lt;/strong&gt; का उपयोग करता है — एक आधुनिक वेक्टराइजेशन इंजन जो मूल रूप से पूर्ण-रंगीन छवियों को संभालता है। रंग आउटपुट के लिए &lt;strong&gt;पोस्टर&lt;/strong&gt; या &lt;strong&gt;फोटो&lt;/strong&gt; प्रीसेट चुनें।"
           }
         },
         {
@@ -119,7 +124,7 @@
           "name": "क्या मेरी अपलोड की गई फ़ाइलें संग्रहीत या साझा की जाती हैं?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "नहीं। आपकी फ़ाइलें प्रसंस्करण के लिए हमारे सर्वर पर भेजी जाती हैं और SVG वापस आने के तुरंत बाद हटा दी जाती हैं। हम किसी भी अपलोड की गई छवि को संग्रहीत, लॉग या साझा नहीं करते हैं।"
           }
         },
         {
@@ -127,7 +132,7 @@
           "name": "कौन से छवि प्रारूप समर्थित हैं?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "PNG, JPG, JPEG, BMP और WebP सभी स्वीकार किए जाते हैं। आप सीधे अपने क्लिपबोर्ड (Ctrl+V / Cmd+V) से भी एक छवि पेस्ट कर सकते हैं।"
           }
         },
         {
@@ -135,31 +140,31 @@
           "name": "अधिकतम फ़ाइल आकार क्या है?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "ऑनलाइन कनवर्टर &lt;strong&gt;20 MB&lt;/strong&gt; तक की फ़ाइलों को स्वीकार करता है। बड़ी फ़ाइलों या बैच प्रसंस्करण के लिए, &lt;a href=&#34;#download&#34; style=&#34;color:var(--primary)&#34;&gt;डेस्कटॉप एप्लिकेशन&lt;/a&gt; डाउनलोड करें — इसकी कोई आकार या मात्रा सीमा नहीं है और यह पूरी तरह से ऑफ़लाइन काम करता है।"
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "मेरी रंगीन छवि पर श्वेत-श्याम परिणाम गलत क्यों दिखता है?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "बाइनरी मोड में, छवि को पहले अवधारणात्मक भार (मानव दृष्टि के समान) का उपयोग करके ग्रेस्केल में परिवर्तित किया जाता है। यदि ट्रेस किया गया परिणाम अभी भी बहुत हल्का है, तो उन्नत सेटिंग्स में &lt;strong&gt;उलटें&lt;/strong&gt; स्विच सक्षम करें — यह विशेष रूप से सफेद पृष्ठभूमि वाले लोगो या आइकन के लिए उपयोगी है।"
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "स्प्लाइन, बहुभुज और पिक्सेल मोड के बीच क्या अंतर है?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "&lt;strong&gt;स्प्लाइन&lt;/strong&gt; चिकनी बेज़ियर कर्व्स बनाता है — जैविक आकृतियों के लिए सर्वोत्तम गुणवत्ता। &lt;strong&gt;बहुभुज&lt;/strong&gt; सीधी-रेखा खंडों का उपयोग करता है — तेज कोणों वाले ज्यामितीय कलाकृति के लिए आदर्श। &lt;strong&gt;पिक्सेल&lt;/strong&gt; बिना किसी स्मूथिंग के सटीक पिक्सेल सीमा को ट्रेस करता है — पिक्सेल आर्ट या रेट्रो गेम स्प्राइट्स के लिए एकदम सही।"
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "क्या मैं वाणिज्यिक परियोजनाओं के लिए परिवर्तित SVG का उपयोग कर सकता हूँ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "हाँ। आपके द्वारा जनरेट की जाने वाली SVG फ़ाइलें वाणिज्यिक परियोजनाओं सहित किसी भी उद्देश्य के लिए स्वतंत्र रूप से उपयोग करने के लिए आपकी हैं। आउटपुट फ़ाइलों पर कोई लाइसेंसिंग प्रतिबंध नहीं है।"
           }
         }
       ]

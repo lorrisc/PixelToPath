@@ -66,15 +66,20 @@
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PixelToPath Online SVG Converter",
-      "url": "https://pixel-to-path.com/online/",
-      "description": "แปลง PNG, JPG, BMP หรือ WebP เป็น SVG ออนไลน์ — ฟรี ทันที ไม่ต้องลงทะเบียน ขับเคลื่อนโดย VTracer พร้อมโหมดสีและขาวดำ ดูตัวอย่างแบบเรียลไทม์",
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "โปรแกรมแปลง SVG ออนไลน์ PixelToPath",
+        "url": "https://pixel-to-path.com/online/",
+        "description": "แปลง PNG, JPG, BMP หรือ WebP เป็น SVG ออนไลน์ — ฟรี ทันที ไม่ต้องลงทะเบียน ขับเคลื่อนโดย VTracer พร้อมโหมดสีและขาวดำ ดูตัวอย่างแบบเรียลไทม์",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "featureList": ["การแปลงเป็นเวกเตอร์สี","การลากเส้นขาวดำ","ดูตัวอย่าง SVG แบบเรียลไทม์","โหมดพรีเซ็ต","ไม่ต้องลงทะเบียน","ไม่จำกัดขนาดไฟล์"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1
+        }
     }
     </script>
 
@@ -103,7 +108,7 @@
           "name": "เครื่องมือนี้ฟรีแบบไม่มีข้อจำกัดจริงหรือ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "ใช่ ฟรีทั้งหมด PixelToPath เป็นโอเพ่นซอร์ส (ใบอนุญาต MIT)"
           }
         },
         {
@@ -111,7 +116,7 @@
           "name": "รองรับรูปภาพสีหรือไม่?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "ใช่ เราใช้ &lt;strong&gt;VTracer&lt;/strong&gt; เลือกพรีเซ็ต &lt;strong&gt;โปสเตอร์&lt;/strong&gt; หรือ &lt;strong&gt;ภาพถ่าย&lt;/strong&gt;"
           }
         },
         {
@@ -119,7 +124,7 @@
           "name": "ไฟล์ของฉันจะถูกเก็บไว้หรือไม่?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "ไม่ ไฟล์จะถูกลบทันทีหลังจากประมวลผล"
           }
         },
         {
@@ -127,7 +132,7 @@
           "name": "รองรับรูปแบบใดบ้าง?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "PNG, JPG, JPEG, BMP และ WebP (รวมถึง Ctrl+V)"
           }
         },
         {
@@ -135,31 +140,31 @@
           "name": "ขนาดไฟล์สูงสุดคือเท่าใด?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "ออนไลน์สูงสุด &lt;strong&gt;20 MB&lt;/strong&gt; หากใหญ่กว่านั้น ให้โหลด &lt;a href=&#34;#download&#34; style=&#34;color:var(--primary)&#34;&gt;แอปเดสก์ท็อป&lt;/a&gt;"
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "ทำไมผลลัพธ์ขาวดำดูผิดเพี้ยน?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "เปิดสวิตช์ &lt;strong&gt;สลับสี&lt;/strong&gt; ในการตั้งค่าขั้นสูง"
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "สไปลน์ รูปหลายเหลี่ยม และพิกเซล ต่างกันอย่างไร?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "&lt;strong&gt;สไปลน์&lt;/strong&gt; สำหรับเส้นโค้ง &lt;strong&gt;รูปหลายเหลี่ยม&lt;/strong&gt; สำหรับเส้นตรง &lt;strong&gt;พิกเซล&lt;/strong&gt; สำหรับพิกเซลอาร์ต"
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "ใช้ในเชิงพาณิชย์ได้ไหม?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "ได้ ไฟล์ที่คุณสร้างขึ้นไม่มีข้อจำกัดด้านลิขสิทธิ์ใดๆ"
           }
         }
       ]

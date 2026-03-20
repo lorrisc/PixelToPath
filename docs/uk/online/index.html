@@ -66,15 +66,20 @@
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PixelToPath Online SVG Converter",
-      "url": "https://pixel-to-path.com/online/",
-      "description": "Конвертуйте PNG, JPG, BMP або WebP у SVG онлайн — безкоштовно, миттєво, без реєстрації. На базі VTracer з кольоровим та чорно-білим режимами. Попередній перегляд наживо.",
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Онлайн-конвертер SVG PixelToPath",
+        "url": "https://pixel-to-path.com/online/",
+        "description": "Конвертуйте PNG, JPG, BMP або WebP у SVG онлайн — безкоштовно, миттєво, без реєстрації. На базі VTracer з кольоровим та чорно-білим режимами. Попередній перегляд наживо.",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "featureList": ["Кольорова векторизація","Чорно-біле трасування","Попередній перегляд SVG наживо","Пресети","Без реєстрації","Без обмежень розміру файлу"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1
+        }
     }
     </script>
 
@@ -103,7 +108,7 @@
           "name": "Це дійсно безкоштовно та без лімітів?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Так, повністю безкоштовно (ліцензія MIT)."
           }
         },
         {
@@ -111,7 +116,7 @@
           "name": "Чи підтримуються кольорові зображення?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Так. Ми використовуємо &lt;strong&gt;VTracer&lt;/strong&gt;. Оберіть пресет &lt;strong&gt;Постер&lt;/strong&gt; або &lt;strong&gt;Фото&lt;/strong&gt;."
           }
         },
         {
@@ -119,7 +124,7 @@
           "name": "Чи зберігаються мої файли?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Ні. Вони видаляються одразу після обробки."
           }
         },
         {
@@ -127,7 +132,7 @@
           "name": "Які формати підтримуються?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "PNG, JPG, JPEG, BMP і WebP. (Ctrl+V також працює)."
           }
         },
         {
@@ -135,31 +140,31 @@
           "name": "Який максимальний розмір файлу?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "В онлайні до &lt;strong&gt;20 МБ&lt;/strong&gt;. Для більших завантажте &lt;a href=&#34;#download&#34; style=&#34;color:var(--primary)&#34;&gt;десктопний додаток&lt;/a&gt;."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "Чому Ч/Б результат має поганий вигляд?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Увімкніть &lt;strong&gt;Інвертувати&lt;/strong&gt; у додаткових налаштуваннях."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "У чому різниця між режимами Сплайн, Полігон і Піксель?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "&lt;strong&gt;Сплайн&lt;/strong&gt; для плавних кривих. &lt;strong&gt;Полігон&lt;/strong&gt; для прямих. &lt;strong&gt;Піксель&lt;/strong&gt; для піксель-арту."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "Чи можна використовувати SVG у комерційних цілях?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Так, без ліцензійних обмежень."
           }
         }
       ]

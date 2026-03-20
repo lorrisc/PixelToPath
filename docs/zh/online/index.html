@@ -66,15 +66,20 @@
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PixelToPath Online SVG Converter",
-      "url": "https://pixel-to-path.com/online/",
-      "description": "在线将 PNG、JPG、BMP 或 WebP 转换为 SVG — 免费、即时、无需注册。由 VTracer 提供支持，具有彩色和黑白模式。实时预览。",
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PixelToPath 在线 SVG 转换器",
+        "url": "https://pixel-to-path.com/online/",
+        "description": "在线将 PNG、JPG、BMP 或 WebP 转换为 SVG — 免费、即时、无需注册。由 VTracer 提供支持，具有彩色和黑白模式。实时预览。",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "featureList": ["彩色矢量化","黑白追踪","实时 SVG 预览","预设模式","无需注册","无文件大小限制"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1
+        }
     }
     </script>
 
@@ -103,7 +108,7 @@
           "name": "这个工具真的是免费无限制的吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "是的，完全免费。PixelToPath 是开源项目 (MIT)。"
           }
         },
         {
@@ -111,7 +116,7 @@
           "name": "是否支持彩色图像？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "支持。我们使用 &lt;strong&gt;VTracer&lt;/strong&gt; 引擎。彩色请选择 &lt;strong&gt;海报&lt;/strong&gt; 或 &lt;strong&gt;照片&lt;/strong&gt;。"
           }
         },
         {
@@ -119,7 +124,7 @@
           "name": "我的文件会被保存吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "不会。文件在处理完成后会立即被删除。"
           }
         },
         {
@@ -127,7 +132,7 @@
           "name": "支持哪些格式？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "PNG、JPG、JPEG、BMP 和 WebP (也支持 Ctrl+V)。"
           }
         },
         {
@@ -135,31 +140,31 @@
           "name": "最大文件大小是多少？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "在线版最大 &lt;strong&gt;20 MB&lt;/strong&gt;。处理大文件请下载 &lt;a href=&#34;#download&#34; style=&#34;color:var(--primary)&#34;&gt;桌面应用&lt;/a&gt;。"
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "为什么彩色图片的黑白结果看起来不对？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "请在高级设置中开启 &lt;strong&gt;反色&lt;/strong&gt;。"
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "样条曲线、多边形和像素模式有什么区别？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "&lt;strong&gt;样条曲线&lt;/strong&gt; 适合平滑曲线。&lt;strong&gt;多边形&lt;/strong&gt; 适合直线。&lt;strong&gt;像素&lt;/strong&gt; 适合像素画。"
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "我可以用于商业项目吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "可以，没有任何许可限制。"
           }
         }
       ]

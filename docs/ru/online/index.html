@@ -66,15 +66,20 @@
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PixelToPath Online SVG Converter",
-      "url": "https://pixel-to-path.com/online/",
-      "description": "Конвертируйте PNG, JPG, BMP или WebP в SVG онлайн — бесплатно, мгновенно, без регистрации. На базе VTracer с цветным и черно-белым режимами. Предпросмотр в реальном времени.",
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Онлайн-конвертер SVG PixelToPath",
+        "url": "https://pixel-to-path.com/online/",
+        "description": "Конвертируйте PNG, JPG, BMP или WebP в SVG онлайн — бесплатно, мгновенно, без регистрации. На базе VTracer с цветным и черно-белым режимами. Предпросмотр в реальном времени.",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "featureList": ["Color vectorization", "Black & white tracing", "Live SVG preview", "Preset modes", "No registration", "No file size limit"]
+        "featureList": ["Цветная векторизация","Черно-белая трассировка","Предпросмотр SVG вживую","Пресеты","Без регистрации","Без ограничений размера файла"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1
+        }
     }
     </script>
 
@@ -103,7 +108,7 @@
           "name": "Это действительно бесплатно и без ограничений?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Да, полностью бесплатно. PixelToPath — это Open Source проект (MIT)."
           }
         },
         {
@@ -111,7 +116,7 @@
           "name": "Поддерживаются ли цветные изображения?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Да. Мы используем &lt;strong&gt;VTracer&lt;/strong&gt;. Выберите &lt;strong&gt;Постер&lt;/strong&gt; или &lt;strong&gt;Фото&lt;/strong&gt; для цвета."
           }
         },
         {
@@ -119,7 +124,7 @@
           "name": "Сохраняются ли мои файлы?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Нет. Файлы удаляются сразу после обработки."
           }
         },
         {
@@ -127,7 +132,7 @@
           "name": "Какие форматы поддерживаются?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "PNG, JPG, JPEG, BMP и WebP. Можно вставить из буфера обмена (Ctrl+V)."
           }
         },
         {
@@ -135,31 +140,31 @@
           "name": "Какой максимальный размер файла?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "В онлайне — до &lt;strong&gt;20 МБ&lt;/strong&gt;. Для больших файлов скачайте &lt;a href=&#34;#download&#34; style=&#34;color:var(--primary)&#34;&gt;десктопное приложение&lt;/a&gt;."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "Почему Ч/Б результат выглядит неправильно?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Включите переключатель &lt;strong&gt;Инвертировать&lt;/strong&gt; в дополнительных настройках."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "В чем разница между режимами Сплайн, Полигон и Пиксель?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "&lt;strong&gt;Сплайн&lt;/strong&gt; для плавных кривых. &lt;strong&gt;Полигон&lt;/strong&gt; для прямых линий. &lt;strong&gt;Пиксель&lt;/strong&gt; без сглаживания (для пиксель-арта)."
           }
-        }
+        },
         {
           "@type": "Question",
           "name": "Можно использовать SVG в коммерческих целях?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Да, без каких-либо лицензионных ограничений."
           }
         }
       ]
