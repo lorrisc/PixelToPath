@@ -9,7 +9,7 @@ const PRESETS = {
     bw: {
         colormode: "binary",
         mode: "spline",
-        filter_speckle: 4,
+        filter_speckle: 0,
         color_precision: 6,
         layer_difference: 16,
         corner_threshold: 60,
@@ -20,7 +20,7 @@ const PRESETS = {
     poster: {
         colormode: "color",
         mode: "spline",
-        filter_speckle: 4,
+        filter_speckle: 0,
         color_precision: 8,
         layer_difference: 6,
         corner_threshold: 60,
