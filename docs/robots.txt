@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: oai-searchbot
+Allow: /
+User-agent: Googlebot
+Allow: /
 
 Sitemap: https://pixel-to-path.com/sitemap.xml
