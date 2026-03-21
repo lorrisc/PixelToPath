@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Legal Notice – PixelToPath</title>
+        <meta name="description" content="Legal information about PixelToPath: publisher, hosting providers, and contact details.">
+        <meta name="robots" content="noindex, follow">
+
+        <link rel="canonical" href="https://pixel-to-path.com/legal/" />
+
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/components.css">
+        <link rel="stylesheet" href="../assets/css/containers.css">
+        <link rel="stylesheet" href="../assets/css/partials/footer.css">
+        <link rel="stylesheet" href="../assets/css/partials/navbar.css">
+        <link rel="stylesheet" href="../assets/css/partials/donate.css">
+        <link rel="stylesheet" href="../assets/css/pages/legal.css">
+
+        <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/"" class="brand">
+            <img src="../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/" 
+            class="">Home</a>
+
+            <a href="/online/" 
+            class="">Online Tool</a>
+
+            <a href="/offline/" 
+            class="">Desktop App</a>
+            
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Home</span>
+            </a>
+            <a href="/online/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Online Tool</span>
+            </a>
+            <a href="/offline/"
+               class="mobile-link ">
+                <span class="mobile-link-number">03</span>
+                <span class="mobile-link-text">Desktop App</span>
+            </a>
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
+                <span class="mobile-link-number">04</span>
+                <span class="mobile-link-text">GitHub</span>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+        <main>
+            <!-- Hero -->
+            <div class="legal-hero">
+                <div class="container">
+                    <span class="legal-tag">Legal</span>
+                    <h1>Legal Notice</h1>
+                    <p>Publisher information and hosting details for pixel-to-path.com</p>
+                </div>
+            </div>
+
+            <!-- Body -->
+            <div class="legal-body">
+                <div class="container">
+                    <div class="legal-layout">
+
+                        <!-- TOC -->
+                        <aside class="legal-toc" id="legalToc">
+                            <p class="legal-toc__title">On this page</p>
+                            <ul>
+                                <li><a href="#publisher">Publisher</a></li>
+                                <li><a href="#hosting">Hosting</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </aside>
+
+                        <!-- Content -->
+                        <article class="legal-content">
+
+                            <section id="publisher">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">🏛️</span>
+                                    <h2>Publisher</h2>
+                                </div>
+                                <p>This website, <strong>pixel-to-path.com</strong>, is published by an individual (<em>personne physique</em>) based in France.</p>
+                                <p>It is not operated by a registered company. No SIRET or VAT number applies.</p>
+                            </section>
+
+                            <section id="hosting">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">🖥️</span>
+                                    <h2>Hosting</h2>
+                                </div>
+
+                                <div class="legal-host-card">
+                                    <div class="legal-host-card__label">Frontend</div>
+                                    <div class="legal-host-card__body">
+                                        <p><strong>GitHub Pages</strong> - served via <strong>Cloudflare</strong></p>
+                                        <address>
+                                            GitHub, Inc.<br>
+                                            88 Colin P Kelly Jr St<br>
+                                            San Francisco, CA 94107, USA
+                                        </address>
+                                        <address style="margin-top:0.75rem;">
+                                            Cloudflare, Inc.<br>
+                                            101 Townsend St<br>
+                                            San Francisco, CA 94107, USA
+                                        </address>
+                                    </div>
+                                </div>
+
+                                <div class="legal-host-card">
+                                    <div class="legal-host-card__label">Backend</div>
+                                    <div class="legal-host-card__body">
+                                        <p><strong>Hetzner Online GmbH</strong></p>
+                                        <address>
+                                            Industriestr. 25<br>
+                                            91710 Gunzenhausen<br>
+                                            Germany
+                                        </address>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section id="contact">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">✉️</span>
+                                    <h2>Contact</h2>
+                                </div>
+                                <p>For any inquiry regarding this website, you may reach the publisher at:</p>
+                                <a class="legal-email" href="mailto:pixel-to-path.reexamine129@simplelogin.com">
+                                    pixel-to-path.reexamine129@simplelogin.com
+                                </a>
+                            </section>
+
+                            <div class="legal-footer-links">
+                                <a href="/privacy/">Privacy Policy</a>
+                                <a href="/terms/">Terms of Service</a>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/">Home</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal">Legal notice</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+    </div>
+</footer>
+
+        <script src="../assets/js/pages/legal.js?v=260318"></script>
+    </body>
+</html>

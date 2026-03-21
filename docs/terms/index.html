@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Terms of Service – PixelToPath</title>
+        <meta name="description" content="Terms and conditions for using the PixelToPath image-to-SVG conversion service.">
+        <meta name="robots" content="noindex, follow">
+
+        <link rel="canonical" href="https://pixel-to-path.com/terms/" />
+
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/components.css">
+        <link rel="stylesheet" href="../assets/css/containers.css">
+        <link rel="stylesheet" href="../assets/css/partials/footer.css">
+        <link rel="stylesheet" href="../assets/css/partials/navbar.css">
+        <link rel="stylesheet" href="../assets/css/partials/donate.css">
+        <link rel="stylesheet" href="../assets/css/pages/legal.css">
+
+        <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/"" class="brand">
+            <img src="../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/" 
+            class="">Home</a>
+
+            <a href="/online/" 
+            class="">Online Tool</a>
+
+            <a href="/offline/" 
+            class="">Desktop App</a>
+            
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Home</span>
+            </a>
+            <a href="/online/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Online Tool</span>
+            </a>
+            <a href="/offline/"
+               class="mobile-link ">
+                <span class="mobile-link-number">03</span>
+                <span class="mobile-link-text">Desktop App</span>
+            </a>
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
+                <span class="mobile-link-number">04</span>
+                <span class="mobile-link-text">GitHub</span>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+        <main>
+            <!-- Hero -->
+            <div class="legal-hero">
+                <div class="container">
+                    <span class="legal-tag">Usage</span>
+                    <h1>Terms of Service</h1>
+                    <p>Simple, plain-language terms for a free and open tool</p>
+                </div>
+            </div>
+
+            <!-- Body -->
+            <div class="legal-body">
+                <div class="container">
+                    <div class="legal-layout">
+
+                        <!-- TOC -->
+                        <aside class="legal-toc" id="legalToc">
+                            <p class="legal-toc__title">On this page</p>
+                            <ul>
+                                <li><a href="#service">The service</a></li>
+                                <li><a href="#your-content">Your content</a></li>
+                                <li><a href="#ownership">Ownership</a></li>
+                                <li><a href="#limits">Limits</a></li>
+                                <li><a href="#governing-law">Governing law</a></li>
+                            </ul>
+                        </aside>
+
+                        <!-- Content -->
+                        <article class="legal-content">
+
+                            <!-- TL;DR banner -->
+                            <div class="legal-tldr">
+                                <span class="legal-tldr__label">TL;DR</span>
+                                <p>Free, as-is, no warranty. You own your files. Don't upload images you don't have rights to. Files deleted within 24 hours - save your results.</p>
+                            </div>
+
+                            <section id="service">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">⚡</span>
+                                    <h2>The service</h2>
+                                </div>
+                                <p><strong>PixelToPath</strong> is provided free of charge, as-is, without warranty of any kind - express or implied. This includes, but is not limited to, warranties of merchantability, fitness for a particular purpose, or availability.</p>
+                                <div class="legal-callout legal-callout--orange">
+                                    <span>ℹ️</span>
+                                    <p>We reserve the right to modify, suspend, or discontinue the service at any time without prior notice.</p>
+                                </div>
+                            </section>
+
+                            <section id="your-content">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">🖼️</span>
+                                    <h2>Your content &amp; responsibilities</h2>
+                                </div>
+                                <p>By using this service, you confirm that:</p>
+                                <ul class="legal-check-list">
+                                    <li>You own or have the rights to process every image you upload</li>
+                                    <li>You will not use the service for any illegal purpose</li>
+                                    <li>You will not intentionally overload or abuse the infrastructure</li>
+                                </ul>
+                            </section>
+
+                            <section id="ownership">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">🔑</span>
+                                    <h2>Ownership of files</h2>
+                                </div>
+                                <p>You retain full ownership of your uploaded images and any generated SVG files. <strong>PixelToPath claims no rights over your content.</strong></p>
+
+                                <div class="legal-data-table" style="margin-top:1.5rem;">
+                                    <div class="legal-data-row legal-data-row--head">
+                                        <span>Item</span>
+                                        <span>Policy</span>
+                                    </div>
+                                    <div class="legal-data-row">
+                                        <span>Source image</span>
+                                        <span>Remains entirely yours</span>
+                                    </div>
+                                    <div class="legal-data-row">
+                                        <span>Generated SVG</span>
+                                        <span>Entirely yours - no licence claimed</span>
+                                    </div>
+                                    <div class="legal-data-row">
+                                        <span>File retention</span>
+                                        <span>Automatically deleted within <strong>24 hours</strong></span>
+                                    </div>
+                                </div>
+
+                                <div class="legal-callout legal-callout--green" style="margin-top:1.5rem;">
+                                    <span>💾</span>
+                                    <p>Files are deleted within 24 hours. You are responsible for saving your results before then.</p>
+                                </div>
+                            </section>
+
+                            <section id="limits">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">📏</span>
+                                    <h2>Limits &amp; fair use</h2>
+                                </div>
+                                <div class="legal-data-table">
+                                    <div class="legal-data-row legal-data-row--head">
+                                        <span>Limit</span>
+                                        <span>Value</span>
+                                    </div>
+                                    <div class="legal-data-row">
+                                        <span>Maximum upload size</span>
+                                        <span><strong>20 MB</strong> per file</span>
+                                    </div>
+                                    <div class="legal-data-row">
+                                        <span>Rate limiting</span>
+                                        <span>Applied to abusive usage patterns</span>
+                                    </div>
+                                    <div class="legal-data-row">
+                                        <span>Access blocking</span>
+                                        <span>Reserved right in case of abuse</span>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section id="governing-law">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">🇫🇷</span>
+                                    <h2>Governing law</h2>
+                                </div>
+                                <p>This service is governed by <strong>French law</strong>. Any dispute arising from the use of PixelToPath shall fall under the exclusive jurisdiction of the competent French courts.</p>
+                            </section>
+
+                            <div class="legal-footer-links">
+                                <a href="/legal/">Legal Notice</a>
+                                <a href="/privacy/">Privacy Policy</a>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/">Home</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal">Legal notice</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+    </div>
+</footer>
+
+        <script src="../assets/js/pages/legal.js?v=260318"></script>
+    </body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Privacy Policy – PixelToPath</title>
+        <meta name="description" content="How PixelToPath handles your data. No cookies, no tracking, no data selling.">
+        <meta name="robots" content="noindex, follow">
+
+        <link rel="canonical" href="https://pixel-to-path.com/privacy/" />
+
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/components.css">
+        <link rel="stylesheet" href="../assets/css/containers.css">
+        <link rel="stylesheet" href="../assets/css/partials/footer.css">
+        <link rel="stylesheet" href="../assets/css/partials/navbar.css">
+        <link rel="stylesheet" href="../assets/css/partials/donate.css">
+        <link rel="stylesheet" href="../assets/css/pages/legal.css">
+
+        <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/"" class="brand">
+            <img src="../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/" 
+            class="">Home</a>
+
+            <a href="/online/" 
+            class="">Online Tool</a>
+
+            <a href="/offline/" 
+            class="">Desktop App</a>
+            
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Home</span>
+            </a>
+            <a href="/online/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Online Tool</span>
+            </a>
+            <a href="/offline/"
+               class="mobile-link ">
+                <span class="mobile-link-number">03</span>
+                <span class="mobile-link-text">Desktop App</span>
+            </a>
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
+                <span class="mobile-link-number">04</span>
+                <span class="mobile-link-text">GitHub</span>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+        <main>
+            <!-- Hero -->
+            <div class="legal-hero">
+                <div class="container">
+                    <span class="legal-tag">GDPR Compliant</span>
+                    <h1>Privacy Policy</h1>
+                    <p>What data we collect, why, and what we never do with it</p>
+                    <span class="legal-updated">Last updated: Mars 2026</span>
+                </div>
+            </div>
+
+            <!-- Body -->
+            <div class="legal-body">
+                <div class="container">
+                    <div class="legal-layout">
+
+                        <!-- TOC -->
+                        <aside class="legal-toc" id="legalToc">
+                            <p class="legal-toc__title">On this page</p>
+                            <ul>
+                                <li><a href="#overview">Overview</a></li>
+                                <li><a href="#data-collected">Data collected</a></li>
+                                <li><a href="#geolocation">Geolocation</a></li>
+                                <li><a href="#analytics">Analytics</a></li>
+                                <li><a href="#what-we-dont">What we don't do</a></li>
+                                <li><a href="#legal-basis">Legal basis</a></li>
+                                <li><a href="#your-rights">Your rights</a></li>
+                            </ul>
+                        </aside>
+
+                        <!-- Content -->
+                        <article class="legal-content">
+
+                            <!-- TL;DR banner -->
+                            <div class="legal-tldr">
+                                <span class="legal-tldr__label">TL;DR</span>
+                                <p>No cookies. No advertising. No data selling. Your files are deleted within 24 hours. We only collect what's strictly necessary to keep the service running safely.</p>
+                            </div>
+
+                            <section id="overview">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">👤</span>
+                                    <h2>Overview</h2>
+                                </div>
+                                <p><strong>PixelToPath</strong> is a free image-to-SVG conversion tool operated by an individual based in France. This policy describes what data is collected when you use this service and how it is handled.</p>
+                                <p>Contact: <a class="legal-email-inline" href="mailto:pixel-to-path.reexamine129@simplelogin.com">pixel-to-path.reexamine129@simplelogin.com</a></p>
+                            </section>
+
+                            <section id="data-collected">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">📦</span>
+                                    <h2>Data collected</h2>
+                                </div>
+                                <p>When you convert an image, the following is recorded on our server:</p>
+
+                                <div class="legal-data-table">
+                                    <div class="legal-data-row legal-data-row--head">
+                                        <span>Data point</span>
+                                        <span>Detail</span>
+                                    </div>
+                                    <div class="legal-data-row">
+                                        <span>IP hash</span>
+                                        <span>Non-reversible hash - raw IP never stored</span>
+                                    </div>
+                                    <div class="legal-data-row">
+                                        <span>Image metadata</span>
+                                        <span>Dimensions and format (e.g. 800×600 PNG)</span>
+                                    </div>
+                                    <div class="legal-data-row">
+                                        <span>Color mode</span>
+                                        <span>The conversion setting you selected</span>
+                                    </div>
+                                    <div class="legal-data-row">
+                                        <span>Processing time</span>
+                                        <span>Duration of the conversion in ms</span>
+                                    </div>
+                                    <div class="legal-data-row">
+                                        <span>Uploaded file</span>
+                                        <span>Stored temporarily - deleted after <strong>24 hours</strong></span>
+                                    </div>
+                                </div>
+
+                                <div class="legal-callout legal-callout--green">
+                                    <span>🔒</span>
+                                    <p>Your raw IP address is never stored in any file or exposed publicly. Only a one-way hash is retained.</p>
+                                </div>
+                            </section>
+
+                            <section id="geolocation">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">🌍</span>
+                                    <h2>Geolocation</h2>
+                                </div>
+                                <p>We derive an approximate country and city from your IP address using a <strong>local copy</strong> of the MaxMind GeoLite2 database. This lookup is performed entirely on our server.</p>
+                                <div class="legal-callout legal-callout--green">
+                                    <span>✅</span>
+                                    <p>Your IP address is never sent to any third party for geolocation purposes.</p>
+                                </div>
+                            </section>
+
+                            <section id="analytics">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">📊</span>
+                                    <h2>Analytics</h2>
+                                </div>
+                                <p>We use a <strong>self-hosted instance of Matomo Analytics</strong> with the following settings:</p>
+                                <ul class="legal-check-list">
+                                    <li>Cookies disabled</li>
+                                    <li>IP anonymization enabled</li>
+                                    <li>Data stored on our own infrastructure only</li>
+                                </ul>
+                                <div class="legal-callout legal-callout--orange">
+                                    <span>📡</span>
+                                    <p>No analytics data leaves our infrastructure. We do not use Google Analytics or any third-party tracking service.</p>
+                                </div>
+                            </section>
+
+                            <section id="what-we-dont">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">🚫</span>
+                                    <h2>What we don't do</h2>
+                                </div>
+                                <div class="legal-dont-grid">
+                                    <div class="legal-dont-card">
+                                        <span>🚫</span>
+                                        <p>Sell or share your data with third parties</p>
+                                    </div>
+                                    <div class="legal-dont-card">
+                                        <span>🍪</span>
+                                        <p>Use cookies of any kind</p>
+                                    </div>
+                                    <div class="legal-dont-card">
+                                        <span>📢</span>
+                                        <p>Display advertising</p>
+                                    </div>
+                                    <div class="legal-dont-card">
+                                        <span>🔍</span>
+                                        <p>Process your images for any purpose other than the conversion you requested</p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section id="legal-basis">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">⚖️</span>
+                                    <h2>Legal basis & retention</h2>
+                                </div>
+                                <div class="legal-data-table">
+                                    <div class="legal-data-row legal-data-row--head">
+                                        <span>Item</span>
+                                        <span>Detail</span>
+                                    </div>
+                                    <div class="legal-data-row">
+                                        <span>Legal basis</span>
+                                        <span>Legitimate interest - GDPR Article 6.1.f (security &amp; abuse prevention)</span>
+                                    </div>
+                                    <div class="legal-data-row">
+                                        <span>Retention period</span>
+                                        <span>Files and metadata deleeted within <strong>24 hours</strong></span>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section id="your-rights">
+                                <div class="legal-section-header">
+                                    <span class="legal-section-icon">🛡️</span>
+                                    <h2>Your rights</h2>
+                                </div>
+                                <p>Under GDPR, you have the right to access, rectify, erase, or restrict processing of your personal data. To exercise these rights, contact us at:</p>
+                                <a class="legal-email" href="mailto:pixel-to-path.reexamine129@simplelogin.com">
+                                    pixel-to-path.reexamine129@simplelogin.com
+                                </a>
+                                <p style="margin-top:1rem;">You may also lodge a complaint with the French data protection authority: <a href="https://www.cnil.fr" target="_blank" rel="noopener" class="legal-link">cnil.fr</a>.</p>
+                            </section>
+
+                            <div class="legal-footer-links">
+                                <a href="/legal/">Legal Notice</a>
+                                <a href="/terms/">Terms of Service</a>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/">Home</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal">Legal notice</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+    </div>
+</footer>
+
+        <script src="../assets/js/pages/legal.js?v=260318"></script>
+    </body>
+</html>

@@ -59,7 +59,7 @@
 /* ── Mobile : tableau → cartes ─────────────────────────────── */
 @media (max-width: 640px) {
 
-    /* Cacher le thead — les labels sont portés par data-label */
+    /* Cacher le thead - les labels sont portés par data-label */
     .comparison-table thead {
         display: none;
     }

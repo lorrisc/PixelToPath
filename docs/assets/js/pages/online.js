@@ -196,7 +196,7 @@ document.addEventListener("paste", (e) => {
 const ACCEPTED = ["image/png", "image/jpeg", "image/bmp", "image/webp"];
 function loadFile(file) {
     if (!file || !ACCEPTED.includes(file.type)) {
-        setStatus("Format not accepted — PNG, JPG, BMP or WebP only", "error");
+        setStatus("Format not accepted - PNG, JPG, BMP or WebP only", "error");
         return;
     }
     currentFile = file;

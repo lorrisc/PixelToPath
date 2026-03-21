@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>404 - Page Not Found | PixelToPath</title>
+        <meta name="description" content="This page does not exist or has been moved.">
+        <meta name="robots" content="noindex, nofollow">
+
+        <link rel="canonical" href="https://pixel-to-path.com/404/" />
+
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/components.css">
+        <link rel="stylesheet" href="./assets/css/containers.css">
+
+        <link rel="stylesheet" href="./assets/css/partials/footer.css">
+        <link rel="stylesheet" href="./assets/css/partials/navbar.css">
+        <link rel="stylesheet" href="./assets/css/partials/donate.css">
+
+        <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+
+        <style>
+            /* ── 404 page ── */
+            .page-404 {
+                min-height: calc(100vh - 160px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 4rem 0;
+                background: radial-gradient(ellipse 80% 60% at 50% 40%, #fffbf0 0%, #fff 100%);
+                overflow: hidden;
+                position: relative;
+            }
+
+            /* Scattered background pixels */
+            .page-404__bg {
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+                overflow: hidden;
+            }
+            .px {
+                position: absolute;
+                border-radius: 2px;
+                opacity: 0;
+                animation: px-float linear infinite;
+            }
+            @keyframes px-float {
+                0%   { opacity: 0; transform: translateY(0)   rotate(0deg);   }
+                15%  { opacity: 1; }
+                85%  { opacity: 1; }
+                100% { opacity: 0; transform: translateY(-120px) rotate(90deg); }
+            }
+
+            /* ── Central content ── */
+            .page-404__inner {
+                position: relative;
+                z-index: 1;
+                text-align: center;
+                max-width: 620px;
+                padding: 0 20px;
+            }
+
+            /* Big 404 */
+            .e404-number {
+                font-family: "Courier New", Courier, monospace;
+                font-size: clamp(6rem, 20vw, 11rem);
+                font-weight: 900;
+                line-height: 1;
+                letter-spacing: -0.04em;
+                color: var(--dark);
+                position: relative;
+                display: inline-block;
+                margin-bottom: 0.5rem;
+            }
+            .e404-number::before {
+                content: "404";
+                position: absolute;
+                inset: 0;
+                color: var(--primary);
+                clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+                animation: glitch-fill 4s ease-in-out infinite;
+            }
+            @keyframes glitch-fill {
+                0%, 30%  { clip-path: polygon(0 0, 0   0,  0   100%, 0 100%); }
+                50%      { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+                70%      { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+                90%, 100%{ clip-path: polygon(0 0, 0   0,  0   100%, 0 100%); }
+            }
+
+            /* Pixel SVG animation */
+            .e404-art {
+                width: 260px;
+                height: 140px;
+                margin: 1.5rem auto;
+                display: block;
+            }
+            .e404-art .dot {
+                animation: dot-blink 2.6s ease-in-out infinite;
+            }
+            .e404-art .dot:nth-child(1)  { animation-delay: 0s;    }
+            .e404-art .dot:nth-child(2)  { animation-delay: 0.2s;  }
+            .e404-art .dot:nth-child(3)  { animation-delay: 0.4s;  }
+            .e404-art .dot:nth-child(4)  { animation-delay: 0.6s;  }
+            .e404-art .dot:nth-child(5)  { animation-delay: 0.8s;  }
+            .e404-art .dot:nth-child(6)  { animation-delay: 1.0s;  }
+            .e404-art .dot:nth-child(7)  { animation-delay: 1.2s;  }
+            .e404-art .dot:nth-child(8)  { animation-delay: 1.4s;  }
+            .e404-art .dot:nth-child(9)  { animation-delay: 1.6s;  }
+            .e404-art .dot:nth-child(10) { animation-delay: 1.8s;  }
+            .e404-art .dot:nth-child(11) { animation-delay: 2.0s;  }
+            .e404-art .dot:nth-child(12) { animation-delay: 2.2s;  }
+            @keyframes dot-blink {
+                0%, 100% { opacity: 1; }
+                50%       { opacity: 0.12; }
+            }
+            .e404-art .path-line {
+                stroke-dasharray: 300;
+                stroke-dashoffset: 300;
+                animation: draw-path 3s ease-in-out infinite;
+            }
+            @keyframes draw-path {
+                0%   { stroke-dashoffset: 300; opacity: 1; }
+                60%  { stroke-dashoffset: 0;   opacity: 1; }
+                80%  { stroke-dashoffset: 0;   opacity: 0; }
+                100% { stroke-dashoffset: 300; opacity: 0; }
+            }
+
+            /* Tag */
+            .e404-tag {
+                display: inline-block;
+                background: #fff3d4;
+                color: var(--primary-dark);
+                font-size: 0.75rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                padding: 4px 14px;
+                border-radius: 100px;
+                border: 1.5px solid #ffd280;
+                margin-bottom: 1.2rem;
+            }
+
+            /* Headline & sub */
+            .e404-title {
+                font-size: clamp(1.4rem, 4vw, 1.9rem);
+                color: var(--dark);
+                margin-bottom: 0.75rem;
+                font-weight: 700;
+            }
+            .e404-desc {
+                color: var(--gray);
+                font-size: 1.05rem;
+                max-width: 480px;
+                margin: 0 auto 2rem;
+                line-height: 1.7;
+            }
+
+            /* CTA */
+            .e404-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                background: var(--primary);
+                color: #fff;
+                font-weight: 700;
+                font-size: 1rem;
+                padding: 0.85rem 2rem;
+                border-radius: var(--radius);
+                border: none;
+                cursor: pointer;
+                transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+                box-shadow: 0 4px 18px rgba(255, 153, 0, 0.35);
+                text-decoration: none;
+            }
+            .e404-cta:hover {
+                background: var(--primary-dark);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 26px rgba(255, 153, 0, 0.45);
+                color: #fff;
+            }
+            .e404-cta svg {
+                transition: transform 0.2s;
+            }
+            .e404-cta:hover svg {
+                transform: translateX(-3px);
+            }
+
+            /* Code label */
+            .e404-code {
+                margin-top: 2rem;
+                font-family: "Courier New", monospace;
+                font-size: 0.82rem;
+                color: #bbb;
+                letter-spacing: 0.06em;
+            }
+            .e404-code span {
+                color: var(--primary);
+            }
+
+            @media (max-width: 768px) {
+                .e404-art { width: 200px; height: 108px; }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/"" class="brand">
+            <img src="./assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/" 
+            class="">Home</a>
+
+            <a href="/online/" 
+            class="">Online Tool</a>
+
+            <a href="/offline/" 
+            class="">Desktop App</a>
+            
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Home</span>
+            </a>
+            <a href="/online/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Online Tool</span>
+            </a>
+            <a href="/offline/"
+               class="mobile-link ">
+                <span class="mobile-link-number">03</span>
+                <span class="mobile-link-text">Desktop App</span>
+            </a>
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
+                <span class="mobile-link-number">04</span>
+                <span class="mobile-link-text">GitHub</span>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+        <main>
+            <section class="page-404">
+
+                <!-- Floating background pixels -->
+                <div class="page-404__bg" id="bgPixels"></div>
+
+                <div class="page-404__inner">
+
+                    <!-- Tag -->
+                    <span class="e404-tag">404 Error</span>
+
+                    <!-- Big number -->
+                    <div class="e404-number">404</div>
+
+                    <!-- SVG pixel-path illustration -->
+                    <svg class="e404-art" viewBox="0 0 260 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <!-- Broken path -->
+                        <path class="path-line"
+                            d="M20 120 L50 90 L80 100 L110 60 L140 70 L160 40 L175 50"
+                            stroke="#ff9900" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+                        <!-- Pixel dots along the path -->
+                        <rect class="dot" x="16" y="116" width="8" height="8" rx="1.5" fill="#ff9900"/>
+                        <rect class="dot" x="46" y="86"  width="8" height="8" rx="1.5" fill="#ff9900"/>
+                        <rect class="dot" x="76" y="96"  width="8" height="8" rx="1.5" fill="#ff9900"/>
+                        <rect class="dot" x="106" y="56" width="8" height="8" rx="1.5" fill="#ff9900"/>
+                        <rect class="dot" x="136" y="66" width="8" height="8" rx="1.5" fill="#ff9900"/>
+                        <rect class="dot" x="156" y="36" width="8" height="8" rx="1.5" fill="#ff9900"/>
+
+                        <!-- Question mark pixel at end -->
+                        <text x="178" y="56" font-family="'Courier New', monospace" font-size="28" font-weight="900" fill="#2c3e50">?</text>
+
+                        <!-- Scattered lost pixels -->
+                        <rect class="dot" x="210" y="20"  width="6" height="6" rx="1" fill="#ffd280" opacity="0.7"/>
+                        <rect class="dot" x="230" y="60"  width="5" height="5" rx="1" fill="#ffd280" opacity="0.5"/>
+                        <rect class="dot" x="198" y="90"  width="7" height="7" rx="1" fill="#ffd280" opacity="0.6"/>
+                        <rect class="dot" x="240" y="105" width="5" height="5" rx="1" fill="#ffd280" opacity="0.4"/>
+                        <rect class="dot" x="10"  y="50"  width="5" height="5" rx="1" fill="#ffd280" opacity="0.4"/>
+                        <rect class="dot" x="30"  y="20"  width="6" height="6" rx="1" fill="#ffd280" opacity="0.5"/>
+                    </svg>
+
+                    <!-- Headline -->
+                    <h1 class="e404-title">This path leads nowhere...</h1>
+                    <p class="e404-desc">
+                        The pixels searched every corner of the grid, but the SVG path remains nowhere to be found. It may have been moved or deleted.
+                    </p>
+
+                    <!-- CTA -->
+                    <a href="/" class="e404-cta">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Back to Home
+                    </a>
+
+                    <!-- Dev hint -->
+                    <p class="e404-code">HTTP <span>404</span> · page_not_found</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/">Home</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal">Legal notice</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+    </div>
+</footer>
+
+
+        <script>
+            // Generate floating background pixels
+            (function () {
+                const container = document.getElementById('bgPixels');
+                const colors = ['#ff9900', '#ffd280', '#2c3e50', '#f0a030'];
+                const sizes  = [4, 6, 8, 10];
+                for (let i = 0; i < 28; i++) {
+                    const el = document.createElement('div');
+                    el.className = 'px';
+                    const size = sizes[Math.floor(Math.random() * sizes.length)];
+                    const color = colors[Math.floor(Math.random() * colors.length)];
+                    Object.assign(el.style, {
+                        width:  size + 'px',
+                        height: size + 'px',
+                        background: color,
+                        left: Math.random() * 100 + '%',
+                        bottom: (Math.random() * 60) + 'px',
+                        opacity: '0',
+                        animationDuration: (6 + Math.random() * 10) + 's',
+                        animationDelay:    (Math.random() * 8) + 's',
+                        borderRadius: '2px',
+                        transform: 'rotate(' + Math.random() * 45 + 'deg)',
+                    });
+                    container.appendChild(el);
+                }
+            })();
+        </script>
+    </body>
+</html>
