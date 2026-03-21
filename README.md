@@ -6,7 +6,7 @@ PixelToPath converts raster images (PNG, JPG, BMP, WebP) into high-quality SVG v
 
 A packaged version of PixelToPath is available in the [Releases](https://github.com/lorrisc/PixelToPath/releases/) section of the GitHub repository. This version requires no Python installation or prior configuration.
 
-### Download
+### Download 
 
 1. Go to the [Releases](https://github.com/lorrisc/PixelToPath/releases/) page;
 2. Download the file matching the latest stable version for your system:
