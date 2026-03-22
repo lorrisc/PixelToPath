@@ -669,3 +669,108 @@ input[type="range"]::-webkit-slider-thumb {
         min-height: 360px;
     }
 }
+
+
+
+
+
+/* ============================================================
+   ADD TO online.css
+   Tooltip system for parameter help buttons
+   ============================================================ */
+
+/* ── ? button ─────────────────────────────────────────────── */
+.param-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.param-help {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width:  15px;
+    height: 15px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1.5px solid currentColor;
+    background: transparent;
+    color: inherit;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.35;
+    transition: opacity 0.15s, border-color 0.15s, transform 0.15s;
+    flex-shrink: 0;
+    /* Reset any inherited button styles */
+    font-family: inherit;
+    letter-spacing: 0;
+}
+
+.param-help:hover,
+.param-help:focus-visible {
+    opacity: 1;
+    transform: scale(1.15);
+    outline: none;
+}
+
+/* ── Tooltip card ─────────────────────────────────────────── */
+#param-tooltip {
+    /* position géré inline par JS (fixed) */
+    z-index: 9999;
+    width: 230px;
+    padding: 10px 13px 11px;
+    border-radius: 9px;
+    background: #18181b;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.35),
+        0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(4px) scale(0.97);
+    transition: opacity 0.14s ease, transform 0.14s ease;
+}
+
+#param-tooltip.tt-visible {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+#param-tooltip::after {
+    content: "";
+    position: absolute;
+    left: var(--arrow-left, 50%);
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+#param-tooltip[data-arrow="down"]::after {
+    bottom: -6px;
+    border-top: 6px solid #18181b;
+    border-bottom: none;
+}
+#param-tooltip[data-arrow="up"]::after {
+    top: -6px;
+    border-bottom: 6px solid #18181b;
+    border-top: none;
+}
+
+.tt-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 5px;
+}
+.tt-text {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.88);
+}

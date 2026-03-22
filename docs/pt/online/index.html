@@ -351,45 +351,57 @@
 
                         <button id="adv-toggle"><span>⚙ Configurações avançadas</span><span id="adv-arrow">▾</span></button>
                         <div id="adv-content">
-
-                            <div class="ps">Modo de Cor</div>
+ 
+                            <!-- Color mode -->
+                            <div class="ps param-label">
+                                Modo de Cor
+                                <button class="param-help" data-param="colormode" aria-label="What is Color Mode?">?</button>
+                            </div>
                             <div class="seg" id="seg-colormode">
                                 <button class="active" data-val="color">Cor</button>
                                 <button data-val="binary">Binário</button>
                             </div>
-
+ 
+                            <!-- Color-only params -->
                             <div id="color-params">
                                 <div class="ps">Cor</div>
-                                
+ 
                                 <div class="sl-row">
-                                    <span>Número de Cores</span>
-                                    <span class="sl-val" id="v-num_colors">8</span>
+                                    <span class="param-label">
+                                        Precisão de Cor
+                                        <button class="param-help" data-param="color_precision" aria-label="What is Color Precision?">?</button>
+                                    </span>
+                                    <span class="sl-val" id="v-color_precision">8</span>
                                 </div>
-                                <input type="range" id="sl-num_colors" min="2" max="16" step="1" value="8">
-
+                                <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="8">
+ 
                                 <div class="sl-row">
-                                    <span>Precisão de Cor</span>
-                                    <span class="sl-val" id="v-color_precision">6</span>
-                                </div>
-                                <input type="range" id="sl-color_precision" min="1" max="8" step="1" value="6">
-                                
-                                <div class="sl-row">
-                                    <span>Diferença de Camada</span>
+                                    <span class="param-label">
+                                        Diferença de Camada
+                                        <button class="param-help" data-param="layer_difference" aria-label="What is Layer Difference?">?</button>
+                                    </span>
                                     <span class="sl-val" id="v-layer_difference">16</span>
                                 </div>
                                 <input type="range" id="sl-layer_difference" min="1" max="64" step="1" value="16">
-                                
-                                <div class="ps">Hierárquico</div>
+ 
+                                <div class="ps param-label">
+                                    Hierárquico
+                                    <button class="param-help" data-param="hierarchical" aria-label="What is Hierarchical?">?</button>
+                                </div>
                                 <div class="seg" id="seg-hierarchical">
                                     <button class="active" data-val="stacked">Empilhado</button>
                                     <button data-val="cutout">Recorte</button>
                                 </div>
                             </div>
-
+ 
+                            <!-- Binary-only params -->
                             <div id="binary-params" style="display:none">
                                 <div class="sw-row" style="margin-top:10px">
-                                    <div>
-                                        <div class="sw-label">Inverter</div>
+                                    <div class="param-label">
+                                        <div class="sw-label">
+                                            Inverter
+                                            <button class="param-help" data-param="invert" aria-label="What is Invert?">?</button>
+                                        </div>
                                         <div class="sw-sub">Trocar preto ↔ branco</div>
                                     </div>
                                     <label class="sw">
@@ -398,39 +410,75 @@
                                     </label>
                                 </div>
                             </div>
-
-                            <div class="ps">Ajuste de Curva</div>
+ 
+                            <!-- Curve mode -->
+                            <div class="ps param-label">
+                                Ajuste de Curva
+                                <button class="param-help" data-param="mode" aria-label="What is Curve Mode?">?</button>
+                            </div>
                             <div class="seg" id="seg-mode">
                                 <button data-val="none">Pixel</button>
                                 <button data-val="polygon">Polígono</button>
                                 <button class="active" data-val="spline">Spline</button>
                             </div>
-
+ 
+                            <!-- Shared sliders -->
                             <div class="sl-row">
-                                <span>Filtro de Manchas</span>
-                                <span class="sl-val" id="v-filter_speckle">0</span>
+                                <span class="param-label">
+                                    Filtro de Manchas
+                                    <button class="param-help" data-param="filter_speckle" aria-label="What is Filter Speckle?">?</button>
+                                </span>
+                                <span class="sl-val" id="v-filter_speckle">4</span>
                             </div>
-                            <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="0">
-
+                            <input type="range" id="sl-filter_speckle" min="0" max="16" step="1" value="4">
+ 
                             <div class="sl-row">
-                                <span>Limite de Canto</span>
+                                <span class="param-label">
+                                    Limite de Canto
+                                    <button class="param-help" data-param="corner_threshold" aria-label="What is Corner Threshold?">?</button>
+                                </span>
                                 <span class="sl-val" id="v-corner_threshold">60</span>
                             </div>
                             <input type="range" id="sl-corner_threshold" min="0" max="180" step="1" value="60">
-
+ 
                             <div class="sl-row">
-                                <span>Limite de Comprimento</span>
+                                <span class="param-label">
+                                    Limite de Comprimento
+                                    <button class="param-help" data-param="length_threshold" aria-label="What is Length Threshold?">?</button>
+                                </span>
                                 <span class="sl-val" id="v-length_threshold">4.0</span>
                             </div>
-                            
                             <input type="range" id="sl-length_threshold" min="3.5" max="10" step="0.5" value="4">
-                            
+ 
                             <div class="sl-row">
-                                <span>Limite de Emenda</span>
+                                <span class="param-label">
+                                    Limite de Emenda
+                                    <button class="param-help" data-param="splice_threshold" aria-label="What is Splice Threshold?">?</button>
+                                </span>
                                 <span class="sl-val" id="v-splice_threshold">45</span>
                             </div>
                             <input type="range" id="sl-splice_threshold" min="0" max="180" step="1" value="45">
-                        </div>
+ 
+                            <!-- path_precision — new slider, hardcoded EN label -->
+                            <div class="sl-row">
+                                <span class="param-label">
+                                    Path precision
+                                    <button class="param-help" data-param="path_precision" aria-label="What is Path Precision?">?</button>
+                                </span>
+                                <span class="sl-val" id="v-path_precision">3</span>
+                            </div>
+                            <input type="range" id="sl-path_precision" min="1" max="10" step="1" value="3">
+ 
+                        </div><!-- /adv-content -->
+ 
+ 
+<!-- 2. Add the tooltip element just before </div> closing converter-wrap (after </div> closing preview): -->
+ 
+                    <!-- Tooltip shared element -->
+                    <div id="param-tooltip" role="tooltip" data-arrow="down">
+                        <div class="tt-title"></div>
+                        <div class="tt-text"></div>
+                    </div>
                     </div>
 
                     <!-- Preview -->
@@ -650,6 +698,7 @@
 </footer>
 
 
+        <script src="../../assets/js/pages/online.i18n.js?v=260318"></script>
         <script src="../../assets/js/pages/online.js?v=260318"></script>
     </body>
 </html>
