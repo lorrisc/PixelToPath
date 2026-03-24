@@ -207,10 +207,12 @@ function applyRecommendedParams(params, detectedType) {
 }
 
 // ── Upload + Convert pipeline ─────────────────────────────────────────────────
-async function uploadAndConvert(file) {
+async function uploadAndConvert(file, method) {
+    fullConversionStart = performance.now();
     if (abortCtrl) abortCtrl.abort();
     abortCtrl = new AbortController();
     setOverlay(true, T.uploading); setLive("converting");
+    window.trackEvent("upload_start", { method: method, filename: file.name, size: file.size });
     const fd = new FormData(); fd.append("file", file);
     try {
         const res = await fetch(UPLOAD_URL, { method:"POST", body:fd, signal:abortCtrl.signal });
@@ -222,6 +224,7 @@ async function uploadAndConvert(file) {
     } catch(e) {
         if (e.name === "AbortError") return;
         setOverlay(false); setLive("error"); setStatus(T.upload_error(e.message), "error"); currentSession = null;
+        window.trackEvent("error", { step: "upload", msg: e.message }); // TRACKING ERREUR RÉSEAU
     }
 }
 
@@ -244,16 +247,27 @@ async function runConversion() {
         renderSvg(svg); setOverlay(false); setLive("ok");
         setStatus(T.ready((new Blob([svg]).size/1024).toFixed(1)), "ok");
         document.getElementById("btn-dl").disabled = false;
+
+        const totalDurationMs = Math.round(performance.now() - fullConversionStart);
+        window.trackEvent("conversion_success", { 
+            session_id: currentSession, 
+            total_duration_ms: totalDurationMs 
+        });
     } catch(e) {
         if (e.name === "AbortError") return;
         setOverlay(false); setLive("error"); setStatus(T.conv_error(e.message), "error");
+        window.trackEvent("error", { step: "conversion", msg: e.message }); // TRACKING ERREUR
     }
 }
 
 // ── File loading ──────────────────────────────────────────────────────────────
 const ACCEPTED = ["image/png","image/jpeg","image/bmp","image/webp"];
-function loadFile(file) {
-    if (!file || !ACCEPTED.includes(file.type)) { setStatus(T.format_error, "error"); return; }
+function loadFile(file, method = "unknown") {
+    if (!file || !ACCEPTED.includes(file.type)) { 
+        setStatus(T.format_error, "error"); 
+        window.trackEvent("error", { detail: "format_error", type: file?.type }); // TRACKING ERREUR
+        return; 
+    }
     currentFile = file; currentSession = null; clearPreview();
     document.getElementById("dropzone").classList.add("active");
     const reader = new FileReader();
@@ -267,17 +281,18 @@ function loadFile(file) {
         fn.textContent = `${file.name} \xB7 ${(file.size/1024).toFixed(0)} KB`;
     };
     reader.readAsDataURL(file);
-    uploadAndConvert(file);
+    uploadAndConvert(file, method);
 }
 
 // ── Listeners ─────────────────────────────────────────────────────────────────
 const dz = document.getElementById("dropzone");
 dz.addEventListener("dragover",  e => { e.preventDefault(); dz.classList.add("drag-over"); });
 dz.addEventListener("dragleave", ()  => dz.classList.remove("drag-over"));
-dz.addEventListener("drop", e => { e.preventDefault(); dz.classList.remove("drag-over"); loadFile(e.dataTransfer.files[0]); });
+dz.addEventListener("drop", e => { e.preventDefault(); dz.classList.remove("drag-over"); loadFile(e.dataTransfer.files[0], "drop"); });
 dz.addEventListener("click", () => document.getElementById("file-input").click());
-document.getElementById("file-input").addEventListener("change", e => { if (e.target.files[0]) loadFile(e.target.files[0]); });
-document.addEventListener("paste", e => { const f = e.clipboardData.files[0]; if (f?.type.startsWith("image/")) loadFile(f); });
+document.getElementById("file-input").addEventListener("change", e => { if (e.target.files[0]) loadFile(e.target.files[0], "click"); });
+document.addEventListener("paste", e => { const f = e.clipboardData.files[0]; if (f?.type.startsWith("image/")) loadFile(f, "paste"); });
+
 
 document.querySelectorAll("input[type=range]").forEach(sl => {
     const key = sl.id.replace("sl-",""), vl = document.getElementById("v-"+key);
