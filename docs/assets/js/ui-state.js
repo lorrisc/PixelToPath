@@ -23,10 +23,19 @@
         let t = e.target;
         let tid = t.id ? `#${t.id}` : (t.className && typeof t.className === 'string' ? `.${t.className.split(' ')[0]}` : t.tagName.toLowerCase());
 
+        // 1. Calcul du X par rapport au CENTRE de l'écran
+        let centerX = window.innerWidth / 2;
+        let relativeX = Math.round(e.pageX - centerX);
+
+        // 2. Nettoyage de l'URL pour unifier le Dropdown (ajoute un slash à la fin)
+        let path = window.location.pathname;
+        if (path.includes('.html')) path = path.replace('.html', '/');
+        if (!path.endsWith('/')) path += '/';
+
         q.push({
             t: 'c', // c = click
             ts: Date.now(),
-            d: { x: Math.round(e.pageX), y: Math.round(e.pageY), tgt: tid, p: window.location.pathname }
+            d: { x: relativeX, y: Math.round(e.pageY), tgt: tid, p: path }
         });
     }, { passive: true });
 
