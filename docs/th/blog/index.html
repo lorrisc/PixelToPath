@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>คู่มือและเคล็ดลับการแปลง SVG – บล็อก PixelToPath</title>
+    <meta name="description" content="คู่มือฟรีเกี่ยวกับการแปลง PNG, JPG และรูปภาพอื่นๆ เป็น SVG เรียนรู้การแปลงเป็นเวกเตอร์ แนวทางปฏิบัติที่ดีที่สุด และวิธีใช้ PixelToPath อย่างมีประสิทธิภาพ">
+    <meta name="keywords" content="คู่มือการแปลง svg, บทช่วยสอน png เป็น svg, บทช่วยสอนแปลงภาพเป็นเวกเตอร์, วิธีแปลงรูปเป็น svg, เคล็ดลับโปรแกรมแปลง svg, บล็อก pixeltopath">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="คู่มือและเคล็ดลับการแปลง SVG – บล็อก PixelToPath">
+    <meta property="og:description" content="คู่มือฟรีเกี่ยวกับการแปลง PNG, JPG และรูปภาพอื่นๆ เป็น SVG เรียนรู้การแปลงเป็นเวกเตอร์ แนวทางปฏิบัติที่ดีที่สุด และวิธีใช้ PixelToPath อย่างมีประสิทธิภาพ">
+    <meta property="og:image" content="../../assets/images/screenshot.png">
+    <meta property="og:url" content="https://pixel-to-path.com/blog/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/th/blog/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/blog/">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/containers.css">
+    <link rel="stylesheet" href="../../assets/css/partials/footer.css">
+    <link rel="stylesheet" href="../../assets/css/partials/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/partials/donate.css">
+    <link rel="stylesheet" href="../../assets/css/pages/blog.css">
+
+    <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: Blog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "คู่มือและเคล็ดลับการแปลง SVG – บล็อก PixelToPath",
+        "url": "https://pixel-to-path.com/blog/",
+        "description": "คู่มือฟรีเกี่ยวกับการแปลง PNG, JPG และรูปภาพอื่นๆ เป็น SVG เรียนรู้การแปลงเป็นเวกเตอร์ แนวทางปฏิบัติที่ดีที่สุด และวิธีใช้ PixelToPath อย่างมีประสิทธิภาพ",
+        "publisher": {
+            "@type": "Person",
+            "name": "Lorris C."
+        },
+        "blogPost": [
+            {
+                "@type": "BlogPosting",
+                "headline": "โปรแกรมแปลง PNG เป็น SVG ออนไลน์ฟรี",
+                "description": "เรียนรู้วิธีแปลงรูปภาพ PNG เป็นไฟล์เวกเตอร์ SVG ที่สะอาดและปรับขนาดได้ - ทันทีและฟรี ครอบคลุมแนวทางปฏิบัติที่ดีที่สุดและคำแนะนำทีละขั้นตอน",
+                "url": "https://pixel-to-path.com/th/blog/png-to-svg/"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "โปรแกรมแปลง JPG เป็น SVG ออนไลน์ฟรี",
+                "description": "เปลี่ยนภาพถ่ายหรือภาพประกอบ JPEG ให้เป็นเวกเตอร์ SVG ที่ปรับขนาดได้ ค้นพบว่าการแปลง JPG เป็น SVG มีประโยชน์เมื่อใดและจะให้ได้ผลลัพธ์ที่ดีที่สุด",
+                "url": "https://pixel-to-path.com/th/blog/jpg-to-svg/"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "โปรแกรมแปลง SVG ฟรี: รูปแบบรูปภาพใดๆ เป็น SVG",
+                "description": "เครื่องมือฟรีหนึ่งเดียวสำหรับการแปลงรูปภาพ PNG, JPG, BMP และ WebP เป็น SVG ทำความเข้าใจความแตกต่างของรูปแบบและเลือกพรีเซ็ตที่เหมาะสม",
+                "url": "https://pixel-to-path.com/th/blog/svg-converter-free/"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "เครื่องมือแปลงรูปภาพเป็นเวกเตอร์ออนไลน์ฟรี",
+                "description": "การแปลงรูปภาพเป็นเวกเตอร์หมายความว่าอย่างไรจริงๆ คู่มือนี้อธิบายการแปลงแรสเตอร์เป็นเวกเตอร์ และวิธีให้ได้ผลลัพธ์ที่คมชัดด้วย PixelToPath",
+                "url": "https://pixel-to-path.com/th/blog/vectorize-image/"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "โปรแกรมแปลงรูปภาพเป็น SVG ฟรี",
+                "description": "คู่มือสำหรับผู้เริ่มต้นฉบับสมบูรณ์ เรียนรู้ว่า SVG คืออะไร ทำไมจึงสำคัญ และวิธีแปลงรูปแบบรูปภาพใดๆ เป็นกราฟิกเวกเตอร์ได้ฟรี",
+                "url": "https://pixel-to-path.com/th/blog/image-to-svg/"
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/th/"" class="brand">
+            <img src="../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/th/" 
+            class="">หน้าแรก</a>
+
+            <a href="/th/online/" 
+            class="">เครื่องมือออนไลน์</a>
+
+            <a href="/th/offline/" 
+            class="">แอปเดสก์ท็อป</a>
+            
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+
+            <div class="lang-switch">
+                <span>🇹🇭 TH</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/bn/blog/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/vi/blog/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/th/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">หน้าแรก</span>
+            </a>
+            <a href="/th/online/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">เครื่องมือออนไลน์</span>
+            </a>
+            <a href="/th/offline/"
+               class="mobile-link ">
+                <span class="mobile-link-number">03</span>
+                <span class="mobile-link-text">แอปเดสก์ท็อป</span>
+            </a>
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
+                <span class="mobile-link-number">04</span>
+                <span class="mobile-link-text">GitHub</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">ภาษา</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/bn/blog/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/vi/blog/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <div class="blog-hero__eyebrow">📖 คู่มือและแหล่งข้อมูล</div>
+                <h1>เรียนรู้การแปลงรูปภาพเป็น SVG</h1>
+                <p class="blog-hero__subtitle">คู่มือภาคปฏิบัติเกี่ยวกับการแปลงภาพแรสเตอร์เป็นกราฟิกเวกเตอร์ที่ปรับขนาดได้ - เครื่องมือฟรี คำอธิบายที่ชัดเจน และกรณีการใช้งานจริง</p>
+            </div>
+        </section>
+
+
+        <!-- ═══════════════════════════════════════
+             META STRIP (article count)
+        ════════════════════════════════════════ -->
+        <div class="container">
+            <div class="blog-meta-strip">
+                <p class="blog-meta-strip__count">
+                    กำลังดู <strong>5</strong> คำแนะนำ
+                </p>
+                <span class="blog-meta-strip__tag">SVG · Vector · Conversion</span>
+            </div>
+        </div>
+
+
+        <!-- ═══════════════════════════════════════
+             FEATURED ARTICLE – png to svg (most searched)
+        ════════════════════════════════════════ -->
+        <section class="blog-featured">
+            <div class="container">
+                <a href="/th/blog/png-to-svg/" class="featured-card">
+
+                    <!-- Visual panel -->
+                    <div class="featured-card__visual">
+                        <span class="featured-label">★ ยอดนิยมที่สุด</span>
+                        <div class="featured-card__fmt-stack">
+                            <div class="featured-card__fmt-from">
+                                <span class="fmt-pill">PNG</span>
+                            </div>
+                            <span class="fmt-arrow-lg">↓</span>
+                            <div class="featured-card__fmt-from">
+                                <span class="fmt-pill fmt-pill--success">SVG</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content panel -->
+                    <div class="featured-card__content">
+                        <span class="article-tag">ตัวแปลงรูปแบบ</span>
+                        <h2>โปรแกรมแปลง PNG เป็น SVG ออนไลน์ฟรี</h2>
+                        <p>เรียนรู้วิธีแปลงรูปภาพ PNG เป็นไฟล์เวกเตอร์ SVG ที่สะอาดและปรับขนาดได้ - ทันทีและฟรี ครอบคลุมแนวทางปฏิบัติที่ดีที่สุดและคำแนะนำทีละขั้นตอน</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ อ่าน 5 นาที</span>
+                            <span class="article-cta">อ่านคู่มือ →</span>
+                        </div>
+                    </div>
+
+                </a>
+            </div>
+        </section>
+
+
+        <!-- ═══════════════════════════════════════
+             ARTICLES GRID – remaining 4
+        ════════════════════════════════════════ -->
+        <section class="blog-grid">
+            <div class="container">
+                <div class="articles-grid">
+
+                    <!-- JPG to SVG -->
+                    <a href="/th/blog/jpg-to-svg/" class="article-card">
+                        <div class="article-card__icon">🔄</div>
+                        <span class="article-tag">ตัวแปลงรูปแบบ</span>
+                        <h3>โปรแกรมแปลง JPG เป็น SVG ออนไลน์ฟรี</h3>
+                        <p>เปลี่ยนภาพถ่ายหรือภาพประกอบ JPEG ให้เป็นเวกเตอร์ SVG ที่ปรับขนาดได้ ค้นพบว่าการแปลง JPG เป็น SVG มีประโยชน์เมื่อใดและจะให้ได้ผลลัพธ์ที่ดีที่สุด</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ อ่าน 5 นาที</span>
+                            <span class="article-cta">อ่านคู่มือ →</span>
+                        </div>
+                    </a>
+
+                    <!-- SVG Converter Free -->
+                    <a href="/th/blog/svg-converter-free/" class="article-card">
+                        <div class="article-card__icon">⚡</div>
+                        <span class="article-tag">เครื่องมือ</span>
+                        <h3>โปรแกรมแปลง SVG ฟรี: รูปแบบรูปภาพใดๆ เป็น SVG</h3>
+                        <p>เครื่องมือฟรีหนึ่งเดียวสำหรับการแปลงรูปภาพ PNG, JPG, BMP และ WebP เป็น SVG ทำความเข้าใจความแตกต่างของรูปแบบและเลือกพรีเซ็ตที่เหมาะสม</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ อ่าน 6 นาที</span>
+                            <span class="article-cta">อ่านคู่มือ →</span>
+                        </div>
+                    </a>
+
+                    <!-- Vectorize Image -->
+                    <a href="/th/blog/vectorize-image/" class="article-card">
+                        <div class="article-card__icon">✏️</div>
+                        <span class="article-tag">การแปลงเป็นเวกเตอร์</span>
+                        <h3>เครื่องมือแปลงรูปภาพเป็นเวกเตอร์ออนไลน์ฟรี</h3>
+                        <p>การแปลงรูปภาพเป็นเวกเตอร์หมายความว่าอย่างไรจริงๆ คู่มือนี้อธิบายการแปลงแรสเตอร์เป็นเวกเตอร์ และวิธีให้ได้ผลลัพธ์ที่คมชัดด้วย PixelToPath</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ อ่าน 6 นาที</span>
+                            <span class="article-cta">อ่านคู่มือ →</span>
+                        </div>
+                    </a>
+
+                    <!-- Image to SVG -->
+                    <a href="/th/blog/image-to-svg/" class="article-card">
+                        <div class="article-card__icon">🖼️</div>
+                        <span class="article-tag">คู่มือสำหรับผู้เริ่มต้น</span>
+                        <h3>โปรแกรมแปลงรูปภาพเป็น SVG ฟรี</h3>
+                        <p>คู่มือสำหรับผู้เริ่มต้นฉบับสมบูรณ์ เรียนรู้ว่า SVG คืออะไร ทำไมจึงสำคัญ และวิธีแปลงรูปแบบรูปภาพใดๆ เป็นกราฟิกเวกเตอร์ได้ฟรี</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ อ่าน 5 นาที</span>
+                            <span class="article-cta">อ่านคู่มือ →</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ═══════════════════════════════════════
+             BOTTOM CTA – push to the tool
+        ════════════════════════════════════════ -->
+        <section class="blog-cta-section section bg-light">
+            <div class="container">
+                <h2>พร้อมที่จะลองด้วยตัวเองแล้วหรือยัง?</h2>
+                <p>หยุดอ่าน - เริ่มแปลงไฟล์ได้เลย อัปโหลดรูปภาพแรกของคุณและดาวน์โหลด SVG ในเวลาไม่ถึงนาที ฟรี ไม่ต้องใช้บัญชี</p>
+                <div class="double-buttons">
+                    <a href="/th/online/" class="btn primary-btn big-btn">เปิดเครื่องมือออนไลน์ →</a>
+                    <a href="/th/offline/" class="btn secondary-btn big-btn">⬇️ ดาวน์โหลดแอปเดสก์ท็อป</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>สนับสนุนการพัฒนาโอเพนซอร์ส</h3>
+        <p>PixelToPath ใช้งานได้ฟรี หากเครื่องมือนี้ช่วยประหยัดเวลาของคุณ ลองพิจารณาเลี้ยงกาแฟฉันสักแก้ว</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ บริจาคผ่าน PayPal</a>
+    </div>
+</section>
+    </main>
+
+    <footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/th/">หน้าแรก</a>
+        <a href="/th/online/">เครื่องมือออนไลน์</a>
+        <a href="/th/offline/">แอปเดสก์ท็อป</a>
+        <a href="/th/blog/">บล็อก</a>
+        <a href="https://github.com/lorrisc/PixelToPath">โอเพ่นซอร์ส (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal">Legal notice</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+    </div>
+</footer>
+
+    <script src="../../assets/js/ui-state.js"></script>
+</body>
+</html>

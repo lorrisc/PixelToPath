@@ -1,5 +1,5 @@
 /**
- * online.i18n.js — Translations for all hardcoded strings in online.js
+ * online.i18n.js - Translations for all hardcoded strings in online.js
  * Covers: overlay messages, status, live badge, detected type labels, param tooltips
  * Languages: bn, de, en, es, fa, fr, hi, id, ja, ko, nl, pl, pt-BR, ru, th, tr, uk, vi, zh
  */
@@ -8,7 +8,7 @@ window.PTP_I18N = {
   en: {
     uploading:    "Uploading…",
     converting:   "Converting…",
-    format_error: "Format not accepted — PNG, JPG, BMP or WebP only",
+    format_error: "Format not accepted - PNG, JPG, BMP or WebP only",
     upload_error: (msg) => `✕ Upload: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ Ready · ${kb} KB`,
@@ -22,7 +22,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ Line art detected",
     type_adjusted:     "— settings adjusted automatically",
     params: {
-      colormode:        { title: "Color Mode",         text: "Full color vectorizes every color. B&W converts to black and white first — ideal for sketches, line art, and single-color logos." },
+      colormode:        { title: "Color Mode",         text: "Full color vectorizes every color. B&W converts to black and white first - ideal for sketches, line art, and single-color logos." },
       hierarchical:     { title: "Hierarchical",       text: "How color layers overlap. Stacked builds layers on top of each other like paint. Cutout carves holes through layers, like a stencil." },
       color_precision:  { title: "Color Precision",    text: "Significant bits per RGB channel used to group similar colors. Higher = more distinct colors, larger file. Lower = fewer, bolder blocks." },
       layer_difference: { title: "Layer Difference",   text: "Minimum color distance between adjacent layers. Low = smooth transitions. High = fewer, bolder color blocks. Increase for a flat poster look." },
@@ -39,7 +39,7 @@ window.PTP_I18N = {
   fr: {
     uploading:    "Envoi en cours…",
     converting:   "Conversion en cours…",
-    format_error: "Format non accepté — PNG, JPG, BMP ou WebP uniquement",
+    format_error: "Format non accepté - PNG, JPG, BMP ou WebP uniquement",
     upload_error: (msg) => `✕ Envoi : ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ Prêt · ${kb} Ko`,
@@ -53,7 +53,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ Dessin au trait détecté",
     type_adjusted:     "— paramètres ajustés automatiquement",
     params: {
-      colormode:        { title: "Mode couleur",        text: "Couleur vectorise toutes les teintes. N&B convertit en noir et blanc — idéal pour croquis, dessins et logos unicolores." },
+      colormode:        { title: "Mode couleur",        text: "Couleur vectorise toutes les teintes. N&B convertit en noir et blanc - idéal pour croquis, dessins et logos unicolores." },
       hierarchical:     { title: "Hiérarchie",          text: "Empilé = les couches se posent l'une sur l'autre. Découpe = les couches se creusent mutuellement, comme un pochoir." },
       color_precision:  { title: "Précision couleur",   text: "Bits significatifs par canal RGB pour regrouper les couleurs proches. Plus élevé = plus de couleurs, fichier plus lourd." },
       layer_difference: { title: "Différence de couche",text: "Distance colorimétrique entre deux couches adjacentes. Faible = transitions douces. Élevé = aplats plus larges." },
@@ -70,7 +70,7 @@ window.PTP_I18N = {
   de: {
     uploading:    "Wird hochgeladen…",
     converting:   "Wird konvertiert…",
-    format_error: "Format nicht akzeptiert — nur PNG, JPG, BMP oder WebP",
+    format_error: "Format nicht akzeptiert - nur PNG, JPG, BMP oder WebP",
     upload_error: (msg) => `✕ Upload: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ Bereit · ${kb} KB`,
@@ -84,7 +84,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ Linienzeichnung erkannt",
     type_adjusted:     "— Einstellungen automatisch angepasst",
     params: {
-      colormode:        { title: "Farbmodus",           text: "Farbe vektorisiert alle Farbtöne. S/W konvertiert zuerst zu Schwarz-Weiß — ideal für Skizzen, Strichzeichnungen und einfarbige Logos." },
+      colormode:        { title: "Farbmodus",           text: "Farbe vektorisiert alle Farbtöne. S/W konvertiert zuerst zu Schwarz-Weiß - ideal für Skizzen, Strichzeichnungen und einfarbige Logos." },
       hierarchical:     { title: "Hierarchie",          text: "Gestapelt = Ebenen übereinander wie Farbe. Ausschnitt = Ebenen schneiden sich gegenseitig aus, wie eine Schablone." },
       color_precision:  { title: "Farbpräzision",       text: "Signifikante Bits pro RGB-Kanal zur Gruppierung ähnlicher Farben. Höher = mehr Farben, größere Datei." },
       layer_difference: { title: "Ebenenunterschied",   text: "Minimaler Farbabstand zwischen benachbarten Ebenen. Niedrig = weiche Übergänge. Hoch = weniger, kräftigere Farbblöcke." },
@@ -101,7 +101,7 @@ window.PTP_I18N = {
   es: {
     uploading:    "Subiendo…",
     converting:   "Convirtiendo…",
-    format_error: "Formato no aceptado — solo PNG, JPG, BMP o WebP",
+    format_error: "Formato no aceptado - solo PNG, JPG, BMP o WebP",
     upload_error: (msg) => `✕ Subida: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ Listo · ${kb} KB`,
@@ -115,7 +115,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ Arte lineal detectado",
     type_adjusted:     "— ajustes aplicados automáticamente",
     params: {
-      colormode:        { title: "Modo de color",       text: "Color vectoriza todos los tonos. B&N convierte a blanco y negro primero — ideal para bocetos, dibujos lineales y logos de un color." },
+      colormode:        { title: "Modo de color",       text: "Color vectoriza todos los tonos. B&N convierte a blanco y negro primero - ideal para bocetos, dibujos lineales y logos de un color." },
       hierarchical:     { title: "Jerárquico",          text: "Apilado = las capas se superponen como pintura. Recorte = las capas se perforan entre sí, como una plantilla." },
       color_precision:  { title: "Precisión de color",  text: "Bits significativos por canal RGB para agrupar colores similares. Mayor = más colores distintos, archivo más grande." },
       layer_difference: { title: "Diferencia de capa",  text: "Distancia de color mínima entre capas adyacentes. Baja = transiciones suaves. Alta = bloques de color más amplios." },
@@ -132,7 +132,7 @@ window.PTP_I18N = {
   fa: {
     uploading:    "در حال بارگذاری…",
     converting:   "در حال تبدیل…",
-    format_error: "فرمت پذیرفته نشد — فقط PNG، JPG، BMP یا WebP",
+    format_error: "فرمت پذیرفته نشد - فقط PNG، JPG، BMP یا WebP",
     upload_error: (msg) => `✕ بارگذاری: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ آماده · ${kb} کیلوبایت`,
@@ -146,7 +146,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ نقاشی خطی شناسایی شد",
     type_adjusted:     "— تنظیمات به‌طور خودکار اعمال شد",
     params: {
-      colormode:        { title: "حالت رنگ",            text: "رنگی همه رنگ‌ها را برداری می‌کند. سیاه‌وسفید ابتدا تبدیل می‌شود — ایده‌آل برای طرح‌ها و لوگوهای تک‌رنگ." },
+      colormode:        { title: "حالت رنگ",            text: "رنگی همه رنگ‌ها را برداری می‌کند. سیاه‌وسفید ابتدا تبدیل می‌شود - ایده‌آل برای طرح‌ها و لوگوهای تک‌رنگ." },
       hierarchical:     { title: "سلسله‌مراتب",         text: "نحوه هم‌پوشانی لایه‌های رنگ. انباشته = لایه‌ها روی هم. برش = لایه‌ها از هم حفره می‌کنند، مثل شابلون." },
       color_precision:  { title: "دقت رنگ",             text: "بیت‌های معنادار در هر کانال RGB برای گروه‌بندی رنگ‌های مشابه. بیشتر = رنگ‌های بیشتر، فایل بزرگ‌تر." },
       layer_difference: { title: "تفاوت لایه",          text: "حداقل فاصله رنگی بین لایه‌های مجاور. کم = تغییر رنگ نرم. زیاد = بلوک‌های رنگی بزرگ‌تر." },
@@ -163,7 +163,7 @@ window.PTP_I18N = {
   hi: {
     uploading:    "अपलोड हो रहा है…",
     converting:   "रूपांतरण हो रहा है…",
-    format_error: "प्रारूप स्वीकार्य नहीं — केवल PNG, JPG, BMP या WebP",
+    format_error: "प्रारूप स्वीकार्य नहीं - केवल PNG, JPG, BMP या WebP",
     upload_error: (msg) => `✕ अपलोड: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ तैयार · ${kb} KB`,
@@ -177,7 +177,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ रेखा कला पहचानी गई",
     type_adjusted:     "— सेटिंग्स स्वचालित रूप से समायोजित",
     params: {
-      colormode:        { title: "रंग मोड",             text: "रंगीन मोड सभी रंगों को वेक्टराइज़ करता है। B&W पहले काला-सफ़ेद में बदलता है — रेखा कला और लोगो के लिए आदर्श।" },
+      colormode:        { title: "रंग मोड",             text: "रंगीन मोड सभी रंगों को वेक्टराइज़ करता है। B&W पहले काला-सफ़ेद में बदलता है - रेखा कला और लोगो के लिए आदर्श।" },
       hierarchical:     { title: "श्रेणीबद्ध",          text: "स्टैक्ड = परतें एक-दूसरे के ऊपर। कटआउट = परतें एक-दूसरे में छेद करती हैं, जैसे स्टेंसिल।" },
       color_precision:  { title: "रंग सटीकता",          text: "समान रंगों को समूहित करने के लिए RGB चैनल प्रति बिट्स। अधिक = अधिक रंग, बड़ी फ़ाइल।" },
       layer_difference: { title: "परत अंतर",             text: "आसन्न परतों के बीच न्यूनतम रंग दूरी। कम = नरम संक्रमण। अधिक = बोल्ड रंग ब्लॉक।" },
@@ -194,7 +194,7 @@ window.PTP_I18N = {
   id: {
     uploading:    "Mengunggah…",
     converting:   "Mengonversi…",
-    format_error: "Format tidak diterima — hanya PNG, JPG, BMP atau WebP",
+    format_error: "Format tidak diterima - hanya PNG, JPG, BMP atau WebP",
     upload_error: (msg) => `✕ Unggah: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ Siap · ${kb} KB`,
@@ -208,7 +208,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ Gambar garis terdeteksi",
     type_adjusted:     "— pengaturan disesuaikan otomatis",
     params: {
-      colormode:        { title: "Mode Warna",          text: "Warna penuh memvektorkan semua warna. Hitam-Putih mengonversi lebih dulu — ideal untuk sketsa, seni garis, dan logo satu warna." },
+      colormode:        { title: "Mode Warna",          text: "Warna penuh memvektorkan semua warna. Hitam-Putih mengonversi lebih dulu - ideal untuk sketsa, seni garis, dan logo satu warna." },
       hierarchical:     { title: "Hierarki",            text: "Berlapis = lapisan menumpuk seperti cat. Potongan = lapisan melubangi satu sama lain, seperti stensil." },
       color_precision:  { title: "Presisi Warna",       text: "Bit signifikan per kanal RGB untuk mengelompokkan warna serupa. Lebih tinggi = lebih banyak warna, file lebih besar." },
       layer_difference: { title: "Perbedaan Lapisan",   text: "Jarak warna minimum antara dua lapisan. Rendah = transisi halus. Tinggi = blok warna lebih tebal." },
@@ -225,7 +225,7 @@ window.PTP_I18N = {
   ja: {
     uploading:    "アップロード中…",
     converting:   "変換中…",
-    format_error: "対応外の形式 — PNG・JPG・BMP・WebP のみ",
+    format_error: "対応外の形式 - PNG・JPG・BMP・WebP のみ",
     upload_error: (msg) => `✕ アップロード: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ 完了 · ${kb} KB`,
@@ -239,7 +239,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ 線画を検出しました",
     type_adjusted:     "— 設定を自動調整しました",
     params: {
-      colormode:        { title: "カラーモード",         text: "カラーはすべての色をベクター化。白黒はグレースケールに変換してからトレース — スケッチ・線画・単色ロゴに最適。" },
+      colormode:        { title: "カラーモード",         text: "カラーはすべての色をベクター化。白黒はグレースケールに変換してからトレース - スケッチ・線画・単色ロゴに最適。" },
       hierarchical:     { title: "階層",                text: "スタック = 塗り重ねるように層を積む。カットアウト = 下の層を切り抜くステンシル方式。" },
       color_precision:  { title: "色精度",              text: "RGB チャンネルあたりの有効ビット数。高いほど色数が増えファイルサイズが大きくなります。" },
       layer_difference: { title: "レイヤー差",           text: "隣接レイヤー間の最小色差。小さいほど滑らかなグラデーション。大きいほど大きな色ブロックに。" },
@@ -256,7 +256,7 @@ window.PTP_I18N = {
   ko: {
     uploading:    "업로드 중…",
     converting:   "변환 중…",
-    format_error: "지원하지 않는 형식 — PNG, JPG, BMP 또는 WebP만 가능",
+    format_error: "지원하지 않는 형식 - PNG, JPG, BMP 또는 WebP만 가능",
     upload_error: (msg) => `✕ 업로드: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ 완료 · ${kb} KB`,
@@ -270,7 +270,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ 선화 감지됨",
     type_adjusted:     "— 설정이 자동으로 조정되었습니다",
     params: {
-      colormode:        { title: "색상 모드",            text: "컬러는 모든 색상을 벡터화합니다. 흑백은 먼저 그레이스케일로 변환 — 스케치, 선화, 단색 로고에 적합합니다." },
+      colormode:        { title: "색상 모드",            text: "컬러는 모든 색상을 벡터화합니다. 흑백은 먼저 그레이스케일로 변환 - 스케치, 선화, 단색 로고에 적합합니다." },
       hierarchical:     { title: "계층 구조",            text: "스택 = 레이어를 칠처럼 쌓음. 커트아웃 = 레이어가 서로 구멍을 뚫는 스텐실 방식." },
       color_precision:  { title: "색상 정밀도",          text: "유사한 색상을 묶는 RGB 채널당 유효 비트 수. 높을수록 색상이 많고 파일이 커집니다." },
       layer_difference: { title: "레이어 차이",          text: "인접 레이어 간 최소 색상 거리. 낮을수록 부드러운 전환. 높을수록 굵은 색상 블록." },
@@ -287,7 +287,7 @@ window.PTP_I18N = {
   nl: {
     uploading:    "Uploaden…",
     converting:   "Converteren…",
-    format_error: "Formaat niet geaccepteerd — alleen PNG, JPG, BMP of WebP",
+    format_error: "Formaat niet geaccepteerd - alleen PNG, JPG, BMP of WebP",
     upload_error: (msg) => `✕ Upload: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ Klaar · ${kb} KB`,
@@ -301,7 +301,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ Lijntekening gedetecteerd",
     type_adjusted:     "— instellingen automatisch aangepast",
     params: {
-      colormode:        { title: "Kleurmodus",          text: "Kleur vectoriseert alle tinten. Z/W converteert eerst naar zwart-wit — ideaal voor schetsen, lijnkunst en eenkleurige logo's." },
+      colormode:        { title: "Kleurmodus",          text: "Kleur vectoriseert alle tinten. Z/W converteert eerst naar zwart-wit - ideaal voor schetsen, lijnkunst en eenkleurige logo's." },
       hierarchical:     { title: "Hiërarchisch",        text: "Gestapeld = lagen op elkaar zoals verf. Uitsnede = lagen snijden door elkaar, als een sjabloon." },
       color_precision:  { title: "Kleurnauwkeurigheid", text: "Significante bits per RGB-kanaal voor het groeperen van vergelijkbare kleuren. Hoger = meer kleuren, groter bestand." },
       layer_difference: { title: "Laagverschil",        text: "Minimale kleurafstand tussen aangrenzende lagen. Laag = zachte overgangen. Hoog = bredere kleurblokken." },
@@ -318,7 +318,7 @@ window.PTP_I18N = {
   pl: {
     uploading:    "Przesyłanie…",
     converting:   "Konwertowanie…",
-    format_error: "Nieobsługiwany format — tylko PNG, JPG, BMP lub WebP",
+    format_error: "Nieobsługiwany format - tylko PNG, JPG, BMP lub WebP",
     upload_error: (msg) => `✕ Przesyłanie: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ Gotowe · ${kb} KB`,
@@ -332,7 +332,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ Rysunek liniowy wykryty",
     type_adjusted:     "— ustawienia dopasowane automatycznie",
     params: {
-      colormode:        { title: "Tryb koloru",         text: "Kolor wektoryzuje wszystkie barwy. Czarno-biały konwertuje najpierw do skali szarości — idealny dla szkiców i logo." },
+      colormode:        { title: "Tryb koloru",         text: "Kolor wektoryzuje wszystkie barwy. Czarno-biały konwertuje najpierw do skali szarości - idealny dla szkiców i logo." },
       hierarchical:     { title: "Hierarchia",          text: "Nakładane = warstwy ułożone jak farba. Wycięcie = warstwy wycinają otwory w sobie nawzajem, jak szablon." },
       color_precision:  { title: "Precyzja koloru",     text: "Znaczące bity na kanał RGB do grupowania podobnych kolorów. Wyższe = więcej kolorów, większy plik." },
       layer_difference: { title: "Różnica warstw",      text: "Minimalna odległość kolorystyczna między sąsiadującymi warstwami. Niska = miękkie przejścia. Wysoka = grubsze bloki." },
@@ -349,7 +349,7 @@ window.PTP_I18N = {
   "pt-BR": {
     uploading:    "Enviando…",
     converting:   "Convertendo…",
-    format_error: "Formato não aceito — somente PNG, JPG, BMP ou WebP",
+    format_error: "Formato não aceito - somente PNG, JPG, BMP ou WebP",
     upload_error: (msg) => `✕ Envio: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ Pronto · ${kb} KB`,
@@ -363,7 +363,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ Arte vetorial detectada",
     type_adjusted:     "— configurações ajustadas automaticamente",
     params: {
-      colormode:        { title: "Modo de cor",         text: "Cor vetoriza todas as tonalidades. P&B converte para preto e branco primeiro — ideal para esboços, arte linear e logos." },
+      colormode:        { title: "Modo de cor",         text: "Cor vetoriza todas as tonalidades. P&B converte para preto e branco primeiro - ideal para esboços, arte linear e logos." },
       hierarchical:     { title: "Hierarquia",          text: "Empilhado = camadas sobrepostas como tinta. Recorte = camadas que recortam umas às outras, como um stencil." },
       color_precision:  { title: "Precisão de cor",     text: "Bits significativos por canal RGB para agrupar cores similares. Maior = mais cores distintas, arquivo maior." },
       layer_difference: { title: "Diferença de camada", text: "Distância mínima de cor entre camadas adjacentes. Baixa = transições suaves. Alta = blocos de cor mais amplos." },
@@ -380,7 +380,7 @@ window.PTP_I18N = {
   ru: {
     uploading:    "Загрузка…",
     converting:   "Конвертация…",
-    format_error: "Формат не поддерживается — только PNG, JPG, BMP или WebP",
+    format_error: "Формат не поддерживается - только PNG, JPG, BMP или WebP",
     upload_error: (msg) => `✕ Загрузка: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ Готово · ${kb} КБ`,
@@ -394,7 +394,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ Линейное изображение обнаружено",
     type_adjusted:     "— настройки подобраны автоматически",
     params: {
-      colormode:        { title: "Режим цвета",         text: "Цветной режим векторизует все оттенки. Ч/Б сначала конвертирует в оттенки серого — идеально для эскизов и логотипов." },
+      colormode:        { title: "Режим цвета",         text: "Цветной режим векторизует все оттенки. Ч/Б сначала конвертирует в оттенки серого - идеально для эскизов и логотипов." },
       hierarchical:     { title: "Иерархия",            text: "Слоистый = слои накладываются друг на друга. Вырезной = слои прорезают друг друга, как трафарет." },
       color_precision:  { title: "Точность цвета",      text: "Значимые биты на канал RGB для группировки близких цветов. Выше = больше цветов, больший файл." },
       layer_difference: { title: "Разница слоёв",       text: "Минимальное цветовое расстояние между соседними слоями. Низкое = плавные переходы. Высокое = крупные блоки." },
@@ -411,7 +411,7 @@ window.PTP_I18N = {
   th: {
     uploading:    "กำลังอัปโหลด…",
     converting:   "กำลังแปลง…",
-    format_error: "ไม่รองรับรูปแบบนี้ — รองรับเฉพาะ PNG, JPG, BMP หรือ WebP",
+    format_error: "ไม่รองรับรูปแบบนี้ - รองรับเฉพาะ PNG, JPG, BMP หรือ WebP",
     upload_error: (msg) => `✕ อัปโหลด: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ พร้อม · ${kb} KB`,
@@ -425,7 +425,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ ตรวจพบภาพลายเส้น",
     type_adjusted:     "— ปรับการตั้งค่าโดยอัตโนมัติ",
     params: {
-      colormode:        { title: "โหมดสี",              text: "สีเต็มจะแปลงทุกสี ขาวดำจะแปลงเป็นโทนเทาก่อน — เหมาะสำหรับภาพสเก็ตช์ ลายเส้น และโลโก้สีเดียว" },
+      colormode:        { title: "โหมดสี",              text: "สีเต็มจะแปลงทุกสี ขาวดำจะแปลงเป็นโทนเทาก่อน - เหมาะสำหรับภาพสเก็ตช์ ลายเส้น และโลโก้สีเดียว" },
       hierarchical:     { title: "ลำดับชั้น",           text: "ซ้อนกัน = เลเยอร์วางทับกันเหมือนสี ตัด = เลเยอร์เจาะรูผ่านกันเหมือนสเต็นซิล" },
       color_precision:  { title: "ความแม่นยำสี",        text: "บิตสำคัญต่อช่อง RGB สำหรับจัดกลุ่มสีที่คล้ายกัน สูงขึ้น = สีมากขึ้น ไฟล์ใหญ่ขึ้น" },
       layer_difference: { title: "ความต่างของเลเยอร์",  text: "ระยะห่างสีขั้นต่ำระหว่างเลเยอร์ที่อยู่ติดกัน ต่ำ = เปลี่ยนผ่านนุ่มนวล สูง = บล็อกสีใหญ่ขึ้น" },
@@ -442,7 +442,7 @@ window.PTP_I18N = {
   tr: {
     uploading:    "Yükleniyor…",
     converting:   "Dönüştürülüyor…",
-    format_error: "Format kabul edilmedi — yalnızca PNG, JPG, BMP veya WebP",
+    format_error: "Format kabul edilmedi - yalnızca PNG, JPG, BMP veya WebP",
     upload_error: (msg) => `✕ Yükleme: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ Hazır · ${kb} KB`,
@@ -456,7 +456,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ Çizgi sanat algılandı",
     type_adjusted:     "— ayarlar otomatik düzenlendi",
     params: {
-      colormode:        { title: "Renk Modu",           text: "Renkli tüm tonları vektörleştirir. S/B önce gri tonlamaya çevirir — eskizler, çizgi sanat ve tek renkli logolar için ideal." },
+      colormode:        { title: "Renk Modu",           text: "Renkli tüm tonları vektörleştirir. S/B önce gri tonlamaya çevirir - eskizler, çizgi sanat ve tek renkli logolar için ideal." },
       hierarchical:     { title: "Hiyerarşi",           text: "Yığılmış = katmanlar boya gibi üst üste. Kesim = katmanlar birbirini deler, şablon gibi." },
       color_precision:  { title: "Renk Hassasiyeti",    text: "Benzer renkleri gruplamak için RGB kanal başına anlamlı bit. Yüksek = daha fazla renk, büyük dosya." },
       layer_difference: { title: "Katman Farkı",        text: "Bitişik katmanlar arasındaki minimum renk mesafesi. Düşük = yumuşak geçişler. Yüksek = daha geniş renk blokları." },
@@ -473,7 +473,7 @@ window.PTP_I18N = {
   uk: {
     uploading:    "Завантаження…",
     converting:   "Конвертація…",
-    format_error: "Формат не підтримується — лише PNG, JPG, BMP або WebP",
+    format_error: "Формат не підтримується - лише PNG, JPG, BMP або WebP",
     upload_error: (msg) => `✕ Завантаження: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ Готово · ${kb} КБ`,
@@ -487,7 +487,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ Лінійне зображення виявлено",
     type_adjusted:     "— налаштування підібрано автоматично",
     params: {
-      colormode:        { title: "Режим кольору",       text: "Кольоровий режим векторизує всі відтінки. Ч/Б спочатку конвертує в градації сірого — ідеально для ескізів і логотипів." },
+      colormode:        { title: "Режим кольору",       text: "Кольоровий режим векторизує всі відтінки. Ч/Б спочатку конвертує в градації сірого - ідеально для ескізів і логотипів." },
       hierarchical:     { title: "Ієрархія",            text: "Шаруватий = шари накладаються один на одний. Вирізний = шари прорізають один одного, як трафарет." },
       color_precision:  { title: "Точність кольору",    text: "Значущі біти на канал RGB для групування подібних кольорів. Вище = більше кольорів, більший файл." },
       layer_difference: { title: "Різниця шарів",       text: "Мінімальна колірна відстань між сусідніми шарами. Низька = плавні переходи. Висока = більші блоки." },
@@ -504,7 +504,7 @@ window.PTP_I18N = {
   vi: {
     uploading:    "Đang tải lên…",
     converting:   "Đang chuyển đổi…",
-    format_error: "Định dạng không được chấp nhận — chỉ PNG, JPG, BMP hoặc WebP",
+    format_error: "Định dạng không được chấp nhận - chỉ PNG, JPG, BMP hoặc WebP",
     upload_error: (msg) => `✕ Tải lên: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ Sẵn sàng · ${kb} KB`,
@@ -518,7 +518,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ Phát hiện tranh nét",
     type_adjusted:     "— cài đặt được điều chỉnh tự động",
     params: {
-      colormode:        { title: "Chế độ màu",          text: "Màu đầy đủ vector hóa mọi màu sắc. Đen trắng chuyển đổi trước — lý tưởng cho phác thảo, tranh nét và logo một màu." },
+      colormode:        { title: "Chế độ màu",          text: "Màu đầy đủ vector hóa mọi màu sắc. Đen trắng chuyển đổi trước - lý tưởng cho phác thảo, tranh nét và logo một màu." },
       hierarchical:     { title: "Phân cấp",            text: "Xếp chồng = các lớp chồng lên nhau như sơn. Cắt = các lớp khoét lỗ qua nhau, như khuôn chữ." },
       color_precision:  { title: "Độ chính xác màu",    text: "Bit có nghĩa trên mỗi kênh RGB để nhóm màu tương tự. Cao hơn = nhiều màu hơn, file lớn hơn." },
       layer_difference: { title: "Chênh lệch lớp",      text: "Khoảng cách màu tối thiểu giữa các lớp liền kề. Thấp = chuyển đổi mượt. Cao = khối màu lớn hơn." },
@@ -535,7 +535,7 @@ window.PTP_I18N = {
   zh: {
     uploading:    "上传中…",
     converting:   "转换中…",
-    format_error: "不支持该格式 — 仅支持 PNG、JPG、BMP 或 WebP",
+    format_error: "不支持该格式 - 仅支持 PNG、JPG、BMP 或 WebP",
     upload_error: (msg) => `✕ 上传：${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ 完成 · ${kb} KB`,
@@ -549,7 +549,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ 检测到线稿",
     type_adjusted:     "— 已自动调整设置",
     params: {
-      colormode:        { title: "颜色模式",             text: "彩色模式矢量化所有颜色。黑白模式先转为灰度 — 适合素描、线稿和单色 Logo。" },
+      colormode:        { title: "颜色模式",             text: "彩色模式矢量化所有颜色。黑白模式先转为灰度 - 适合素描、线稿和单色 Logo。" },
       hierarchical:     { title: "层叠方式",             text: "堆叠 = 图层像油漆一样叠加。镂空 = 图层相互挖孔，像模板一样。" },
       color_precision:  { title: "颜色精度",             text: "每个 RGB 通道用于归类相似颜色的有效位数。越高 = 颜色越多，文件越大。" },
       layer_difference: { title: "图层差异",             text: "相邻图层之间的最小色彩距离。低 = 过渡柔和。高 = 色块更粗犷，适合海报风格。" },
@@ -566,7 +566,7 @@ window.PTP_I18N = {
   bn: {
     uploading:    "আপলোড হচ্ছে…",
     converting:   "রূপান্তর হচ্ছে…",
-    format_error: "ফরম্যাট গ্রহণযোগ্য নয় — শুধুমাত্র PNG, JPG, BMP বা WebP",
+    format_error: "ফরম্যাট গ্রহণযোগ্য নয় - শুধুমাত্র PNG, JPG, BMP বা WebP",
     upload_error: (msg) => `✕ আপলোড: ${msg}`,
     conv_error:   (msg) => `✕ ${msg}`,
     ready:        (kb)  => `✓ প্রস্তুত · ${kb} KB`,
@@ -580,7 +580,7 @@ window.PTP_I18N = {
     type_line_art:     "✏️ রেখা শিল্প শনাক্ত হয়েছে",
     type_adjusted:     "— সেটিংস স্বয়ংক্রিয়ভাবে সামঞ্জস্য হয়েছে",
     params: {
-      colormode:        { title: "রঙ মোড",              text: "রঙিন মোড সব রঙ ভেক্টরাইজ করে। সাদাকালো আগে গ্রেস্কেলে রূপান্তর করে — স্কেচ, লাইন আর্ট এবং একরঙা লোগোর জন্য আদর্শ।" },
+      colormode:        { title: "রঙ মোড",              text: "রঙিন মোড সব রঙ ভেক্টরাইজ করে। সাদাকালো আগে গ্রেস্কেলে রূপান্তর করে - স্কেচ, লাইন আর্ট এবং একরঙা লোগোর জন্য আদর্শ।" },
       hierarchical:     { title: "স্তরবিন্যাস",         text: "স্তুপীকৃত = স্তরগুলো রঙের মতো একের উপর এক। কাটআউট = স্তরগুলো একে অপরের মধ্যে ছিদ্র করে, স্টেনসিলের মতো।" },
       color_precision:  { title: "রঙ নির্ভুলতা",        text: "একই ধরনের রঙ গোষ্ঠীভুক্ত করতে প্রতি RGB চ্যানেলে উল্লেখযোগ্য বিট। বেশি = বেশি রঙ, বড় ফাইল।" },
       layer_difference: { title: "স্তর পার্থক্য",       text: "পাশাপাশি স্তরের মধ্যে ন্যূনতম রঙের দূরত্ব। কম = মসৃণ পরিবর্তন। বেশি = বড় রঙের ব্লক।" },

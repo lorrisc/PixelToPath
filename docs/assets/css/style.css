@@ -1,6 +1,7 @@
 :root {
     --primary: #ff9900;
     --primary-dark: #e68a00;
+    --dark-accent: #20303f;
     --dark: #2c3e50;
     --light: #f8f9fa;
     --text: #333;
@@ -127,6 +128,11 @@ ol {
     font-size: 1.1rem;
     max-width: 750px;
     margin: -1.5rem auto 3rem;
+}
+
+.fmt-arrow {
+    font-size: 1.1rem;
+    color: #ccc;
 }
 
 /* ============================================
