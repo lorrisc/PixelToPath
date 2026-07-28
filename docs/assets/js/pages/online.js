@@ -6,6 +6,17 @@ let currentSvg = null;
 let currentSession = null;
 let abortCtrl = null;
 
+// Soft donate nudge — shown after sustained use, never blocks the UI
+const DONATE_URL = "https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL";
+const DONATE_UPLOAD_THRESHOLD = 3;
+const DONATE_CONV_THRESHOLD = 15;
+const DONATE_SNOOZE_MS = 14 * 24 * 60 * 60 * 1000; // 14 days
+const LS_UPLOADS = "ptp_uploads";
+const LS_CONVERSIONS = "ptp_conversions";
+const LS_DONATE_SNOOZE = "ptp_donate_nudge_snooze";
+const LS_DONATE_DONE = "ptp_donate_nudge_done";
+let donateNudgeTimer = null;
+
 // ── Language detection ────────────────────────────────────────────────────────
 function detectLang() {
     const m = window.location.pathname.match(/^\/([a-z]{2})\//);
@@ -206,6 +217,98 @@ function applyRecommendedParams(params, detectedType) {
     if (detectedType && labels[detectedType]) setStatus(labels[detectedType] + " " + T.type_adjusted, "info");
 }
 
+// ── Soft donate nudge ─────────────────────────────────────────────────────────
+function lsGetInt(key) {
+    const n = parseInt(localStorage.getItem(key) || "0", 10);
+    return Number.isFinite(n) ? n : 0;
+}
+function bumpUsageCounter(key) {
+    const next = lsGetInt(key) + 1;
+    try { localStorage.setItem(key, String(next)); } catch (_) { /* private mode */ }
+    return next;
+}
+function canShowDonateNudge() {
+    try {
+        if (localStorage.getItem(LS_DONATE_DONE) === "1") return false;
+        if (Date.now() < lsGetInt(LS_DONATE_SNOOZE)) return false;
+    } catch (_) { return false; }
+    return lsGetInt(LS_UPLOADS) >= DONATE_UPLOAD_THRESHOLD
+        || lsGetInt(LS_CONVERSIONS) >= DONATE_CONV_THRESHOLD;
+}
+function snoozeDonateNudge() {
+    try { localStorage.setItem(LS_DONATE_SNOOZE, String(Date.now() + DONATE_SNOOZE_MS)); } catch (_) {}
+}
+function dismissDonateNudgeForever() {
+    try { localStorage.setItem(LS_DONATE_DONE, "1"); } catch (_) {}
+}
+function hideDonateNudge() {
+    const el = document.getElementById("donate-nudge");
+    if (!el) return;
+    el.classList.remove("is-visible");
+    document.body.classList.remove("donate-nudge-open");
+    document.removeEventListener("keydown", onDonateNudgeKeydown);
+    setTimeout(() => el.remove(), 280);
+}
+function onDonateNudgeKeydown(e) {
+    if (e.key === "Escape") {
+        snoozeDonateNudge();
+        hideDonateNudge();
+    }
+}
+function ensureDonateNudge() {
+    let el = document.getElementById("donate-nudge");
+    if (el) return el;
+    el = document.createElement("div");
+    el.id = "donate-nudge";
+    el.className = "donate-nudge";
+    el.setAttribute("role", "dialog");
+    el.setAttribute("aria-modal", "true");
+    el.setAttribute("aria-labelledby", "donate-nudge-title");
+    const ctaLabel = T.donate_nudge_cta || "Donate via PayPal";
+    el.innerHTML = `
+        <div class="donate-nudge__card">
+            <button type="button" class="donate-nudge__close" aria-label="Close">&times;</button>
+            <h3 class="donate-nudge__title" id="donate-nudge-title"></h3>
+            <p class="donate-nudge__text"></p>
+            <div class="donate-nudge__actions">
+                <a class="donate-btn donate-nudge__cta" href="${DONATE_URL}" target="_blank" rel="noopener noreferrer"></a>
+                <button type="button" class="donate-nudge__later"></button>
+            </div>
+        </div>`;
+    el.querySelector(".donate-nudge__title").textContent = T.donate_nudge_title || "Enjoying PixelToPath?";
+    el.querySelector(".donate-nudge__text").textContent = T.donate_nudge_text || "This tool is free and open source. A small donation helps keep it running.";
+    el.querySelector(".donate-nudge__cta").textContent = "❤️ " + ctaLabel;
+    el.querySelector(".donate-nudge__later").textContent = T.donate_nudge_later || "Maybe later";
+    const dismiss = () => { snoozeDonateNudge(); hideDonateNudge(); };
+    el.querySelector(".donate-nudge__close").addEventListener("click", dismiss);
+    el.querySelector(".donate-nudge__later").addEventListener("click", dismiss);
+    el.querySelector(".donate-nudge__cta").addEventListener("click", () => {
+        dismissDonateNudgeForever();
+        hideDonateNudge();
+    });
+    // Click on backdrop closes; click on card does not
+    el.addEventListener("click", e => { if (e.target === el) dismiss(); });
+    document.body.appendChild(el);
+    return el;
+}
+function scheduleDonateNudge() {
+    if (!canShowDonateNudge()) return;
+    if (document.getElementById("donate-nudge")?.classList.contains("is-visible")) return;
+    clearTimeout(donateNudgeTimer);
+    donateNudgeTimer = setTimeout(() => {
+        if (!canShowDonateNudge()) return;
+        const el = ensureDonateNudge();
+        snoozeDonateNudge();
+        document.body.classList.add("donate-nudge-open");
+        document.addEventListener("keydown", onDonateNudgeKeydown);
+        requestAnimationFrame(() => el.classList.add("is-visible"));
+        window.trackEvent?.("donate_nudge_shown", {
+            uploads: lsGetInt(LS_UPLOADS),
+            conversions: lsGetInt(LS_CONVERSIONS),
+        });
+    }, 2000);
+}
+
 // ── Upload + Convert pipeline ─────────────────────────────────────────────────
 async function uploadAndConvert(file, method) {
     fullConversionStart = performance.now();
@@ -219,6 +322,7 @@ async function uploadAndConvert(file, method) {
         if (!res.ok) { const e = await res.json().catch(()=>({detail:res.statusText})); throw new Error(e.detail||"Upload error"); }
         const data = await res.json();
         currentSession = data.session_id;
+        bumpUsageCounter(LS_UPLOADS);
         applyRecommendedParams(data.params, data.detected_type);
         await runConversion();
     } catch(e) {
@@ -253,6 +357,8 @@ async function runConversion() {
             session_id: currentSession, 
             total_duration_ms: totalDurationMs 
         });
+        bumpUsageCounter(LS_CONVERSIONS);
+        scheduleDonateNudge();
     } catch(e) {
         if (e.name === "AbortError") return;
         setOverlay(false); setLive("error"); setStatus(T.conv_error(e.message), "error");
