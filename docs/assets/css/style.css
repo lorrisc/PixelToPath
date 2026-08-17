@@ -37,6 +37,10 @@ a {
     margin: 0 auto;
     padding: 0 20px;
 }
+.ads-slot {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 ol {
     margin: 0;
     padding-left: 0;
