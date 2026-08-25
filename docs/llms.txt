@@ -1,0 +1,65 @@
+# PixelToPath
+
+> Free PNG/JPG/BMP/WebP to SVG converter — online in the browser and as a desktop app for Windows and Linux. Powered by VTracer. Open source.
+
+PixelToPath turns raster images into high-quality SVG vector graphics. Use it free online (no account), or download the desktop app for offline, unlimited conversions. Built for designers and developers who need clean, editable SVG paths from photos, logos, posters, and line art.
+
+Supported formats: PNG, JPG, BMP, WebP. Modes: color (multi-layer vectorization) and black & white. Presets: B&W, Poster, Photo. Advanced controls include curve fitting, filter speckle, corner threshold, and more. Live SVG preview updates as parameters change.
+
+Website: https://pixel-to-path.com
+GitHub: https://github.com/lorrisc/PixelToPath
+Releases: https://github.com/lorrisc/PixelToPath/releases
+Author: Lorris C. (Lorrisc)
+
+## Main pages
+
+- [Home](https://pixel-to-path.com/): Product overview, features, and entry point to online and desktop tools
+- [Online converter](https://pixel-to-path.com/online/): Free browser-based PNG/JPG to SVG conversion
+- [Desktop app (offline)](https://pixel-to-path.com/offline/): Download Windows and Linux builds for offline, unlimited use
+- [Blog](https://pixel-to-path.com/blog/): Guides on image-to-SVG conversion and vectorization
+
+## Guides
+
+- [PNG to SVG](https://pixel-to-path.com/blog/png-to-svg/): How to convert PNG images to SVG with PixelToPath
+- [JPG to SVG](https://pixel-to-path.com/blog/jpg-to-svg/): How to convert JPG/JPEG images to SVG
+- [Image to SVG](https://pixel-to-path.com/blog/image-to-svg/): General raster-to-vector workflow
+- [Free SVG converter](https://pixel-to-path.com/blog/svg-converter-free/): Using PixelToPath as a free SVG converter
+- [Vectorize an image](https://pixel-to-path.com/blog/vectorize-image/): Vectorization tips for logos, posters, and photos
+
+## Project & source
+
+- [GitHub repository](https://github.com/lorrisc/PixelToPath): Source code, issues, and contribution
+- [Releases](https://github.com/lorrisc/PixelToPath/releases): Packaged Windows (.zip) and Linux (.tar.gz) binaries
+- [VTracer](https://github.com/visioncortex/vtracer): Underlying open-source Rust tracer used by PixelToPath
+- [Sitemap](https://pixel-to-path.com/sitemap.xml): Full list of indexed URLs (including localized pages)
+
+## Locales
+
+Localized versions of the site (same structure: home, online, offline, blog):
+
+- [English](https://pixel-to-path.com/)
+- [Bengali](https://pixel-to-path.com/bn/)
+- [German](https://pixel-to-path.com/de/)
+- [Spanish](https://pixel-to-path.com/es/)
+- [Persian](https://pixel-to-path.com/fa/)
+- [French](https://pixel-to-path.com/fr/)
+- [Hindi](https://pixel-to-path.com/hi/)
+- [Indonesian](https://pixel-to-path.com/id/)
+- [Japanese](https://pixel-to-path.com/ja/)
+- [Korean](https://pixel-to-path.com/ko/)
+- [Dutch](https://pixel-to-path.com/nl/)
+- [Polish](https://pixel-to-path.com/pl/)
+- [Portuguese (Brazil)](https://pixel-to-path.com/pt/)
+- [Russian](https://pixel-to-path.com/ru/)
+- [Thai](https://pixel-to-path.com/th/)
+- [Turkish](https://pixel-to-path.com/tr/)
+- [Ukrainian](https://pixel-to-path.com/uk/)
+- [Vietnamese](https://pixel-to-path.com/vi/)
+- [Chinese](https://pixel-to-path.com/zh/)
+
+## Optional
+
+- [Privacy](https://pixel-to-path.com/privacy/)
+- [Terms](https://pixel-to-path.com/terms/)
+- [Legal](https://pixel-to-path.com/legal/)
+- [humans.txt](https://pixel-to-path.com/humans.txt)

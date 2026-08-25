@@ -1,10 +1,85 @@
+# PixelToPath — https://pixel-to-path.com
+# Allow all crawlers, including search engines and AI / LLM agents.
+
 User-agent: *
 Allow: /
+
+# OpenAI
 User-agent: GPTBot
 Allow: /
-User-agent: oai-searchbot
+
+User-agent: ChatGPT-User
 Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Google (search + Gemini / AI Overviews training)
 User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Microsoft / Bing / Copilot
+User-agent: Bingbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+# Meta / Llama
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Common Crawl / training corpora
+User-agent: CCBot
+Allow: /
+
+# Others commonly used by AI search & agents
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: DuckAssistBot
 Allow: /
 
 Sitemap: https://pixel-to-path.com/sitemap.xml
