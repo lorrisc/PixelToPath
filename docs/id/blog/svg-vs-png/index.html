@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SVG vs PNG/JPG: Core Web Vitals dan SEO | PixelToPath</title>
+    <meta name="description" content="Ganti logo dan ikon PNG/JPG dengan SVG: ukuran file lebih kecil, tajam di layar Retina dan 4K, LCP dan CLS lebih baik. Panduan untuk developer dan SEO.">
+    <meta name="keywords" content="svg vs png, svg vs jpg, svg core web vitals, svg seo, performa svg, logo svg vs png, ikon svg, vektorisasi logo web, lcp cls svg, pixeltopath">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="SVG vs PNG/JPG: Core Web Vitals dan SEO | PixelToPath">
+    <meta property="og:description" content="Ganti logo dan ikon PNG/JPG dengan SVG: ukuran file lebih kecil, tajam di layar Retina dan 4K, LCP dan CLS lebih baik. Panduan untuk developer dan SEO.">
+    <meta property="og:image" content="../../../assets/images/screenshot.png">
+    <meta property="og:url" content="https://pixel-to-path.com/id/blog/svg-vs-png/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/id/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/id/blog/svg-vs-png/">
+
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/components.css">
+    <link rel="stylesheet" href="../../../assets/css/containers.css">
+    <link rel="stylesheet" href="../../../assets/css/partials/footer.css">
+    <link rel="stylesheet" href="../../../assets/css/partials/navbar.css">
+    <link rel="stylesheet" href="../../../assets/css/partials/donate.css">
+    <link rel="stylesheet" href="../../../assets/css/pages/blog-page.css">
+
+    <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: BlogPosting -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "SVG vs PNG/JPG: mengapa format vektor penting untuk performa dan SEO",
+        "description": "Ganti logo dan ikon PNG/JPG dengan SVG: ukuran file lebih kecil, tajam di layar Retina dan 4K, LCP dan CLS lebih baik. Panduan untuk developer dan SEO.",
+        "url": "https://pixel-to-path.com/id/blog/svg-vs-png/",
+        "inLanguage": "fr",
+        "author": { "@type": "Person", "name": "Lorris C." },
+        "publisher": { "@type": "Person", "name": "Lorris C." }
+    }
+    </script>
+
+    <!-- Schema: WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PixelToPath – SVG vs PNG/JPG: Core Web Vitals dan SEO | PixelToPath",
+        "url": "https://pixel-to-path.com/fr/online/",
+        "description": "Ganti logo dan ikon PNG/JPG dengan SVG: ukuran file lebih kecil, tajam di layar Retina dan 4K, LCP dan CLS lebih baik. Panduan untuk developer dan SEO.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1
+        }
+    }
+    </script>
+
+    <!-- Schema: HowTo -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Cara memperkecil ukuran logo PNG atau JPG ke SVG (3 langkah)",
+        "step": [
+            { "@type": "HowToStep", "name": "Unggah PNG atau JPG", "text": "Tarik dan lepas logo, ikon, atau piktogram yang saat ini menggunakan format PNG atau JPG. Semakin sederhana bentuknya (latar belakang solid, tepi tajam), semakin ringan file SVG-nya." },
+            { "@type": "HowToStep", "name": "Pilih prasetel yang tepat", "text": "Hitam &amp; Putih untuk logotipe atau ikon monokrom. Poster jika logo memiliki beberapa warna solid. Hindari Foto: terlalu banyak detail akan memperberat SVG tanpa peningkatan visual pada logo." },
+            { "@type": "HowToStep", "name": "Sematkan SVG di situs web", "text": "Unduh file dan gunakan sebagai gambar, sprite, atau inline SVG. Satu file menggantikan varian @1x, @2x, dan @3x." }
+        ]
+    }
+    </script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "Apakah ukuran SVG selalu lebih kecil dari PNG atau JPG?", "acceptedAnswer": { "@type": "Answer", "text": "Untuk logo, ikon, atau ilustrasi dengan warna solid: ya, hampir selalu, terutama jika Anda membandingkan dengan PNG beresolusi tinggi untuk layar Retina. Namun untuk foto: tidak. Menyimpan foto dalam bentuk SVG justru akan menghasilkan banyak &#34;jalur&#34; (path) yang ukurannya bisa lebih besar dari JPG atau WebP. Aturannya: vektorisasi antarmuka, kompresi foto." } },
+            { "@type": "Question", "name": "Apakah SVG benar-benar meningkatkan metrik Core Web Vitals dan SEO?", "acceptedAnswer": { "@type": "Answer", "text": "SVG meningkatkan hal-hal yang dapat diperbaiki dari elemen gambar antarmuka: ukuran yang lebih kecil (memperbaiki LCP jika logo atau ilustrasi adalah elemen terbesar), ukuran render yang dapat diprediksi (memperbaiki CLS), dan lebih sedikit versi gambar yang harus diunduh. Google menggunakan kecepatan pemuatan situs sebagai sinyal, terutama di perangkat seluler. Ini bukan &#34;trik gaib&#34; untuk meningkatkan peringkat secara instan, melainkan praktik kebersihan teknis yang dapat diukur langsung di PageSpeed Insights." } },
+            { "@type": "Question", "name": "Haruskah saya mengganti semua gambar di situs saya dengan SVG?", "acceptedAnswer": { "@type": "Answer", "text": "Tidak. Gunakan JPG, WebP, atau AVIF untuk foto, tangkapan layar, tekstur, maupun gradasi yang rumit. Gunakan SVG untuk logo, ikon, diagram, piktogram, dan ilustrasi datar. Menggunakan SVG yang terlalu mendetail (seperti pada foto) dapat berdampak buruk pada metrik INP. Prasetel Foto di PixelToPath ditujukan untuk keperluan penyuntingan gaya, bukan sebagai pengganti dari foto JPEG yang berisi konten aslinya." } },
+            { "@type": "Question", "name": "Bagaimana cara menyematkan SVG tanpa memicu perubahan tata letak (CLS)?", "acceptedAnswer": { "@type": "Answer", "text": "Selalu tentukan atribut lebar dan tinggi (atau gunakan properti CSS aspect-ratio) yang disesuaikan dengan nilai dari viewBox. Dengan mendefinisikan tag gambar secara lengkap (src, width, height, alt), browser dapat memesan ruang (mereservasi area) sebelum gambar tersebut selesai diunduh. Jika Anda menggunakan SVG inline, pastikan viewBox tetap ada dan hindari menyisipkan kode tersebut ke halaman setelah halaman pertama kali dirender jika tanpa ukuran (dimensi) yang jelas." } },
+            { "@type": "Question", "name": "Bagaimana cara mengubah logo berformat PNG menjadi SVG menggunakan PixelToPath?", "acceptedAnswer": { "@type": "Answer", "text": "Buka alat online kami, seret dan jatuhkan gambar PNG Anda (sebaiknya pada latar belakang transparan, berukuran besar). Pilih prasetel Hitam &amp; Putih atau Poster, sesuaikan tingkat detailnya, lalu konversikan. Buka file SVG tersebut pada browser atau di Figma untuk memastikan bahwa konturnya rapi, dan kini siap digunakan. Gratis, tanpa akun, file tidak disimpan." } }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/id/"" class="brand">
+            <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/id/" 
+            class="">Beranda</a>
+
+            <a href="/id/online/" 
+            class="">Alat Online</a>
+
+            <a href="/id/offline/" 
+            class="">Aplikasi Desktop</a>
+            
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+
+            <div class="lang-switch">
+                <span>🇮🇩 ID</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/svg-vs-png/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/svg-vs-png/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/svg-vs-png/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/svg-vs-png/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/svg-vs-png/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/svg-vs-png/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/svg-vs-png/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/svg-vs-png/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/svg-vs-png/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/svg-vs-png/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/svg-vs-png/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/svg-vs-png/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/svg-vs-png/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/svg-vs-png/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/id/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Beranda</span>
+            </a>
+            <a href="/id/online/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Alat Online</span>
+            </a>
+            <a href="/id/offline/"
+               class="mobile-link ">
+                <span class="mobile-link-number">03</span>
+                <span class="mobile-link-text">Aplikasi Desktop</span>
+            </a>
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
+                <span class="mobile-link-number">04</span>
+                <span class="mobile-link-text">GitHub</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Bahasa</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/svg-vs-png/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/svg-vs-png/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/svg-vs-png/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/svg-vs-png/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/svg-vs-png/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/svg-vs-png/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/svg-vs-png/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/svg-vs-png/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/svg-vs-png/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO – above the fold, H1 + CTA
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>SVG vs PNG/JPG: mengapa format vektor penting untuk performa dan SEO</h1>
+                <p class="blog-hero__subtitle">Lebih sedikit KB yang diunduh, tampilan tajam dari seluler hingga 4K, Core Web Vitals yang lebih baik. Inilah alasan developer dan spesialis SEO mengubah logo dan ikon mereka menjadi SVG.</p>
+
+                <!-- Format badges -->
+                <div class="big-badges">
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">JPG</span>
+                    
+                    <span class="fmt-arrow">→</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">SVG</span>
+                    
+                </div>
+
+                <!-- Trust badges -->
+                <div class="badges">
+                    <span class="badge__item badge__item--accent">✓ Core Web Vitals</span>
+                    <span class="badge__item">SEO Teknis</span>
+                    <span class="badge__item">Ketajaman Retina · 4K</span>
+                    <span class="badge__item">100% Gratis</span>
+                </div>
+
+                <a href="/id/online/" class="btn primary-btn blog-hero__cta">Vektorisasi logo saya ke SVG →</a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             HOW TO – 3-step guide + HowTo schema
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Cara memperkecil ukuran logo PNG atau JPG ke SVG (3 langkah)</h2>
+                <p class="section-intro">Tidak butuh Illustrator. PixelToPath memvektorisasi file Anda dan memberikan SVG yang siap disematkan di HTML.</p>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-card__number">1</div>
+                        <div class="step-card__icon">📁</div>
+                        <h3>Unggah PNG atau JPG</h3>
+                        <p>Tarik dan lepas logo, ikon, atau piktogram yang saat ini menggunakan format PNG atau JPG. Semakin sederhana bentuknya (latar belakang solid, tepi tajam), semakin ringan file SVG-nya.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card__number">2</div>
+                        <div class="step-card__icon">⚙️</div>
+                        <h3>Pilih prasetel yang tepat</h3>
+                        <p>Hitam & Putih untuk logotipe atau ikon monokrom. Poster jika logo memiliki beberapa warna solid. Hindari Foto: terlalu banyak detail akan memperberat SVG tanpa peningkatan visual pada logo.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card__number">3</div>
+                        <div class="step-card__icon">💾</div>
+                        <h3>Sematkan SVG di situs web</h3>
+                        <p>Unduh file dan gunakan sebagai gambar, sprite, atau inline SVG. Satu file menggantikan varian @1x, @2x, dan @3x.</p>
+                    </div>
+                </div>
+
+                <div class="steps-cta">
+                    <a href="/id/online/" class="btn primary-btn">Vektorisasi logo saya ke SVG →</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             EDUCATIONAL CONTENT
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>PNG dan JPG: sempurna untuk foto, terlalu berat untuk antarmuka</h2>
+                    <p>PNG dan JPG adalah format raster: gambar berupa kisi piksel. Logo 512×512 yang diekspor sebagai PNG "memotret" setiap titik. Agar tetap tajam pada layar Retina, Anda sering kali harus menyajikan versi dua atau tiga kali lebih besar, sehingga ukurannya menjadi dua atau tiga kali lipat dalam KB. JPG memampatkan foto dengan lebih baik, tetapi menghancurkan warna solid, menambahkan artefak di sekitar teks, dan tidak mendukung transparansi. Keduanya tidak dirancang untuk logotipe atau ikon yang harus ditampilkan pada 24 piksel di navigasi dan 240 piksel di banner.</p>
+                    <p>SVG (Scalable Vector Graphics) mendeskripsikan bentuk melalui kurva dan koordinat, bukan piksel. Memvektorisasi PNG dengan PixelToPath berarti mengganti bitmap statis dengan jalur yang digambar ulang oleh browser pada ukuran layar yang tepat. Hasilnya: file umumnya jauh lebih ringan dan sama tajamnya di ponsel, komputer, dan layar 4K.</p>
+
+                    <h3>Apa yang sebenarnya diubah SVG pada sebuah situs web</h3>
+                    <p>Untuk antarmuka, SVG bukan sekadar tambahan estetika. Ini adalah pendorong performa: lebih sedikit byte di jaringan, lebih sedikit varian untuk dikelola, cache yang lebih sederhana, dan rendering vektor bawaan di semua browser modern.</p>
+                    <p>Keuntungan paling nyata bagi seorang developer atau ahli SEO:</p>
+                    <ul>
+                        <li>Ukuran: logo sederhana yang awalnya 40 hingga 80 KB dalam format PNG bisa turun menjadi beberapa KB saja dalam bentuk SVG, dan Anda bisa menghapus ekspor @2x / @3x</li>
+                        <li>Skalabilitas: satu file, tajam pada 16 piksel maupun 4K layar penuh, tanpa srcset atau media queries untuk gambar</li>
+                        <li>Core Web Vitals: lebih sedikit data yang diunduh (LCP) dan ruang cadangan stabil menggunakan viewBox (CLS)</li>
+                        <li>SEO teknis: halaman lebih cepat di perangkat seluler, format yang dipahami Google, dan teks yang bisa disematkan di dalam SVG</li>
+                    </ul>
+
+                    <h2>PNG vs SVG: ukuran logo sangatlah penting</h2>
+                    <p>Gambar masih menjadi penyumbang terbesar beban halaman. Kita mengoptimalkan foto ke dalam format WebP, tapi lupa dengan logo di header dan sekitar dua puluh ikon PNG dalam CSS. File-file ini diulang di semua URL: setiap milidetik yang terbuang berlaku untuk seluruh situs.</p>
+                    <p>Perbandingan ukuran setelah vektorisasi dengan PixelToPath, pada skenario umum situs web perusahaan atau aplikasi web:</p>
+                    <ul>
+                        <li>Logo PNG 512 piksel dengan latar belakang transparan: biasanya 40 hingga 80 KB. Desain yang sama dalam format SVG: sering kali hanya 2 hingga 12 KB, tergantung jumlah warna dan titik (node)</li>
+                        <li>Agar tetap tajam di layar Retina, PNG disajikan dalam 1024 piksel atau melalui srcset @2x: ukurannya menjadi dua kali lipat, kadang tiga kali lipat. SVG, di sisi lain, tidak memerlukan pergantian file</li>
+                        <li>Ikon 24×24 yang diekspor sebagai PNG @3x (72×72) berukuran sekitar 2 hingga 8 KB. Jika dikalikan 20 ikon, Anda menambahkan 40 hingga 160 KB pada antarmuka. Piktogram yang sama dalam format SVG biasanya hanya memakan beberapa KB secara keseluruhan</li>
+                        <li>Logo JPG dengan "latar belakang putih" mungkin terlihat ringan, tetapi warna solid dan teks akan menurun kualitasnya akibat kompresi. SVG menjaga tepi tetap tajam tanpa adanya halo, dan dengan ukuran file yang jauh lebih kecil</li>
+                    </ul>
+                    <p>Aturannya sederhana: apa pun yang berbentuk geometri, teks, piktogram, atau logotipe sebaiknya menggunakan SVG. Foto dan tangkapan layar sebaiknya menggunakan JPG, WebP, atau AVIF. SVG bukan pengganti untuk segalanya: melainkan format yang paling tepat untuk antarmuka.</p>
+
+                    <h2>Skalabilitas: satu file yang tajam dari smartphone hingga 4K</h2>
+                    <p>PNG hanya akan tampak tajam pada resolusi aslinya. Jika diperbesar, pikselnya akan terlihat. Jika diperkecil secara ekstrem, browser harus melakukan resampling ulang. Hal ini menyebabkan kerumitan dalam mengelola file @1x, @2x, @3x, srcset, dan kepadatan piksel CSS. Setiap breakpoint baru atau kepadatan layar baru (Retina, ponsel terbaru, monitor 4K) memerlukan ekspor gambar baru, atau memaksa penggunaan file yang terlalu besar "untuk berjaga-jaga".</p>
+                    <p>SVG mengabaikan batasan tersebut. Mesin rendering menghitung kurva ke ukuran CSS yang diminta. Baik untuk favicon 32 piksel, logo 48 piksel di navigasi, merek yang sama pada 400 piksel di spanduk, atau proyeksi 4K: semuanya menggunakan file yang sama. Tidak ada keburaman, tidak ada aliasing, tidak ada permintaan ekstra untuk versi resolusi tinggi. Untuk sebuah pustaka komponen, ini juga berarti lebih sedikit utang teknis: satu ikon, satu file, untuk semua ukuran.</p>
+
+                    <h2>Core Web Vitals dan SEO: mengapa Google peduli dengan format gambar</h2>
+                    <p>Kecepatan di perangkat seluler merupakan faktor peringkat. Core Web Vitals (LCP, INP, CLS) mengukur apa yang dirasakan oleh pengguna. Mengganti logo PNG yang berat atau sejumlah ikon raster dengan SVG tidak akan secara ajaib mengubah halaman berukuran 4 MB menjadi 40 KB. Namun pada tata letak antarmuka situs, efeknya langsung terasa, terutama pada jaringan 4G atau ketika skor LCP tertahan oleh logo header.</p>
+                    <p>Secara konkret, format vektor membantu tiga metrik berikut, asalkan kompleksitas kurva tetap terjaga secara wajar:</p>
+                    <ul>
+                        <li>LCP (Largest Contentful Paint): jika elemen terbesar yang terlihat adalah logo atau ilustrasi datar, SVG berukuran beberapa KB akan dimuat jauh lebih cepat dibanding PNG @2x sebesar 150 KB. Ini juga mengurangi beban jaringan untuk sisa elemen halaman</li>
+                        <li>CLS (Cumulative Layout Shift): SVG dengan atribut width, height, dan viewBox akan mencadangkan ruang sejak awal penguraian HTML. Browser tidak perlu menunggu proses decoding bitmap untuk mengetahui rasio gambar, sehingga meminimalkan lompatan tata letak</li>
+                        <li>INP dan Thread Utama: SVG sederhana (logo, ikon) sangat ringan untuk dirender. Namun hindari menggunakan SVG bergaya "foto" dengan ribuan jalur: ini bisa berukuran lebih besar daripada PNG dan memaksa prosesor bekerja lebih keras. Itulah alasan pentingnya jalur (path) yang bersih melalui PixelToPath, bukan salinan per piksel</li>
+                        <li>SEO di luar kecepatan: Google dapat mengindeks file SVG. Logo yang disematkan dapat memuat judul yang dapat diakses (accessible). Penggunaan gambar SVG dengan atribut alt tetap menjadi standar dasar. Selain itu, halaman yang lebih ringan akan mengurangi rasio pentalan teknis (bounce rate), sebuah sinyal pengalaman yang turut diperhitungkan dalam peringkat</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             WHY PIXELTOPATH – feature cards
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Mengapa menggunakan PixelToPath untuk vektorisasi alih-alih mengekspor secara manual?</h2>
+                <p class="section-intro">Anda sudah memiliki PNG dari klien, tetapi tidak memiliki file sumber Illustrator. PixelToPath dapat membuat ulang jalur yang bersih, gratis, dan siap digunakan untuk web.</p>
+
+                <div class="grid-3">
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">📉</div>
+                        <h3>SVG ringan dan siap pakai</h3>
+                        <p>Mesin pemroses menghasilkan jalur yang teroptimasi, bukan sekadar kumpulan node tak beraturan. Sangat ideal untuk logo atau ikon yang akan disajikan pada setiap tampilan halaman.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🆓</div>
+                        <h3>Sepenuhnya Gratis</h3>
+                        <p>Tidak ada biaya berlangganan desain, dan tidak ada tanda air pada SVG. Vektorisasikan seluruh aset identitas merek Anda (logo, favicon, kumpulan ikon) tanpa mengeluarkan biaya sama sekali.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🔒</div>
+                        <h3>Privasi File Terjamin</h3>
+                        <p>File aset merek akan diproses lalu segera dihapus. Tidak ada yang disimpan dan tidak ada yang digunakan ulang. Sangat cocok untuk pedoman merek (brand guidelines) di bawah perjanjian kerahasiaan (NDA).</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🎨</div>
+                        <h3>Prasetel untuk Logo dan Piktogram</h3>
+                        <p>Gunakan Hitam & Putih untuk ikon monokrom, Poster untuk logo dengan warna solid. Anda memegang kendali penuh atas tingkat detail sebelum mengekspor gambar.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">💻</div>
+                        <h3>Pemrosesan Batch (Massal) di Desktop</h3>
+                        <p>Punya satu set ikon PNG yang ingin diubah ke SVG? Aplikasi sumber terbuka untuk Windows/Linux dapat memproses banyak file sekaligus secara offline, tanpa ada batas kuota.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">♾️</div>
+                        <h3>Mendukung PNG, JPG, BMP, WebP</h3>
+                        <p>Satu alat untuk semuanya, baik logo Anda berbentuk PNG transparan, hasil pindaian JPG, maupun ekspor WebP dari Figma.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             USE CASES
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Di mana SVG lebih unggul dibanding PNG/JPG pada situs web nyata</h2>
+                    <p>Ini bukan sekadar teori. Berikut adalah area-area di mana format vektor memberikan keuntungan secara instan:</p>
+                    <ul>
+                        <li>Logo di header dan footer: satu file, tajam di layar Retina, sering kali menjadi elemen yang paling banyak dilihat, dan terkadang berkontribusi pada skor LCP di halaman beranda yang minimalis</li>
+                        <li>Sistem ikon: tidak perlu lagi sprite PNG berukuran 1x/2x. Setiap piktogram adalah SVG (atau sprite SVG) yang dapat disesuaikan gayanya melalui CSS (menggunakan currentColor) tanpa perlu mengekspor ulang</li>
+                        <li>Favicon dan apple-touch-icon: menggunakan favicon SVG modern yang dilengkapi dengan satu versi PNG cadangan dapat menghindari kerepotan dalam memelihara berbagai ukuran gambar seperti 16, 32, hingga 180 piksel</li>
+                        <li>Ilustrasi antarmuka dan status kosong (empty state): gambar datar berformat vektor tetap tajam meskipun ditampilkan dalam layar penuh, tanpa menghabiskan banyak ukuran file layaknya gambar header</li>
+                        <li>Halaman pendaratan SEO (Landing page): setiap kilobyte yang dihemat pada tata letak visual akan meningkatkan skor di Lighthouse, PageSpeed Insights, serta meningkatkan kenyamanan di perangkat seluler—semua ini adalah sinyal penting yang dikumpulkan untuk menentukan peringkat</li>
+                    </ul>
+                    <p>Gunakan format JPG/WebP untuk foto-foto. Pindahkan logo, piktogram, dan ilustrasi datar Anda ke dalam format SVG. Ini adalah metode pengelompokan yang sudah diterapkan oleh situs-situs web dengan performa tercepat.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             RELATED TOOLS – internal links
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container" style="text-align:center;">
+                <h2 class="section-title">Panduan Konversi Terkait</h2>
+                <p class="section-intro">Vektorisasikan file Anda, lalu pelajari lebih dalam format yang paling sesuai dengan kebutuhan Anda.</p>
+
+                <div class="related-tools">
+                    
+                    <a href="/id/blog/png-to-svg/" class="related-tool-link">
+                        🔄 Konverter PNG ke SVG
+                    </a>
+                    
+                    <a href="/id/blog/jpg-to-svg/" class="related-tool-link">
+                        🔄 Konverter JPG ke SVG
+                    </a>
+                    
+                    <a href="/id/blog/vectorize-image/" class="related-tool-link">
+                        ✏️ Vektorisasi Gambar
+                    </a>
+                    
+                    <a href="/id/blog/image-to-svg/" class="related-tool-link">
+                        🖼️ Gambar ke SVG
+                    </a>
+                    
+                    <a href="/id/online/" class="related-tool-link">
+                        🌐 Alat Online
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FAQ – FAQPage schema injected in <head>
+        ════════════════════════════════════════ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Apakah ukuran SVG selalu lebih kecil dari PNG atau JPG?</summary>
+                        <p>Untuk logo, ikon, atau ilustrasi dengan warna solid: ya, hampir selalu, terutama jika Anda membandingkan dengan PNG beresolusi tinggi untuk layar Retina. Namun untuk foto: tidak. Menyimpan foto dalam bentuk SVG justru akan menghasilkan banyak "jalur" (path) yang ukurannya bisa lebih besar dari JPG atau WebP. Aturannya: vektorisasi antarmuka, kompresi foto.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Apakah SVG benar-benar meningkatkan metrik Core Web Vitals dan SEO?</summary>
+                        <p>SVG meningkatkan hal-hal yang dapat diperbaiki dari elemen gambar antarmuka: ukuran yang lebih kecil (memperbaiki LCP jika logo atau ilustrasi adalah elemen terbesar), ukuran render yang dapat diprediksi (memperbaiki CLS), dan lebih sedikit versi gambar yang harus diunduh. Google menggunakan kecepatan pemuatan situs sebagai sinyal, terutama di perangkat seluler. Ini bukan "trik gaib" untuk meningkatkan peringkat secara instan, melainkan praktik kebersihan teknis yang dapat diukur langsung di PageSpeed Insights.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Haruskah saya mengganti semua gambar di situs saya dengan SVG?</summary>
+                        <p>Tidak. Gunakan JPG, WebP, atau AVIF untuk foto, tangkapan layar, tekstur, maupun gradasi yang rumit. Gunakan SVG untuk logo, ikon, diagram, piktogram, dan ilustrasi datar. Menggunakan SVG yang terlalu mendetail (seperti pada foto) dapat berdampak buruk pada metrik INP. Prasetel Foto di PixelToPath ditujukan untuk keperluan penyuntingan gaya, bukan sebagai pengganti dari foto JPEG yang berisi konten aslinya.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Bagaimana cara menyematkan SVG tanpa memicu perubahan tata letak (CLS)?</summary>
+                        <p>Selalu tentukan atribut lebar dan tinggi (atau gunakan properti CSS aspect-ratio) yang disesuaikan dengan nilai dari viewBox. Dengan mendefinisikan tag gambar secara lengkap (src, width, height, alt), browser dapat memesan ruang (mereservasi area) sebelum gambar tersebut selesai diunduh. Jika Anda menggunakan SVG inline, pastikan viewBox tetap ada dan hindari menyisipkan kode tersebut ke halaman setelah halaman pertama kali dirender jika tanpa ukuran (dimensi) yang jelas.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Bagaimana cara mengubah logo berformat PNG menjadi SVG menggunakan PixelToPath?</summary>
+                        <p>Buka alat online kami, seret dan jatuhkan gambar PNG Anda (sebaiknya pada latar belakang transparan, berukuran besar). Pilih prasetel Hitam & Putih atau Poster, sesuaikan tingkat detailnya, lalu konversikan. Buka file SVG tersebut pada browser atau di Figma untuk memastikan bahwa konturnya rapi, dan kini siap digunakan. Gratis, tanpa akun, file tidak disimpan.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FINAL CTA
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container blog-cta-wrap">
+                <h2>Ubah logo PNG ke SVG, dan bandingkan ukurannya</h2>
+                <p>Unggah file Anda saat ini, unduh SVG, lalu bandingkan ukuran KB-nya. Gratis, tanpa perlu mendaftar. Ini sering kali merupakan langkah pertama untuk meningkatkan performa Core Web Vitals.</p>
+                <div class="double-buttons">
+                    <a href="/id/online/" class="btn primary-btn big-btn">Vektorisasi logo saya ke SVG →</a>
+                    <a href="/id/offline/" class="btn secondary-btn big-btn">Unduh Aplikasi Desktop →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>Dukung Pengembangan Open Source</h3>
+        <p>PixelToPath gratis untuk digunakan. Jika alat ini membantu Anda menghemat waktu, pertimbangkan untuk mentraktir saya secangkir kopi.</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Donasi via PayPal</a>
+    </div>
+</section>
+    </main>
+
+    <footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/id/">Beranda</a>
+        <a href="/id/online/">Alat Online</a>
+        <a href="/id/offline/">Aplikasi Desktop</a>
+        <a href="/id/blog/">Blog</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Sumber Terbuka (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal">Legal notice</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+    </div>
+</footer>
+
+    <script src="../../../assets/js/ui-state.js"></script>
+</body>
+</html>

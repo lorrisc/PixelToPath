@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SVG проти PNG/JPG: Core Web Vitals та SEO | PixelToPath</title>
+    <meta name="description" content="Замініть логотипи та іконки PNG/JPG на SVG: легші файли, чіткість Retina та 4K, кращі LCP та CLS. Посібник для розробників та SEO.">
+    <meta name="keywords" content="svg проти png, svg проти jpg, svg core web vitals, svg seo, продуктивність svg, логотип svg проти png, іконка svg, векторизація логотипу веб, lcp cls svg, pixeltopath">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="SVG проти PNG/JPG: Core Web Vitals та SEO | PixelToPath">
+    <meta property="og:description" content="Замініть логотипи та іконки PNG/JPG на SVG: легші файли, чіткість Retina та 4K, кращі LCP та CLS. Посібник для розробників та SEO.">
+    <meta property="og:image" content="../../../assets/images/screenshot.png">
+    <meta property="og:url" content="https://pixel-to-path.com/uk/blog/svg-vs-png/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/uk/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/uk/blog/svg-vs-png/">
+
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/components.css">
+    <link rel="stylesheet" href="../../../assets/css/containers.css">
+    <link rel="stylesheet" href="../../../assets/css/partials/footer.css">
+    <link rel="stylesheet" href="../../../assets/css/partials/navbar.css">
+    <link rel="stylesheet" href="../../../assets/css/partials/donate.css">
+    <link rel="stylesheet" href="../../../assets/css/pages/blog-page.css">
+
+    <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: BlogPosting -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "SVG проти PNG/JPG: чому векторний формат є важливим для продуктивності та SEO",
+        "description": "Замініть логотипи та іконки PNG/JPG на SVG: легші файли, чіткість Retina та 4K, кращі LCP та CLS. Посібник для розробників та SEO.",
+        "url": "https://pixel-to-path.com/uk/blog/svg-vs-png/",
+        "inLanguage": "fr",
+        "author": { "@type": "Person", "name": "Lorris C." },
+        "publisher": { "@type": "Person", "name": "Lorris C." }
+    }
+    </script>
+
+    <!-- Schema: WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PixelToPath – SVG проти PNG/JPG: Core Web Vitals та SEO | PixelToPath",
+        "url": "https://pixel-to-path.com/fr/online/",
+        "description": "Замініть логотипи та іконки PNG/JPG на SVG: легші файли, чіткість Retina та 4K, кращі LCP та CLS. Посібник для розробників та SEO.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1
+        }
+    }
+    </script>
+
+    <!-- Schema: HowTo -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Як зменшити вагу логотипу PNG або JPG у SVG (3 кроки)",
+        "step": [
+            { "@type": "HowToStep", "name": "Завантажте PNG або JPG", "text": "Перетягніть логотип, іконку або піктограму, яка зараз подається у форматі PNG або JPG. Чим простіший контур (суцільний фон, чіткі краї), тим легшим буде SVG." },
+            { "@type": "HowToStep", "name": "Виберіть правильний пресет", "text": "«Чорно-біле» для логотипу або монохромної іконки. «Постер» для логотипу з кількома плоскими кольорами. Уникайте «Фото»: забагато деталей обтяжує SVG без візуальної вигоди для логотипу." },
+            { "@type": "HowToStep", "name": "Інтегруйте SVG на сайт", "text": "Завантажте файл і використовуйте його як зображення, спрайт або вбудований (inline) SVG. Один файл замінює варіанти @1x, @2x та @3x." }
+        ]
+    }
+    </script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "Чи завжди SVG легший за PNG або JPG?", "acceptedAnswer": { "@type": "Answer", "text": "Для логотипу, іконки або ілюстрації з плоскими кольорами: так, майже завжди, особливо якщо порівнювати PNG з його Retina-версією. Для фотографій — ні: «фото» SVG стає хмарою контурів, важчою за JPG або WebP. Векторизуйте інтерфейс, стискайте фотографії." } },
+            { "@type": "Question", "name": "Чи дійсно SVG покращує Core Web Vitals та SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Він покращує те, що можуть покращити зображення інтерфейсу: менше байтів (LCP, якщо логотип або ілюстрація є основним елементом), передбачуваний блок рендерингу (CLS), менше варіантів для завантаження. Google використовує швидкість як сигнал, особливо на мобільних пристроях. Це не магічний шлях до високих позицій, це технічна гігієна, яка вимірюється в PageSpeed Insights." } },
+            { "@type": "Question", "name": "Чи потрібно замінювати всі зображення на сайті на SVG?", "acceptedAnswer": { "@type": "Answer", "text": "Ні. Фотографії, скріншоти, текстури, складні градієнти — це для JPG, WebP або AVIF. SVG — для логотипів, іконок, схем, піктограм, плоских ілюстрацій. Занадто деталізований SVG може зашкодити INP. Пресет «Фото» в PixelToPath служить для стилізації, а не для заміни контентного JPEG." } },
+            { "@type": "Question", "name": "Як інтегрувати SVG, не викликаючи CLS?", "acceptedAnswer": { "@type": "Answer", "text": "Завжди вказуйте ширину і висоту (або співвідношення сторін CSS), які відповідають viewBox. З тегом зображення (src, width, height, alt) браузер резервує простір до завантаження. Для вбудованого (inline) SVG зберігайте viewBox і уникайте впровадження коду після першого відображення без розмірів." } },
+            { "@type": "Question", "name": "Як отримати SVG-логотип з PNG за допомогою PixelToPath?", "acceptedAnswer": { "@type": "Answer", "text": "Відкрийте онлайн-інструмент, завантажте PNG (в ідеалі на прозорому тлі, досить великий), виберіть «Чорно-біле» або «Постер», налаштуйте деталізацію, а потім конвертуйте. Відкрийте SVG у браузері або Figma, щоб перевірити контури, і використовуйте в продакшені. Безкоштовно, без акаунта, файли не зберігаються." } }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/uk/"" class="brand">
+            <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/uk/" 
+            class="">Головна</a>
+
+            <a href="/uk/online/" 
+            class="">Онлайн-інструмент</a>
+
+            <a href="/uk/offline/" 
+            class="">Десктопний додаток</a>
+            
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+
+            <div class="lang-switch">
+                <span>🇺🇦 UK</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/svg-vs-png/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/svg-vs-png/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/svg-vs-png/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/svg-vs-png/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/svg-vs-png/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/svg-vs-png/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/svg-vs-png/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/svg-vs-png/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/svg-vs-png/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/svg-vs-png/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/svg-vs-png/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/svg-vs-png/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/svg-vs-png/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/svg-vs-png/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/uk/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Головна</span>
+            </a>
+            <a href="/uk/online/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Онлайн-інструмент</span>
+            </a>
+            <a href="/uk/offline/"
+               class="mobile-link ">
+                <span class="mobile-link-number">03</span>
+                <span class="mobile-link-text">Десктопний додаток</span>
+            </a>
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
+                <span class="mobile-link-number">04</span>
+                <span class="mobile-link-text">GitHub</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Мова</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/svg-vs-png/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/svg-vs-png/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/svg-vs-png/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/svg-vs-png/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/svg-vs-png/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/svg-vs-png/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/svg-vs-png/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/svg-vs-png/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/svg-vs-png/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO – above the fold, H1 + CTA
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>SVG проти PNG/JPG: чому векторний формат є важливим для продуктивності та SEO</h1>
+                <p class="blog-hero__subtitle">Менше КБ для завантаження, чітке відображення від мобільного до 4K, кращі Core Web Vitals. Ось чому розробники та SEO-фахівці переводять свої логотипи та іконки у SVG.</p>
+
+                <!-- Format badges -->
+                <div class="big-badges">
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">JPG</span>
+                    
+                    <span class="fmt-arrow">→</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">SVG</span>
+                    
+                </div>
+
+                <!-- Trust badges -->
+                <div class="badges">
+                    <span class="badge__item badge__item--accent">✓ Core Web Vitals</span>
+                    <span class="badge__item">Технічне SEO</span>
+                    <span class="badge__item">Чіткість Retina · 4K</span>
+                    <span class="badge__item">100% Безкоштовно</span>
+                </div>
+
+                <a href="/uk/online/" class="btn primary-btn blog-hero__cta">Векторизувати мій логотип у SVG →</a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             HOW TO – 3-step guide + HowTo schema
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Як зменшити вагу логотипу PNG або JPG у SVG (3 кроки)</h2>
+                <p class="section-intro">Illustrator не потрібен. PixelToPath векторизує ваш файл і видає SVG, готовий до інтеграції в HTML.</p>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-card__number">1</div>
+                        <div class="step-card__icon">📁</div>
+                        <h3>Завантажте PNG або JPG</h3>
+                        <p>Перетягніть логотип, іконку або піктограму, яка зараз подається у форматі PNG або JPG. Чим простіший контур (суцільний фон, чіткі краї), тим легшим буде SVG.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card__number">2</div>
+                        <div class="step-card__icon">⚙️</div>
+                        <h3>Виберіть правильний пресет</h3>
+                        <p>«Чорно-біле» для логотипу або монохромної іконки. «Постер» для логотипу з кількома плоскими кольорами. Уникайте «Фото»: забагато деталей обтяжує SVG без візуальної вигоди для логотипу.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card__number">3</div>
+                        <div class="step-card__icon">💾</div>
+                        <h3>Інтегруйте SVG на сайт</h3>
+                        <p>Завантажте файл і використовуйте його як зображення, спрайт або вбудований (inline) SVG. Один файл замінює варіанти @1x, @2x та @3x.</p>
+                    </div>
+                </div>
+
+                <div class="steps-cta">
+                    <a href="/uk/online/" class="btn primary-btn">Векторизувати мій логотип у SVG →</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             EDUCATIONAL CONTENT
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>PNG та JPG: ідеальні для фото, занадто важкі для інтерфейсу</h2>
+                    <p>PNG та JPG — це растрові формати: зображення є сіткою пікселів. Логотип, експортований у PNG 512×512, «фотографує» кожну точку. Щоб він залишався чітким на екрані Retina, вам часто доводиться надавати версію у два-три рази більшу, а отже, в два-три рази більше КБ. JPG краще стискає фотографії, але він руйнує плоскі кольори, додає артефакти навколо тексту і не підтримує прозорість. Жоден з них не призначений для логотипу чи іконки, яка має відображатися розміром 24 пікселі в навігації та 240 пікселів у банері.</p>
+                    <p>SVG (Scalable Vector Graphics) описує форми за допомогою кривих і координат, а не пікселів. Векторизація PNG за допомогою PixelToPath — це заміна фіксованого растрового зображення на контур, який браузер перемальовує точно під розмір екрану. Результат: як правило, набагато легший файл та однакова чіткість на мобільному телефоні, комп'ютері та 4K-панелі.</p>
+
+                    <h3>Що конкретно змінює SVG для сайту</h3>
+                    <p>Для інтерфейсу SVG — це не естетичний «плюс». Це інструмент підвищення продуктивності: менше байтів у мережі, менше варіантів для підтримки, простіший кеш і нативний векторний рендеринг у всіх сучасних браузерах.</p>
+                    <p>Найбільш помітні переваги для розробника або SEO-фахівця:</p>
+                    <ul>
+                        <li>Вага: простий логотип часто зменшується з 40-80 КБ у форматі PNG до кількох КБ у SVG, і ви можете відмовитися від експорту @2x / @3x</li>
+                        <li>Масштабованість: один файл, чіткий як при 16 пікселях, так і на повному екрані 4K, без srcset або медіа-запитів для зображень</li>
+                        <li>Core Web Vitals: менше даних для завантаження (LCP) та стабільний зарезервований простір завдяки viewBox (CLS)</li>
+                        <li>Технічне SEO: швидші сторінки на мобільних пристроях, формат, який Google розуміє, та текст, який може бути присутнім у SVG</li>
+                    </ul>
+
+                    <h2>PNG проти SVG: вага логотипу має значення</h2>
+                    <p>Зображення залишаються однією з основних причин великої ваги сторінки. Ми оптимізуємо фотографії у форматі WebP, але забуваємо про логотип у шапці та два десятки іконок PNG у CSS. Проте ці файли повторюються на всіх URL-адресах: кожна втрачена мілісекунда позначається на всьому сайті.</p>
+                    <p>Порядок величин, що спостерігаються після векторизації за допомогою PixelToPath, у типовому сценарії сайту-візитки або веб-додатку:</p>
+                    <ul>
+                        <li>Логотип PNG 512 пікселів з прозорістю: часто від 40 до 80 КБ. Той самий малюнок у SVG: зазвичай від 2 до 12 КБ, залежно від кількості кольорів і вузлів</li>
+                        <li>Щоб залишатися чітким на Retina, PNG подається у розмірі 1024 пікселі або через srcset @2x: вага подвоюється, іноді потроюється. SVG при цьому не потребує зміни файлу</li>
+                        <li>Іконка 24×24, експортована в PNG @3x (72×72), важить від 2 до 8 КБ. Помноживши на 20 іконок, ви додаєте від 40 до 160 КБ до інтерфейсу. Ті самі піктограми у SVG часто займають лише кілька КБ загалом</li>
+                        <li>JPG логотипу на «білому тлі» здається легким, але плоскі кольори та текст страждають від стиснення. SVG зберігає чіткі краї без ореолів при ще меншій вазі</li>
+                    </ul>
+                    <p>Правило просте: все, що є формою, текстом, піктограмою або логотипом, виграє від використання SVG. Фотографії та скріншоти залишаються у форматах JPG, WebP або AVIF. SVG — це не універсальний замінник, це правильний формат для інтерфейсу.</p>
+
+                    <h2>Масштабованість: один чіткий файл від смартфона до 4K</h2>
+                    <p>PNG залишається чітким лише за своєї початкової роздільної здатності. При збільшенні видно пікселі. При різкому зменшенні браузер повинен виконати повторну вибірку. Звідси гімнастика з файлами @1x, @2x, @3x, srcset і щільністю CSS. Кожна нова контрольна точка (breakpoint) або нова щільність екрану (Retina, новітні телефони, 4K монітори) вимагає нового експорту, або файлу занадто великого розміру «про всяк випадок».</p>
+                    <p>SVG ігнорує це обмеження. Механізм рендерингу обчислює криві відповідно до запитаного розміру CSS. Фавіконка 32 пікселі, логотип 48 пікселів у навігації, той самий бренд на 400 пікселів у банері, проєкція 4K: це все той самий файл. Без розмиття, без ступінчастості (аліасингу), без додаткового запиту на версію високої щільності. Для бібліотеки компонентів це також менший технічний борг: одна іконка, один файл, всі розміри.</p>
+
+                    <h2>Core Web Vitals та SEO: чому Google звертає увагу на формат</h2>
+                    <p>Швидкість на мобільних пристроях є фактором ранжування. Core Web Vitals (LCP, INP, CLS) вимірюють те, що відчуває користувач. Заміна важкого логотипу PNG або низки растрових іконок на SVG не зменшить сторінку з 4 МБ до 40 КБ. Але на оболонці сайту ефект є миттєвим, особливо в мережі 4G або коли LCP затримується через логотип у шапці.</p>
+                    <p>Конкретно, векторний формат допомагає трьом метрикам, за умови збереження розумної складності контуру:</p>
+                    <ul>
+                        <li>LCP (Largest Contentful Paint): якщо найбільшим видимим елементом є логотип або плоска ілюстрація, SVG на кілька КБ завантажиться швидше, ніж PNG @2x на 150 КБ. Менше навантаження на мережу для решти сторінки</li>
+                        <li>CLS (Cumulative Layout Shift): SVG з width, height та viewBox резервує своє місце вже під час аналізу HTML. Більше не потрібно чекати на декодування растрового зображення, щоб дізнатися співвідношення сторін, а отже, менше зсувів макета</li>
+                        <li>INP та головний потік: простий SVG (логотип, іконка) вимагає мало ресурсів для відмальовки. З іншого боку, уникайте «фото» у форматі SVG з тисячами контурів: вони можуть важити більше, ніж PNG, і надмірно навантажувати процесор. Звідси важливість чистого контуру за допомогою PixelToPath, а не попіксельної копії</li>
+                        <li>SEO поза межами швидкості: Google індексує SVG. Вбудований логотип може мати доступний заголовок. Зображення SVG з атрибутом alt залишається основою. А легша сторінка знижує показник технічних відмов — сигнал якості досвіду, який враховується при ранжуванні</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             WHY PIXELTOPATH – feature cards
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Чому варто векторизувати з PixelToPath, а не експортувати вручну?</h2>
+                <p class="section-intro">У вас уже є PNG від клієнта, а не вихідний файл Illustrator. PixelToPath створює чисті контури, безкоштовно та готові для вебу.</p>
+
+                <div class="grid-3">
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">📉</div>
+                        <h3>Легкий SVG, готовий до використання</h3>
+                        <p>Рушій генерує придатні для використання контури, а не фабрику вузлів. Ідеально підходить для логотипу або іконки, які будуть відображатися при кожному перегляді сторінки.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🆓</div>
+                        <h3>Абсолютно безкоштовно</h3>
+                        <p>Ніяких підписок на дизайн, ніяких водяних знаків на SVG. Векторизуйте весь фірмовий стиль (логотип, фавіконка, набір іконок) без жодних витрат.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🔒</div>
+                        <h3>Конфіденційність файлів</h3>
+                        <p>Файли бренду обробляються, а потім ігноруються. Нічого не зберігається і не використовується повторно. Підходить для фірмових стилів під угодою про нерозголошення (NDA).</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🎨</div>
+                        <h3>Пресети для логотипів та піктограм</h3>
+                        <p>«Чорно-біле» для монохромної іконки, «Постер» для логотипу з плоскими кольорами. Ви контролюєте рівень деталізації перед експортом.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">💻</div>
+                        <h3>Пакетна обробка на робочому столі</h3>
+                        <p>Потрібно перетворити набір іконок PNG на SVG? Програма з відкритим вихідним кодом для Windows / Linux обробляє файли офлайн, без квот.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">♾️</div>
+                        <h3>PNG, JPG, BMP, WebP</h3>
+                        <p>Один інструмент, незалежно від того, чи логотип надається у прозорому PNG, сканованому JPG або експортованому WebP з Figma.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             USE CASES
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Де SVG перевершує PNG/JPG на реальному сайті</h2>
+                    <p>Це не теорія. Ось місця, де векторний формат одразу дає результат:</p>
+                    <ul>
+                        <li>Логотип у шапці та підвалі: єдиний файл, чіткий на Retina, часто один з найпомітніших елементів, а іноді й LCP на мінімалістичній домашній сторінці</li>
+                        <li>Система іконок: більше жодних спрайтів PNG 1x/2x. Кожна піктограма — це SVG (або SVG-спрайт), який можна стилізувати через CSS (currentColor) без нового експорту</li>
+                        <li>Фавіконка та apple-touch: сучасна SVG-фавіконка плюс PNG для зворотної сумісності (fallback) дозволяє уникнути цілої низки розмірів (16, 32, 180 пікселів), які потрібно підтримувати</li>
+                        <li>Ілюстрації інтерфейсу та порожні стани (empty states): векторизовані плоскі малюнки залишаються чіткими на повному екрані і не важать стільки, скільки зображення в шапці</li>
+                        <li>SEO цільова сторінка: кожен зекономлений КБ на оболонці покращує результати Lighthouse, PageSpeed Insights та сприйняття на мобільних пристроях — сигнали, які враховуються при ранжуванні</li>
+                    </ul>
+                    <p>Залиште JPG/WebP для фотографій. Переведіть логотипи, піктограми та плоскі ілюстрації у SVG. Саме такий поділ вже застосовують найшвидші сайти.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             RELATED TOOLS – internal links
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container" style="text-align:center;">
+                <h2 class="section-title">Пов'язані посібники з конвертації</h2>
+                <p class="section-intro">Векторизуйте свої файли, а потім вивчіть формат, який вас цікавить.</p>
+
+                <div class="related-tools">
+                    
+                    <a href="/uk/blog/png-to-svg/" class="related-tool-link">
+                        🔄 Конвертер PNG у SVG
+                    </a>
+                    
+                    <a href="/uk/blog/jpg-to-svg/" class="related-tool-link">
+                        🔄 Конвертер JPG у SVG
+                    </a>
+                    
+                    <a href="/uk/blog/vectorize-image/" class="related-tool-link">
+                        ✏️ Векторизувати зображення
+                    </a>
+                    
+                    <a href="/uk/blog/image-to-svg/" class="related-tool-link">
+                        🖼️ Зображення у SVG
+                    </a>
+                    
+                    <a href="/uk/online/" class="related-tool-link">
+                        🌐 Онлайн-інструмент
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FAQ – FAQPage schema injected in <head>
+        ════════════════════════════════════════ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">Часті питання</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Чи завжди SVG легший за PNG або JPG?</summary>
+                        <p>Для логотипу, іконки або ілюстрації з плоскими кольорами: так, майже завжди, особливо якщо порівнювати PNG з його Retina-версією. Для фотографій — ні: «фото» SVG стає хмарою контурів, важчою за JPG або WebP. Векторизуйте інтерфейс, стискайте фотографії.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Чи дійсно SVG покращує Core Web Vitals та SEO?</summary>
+                        <p>Він покращує те, що можуть покращити зображення інтерфейсу: менше байтів (LCP, якщо логотип або ілюстрація є основним елементом), передбачуваний блок рендерингу (CLS), менше варіантів для завантаження. Google використовує швидкість як сигнал, особливо на мобільних пристроях. Це не магічний шлях до високих позицій, це технічна гігієна, яка вимірюється в PageSpeed Insights.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Чи потрібно замінювати всі зображення на сайті на SVG?</summary>
+                        <p>Ні. Фотографії, скріншоти, текстури, складні градієнти — це для JPG, WebP або AVIF. SVG — для логотипів, іконок, схем, піктограм, плоских ілюстрацій. Занадто деталізований SVG може зашкодити INP. Пресет «Фото» в PixelToPath служить для стилізації, а не для заміни контентного JPEG.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Як інтегрувати SVG, не викликаючи CLS?</summary>
+                        <p>Завжди вказуйте ширину і висоту (або співвідношення сторін CSS), які відповідають viewBox. З тегом зображення (src, width, height, alt) браузер резервує простір до завантаження. Для вбудованого (inline) SVG зберігайте viewBox і уникайте впровадження коду після першого відображення без розмірів.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Як отримати SVG-логотип з PNG за допомогою PixelToPath?</summary>
+                        <p>Відкрийте онлайн-інструмент, завантажте PNG (в ідеалі на прозорому тлі, досить великий), виберіть «Чорно-біле» або «Постер», налаштуйте деталізацію, а потім конвертуйте. Відкрийте SVG у браузері або Figma, щоб перевірити контури, і використовуйте в продакшені. Безкоштовно, без акаунта, файли не зберігаються.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FINAL CTA
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container blog-cta-wrap">
+                <h2>Переведіть свій логотип з PNG у SVG, виміряйте вагу</h2>
+                <p>Завантажте поточний файл, скачайте SVG, порівняйте КБ. Безкоштовно, без реєстрації. Часто це перший крок до покращення Core Web Vitals.</p>
+                <div class="double-buttons">
+                    <a href="/uk/online/" class="btn primary-btn big-btn">Векторизувати мій логотип у SVG →</a>
+                    <a href="/uk/offline/" class="btn secondary-btn big-btn">Завантажити десктопний додаток →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>Підтримайте розробку Open Source</h3>
+        <p>PixelToPath є безкоштовним для використання. Якщо цей інструмент допоміг вам заощадити час, подумайте про те, щоб пригостити мене кавою.</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Пожертвувати через PayPal</a>
+    </div>
+</section>
+    </main>
+
+    <footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/uk/">Головна</a>
+        <a href="/uk/online/">Онлайн-інструмент</a>
+        <a href="/uk/offline/">Десктопний додаток</a>
+        <a href="/uk/blog/">Блог</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal">Legal notice</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+    </div>
+</footer>
+
+    <script src="../../../assets/js/ui-state.js"></script>
+</body>
+</html>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SVG বনাম PNG/JPG : কোর ওয়েব ভাইটালস এবং এসইও | PixelToPath</title>
+    <meta name="description" content="PNG/JPG লোগো এবং আইকনগুলোকে SVG দিয়ে বদলান: হালকা ফাইল, রেটিনা ও 4K তে স্পষ্ট, এবং ভালো LCP ও CLS। ডেভেলপার এবং এসইও বিশেষজ্ঞদের জন্য গাইড।">
+    <meta name="keywords" content="svg vs png, svg vs jpg, svg core web vitals, svg seo, performance svg, logo svg vs png, icône svg, vectoriser logo web, lcp cls svg, pixeltopath">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="SVG বনাম PNG/JPG : কোর ওয়েব ভাইটালস এবং এসইও | PixelToPath">
+    <meta property="og:description" content="PNG/JPG লোগো এবং আইকনগুলোকে SVG দিয়ে বদলান: হালকা ফাইল, রেটিনা ও 4K তে স্পষ্ট, এবং ভালো LCP ও CLS। ডেভেলপার এবং এসইও বিশেষজ্ঞদের জন্য গাইড।">
+    <meta property="og:image" content="../../../assets/images/screenshot.png">
+    <meta property="og:url" content="https://pixel-to-path.com/bn/blog/svg-vs-png/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/bn/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/bn/blog/svg-vs-png/">
+
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/components.css">
+    <link rel="stylesheet" href="../../../assets/css/containers.css">
+    <link rel="stylesheet" href="../../../assets/css/partials/footer.css">
+    <link rel="stylesheet" href="../../../assets/css/partials/navbar.css">
+    <link rel="stylesheet" href="../../../assets/css/partials/donate.css">
+    <link rel="stylesheet" href="../../../assets/css/pages/blog-page.css">
+
+    <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: BlogPosting -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "SVG বনাম PNG/JPG : পারফরম্যান্স এবং এসইও এর জন্য ভেক্টর ফরম্যাট কেন জরুরি",
+        "description": "PNG/JPG লোগো এবং আইকনগুলোকে SVG দিয়ে বদলান: হালকা ফাইল, রেটিনা ও 4K তে স্পষ্ট, এবং ভালো LCP ও CLS। ডেভেলপার এবং এসইও বিশেষজ্ঞদের জন্য গাইড।",
+        "url": "https://pixel-to-path.com/bn/blog/svg-vs-png/",
+        "inLanguage": "fr",
+        "author": { "@type": "Person", "name": "Lorris C." },
+        "publisher": { "@type": "Person", "name": "Lorris C." }
+    }
+    </script>
+
+    <!-- Schema: WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PixelToPath – SVG বনাম PNG/JPG : কোর ওয়েব ভাইটালস এবং এসইও | PixelToPath",
+        "url": "https://pixel-to-path.com/fr/online/",
+        "description": "PNG/JPG লোগো এবং আইকনগুলোকে SVG দিয়ে বদলান: হালকা ফাইল, রেটিনা ও 4K তে স্পষ্ট, এবং ভালো LCP ও CLS। ডেভেলপার এবং এসইও বিশেষজ্ঞদের জন্য গাইড।",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1
+        }
+    }
+    </script>
+
+    <!-- Schema: HowTo -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "কীভাবে একটি PNG বা JPG লোগোকে SVG তে রূপান্তর করে হালকা করবেন (৩টি ধাপে)",
+        "step": [
+            { "@type": "HowToStep", "name": "PNG বা JPG আপলোড করুন", "text": "বর্তমানে PNG বা JPG হিসেবে ব্যবহৃত লোগো, আইকন বা পিকটোগ্রামটি ড্র্যাগ করুন। লাইনগুলো যত সরল হবে (সলিড ব্যাকগ্রাউন্ড, পরিষ্কার সীমানা), SVG তত হালকা হবে।" },
+            { "@type": "HowToStep", "name": "সঠিক প্রিসেট বেছে নিন", "text": "লোগোটাইপ বা একরঙা আইকনের জন্য ব্ল্যাক অ্যান্ড হোয়াইট (Black &amp; White)। লোগোতে কয়েকটি সলিড রঙ থাকলে পোস্টার (Poster)। ফটো (Photo) এড়িয়ে চলুন: লোগোতে এর কোনো দৃশ্যমান সুবিধা নেই, বরং খুব বেশি ডিটেইলস SVG কে ভারী করে তোলে।" },
+            { "@type": "HowToStep", "name": "সাইটে SVG যুক্ত করুন", "text": "ফাইলটি ডাউনলোড করুন এবং একে ইমেজ, স্প্রাইট বা ইনলাইন SVG হিসেবে ব্যবহার করুন। একটি মাত্র ফাইল @1x, @2x এবং @3x ভ্যারিয়েন্টের বিকল্প হিসেবে কাজ করবে।" }
+        ]
+    }
+    </script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "SVG কি সবসময় PNG বা JPG এর চেয়ে হালকা হয়?", "acceptedAnswer": { "@type": "Answer", "text": "লোগো, আইকন বা ফ্ল্যাট ইলাস্ট্রেশনের ক্ষেত্রে: হ্যাঁ, প্রায় সবসময়ই। বিশেষ করে যদি আপনি PNG এর রেটিনা ভার্সনের সাথে তুলনা করেন। কিন্তু ফটোগ্রাফির ক্ষেত্রে: না। একটি &#34;ফটো&#34; SVG অসংখ্য প্যাথের (paths) তৈরি হয়, যা JPG বা WebP এর চেয়ে ভারী হয়ে যায়। ইন্টারফেস ভেক্টরাইজ করুন, ফটোগুলো কম্প্রেস করুন।" } },
+            { "@type": "Question", "name": "SVG কি আসলেই কোর ওয়েব ভাইটালস এবং এসইও উন্নত করে?", "acceptedAnswer": { "@type": "Answer", "text": "ইন্টারফেস ইমেজগুলো যতটা উন্নত করতে পারে, SVG ঠিক ততটাই করে: কম ডেটা লোড (যদি লোগো বা ইলাস্ট্রেশন প্রধান এলিমেন্ট হয় তবে LCP বাড়ায়), নির্দিষ্ট রেন্ডার বক্স (CLS কমায়), এবং ডাউনলোডের জন্য কম ভ্যারিয়েন্ট। গুগল সাইট স্পিডকে একটি সিগন্যাল হিসেবে ধরে, বিশেষ করে মোবাইলে। এটি কোনো জাদুর র‍্যাঙ্কিং ট্রিকস নয়, এটি হলো টেকনিক্যাল হাইজিন যা পেজস্পিড ইনসাইটসে (PageSpeed Insights) দেখা যায়।" } },
+            { "@type": "Question", "name": "সাইটের সব ছবি কি SVG দিয়ে বদলানো উচিত?", "acceptedAnswer": { "@type": "Answer", "text": "না। ফটো, স্ক্রিনশট, টেক্সচার, জটিল গ্রেডিয়েন্টের জন্য: JPG, WebP বা AVIF ব্যবহার করুন। লোগো, আইকন, ডায়াগ্রাম, পিকটোগ্রাম এবং ফ্ল্যাট ইলাস্ট্রেশনের জন্য SVG। খুব বেশি ডিটেইলস থাকা SVG আপনার INP তে খারাপ প্রভাব ফেলতে পারে। PixelToPath এর ফটো প্রিসেট শুধু স্টাইল করার জন্য, কন্টেন্টের জেপেগ (JPEG) রিপ্লেস করার জন্য নয়।" } },
+            { "@type": "Question", "name": "CLS না ঘটিয়ে কীভাবে একটি SVG যুক্ত করা যায়?", "acceptedAnswer": { "@type": "Answer", "text": "সবসময় viewBox এর সাথে মিল রেখে একটি প্রস্থ এবং উচ্চতা (বা CSS এর aspect-ratio) দিন। একটি ইমেজ ট্যাগের (src, width, height, alt) সাহায্যে, ব্রাউজার ডাউনলোডের আগেই জায়গা ঠিক করে রাখে। ইনলাইন SVG এর ক্ষেত্রে, viewBox বজায় রাখুন এবং ডাইমেনশন ছাড়া প্রাথমিক রেন্ডারের পর কোড ইনজেক্ট করা থেকে বিরত থাকুন।" } },
+            { "@type": "Question", "name": "PixelToPath দিয়ে কীভাবে PNG থেকে লোগোর SVG পাব?", "acceptedAnswer": { "@type": "Answer", "text": "অনলাইন টুলটি ওপেন করুন, PNG (বিশেষ করে ট্রান্সপারেন্ট ব্যাকগ্রাউন্ডের বড় ছবি) আপলোড করুন, ব্ল্যাক অ্যান্ড হোয়াইট (Black &amp; White) বা পোস্টার (Poster) বেছে নিন, ডিটেইল অ্যাডজাস্ট করুন, তারপর কনভার্ট করুন। সীমানা ঠিক আছে কিনা তা দেখতে ব্রাউজারে বা ফিগমাতে (Figma) SVG টি ওপেন করুন এবং এরপর এটি প্রোডাকশনে ব্যবহার করুন। এটি সম্পূর্ণ বিনামূল্যে, অ্যাকাউন্ট খোলার দরকার নেই এবং ফাইল সেভ করা হয় ফোয় হয় না।" } }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/bn/"" class="brand">
+            <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/bn/" 
+            class="">হোম</a>
+
+            <a href="/bn/online/" 
+            class="">অনলাইন টুল</a>
+
+            <a href="/bn/offline/" 
+            class="">ডেস্কটপ অ্যাপ</a>
+            
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+
+            <div class="lang-switch">
+                <span>🇧🇩 BN</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/svg-vs-png/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/svg-vs-png/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/svg-vs-png/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/svg-vs-png/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/svg-vs-png/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/svg-vs-png/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/svg-vs-png/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/svg-vs-png/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/svg-vs-png/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/svg-vs-png/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/svg-vs-png/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/svg-vs-png/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/svg-vs-png/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/svg-vs-png/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/bn/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">হোম</span>
+            </a>
+            <a href="/bn/online/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">অনলাইন টুল</span>
+            </a>
+            <a href="/bn/offline/"
+               class="mobile-link ">
+                <span class="mobile-link-number">03</span>
+                <span class="mobile-link-text">ডেস্কটপ অ্যাপ</span>
+            </a>
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
+                <span class="mobile-link-number">04</span>
+                <span class="mobile-link-text">GitHub</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">ভাষা</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/svg-vs-png/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/svg-vs-png/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/svg-vs-png/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/svg-vs-png/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/svg-vs-png/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/svg-vs-png/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/svg-vs-png/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/svg-vs-png/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/svg-vs-png/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO – above the fold, H1 + CTA
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>SVG বনাম PNG/JPG : পারফরম্যান্স এবং এসইও এর জন্য ভেক্টর ফরম্যাট কেন জরুরি</h1>
+                <p class="blog-hero__subtitle">ডাউনলোডের জন্য কম কিলোবাইট, মোবাইল থেকে 4K পর্যন্ত পরিষ্কার রেন্ডারিং এবং আরও ভালো কোর ওয়েব ভাইটালস (Core Web Vitals)। ডেভেলপার এবং এসইও বিশেষজ্ঞরা কেন তাদের লোগো এবং আইকনগুলো SVG তে রূপান্তর করছেন, তার কারণ এখানে।</p>
+
+                <!-- Format badges -->
+                <div class="big-badges">
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">JPG</span>
+                    
+                    <span class="fmt-arrow">→</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">SVG</span>
+                    
+                </div>
+
+                <!-- Trust badges -->
+                <div class="badges">
+                    <span class="badge__item badge__item--accent">✓ কোর ওয়েব ভাইটালস</span>
+                    <span class="badge__item">টেকনিক্যাল এসইও</span>
+                    <span class="badge__item">রেটিনা · 4K স্পষ্টতা</span>
+                    <span class="badge__item">১০০% বিনামূল্যে</span>
+                </div>
+
+                <a href="/bn/online/" class="btn primary-btn blog-hero__cta">আমার লোগোকে SVG তে ভেক্টরাইজ করুন →</a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             HOW TO – 3-step guide + HowTo schema
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">কীভাবে একটি PNG বা JPG লোগোকে SVG তে রূপান্তর করে হালকা করবেন (৩টি ধাপে)</h2>
+                <p class="section-intro">ইলাস্ট্রেটরের (Illustrator) প্রয়োজন নেই। PixelToPath আপনার ফাইলকে ভেক্টরাইজ করে এবং HTML এ যুক্ত করার জন্য একটি প্রস্তুত SVG তৈরি করে দেয়।</p>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-card__number">1</div>
+                        <div class="step-card__icon">📁</div>
+                        <h3>PNG বা JPG আপলোড করুন</h3>
+                        <p>বর্তমানে PNG বা JPG হিসেবে ব্যবহৃত লোগো, আইকন বা পিকটোগ্রামটি ড্র্যাগ করুন। লাইনগুলো যত সরল হবে (সলিড ব্যাকগ্রাউন্ড, পরিষ্কার সীমানা), SVG তত হালকা হবে।</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card__number">2</div>
+                        <div class="step-card__icon">⚙️</div>
+                        <h3>সঠিক প্রিসেট বেছে নিন</h3>
+                        <p>লোগোটাইপ বা একরঙা আইকনের জন্য ব্ল্যাক অ্যান্ড হোয়াইট (Black & White)। লোগোতে কয়েকটি সলিড রঙ থাকলে পোস্টার (Poster)। ফটো (Photo) এড়িয়ে চলুন: লোগোতে এর কোনো দৃশ্যমান সুবিধা নেই, বরং খুব বেশি ডিটেইলস SVG কে ভারী করে তোলে।</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card__number">3</div>
+                        <div class="step-card__icon">💾</div>
+                        <h3>সাইটে SVG যুক্ত করুন</h3>
+                        <p>ফাইলটি ডাউনলোড করুন এবং একে ইমেজ, স্প্রাইট বা ইনলাইন SVG হিসেবে ব্যবহার করুন। একটি মাত্র ফাইল @1x, @2x এবং @3x ভ্যারিয়েন্টের বিকল্প হিসেবে কাজ করবে।</p>
+                    </div>
+                </div>
+
+                <div class="steps-cta">
+                    <a href="/bn/online/" class="btn primary-btn">আমার লোগোকে SVG তে ভেক্টরাইজ করুন →</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             EDUCATIONAL CONTENT
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>PNG এবং JPG: ফটোর জন্য পারফেক্ট, কিন্তু ইন্টারফেসের জন্য খুব ভারী</h2>
+                    <p>PNG এবং JPG হলো রাস্টার ফরম্যাট: ছবিগুলো পিক্সেলের একটি গ্রিড। 512×512 PNG তে এক্সপোর্ট করা একটি লোগো প্রতিটি বিন্দুকে "ক্যাপচার" করে। রেটিনা স্ক্রিনে স্পষ্ট থাকার জন্য প্রায়ই আপনাকে দ্বিগুণ বা তিনগুণ বড় ভার্সন ব্যবহার করতে হয়, যার মানে দ্বিগুণ বা তিনগুণ বেশি কিলোবাইট। JPG ফটোগুলোকে ভালো কম্প্রেস করে, কিন্তু এটি সলিড রঙগুলো নষ্ট করে, টেক্সটের চারপাশে আর্টিফ্যাক্ট যোগ করে এবং ট্রান্সপারেন্সি সাপোর্ট করে না। এগুলোর কোনোটিই এমন লোগোটাইপ বা আইকনের জন্য তৈরি নয়, যা নেভিগেশন বারে 24px এবং ব্যানারে 240px এ দেখাতে হবে।</p>
+                    <p>SVG (স্কেলেবল ভেক্টর গ্রাফিক্স) পিক্সেলের বদলে কার্ভ বা রেখা এবং স্থানাঙ্ক দিয়ে আকার তৈরি করে। PixelToPath দিয়ে একটি PNG কে ভেক্টরাইজ করার মানে হলো, একটি নির্দিষ্ট আকারের বিটম্যাপের বদলে এমন একটি পথ (path) তৈরি করা, যা ব্রাউজার ঠিক স্ক্রিনের সাইজ অনুযায়ী রিড্র (redraw) করে। ফলাফল: সাধারণত ফাইল অনেক হালকা হয় এবং মোবাইল, কম্পিউটার ও 4K স্ক্রিনে সমানভাবে স্পষ্ট থাকে।</p>
+
+                    <h3>একটি সাইটের জন্য SVG বাস্তবে কী পরিবর্তন আনে</h3>
+                    <p>ইন্টারফেসের জন্য, SVG কোনো নান্দনিক "অতিরিক্ত" সুবিধা নয়। এটি পারফরম্যান্স বাড়ানোর একটি শক্তিশালী উপায়: নেটওয়ার্কে কম ডেটা ট্রান্সফার, কম ভ্যারিয়েন্ট মেইনটেইন করতে হয়, সিম্পল ক্যাশিং এবং সব আধুনিক ব্রাউজারে নেটিভ ভেক্টর রেন্ডারিং।</p>
+                    <p>একজন ডেভেলপার বা এসইও বিশেষজ্ঞের জন্য সবচেয়ে চোখে পড়ার মতো সুবিধাগুলো হলো:</p>
+                    <ul>
+                        <li>ওজন: একটি সাধারণ লোগো PNG তে 40 থেকে 80 KB হলেও SVG তে মাত্র কয়েক KB তে নেমে আসে এবং আপনাকে @2x / @3x এক্সপোর্ট করতে হয় না।</li>
+                        <li>স্কেলেবিলিটি: একটি মাত্র ফাইল 16 px এ যেমন স্পষ্ট, 4K ফুল স্ক্রিনেও তেমনই স্পষ্ট। এর জন্য কোনো srcset বা ইমেজের মিডিয়া কোয়েরির প্রয়োজন নেই।</li>
+                        <li>কোর ওয়েব ভাইটালস: ডাউনলোডের জন্য ডেটা কম লাগে (LCP) এবং viewBox এর মাধ্যমে একটি নির্দিষ্ট জায়গা ধরে রাখে (CLS)।</li>
+                        <li>টেকনিক্যাল এসইও: মোবাইলে পেজ দ্রুত লোড হয়, এমন একটি ফরম্যাট যা গুগল বুঝতে পারে এবং SVG এর ভেতরে থাকা যেকোনো টেক্সট গুগল পড়তে পারে।</li>
+                    </ul>
+
+                    <h2>PNG বনাম SVG: লোগোর সাইজ কোনো ছোট ব্যাপার নয়</h2>
+                    <p>ছবিগুলো এখনও একটি ওয়েবপেজের ওজনের বড় অংশ দখল করে। আমরা ফটোগুলো WebP তে অপ্টিমাইজ করি, কিন্তু হেডারের লোগো বা CSS এর ২০টির মতো PNG আইকন ভুলে যাই। অথচ এই ফাইলগুলো প্রতিটি URL এ লোড হয়: এখানে হারানো প্রতিটি মিলিসেকেন্ড পুরো সাইটের পারফরম্যান্সে প্রভাব ফেলে।</p>
+                    <p>একটি সাধারণ কর্পোরেট সাইট বা ওয়েব অ্যাপে PixelToPath দিয়ে ভেক্টরাইজ করার পর যা দেখা যায়:</p>
+                    <ul>
+                        <li>512 px ট্রান্সপারেন্ট PNG লোগো: প্রায়ই 40 থেকে 80 KB হয়। একই লোগো SVG তে: রঙ এবং নোডের সংখ্যার ওপর ভিত্তি করে সাধারণত 2 থেকে 12 KB হয়।</li>
+                        <li>রেটিনা স্ক্রিনে স্পষ্ট থাকার জন্য PNG কে 1024 px বা srcset @2x দিয়ে ব্যবহার করা হয়: ওজন দ্বিগুণ, এমনকি তিনগুণ হয়ে যায়। অন্যদিকে, SVG ফাইলের কোনো পরিবর্তন হয় না।</li>
+                        <li>PNG @3x (72×72) তে এক্সপোর্ট করা একটি 24×24 আইকনের ওজন হয় 2 থেকে 8 KB। এরকম ২০টি আইকনের জন্য 40 থেকে 160 KB বাড়তি ওজন যোগ হয়। কিন্তু এগুলো SVG তে থাকলে সবগুলো মিলে মাত্র কয়েক KB হবে।</li>
+                        <li>"সাদা ব্যাকগ্রাউন্ডের" একটি লোগোর JPG হালকা মনে হতে পারে, কিন্তু কমপ্রেশনের কারণে সলিড রঙ এবং টেক্সট নষ্ট হয়ে যায়। SVG তে কোনো ঘোলাটে ভাব (halo) ছাড়াই শার্প এজ থাকে, আর ফাইলের সাইজও অনেক কম হয়।</li>
+                    </ul>
+                    <p>নিয়মটা খুব সহজ: যেকোনো আকার, টেক্সট, পিকটোগ্রাম বা লোগোটাইপ SVG তেই ভালো কাজ করে। ফটোগ্রাফি বা স্ক্রিনশটের জন্য JPG, WebP বা AVIF ব্যবহার করুন। SVG সবকিছুর বিকল্প নয়: এটি ইন্টারফেসের জন্য সঠিক ফরম্যাট।</p>
+
+                    <h2>স্কেলেবিলিটি: স্মার্টফোন থেকে 4K পর্যন্ত স্পষ্ট একটি ফাইল</h2>
+                    <p>একটি PNG কেবল তার আসল রেজোলিউশনেই স্পষ্ট থাকে। বড় করলে পিক্সেলগুলো দেখা যায়। হুট করে ছোট করলে ব্রাউজারকে এটি রিস্যাম্পল (resample) করতে হয়। এজন্যই @1x, @2x, @3x ফাইল, srcset এবং CSS ডেনসিটির এত ঝামেলা। প্রতিটি নতুন ব্রেকপয়েন্ট বা স্ক্রিন ডেনসিটির (রেটিনা, নতুন ফোন, 4K মনিটর) জন্য নতুন করে এক্সপোর্ট করতে হয়, অথবা "প্রয়োজনে কাজে লাগবে" ভেবে অনেক বড় ফাইল ব্যবহার করতে হয়।</p>
+                    <p>SVG এই ধরনের সমস্যাকে পাত্তা দেয় না। রেন্ডারিং ইঞ্জিন CSS এর নির্দেশ অনুযায়ী ঠিক সেই সাইজের কার্ভ তৈরি করে। নেভিগেশনের 32 px ফ্যাভিকন, 48 px লোগো, ব্যানারে 400 px, কিংবা 4K প্রজেকশন: সব জায়গায় একই ফাইল। কোনো ঘোলাটে ভাব নেই, কোনো জাগড এজ নেই (aliasing), এবং হাই-ডেনসিটি ভার্সনের জন্য কোনো দ্বিতীয় রিকোয়েস্ট নেই। একটি কম্পোনেন্ট লাইব্রেরির জন্যও এটি স্বস্তিদায়ক: একটি আইকন, একটি ফাইল, যেকোনো সাইজ।</p>
+
+                    <h2>কোর ওয়েব ভাইটালস এবং এসইও: ফরম্যাট নিয়ে গুগলের মাথাব্যথা কেন</h2>
+                    <p>মোবাইলে স্পিড হলো র‍্যাঙ্কিংয়ের একটি গুরুত্বপূর্ণ ফ্যাক্টর। কোর ওয়েব ভাইটালস (LCP, INP, CLS) মাপে যে ব্যবহারকারীর অভিজ্ঞতা কেমন। তবে একটি ভারী PNG লোগো বা একগুচ্ছ রাস্টার আইকনকে SVG দিয়ে বদলালে একটি 4 MB পেজ জাদুর মতো 40 KB তে নেমে আসবে না। কিন্তু সাইটের কাঠামোগত অংশে (layout/interface) এর প্রভাব সরাসরি পড়ে, বিশেষ করে 4G নেটওয়ার্কে বা যখন হেডার লোগোর কারণে LCP আটকে থাকে।</p>
+                    <p>বাস্তবে ভেক্টর ফরম্যাট তিনটি মেট্রিকে সাহায্য করে, যদি আপনি ডিজাইনের কমপ্লেক্সিটি কম রাখেন:</p>
+                    <ul>
+                        <li>LCP (Largest Contentful Paint) : যদি স্ক্রিনের সবচেয়ে বড় দৃশ্যমান অংশটি একটি লোগো বা ফ্ল্যাট ইলাস্ট্রেশন হয়, তবে 150 KB এর একটি @2x PNG এর চেয়ে কয়েক KB এর একটি SVG অনেক দ্রুত লোড হবে। পেজের বাকি অংশের জন্য নেটওয়ার্ক ফ্রি থাকবে।</li>
+                        <li>CLS (Cumulative Layout Shift) : width, height এবং viewBox সহ একটি SVG HTML পার্স হওয়ার সাথে সাথেই তার জায়গা ঠিক করে নেয়। বিটম্যাপ ডিকোড হয়ে অনুপাত জানার জন্য অপেক্ষা করতে হয় wait করতে হয় না, ফলে লেআউট শিফট (লাফানো) কমে যায়।</li>
+                        <li>INP এবং প্রধান থ্রেড (Main Thread) : একটি সাধারণ SVG (লোগো, আইকন) রেন্ডার করতে খুব কম রিসোর্স লাগে। তবে হাজার হাজার প্যাথ (path) দিয়ে তৈরি "ফটো" টাইপের SVG এড়িয়ে চলুন: এগুলো PNG এর চেয়েও ভারী হতে পারে এবং প্রসেসরকে ব্যস্ত করে তুলতে পারে। এজন্যই PixelToPath এর মতো টুলের সাহায্যে পরিষ্কার (clean) প্যাথ তৈরি করা দরকার, পিক্সেল-বাই-পিক্সেল কপি নয়।</li>
+                        <li>স্পিডের বাইরে এসইও (SEO): গুগল SVG ইনডেক্স করে। একটি ইনলাইন লোগোতে অ্যাক্সেসিবিলিটির জন্য টাইটেল থাকতে পারে। একটি alt অ্যাট্রিবিউটসহ SVG ইমেজ হলো এসইও এর বেসিক। আর একটি হালকা পেজ টেকনিক্যাল বাউন্স রেট কমায়, যা ইউজার এক্সপেরিয়েন্সের একটি ভালো সিগন্যাল হিসেবে র‍্যাঙ্কিংয়ে কাজে লাগে।</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             WHY PIXELTOPATH – feature cards
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">ম্যানুয়াল এক্সপোর্টের বদলে PixelToPath দিয়ে ভেক্টরাইজ করবেন কেন?</h2>
+                <p class="section-intro">আপনার কাছে ক্লায়েন্টের দেওয়া PNG আছে, ইলাস্ট্রেটর (Illustrator) সোর্স ফাইল নেই। PixelToPath ওয়েবের জন্য প্রস্তুত, বিনামূল্যে এবং নিখুঁত প্যাথ (paths) তৈরি করে।</p>
+
+                <div class="grid-3">
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">📉</div>
+                        <h3>হালকা এবং ব্যবহারের জন্য প্রস্তুত SVG</h3>
+                        <p>ইঞ্জিনটি ব্যবহারযোগ্য প্যাথ তৈরি করে, অপ্রয়োজনীয় নোড (nodes) নয়। প্রতিটি পেজে দেখানো লোগো বা আইকনের জন্য এটি আদর্শ।</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🆓</div>
+                        <h3>সম্পূর্ণ বিনামূল্যে</h3>
+                        <p>কোনো ডিজাইন সাবস্ক্রিপশন নেই, SVG তে কোনো ওয়াটারমার্ক নেই। সম্পূর্ণ ব্র্যান্ড গাইডলাইন (লোগো, ফ্যাভিকন, আইকন সেট) বিনামূল্যে ভেক্টরাইজ করুন।</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🔒</div>
+                        <h3>ফাইলের গোপনীয়তা (Privacy)</h3>
+                        <p>ব্র্যান্ডের ফাইলগুলো প্রসেস করার পরপরই মুছে ফেলা হয়। কিছুই স্টোর করা হয় না, কোথাও ব্যবহার করা হয় না। কনফিডেন্সিয়ালিটি এগ্রিমেন্ট (NDA) এর অধীনে থাকা ব্র্যান্ডগুলোর জন্য উপযোগী।</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🎨</div>
+                        <h3>লোগো এবং পিকটোগ্রামের জন্য প্রিসেট</h3>
+                        <p>একরঙা আইকনের জন্য ব্ল্যাক অ্যান্ড হোয়াইট (Black & White), কয়েকটি রঙের লোগোর জন্য পোস্টার (Poster)। এক্সপোর্ট করার আগে ডিটেইলের মাত্রা আপনি নিয়ন্ত্রণ করতে পারবেন।</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">💻</div>
+                        <h3>ডেস্কটপে ব্যাচ প্রসেসিং</h3>
+                        <p>PNG আইকনের একটি পুরো সেটকে SVG তে নিতে চান? উইন্ডোজ/লিনাক্সের ওপেন সোর্স অ্যাপ্লিকেশন অফলাইনে, কোনো কোটা ছাড়াই ফাইল প্রসেস করে।</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">♾️</div>
+                        <h3>PNG, JPG, BMP, WebP</h3>
+                        <p>একটি মাত্র টুল—লোগোটি ট্রান্সপারেন্ট PNG, স্ক্যান করা JPG, বা ফিগমা (Figma) থেকে এক্সপোর্ট করা WebP যাই হোক না কেন।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             USE CASES
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>বাস্তব সাইটে যেখানে SVG, PNG/JPG কে হারায়</h2>
+                    <p>এটি শুধু থিওরি নয়। নিচে এমন কিছু জায়গার কথা বলা হলো যেখানে ভেক্টর ফরম্যাট তাৎক্ষণিক সুবিধা দেয়:</p>
+                    <ul>
+                        <li>হেডার এবং ফুটারের লোগো: একটি মাত্র ফাইল, রেটিনাতে স্পষ্ট, সাধারণত সবচেয়ে বেশি দেখা যায় এবং একটি মিনিমাল হোমপেজে অনেক সময় এটিই LCP হয়।</li>
+                        <li>আইকন সিস্টেম: আর 1x/2x PNG স্প্রাইট নয়। প্রতিটি পিকটোগ্রাম একেকটি SVG (বা SVG স্প্রাইট), যা নতুন এক্সপোর্ট ছাড়াই CSS (currentColor) দিয়ে স্টাইল করা যায়।</li>
+                        <li>ফ্যাভিকন এবং অ্যাপল-টাচ: একটি আধুনিক SVG ফ্যাভিকন এবং ফলব্যাক (fallback) হিসেবে একটি PNG ব্যবহার করলে 16, 32, 180 px এর অনেক সাইজ মেইনটেইন করার ঝামেলা এড়ানো যায়।</li>
+                        <li>ইন্টারফেস ইলাস্ট্রেশন এবং এম্পটি স্টেটস: ভেক্টরাইজ করা ফ্ল্যাট ড্রয়িংগুলো ফুল স্ক্রিনে স্পষ্ট থাকে, অথচ বিশাল ব্যাকগ্রাউন্ড ইমেজের মতো ভারী হয় না।</li>
+                        <li>এসইও ল্যান্ডিং পেজ: ইন্টারফেস থেকে প্রতি কিলোবাইট ডেটা কমানো লাইটহাউস (Lighthouse), পেজস্পিড ইনসাইটস (PageSpeed Insights) এবং মোবাইল এক্সপেরিয়েন্স উন্নত করে, যা র‍্যাঙ্কিংয়ে প্রভাব ফেলে।</li>
+                    </ul>
+                    <p>ফটোর জন্য JPG/WebP ব্যবহার করুন। লোগো, পিকটোগ্রাম এবং ফ্ল্যাট ইলাস্ট্রেশনগুলো SVG তে বদলে ফেলুন। দ্রুত গতির সাইটগুলো ইতিমধ্যেই এই নিয়ম মেনে চলে।</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             RELATED TOOLS – internal links
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container" style="text-align:center;">
+                <h2 class="section-title">সম্পর্কিত রূপান্তর গাইড</h2>
+                <p class="section-intro">আপনার ফাইলগুলো ভেক্টরাইজ করুন, তারপর আপনার প্রয়োজনীয় ফরম্যাট সম্পর্কে আরও জানুন।</p>
+
+                <div class="related-tools">
+                    
+                    <a href="/bn/blog/png-to-svg/" class="related-tool-link">
+                        🔄 PNG থেকে SVG কনভার্টার
+                    </a>
+                    
+                    <a href="/bn/blog/jpg-to-svg/" class="related-tool-link">
+                        🔄 JPG থেকে SVG কনভার্টার
+                    </a>
+                    
+                    <a href="/bn/blog/vectorize-image/" class="related-tool-link">
+                        ✏️ ইমেজ ভেক্টরাইজ করুন
+                    </a>
+                    
+                    <a href="/bn/blog/image-to-svg/" class="related-tool-link">
+                        🖼️ ইমেজ থেকে SVG
+                    </a>
+                    
+                    <a href="/bn/online/" class="related-tool-link">
+                        🌐 অনলাইন টুল
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FAQ – FAQPage schema injected in <head>
+        ════════════════════════════════════════ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">সচরাচর জিজ্ঞাসিত প্রশ্ন (FAQ)</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>SVG কি সবসময় PNG বা JPG এর চেয়ে হালকা হয়?</summary>
+                        <p>লোগো, আইকন বা ফ্ল্যাট ইলাস্ট্রেশনের ক্ষেত্রে: হ্যাঁ, প্রায় সবসময়ই। বিশেষ করে যদি আপনি PNG এর রেটিনা ভার্সনের সাথে তুলনা করেন। কিন্তু ফটোগ্রাফির ক্ষেত্রে: না। একটি "ফটো" SVG অসংখ্য প্যাথের (paths) তৈরি হয়, যা JPG বা WebP এর চেয়ে ভারী হয়ে যায়। ইন্টারফেস ভেক্টরাইজ করুন, ফটোগুলো কম্প্রেস করুন।</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>SVG কি আসলেই কোর ওয়েব ভাইটালস এবং এসইও উন্নত করে?</summary>
+                        <p>ইন্টারফেস ইমেজগুলো যতটা উন্নত করতে পারে, SVG ঠিক ততটাই করে: কম ডেটা লোড (যদি লোগো বা ইলাস্ট্রেশন প্রধান এলিমেন্ট হয় তবে LCP বাড়ায়), নির্দিষ্ট রেন্ডার বক্স (CLS কমায়), এবং ডাউনলোডের জন্য কম ভ্যারিয়েন্ট। গুগল সাইট স্পিডকে একটি সিগন্যাল হিসেবে ধরে, বিশেষ করে মোবাইলে। এটি কোনো জাদুর র‍্যাঙ্কিং ট্রিকস নয়, এটি হলো টেকনিক্যাল হাইজিন যা পেজস্পিড ইনসাইটসে (PageSpeed Insights) দেখা যায়।</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>সাইটের সব ছবি কি SVG দিয়ে বদলানো উচিত?</summary>
+                        <p>না। ফটো, স্ক্রিনশট, টেক্সচার, জটিল গ্রেডিয়েন্টের জন্য: JPG, WebP বা AVIF ব্যবহার করুন। লোগো, আইকন, ডায়াগ্রাম, পিকটোগ্রাম এবং ফ্ল্যাট ইলাস্ট্রেশনের জন্য SVG। খুব বেশি ডিটেইলস থাকা SVG আপনার INP তে খারাপ প্রভাব ফেলতে পারে। PixelToPath এর ফটো প্রিসেট শুধু স্টাইল করার জন্য, কন্টেন্টের জেপেগ (JPEG) রিপ্লেস করার জন্য নয়।</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>CLS না ঘটিয়ে কীভাবে একটি SVG যুক্ত করা যায়?</summary>
+                        <p>সবসময় viewBox এর সাথে মিল রেখে একটি প্রস্থ এবং উচ্চতা (বা CSS এর aspect-ratio) দিন। একটি ইমেজ ট্যাগের (src, width, height, alt) সাহায্যে, ব্রাউজার ডাউনলোডের আগেই জায়গা ঠিক করে রাখে। ইনলাইন SVG এর ক্ষেত্রে, viewBox বজায় রাখুন এবং ডাইমেনশন ছাড়া প্রাথমিক রেন্ডারের পর কোড ইনজেক্ট করা থেকে বিরত থাকুন।</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>PixelToPath দিয়ে কীভাবে PNG থেকে লোগোর SVG পাব?</summary>
+                        <p>অনলাইন টুলটি ওপেন করুন, PNG (বিশেষ করে ট্রান্সপারেন্ট ব্যাকগ্রাউন্ডের বড় ছবি) আপলোড করুন, ব্ল্যাক অ্যান্ড হোয়াইট (Black & White) বা পোস্টার (Poster) বেছে নিন, ডিটেইল অ্যাডজাস্ট করুন, তারপর কনভার্ট করুন। সীমানা ঠিক আছে কিনা তা দেখতে ব্রাউজারে বা ফিগমাতে (Figma) SVG টি ওপেন করুন এবং এরপর এটি প্রোডাকশনে ব্যবহার করুন। এটি সম্পূর্ণ বিনামূল্যে, অ্যাকাউন্ট খোলার দরকার নেই এবং ফাইল সেভ করা হয় ফোয় হয় না।</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FINAL CTA
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container blog-cta-wrap">
+                <h2>আপনার PNG লোগোটিকে SVG তে রূপান্তর করে সাইজ মেপে দেখুন</h2>
+                <p>আপনার বর্তমান ফাইলটি আপলোড করুন, SVG ডাউনলোড করুন এবং কিলোবাইট তুলনা করুন। এটি সম্পূর্ণ বিনামূল্যে এবং কোনো সাইনআপ লাগে না। কোর ওয়েব ভাইটালস উন্নত করার ক্ষেত্রে এটাই সাধারণত প্রথম ধাপ।</p>
+                <div class="double-buttons">
+                    <a href="/bn/online/" class="btn primary-btn big-btn">আমার লোগোকে SVG তে ভেক্টরাইজ করুন →</a>
+                    <a href="/bn/offline/" class="btn secondary-btn big-btn">ডেস্কটপ অ্যাপ ডাউনলোড করুন →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>ওপেন সোর্স ডেভেলপমেন্ট সমর্থন করুন</h3>
+        <p>PixelToPath ব্যবহার করা বিনামূল্যে। যদি এই টুলটি আপনার সময় বাঁচাতে সাহায্য করে থাকে, তবে আমাকে এক কাপ কফি খাওয়ানোর কথা বিবেচনা করতে পারেন।</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ পেপ্যালের মাধ্যমে দান করুন</a>
+    </div>
+</section>
+    </main>
+
+    <footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/bn/">হোম</a>
+        <a href="/bn/online/">অনলাইন টুল</a>
+        <a href="/bn/offline/">ডেস্কটপ অ্যাপ</a>
+        <a href="/bn/blog/">ব্লগ</a>
+        <a href="https://github.com/lorrisc/PixelToPath">ওপেন সোর্স (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal">Legal notice</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+    </div>
+</footer>
+
+    <script src="../../../assets/js/ui-state.js"></script>
+</body>
+</html>
