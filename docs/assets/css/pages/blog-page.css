@@ -1,7 +1,7 @@
 /* ============================================================
    SEO BLOG PAGES – seo-page.css
    Shared styles for: png-to-svg, jpg-to-svg, svg-converter-free,
-   vectorize-image, image-to-svg
+   vectorize-image, image-to-svg, import-svg
    ============================================================ */
 
 /* ── Hero ── */
@@ -109,15 +109,42 @@
 }
 .content-section ul,
 .content-section ol {
-    list-style: disc;
     padding-left: 1.6rem;
     color: var(--gray);
     line-height: 1.85;
     margin-bottom: 1.2rem;
 }
+.content-section ul {
+    list-style: disc;
+}
+.content-section ol {
+    list-style: decimal;
+}
 .content-section ul li,
 .content-section ol li {
     margin-bottom: 0.45rem;
+}
+.content-callout {
+    background: #fff7ed;
+    border-left: 4px solid var(--primary);
+    padding: 1rem 1.15rem;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 1.25rem 0 1.5rem;
+    color: var(--gray);
+    line-height: 1.7;
+}
+.content-callout--warn {
+    background: #fef2f2;
+    border-left-color: #dc2626;
+}
+
+/* ── Tool logos (Figma, Canva, WordPress) ── */
+.tool-logo {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 0.9rem;
+    object-fit: contain;
 }
 
 /* ── Related tools ── */

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Figma、Canva、WordPressにSVGをインポートする | PixelToPath</title>
+    <meta name="description" content="PixelToPathのSVGが完成しました。Figmaにインポートして色を変更したり、Canvaで使用したり、セキュリティの脆弱性なしにWordPressに公開したりできます。デザイナー向けガイド。">
+    <meta name="keywords" content="svg インポート figma, svg 編集 figma, svg canva, svg 色変更 canva, svg アップロード wordpress, svg 許可 wordpress, safe svg, svg インポート wordpress, pixeltopath">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Figma、Canva、WordPressにSVGをインポートする | PixelToPath">
+    <meta property="og:description" content="PixelToPathのSVGが完成しました。Figmaにインポートして色を変更したり、Canvaで使用したり、セキュリティの脆弱性なしにWordPressに公開したりできます。デザイナー向けガイド。">
+    <meta property="og:image" content="../../../assets/images/screenshot.png">
+    <meta property="og:url" content="https://pixel-to-path.com/ja/blog/import-svg/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/ja/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/ja/blog/import-svg/">
+
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/components.css">
+    <link rel="stylesheet" href="../../../assets/css/containers.css">
+    <link rel="stylesheet" href="../../../assets/css/partials/footer.css">
+    <link rel="stylesheet" href="../../../assets/css/partials/navbar.css">
+    <link rel="stylesheet" href="../../../assets/css/partials/donate.css">
+    <link rel="stylesheet" href="../../../assets/css/pages/blog-page.css">
+
+    <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: BlogPosting -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Figma、Canva、WordPressでSVGファイルをインポートおよび編集する方法",
+        "description": "PixelToPathのSVGが完成しました。Figmaにインポートして色を変更したり、Canvaで使用したり、セキュリティの脆弱性なしにWordPressに公開したりできます。デザイナー向けガイド。",
+        "url": "https://pixel-to-path.com/ja/blog/import-svg/",
+        "inLanguage": "fr",
+        "author": { "@type": "Person", "name": "Lorris C." },
+        "publisher": { "@type": "Person", "name": "Lorris C." }
+    }
+    </script>
+
+    <!-- Schema: WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PixelToPath – Figma、Canva、WordPressにSVGをインポートする | PixelToPath",
+        "url": "https://pixel-to-path.com/fr/online/",
+        "description": "PixelToPathのSVGが完成しました。Figmaにインポートして色を変更したり、Canvaで使用したり、セキュリティの脆弱性なしにWordPressに公開したりできます。デザイナー向けガイド。",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1
+        }
+    }
+    </script>
+
+    <!-- Schema: HowTo -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "画像からインポート可能なSVGへ（3ステップ）",
+        "step": [
+            { "@type": "HowToStep", "name": "画像を変換する", "text": "PNGまたはJPGをPixelToPathにアップロードします。後で色を変更するロゴやアイコンの場合は、「白黒」または「ポスター」を選択します：ベクター化された写真ではなく、単色塗りです。" },
+            { "@type": "HowToStep", "name": "SVGをダウンロードする", "text": "プレビューして、.svgファイルを保存します。これは偽装されたPNGではなく、実際のパスです：FigmaとCanvaで色を変更できます。" },
+            { "@type": "HowToStep", "name": "ツールにインポートする", "text": "ファイルをFigma、Canvaのアップロード、またはWordPressのメディア（クリーンなファイル）にドラッグします。3つの方法は以下で詳しく説明します。" }
+        ]
+    }
+    </script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "FigmaはSVGをベクターではなく画像としてインポートします。なぜですか？", "acceptedAnswer": { "@type": "Answer", "text": "ファイルには、パスではなくビットマップ（画像タグ内のPNG）が含まれている可能性があります。白黒またはポスターのPixelToPathエクスポートはパスです。これらのプリセットのいずれかで再変換し、.svgをキャンバスに再度ドラッグするか、ファイル → 配置を使用します。単一の画像レイヤーではなく、レイヤーのグループが表示されるはずです。" } },
+            { "@type": "Question", "name": "Canvaに色を変更するためのパレットが表示されません。どうすればいいですか？", "acceptedAnswer": { "@type": "Answer", "text": "CanvaはシンプルなSVGのみを再着色します：単色塗り、少ない色合い、グラデーションやテクスチャなし。写真プリセットは多すぎる形状を生成します。PixelToPathで画像をポスター（いくつかの単色）または白黒に戻し、再インポートします。配置したSVGをクリックします：上部のバーにパレットが表示されます。" } },
+            { "@type": "Question", "name": "WordPressでSVGを許可するのは危険ですか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、MIMEタイプを追加するだけの場合。SVGにはJavaScriptを含めることができます。Safe SVG (10up) を使用してください：ファイルはアップロード時にクリーンアップされ、メディアライブラリにプレビューが表示され、権限を管理者に制限できます。より厳格な代替案：メディアライブラリ外のテーマにSVGを配置します。" } },
+            { "@type": "Question", "name": "PixelToPathの後にAdobe Illustratorは必要ですか？", "acceptedAnswer": { "@type": "Answer", "text": "このワークフローには不要です。色を変更、グループ解除、エクスポートするにはFigmaで十分です。ソーシャルメディアのバリエーションにはCanvaで十分です。Illustratorは、モックアップやサイトにロゴを貼り付けるためではなく、手作業での再描画や非常に要求の厳しい印刷ファイルに引き続き役立ちます。" } },
+            { "@type": "Question", "name": "Figmaでロゴの色を変更したい場合、どのプリセットを選択すればよいですか？", "acceptedAnswer": { "@type": "Answer", "text": "モノクロのロゴタイプまたはアイコンの場合は白黒：1つの色合い、1クリック。ロゴに2つまたは3つの単色がある場合はポスター。写真を避けてください：選択や色の変更が面倒な、何十もの小さな形状が生成されます。" } }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/ja/"" class="brand">
+            <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/ja/" 
+            class="">ホーム</a>
+
+            <a href="/ja/online/" 
+            class="">オンラインツール</a>
+
+            <a href="/ja/offline/" 
+            class="">デスクトップアプリ</a>
+            
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+
+            <div class="lang-switch">
+                <span>🇯🇵 JA</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/bn/blog/import-svg/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/import-svg/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/import-svg/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/import-svg/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/import-svg/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/import-svg/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/import-svg/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/import-svg/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/import-svg/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/import-svg/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/import-svg/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/import-svg/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/import-svg/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/import-svg/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/import-svg/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/import-svg/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/import-svg/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/vi/blog/import-svg/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/import-svg/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/ja/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">ホーム</span>
+            </a>
+            <a href="/ja/online/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">オンラインツール</span>
+            </a>
+            <a href="/ja/offline/"
+               class="mobile-link ">
+                <span class="mobile-link-number">03</span>
+                <span class="mobile-link-text">デスクトップアプリ</span>
+            </a>
+            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
+                <span class="mobile-link-number">04</span>
+                <span class="mobile-link-text">GitHub</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">言語</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/bn/blog/import-svg/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/import-svg/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/import-svg/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/import-svg/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/import-svg/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/import-svg/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/import-svg/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/import-svg/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/import-svg/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/import-svg/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/import-svg/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/import-svg/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/import-svg/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/import-svg/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/import-svg/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/import-svg/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/import-svg/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/vi/blog/import-svg/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/import-svg/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO – above the fold, H1 + CTA
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>Figma、Canva、WordPressでSVGファイルをインポートおよび編集する方法</h1>
+                <p class="blog-hero__subtitle">変換は最初のステップに過ぎません。PixelToPathからSVGをダウンロードしたら、Figmaにドラッグして色を変更したり、Canvaにドロップしたり、セキュリティリスクなしにWordPressに公開したりできます。</p>
+
+                <!-- Format badges -->
+                <div class="big-badges">
+                    
+                    <span class="big-badges__item big-badges__item--primary">SVG</span>
+                    
+                    <span class="fmt-arrow">→</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">Figma</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">Canva</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">WordPress</span>
+                    
+                </div>
+
+                <!-- Trust badges -->
+                <div class="badges">
+                    <span class="badge__item badge__item--accent">✓ 実践ガイド</span>
+                    <span class="badge__item">Figma · Canva · WP</span>
+                    <span class="badge__item">変換後</span>
+                    <span class="badge__item">100%無料</span>
+                </div>
+
+                <a href="/ja/online/" class="btn primary-btn blog-hero__cta">まずSVGを作成する →</a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             HOW TO – 3-step guide + HowTo schema
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">画像からインポート可能なSVGへ（3ステップ）</h2>
+                <p class="section-intro">ベクターファイルがなければ、Figma、Canva、WordPressで編集できるものはありません。PixelToPathはこのファイルを1分で作成します。</p>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-card__number">1</div>
+                        <div class="step-card__icon">📁</div>
+                        <h3>画像を変換する</h3>
+                        <p>PNGまたはJPGをPixelToPathにアップロードします。後で色を変更するロゴやアイコンの場合は、「白黒」または「ポスター」を選択します：ベクター化された写真ではなく、単色塗りです。</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card__number">2</div>
+                        <div class="step-card__icon">💾</div>
+                        <h3>SVGをダウンロードする</h3>
+                        <p>プレビューして、.svgファイルを保存します。これは偽装されたPNGではなく、実際のパスです：FigmaとCanvaで色を変更できます。</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card__number">3</div>
+                        <div class="step-card__icon">🎨</div>
+                        <h3>ツールにインポートする</h3>
+                        <p>ファイルをFigma、Canvaのアップロード、またはWordPressのメディア（クリーンなファイル）にドラッグします。3つの方法は以下で詳しく説明します。</p>
+                    </div>
+                </div>
+
+                <div class="steps-cta">
+                    <a href="/ja/online/" class="btn primary-btn">まずSVGを作成する →</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             EDUCATIONAL CONTENT – why the "after" step
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>SVGが手に入りました。次は何をしますか？</h2>
+                    <p>ほとんどのコンバーターは「ダウンロード」ボタンで終わります。しかし、ファイルがダウンロードフォルダに残ったままでは意味がありません。デザイナーはFigmaで開いてガイドラインを適用します。コミュニティマネージャーはCanvaにドロップして投稿を作成します。インテグレーターはヘッダーロゴとしてWordPressに配置します。PixelToPathが単なるデモではなく、実際のワークフローに組み込まれていることを証明するのは、この次のステップです。</p>
+                    <p>PixelToPathのSVGは静止画像ではありません。それはパスの集合です：各形状には塗りつぶしがあり、場合によってはアウトラインがあります。ロゴの青をバーガンディに変更したり、アイコンを分離したり、1080x1920のストーリー用に拡大したりできます。これらはすべて、Illustratorに戻ることなく、すでに使用しているツール内で実行できます。</p>
+
+                    <h3>Figma、Canva、WordPressがこのフォーマットを好む理由</h3>
+                    <p>インポートされたPNGとJPGはビットマップです。FigmaでPNGロゴの色を変更するということは、パスの色を変更するのではなく、上にレイヤーを重ねるということです。Canvaはカラーパレットを提供しません。WordPressはRetinaディスプレイでぼやける重いファイルを提供します。SVGはこれら3つの問題を一度に解決します。</p>
+                    <p>具体的には、PixelToPathからのSVGは次のものを提供します：</p>
+                    <ul>
+                        <li>編集可能なパス：形状ごとに1色、Figma（塗りつぶし）またはCanva（カラーパレット）で変更可能</li>
+                        <li>Canvaの3MB制限を大きく下回る軽量ファイルで、WordPressサイトでの読み込みが@2x PNGよりも高速です</li>
+                        <li>ファビコン、LinkedInのバナー、またはロールアップバナーでも同じ鮮明さ：単一のファイル</li>
+                        <li>クライアントに送信できる成果物：Creative Cloudではなく、クライアントが持っているツールで開きます</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             THREE TOOLS OVERVIEW
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">3つの目的地、1つのファイル</h2>
+                <p class="section-intro">SVGは変わりません。到着時のインターフェースのみが変わります。ツールを選択し、クリックに従ってください。</p>
+
+                <div class="grid-3">
+                    <div class="card card--ta-center">
+                        <img class="tool-logo" src="../../../assets/images/brands/figma.svg" alt="Logo Figma" width="48" height="48">
+                        <h3>Figma</h3>
+                        <p>ドラッグ＆ドロップ、グループ解除、塗りつぶしの変更。最も一般的なデザインワークフロー。</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <img class="tool-logo" src="../../../assets/images/brands/canva.svg" alt="Logo Canva" width="48" height="48">
+                        <h3>Canva</h3>
+                        <p>アップロードし、デザインに配置し、カラーパレットで色を変更します。投稿やプレゼンテーションに最適です。</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <img class="tool-logo" src="../../../assets/images/brands/wordpress.svg" alt="Logo WordPress" width="48" height="48">
+                        <h3>WordPress</h3>
+                        <p>安全にアップロードを許可し、サイトにロゴやアイコンを挿入します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             TUTORIALS – Figma, Canva, WordPress
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Figma：SVGをインポートして色を変更する</h2>
+                    <p>Figmaは、写真としてではなく、ベクターのグループとしてSVGをインポートします。これが重要な点です。各形状は、色を変更、移動、または非表示にできるレイヤーとして残ります。</p>
+                    <ol>
+                        <li>PixelToPathから.svgをダウンロードし、Figmaファイルを開きます。</li>
+                        <li>エクスプローラーからキャンバスに直接ファイルをドラッグします。代替方法：ファイル → 配置、またはCtrl+Shift+K (MacではCmd+Shift+K)でSVGを配置します。</li>
+                        <li>レイヤーはグループとして表示されます。ダブルクリックして中に入るか、右クリック → グループ解除 (Shift+Ctrl+G / Shift+Cmd+G)で形状を個別に操作できます。</li>
+                        <li>パスを選択します。右側のパネルの「塗りつぶし (Fill)」セクションで、カラーパレットをクリックします：HEX、スウォッチ、スポイト。形状全体が変更され、エッジは鮮明なままです。</li>
+                        <li>モノクロロゴの場合は、グループ内のすべての形状を選択し、1色を適用します。成果物がベクターである必要がない場合は、エクスポートセクションからSVG、PNG、またはPDFとしてエクスポートします。</li>
+                    </ol>
+                    <p>Figmaがベクターレイヤーではなくフラットな画像を表示する場合、ファイルにビットマップ（カプセル化されたPNG）が埋め込まれていました。これは、白黒またはポスタープリセットのPixelToPathエクスポートには当てはまりません。写真ではなく、これら2つのモードのいずれかを使用してオリジナルを再変換してください。</p>
+
+                    <h2>Canva：SVGをドロップして色を変更する</h2>
+                    <p>Canvaは、無料版とPro版の両方でSVGを受け入れます。ファイルがシンプルな場合、色の変更が機能します：単色塗り、少ないノード、グラデーションなし。これはまさにPixelToPathがポスターや白黒で生成するものです。</p>
+                    <ol>
+                        <li>Canvaでデザインを開きます。左パネル → アップロード → ファイルをアップロードします。.svg（3MB未満、PixelToPathのエクスポートはこれを大きく下回ります）を選択します。</li>
+                        <li>ファイルがアップロードされたら、ページにドラッグします。ハンドルを使用してサイズを変更します：ストーリーやA4フォーマットでも、ベクターは鮮明なままです。</li>
+                        <li>SVGをクリックします。ツールバーに、ファイルの色ごとにカラーパレットが表示されます。パレットをクリックし、新しい色を選択します：Canvaはその色のすべての形状に適用します。</li>
+                        <li>パレットが表示されない場合、SVGが複雑すぎます（グラデーション、色が多すぎる、写真のようなパス）。PixelToPathに戻り、ポスターまたは白黒に切り替えて、再エクスポート、再インポートします。</li>
+                    </ol>
+                    <p>Canvaは、SVG 1.1プロファイル、同じ色の形状のグループ化、テクスチャなしを推奨しています。PixelToPathのロゴプリセットはすでにこれらの制約を尊重しています。ファイルを「準備」するためにIllustratorを通過する必要はありません。</p>
+
+                    <h2>WordPress：脆弱性を開かずにSVGのアップロードを許可する</h2>
+                    <p>WordPressはデフォルトでSVGを拒否しますが、これは気まぐれではありません。SVGはXMLです：JavaScript、外部エンティティ、XSSペイロードを含めることができます。悪意のあるSVGをアップロードした訪問者、または侵害された編集者アカウントは、管理画面でコードを実行できます。これがブロックの理由です。フォーマットを許可し、ファイルをクリーンアップする必要があります。</p>
+                    <p class="content-callout content-callout--warn">functions.phpにimage/svg+xmlを追加するだけではいけません。ファイルをクリーンアップしないと、脆弱性が開きます。安全な方法：スクリプト、onloadイベント、XMLエンティティをパージする保守されたプラグイン。100万回以上インストールされているSafe SVG (10up)。</p>
+                    <ol>
+                        <li>WordPress管理画面で：プラグイン → 新規追加。「Safe SVG」（作成者：10up）を検索します。インストールして有効化します。</li>
+                        <li>設定 → メディアに移動します。SVGのアップロードを管理者（または信頼できる役割）に制限します。サイトに複数の寄稿者がいる場合、すべての投稿者アカウントにフォーマットを開放しないでください。</li>
+                        <li>メディア → 新規追加。PixelToPathの.svgをドロップします。プラグインはインポート時にクリーンアップし、ライブラリにプレビューを表示します（これはWordPressがネイティブに実行しないことです）。</li>
+                        <li>投稿またはページで、画像ブロックを挿入し、SVGを選択します。ヘッダーロゴの場合は、カスタマイズ / サイトアイデンティティ、またはテーマテンプレート（サイトエディタ）の画像ブロックを使用します。</li>
+                        <li>開発者向けのバリエーション：メディアライブラリをバイパスします。ファイルをテーマ (assets/logo.svg) に配置し、テンプレートで参照するか、CSSでスタイルを設定するためにインライン化します。アップロードしないため、メディアライブラリの攻撃対象領域はありません。</li>
+                    </ol>
+                    <p>Safe SVGは、誰がアップロードできるかを制限することもできます。プラグインを最新の状態に保ちます：単なる「SVGを許可する」チェックボックスではなく、ファイルのクリーンアップが実際の制御です。</p>
+
+                    <h2>これらのツールに貼り付けるPixelToPath SVGはどれですか？</h2>
+                    <p>エディターは提供されたものを読み込みます。不適切なプリセットは、インポート時にコストがかかります：多すぎる形状、使用できない色、拒否されたファイル。</p>
+                    <ul>
+                        <li>ロゴ、アイコン、レタリング：白黒またはポスター。これらは単色塗りで、FigmaとCanvaでワンクリックで色を変更できます。</li>
+                        <li>色を変更する予定がある場合は、写真を避けてください。このモードは多数の小さな形状を作成します。Canvaでは便利なパレットが表示されないことがよくあります。</li>
+                        <li>変換する前にオリジナルをトリミングします：背景が減り、ノードが減り、Figmaレイヤーでより読みやすいSVGになります。</li>
+                        <li>使用用途ごとにバリエーションを作成します：Figma（ガイドライン）用のモノクロSVG、Canva（投稿）用のカラーSVG、WordPress（ヘッダー）用のクリーンアップされた同じファイル。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             WHY PIXELTOPATH – feature cards
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">なぜこのSVGはワークフローに統合されるのか</h2>
+                <p class="section-intro">svgタグにカプセル化されたPNGを出力するコンバーターは、FigmaでもCanvaでも役に立ちません。PixelToPathはパスを出力します。</p>
+
+                <div class="grid-3">
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">✏️</div>
+                        <h3>ビットマップではなく実際のパス</h3>
+                        <p>Figmaはベクターレイヤーを認識します。Canvaは色合いを認識します。写真にフィルターをかけるのではなく、色を変更します。</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🎨</div>
+                        <h3>色変更のための単色塗り</h3>
+                        <p>白黒とポスターのプリセットは、色合いの数を制限します。これはまさにFigmaとCanvaが求めているものです。</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">📉</div>
+                        <h3>CanvaとWPに十分な軽さ</h3>
+                        <p>Canvaの制限：3MB。PixelToPathのロゴは通常、数キロバイトの重さです。WordPressはRetina PNGよりも速く提供します。</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🆓</div>
+                        <h3>無料、Illustrator不要</h3>
+                        <p>クライアントのPNGは、Creative Cloudなしで編集可能なSVGになります。残りはFigmaとCanvaが行います。</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🔒</div>
+                        <h3>クライアントファイル、ストレージなし</h3>
+                        <p>ロゴ、ガイドライン、モックアップ：処理されて無視されます。サーバーには何も保存されません。機密保持契約に適しています。</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">💻</div>
+                        <h3>オフラインでも</h3>
+                        <p>オープンソースのWindows / Linuxアプリは、ファイルがマシンから出ない場合にローカルでベクター化し、Figmaにインポートできます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             USE CASES
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>このワークフローが日常を変える場所</h2>
+                    <p>SVGがツールに入ると、バリエーションごとに再変換するのをやめます：</p>
+                    <ul>
+                        <li>Figmaガイドライン：クライアントのPNGは、再描画せずに色（プライマリ、反転、モノクロ）を変更できるコンポーネントになります。</li>
+                        <li>Canva投稿：1つのSVG、6色のキャンペーンカラー、鮮明なストーリーとカルーセル。</li>
+                        <li>WordPressロゴ：ヘッダーに1つのファイル、モバイルとRetinaで鮮明、従来のPNGよりも軽量。</li>
+                        <li>フリーランスの成果物：SVGとFigma/Canvaのユーザーガイドを納品します。クライアントはもうブロックされません。</li>
+                        <li>UIアイコン：Figmaに一括インポートし、24pxグリッドに揃え、セットをエクスポートします。</li>
+                    </ul>
+                    <p>写真にはPNGを使用します。色を変更したり、鮮明に保つ必要があるすべてのものには、PixelToPath + Figma / Canva / WordPressの組み合わせで十分です。</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             RELATED TOOLS – internal links
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container" style="text-align:center;">
+                <h2 class="section-title">関連する変換ガイド</h2>
+                <p class="section-intro">まだSVGをお持ちでないですか？変換から始めて、インポートに戻ってください。</p>
+
+                <div class="related-tools">
+                    
+                    <a href="/ja/blog/vectorize-logo/" class="related-tool-link">
+                        🔧 ぼやけたロゴをベクター化する
+                    </a>
+                    
+                    <a href="/ja/blog/png-to-svg/" class="related-tool-link">
+                        🔄 PNGからSVGへのコンバーター
+                    </a>
+                    
+                    <a href="/ja/blog/svg-vs-png/" class="related-tool-link">
+                        📈 SVG vs PNG：パフォーマンスとSEO
+                    </a>
+                    
+                    <a href="/ja/blog/vectorize-image/" class="related-tool-link">
+                        ✏️ 画像をベクター化する
+                    </a>
+                    
+                    <a href="/ja/online/" class="related-tool-link">
+                        🌐 オンラインツール
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FAQ – FAQPage schema injected in <head>
+        ════════════════════════════════════════ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">よくある質問</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>FigmaはSVGをベクターではなく画像としてインポートします。なぜですか？</summary>
+                        <p>ファイルには、パスではなくビットマップ（画像タグ内のPNG）が含まれている可能性があります。白黒またはポスターのPixelToPathエクスポートはパスです。これらのプリセットのいずれかで再変換し、.svgをキャンバスに再度ドラッグするか、ファイル → 配置を使用します。単一の画像レイヤーではなく、レイヤーのグループが表示されるはずです。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Canvaに色を変更するためのパレットが表示されません。どうすればいいですか？</summary>
+                        <p>CanvaはシンプルなSVGのみを再着色します：単色塗り、少ない色合い、グラデーションやテクスチャなし。写真プリセットは多すぎる形状を生成します。PixelToPathで画像をポスター（いくつかの単色）または白黒に戻し、再インポートします。配置したSVGをクリックします：上部のバーにパレットが表示されます。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>WordPressでSVGを許可するのは危険ですか？</summary>
+                        <p>はい、MIMEタイプを追加するだけの場合。SVGにはJavaScriptを含めることができます。Safe SVG (10up) を使用してください：ファイルはアップロード時にクリーンアップされ、メディアライブラリにプレビューが表示され、権限を管理者に制限できます。より厳格な代替案：メディアライブラリ外のテーマにSVGを配置します。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>PixelToPathの後にAdobe Illustratorは必要ですか？</summary>
+                        <p>このワークフローには不要です。色を変更、グループ解除、エクスポートするにはFigmaで十分です。ソーシャルメディアのバリエーションにはCanvaで十分です。Illustratorは、モックアップやサイトにロゴを貼り付けるためではなく、手作業での再描画や非常に要求の厳しい印刷ファイルに引き続き役立ちます。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Figmaでロゴの色を変更したい場合、どのプリセットを選択すればよいですか？</summary>
+                        <p>モノクロのロゴタイプまたはアイコンの場合は白黒：1つの色合い、1クリック。ロゴに2つまたは3つの単色がある場合はポスター。写真を避けてください：選択や色の変更が面倒な、何十もの小さな形状が生成されます。</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FINAL CTA
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container blog-cta-wrap">
+                <h2>SVGを作成し、ツールで開きます</h2>
+                <p>PNGまたはJPGをアップロードし、SVGをダウンロードし、Figma、Canva、またはWordPressにドラッグします。無料、アカウント不要、Illustrator不要。</p>
+                <div class="double-buttons">
+                    <a href="/ja/online/" class="btn primary-btn big-btn">まずSVGを作成する →</a>
+                    <a href="/ja/offline/" class="btn secondary-btn big-btn">デスクトップアプリをダウンロード →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>オープンソース開発をサポートする</h3>
+        <p>PixelToPathは無料で使用できます。このツールで時間を節約できた場合は、コーヒーを一杯おごることを検討してください。</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ PayPalで寄付する</a>
+    </div>
+</section>
+    </main>
+
+    <footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/ja/">ホーム</a>
+        <a href="/ja/online/">オンラインツール</a>
+        <a href="/ja/offline/">デスクトップアプリ</a>
+        <a href="/ja/blog/">ブログ</a>
+        <a href="https://github.com/lorrisc/PixelToPath">オープンソース (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal">Legal notice</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+    </div>
+</footer>
+
+    <script src="../../../assets/js/ui-state.js"></script>
+</body>
+</html>
