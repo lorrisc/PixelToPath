@@ -1,0 +1,36 @@
+name: Submit to IndexNow
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**/*.html'
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Attente du déploiement (GitHub Pages)
+        run: |
+          echo "Attente de 90 secondes pour laisser le temps à GitHub Pages de se déployer..."
+          sleep 90
+
+      - name: Soumettre à IndexNow
+        run: |
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^docs/.*\.html$' || true)
+          if [ -n "$CHANGED_FILES" ]; then
+            node scripts/submit-indexnow.js $CHANGED_FILES
+          else
+            echo "Aucun fichier HTML modifié à soumettre."
+          fi
