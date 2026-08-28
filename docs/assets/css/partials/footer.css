@@ -1,31 +1,3 @@
-.partner-banner {
-    background: #fff8ee;
-    border-top: 1px solid #f0e0c8;
-    padding: 1.15rem 0;
-    text-align: center;
-}
-
-.partner-banner p {
-    margin: 0 auto;
-    max-width: 42em;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--gray);
-}
-
-.partner-banner a {
-    color: var(--primary);
-    font-weight: 600;
-    border-bottom: 1px solid rgba(255, 153, 0, 0.35);
-}
-
-.partner-banner a:hover,
-.partner-banner a:focus-visible {
-    color: var(--primary-dark);
-    border-bottom-color: var(--primary-dark);
-    outline: none;
-}
-
 footer {
     background: var(--dark);
     color: #ccc;
@@ -58,14 +30,6 @@ footer #footernavigation > *:not(:first-child)::before {
 }
 
 @media (max-width: 768px) {
-    .partner-banner {
-        padding: 1rem 0;
-    }
-
-    .partner-banner p {
-        font-size: 0.9rem;
-    }
-
     footer .container {
         flex-direction: column;
     }
