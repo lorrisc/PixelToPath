@@ -148,6 +148,76 @@
     box-shadow: 0 4px 12px rgba(255, 153, 0, 0.25);
 }
 
+/* ── Before / After logo repair ── */
+.ba-compare {
+    max-width: 820px;
+    margin: 2rem auto 2.5rem;
+}
+.ba-compare__pair {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0.75rem;
+    align-items: stretch;
+}
+.ba-compare__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+.ba-panel {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.ba-panel__label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.55rem 0.9rem;
+}
+.ba-panel--before .ba-panel__label {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+.ba-panel--after .ba-panel__label {
+    background: #ecfdf5;
+    color: #047857;
+}
+.ba-stage {
+    flex: 1;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        repeating-conic-gradient(#ececec 0% 25%, #fafafa 0% 50%)
+        50% / 16px 16px;
+    padding: 1.25rem;
+}
+.ba-logo {
+    display: block;
+    width: 180px;
+    height: 180px;
+}
+.ba-logo--pixel {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    filter: blur(0.55px) contrast(1.12) saturate(0.92);
+}
+.ba-compare figcaption {
+    color: var(--gray);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-top: 0.85rem;
+}
+
 /* ── Final CTA ── */
 .blog-cta-wrap {
     text-align: center;
@@ -196,5 +266,19 @@
     .related-tool-link {
         width: 100%;
         justify-content: center;
+    }
+    .ba-compare__pair {
+        grid-template-columns: 1fr;
+    }
+    .ba-compare__arrow {
+        transform: rotate(90deg);
+        padding: 0.25rem 0;
+    }
+    .ba-logo {
+        width: 150px;
+        height: 150px;
+    }
+    .ba-stage {
+        min-height: 190px;
     }
 }
