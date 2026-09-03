@@ -621,7 +621,25 @@
 </section>
     </main>
 
-    <footer>
+    
+<a class="sponsor" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=banner&amp;utm_campaign=site_footer" target="_blank" rel="sponsored noopener noreferrer">
+    <div class="container sponsor__inner">
+        <div class="sponsor__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
+                <path d="M8 4.5h11.2L24 9.3V26a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 8 26V4.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                <path d="M19 4.5V9h4.8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                <path d="M12 14.5h8M12 18.5h8M12 22.5h5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <div class="sponsor__copy">
+            <strong class="sponsor__title">DocuNest: 100% 离线编辑 PDF</strong>
+            <span class="sponsor__text">一款桌面编辑器内含 26 项工具。签名、合并、转换: 文件不会离开你的电脑。</span>
+        </div>
+        <span class="sponsor__cta">免费试用 7 天</span>
+    </div>
+</a>
+
+<footer>
     <div class="container" id="footernavigation">
         <p>2025 PixelToPath</p>
         <a href="/zh/">首页</a>
@@ -636,6 +654,95 @@
         <a href="/terms">Terms of Service</a>
     </div>
 </footer>
+
+<link rel="stylesheet" href="../../../assets/css/partials/docunest-popup.css">
+<div id="dn-popup" class="dn-popup" hidden>
+    <div class="dn-popup__dialog" role="dialog" aria-modal="true" aria-labelledby="dn-popup-title">
+        <div class="dn-popup__top">
+            <p class="dn-popup__brand" id="dn-popup-title">DocuNest</p>
+            <button type="button" class="dn-popup__close" data-dn-close aria-label="关闭">&times;</button>
+        </div>
+
+        <div class="dn-carousel" data-dn-carousel>
+            <div class="dn-carousel__viewport">
+                <div class="dn-carousel__track">
+                    <article class="dn-slide">
+                        <h2 class="dn-slide__title">如何彻底涂黑 PDF 中的敏感内容？</h2>
+                        <p class="dn-slide__text">永久涂黑敏感数据：标记下方的文字和图片会被销毁，而不是简单遮盖。全程在你的电脑上完成，文件绝不会上传。</p>
+                        <div class="dn-slide__frame">
+                            <img src="../../../assets/images/docunest/redact.png" alt="在 DocuNest 中涂黑 PDF" width="1920" height="1080">
+                        </div>
+                    </article>
+                    <article class="dn-slide">
+                        <h2 class="dn-slide__title">如何在不上传的情况下签署 PDF？</h2>
+                        <p class="dn-slide__text">手写或导入签名，再放置、缩放。无需账号，无需上传：文件不会离开你的电脑。</p>
+                        <div class="dn-slide__frame">
+                            <img src="../../../assets/images/docunest/sign.png" alt="在 DocuNest 中签署 PDF" width="1920" height="1080">
+                        </div>
+                    </article>
+                    <article class="dn-slide">
+                        <h2 class="dn-slide__title">如何给 PDF 添加水印？</h2>
+                        <p class="dn-slide__text">用文字或图片给每一页盖章：机密、Logo、日期。本地处理、无限制，没有云工具强加的水印。</p>
+                        <div class="dn-slide__frame">
+                            <img src="../../../assets/images/docunest/watermark.png" alt="在 DocuNest 中为 PDF 加水印" width="1920" height="1080">
+                        </div>
+                    </article>
+                    <article class="dn-slide dn-slide--offer">
+                        <h2 class="dn-slide__title dn-slide__title--xl">完整的 PDF 编辑器。100% 离线。</h2>
+                        <p class="dn-slide__text">一款桌面应用内含 26 项工具。编辑文字、签名、合并、转换。文件不会离开你的电脑。</p>
+                        <ul class="dn-offer">
+                            <li class="dn-offer__item">
+                                <strong>100% 离线</strong>
+                                <span>不上传文件。无需账号。无需云端。</span>
+                            </li>
+                            <li class="dn-offer__item">
+                                <strong>终身许可，30 €</strong>
+                                <span>一次付费。没有月费订阅。</span>
+                            </li>
+                            <li class="dn-offer__item">
+                                <strong>26 项工具，一个编辑器</strong>
+                                <span>涂黑、签名、合并、转换：全都有。</span>
+                            </li>
+                            <li class="dn-offer__item">
+                                <strong>7 天免费试用</strong>
+                                <span>无需信用卡。支持 Windows、macOS 和 Linux。</span>
+                            </li>
+                        </ul>
+                        <a class="dn-offer__cta" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup" target="_blank" rel="noopener noreferrer">下载 DocuNest</a>
+                    </article>
+                </div>
+            </div>
+            <button type="button" class="dn-carousel__nav dn-carousel__nav--prev" data-dn-prev aria-label="上一张">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15.5 4.5 8 12l7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button type="button" class="dn-carousel__nav dn-carousel__nav--next" data-dn-next aria-label="下一张">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8.5 4.5 16 12l-7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="dn-carousel__dots" data-dn-dots>
+                <button type="button" class="is-active" aria-label="1"></button>
+                <button type="button" aria-label="2"></button>
+                <button type="button" aria-label="3"></button>
+                <button type="button" aria-label="4"></button>
+            </div>
+        </div>
+
+        <div class="dn-bar">
+            <nav class="dn-bar__tools" aria-label="DocuNest">
+                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">涂黑</a>
+                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">签名</a>
+                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">水印</a>
+                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">合并</a>
+                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">编辑</a>
+            </nav>
+            <div class="dn-bar__cta-wrap">
+                <span class="dn-bar__note">7 天试用 · 无需信用卡</span>
+                <a class="dn-bar__cta" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup" target="_blank" rel="noopener noreferrer">免费试用</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../../assets/js/docunest-popup.js" defer></script>
+
 
     <script src="../../../assets/js/ui-state.js"></script>
 </body>
