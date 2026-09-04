@@ -19,6 +19,7 @@ a = Analysis(
     datas=[
         ('interface',   'interface'),
         ('moteur',      'moteur'),
+        ('locales',     'locales'),
         # GTK toujours nécessaire pour cairosvg sur Windows
         ('bin/gtk-bin', 'bin/gtk-bin'),
     ],
@@ -27,6 +28,10 @@ a = Analysis(
         'vtracer',                          # extension Rust/pyo3
         *collect_submodules('cairosvg'),
         *collect_submodules('customtkinter'),
+        # Icône de barre système : backend win32 de pystray, imports
+        # conditionnels invisibles à l'analyse statique (python-xlib est
+        # inutile sous Windows : exclu ci-dessous).
+        *collect_submodules('pystray'),
         'tkinter',
         'tkinter.ttk',
         'tkinter.filedialog',
@@ -36,6 +41,7 @@ a = Analysis(
     excludes=[
         'matplotlib', 'scipy', 'pandas',    # exclure les libs inutiles
         'IPython', 'jupyter',               # réduit la taille et la surface AV
+        'Xlib',                             # backend tray xorg : Linux uniquement
     ],
     win_no_prefer_redirects=False,
     win_private_assemblies=False,

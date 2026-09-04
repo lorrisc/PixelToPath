@@ -1,7 +1,7 @@
-# PixelToPathLinux.spec
+# PixelToPathCLILinux.spec
+# CLI Pro (`ptp`) — onefile comme le build Linux du GUI, console VISIBLE.
 # Prérequis : bootloader recompilé depuis les sources PyInstaller
-# pip install vtracer cairosvg customtkinter tkinterdnd2 Pillow numpy
-# Sur Linux, cairosvg utilise libcairo du système (pas besoin de gtk-bin)
+# pip install vtracer Pillow
 
 from PyInstaller.building.build_main import Analysis, PYZ, EXE
 from PyInstaller.utils.hooks import collect_submodules
@@ -9,33 +9,27 @@ import sys, os
 
 block_cipher = None
 
+# La CLI n'importe jamais interface/ : core/ + moteur/ uniquement.
+# Pas de cairosvg (rendu d'aperçu réservé au GUI).
+
 a = Analysis(
-    ['app.py'],
+    ['cli.py'],
     pathex=[os.path.abspath('.')],
     binaries=[],
     datas=[
-        ('interface', 'interface'),
-        ('moteur',    'moteur'),
-        ('locales',   'locales'),
+        ('moteur',  'moteur'),
+        ('locales', 'locales'),
     ],
     hiddenimports=[
-        'PIL._tkinter_finder',
         'vtracer',
-        *collect_submodules('cairosvg'),
-        *collect_submodules('customtkinter'),
-        # Icône de barre système : pystray choisit son backend par imports
-        # conditionnels (appindicator/ayatana/xorg) invisibles à l'analyse
-        # statique — tout embarquer, plus python-xlib pour le backend xorg.
-        *collect_submodules('pystray'),
-        *collect_submodules('Xlib'),
-        'tkinter',
-        'tkinter.ttk',
-        'tkinter.filedialog',
-        'tkinter.messagebox',
+        *collect_submodules('PIL'),
     ],
     hookspath=[],
     runtime_hooks=[],
     excludes=[
+        'customtkinter', 'tkinterdnd2',     # GUI uniquement
+        'tkinter', 'tkinter.ttk',           # la CLI n'ouvre aucune fenêtre
+        'cairosvg',                         # aperçu GUI uniquement
         'matplotlib', 'scipy', 'pandas',
         'IPython', 'jupyter',
     ],
@@ -54,13 +48,13 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='PixelToPath',
+    name='ptp',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
     upx=False,              # UPX déclenche les AV
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=False,
+    console=True,
     icon='interface/assets/app_icon.ico',
 )
