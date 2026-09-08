@@ -8,6 +8,7 @@ GUI) et les vues orchestrent des widgets muets.
 import argparse
 import os
 import queue
+import signal
 import tempfile
 
 import customtkinter as ctk
@@ -31,6 +32,7 @@ from interface.widgets import NavRail, StatusBar
 from interface.widgets.dialogs import UpgradeDialog
 from interface.views import (
     BatchView,
+    CliView,
     ConvertView,
     HotFolderView,
     LockedView,
@@ -39,10 +41,11 @@ from interface.views import (
 )
 
 # Vues réservées à la licence Pro → LockedView tant que pas de clé active.
-# Titre = clé i18n, résolu à la construction de la vue (t).
+# Titre = clé i18n, résolu à la construction de la vue (t) ; slug = détail
+# « ce que débloque Pro » (clés license.locked_<slug>_*) affiché en locked.
 PRO_VIEWS = {
-    "batch": ("nav.batch", BatchView),
-    "hotfolder": ("nav.hotfolder", HotFolderView),
+    "batch": ("nav.batch", BatchView, "batch"),
+    "hotfolder": ("nav.hotfolder", HotFolderView, "hotfolder"),
 }
 
 
@@ -50,7 +53,10 @@ class App(TkinterDnD.Tk):
     """Fenêtre principale : rail + conteneur de vues + barre d'état."""
 
     def __init__(self, ctx: AppContext, start_minimized: bool = False):
-        super().__init__()
+        # className = WM_CLASS/app_id de la fenêtre : c'est ce qui permet au
+        # gestionnaire de fenêtres (KDE/GNOME, Wayland inclus) de rattacher
+        # la tâche au .desktop → icône et nom réels dans la barre des tâches.
+        super().__init__(className="PixelToPath")
         self.ctx = ctx
         self.title(APP_NAME)
 
@@ -91,7 +97,7 @@ class App(TkinterDnD.Tk):
         self._focus_mode = False
         self._current = None
         self._views: dict[str, object | None] = {
-            key: None for key in ("convert", "batch", "hotfolder",
+            key: None for key in ("convert", "batch", "hotfolder", "cli",
                                   "partners", "settings")
         }
 
@@ -258,7 +264,8 @@ class App(TkinterDnD.Tk):
         )
         self._nav.grid(row=0, column=0, sticky="ns")
         self._nav.select("convert")
-        self._nav.set_pro(self.ctx.is_pro())
+        self._pro_shown = self.ctx.is_pro()  # état Pro réellement affiché
+        self._nav.set_pro(self._pro_shown)
 
         self._content = ctk.CTkFrame(self, fg_color=pair("bg"))
         self._content.grid(row=0, column=1, sticky="nsew")
@@ -295,6 +302,11 @@ class App(TkinterDnD.Tk):
             return ConvertView(self._content, self.ctx)
         if key == "partners":
             return PartnersView(self._content, self.ctx)
+        if key == "cli":
+            # Page explicative, jamais verrouillée : l'utilisateur gratuit
+            # doit pouvoir se faire une opinion avant l'achat.
+            return CliView(self._content, self.ctx,
+                           on_upgrade=self._on_pro_status)
         if key == "settings":
             return SettingsView(
                 self._content, self.ctx,
@@ -303,12 +315,12 @@ class App(TkinterDnD.Tk):
                 on_pro_change=self._refresh_pro_state,
             )
         if key in PRO_VIEWS:
-            feature_key, view_cls = PRO_VIEWS[key]
+            feature_key, view_cls, detail_slug = PRO_VIEWS[key]
             if self.ctx.is_pro():
                 return view_cls(self._content, self.ctx)
             return LockedView(
                 self._content, self.ctx, feature=t(feature_key),
-                on_upgrade=self._on_pro_status,
+                detail=detail_slug, on_upgrade=self._on_pro_status,
             )
         raise KeyError(key)
 
@@ -370,9 +382,19 @@ class App(TkinterDnD.Tk):
         else:
             UpgradeDialog(self, self.ctx, on_changed=self._refresh_pro_state)
 
+    def _on_periodic_validation(self, _ok: bool, _msg: str) -> None:
+        """Revalidation hebdomadaire : l'UI ne bascule que si l'état Pro a
+        réellement changé — une validation « toujours active » ne doit pas
+        reconstruire la vue courante. Aucune réponse réseau (hors-ligne) ne
+        délogue personne : le purge seul déclenche une bascule."""
+        if self.ctx.is_pro() != self._pro_shown:
+            self._refresh_pro_state()
+
     def _refresh_pro_state(self):
-        """Après activation/désactivation : rail + vue Pro courante reconstruite."""
+        """Après activation/désactivation (dialogue ou revalidation
+        périodique) : rail + toutes les vues Pro reconstruites au bon état."""
         pro = self.ctx.is_pro()
+        self._pro_shown = pro
         self._nav.set_pro(pro)
         # La surveillance suit la licence : perte → arrêt (les entrées
         # gardent enabled=True, la réactivation suffit à reprendre) ;
@@ -388,14 +410,28 @@ class App(TkinterDnD.Tk):
         if convert is not None:
             convert.on_show()
         key = self._current
+        # Toutes les vues Pro construites dans l'ANCIEN état de licence
+        # (LockedView encore en cache après activation, ou l'inverse) sont
+        # détruites : la navigation les reconstruit au bon état — sinon les
+        # panneaux déjà visités resteraient verrouillés jusqu'au redémarrage.
+        for pro_key in PRO_VIEWS:
+            view = self._views.get(pro_key)
+            if view is None:
+                continue
+            locked = isinstance(view, LockedView)
+            if locked == pro:  # état affiché ≠ état réel
+                view.destroy()
+                self._views[pro_key] = None
         if key in PRO_VIEWS:
-            # La vue verrouillée est remplacée par la vraie (ou l'inverse) :
-            # jamais construite en double, l'ancienne est détruite.
-            old = self._views.get(key)
-            if old is not None:
-                old.destroy()
-            self._views[key] = None
+            # Jamais construite en double : si l'affichée vient d'être
+            # détruite ci-dessus, show_view la reconstruit au bon état.
             self.show_view(key)
+        else:
+            current = self._views.get(key)
+            if current is not None:
+                # Vue non verrouillée restée affichée (page CLI) : elle
+                # resynchronise elle-même son pied de page / sa puce Pro.
+                current.on_show()
         self._status.set_status(
             t("app.pro_active") if pro else t("app.free_mode"),
             "ok" if pro else "idle",
@@ -404,10 +440,13 @@ class App(TkinterDnD.Tk):
     # ── Fermeture ────────────────────────────────────────────────────────
     def on_close(self):
         # Au moins une surveillance active : la fenêtre se masque, tout
-        # continue en arrière-plan via l'icône système.
+        # continue en arrière-plan via l'icône système. Sans icône possible,
+        # masquer rendrait l'app inatteignable (ni rouverture ni arrêt) →
+        # on quitte réellement.
         if self.ctx.hotfolders is not None and self.ctx.hotfolders.any_running():
-            self._hide_to_tray()
-            return
+            if self.tray.show():
+                self._hide_to_tray()
+                return
         self._really_quit()
 
     def _really_quit(self):
@@ -450,6 +489,24 @@ def get_scale():
     return dpi / 96
 
 
+def _lock_path() -> str:
+    """Lock mono-instance par utilisateur (os.getuid absent sous Windows)."""
+    uid = getattr(os, "getuid", lambda: 0)()
+    return os.path.join(tempfile.gettempdir(), f"PixelToPath-{uid}.lock")
+
+
+def _living_pid(lock_path: str) -> int | None:
+    """PID consigné dans le lock, s'il désigne un process vivant — None
+    sinon (absent, illisible ou lock obsolète d'un crash précédent)."""
+    try:
+        with open(lock_path) as lock:
+            pid = int(lock.read().strip())
+        os.kill(pid, 0)  # vivant ? (lève OSError sinon)
+        return pid
+    except (OSError, ValueError):
+        return None
+
+
 def main():
     scale = get_scale()
     ctk.set_widget_scaling(scale)
@@ -467,6 +524,25 @@ def main():
         "--minimized", action="store_true",
         help=t("app.minimized_help"))
     args = parser.parse_args()
+
+    # Garde mono-instance : un second lancement réveille l'instance déjà
+    # vivante (fenêtre masquée dans l'icône système) au lieu d'en empiler
+    # une autre — les surveillances hot folder ne se démultiplient plus.
+    lock_path = _lock_path()
+    pid = _living_pid(lock_path)
+    if pid is not None:
+        if hasattr(signal, "SIGUSR1"):
+            try:
+                os.kill(pid, signal.SIGUSR1)  # remet la fenêtre au premier plan
+                print(t("app.already_running"))
+                return
+            except OSError:
+                pass  # disparue depuis le test → on prend le relais
+        else:
+            print(t("app.already_running"))
+            return
+    with open(lock_path, "w") as lock:
+        lock.write(str(os.getpid()))
 
     license_manager = LicenseManager(config)
     presets = PresetController(config)
@@ -496,15 +572,28 @@ def main():
     app = App(ctx, start_minimized=args.minimized)
     holder["app"] = app
     # La fenêtre existe : les réponses réseau peuvent revenir au thread GUI
-    # et la revalidation hebdomadaire démarre.
+    # et la revalidation hebdomadaire démarre (une purge serveur — jamais une
+    # absence de réseau — bascule l'UI en mode gratuit).
     license_manager.set_scheduler(app.after)
-    license_manager.start_periodic_validation()
+    license_manager.start_periodic_validation(app._on_periodic_validation)
 
     icon = tk.PhotoImage(file=resource_path("interface/assets/app_icon.png"))
     app.iconphoto(True, icon)
     app._icon = icon  # garde une référence (sinon garbage-collecté)
 
-    app.mainloop()
+    # Réveil par une seconde instance (mono-instance) : remontée de fenêtre
+    # programmée sur le thread Tk — le handler signal ne touche pas à Tk.
+    if hasattr(signal, "SIGUSR1"):
+        signal.signal(
+            signal.SIGUSR1, lambda *_: app.after(0, app._restore))
+
+    try:
+        app.mainloop()
+    finally:
+        try:
+            os.remove(lock_path)
+        except OSError:
+            pass  # déjà parti (lock obsolète géré au prochain lancement)
 
 
 if __name__ == "__main__":

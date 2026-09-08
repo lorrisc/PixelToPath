@@ -310,11 +310,23 @@ class LicenseDialog(Dialog):
         ).pack(fill="x")
 
         self._buttons(t("license.activate"), self._activate)
+        # Le bouton naît désactivé (_buttons) : armé dès qu'une clé est
+        # saisie — KeyRelease couvre la frappe et le coller Ctrl+V,
+        # ButtonRelease le coller milieu de souris.
+        self._entry.bind("<KeyRelease>", lambda _e: self._validate_key())
+        self._entry.bind("<ButtonRelease>", lambda _e: self._validate_key())
         self._on_return = self._activate
         self.after(80, self._entry.focus_set)
 
+    def _validate_key(self) -> bool:
+        has_key = bool(self._entry.get().strip())
+        if self._ok_btn is not None:
+            self._ok_btn.configure(
+                state="normal" if has_key else "disabled")
+        return has_key
+
     def _activate(self) -> None:
-        if self._busy:
+        if self._busy or not self._validate_key():
             return
         self._busy = True
         self._ok_btn.configure(state="disabled")

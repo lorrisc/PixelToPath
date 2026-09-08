@@ -22,6 +22,7 @@ a = Analysis(
     ],
     hiddenimports=[
         'vtracer',
+        'potrace',                      # port pur Python de Potrace (moteur binaire)
         *collect_submodules('PIL'),
     ],
     hookspath=[],
@@ -38,6 +39,11 @@ a = Analysis(
     cipher=block_cipher,
     noarchive=False,
 )
+
+# libgcc_s : NE PAS embarquer — cf. PixelToPathLinuxDir.spec (GLIBC_2.35 du
+# rétroport EL9). Obligatoire ici : l'archive onefile échappe à l'audit
+# objdump de build_linux.sh, le filtre à l'Analysis est le seul fiable.
+a.binaries = [x for x in a.binaries if 'libgcc_s' not in x[0]]
 
 pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 

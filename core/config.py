@@ -16,7 +16,8 @@ _DEFAULTS = {
     "schema_version": SCHEMA_VERSION,
     "appearance": {"mode": "light"},
     "general": {"language": "en"},
-    "convert": {"active_preset": "bw", "last_params": {}},
+    "convert": {"active_preset": "bw", "last_params": {},
+                "auto_detect": False, "expert_params": False},
     "custom_presets": {},   # nom → kwargs vtracer (dict : ordre d'insertion)
     "pro": {
         "license_key": "",

@@ -23,6 +23,7 @@ a = Analysis(
     ],
     hiddenimports=[
         'vtracer',                          # extension Rust/pyo3
+        'potrace',                      # port pur Python de Potrace (moteur binaire)
         *collect_submodules('PIL'),
     ],
     hookspath=[],

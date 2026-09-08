@@ -5,6 +5,7 @@
     "convert": "Convertir",
     "batch": "Lotes",
     "hotfolder": "Carpeta caliente",
+    "cli": "CLI",
     "partners": "Socios",
     "settings": "Ajustes"
   },
@@ -34,6 +35,7 @@
 
   "app": {
     "tagline": "Conversión imagen → SVG por lotes",
+    "already_running": "PixelToPath ya está en ejecución — se vuelve a traer al primer plano.",
     "minimized_help": "iniciar oculto (icono del sistema) — usado para inicio automático al iniciar sesión",
     "tray_open": "Abrir {app}",
     "tray_quit": "Salir",
@@ -53,6 +55,7 @@
   "presets": {
     "builtin": {"bw": "Blanco y negro", "poster": "Póster", "photo": "Foto"},
     "custom": "Personalizado",
+    "auto": "Auto",
     "save_title": "Guardar el preajuste",
     "manage_title": "Gestionar preajustes personalizados",
     "name_label": "Nombre del preajuste",
@@ -87,6 +90,18 @@
     "locked_line1": "Esta función es parte de PixelToPath Pro.",
     "locked_line2": "Conversión por lotes · Carpeta caliente · Interfaz de línea de comandos",
     "locked_cta": "Actualizar a Pro",
+    "locked_batch_title": "Lo que desbloquea la conversión por lotes",
+    "locked_batch_1": "Suelte todas sus imágenes (PNG, JPG, BMP, WEBP): se convierten en SVG en la carpeta que elija",
+    "locked_batch_2": "Cola con progreso y cancelación — un archivo o doscientos, el mismo gesto",
+    "locked_batch_3": "Presets bw, poster, photo o los suyos propios, aplicados por igual a todos los archivos",
+    "locked_batch_4": "Ajustes finos para todo el lote (colores, suavizado, detalles) con vista previa vectorial en directo",
+    "locked_batch_5": "Arrastrar y soltar: desde el explorador de archivos hasta la cola",
+    "locked_hotfolder_title": "Lo que desbloquea la carpeta caliente",
+    "locked_hotfolder_1": "Vigile una o varias carpetas: cualquier imagen que suelte se convierte en SVG automáticamente",
+    "locked_hotfolder_2": "Cada carpeta conserva su propio preset — escáneres → bw, logotipos → poster, como quiera",
+    "locked_hotfolder_3": "Los SVG llegan solos a la carpeta de destino, sin que usted haga nada",
+    "locked_hotfolder_4": "Funciona en segundo plano mientras PixelToPath esté abierto (incluso minimizado en la bandeja)",
+    "locked_hotfolder_5": "Registro de actividad: qué se convirtió y cuándo, con carpetas que se pueden volver a abrir",
     "state_active": "Pro activa",
     "state_expired": "presente pero caducada",
     "state_line": "Licencia: {state} (•••• {tail})",
@@ -131,6 +146,7 @@
     "loaded": "Imagen cargada",
     "removed": "Imagen eliminada",
     "converting": "Conversión en curso…",
+    "detected": "Preajuste detectado: {name}",
     "failed": "Fallo de conversión: {err}",
     "generated": "SVG generado · {kb} KB",
     "saved_to": "Guardado: {name}",
@@ -241,10 +257,13 @@
     "title": "Ajustes",
     "language": "01 · Idioma",
     "theme": "02 · Tema",
-    "license": "03 · Licencia",
-    "about": "04 · Acerca de",
+    "license": "04 · Licencia",
+    "about": "05 · Acerca de",
     "theme_light": "Claro",
     "theme_dark": "Oscuro",
+    "conversion": "03 · Conversión",
+    "auto_detect": "Detectar automáticamente el mejor preajuste",
+    "auto_detect_help": "Al cargar cada imagen, se elige automáticamente un preajuste (Blanco y negro, Póster o Foto) según su contenido.",
     "about_line": "© 2025 CRAPPIER — Licencia MIT"
   },
 
@@ -291,6 +310,21 @@
     "strip_cricut": "Dé vida a sus SVG: corte vinilo, papel y tela en las máquinas Cricut.",
     "strip_lightburn": "Grabe sus SVG con láser en una sola pasada — controle todo desde LightBurn."
   },
+
+  "cli_page": {
+    "title": "Línea de comandos",
+    "intro": "PixelToPath en su terminal: el mismo motor de conversión que la interfaz, controlado por el comando ptp.",
+    "unlock_title": "Lo que desbloquea Pro",
+    "f1": "El comando ptp, incluido con Pro — el mismo motor, los mismos presets (bw, poster, photo, personalizados)",
+    "f2": "Conversión individual o por lotes: ptp convert image.png -o svg/ --preset bw",
+    "f3": "Ajustes finos: --colormode, --mode, --invert y cada parámetro del motor mediante --set",
+    "f4": "Gestión de la licencia sin interfaz: ptp license activate · status · deactivate",
+    "f5": "Automatizable y apto para CI: códigos de retorno claros — 0 éxito · 1 error de conversión · 2 falta licencia",
+    "examples": "Ejemplos",
+    "note": "La CLI forma parte de PixelToPath Pro. Una vez activada la licencia, el comando ptp está disponible de inmediato.",
+    "hint": "Consejo: la licencia se activa desde esta ventana o directamente en el terminal (ptp license activate CLAVE)."
+  },
+
 
   "cli": {
     "desc": "{app} {version} — conversión imagen → SVG.",
@@ -345,6 +379,13 @@
     "splice_threshold": "Umbral de empalme",
     "splice_threshold_help": "Ángulo por debajo del cual dos trazados se unen en un solo punto.",
     "max_iterations": "Iteraciones máx",
-    "max_iterations_help": "Pasadas de refinamiento de las curvas: más alto = más suave, más lento."
+    "max_iterations_help": "Pasadas de refinamiento de las curvas: más alto = más suave, más lento.",
+    "turdsize": "Filtro de motas",
+    "turdsize_help": "Ignora las formas más pequeñas que esta área (en píxeles): más alto = menos ruido.",
+    "alphamax": "Suavizado de esquinas",
+    "alphamax_help": "0 conserva las esquinas rectas (polígono); valores más altos dan curvas más suaves (predeterminado de Potrace: 1,0).",
+    "opttolerance": "Optimización de curvas",
+    "opttolerance_help": "Tolerancia para fusionar segmentos: más alta = menos nodos y un SVG más ligero.",
+    "expert": "Ajustes avanzados"
   }
 }

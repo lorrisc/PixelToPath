@@ -5,6 +5,7 @@
     "convert": "Convertir",
     "batch": "Lots",
     "hotfolder": "Hot folder",
+    "cli": "CLI",
     "partners": "Partenaires",
     "settings": "Paramètres"
   },
@@ -34,6 +35,7 @@
 
   "app": {
     "tagline": "Conversion image → SVG par lots",
+    "already_running": "PixelToPath est déjà lancé — la fenêtre est remise au premier plan.",
     "minimized_help": "démarrer masqué (icône système) — utilisé par le lancement automatique à l'ouverture de session",
     "tray_open": "Ouvrir {app}",
     "tray_quit": "Quitter",
@@ -53,6 +55,7 @@
   "presets": {
     "builtin": {"bw": "Noir & blanc", "poster": "Poster", "photo": "Photo"},
     "custom": "Personnalisé",
+    "auto": "Auto",
     "save_title": "Enregistrer le preset",
     "manage_title": "Gérer les presets personnalisés",
     "name_label": "Nom du preset",
@@ -87,6 +90,18 @@
     "locked_line1": "Cette fonction fait partie de PixelToPath Pro.",
     "locked_line2": "Conversion par lots · Hot folder · Interface en ligne de commande",
     "locked_cta": "Passer à Pro",
+    "locked_batch_title": "Ce que débloque la conversion par lots",
+    "locked_batch_1": "Déposez toutes vos images (PNG, JPG, BMP, WEBP) : elles deviennent des SVG dans le dossier de votre choix",
+    "locked_batch_2": "File d'attente avec progression et annulation — un fichier ou deux cents, même geste",
+    "locked_batch_3": "Presets bw, poster, photo ou vos propres presets, appliqués à l'identique à tous les fichiers",
+    "locked_batch_4": "Réglages ajustables pour tout le lot (couleurs, lissage, détails) avec aperçu vectoriel en direct",
+    "locked_batch_5": "Glisser-déposer : depuis l'explorateur de fichiers jusqu'à la file d'attente",
+    "locked_hotfolder_title": "Ce que débloque le Hot folder",
+    "locked_hotfolder_1": "Surveillez un ou plusieurs dossiers : toute image déposée est convertie en SVG automatiquement",
+    "locked_hotfolder_2": "Chaque dossier garde son propre preset — scans → bw, logos → poster, comme vous voulez",
+    "locked_hotfolder_3": "Les SVG arrivent dans le dossier de destination, sans aucune action de votre part",
+    "locked_hotfolder_4": "Tourne en arrière-plan tant que PixelToPath est ouvert (même réduit dans la zone de notification)",
+    "locked_hotfolder_5": "Journal d'activité : ce qui a été converti, quand, avec dossiers rouvrables",
     "state_active": "Pro active",
     "state_expired": "présente mais expirée",
     "state_line": "Licence : {state} (•••• {tail})",
@@ -131,6 +146,7 @@
     "loaded": "Image chargée",
     "removed": "Image supprimée",
     "converting": "Conversion en cours…",
+    "detected": "Preset détecté : {name}",
     "failed": "Échec de la conversion : {err}",
     "generated": "SVG généré · {kb} Ko",
     "saved_to": "Enregistré : {name}",
@@ -241,10 +257,13 @@
     "title": "Paramètres",
     "language": "01 · Langue",
     "theme": "02 · Thème",
-    "license": "03 · Licence",
-    "about": "04 · À propos",
+    "license": "04 · Licence",
+    "about": "05 · À propos",
     "theme_light": "Clair",
     "theme_dark": "Sombre",
+    "conversion": "03 · Conversion",
+    "auto_detect": "Détecter automatiquement le meilleur preset",
+    "auto_detect_help": "À chaque image chargée, un preset (Noir & blanc, Poster ou Photo) est choisi automatiquement d'après son contenu.",
     "about_line": "© 2025 CRAPPIER — Licence MIT"
   },
 
@@ -290,6 +309,20 @@
     "strip_docunest": "Éditeur PDF 100 % hors ligne — caviardage, signature, édition : essai gratuit de 7 jours.",
     "strip_cricut": "Donnez vie à vos SVG : découpe vinyle, papier et tissu sur les machines Cricut.",
     "strip_lightburn": "Gravez vos SVG au laser en un seul passage — pilotez tout depuis LightBurn."
+  },
+
+  "cli_page": {
+    "title": "Ligne de commande",
+    "intro": "PixelToPath dans votre terminal : le même moteur de conversion que l'interface, piloté par la commande ptp.",
+    "unlock_title": "Ce que débloque Pro",
+    "f1": "La commande ptp, incluse avec Pro — même moteur, mêmes presets (bw, poster, photo, personnalisés)",
+    "f2": "Conversion à l'unité ou en série : ptp convert image.png -o svg/ --preset bw",
+    "f3": "Réglages fins : --colormode, --mode, --invert, et chaque paramètre du moteur via --set",
+    "f4": "Gestion de la licence sans l'interface : ptp license activate · status · deactivate",
+    "f5": "Scriptable et compatible CI : codes de retour clairs — 0 succès · 1 erreur de conversion · 2 licence manquante",
+    "examples": "Exemples",
+    "note": "La CLI fait partie de PixelToPath Pro. Une fois la licence activée, la commande ptp est disponible immédiatement.",
+    "hint": "Astuce : la licence s'active depuis cette fenêtre ou directement dans le terminal (ptp license activate CLÉ)."
   },
 
   "cli": {
@@ -345,6 +378,13 @@
     "splice_threshold": "Seuil d'assemblage",
     "splice_threshold_help": "Angle en dessous duquel deux chemins sont raccordés en un seul point.",
     "max_iterations": "Itérations max",
-    "max_iterations_help": "Passages d'affinage des courbes : plus élevé = plus lisse, plus lent."
+    "max_iterations_help": "Passages d'affinage des courbes : plus élevé = plus lisse, plus lent.",
+    "turdsize": "Filtre anti-taches",
+    "turdsize_help": "Ignore les formes plus petites que cette aire (en pixels) : plus élevé = moins de bruit.",
+    "alphamax": "Lissage des angles",
+    "alphamax_help": "0 garde les angles vifs (polygone) ; plus élevé, les courbes sont plus lisses (défaut Potrace : 1,0).",
+    "opttolerance": "Optimisation des courbes",
+    "opttolerance_help": "Tolérance de fusion des segments : plus élevée = moins de nœuds et un SVG plus léger.",
+    "expert": "Réglages avancés"
   }
 }

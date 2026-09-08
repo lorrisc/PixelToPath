@@ -1,9 +1,9 @@
-# PixelToPathLinux.spec
-# Prérequis : bootloader recompilé depuis les sources PyInstaller
-# pip install vtracer cairosvg customtkinter tkinterdnd2 Pillow numpy
-# Sur Linux, cairosvg utilise libcairo du système (pas besoin de gtk-bin)
+# PixelToPathLinuxDir.spec
+# Variante ONEDIR du build Linux GUI : layout canonique pour l'AppImage
+# (scripts/build_appimage.sh) — démarrage immédiat, pas d'auto-extraction.
+# Le onefile (PixelToPathLinux.spec) reste la cible « binaire nu ».
 
-from PyInstaller.building.build_main import Analysis, PYZ, EXE
+from PyInstaller.building.build_main import Analysis, PYZ, EXE, COLLECT
 from PyInstaller.utils.hooks import collect_submodules
 import sys, os
 
@@ -52,22 +52,35 @@ a = Analysis(
     noarchive=False,
 )
 
+# libgcc_s : NE PAS embarquer. La copie de la base de build (Alma 9) exige
+# GLIBC_2.35 — symboles rétroportés par EL9 dans sa glibc 2.34, absents des
+# glibc ≥ 2.34 pures (Fedora 35-36…). Comme les wheels manylinux : celle du
+# système cible (présente partout, toujours cohérente avec sa glibc).
+a.binaries = [x for x in a.binaries if 'libgcc_s' not in x[0]]
+
 pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 
 exe = EXE(
     pyz,
     a.scripts,
-    a.binaries,
-    a.zipfiles,
-    a.datas,
     [],
+    exclude_binaries=True,   # onedir : les binaires partent dans le COLLECT
     name='PixelToPath',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
-    upx=False,              # UPX déclenche les AV
-    upx_exclude=[],
-    runtime_tmpdir=None,
+    upx=False,               # UPX déclenche les AV
     console=False,
     icon='interface/assets/app_icon.ico',
+)
+
+coll = COLLECT(
+    exe,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
+    strip=False,
+    upx=False,
+    upx_exclude=[],
+    name='PixelToPath',
 )

@@ -7,7 +7,9 @@ toujours livrés via `on_done(ok, message)` :
 - scheduler None (CLI/tests) → exécution synchrone, callback appelé inline.
 
 L'état « Pro » est purement local (is_pro) : clé présente ET (validée il y a
-moins de 7 jours OU activée il y a moins de 30 jours — grâce hors-ligne).
+moins de 7 jours OU dernier succès — activation ou validation — de moins de
+30 jours — grâce hors-ligne). Une réponse serveur formelle d'invalidité est
+la seule chose qui purge ; pas de réseau n'y change rien.
 """
 
 import json
@@ -38,6 +40,12 @@ def _parse(ts) -> datetime | None:
         return None
 
 
+def _latest(*dts: datetime | None) -> datetime | None:
+    """Le plus récent des horodatages fournis (None s'ils sont tous vides)."""
+    known = [d for d in dts if d is not None]
+    return max(known) if known else None
+
+
 class LicenseManager:
     """Activate/validate/deactivate + état local persisté (config « pro »)."""
 
@@ -61,10 +69,12 @@ class LicenseManager:
         validated = _parse(self._config.get("pro", "last_validated_at", ""))
         if validated and now - validated < VALIDATE_AFTER:
             return True
-        # Grâce hors-ligne : pas de revalidation réussie récente, mais une
-        # activation assez fraîche — l'app reste Pro sans réseau.
-        activated = _parse(self._config.get("pro", "activated_at", ""))
-        return bool(activated and now - activated < GRACE)
+        # Grâce hors-ligne : ancrée sur le DERNIER SUCCÈS (validation ou
+        # activation) — un client qui validait chaque semaine puis s'absente
+        # garde ses 30 jours complets, même bien après l'activation.
+        last = _latest(validated,
+                       _parse(self._config.get("pro", "activated_at", "")))
+        return bool(last and now - last < GRACE)
 
     def _purge(self) -> None:
         for key in ("license_key", "instance_id", "activated_at",
@@ -202,12 +212,16 @@ class LicenseManager:
         self.validate(on_done)
         return True
 
-    def start_periodic_validation(self) -> None:
+    def start_periodic_validation(self, on_done=None) -> None:
+        """Revalidation hebdomadaire. `on_done(ok, message)` permet au shell
+        de rafraîchir l'UI quand l'état bascule (purge détectée côté serveur) ;
+        absent → réponse ignorée (comportement d'origine)."""
         if self._scheduler is None:
             return
+        on_done = on_done or (lambda _ok, _msg: None)
 
         def tick():
-            self.maybe_revalidate(lambda _ok, _msg: None)
+            self.maybe_revalidate(on_done)
             self._scheduler(WEEK_MS, tick)
 
         self._scheduler(WEEK_MS, tick)

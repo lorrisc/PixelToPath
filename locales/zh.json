@@ -5,6 +5,7 @@
     "convert": "转换",
     "batch": "批量",
     "hotfolder": "热文件夹",
+    "cli": "CLI",
     "partners": "合作伙伴",
     "settings": "设置"
   },
@@ -34,6 +35,7 @@
 
   "app": {
     "tagline": "批量图像 → SVG 转换",
+    "already_running": "PixelToPath 已在运行 — 正在将窗口置于前台。",
     "minimized_help": "隐藏启动（系统托盘）— 登录自动启动时使用",
     "tray_open": "打开 {app}",
     "tray_quit": "退出",
@@ -53,6 +55,7 @@
   "presets": {
     "builtin": {"bw": "黑白", "poster": "海报", "photo": "照片"},
     "custom": "自定义",
+    "auto": "自动",
     "save_title": "保存预设",
     "manage_title": "管理自定义预设",
     "name_label": "预设名称",
@@ -87,6 +90,18 @@
     "locked_line1": "此功能属于 PixelToPath Pro。",
     "locked_line2": "批量转换 · 热文件夹 · 命令行界面",
     "locked_cta": "升级至 Pro",
+    "locked_batch_title": "批量转换解锁的功能",
+    "locked_batch_1": "放入您的所有图片（PNG、JPG、BMP、WEBP）：它们会在您选择的文件夹中变成 SVG",
+    "locked_batch_2": "队列带进度与取消——一个文件还是两百个，操作一样",
+    "locked_batch_3": "bw、poster、photo 预设或您自己的预设，对所有文件统一应用",
+    "locked_batch_4": "整批微调（颜色、平滑、细节），矢量预览实时可见",
+    "locked_batch_5": "拖放：从文件管理器直接进入队列",
+    "locked_hotfolder_title": "热文件夹解锁的功能",
+    "locked_hotfolder_1": "监视一个或多个文件夹：放入的任何图片都会自动转换为 SVG",
+    "locked_hotfolder_2": "每个文件夹保留自己的预设——扫描件 → bw，徽标 → poster，随您所愿",
+    "locked_hotfolder_3": "SVG 自动出现在目标文件夹中，无需您做任何操作",
+    "locked_hotfolder_4": "在 PixelToPath 打开期间于后台运行（即使最小化到托盘）",
+    "locked_hotfolder_5": "活动日志：转换了什么、何时转换，文件夹可随时重新打开",
     "state_active": "Pro 已激活",
     "state_expired": "存在但已过期",
     "state_line": "许可证：{state} (•••• {tail})",
@@ -131,6 +146,7 @@
     "loaded": "图像已加载",
     "removed": "图像已移除",
     "converting": "正在转换…",
+    "detected": "已检测到预设：{name}",
     "failed": "转换失败：{err}",
     "generated": "已生成 SVG · {kb} KB",
     "saved_to": "已保存至：{name}",
@@ -241,10 +257,13 @@
     "title": "设置",
     "language": "01 · 语言",
     "theme": "02 · 主题",
-    "license": "03 · 许可证",
-    "about": "04 · 关于",
+    "license": "04 · 许可证",
+    "about": "05 · 关于",
     "theme_light": "浅色",
     "theme_dark": "深色",
+    "conversion": "03 · 转换",
+    "auto_detect": "自动检测最合适的预设",
+    "auto_detect_help": "每次加载图像时，都会根据图像内容自动选择一个预设（黑白、海报或照片）。",
     "about_line": "© 2025 CRAPPIER — MIT 许可证"
   },
 
@@ -291,6 +310,21 @@
     "strip_cricut": "让您的 SVG 活起来：在 Cricut 机器上切割乙烯基、纸张和织物。",
     "strip_lightburn": "一次性激光雕刻您的 SVG — 通过 LightBurn 控制一切。"
   },
+
+  "cli_page": {
+    "title": "命令行",
+    "intro": "终端中的 PixelToPath：与界面相同的转换引擎，由 ptp 命令驱动。",
+    "unlock_title": "Pro 解锁的功能",
+    "f1": "ptp 命令，随 Pro 提供——相同引擎、相同预设（bw、poster、photo、自定义）",
+    "f2": "单张或批量转换：ptp convert image.png -o svg/ --preset bw",
+    "f3": "精细调节：--colormode、--mode、--invert，以及通过 --set 设置每个引擎参数",
+    "f4": "无需界面即可管理许可证：ptp license activate · status · deactivate",
+    "f5": "可编写脚本、适配 CI：清晰的返回码——0 成功 · 1 转换错误 · 2 缺少许可证",
+    "examples": "示例",
+    "note": "CLI 属于 PixelToPath Pro。许可证激活后，ptp 命令立即可用。",
+    "hint": "提示：许可证可在此窗口或直接在终端中激活（ptp license activate 密钥）。"
+  },
+
 
   "cli": {
     "desc": "{app} {version} — 图像 → SVG 转换。",
@@ -345,6 +379,13 @@
     "splice_threshold": "拼接阈值",
     "splice_threshold_help": "低于此角度的两条路径将在一个点处连接成一条。",
     "max_iterations": "最大迭代次数",
-    "max_iterations_help": "精细化曲线的次数：越高 = 越平滑，越慢。"
+    "max_iterations_help": "精细化曲线的次数：越高 = 越平滑，越慢。",
+    "turdsize": "斑点过滤",
+    "turdsize_help": "忽略小于此面积（像素）的形状：数值越大噪点越少。",
+    "alphamax": "圆角平滑",
+    "alphamax_help": "0 保留尖锐角（多边形）；数值越大曲线越平滑（Potrace 默认：1.0）。",
+    "opttolerance": "曲线优化",
+    "opttolerance_help": "合并曲线段的容差：数值越大节点越少，SVG 越轻。",
+    "expert": "高级设置"
   }
 }

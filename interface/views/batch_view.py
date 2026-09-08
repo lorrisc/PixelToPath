@@ -210,8 +210,12 @@ class BatchView(View):
         # Poids sur le frame scrollé (voir Convertir) : le panneau suit la
         # largeur de la carte au lieu de sa largeur demandée.
         scroller.grid_columnconfigure(0, weight=1)
-        self._params = ParamsPanel(scroller, on_change=self._on_params_change)
+        self._params = ParamsPanel(scroller, on_change=self._on_params_change,
+                                   on_expert=self._on_expert)
         self._params.grid(row=0, column=0, sticky="nsew", padx=8)
+        # Préférence « Réglages avancés » partagée avec la vue Convertir.
+        self._params.set_expert(bool(
+            self.ctx.config.get("convert", "expert_params", False)))
 
     def _build_preview_column(self) -> None:
         col = ctk.CTkFrame(self, fg_color="transparent")
@@ -322,6 +326,10 @@ class BatchView(View):
         # en a plus, l'état devient « Personnalisé » et Enregistrer s'arme.
         self._sync_preset_state()
         self._request_preview()
+
+    def _on_expert(self, enabled: bool) -> None:
+        # Préférence de vue, partagée avec la vue Convertir.
+        self.ctx.config.set("convert", "expert_params", enabled)
 
     def _sync_preset_state(self) -> None:
         """Puces + bouton Enregistrer d'après les réglages courants."""

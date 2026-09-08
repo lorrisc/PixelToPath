@@ -10,6 +10,9 @@ reconstruction détruit cette vue sous ses pieds.
 Thème : Clair/Sombre délégué à App.set_theme (no-op si identique) —
 même chemin que le bouton du rail, préférence et icône restent synchrones.
 
+Conversion : interrupteur d'auto-détection du preset (opt-in,
+convert/auto_detect) — ConvertView relit la préférence à on_show.
+
 Licence : badge d'état, clé masquée, dates, « Gérer la licence… » ouvre
 le LicenseDialog (adaptatif activer/désactiver) — au retour, le rappel
 Pro du shell resynchronise rail et vues verrouillées, la section se
@@ -86,6 +89,27 @@ class SettingsView(View):
         seg_theme.grid(row=0, column=0, sticky="ew", padx=14, pady=14)
         seg_theme.set(t("settings.theme_dark" if ThemeService.is_dark()
                         else "settings.theme_light"))
+
+        SectionHeader(col, t("settings.conversion")).grid(
+            row=4, column=0, sticky="w", pady=(14, 8))
+        conversion_card = Card(col)
+        conversion_card.grid(row=5, column=0, sticky="ew")
+        conversion_card.grid_columnconfigure(0, weight=1)
+        self._auto_switch = ctk.CTkSwitch(
+            conversion_card, text=t("settings.auto_detect"), cursor="hand2",
+            font=ctk.CTkFont(size=11),
+            progress_color=pair("primary"), button_color=pair("on_primary"),
+            button_hover_color=pair("on_primary"),
+            command=self._on_auto_detect)
+        self._auto_switch.grid(row=0, column=0, sticky="w", padx=14,
+                               pady=(12, 2))
+        if self.ctx.config.get("convert", "auto_detect", False):
+            self._auto_switch.select()
+        ctk.CTkLabel(conversion_card, anchor="w", justify="left",
+                     text=t("settings.auto_detect_help"),
+                     wraplength=300, text_color=pair("faint"),
+                     font=ctk.CTkFont(size=10)).grid(
+            row=1, column=0, sticky="w", padx=14, pady=(2, 12))
 
     def _build_right(self) -> None:
         col = ctk.CTkFrame(self, fg_color="transparent")
@@ -202,6 +226,11 @@ class SettingsView(View):
         mode = self._theme_modes.get(name)
         if mode is not None and self._on_theme_change is not None:
             self._on_theme_change(mode)
+
+    def _on_auto_detect(self) -> None:
+        # ConvertView relit la config à on_show : rien d'autre à faire ici.
+        self.ctx.config.set("convert", "auto_detect",
+                            bool(self._auto_switch.get()))
 
     # ── Cycle de vie ──────────────────────────────────────────────────────
     def on_show(self) -> None:

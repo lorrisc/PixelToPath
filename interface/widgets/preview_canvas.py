@@ -14,6 +14,9 @@ rebâti au changement de thème/redimensionnement). La comparaison superpose
 original et vectoriel à la même transformation mathématique (même région
 naturelle, même zoom) : l'alignement est donc exact à tout zoom, la poignée
 orange se glisse à la souris.
+
+Pendant une reconversion, set_busy(True) pose un voile grisé + spinner
+(items canvas, pas de recomposition PIL) ; la vue le lève au résultat.
 """
 
 import threading
@@ -33,6 +36,8 @@ _DEBOUNCE_MS = 40
 _REFINE_MS = 300
 _MARGIN = 24         # marge du mode « ajuster »
 _PAN_MARGIN = 40     # bornage du pan
+_SPINNER = ["◐", "◓", "◑", "◒"]     # cohérent StatusBar
+_BUSY_INTERVAL_MS = 130
 
 
 def _rgb(hex_color: str) -> tuple:
@@ -67,6 +72,13 @@ class PreviewCanvas(tk.Canvas):
         self._gen = 0
         self._job = None
         self._refine_job = None
+        # Overlay « conversion en cours » : items canvas re-trackés pour
+        # être retirés individuellement (jamais delete("all") ici).
+        self._busy = False
+        self._busy_job = None
+        self._busy_index = 0
+        self._busy_spin_id = None
+        self._busy_items: list[int] = []
 
         self.bind("<Configure>", self._on_resize)
         self.bind("<Button-4>", lambda e: self._zoom_at(e.x, e.y, _ZOOM_STEP))
@@ -95,6 +107,7 @@ class PreviewCanvas(tk.Canvas):
     def clear(self) -> None:
         """État vide : message d'invitation sur fond canvas."""
         self._cancel_jobs()
+        self.set_busy(False)
         self._svg_path = None
         self._cache = None
         self._cache_w = 0
@@ -135,6 +148,65 @@ class PreviewCanvas(tk.Canvas):
             return
         self._compare = enabled
         self._schedule()
+
+    # ── Overlay « conversion en cours » ───────────────────────────────────
+    def set_busy(self, busy: bool) -> None:
+        """Voile grisé + spinner pendant une reconversion (idempotent).
+
+        La vue l'arme au démarrage effectif de la conversion et le lève
+        au résultat (seule elle connaît la génération courante).
+        """
+        busy = bool(busy)
+        if busy == self._busy:
+            return
+        self._busy = busy
+        if busy:
+            self._draw_busy_overlay()
+        else:
+            self._stop_busy()
+
+    def _draw_busy_overlay(self) -> None:
+        # _stop_busy d'abord : rebâtir propre après un blit ou un thème.
+        self._stop_busy()
+        tokens = ThemeService.tokens()
+        bw, bh = self._box
+        bw = bw or max(self.winfo_width(), 300)
+        bh = bh or max(self.winfo_height(), 200)
+        cx, cy = bw // 2, bh // 2
+        # Voile en stipple : instantané, thématé, réversible — aucun cycle
+        # de composition PIL en thread pour un effet cosmétique.
+        voile = self.create_rectangle(0, 0, bw, bh, fill=tokens["canvas"],
+                                      outline="", stipple="gray50")
+        self._busy_spin_id = self.create_text(
+            cx, cy - 14, text=_SPINNER[self._busy_index],
+            fill=tokens["primary"], font=("TkDefaultFont", 18, "bold"))
+        label = self._label(t("convert.converting"), cx, cy + 18, tokens,
+                            anchor="center")
+        self._busy_items = [voile, self._busy_spin_id, *label]
+        self._busy_job = self.after(_BUSY_INTERVAL_MS, self._tick_busy)
+
+    def _tick_busy(self) -> None:
+        self._busy_job = None
+        if not self._busy or self._busy_spin_id is None:
+            return
+        self._busy_index = (self._busy_index + 1) % len(_SPINNER)
+        self.itemconfig(self._busy_spin_id, text=_SPINNER[self._busy_index])
+        self._busy_job = self.after(_BUSY_INTERVAL_MS, self._tick_busy)
+
+    def _stop_busy(self) -> None:
+        if self._busy_job is not None:
+            self.after_cancel(self._busy_job)
+            self._busy_job = None
+        for item in self._busy_items:  # ids périmés : delete ignore en silence
+            self.delete(item)
+        self._busy_items = []
+        self._busy_spin_id = None
+
+    def destroy(self) -> None:
+        # Tuer le tick avant que le widget disparaisse (after sur widget
+        # détruit = TclError quand la vue est refaite en pleine conversion).
+        self._stop_busy()
+        super().destroy()
 
     def apply_theme(self, tokens: dict) -> None:
         self.configure(bg=tokens["canvas"])
@@ -358,6 +430,8 @@ class PreviewCanvas(tk.Canvas):
         self.delete("all")
         self.create_image(0, 0, image=self._photo, anchor="nw")
         self._draw_overlays()
+        if self._busy:
+            self._draw_busy_overlay()
         self._schedule_refine()
 
     # ── Habillage (items canvas par-dessus l'image) ───────────────────────
@@ -380,21 +454,29 @@ class PreviewCanvas(tk.Canvas):
     def _label(self, text, x, y, tokens, anchor):
         # Pastille de fond : l'étiquette doit rester lisible sur n'importe
         # quel contenu (le gris « muted » se perd sur l'image convertie).
+        # Renvoie les ids créés (l'overlay busy les retire ; les autres
+        # appelants ignorent la valeur de retour).
         w = tkfont.Font(font=("TkDefaultFont", 9, "bold")).measure(text)
         h = 14  # hauteur approximative du texte 9 pt gras
         pad_x, pad_y = 8, 4
         if anchor == "e":   # collée au bord droit : s'étend vers la gauche
             x0, x1 = x - w - 2 * pad_x, x
+        elif anchor == "center":   # centrée sur (x, y) (overlay busy)
+            x0, x1 = x - w / 2 - pad_x, x + w / 2 + pad_x
         else:               # "w" et "sw" : s'étend vers la droite
             x0, x1 = x, x + w + 2 * pad_x
         if anchor == "sw":  # ancrée par le bas (badge de zoom)
             y0, y1, cy = y - h - pad_y, y + pad_y, y - h / 2
+        elif anchor == "center":
+            y0, y1, cy = y - h / 2 - pad_y, y + h / 2 + pad_y, y
         else:               # ancrée par le haut (comparaison)
             y0, y1, cy = y - pad_y, y + h + pad_y, y + h / 2
-        self.create_rectangle(x0, y0, x1, y1, fill=tokens["surface"],
-                              outline=tokens["border"])
-        self.create_text((x0 + x1) / 2, cy, text=text, fill=tokens["text"],
-                         font=("TkDefaultFont", 9, "bold"))
+        bg = self.create_rectangle(x0, y0, x1, y1, fill=tokens["surface"],
+                                   outline=tokens["border"])
+        text_id = self.create_text((x0 + x1) / 2, cy, text=text,
+                                   fill=tokens["text"],
+                                   font=("TkDefaultFont", 9, "bold"))
+        return bg, text_id
 
     def _redraw_empty(self):
         self.delete("all")
@@ -404,6 +486,8 @@ class PreviewCanvas(tk.Canvas):
         y = bh // 2 if bh else 200
         self.create_text(x, y, text=self._empty_text,
                          fill=tokens["faint"], font=("TkDefaultFont", 11))
+        if self._busy:
+            self._draw_busy_overlay()
 
     def _build_checker(self, w: int, h: int) -> Image.Image:
         tokens = ThemeService.tokens()

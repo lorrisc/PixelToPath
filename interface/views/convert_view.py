@@ -8,6 +8,12 @@ sur le fil d'interface (garde `_gen` + debounce 600 ms, pattern v2).
 Un bandeau promotionnel discret borde le bas (roulement DocuNest /
 Cricut / LightBurn, un seul message à la fois) — retiré dès que la
 licence est Pro.
+
+Si convert/auto_detect est actif (vue Paramètres), une puce « Auto »
+tête la rangée de presets : chaque image chargée est classée en thread
+daemon (core/preset_detect) et le preset intégré correspondant est
+appliqué — tout choix/édition manuelle décroche jusqu'au chargement
+suivant. Pendant une conversion, l'aperçu montre un voile + spinner.
 """
 
 import os
@@ -27,6 +33,7 @@ from core.convert_service import (
     render_svg_to_pil,
 )
 from core.i18n import t
+from core.preset_detect import detect_preset
 from core.promos import strip_promos
 from interface.theme.tokens import pair
 from interface.views import View
@@ -59,6 +66,8 @@ class ConvertView(View):
         self._gen = 0             # garde anti-course entre conversions
         self._job = None          # timer de debounce
         self._compare_active = False
+        self._auto_key = None     # verdict de détection pour l'image courante
+        self._picker_auto = False # puce Auto présente au dernier refresh
 
         # « uniform » : split strict 40/60 — sinon les tailles demandées
         # (panneau de réglages, pied de l'aperçu) décalent la frontière et
@@ -137,8 +146,12 @@ class ConvertView(View):
         # scrollé lui-même) — sans lui, ParamsPanel garde sa largeur
         # demandée au lieu de suivre celle de la carte.
         scroller.grid_columnconfigure(0, weight=1)
-        self._params = ParamsPanel(scroller, on_change=self._on_params_change)
+        self._params = ParamsPanel(scroller, on_change=self._on_params_change,
+                                   on_expert=self._on_expert)
         self._params.grid(row=0, column=0, sticky="nsew", padx=8)
+        # Préférence « Réglages avancés » restaurée avant toute interaction.
+        self._params.set_expert(bool(
+            self.ctx.config.get("convert", "expert_params", False)))
 
     def _build_right(self):
         self._right = ctk.CTkFrame(self, fg_color="transparent")
@@ -193,6 +206,10 @@ class ConvertView(View):
                          pady=(12, 0))
 
     def on_show(self):
+        # Le toggle d'auto-détection a pu basculer dans Paramètres :
+        # resynchroniser la rangée de puces (Auto apparue ou disparue).
+        if self._auto_enabled() != self._picker_auto:
+            self._sync_preset_state()
         # La licence peut avoir changé sur un autre écran (activation ou
         # expiration) : le bandeau suit, minuteur suspendu quand caché.
         if self.ctx.is_pro():
@@ -237,6 +254,12 @@ class ConvertView(View):
         self._set_compare_active(False)
         self._preview.clear()
         self.ctx.status.set_status(t("convert.loaded"), "idle")
+        # Nouvelle image → le verdict précédent est périmé ; si l'auto est
+        # active, la détection part en thread (elle arrive avant le debounce
+        # 600 ms et `_apply_preset` remplace le timer : une seule conversion).
+        self._auto_key = None
+        if self._auto_enabled():
+            self._detect_async(img)
         self._schedule()
 
     def _clear_image(self):
@@ -256,6 +279,7 @@ class ConvertView(View):
             except OSError:
                 pass
         self._svg_path = None
+        self._auto_key = None
         self._preview.clear()
         self._info.configure(text="")
         self._download_btn.configure(state="disabled")
@@ -263,13 +287,26 @@ class ConvertView(View):
         self.ctx.status.set_status(t("convert.removed"), "idle")
 
     # ── Réglages ──────────────────────────────────────────────────────────
-    def _refresh_picker(self, active_display: str | None) -> None:
-        self._picker.set_options(
-            [self._presets.display_name(k) for k in self._presets.keys()],
-            active=active_display,
-        )
+    def _auto_enabled(self) -> bool:
+        return bool(self.ctx.config.get("convert", "auto_detect", False))
 
-    def _apply_preset(self, key: str, schedule: bool = True):
+    def _auto_label(self) -> str:
+        # Résolu à l'appel : le libellé suit la langue courante.
+        return t("presets.auto")
+
+    def _preset_names(self) -> list[str]:
+        names = [self._presets.display_name(k) for k in self._presets.keys()]
+        if self._auto_enabled():
+            names.insert(0, self._auto_label())
+        return names
+
+    def _refresh_picker(self, active_display: str | None) -> None:
+        self._picker_auto = self._auto_enabled()
+        self._picker.set_options(self._preset_names(),
+                                 active=active_display)
+
+    def _apply_preset(self, key: str, schedule: bool = True,
+                      persist: bool = True):
         self._preset_key = key
         self._refresh_picker(self._presets.display_name(key))
         params = self._presets.params(key)
@@ -277,10 +314,20 @@ class ConvertView(View):
         self._params.set_params(params)
         self._btn_save_preset.configure(state="disabled")
         if schedule:
-            self.ctx.config.set("convert", "active_preset", key)
+            # persist=False (application du verdict auto) : le dernier
+            # preset manuellement choisi reste le preset actif persisté.
+            if persist:
+                self.ctx.config.set("convert", "active_preset", key)
             self._schedule()
 
     def _on_preset(self, label: str):
+        if label == self._auto_label():
+            # Puce Auto : ré-applique le dernier verdict de détection
+            # (aucun si l'image chargée n'a pas encore été classée).
+            if self._auto_key is not None:
+                self._apply_preset(self._auto_key, persist=False)
+                self._sync_preset_state()
+            return
         key = self._presets.resolve(label)
         if key is not None:
             self._apply_preset(key)
@@ -294,7 +341,14 @@ class ConvertView(View):
     def _sync_preset_state(self):
         """Puces + bouton Enregistrer d'après les réglages courants."""
         key = self._presets.matching(self._params.get_params())
-        if key is None:
+        if (self._auto_key is not None and self._auto_enabled()
+                and key == self._auto_key):
+            # Réglages strictement ceux du preset détecté : puce Auto.
+            # Toute édition manuelle dévie du matching et fait tomber ici.
+            self._preset_key = key
+            self._refresh_picker(self._auto_label())
+            self._btn_save_preset.configure(state="disabled")
+        elif key is None:
             self._preset_key = None
             # set_options et pas set_active : la puce d'un preset supprimé
             # dans « Gérer » doit disparaître immédiatement — l'état passe
@@ -325,6 +379,38 @@ class ConvertView(View):
     def _on_manage_presets(self):
         ManagePresetsDialog(self, self.ctx, on_changed=self._sync_preset_state)
 
+    def _on_expert(self, enabled: bool) -> None:
+        # Préférence de vue, persistée pour les deux vues (Convertir + Batch).
+        self.ctx.config.set("convert", "expert_params", enabled)
+
+    # ── Auto-détection du preset ──────────────────────────────────────────
+    def _detect_async(self, img: Image.Image) -> None:
+        """Classification en thread daemon — jamais sur le fil d'interface.
+
+        `detect_preset` lit l'image via un convert() privé (tampon copié) :
+        sûre face à la thread « ptp-convert » qui partage l'objet PIL.
+        """
+        def work():
+            try:
+                key = detect_preset(img)
+            except Exception:
+                return  # verdict manquant : le debounce déjà armé convertit
+            self.after(0, lambda: self._on_detected(img, key))
+
+        threading.Thread(target=work, daemon=True, name="ptp-detect").start()
+
+    def _on_detected(self, img: Image.Image, key: str) -> None:
+        # Garde par identité d'objet : image remplacée ou supprimée pendant
+        # la détection → verdict périmé ; toggle coupé entre-temps aussi.
+        if self._pil is not img or not self._auto_enabled():
+            return
+        self._auto_key = key
+        self.ctx.status.set_status(
+            t("convert.detected", name=self._presets.display_name(key)),
+            "idle")
+        self._apply_preset(key, persist=False)
+        self._sync_preset_state()  # puce Auto (réglages == verdict)
+
     # ── Conversion ────────────────────────────────────────────────────────
     def _schedule(self):
         """Debounce : attendre la fin des frappes avant de lancer le moteur."""
@@ -336,6 +422,7 @@ class ConvertView(View):
         self._job = None
         if self._pil is None:
             return
+        self._preview.set_busy(True)  # voile + spinner : conversion visible
         self._gen += 1
         gen = self._gen
         params = self._params.get_params()
@@ -366,12 +453,14 @@ class ConvertView(View):
     def _on_error(self, gen: int, exc: Exception):
         if gen != self._gen:
             return
+        self._preview.set_busy(False)  # résultat périmé : ne lève pas
         self.ctx.status.set_status(t("convert.failed", err=exc), "error")
 
     def _on_done(self, gen: int, svg_path: str, rendered):
         if gen != self._gen:
             os.remove(svg_path)  # résultat périmé : purge immédiate
             return
+        self._preview.set_busy(False)
         if self._svg_path and os.path.exists(self._svg_path):
             try:
                 os.remove(self._svg_path)

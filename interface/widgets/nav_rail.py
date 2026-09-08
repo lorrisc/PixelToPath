@@ -19,6 +19,8 @@ NAV_ENTRIES = [
     ("convert", "nav.convert", "convert", False),
     ("batch", "nav.batch", "batch", True),
     ("hotfolder", "nav.hotfolder", "hotfolder", True),
+    # Page explicative : visible en gratuit (puce PRO seule, jamais verrouillée).
+    ("cli", "nav.cli", "cli", True),
     ("partners", "nav.partners", "partners", False),
 ]
 

@@ -35,6 +35,7 @@ class View(ctk.CTkFrame):
 
 # Imports en fin de module : les vues héritent de View défini ci-dessus.
 from .batch_view import BatchView  # noqa: E402
+from .cli_view import CliView  # noqa: E402
 from .convert_view import ConvertView  # noqa: E402
 from .hotfolder_view import HotFolderView  # noqa: E402
 from .locked_view import LockedView  # noqa: E402
@@ -44,6 +45,7 @@ from .settings_view import SettingsView  # noqa: E402
 __all__ = [
     "View",
     "BatchView",
+    "CliView",
     "ConvertView",
     "HotFolderView",
     "LockedView",

@@ -23,10 +23,13 @@ def reserved_names() -> set[str]:
     """Noms interdits aux presets personnalisés : les clés intégrées ET
     leurs libellés dans TOUTES les langues disponibles (sinon un preset
     « Black & White » personnalisé masquerait l'intégré dans resolve(),
-    en anglais)."""
+    en anglais). S'y ajoute le libellé de la puce Auto de la vue
+    Convertir — un preset personnalisé « Auto » créerait une puce
+    dupliquée et une ambiguïté dans resolve()."""
     names = set(PRESETS)
     for key in PRESETS:
         names |= set(i18n.key_values(f"presets.builtin.{key}").values())
+    names |= set(i18n.key_values("presets.auto").values())
     return names
 
 

@@ -164,9 +164,12 @@ class TestConversions(ManagerTestCase):
         make_png(watch / "a.png")
         make_png(watch / "b.png")
         # Les deux watchers partagent le dossier : chacun soumet chaque
-        # fichier stable (≥ 2 soumissions, éventuellement 4).
+        # fichier stable (≥ 2 soumissions, éventuellement 4). Attendre la
+        # présence DES DEUX ids — « >= 2 soumissions » peut être atteint
+        # par un seul watcher ayant déjà vu les deux fichiers.
         self.assertTrue(
-            wait_until(lambda: len(self.worker.submitted) >= 2))
+            wait_until(lambda: {s[0][1] for s in self.worker.submitted}
+                       >= {fid_a, fid_b}))
         by_folder = {s[0][1]: s[3] for s in self.worker.submitted}
         self.assertEqual(by_folder[fid_a], PRESETS["bw"])
         self.assertEqual(by_folder[fid_b], PRESETS["poster"])

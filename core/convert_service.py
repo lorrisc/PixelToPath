@@ -1,8 +1,13 @@
 """Service de conversion image → SVG — sans GUI.
 
 Point unique partagé par l'interface, le batch, le hot folder et la CLI :
-préparation de l'image binaire, conversion vtracer, rendu cairosvg de
-l'aperçu. Aucun import customtkinter ici.
+préparation de l'image binaire, conversion, rendu cairosvg de l'aperçu.
+Aucun import customtkinter ici.
+
+Deux moteurs, choisis par « colormode » dans convert_file() :
+- « color » → vtracer (vecteurs couleur par couches) ;
+- « binary » → Potrace exclusivement (via potracer, port pur Python) —
+  tracé noir/blanc, coordonnées déjà en pixels image (y vers le bas).
 """
 
 import os
@@ -41,10 +46,24 @@ _VTRACER_DEFAULTS = dict(
     splice_threshold=45, path_precision=8,
 )
 
+# Potrace (port potracer) : défauts du crate C d'origine, turnpolicy laissé
+# à sa valeur MINORITY. Le noir (gris < 50 %) est toujours la partie tracée.
+_POTRACE_DEFAULTS = dict(turdsize=2, alphamax=1.0, opttolerance=0.2)
+
 
 def new_temp_path(temp_dir: str, ext: str) -> str:
     """Chemin unique dans le dossier temporaire de l'application."""
     return os.path.join(temp_dir, f"{uuid.uuid4().hex}{ext}")
+
+
+def flatten_to_gray(pil_image: Image.Image) -> Image.Image:
+    """Aplatit sur fond blanc puis passe en niveau de gris — le noir est
+    la partie tracée par le moteur binaire, quelle que soit l'entrée
+    (alpha, transparence, couleurs)."""
+    img = pil_image.convert("RGBA")
+    bg = Image.new("RGB", img.size, (255, 255, 255))
+    bg.paste(img, mask=img.split()[3])
+    return bg.convert("L")
 
 
 def prepare_input(
@@ -53,16 +72,16 @@ def prepare_input(
     colormode: str = "color",
     invert: bool = False,
 ) -> str:
-    """Prépare le PNG passé à vtracer ; renvoie son chemin temporaire.
+    """Prépare le PNG passé au moteur ; renvoie son chemin temporaire.
 
     En mode binaire : aplatit sur fond blanc puis niveau de gris
-    (inversion optionnelle) — même traitement que la v2.
+    (inversion optionnelle) — même traitement que la v2. L'inversion
+    reste faite ICI et jamais dans convert_file : les deux doivent
+    rester composables sans s'annuler.
     """
     img = pil_image.convert("RGBA")
     if colormode == "binary":
-        bg = Image.new("RGB", img.size, (255, 255, 255))
-        bg.paste(img, mask=img.split()[3])
-        img = bg.convert("L").convert("RGB")
+        img = flatten_to_gray(pil_image).convert("RGB")
         if invert:
             img = ImageOps.invert(img)
     tmp = new_temp_path(temp_dir, ".png")
@@ -71,14 +90,86 @@ def prepare_input(
 
 
 def convert_file(input_path: str, output_path: str, params: dict) -> None:
-    """Convertit un fichier raster en SVG (kwargs vtracer bruts).
+    """Convertit un fichier raster en SVG (kwargs bruts du moteur).
 
-    Les kwargs sont réordonnés en positionnel : voir la note vtracer/pyo3
-    en tête de module.
+    Noir et blanc (`colormode == "binary"`) → Potrace exclusivement ;
+    couleur → vtracer, dont les kwargs sont réordonnés en positionnel :
+    voir la note vtracer/pyo3 en tête de module.
     """
-    full = {**_VTRACER_DEFAULTS, **params}
-    vtracer.convert_image_to_svg_py(
-        input_path, output_path, *(full[k] for k in _VTRACER_ORDER)
+    if params.get("colormode", "color") == "binary":
+        _convert_potrace(input_path, output_path, params)
+    else:
+        full = {**_VTRACER_DEFAULTS, **params}
+        vtracer.convert_image_to_svg_py(
+            input_path, output_path, *(full[k] for k in _VTRACER_ORDER)
+        )
+
+
+# ── Moteur binaire : Potrace ─────────────────────────────────────────────────
+def _potrace_args(params: dict) -> dict:
+    """Kwargs Bitmap.trace() d'après les réglages, avec translation des
+    anciens kwargs vtracer binaires : les presets personnalisés enregistrés
+    avant l'arrivée de Potrace (« filter_speckle », « corner_threshold »,
+    « mode »…) doivent rester convertibles. Traductions approximatives —
+    l'aire vtracer (côté px) devient une aire potrace (px²), l'angle de
+    seuil devient l'alphamax normalisé, « polygon »/« none » forcent les
+    angles vifs."""
+    args = {k: params[k] for k in _POTRACE_DEFAULTS if k in params}
+    if "turdsize" not in args and "filter_speckle" in params:
+        args["turdsize"] = max(2, int(params["filter_speckle"]) ** 2)
+    if "alphamax" not in args:
+        if params.get("mode") in ("polygon", "none"):
+            args["alphamax"] = 0.0
+        elif "corner_threshold" in params:
+            args["alphamax"] = round(
+                min(1.334, float(params["corner_threshold"]) / 90), 3)
+    return {**_POTRACE_DEFAULTS, **args}
+
+
+def _convert_potrace(input_path: str, output_path: str, params: dict) -> None:
+    """Tracé binaire via potracer (port pur Python de Potrace).
+
+    Import paresseux : la CLI couleur ne charge jamais le module. La
+    préparation (aplatissement, inversion) a déjà été faite en amont par
+    prepare_input() — ici, on ne fait que seuiller : Bitmap() trace les
+    pixels sombres (blacklevel 0.5), le gris est donc passé tel quel.
+    """
+    import potrace  # potracer
+
+    with Image.open(input_path) as img:
+        gray = flatten_to_gray(img)
+        width, height = gray.size
+    traced = potrace.Bitmap(gray).trace(**_potrace_args(params))
+    svg = _potrace_svg(traced, width, height,
+                       int(params.get("path_precision", 3)))
+    with open(output_path, "w", encoding="utf-8") as fh:
+        fh.write(svg)
+
+
+def _potrace_svg(path, width: int, height: int, precision: int = 3) -> str:
+    """Assemble le SVG potrace : une seule <path> (tous les tracés) en
+    fill-rule evenodd — îles et trous sont alors corrects quelle que soit
+    l'orientation des sous-chemins. Les coordonnées de potracer sont déjà
+    en pixels image, y vers le bas (rectangle en ligne 1 → y = 1, testé)."""
+    fmt = f"%.{max(0, precision)}f"
+    parts = []
+    for curve in path:
+        d = [f"M {fmt % curve.start_point.x} {fmt % curve.start_point.y}"]
+        for seg in curve:
+            if seg.is_corner:
+                d.append(f"L {fmt % seg.c.x} {fmt % seg.c.y}")
+            else:
+                d.append(f"C {fmt % seg.c1.x} {fmt % seg.c1.y}"
+                         f" {fmt % seg.c2.x} {fmt % seg.c2.y}")
+            d.append(f"{fmt % seg.end_point.x} {fmt % seg.end_point.y}")
+        d.append("Z")
+        parts.append(" ".join(d))
+    return (
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" '
+        f'height="{height}" viewBox="0 0 {width} {height}">\n'
+        f'  <path d="{" ".join(parts)}" fill="#000000" '
+        f'fill-rule="evenodd" stroke="none"/>\n'
+        f'</svg>\n'
     )
 
 
@@ -118,7 +209,8 @@ def next_output_path(directory: str, stem: str) -> str:
 class ConversionWorker:
     """File de conversions traitée sur UNE thread daemon.
 
-    vtracer est CPU-bound : une seule thread de conversion, les items
+    Les moteurs (vtracer, potracer) sont CPU-bound : une seule thread de
+    conversion, les items
     s'enchaînent dans l'ordre de soumission. Les résultats partent par
     `(item_id, status, detail)` — status ∈ done | error | cancelled —
     à TOUS les listeners enregistrés (batch et hot folder cohabitent :
@@ -158,8 +250,8 @@ class ConversionWorker:
     def submit(self, item_id, input_path: str, output_path: str,
                params: dict) -> None:
         """`params` peut porter « invert » (bool) : l'aplatissement binaire
-        inversé est alors fait ici, avant vtracer (l'entrée est un fichier,
-        pas une PIL comme dans la vue Convertir)."""
+        inversé est alors fait ici, avant le moteur (l'entrée est un
+        fichier, pas une PIL comme dans la vue Convertir)."""
         self._queue.put((item_id, input_path, output_path, dict(params)))
 
     def cancel_all(self) -> None:

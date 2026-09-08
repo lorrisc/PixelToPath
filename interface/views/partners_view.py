@@ -13,7 +13,12 @@ import webbrowser
 
 import customtkinter as ctk
 
-from core.constants import AFFILIATE_URLS, DOCUNEST_URL, PAYPAL_URL
+from core.constants import (
+    AFFILIATES_ENABLED,
+    AFFILIATE_URLS,
+    DOCUNEST_URL,
+    PAYPAL_URL,
+)
 from core.i18n import t
 from core.promos import (
     CRICUT_PROMOS,
@@ -85,7 +90,12 @@ class PartnersView(View):
         # passe en pied de page pour rester au-dessus de la ligne de
         # flottaison le plus souvent possible.
         self._build_docunest()
-        self._build_affiliates()
+        # Affiliés masqués tant que les liens n'existent pas (voir
+        # AFFILIATES_ENABLED dans core/constants.py) : le design reste
+        # dans _build_affiliates(), les rangées vides du grid se
+        # replient, le don remonte.
+        if AFFILIATES_ENABLED:
+            self._build_affiliates()
         self._build_donation()
 
     def _grid(self, widget, **kw):

@@ -11,12 +11,20 @@ packaging==25.0
 pefile==2023.2.7
 pillow==11.2.1
 pycparser==2.22
-pyinstaller==6.14.0
-pyinstaller-hooks-contrib==2025.4
+# potracer : port pur Python de Potrace — moteur exclusif des conversions
+# en noir et blanc (colormode=binary) ; vtracer reste le moteur couleur.
+potracer==0.0.4
+# 6.14.0 ne supporte pas Python 3.14 (env/) ; 6.22.2 est le minimum réel
+# utilisé pour tous les builds (Fedora hôte comme conteneur Alma 9).
+pyinstaller==6.22.2
+pyinstaller-hooks-contrib==2026.7
 # pystray : icône de barre système (mode arrière-plan du hot folder).
 # python-xlib : backend xorg de pystray sous Linux (inerte sous Windows).
+# dbus-next : tray SNI natif Wayland/KDE (interface/tray_sni.py) — pur
+# Python, inerte sous Windows (importé paresseusement, Linux uniquement).
 pystray==0.19.5
 python-xlib==0.33
+dbus-next==0.2.3
 pywin32-ctypes==0.2.3
 setuptools==80.9.0
 six==1.17.0

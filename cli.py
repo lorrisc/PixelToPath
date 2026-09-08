@@ -181,6 +181,13 @@ def cmd_convert(args, manager: LicenseManager, config: ConfigStore) -> int:
 
 
 def main(argv=None) -> int:
+    # Sortie console en UTF-8 : sous Windows, une sortie redirigée (|, >)
+    # utilise le codepage locale (cp1252) qui ne peut pas encoder les
+    # flèches de l'aide/messages i18n → UnicodeEncodeError. Sur la console
+    # réelle (PEP 528) et sous Linux, c'est un no-op.
+    for _stream in (sys.stdout, sys.stderr):
+        if _stream is not None and hasattr(_stream, "reconfigure"):
+            _stream.reconfigure(encoding="utf-8", errors="replace")
     config = ConfigStore()
     # Langue AVANT build_parser : l'aide argparse est figée à la construction.
     i18n.install_from_config(config)

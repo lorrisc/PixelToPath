@@ -110,5 +110,28 @@ class TestConfigStoreMigration(unittest.TestCase):
         self.assertFalse(self.path.exists())
 
 
+class TestDefaultsNouveaux(unittest.TestCase):
+    """Nouvelles clés convert/ (détection auto + réglages avancés) :
+    fournies par défaut sur une config vierge et persistées à l'écriture."""
+
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.path = Path(self._tmp.name) / "config.json"
+        self.addCleanup(self._tmp.cleanup)
+
+    def test_defauts_desactives_sur_config_vierge(self):
+        store = ConfigStore(path=self.path)
+        self.assertFalse(store.get("convert", "auto_detect"))
+        self.assertFalse(store.get("convert", "expert_params"))
+
+    def test_ecriture_persiste_les_deux_cles(self):
+        store = ConfigStore(path=self.path)
+        store.set("convert", "auto_detect", True)
+        store.set("convert", "expert_params", True)
+        reopened = ConfigStore(path=self.path)
+        self.assertTrue(reopened.get("convert", "auto_detect"))
+        self.assertTrue(reopened.get("convert", "expert_params"))
+
+
 if __name__ == "__main__":
     unittest.main()

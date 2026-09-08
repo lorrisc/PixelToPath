@@ -122,10 +122,25 @@ def icon_moon() -> Image.Image:
     return solid
 
 
+def icon_cli() -> Image.Image:
+    """Fenêtre de terminal : cadre arrondi, barre de titre, invite « >_ »."""
+    img = _new()
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle([8, 10, 56, 54], radius=6,
+                        outline=(0, 0, 0, 255), width=STROKE)
+    # Barre de titre fine, puis chevron + soulignement de l'invite.
+    d.line([8, 24, 56, 24], fill=(0, 0, 0, 255), width=STROKE - 3)
+    d.line([17, 31, 25, 39, 17, 47], fill=(0, 0, 0, 255),
+           width=STROKE - 2, joint="curve")
+    d.line([31, 47, 46, 47], fill=(0, 0, 0, 255), width=STROKE - 2)
+    return img
+
+
 ICONS = {
     "convert": icon_convert,
     "batch": icon_batch,
     "hotfolder": icon_hotfolder,
+    "cli": icon_cli,
     "partners": icon_partners,
     "settings": icon_settings,
     "sun": icon_sun,

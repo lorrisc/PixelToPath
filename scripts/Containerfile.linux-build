@@ -1,0 +1,32 @@
+# Containerfile.linux-build — image de build PixelToPath pour Linux.
+#
+# Les artefacts doivent tourner sur un maximum de distros : on compile donc
+# sur la VIEILLE glibc d'AlmaLinux 9 (2.34) et non sur la glibc de la machine
+# hôte (Fedora 44 = 2.43, binaire refusé par Ubuntu/Debian/Mint…).
+# Couverture glibc 2.34 : Debian 12+, Ubuntu 22.04+, Mint 21+, RHEL/Alma/Rocky 9+,
+# Fedora 35+, Arch, openSUSE Leap 15.4+.
+#
+# python3.11 : dernière version disponible en appstream EL9 avec
+# python3.11-tkinter (Tk 8.6 — combo éprouvé customtkinter/tkinterdnd2,
+# cf. mémoire « pythons uv interdits ») ; le code est compatible 3.10+.
+FROM almalinux:9
+
+# python3.11 + tkinter : interpréteur de build
+# libcairo : dlopen par cairocffi pour cairosvg (aperçu) — embarqué dans
+#   l'artefact par scripts/bundle_cairo.sh, présent ici pour l'analyse et le smoke
+# gtk3 : tiré par tkinterdnd2? non — par le smoke GUI (thèmes) ; garder minimal
+# xorg-x11-server-xvfb : smoke GUI headless dans le conteneur
+# binutils : audit glibc (objdump -T) ; file : vérif artefacts
+RUN dnf -y install --setopt=install_weak_deps=False \
+        python3.11 python3.11-pip python3.11-tkinter \
+        cairo libX11 libXcursor libXrandr libXext libXinerama libXScrnSaver \
+        xorg-x11-server-Xvfb xorg-x11-fonts-base \
+        file && \
+    dnf clean all
+
+# HOME du build : monté en volume, inscriptible quel que soit l'uid hôte
+# (le conteneur tourne avec --userns=keep-id → fichiers produits = uid hôte).
+RUN mkdir -p /home/build/.cache && chmod -R 777 /home/build
+
+WORKDIR /src
+CMD ["/bin/bash"]

@@ -5,6 +5,7 @@
     "convert": "Convert",
     "batch": "Batch",
     "hotfolder": "Hot folder",
+    "cli": "CLI",
     "partners": "Partners",
     "settings": "Settings"
   },
@@ -34,6 +35,7 @@
 
   "app": {
     "tagline": "Batch image → SVG conversion",
+    "already_running": "PixelToPath is already running — bringing it back to the front.",
     "minimized_help": "start minimized (system tray) — used by autostart at login",
     "tray_open": "Open {app}",
     "tray_quit": "Quit",
@@ -53,6 +55,7 @@
   "presets": {
     "builtin": {"bw": "Black & White", "poster": "Poster", "photo": "Photo"},
     "custom": "Custom",
+    "auto": "Auto",
     "save_title": "Save preset",
     "manage_title": "Manage custom presets",
     "name_label": "Preset name",
@@ -87,6 +90,18 @@
     "locked_line1": "This feature is part of PixelToPath Pro.",
     "locked_line2": "Batch conversion · Hot folder · Command-line interface",
     "locked_cta": "Upgrade to Pro",
+    "locked_batch_title": "What Batch conversion unlocks",
+    "locked_batch_1": "Drop all your images (PNG, JPG, BMP, WEBP): they become SVG files in a folder of your choice",
+    "locked_batch_2": "Queue with progress and cancelation — one file or two hundred, same gesture",
+    "locked_batch_3": "Presets bw, poster, photo or your own presets, applied identically to every file",
+    "locked_batch_4": "Per-batch fine tuning (colors, smoothing, detail) with live vector preview",
+    "locked_batch_5": "Drag & drop: from your file explorer straight into the queue",
+    "locked_hotfolder_title": "What Hot folder unlocks",
+    "locked_hotfolder_1": "Watch one or more folders: any image dropped in is converted to SVG automatically",
+    "locked_hotfolder_2": "Each folder keeps its own preset — scans → bw, logos → poster, your call",
+    "locked_hotfolder_3": "SVGs land in the destination folder with no action on your part",
+    "locked_hotfolder_4": "Runs in the background while PixelToPath is open (even minimized to the tray)",
+    "locked_hotfolder_5": "Activity journal: what was converted, when, with folders you can reopen",
     "state_active": "Pro active",
     "state_expired": "present but expired",
     "state_line": "License: {state} (•••• {tail})",
@@ -131,6 +146,7 @@
     "loaded": "Image loaded",
     "removed": "Image removed",
     "converting": "Converting…",
+    "detected": "Detected preset: {name}",
     "failed": "Conversion failed: {err}",
     "generated": "SVG generated · {kb} KB",
     "saved_to": "Saved: {name}",
@@ -241,10 +257,13 @@
     "title": "Settings",
     "language": "01 · Language",
     "theme": "02 · Theme",
-    "license": "03 · License",
-    "about": "04 · About",
+    "license": "04 · License",
+    "about": "05 · About",
     "theme_light": "Light",
     "theme_dark": "Dark",
+    "conversion": "03 · Conversion",
+    "auto_detect": "Automatically detect the best preset",
+    "auto_detect_help": "Each time an image is loaded, a preset (Black & White, Poster or Photo) is picked automatically based on its content.",
     "about_line": "© 2025 CRAPPIER — MIT License"
   },
 
@@ -290,6 +309,20 @@
     "strip_docunest": "100% offline PDF editor — redaction, signature, editing: 7-day free trial.",
     "strip_cricut": "Bring your SVGs to life: cut vinyl, paper, and fabric on Cricut machines.",
     "strip_lightburn": "Engrave your SVGs with a laser in a single pass — control everything from LightBurn."
+  },
+
+  "cli_page": {
+    "title": "Command line",
+    "intro": "PixelToPath in your terminal: the same conversion engine as the interface, driven by the ptp command.",
+    "unlock_title": "What Pro unlocks",
+    "f1": "The ptp command, included with Pro — same engine, same presets (bw, poster, photo, custom)",
+    "f2": "Single-file or bulk conversion: ptp convert image.png -o svg/ --preset bw",
+    "f3": "Fine tuning: --colormode, --mode, --invert, plus every engine parameter via --set",
+    "f4": "License management without the UI: ptp license activate · status · deactivate",
+    "f5": "Script-friendly and CI-ready: clear exit codes — 0 success · 1 conversion error · 2 missing license",
+    "examples": "Examples",
+    "note": "The CLI is part of PixelToPath Pro. Once your license is active, the ptp command is available right away.",
+    "hint": "Tip: activate the license from this window or straight from the terminal (ptp license activate KEY)."
   },
 
   "cli": {
@@ -345,6 +378,13 @@
     "splice_threshold": "Splice threshold",
     "splice_threshold_help": "Angle below which two paths are joined at a single point.",
     "max_iterations": "Max iterations",
-    "max_iterations_help": "Curve refinement passes: higher = smoother, slower."
+    "max_iterations_help": "Curve refinement passes: higher = smoother, slower.",
+    "turdsize": "Despeckle",
+    "turdsize_help": "Ignores shapes smaller than this area (in pixels): higher = less noise.",
+    "alphamax": "Corner smoothing",
+    "alphamax_help": "0 keeps sharp corners (polygon); higher values give smoother curves (Potrace default: 1.0).",
+    "opttolerance": "Curve optimization",
+    "opttolerance_help": "Tolerance for merging curve segments: higher = fewer nodes and a lighter SVG.",
+    "expert": "Advanced settings"
   }
 }

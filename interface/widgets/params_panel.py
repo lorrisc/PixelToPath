@@ -2,14 +2,20 @@
 
 Intitulé + valeur à droite, contrôle pleine largeur dessous, pastille « ? »
 porte l'aide (remplace la colonne de documentation de la v2). Les valeurs
-stockées sont les kwargs vtracer bruts : get_params() les rend tel quel au
-moteur, sans table de conversion côté vue.
+stockées sont les kwargs bruts du moteur : get_params() rend le jeu du
+moteur actif (vtracer en couleur, Potrace en binaire), sans table de
+conversion côté vue.
 
 Libellés : SPEC porte des clés i18n (`params.<clé>`, `params.<clé>_help`,
 `params.seg_<valeur>`), résolues via t() à la construction — la vue est
 reconstruite au changement de langue, jamais traduite en place.
 
-Widget muet : émet on_change(clé, valeur).
+Les entrées marquées `advanced=True` ne s'affichent que si
+l'interrupteur « Réglages avancés » (rangée hors SPEC, hors _controls)
+est armé — leurs valeurs restent dans _values et dans get_params()
+quelle que soit la visibilité, pour ne pas dévier des presets.
+
+Widget muet : émet on_change(clé, valeur) et on_expert(bool).
 """
 
 import customtkinter as ctk
@@ -18,42 +24,61 @@ from core.i18n import t
 from interface.theme.tokens import pair
 from interface.widgets.tooltip import HelpDot
 
-# Valeurs brutes vtracer — les libellés restent courts pour tenir en rangée
-# et viennent de params.seg_<valeur>.
+# Valeurs brutes des moteurs — les libellés restent courts pour tenir en
+# rangée et viennent de params.seg_<valeur>.
 _SEG_COLORS = ("color", "binary")
 _SEG_HIERARCHY = ("stacked", "cutout")
 _SEG_MODE = ("spline", "polygon", "none")
 
+# Deux blocs, un par moteur, chacun masqué par visible_if : en noir et
+# blanc le panneau ne montre QUE les réglages Potrace (turdsize,
+# alphamax, opttolerance) — les curseurs vtracer n'ont aucun effet sur
+# ce moteur, les cacher évite de régler dans le vide.
 SPEC = [
     dict(key="colormode", default="color", kind="seg", options=_SEG_COLORS),
     dict(key="invert", default=False, kind="switch",
          visible_if=("colormode", "binary")),
+    # ── Couleur (vtracer) ────────────────────────────────────────────────
     dict(key="hierarchical", default="stacked", kind="seg", options=_SEG_HIERARCHY,
-         visible_if=("colormode", "color")),
+         visible_if=("colormode", "color"), advanced=True),
     dict(key="color_precision", default=6, kind="slider", mn=1, mx=8, step=1, fmt="{:d}",
          visible_if=("colormode", "color")),
     dict(key="layer_difference", default=16, kind="slider", mn=1, mx=64, step=1, fmt="{:d}",
          visible_if=("colormode", "color")),
-    dict(key="mode", default="spline", kind="seg", options=_SEG_MODE),
-    dict(key="filter_speckle", default=4, kind="slider", mn=0, mx=16, step=1, fmt="{:d}"),
-    dict(key="corner_threshold", default=60, kind="slider", mn=0, mx=180, step=1, fmt="{:d}°"),
+    dict(key="mode", default="spline", kind="seg", options=_SEG_MODE,
+         visible_if=("colormode", "color"), advanced=True),
+    dict(key="filter_speckle", default=4, kind="slider", mn=0, mx=16, step=1, fmt="{:d}",
+         visible_if=("colormode", "color")),
+    dict(key="corner_threshold", default=60, kind="slider", mn=0, mx=180, step=1,
+         fmt="{:d}°", visible_if=("colormode", "color"), advanced=True),
     dict(key="length_threshold", default=4.0, kind="slider", mn=3.5, mx=10.0, step=0.5,
-         fmt="{:.1f}"),
-    dict(key="splice_threshold", default=45, kind="slider", mn=0, mx=180, step=1, fmt="{:d}°"),
-    dict(key="max_iterations", default=10, kind="slider", mn=1, mx=20, step=1, fmt="{:d}"),
+         fmt="{:.1f}", visible_if=("colormode", "color"), advanced=True),
+    dict(key="splice_threshold", default=45, kind="slider", mn=0, mx=180, step=1,
+         fmt="{:d}°", visible_if=("colormode", "color"), advanced=True),
+    dict(key="max_iterations", default=10, kind="slider", mn=1, mx=20, step=1, fmt="{:d}",
+         visible_if=("colormode", "color"), advanced=True),
+    # ── Noir & blanc (Potrace) ───────────────────────────────────────────
+    dict(key="turdsize", default=2, kind="slider", mn=0, mx=20, step=1, fmt="{:d}",
+         visible_if=("colormode", "binary")),
+    dict(key="alphamax", default=1.0, kind="slider", mn=0.0, mx=1.4, step=0.1,
+         fmt="{:.1f}", visible_if=("colormode", "binary"), advanced=True),
+    dict(key="opttolerance", default=0.2, kind="slider", mn=0.0, mx=1.0, step=0.05,
+         fmt="{:.2f}", visible_if=("colormode", "binary"), advanced=True),
 ]
 
 PATH_PRECISION = 3  # fixé : précision décimale des chemins (interne)
 
 
 class ParamsPanel(ctk.CTkFrame):
-    def __init__(self, master, on_change, **kw):
+    def __init__(self, master, on_change, on_expert=None, **kw):
         super().__init__(master, fg_color="transparent", **kw)
         self._on_change = on_change
+        self._on_expert_cb = on_expert
         self._loading = False  # True pendant set_params : pas de callback
-        # Valeurs par défaut dès la construction (vtracer) : tout réglage a
-        # toujours une valeur, même si set_params() reçoit un dict partiel
-        # (preset binaire sans les réglages couleur, surcharges CLI…).
+        self._expert = False   # réglages avancés masqués par défaut
+        # Valeurs par défaut dès la construction : tout réglage a toujours
+        # une valeur, même si set_params() reçoit un dict partiel (preset
+        # d'un autre moteur, surcharges CLI…).
         self._values: dict[str, object] = {
             item["key"]: item["default"] for item in SPEC
         }
@@ -63,10 +88,27 @@ class ParamsPanel(ctk.CTkFrame):
 
         for i, item in enumerate(SPEC):
             self._build_row(item, row=i * 2)
+        self._build_expert_row(row=len(SPEC) * 2)
         for key, entry in self._controls.items():
             if entry["item"]["kind"] == "seg":
                 self._restyle_seg(key)
         self._update_visibility()
+
+    def _build_expert_row(self, row: int) -> None:
+        # Hors _controls : invisible à set_params/get_params/_update_visibility —
+        # c'est un réglage de vue, pas un kwarg moteur.
+        self._sep = ctk.CTkFrame(self, height=1, fg_color=pair("border"))
+        self._sep.grid(row=row, column=0, columnspan=2, sticky="ew",
+                       pady=(16, 0))
+        self._expert_switch = ctk.CTkSwitch(
+            self, text=t("params.expert"), cursor="hand2",
+            font=ctk.CTkFont(size=11),
+            progress_color=pair("primary"), button_color=pair("on_primary"),
+            button_hover_color=pair("on_primary"),
+            command=self._on_expert,
+        )
+        self._expert_switch.grid(row=row + 1, column=0, columnspan=2,
+                                 sticky="w", pady=(10, 0))
 
     # ── Construction ──────────────────────────────────────────────────────
     def _build_row(self, item: dict, row: int) -> None:
@@ -203,13 +245,16 @@ class ParamsPanel(ctk.CTkFrame):
 
     def _update_visibility(self) -> None:
         for key, entry in self._controls.items():
-            cond = entry["item"].get("visible_if")
+            item = entry["item"]
+            cond = item.get("visible_if")
             show = cond is None or self._values.get(cond[0]) == cond[1]
+            if item.get("advanced"):
+                show = show and self._expert
             entry["frame"].grid() if show else entry["frame"].grid_remove()
 
     # ── API ───────────────────────────────────────────────────────────────
     def set_params(self, params: dict) -> None:
-        """Applique des kwargs vtracer bruts (+ « invert ») sans callback."""
+        """Applique des kwargs bruts du moteur actif (+ « invert ») sans callback."""
         self._loading = True
         try:
             for key, entry in self._controls.items():
@@ -231,29 +276,58 @@ class ParamsPanel(ctk.CTkFrame):
         self._update_visibility()
 
     def get_params(self) -> dict:
-        """Kwargs vtracer bruts (invert exclu : traité à la préparation)."""
-        p = dict(
-            colormode=self._values["colormode"],
+        """Kwargs bruts du moteur actif (invert exclu : traité à la
+        préparation) — binaire → Potrace, couleur → vtracer."""
+        if self._values["colormode"] == "binary":
+            return dict(
+                colormode="binary",
+                turdsize=self._values["turdsize"],
+                alphamax=self._values["alphamax"],
+                opttolerance=self._values["opttolerance"],
+                path_precision=PATH_PRECISION,
+            )
+        return dict(
+            colormode="color",
+            hierarchical=self._values["hierarchical"],
             mode=self._values["mode"],
             filter_speckle=self._values["filter_speckle"],
+            color_precision=self._values["color_precision"],
+            layer_difference=self._values["layer_difference"],
             corner_threshold=self._values["corner_threshold"],
             length_threshold=self._values["length_threshold"],
             splice_threshold=self._values["splice_threshold"],
             max_iterations=self._values["max_iterations"],
             path_precision=PATH_PRECISION,
         )
-        if p["colormode"] == "color":
-            p["hierarchical"] = self._values["hierarchical"]
-            p["color_precision"] = self._values["color_precision"]
-            p["layer_difference"] = self._values["layer_difference"]
-        return p
 
     def get_invert(self) -> bool:
         return bool(self._values.get("invert", False))
 
+    # ── Réglages avancés ─────────────────────────────────────────────────
+    def set_expert(self, enabled: bool) -> None:
+        """Positionne l'interrupteur sans émettre on_expert (restauration)."""
+        self._expert = bool(enabled)
+        self._expert_switch.select() if enabled else self._expert_switch.deselect()
+        self._update_visibility()
+
+    def is_expert(self) -> bool:
+        return self._expert
+
+    def _on_expert(self) -> None:
+        self._expert = bool(self._expert_switch.get())
+        self._update_visibility()  # aucune valeur moteur ne change
+        if self._on_expert_cb is not None:
+            self._on_expert_cb(self._expert)
+
     # ── Thème ─────────────────────────────────────────────────────────────
     def apply_theme(self, tokens: dict) -> None:
         # pair() partout : ne jamais figer un hex simple.
+        self._sep.configure(fg_color=pair("border"))
+        self._expert_switch.configure(
+            progress_color=pair("primary"),
+            button_color=pair("on_primary"),
+            button_hover_color=pair("on_primary"),
+        )
         for key, entry in self._controls.items():
             if entry["item"]["kind"] == "seg":
                 self._restyle_seg(key)

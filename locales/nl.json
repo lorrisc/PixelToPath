@@ -5,6 +5,7 @@
     "convert": "Converteren",
     "batch": "Batch",
     "hotfolder": "Hot folder",
+    "cli": "CLI",
     "partners": "Partners",
     "settings": "Instellingen"
   },
@@ -34,6 +35,7 @@
 
   "app": {
     "tagline": "Afbeelding → SVG batchconversie",
+    "already_running": "PixelToPath wordt al uitgevoerd — het venster wordt weer naar voren gebracht.",
     "minimized_help": "verborgen starten (systeemvak) — gebruikt bij automatisch opstarten",
     "tray_open": "{app} openen",
     "tray_quit": "Afsluiten",
@@ -53,6 +55,7 @@
   "presets": {
     "builtin": {"bw": "Zwart-wit", "poster": "Poster", "photo": "Foto"},
     "custom": "Aangepast",
+    "auto": "Auto",
     "save_title": "Preset opslaan",
     "manage_title": "Aangepaste presets beheren",
     "name_label": "Naam van de preset",
@@ -87,6 +90,18 @@
     "locked_line1": "Deze functie is onderdeel van PixelToPath Pro.",
     "locked_line2": "Batchconversie · Hot folder · Opdrachtregelinterface",
     "locked_cta": "Upgrade naar Pro",
+    "locked_batch_title": "Wat batchconversie ontgrendelt",
+    "locked_batch_1": "Sleep al uw afbeeldingen erin (PNG, JPG, BMP, WEBP): ze worden SVG in de map van uw keuze",
+    "locked_batch_2": "Wachtrij met voortgang en annuleren — één bestand of tweehonderd, dezelfde handeling",
+    "locked_batch_3": "Presets bw, poster, photo of uw eigen presets, identiek toegepast op alle bestanden",
+    "locked_batch_4": "Fijnafstelling voor de hele batch (kleuren, vloeiing, details) met live vectorvoorbeeld",
+    "locked_batch_5": "Slepen en neerzetten: vanuit de bestandsverkenner rechtstreeks in de wachtrij",
+    "locked_hotfolder_title": "Wat de Hot folder ontgrendelt",
+    "locked_hotfolder_1": "Houd één of meer mappen in de gaten: elke geplaatste afbeelding wordt automatisch naar SVG omgezet",
+    "locked_hotfolder_2": "Elke map behoudt zijn eigen preset — scans → bw, logo's → poster, zoals u wilt",
+    "locked_hotfolder_3": "De SVG's verschijnen vanzelf in de doelmap, zonder dat u iets hoeft te doen",
+    "locked_hotfolder_4": "Draait op de achtergrond zolang PixelToPath open is (ook geminimaliseerd in het systeemvak)",
+    "locked_hotfolder_5": "Activiteitenlogboek: wat wanneer is omgezet, met mappen die u opnieuw kunt openen",
     "state_active": "Pro actief",
     "state_expired": "aanwezig maar verlopen",
     "state_line": "Licentie: {state} (•••• {tail})",
@@ -131,6 +146,7 @@
     "loaded": "Afbeelding geladen",
     "removed": "Afbeelding verwijderd",
     "converting": "Bezig met converteren…",
+    "detected": "Preset gedetecteerd: {name}",
     "failed": "Conversie mislukt: {err}",
     "generated": "SVG gegenereerd · {kb} KB",
     "saved_to": "Opgeslagen: {name}",
@@ -241,10 +257,13 @@
     "title": "Instellingen",
     "language": "01 · Taal",
     "theme": "02 · Thema",
-    "license": "03 · Licentie",
-    "about": "04 · Over",
+    "license": "04 · Licentie",
+    "about": "05 · Over",
     "theme_light": "Licht",
     "theme_dark": "Donker",
+    "conversion": "03 · Conversie",
+    "auto_detect": "De beste preset automatisch detecteren",
+    "auto_detect_help": "Bij elke geladen afbeelding wordt automatisch een preset (Zwart-wit, Poster of Foto) gekozen op basis van de inhoud.",
     "about_line": "© 2025 CRAPPIER — MIT-licentie"
   },
 
@@ -291,6 +310,21 @@
     "strip_cricut": "Breng uw SVG's tot leven: vinyl-, papier- en stofsnijden op Cricut-machines.",
     "strip_lightburn": "Graveer uw SVG's met de laser in één werkgang — stuur alles aan vanuit LightBurn."
   },
+
+  "cli_page": {
+    "title": "Opdrachtregel",
+    "intro": "PixelToPath in uw terminal: dezelfde conversie-engine als de interface, aangestuurd via het commando ptp.",
+    "unlock_title": "Wat Pro ontgrendelt",
+    "f1": "Het commando ptp, inbegrepen bij Pro — dezelfde engine, dezelfde presets (bw, poster, photo, aangepast)",
+    "f2": "Omzetting per stuk of in bulk: ptp convert image.png -o svg/ --preset bw",
+    "f3": "Fijnafstelling: --colormode, --mode, --invert en elke engine-parameter via --set",
+    "f4": "Licentiebeheer zonder interface: ptp license activate · status · deactivate",
+    "f5": "Scriptbaar en CI-klaar: heldere exitcodes — 0 gelukt · 1 conversiefout · 2 licentie ontbreekt",
+    "examples": "Voorbeelden",
+    "note": "De CLI maakt deel uit van PixelToPath Pro. Zodra de licentie actief is, is het commando ptp direct beschikbaar.",
+    "hint": "Tip: u activeert de licentie in dit venster of rechtstreeks in de terminal (ptp license activate SLEUTEL)."
+  },
+
 
   "cli": {
     "desc": "{app} {version} — afbeelding → SVG conversie.",
@@ -345,6 +379,13 @@
     "splice_threshold": "Samenvoegingsdrempel",
     "splice_threshold_help": "Hoek waaronder twee paden in één enkel punt worden samengevoegd.",
     "max_iterations": "Max iteraties",
-    "max_iterations_help": "Verfijningspassen voor curven: hoger = vloeiender, langzamer."
+    "max_iterations_help": "Verfijningspassen voor curven: hoger = vloeiender, langzamer.",
+    "turdsize": "Vlekkenfilter",
+    "turdsize_help": "Negeert vormen kleiner dan dit oppervlak (in pixels): hoger = minder ruis.",
+    "alphamax": "Hoeken afvlakken",
+    "alphamax_help": "0 behoudt scherpe hoeken (veelhoek); hogere waarden geven vloeiendere curven (Potrace-standaard: 1,0).",
+    "opttolerance": "Curve-optimalisatie",
+    "opttolerance_help": "Tolerantie voor het samenvoegen van segmenten: hoger = minder knooppunten en een lichter SVG.",
+    "expert": "Geavanceerde instellingen"
   }
 }

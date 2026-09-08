@@ -26,6 +26,7 @@ a = Analysis(
     hiddenimports=[
         'PIL._tkinter_finder',
         'vtracer',                          # extension Rust/pyo3
+        'potrace',                      # port pur Python de Potrace (moteur binaire)
         *collect_submodules('cairosvg'),
         *collect_submodules('customtkinter'),
         # Icône de barre système : backend win32 de pystray, imports
