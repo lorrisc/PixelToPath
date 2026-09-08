@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" dir="ltr">
 <head>
     <script>
     var _paq = window._paq = window._paq || [];
@@ -14,6 +14,9 @@
         g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
     })();
 </script>
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,12 +28,23 @@
 
     <meta property="og:title" content="SVG vs PNG/JPG : コアウェブバイタルとSEO | PixelToPath">
     <meta property="og:description" content="PNG/JPGのロゴやアイコンをSVGに置き換えましょう：軽量化、Retinaや4Kでの鮮明な描画、LCPとCLSの改善。開発者とSEOのためのガイド。">
-    <meta property="og:image" content="../../../assets/images/screenshot.png">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-photo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a photo next to its vectorized SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SVG vs PNG/JPG : コアウェブバイタルとSEO | PixelToPath">
+    <meta name="twitter:description" content="PNG/JPGのロゴやアイコンをSVGに置き換えましょう：軽量化、Retinaや4Kでの鮮明な描画、LCPとCLSの改善。開発者とSEOのためのガイド。">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-photo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a photo next to its vectorized SVG output by PixelToPath">
     <meta property="og:url" content="https://pixel-to-path.com/ja/blog/svg-vs-png/">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="PixelToPath">
 
     <link rel="canonical" href="https://pixel-to-path.com/ja/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/svg-vs-png/">
     
     <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/svg-vs-png/">
     
@@ -66,111 +80,194 @@
     
     <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/svg-vs-png/">
     
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/svg-vs-png/">
+    
     <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/svg-vs-png/">
     
     <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/svg-vs-png/">
     
     <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/ja/blog/svg-vs-png/">
 
-    <link rel="stylesheet" href="../../../assets/css/style.css">
-    <link rel="stylesheet" href="../../../assets/css/components.css">
-    <link rel="stylesheet" href="../../../assets/css/containers.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/footer.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/navbar.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/donate.css">
-    <link rel="stylesheet" href="../../../assets/css/pages/blog-page.css">
+    <link rel="stylesheet" href="../../../assets/css/bundle.d34e5a48.css">
 
     <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
 
     <!-- Schema: BlogPosting -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "SVG vs PNG/JPG : なぜベクター形式がパフォーマンスとSEOに不可欠なのか",
-        "description": "PNG/JPGのロゴやアイコンをSVGに置き換えましょう：軽量化、Retinaや4Kでの鮮明な描画、LCPとCLSの改善。開発者とSEOのためのガイド。",
-        "url": "https://pixel-to-path.com/ja/blog/svg-vs-png/",
-        "inLanguage": "fr",
-        "author": { "@type": "Person", "name": "Lorris C." },
-        "publisher": { "@type": "Person", "name": "Lorris C." }
-    }
-    </script>
-
-    <!-- Schema: WebApplication -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "PixelToPath – SVG vs PNG/JPG : コアウェブバイタルとSEO | PixelToPath",
-        "url": "https://pixel-to-path.com/fr/online/",
-        "description": "PNG/JPGのロゴやアイコンをSVGに置き換えましょう：軽量化、Retinaや4Kでの鮮明な描画、LCPとCLSの改善。開発者とSEOのためのガイド。",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Any",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": 5,
-            "reviewCount": 1
-        }
-    }
-    </script>
-
-    <!-- Schema: HowTo -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "PNGやJPGのロゴをSVGに軽量化する方法（3ステップ）",
-        "step": [
-            { "@type": "HowToStep", "name": "PNGまたはJPGをアップロード", "text": "現在PNGまたはJPGで提供されているロゴ、アイコン、ピクトグラムをドラッグします。パスがシンプルなほど（単色、明確な輪郭）、SVGは軽量になります。" },
-            { "@type": "HowToStep", "name": "適切なプリセットを選択", "text": "モノクロのロゴやアイコンには「白黒」。ロゴにいくつかの単色がある場合は「ポスター」。「写真」は避けてください：細かすぎると視覚的なメリットなしにSVGが重くなります。" },
-            { "@type": "HowToStep", "name": "サイトにSVGを組み込む", "text": "ファイルをダウンロードして、画像、スプライト、またはインラインSVGとして提供します。1つのファイルで@1x、@2x、@3xのバリエーションを置き換えられます。" }
-        ]
-    }
-    </script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/ja/blog/svg-vs-png/#article",
+  "headline": "SVG vs PNG/JPG : なぜベクター形式がパフォーマンスとSEOに不可欠なのか",
+  "description": "PNG/JPGのロゴやアイコンをSVGに置き換えましょう：軽量化、Retinaや4Kでの鮮明な描画、LCPとCLSの改善。開発者とSEOのためのガイド。",
+  "url": "https://pixel-to-path.com/ja/blog/svg-vs-png/",
+  "mainEntityOfPage": "https://pixel-to-path.com/ja/blog/svg-vs-png/",
+  "inLanguage": "ja",
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-09-09",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/ja/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-photo.jpg"
+}</script>
 
     <!-- Schema: FAQPage -->
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            { "@type": "Question", "name": "SVGは常にPNGやJPGより軽いですか？", "acceptedAnswer": { "@type": "Answer", "text": "ロゴ、アイコン、単色のイラストの場合：はい、ほぼ常にそうです。特にPNGとRetinaバージョンを比較した場合はなおさらです。写真の場合、いいえ：「写真」のSVGはJPGやWebPよりも重いパスの雲になります。インターフェースをベクター化し、写真を圧縮してください。" } },
-            { "@type": "Question", "name": "SVGは本当にコアウェブバイタルとSEOを改善しますか？", "acceptedAnswer": { "@type": "Answer", "text": "インターフェース画像が改善できるものを改善します：バイト数の削減（ロゴやイラストがメイン要素の場合LCP）、予測可能なレンダリングボックス（CLS）、ダウンロードするバリエーションの削減。Googleは特にモバイルにおいて速度をシグナルとして使用します。魔法のランキングショートカットではなく、PageSpeed Insightsで測定される技術的な衛生管理です。" } },
-            { "@type": "Question", "name": "サイトのすべての画像をSVGに置き換える必要がありますか？", "acceptedAnswer": { "@type": "Answer", "text": "いいえ。写真、スクリーンショット、テクスチャ、複雑なグラデーション：JPG、WebP、またはAVIF。ロゴ、アイコン、図形、ピクトグラム、フラットなイラストにはSVG。詳細すぎるSVGはINPを損なう可能性があります。PixelToPathの「写真」プリセットは様式化のためのものであり、コンテンツのJPEGを置き換えるためのものではありません。" } },
-            { "@type": "Question", "name": "CLSを引き起こさずにSVGを組み込むにはどうすればよいですか？", "acceptedAnswer": { "@type": "Answer", "text": "常にviewBoxと一致する幅と高さ（またはCSSのaspect-ratio）を提供します。画像タグ（src、width、height、alt）を使用すると、ブラウザはダウンロード前にスペースを予約します。インラインSVGでは、viewBoxを維持し、サイズなしの初回表示後にコードを注入することは避けてください。" } },
-            { "@type": "Question", "name": "PixelToPathでPNGからロゴのSVGを取得するには？", "acceptedAnswer": { "@type": "Answer", "text": "オンラインツールを開き、PNG（理想的には透明な背景、十分な大きさ）をドロップし、「白黒」または「ポスター」を選択し、詳細を調整してから変換します。ブラウザまたはFigmaでSVGを開いて輪郭を確認し、本番環境で提供します。無料、アカウント不要、ファイルは保存されません。" } }
-        ]
+      "@type": "Question",
+      "name": "SVGは常にPNGやJPGより軽いですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ロゴ、アイコン、単色のイラストの場合：はい、ほぼ常にそうです。特にPNGとRetinaバージョンを比較した場合はなおさらです。写真の場合、いいえ：「写真」のSVGはJPGやWebPよりも重いパスの雲になります。インターフェースをベクター化し、写真を圧縮してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SVGは本当にコアウェブバイタルとSEOを改善しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "インターフェース画像が改善できるものを改善します：バイト数の削減（ロゴやイラストがメイン要素の場合LCP）、予測可能なレンダリングボックス（CLS）、ダウンロードするバリエーションの削減。Googleは特にモバイルにおいて速度をシグナルとして使用します。魔法のランキングショートカットではなく、PageSpeed Insightsで測定される技術的な衛生管理です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "サイトのすべての画像をSVGに置き換える必要がありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。写真、スクリーンショット、テクスチャ、複雑なグラデーション：JPG、WebP、またはAVIF。ロゴ、アイコン、図形、ピクトグラム、フラットなイラストにはSVG。詳細すぎるSVGはINPを損なう可能性があります。PixelToPathの「写真」プリセットは様式化のためのものであり、コンテンツのJPEGを置き換えるためのものではありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "CLSを引き起こさずにSVGを組み込むにはどうすればよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "常にviewBoxと一致する幅と高さ（またはCSSのaspect-ratio）を提供します。画像タグ（src、width、height、alt）を使用すると、ブラウザはダウンロード前にスペースを予約します。インラインSVGでは、viewBoxを維持し、サイズなしの初回表示後にコードを注入することは避けてください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PixelToPathでPNGからロゴのSVGを取得するには？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "オンラインツールを開き、PNG（理想的には透明な背景、十分な大きさ）をドロップし、「白黒」または「ポスター」を選択し、詳細を調整してから変換します。ブラウザまたはFigmaでSVGを開いて輪郭を確認し、本番環境で提供します。無料、アカウント不要、ファイルは保存されません。"
+      }
     }
-    </script>
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "画像からSVGへの変換を学ぶ",
+      "item": "https://pixel-to-path.com/ja/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SVG vs PNG/JPG : なぜベクター形式がパフォーマンスとSEOに不可欠なのか",
+      "item": "https://pixel-to-path.com/ja/blog/svg-vs-png/"
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
     <nav class="navbar">
     <div class="container nav-container">
 
-        <a href="/ja/"" class="brand">
+        <a href="/ja/" class="brand">
             <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
             PixelToPath
         </a>
 
         <div class="nav-links">
 
-            <a href="/ja/" 
+            <a href="/ja/"
             class="">ホーム</a>
 
-            <a href="/ja/online/" 
-            class="">オンラインツール</a>
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">製品 <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/ja/online/"
+                       class="">オンラインツール</a>
+                    <a href="/ja/offline/"
+                       class="">デスクトップアプリ</a>
+                    <a href="/ja/pro/"
+                       class="">デスクトップアプリ Pro</a>
+                    <a href="/api/" class="">API</a>
+                </div>
+            </div>
 
-            <a href="/ja/offline/" 
-            class="">デスクトップアプリ</a>
-            
-            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+            <a href="/pricing/" class="">料金</a>
 
             <div class="lang-switch">
                 <span>🇯🇵 JA</span>
                 <div class="lang-dropdown">
                     
+                    <a href="https://pixel-to-path.com/ar/blog/svg-vs-png/">🇸🇦 العربية</a>
                     <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/">🇧🇩 বাংলা</a>
                     <a href="https://pixel-to-path.com/de/blog/svg-vs-png/">🇩🇪 Deutsch</a>
                     <a href="https://pixel-to-path.com/blog/svg-vs-png/">🇺🇸 English</a>
@@ -188,6 +285,7 @@
                     <a href="https://pixel-to-path.com/th/blog/svg-vs-png/">🇹🇭 ไทย</a>
                     <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/">🇹🇷 Türkçe</a>
                     <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/svg-vs-png/">🇵🇰 اردو</a>
                     <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/">🇻🇳 Tiếng Việt</a>
                     <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/">🇨🇳 中文 (简体)</a>
                 </div>
@@ -214,19 +312,21 @@
                 <span class="mobile-link-number">01</span>
                 <span class="mobile-link-text">ホーム</span>
             </a>
-            <a href="/ja/online/"
-               class="mobile-link ">
+
+            <span class="mobile-link mobile-link--group">製品</span>
+            <div class="mobile-sublist">
+                <a href="/ja/online/"
+                   class="">オンラインツール</a>
+                <a href="/ja/offline/"
+                   class="">デスクトップアプリ</a>
+                <a href="/ja/pro/"
+                   class="">デスクトップアプリ Pro</a>
+                <a href="/api/" class="">API</a>
+            </div>
+
+            <a href="/pricing/" class="mobile-link ">
                 <span class="mobile-link-number">02</span>
-                <span class="mobile-link-text">オンラインツール</span>
-            </a>
-            <a href="/ja/offline/"
-               class="mobile-link ">
-                <span class="mobile-link-number">03</span>
-                <span class="mobile-link-text">デスクトップアプリ</span>
-            </a>
-            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
-                <span class="mobile-link-number">04</span>
-                <span class="mobile-link-text">GitHub</span>
+                <span class="mobile-link-text">料金</span>
             </a>
         </div>
 
@@ -235,6 +335,7 @@
                 <span class="mobile-lang-label">言語</span>
                 <div class="mobile-lang-options">
                     
+                    <a href="https://pixel-to-path.com/ar/blog/svg-vs-png/" class="mobile-lang-btn">🇸🇦 العربية</a>
                     <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
                     <a href="https://pixel-to-path.com/de/blog/svg-vs-png/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
                     <a href="https://pixel-to-path.com/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇸 English</a>
@@ -252,6 +353,7 @@
                     <a href="https://pixel-to-path.com/th/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇭 ไทย</a>
                     <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
                     <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/svg-vs-png/" class="mobile-lang-btn">🇵🇰 اردو</a>
                     <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
                     <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
                 </div>
@@ -281,6 +383,7 @@
         });
     });
 </script>
+
     <main>
 
         <!-- ═══════════════════════════════════════
@@ -317,7 +420,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -325,14 +428,11 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
         <!-- ═══════════════════════════════════════
-             HOW TO – 3-step guide + HowTo schema
+             HOW TO – 3-step guide
         ════════════════════════════════════════ -->
         <section class="section bg-light">
             <div class="container">
@@ -367,7 +467,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -375,9 +475,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -404,25 +501,63 @@
                     <h2>PNG vs SVG：ロゴの重さは軽視できない</h2>
                     <p>画像は依然としてページの重さの最大の要因の1つです。写真はWebPに最適化しますが、ヘッダーのロゴやCSSの20個のPNGアイコンは忘れられがちです。しかし、これらのファイルはすべてのURLで繰り返されます：失われたミリ秒はサイト全体で失われます。</p>
                     <p>ショーケースサイトやウェブアプリケーションの一般的なシナリオで、PixelToPathでベクター化した後の桁の違い：</p>
-                    <ul>
-                        <li>透明な512pxのPNGロゴ：多くの場合40〜80KB。同じデザインのSVG：色数とノード数に応じて、頻繁に2〜12KBになります</li>
-                        <li>Retinaで鮮明さを保つため、PNGは1024pxまたはsrcset @2x経由で提供されます：重さは2倍、時には3倍になります。SVGはファイルが変わりません</li>
-                        <li>PNG @3x（72×72）で書き出された24×24のアイコンは2〜8KBです。20個のアイコンで掛け合わせると、40〜160KBのインターフェースが追加されます。SVGの同じピクトグラムは、合計で数KBに収まることがよくあります</li>
-                        <li>「白背景」のロゴJPGは軽く見えますが、単色やテキストは圧縮の影響を受けます。SVGはエッジがシャープで、ハローがなく、さらに軽くなります</li>
-                    </ul>
+                    <table class="vs-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">シナリオ</th>
+                                <th scope="col">PNG / JPG</th>
+                                <th scope="col">SVG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">透明背景の 512 px ロゴ</th>
+                                <td data-label="PNG / JPG">40〜80 KB</td>
+                                <td class="yes" data-label="SVG">色数やノード数により 2〜12 KB</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Retina 向けに @2x（1024 px）で配信する同じロゴ</th>
+                                <td data-label="PNG / JPG">容量が2倍、時には3倍に</td>
+                                <td class="yes" data-label="SVG">1つのファイルのままで変化なし</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">@3x（72×72）で書き出した UI アイコン20個</th>
+                                <td data-label="PNG / JPG">40〜160 KB の追加</td>
+                                <td class="yes" data-label="SVG">合計で数 KB</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">JPG から来たフラットカラーのロゴ</th>
+                                <td data-label="PNG / JPG">図形や文字の周りに圧縮ノイズとにじみ</td>
+                                <td class="yes" data-label="SVG">輪郭は滑らかで、さらに軽いファイル</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <p>ルールは簡単です：形、テキスト、ピクトグラム、またはロゴタイプはすべてSVGにするのが有利です。写真やスクリーンショットはJPG、WebP、またはAVIFのままにします。SVGは普遍的な代替品ではありません：インターフェースに適したフォーマットです。</p>
 
                     <h2>スケーラビリティ：スマートフォンから4Kまで鮮明な1つのファイル</h2>
                     <p>PNGはネイティブ解像度でのみ鮮明です。拡大するとピクセルが見えます。急激に縮小すると、ブラウザは再サンプリングする必要があります。それゆえに@1x、@2x、@3xのファイル、srcset、CSS密度の苦労があります。新しいブレイクポイントや新しい画面密度（Retina、最新の電話、4Kモニター）ごとに、新しい書き出し、または「念のため」の大きすぎるファイルが必要になります。</p>
                     <p>SVGはこの制約を無視します。レンダリングエンジンは、要求されたCSSサイズで曲線を計算します。32pxのファビコン、ナビゲーションの48pxのロゴ、バナーの400pxの同じブランド、4Kの投影：すべて同じファイルです。ぼやけず、エイリアシングがなく、高密度バージョン用の2番目のリクエストもありません。コンポーネントライブラリにとっても、負債が減ります：1つのアイコン、1つのファイル、すべてのサイズ。</p>
 
+                    
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/logo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="同じロゴを400%に拡大：左ではPNGのピクセルが見えてきますが、右のSVGの曲線は完全に滑らかなままです。">
+    <figcaption>同じロゴを400%に拡大：左ではPNGのピクセルが見えてきますが、右のSVGの曲線は完全に滑らかなままです。</figcaption>
+</figure>
+
+                    
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/photo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="気球を400%ズーム：左はJPEGのぼけとピクセル、右はポスター化されたベクターの色面です。">
+    <figcaption>気球を400%ズーム：左はJPEGのぼけとピクセル、右はポスター化されたベクターの色面です。</figcaption>
+</figure>
+
+
                     <h2>コアウェブバイタルとSEO：なぜGoogleはフォーマットを気にするのか</h2>
-                    <p>モバイルの速度はランキング要因です。コアウェブバイタル（LCP、INP、CLS）はユーザーが感じるものを測定します。重いPNGロゴや多数のラスターアイコンをSVGに置き換えても、ページが4MBから40KBになるわけではありません。しかし、サイトのスキンにおいては、特に4Gネットワークやヘッダーロゴに縛られたLCPにおいて、効果は即座に表れます。</p>
+                    <p>モバイルの速度はランキング要因です。<a href="https://web.dev/articles/vitals" target="_blank" rel="noopener">コアウェブバイタル</a>（LCP、INP、CLS）はユーザーが感じるものを測定します。重いPNGロゴや多数のラスターアイコンをSVGに置き換えても、ページが4MBから40KBになるわけではありません。しかし、サイトのスキンにおいては、特に4Gネットワークやヘッダーロゴに縛られたLCPにおいて、効果は即座に表れます。</p>
                     <p>具体的には、ベクター形式は3つの指標に役立ちますが、パスの複雑さを妥当な範囲に保つ必要があります：</p>
                     <ul>
-                        <li>LCP（Largest Contentful Paint）：最大視覚コンテンツがロゴやフラットなイラストの場合、数KBのSVGは150KBのPNG @2xよりも早く到着します。ページの残りの部分のネットワーク競合が少なくなります</li>
-                        <li>CLS（Cumulative Layout Shift）：width、height、viewBoxを持つSVGは、HTMLの解析段階でボックスを予約します。比率を知るためにビットマップのデコードを待つ必要がなくなり、レイアウトのずれが減ります</li>
-                        <li>INPとメインスレッド：シンプルなSVG（ロゴ、アイコン）は描画のコストが低いです。逆に、数千のパスを持つ「写真」SVGは避けてください：PNGよりも重くなり、プロセッサに負荷をかける可能性があります。だからこそ、ピクセルごとのコピーではなく、PixelToPathによるクリーンなパスが重要なのです</li>
+                        <li><a href="https://web.dev/articles/optimize-lcp" target="_blank" rel="noopener">LCP</a>（Largest Contentful Paint）：最大視覚コンテンツがロゴやフラットなイラストの場合、数KBのSVGは150KBのPNG @2xよりも早く到着します。ページの残りの部分のネットワーク競合が少なくなります</li>
+                        <li><a href="https://web.dev/articles/optimize-cls" target="_blank" rel="noopener">CLS</a>（Cumulative Layout Shift）：width、height、viewBoxを持つSVGは、HTMLの解析段階でボックスを予約します。比率を知るためにビットマップのデコードを待つ必要がなくなり、レイアウトのずれが減ります</li>
+                        <li><a href="https://web.dev/articles/inp" target="_blank" rel="noopener">INP</a>とメインスレッド：シンプルなSVG（ロゴ、アイコン）は描画のコストが低いです。逆に、数千のパスを持つ「写真」SVGは避けてください：PNGよりも重くなり、プロセッサに負荷をかける可能性があります。だからこそ、ピクセルごとのコピーではなく、PixelToPathによるクリーンなパスが重要なのです</li>
                         <li>速度を超えたSEO：GoogleはSVGをインデックスします。埋め込まれたロゴはアクセス可能なタイトルを持つことができます。alt属性を持つSVG画像は基本のままです。そして、より軽いページは、ランキングで考慮される経験シグナルである技術的な直帰率を減らします</li>
                     </ul>
                 </div>
@@ -430,7 +565,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -438,9 +573,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -488,7 +620,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -496,9 +628,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -523,7 +652,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -531,9 +660,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -546,10 +672,6 @@
                 <p class="section-intro">ファイルをベクター化し、関係するフォーマットを深く掘り下げます。</p>
 
                 <div class="related-tools">
-                    
-                    <a href="/ja/blog/png-to-svg/" class="related-tool-link">
-                        🔄 PNGからSVGへのコンバーター
-                    </a>
                     
                     <a href="/ja/blog/jpg-to-svg/" class="related-tool-link">
                         🔄 JPGからSVGへのコンバーター
@@ -572,7 +694,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -580,9 +702,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -618,7 +737,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -626,9 +745,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -656,22 +772,6 @@
     </main>
 
     
-<a class="sponsor" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=banner&amp;utm_campaign=site_footer" target="_blank" rel="sponsored noopener noreferrer">
-    <div class="container sponsor__inner">
-        <div class="sponsor__mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
-                <path d="M8 4.5h11.2L24 9.3V26a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 8 26V4.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M19 4.5V9h4.8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M12 14.5h8M12 18.5h8M12 22.5h5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-            </svg>
-        </div>
-        <div class="sponsor__copy">
-            <strong class="sponsor__title">DocuNest: PDFを100%オフラインで編集</strong>
-            <span class="sponsor__text">デスクトップエディタに26のツール。署名、結合、変換。ファイルはパソコンから出ません。</span>
-        </div>
-        <span class="sponsor__cta">7日間無料で試す</span>
-    </div>
-</a>
 
 <footer>
     <div class="container" id="footernavigation">
@@ -679,105 +779,25 @@
         <a href="/ja/">ホーム</a>
         <a href="/ja/online/">オンラインツール</a>
         <a href="/ja/offline/">デスクトップアプリ</a>
+        <a href="/ja/pro/">Pro</a>
+        <a href="/api/">API</a>
         <a href="/ja/blog/">ブログ</a>
         <a href="https://github.com/lorrisc/PixelToPath">オープンソース (MIT)</a>
     </div>
     <div class="container" id="footerlegal">
-        <a href="/legal">Legal notice</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">クライアントポータル</a>
     </div>
 </footer>
 
-<link rel="stylesheet" href="../../../assets/css/partials/docunest-popup.css">
-<div id="dn-popup" class="dn-popup" hidden>
-    <div class="dn-popup__dialog" role="dialog" aria-modal="true" aria-labelledby="dn-popup-title">
-        <div class="dn-popup__top">
-            <p class="dn-popup__brand" id="dn-popup-title">DocuNest</p>
-            <button type="button" class="dn-popup__close" data-dn-close aria-label="閉じる">&times;</button>
-        </div>
-
-        <div class="dn-carousel" data-dn-carousel>
-            <div class="dn-carousel__viewport">
-                <div class="dn-carousel__track">
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">PDFの機密部分を完全に黒塗りするには？</h2>
-                        <p class="dn-slide__text">機密データを完全に黒塗り。範囲内の文字と画像は覆うだけでなく破棄されます。すべてパソコン上で処理し、ファイルは一切送信しません。</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/redact.png" alt="DocuNestでのPDF黒塗り" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">アップロードせずにPDFへ署名するには？</h2>
-                        <p class="dn-slide__text">署名を描くか読み込み、配置してサイズを調整。アカウントも送信も不要。文書はパソコンから出ません。</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/sign.png" alt="DocuNestでのPDF署名" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">PDFに透かしを入れるには？</h2>
-                        <p class="dn-slide__text">文字や画像で全ページにスタンプ：機密、ロゴ、日付。ローカル、無制限。クラウドツールの強制透かしはありません。</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/watermark.png" alt="DocuNestでのPDF透かし" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide dn-slide--offer">
-                        <h2 class="dn-slide__title dn-slide__title--xl">本格PDFエディター。100%オフライン。</h2>
-                        <p class="dn-slide__text">デスクトップアプリ1つに26のツール。テキスト編集、署名、結合、変換。ファイルはパソコンから出ません。</p>
-                        <ul class="dn-offer">
-                            <li class="dn-offer__item">
-                                <strong>100%オフライン</strong>
-                                <span>送信なし。アカウントなし。クラウドなし。</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>買い切りライセンス 30€</strong>
-                                <span>一度きりの支払い。月額課金なし。</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>26ツール、1つのエディター</strong>
-                                <span>黒塗り、署名、結合、変換。すべてここに。</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>7日間無料トライアル</strong>
-                                <span>カード不要。Windows、macOS、Linux。</span>
-                            </li>
-                        </ul>
-                        <a class="dn-offer__cta" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup" target="_blank" rel="noopener noreferrer">DocuNestをダウンロード</a>
-                    </article>
-                </div>
-            </div>
-            <button type="button" class="dn-carousel__nav dn-carousel__nav--prev" data-dn-prev aria-label="前のスライド">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15.5 4.5 8 12l7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <button type="button" class="dn-carousel__nav dn-carousel__nav--next" data-dn-next aria-label="次のスライド">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8.5 4.5 16 12l-7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="dn-carousel__dots" data-dn-dots>
-                <button type="button" class="is-active" aria-label="1"></button>
-                <button type="button" aria-label="2"></button>
-                <button type="button" aria-label="3"></button>
-                <button type="button" aria-label="4"></button>
-            </div>
-        </div>
-
-        <div class="dn-bar">
-            <nav class="dn-bar__tools" aria-label="DocuNest">
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">黒塗り</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">署名</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">透かし</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">結合</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">編集</a>
-            </nav>
-            <div class="dn-bar__cta-wrap">
-                <span class="dn-bar__note">7日間無料 · カード不要</span>
-                <a class="dn-bar__cta" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup" target="_blank" rel="noopener noreferrer">無料で試す</a>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="../../../assets/js/docunest-popup.js" defer></script>
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
 
 
-    <script src="../../../assets/js/ui-state.js"></script>
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
 </body>
 </html>

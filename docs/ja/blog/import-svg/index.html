@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" dir="ltr">
 <head>
     <script>
     var _paq = window._paq = window._paq || [];
@@ -14,6 +14,9 @@
         g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
     })();
 </script>
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,12 +28,23 @@
 
     <meta property="og:title" content="Figma、Canva、WordPressにSVGをインポートする | PixelToPath">
     <meta property="og:description" content="PixelToPathのSVGが完成しました。Figmaにインポートして色を変更したり、Canvaで使用したり、セキュリティの脆弱性なしにWordPressに公開したりできます。デザイナー向けガイド。">
-    <meta property="og:image" content="../../../assets/images/screenshot.png">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Figma、Canva、WordPressにSVGをインポートする | PixelToPath">
+    <meta name="twitter:description" content="PixelToPathのSVGが完成しました。Figmaにインポートして色を変更したり、Canvaで使用したり、セキュリティの脆弱性なしにWordPressに公開したりできます。デザイナー向けガイド。">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
     <meta property="og:url" content="https://pixel-to-path.com/ja/blog/import-svg/">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="PixelToPath">
 
     <link rel="canonical" href="https://pixel-to-path.com/ja/blog/import-svg/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/import-svg/">
     
     <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/import-svg/">
     
@@ -66,111 +80,194 @@
     
     <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/import-svg/">
     
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/import-svg/">
+    
     <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/import-svg/">
     
     <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/import-svg/">
     
     <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/ja/blog/import-svg/">
 
-    <link rel="stylesheet" href="../../../assets/css/style.css">
-    <link rel="stylesheet" href="../../../assets/css/components.css">
-    <link rel="stylesheet" href="../../../assets/css/containers.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/footer.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/navbar.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/donate.css">
-    <link rel="stylesheet" href="../../../assets/css/pages/blog-page.css">
+    <link rel="stylesheet" href="../../../assets/css/bundle.d34e5a48.css">
 
     <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
 
     <!-- Schema: BlogPosting -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "Figma、Canva、WordPressでSVGファイルをインポートおよび編集する方法",
-        "description": "PixelToPathのSVGが完成しました。Figmaにインポートして色を変更したり、Canvaで使用したり、セキュリティの脆弱性なしにWordPressに公開したりできます。デザイナー向けガイド。",
-        "url": "https://pixel-to-path.com/ja/blog/import-svg/",
-        "inLanguage": "fr",
-        "author": { "@type": "Person", "name": "Lorris C." },
-        "publisher": { "@type": "Person", "name": "Lorris C." }
-    }
-    </script>
-
-    <!-- Schema: WebApplication -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "PixelToPath – Figma、Canva、WordPressにSVGをインポートする | PixelToPath",
-        "url": "https://pixel-to-path.com/fr/online/",
-        "description": "PixelToPathのSVGが完成しました。Figmaにインポートして色を変更したり、Canvaで使用したり、セキュリティの脆弱性なしにWordPressに公開したりできます。デザイナー向けガイド。",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Any",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": 5,
-            "reviewCount": 1
-        }
-    }
-    </script>
-
-    <!-- Schema: HowTo -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "画像からインポート可能なSVGへ（3ステップ）",
-        "step": [
-            { "@type": "HowToStep", "name": "画像を変換する", "text": "PNGまたはJPGをPixelToPathにアップロードします。後で色を変更するロゴやアイコンの場合は、「白黒」または「ポスター」を選択します：ベクター化された写真ではなく、単色塗りです。" },
-            { "@type": "HowToStep", "name": "SVGをダウンロードする", "text": "プレビューして、.svgファイルを保存します。これは偽装されたPNGではなく、実際のパスです：FigmaとCanvaで色を変更できます。" },
-            { "@type": "HowToStep", "name": "ツールにインポートする", "text": "ファイルをFigma、Canvaのアップロード、またはWordPressのメディア（クリーンなファイル）にドラッグします。3つの方法は以下で詳しく説明します。" }
-        ]
-    }
-    </script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/ja/blog/import-svg/#article",
+  "headline": "Figma、Canva、WordPressでSVGファイルをインポートおよび編集する方法",
+  "description": "PixelToPathのSVGが完成しました。Figmaにインポートして色を変更したり、Canvaで使用したり、セキュリティの脆弱性なしにWordPressに公開したりできます。デザイナー向けガイド。",
+  "url": "https://pixel-to-path.com/ja/blog/import-svg/",
+  "mainEntityOfPage": "https://pixel-to-path.com/ja/blog/import-svg/",
+  "inLanguage": "ja",
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-09-09",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/ja/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-logo.jpg"
+}</script>
 
     <!-- Schema: FAQPage -->
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            { "@type": "Question", "name": "FigmaはSVGをベクターではなく画像としてインポートします。なぜですか？", "acceptedAnswer": { "@type": "Answer", "text": "ファイルには、パスではなくビットマップ（画像タグ内のPNG）が含まれている可能性があります。白黒またはポスターのPixelToPathエクスポートはパスです。これらのプリセットのいずれかで再変換し、.svgをキャンバスに再度ドラッグするか、ファイル → 配置を使用します。単一の画像レイヤーではなく、レイヤーのグループが表示されるはずです。" } },
-            { "@type": "Question", "name": "Canvaに色を変更するためのパレットが表示されません。どうすればいいですか？", "acceptedAnswer": { "@type": "Answer", "text": "CanvaはシンプルなSVGのみを再着色します：単色塗り、少ない色合い、グラデーションやテクスチャなし。写真プリセットは多すぎる形状を生成します。PixelToPathで画像をポスター（いくつかの単色）または白黒に戻し、再インポートします。配置したSVGをクリックします：上部のバーにパレットが表示されます。" } },
-            { "@type": "Question", "name": "WordPressでSVGを許可するのは危険ですか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、MIMEタイプを追加するだけの場合。SVGにはJavaScriptを含めることができます。Safe SVG (10up) を使用してください：ファイルはアップロード時にクリーンアップされ、メディアライブラリにプレビューが表示され、権限を管理者に制限できます。より厳格な代替案：メディアライブラリ外のテーマにSVGを配置します。" } },
-            { "@type": "Question", "name": "PixelToPathの後にAdobe Illustratorは必要ですか？", "acceptedAnswer": { "@type": "Answer", "text": "このワークフローには不要です。色を変更、グループ解除、エクスポートするにはFigmaで十分です。ソーシャルメディアのバリエーションにはCanvaで十分です。Illustratorは、モックアップやサイトにロゴを貼り付けるためではなく、手作業での再描画や非常に要求の厳しい印刷ファイルに引き続き役立ちます。" } },
-            { "@type": "Question", "name": "Figmaでロゴの色を変更したい場合、どのプリセットを選択すればよいですか？", "acceptedAnswer": { "@type": "Answer", "text": "モノクロのロゴタイプまたはアイコンの場合は白黒：1つの色合い、1クリック。ロゴに2つまたは3つの単色がある場合はポスター。写真を避けてください：選択や色の変更が面倒な、何十もの小さな形状が生成されます。" } }
-        ]
+      "@type": "Question",
+      "name": "FigmaはSVGをベクターではなく画像としてインポートします。なぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ファイルには、パスではなくビットマップ（画像タグ内のPNG）が含まれている可能性があります。白黒またはポスターのPixelToPathエクスポートはパスです。これらのプリセットのいずれかで再変換し、.svgをキャンバスに再度ドラッグするか、ファイル → 配置を使用します。単一の画像レイヤーではなく、レイヤーのグループが表示されるはずです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Canvaに色を変更するためのパレットが表示されません。どうすればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CanvaはシンプルなSVGのみを再着色します：単色塗り、少ない色合い、グラデーションやテクスチャなし。写真プリセットは多すぎる形状を生成します。PixelToPathで画像をポスター（いくつかの単色）または白黒に戻し、再インポートします。配置したSVGをクリックします：上部のバーにパレットが表示されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "WordPressでSVGを許可するのは危険ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、MIMEタイプを追加するだけの場合。SVGにはJavaScriptを含めることができます。Safe SVG (10up) を使用してください：ファイルはアップロード時にクリーンアップされ、メディアライブラリにプレビューが表示され、権限を管理者に制限できます。より厳格な代替案：メディアライブラリ外のテーマにSVGを配置します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PixelToPathの後にAdobe Illustratorは必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "このワークフローには不要です。色を変更、グループ解除、エクスポートするにはFigmaで十分です。ソーシャルメディアのバリエーションにはCanvaで十分です。Illustratorは、モックアップやサイトにロゴを貼り付けるためではなく、手作業での再描画や非常に要求の厳しい印刷ファイルに引き続き役立ちます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Figmaでロゴの色を変更したい場合、どのプリセットを選択すればよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "モノクロのロゴタイプまたはアイコンの場合は白黒：1つの色合い、1クリック。ロゴに2つまたは3つの単色がある場合はポスター。写真を避けてください：選択や色の変更が面倒な、何十もの小さな形状が生成されます。"
+      }
     }
-    </script>
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "画像からSVGへの変換を学ぶ",
+      "item": "https://pixel-to-path.com/ja/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Figma、Canva、WordPressでSVGファイルをインポートおよび編集する方法",
+      "item": "https://pixel-to-path.com/ja/blog/import-svg/"
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
     <nav class="navbar">
     <div class="container nav-container">
 
-        <a href="/ja/"" class="brand">
+        <a href="/ja/" class="brand">
             <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
             PixelToPath
         </a>
 
         <div class="nav-links">
 
-            <a href="/ja/" 
+            <a href="/ja/"
             class="">ホーム</a>
 
-            <a href="/ja/online/" 
-            class="">オンラインツール</a>
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">製品 <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/ja/online/"
+                       class="">オンラインツール</a>
+                    <a href="/ja/offline/"
+                       class="">デスクトップアプリ</a>
+                    <a href="/ja/pro/"
+                       class="">デスクトップアプリ Pro</a>
+                    <a href="/api/" class="">API</a>
+                </div>
+            </div>
 
-            <a href="/ja/offline/" 
-            class="">デスクトップアプリ</a>
-            
-            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+            <a href="/pricing/" class="">料金</a>
 
             <div class="lang-switch">
                 <span>🇯🇵 JA</span>
                 <div class="lang-dropdown">
                     
+                    <a href="https://pixel-to-path.com/ar/blog/import-svg/">🇸🇦 العربية</a>
                     <a href="https://pixel-to-path.com/bn/blog/import-svg/">🇧🇩 বাংলা</a>
                     <a href="https://pixel-to-path.com/de/blog/import-svg/">🇩🇪 Deutsch</a>
                     <a href="https://pixel-to-path.com/blog/import-svg/">🇺🇸 English</a>
@@ -188,6 +285,7 @@
                     <a href="https://pixel-to-path.com/th/blog/import-svg/">🇹🇭 ไทย</a>
                     <a href="https://pixel-to-path.com/tr/blog/import-svg/">🇹🇷 Türkçe</a>
                     <a href="https://pixel-to-path.com/uk/blog/import-svg/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/import-svg/">🇵🇰 اردو</a>
                     <a href="https://pixel-to-path.com/vi/blog/import-svg/">🇻🇳 Tiếng Việt</a>
                     <a href="https://pixel-to-path.com/zh/blog/import-svg/">🇨🇳 中文 (简体)</a>
                 </div>
@@ -214,19 +312,21 @@
                 <span class="mobile-link-number">01</span>
                 <span class="mobile-link-text">ホーム</span>
             </a>
-            <a href="/ja/online/"
-               class="mobile-link ">
+
+            <span class="mobile-link mobile-link--group">製品</span>
+            <div class="mobile-sublist">
+                <a href="/ja/online/"
+                   class="">オンラインツール</a>
+                <a href="/ja/offline/"
+                   class="">デスクトップアプリ</a>
+                <a href="/ja/pro/"
+                   class="">デスクトップアプリ Pro</a>
+                <a href="/api/" class="">API</a>
+            </div>
+
+            <a href="/pricing/" class="mobile-link ">
                 <span class="mobile-link-number">02</span>
-                <span class="mobile-link-text">オンラインツール</span>
-            </a>
-            <a href="/ja/offline/"
-               class="mobile-link ">
-                <span class="mobile-link-number">03</span>
-                <span class="mobile-link-text">デスクトップアプリ</span>
-            </a>
-            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
-                <span class="mobile-link-number">04</span>
-                <span class="mobile-link-text">GitHub</span>
+                <span class="mobile-link-text">料金</span>
             </a>
         </div>
 
@@ -235,6 +335,7 @@
                 <span class="mobile-lang-label">言語</span>
                 <div class="mobile-lang-options">
                     
+                    <a href="https://pixel-to-path.com/ar/blog/import-svg/" class="mobile-lang-btn">🇸🇦 العربية</a>
                     <a href="https://pixel-to-path.com/bn/blog/import-svg/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
                     <a href="https://pixel-to-path.com/de/blog/import-svg/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
                     <a href="https://pixel-to-path.com/blog/import-svg/" class="mobile-lang-btn">🇺🇸 English</a>
@@ -252,6 +353,7 @@
                     <a href="https://pixel-to-path.com/th/blog/import-svg/" class="mobile-lang-btn">🇹🇭 ไทย</a>
                     <a href="https://pixel-to-path.com/tr/blog/import-svg/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
                     <a href="https://pixel-to-path.com/uk/blog/import-svg/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/import-svg/" class="mobile-lang-btn">🇵🇰 اردو</a>
                     <a href="https://pixel-to-path.com/vi/blog/import-svg/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
                     <a href="https://pixel-to-path.com/zh/blog/import-svg/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
                 </div>
@@ -281,6 +383,7 @@
         });
     });
 </script>
+
     <main>
 
         <!-- ═══════════════════════════════════════
@@ -319,7 +422,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -327,14 +430,11 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
         <!-- ═══════════════════════════════════════
-             HOW TO – 3-step guide + HowTo schema
+             HOW TO – 3-step guide
         ════════════════════════════════════════ -->
         <section class="section bg-light">
             <div class="container">
@@ -369,7 +469,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -377,11 +477,44 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
+
+        <!-- ═══════════════════════════════════════
+             REAL OUTPUT – before/after traced by the tool
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">コンバーターの実際の結果</h2>
+                
+
+<figure class="ba-compare ba-compare--sample">
+    <div class="ba-compare__pair">
+        <div class="ba-panel ba-panel--before">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">変換前 · 元ファイル</span>
+                <span class="size-badge">5 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-input.png" width="320" height="320" loading="lazy" decoding="async" alt="PNGファイル：白のシェブロンが入った紺色の円形ロゴ">
+            </div>
+        </div>
+        <span class="ba-compare__arrow" aria-hidden="true">→</span>
+        <div class="ba-panel ba-panel--after">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">変換後 · SVG</span>
+                <span class="size-badge">白黒プリセット · 2 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-bw.svg" width="320" height="320" loading="lazy" decoding="async" alt="同じロゴを白黒プリセットでSVG化：滑らかな曲線と黒の塗り">
+            </div>
+        </div>
+    </div>
+    <figcaption>このツールで実際に行った変換です。左の元PNGを白黒プリセットでトレースし、右のSVGになりました。どんな倍率でも鮮明さを保てるベクターファイルです。</figcaption>
+</figure>
+
+            </div>
+        </section>
 
         <!-- ═══════════════════════════════════════
              EDUCATIONAL CONTENT – why the "after" step
@@ -391,7 +524,7 @@
                 <div class="content-section">
                     <h2>SVGが手に入りました。次は何をしますか？</h2>
                     <p>ほとんどのコンバーターは「ダウンロード」ボタンで終わります。しかし、ファイルがダウンロードフォルダに残ったままでは意味がありません。デザイナーはFigmaで開いてガイドラインを適用します。コミュニティマネージャーはCanvaにドロップして投稿を作成します。インテグレーターはヘッダーロゴとしてWordPressに配置します。PixelToPathが単なるデモではなく、実際のワークフローに組み込まれていることを証明するのは、この次のステップです。</p>
-                    <p>PixelToPathのSVGは静止画像ではありません。それはパスの集合です：各形状には塗りつぶしがあり、場合によってはアウトラインがあります。ロゴの青をバーガンディに変更したり、アイコンを分離したり、1080x1920のストーリー用に拡大したりできます。これらはすべて、Illustratorに戻ることなく、すでに使用しているツール内で実行できます。</p>
+                    <p>PixelToPathのSVGは静止画像ではありません。それは<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths" target="_blank" rel="noopener">パスの集合</a>です：各形状には塗りつぶしがあり、場合によってはアウトラインがあります。ロゴの青をバーガンディに変更したり、アイコンを分離したり、1080x1920のストーリー用に拡大したりできます。これらはすべて、Illustratorに戻ることなく、すでに使用しているツール内で実行できます。</p>
 
                     <h3>Figma、Canva、WordPressがこのフォーマットを好む理由</h3>
                     <p>インポートされたPNGとJPGはビットマップです。FigmaでPNGロゴの色を変更するということは、パスの色を変更するのではなく、上にレイヤーを重ねるということです。Canvaはカラーパレットを提供しません。WordPressはRetinaディスプレイでぼやける重いファイルを提供します。SVGはこれら3つの問題を一度に解決します。</p>
@@ -407,7 +540,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -415,9 +548,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -450,7 +580,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -458,9 +588,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -492,8 +619,8 @@
                     <p>Canvaは、SVG 1.1プロファイル、同じ色の形状のグループ化、テクスチャなしを推奨しています。PixelToPathのロゴプリセットはすでにこれらの制約を尊重しています。ファイルを「準備」するためにIllustratorを通過する必要はありません。</p>
 
                     <h2>WordPress：脆弱性を開かずにSVGのアップロードを許可する</h2>
-                    <p>WordPressはデフォルトでSVGを拒否しますが、これは気まぐれではありません。SVGはXMLです：JavaScript、外部エンティティ、XSSペイロードを含めることができます。悪意のあるSVGをアップロードした訪問者、または侵害された編集者アカウントは、管理画面でコードを実行できます。これがブロックの理由です。フォーマットを許可し、ファイルをクリーンアップする必要があります。</p>
-                    <p class="content-callout content-callout--warn">functions.phpにimage/svg+xmlを追加するだけではいけません。ファイルをクリーンアップしないと、脆弱性が開きます。安全な方法：スクリプト、onloadイベント、XMLエンティティをパージする保守されたプラグイン。100万回以上インストールされているSafe SVG (10up)。</p>
+                    <p>WordPressはデフォルトでSVGを拒否しますが、これは気まぐれではありません。SVGはXMLです：JavaScript、外部エンティティ、<a href="https://owasp.org/www-community/attacks/xss/" target="_blank" rel="noopener">XSS</a>ペイロードを含めることができます。悪意のあるSVGをアップロードした訪問者、または侵害された編集者アカウントは、管理画面でコードを実行できます。これがブロックの理由です。フォーマットを許可し、ファイルをクリーンアップする必要があります。</p>
+                    <p class="content-callout content-callout--warn">functions.phpにimage/svg+xmlを追加するだけではいけません。ファイルをクリーンアップしないと、脆弱性が開きます。安全な方法：スクリプト、onloadイベント、XMLエンティティをパージする保守されたプラグイン。100万回以上インストールされている<a href="https://wordpress.org/plugins/safe-svg/" target="_blank" rel="noopener">Safe SVG</a> (10up)。</p>
                     <ol>
                         <li>WordPress管理画面で：プラグイン → 新規追加。「Safe SVG」（作成者：10up）を検索します。インストールして有効化します。</li>
                         <li>設定 → メディアに移動します。SVGのアップロードを管理者（または信頼できる役割）に制限します。サイトに複数の寄稿者がいる場合、すべての投稿者アカウントにフォーマットを開放しないでください。</li>
@@ -516,7 +643,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -524,9 +651,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -574,7 +698,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -582,9 +706,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -609,7 +730,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -617,9 +738,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -635,10 +753,6 @@
                     
                     <a href="/ja/blog/vectorize-logo/" class="related-tool-link">
                         🔧 ぼやけたロゴをベクター化する
-                    </a>
-                    
-                    <a href="/ja/blog/png-to-svg/" class="related-tool-link">
-                        🔄 PNGからSVGへのコンバーター
                     </a>
                     
                     <a href="/ja/blog/svg-vs-png/" class="related-tool-link">
@@ -658,7 +772,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -666,9 +780,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -704,7 +815,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -712,9 +823,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -742,22 +850,6 @@
     </main>
 
     
-<a class="sponsor" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=banner&amp;utm_campaign=site_footer" target="_blank" rel="sponsored noopener noreferrer">
-    <div class="container sponsor__inner">
-        <div class="sponsor__mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
-                <path d="M8 4.5h11.2L24 9.3V26a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 8 26V4.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M19 4.5V9h4.8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M12 14.5h8M12 18.5h8M12 22.5h5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-            </svg>
-        </div>
-        <div class="sponsor__copy">
-            <strong class="sponsor__title">DocuNest: PDFを100%オフラインで編集</strong>
-            <span class="sponsor__text">デスクトップエディタに26のツール。署名、結合、変換。ファイルはパソコンから出ません。</span>
-        </div>
-        <span class="sponsor__cta">7日間無料で試す</span>
-    </div>
-</a>
 
 <footer>
     <div class="container" id="footernavigation">
@@ -765,105 +857,25 @@
         <a href="/ja/">ホーム</a>
         <a href="/ja/online/">オンラインツール</a>
         <a href="/ja/offline/">デスクトップアプリ</a>
+        <a href="/ja/pro/">Pro</a>
+        <a href="/api/">API</a>
         <a href="/ja/blog/">ブログ</a>
         <a href="https://github.com/lorrisc/PixelToPath">オープンソース (MIT)</a>
     </div>
     <div class="container" id="footerlegal">
-        <a href="/legal">Legal notice</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">クライアントポータル</a>
     </div>
 </footer>
 
-<link rel="stylesheet" href="../../../assets/css/partials/docunest-popup.css">
-<div id="dn-popup" class="dn-popup" hidden>
-    <div class="dn-popup__dialog" role="dialog" aria-modal="true" aria-labelledby="dn-popup-title">
-        <div class="dn-popup__top">
-            <p class="dn-popup__brand" id="dn-popup-title">DocuNest</p>
-            <button type="button" class="dn-popup__close" data-dn-close aria-label="閉じる">&times;</button>
-        </div>
-
-        <div class="dn-carousel" data-dn-carousel>
-            <div class="dn-carousel__viewport">
-                <div class="dn-carousel__track">
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">PDFの機密部分を完全に黒塗りするには？</h2>
-                        <p class="dn-slide__text">機密データを完全に黒塗り。範囲内の文字と画像は覆うだけでなく破棄されます。すべてパソコン上で処理し、ファイルは一切送信しません。</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/redact.png" alt="DocuNestでのPDF黒塗り" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">アップロードせずにPDFへ署名するには？</h2>
-                        <p class="dn-slide__text">署名を描くか読み込み、配置してサイズを調整。アカウントも送信も不要。文書はパソコンから出ません。</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/sign.png" alt="DocuNestでのPDF署名" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">PDFに透かしを入れるには？</h2>
-                        <p class="dn-slide__text">文字や画像で全ページにスタンプ：機密、ロゴ、日付。ローカル、無制限。クラウドツールの強制透かしはありません。</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/watermark.png" alt="DocuNestでのPDF透かし" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide dn-slide--offer">
-                        <h2 class="dn-slide__title dn-slide__title--xl">本格PDFエディター。100%オフライン。</h2>
-                        <p class="dn-slide__text">デスクトップアプリ1つに26のツール。テキスト編集、署名、結合、変換。ファイルはパソコンから出ません。</p>
-                        <ul class="dn-offer">
-                            <li class="dn-offer__item">
-                                <strong>100%オフライン</strong>
-                                <span>送信なし。アカウントなし。クラウドなし。</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>買い切りライセンス 30€</strong>
-                                <span>一度きりの支払い。月額課金なし。</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>26ツール、1つのエディター</strong>
-                                <span>黒塗り、署名、結合、変換。すべてここに。</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>7日間無料トライアル</strong>
-                                <span>カード不要。Windows、macOS、Linux。</span>
-                            </li>
-                        </ul>
-                        <a class="dn-offer__cta" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup" target="_blank" rel="noopener noreferrer">DocuNestをダウンロード</a>
-                    </article>
-                </div>
-            </div>
-            <button type="button" class="dn-carousel__nav dn-carousel__nav--prev" data-dn-prev aria-label="前のスライド">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15.5 4.5 8 12l7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <button type="button" class="dn-carousel__nav dn-carousel__nav--next" data-dn-next aria-label="次のスライド">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8.5 4.5 16 12l-7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="dn-carousel__dots" data-dn-dots>
-                <button type="button" class="is-active" aria-label="1"></button>
-                <button type="button" aria-label="2"></button>
-                <button type="button" aria-label="3"></button>
-                <button type="button" aria-label="4"></button>
-            </div>
-        </div>
-
-        <div class="dn-bar">
-            <nav class="dn-bar__tools" aria-label="DocuNest">
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">黒塗り</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">署名</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">透かし</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">結合</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">編集</a>
-            </nav>
-            <div class="dn-bar__cta-wrap">
-                <span class="dn-bar__note">7日間無料 · カード不要</span>
-                <a class="dn-bar__cta" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup" target="_blank" rel="noopener noreferrer">無料で試す</a>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="../../../assets/js/docunest-popup.js" defer></script>
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
 
 
-    <script src="../../../assets/js/ui-state.js"></script>
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
 </body>
 </html>

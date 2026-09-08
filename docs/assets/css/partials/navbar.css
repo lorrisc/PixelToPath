@@ -32,6 +32,13 @@
 .nav-links a.active {
     font-weight: 700;
 }
+.nav-links a.nav-pro {
+    color: var(--primary);
+    font-weight: 700;
+}
+.nav-links a.nav-pro:hover {
+    color: var(--primary-dark);
+}
 .nav-btn {
     background: var(--dark);
     color: #fff;
@@ -257,6 +264,74 @@ body.menu-open {
     background: var(--primary);
     color: #fff;
 }
+
+/* ============================================
+   MENU PRODUCTS (dropdown) + PORTAIL
+   ============================================ */
+.nav-products {
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+}
+.nav-products__label small {
+    font-size: 0.65em;
+    color: var(--gray);
+}
+.products-dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 200px;
+    z-index: 300;
+}
+.nav-products:hover .products-dropdown {
+    display: flex;
+}
+.products-dropdown a {
+    padding: 9px 12px;
+    border-radius: 6px;
+    font-size: 0.92rem;
+    color: var(--dark);
+    white-space: nowrap;
+}
+.products-dropdown a:hover {
+    background: var(--light);
+    color: var(--primary-dark);
+}
+.products-dropdown a.active {
+    color: var(--primary);
+}
+.nav-products:hover .nav-products__label { color: var(--primary); }
+
+/* Mobile : groupe Products + sous-liens */
+.mobile-link--group {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #999;
+    margin-top: 0.75rem;
+}
+.mobile-sublist {
+    display: flex;
+    flex-direction: column;
+    margin: 2px 0 10px 2.6rem;
+}
+.mobile-sublist a {
+    padding: 7px 0;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text);
+}
+.mobile-sublist a.active { color: var(--primary); }
 
 /* ============================================
    MOBILE BREAKPOINT

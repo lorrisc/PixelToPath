@@ -1,5 +1,10 @@
-const UPLOAD_URL = "https://api.pixel-to-path.com/upload";
-const CONVERT_URL = "https://api.pixel-to-path.com/convert";
+// API : prod par défaut — bascule automatique sur le backend local
+// (uvicorn :8000) quand le site est servi depuis localhost (tests).
+const API_BASE = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+    ? "http://127.0.0.1:8000"
+    : "https://api.pixel-to-path.com";
+const UPLOAD_URL  = `${API_BASE}/upload`;
+const CONVERT_URL = `${API_BASE}/convert`;
 
 let currentFile = null;
 let currentSvg = null;
@@ -23,15 +28,13 @@ function detectLang() {
     if (!m) return "en";
     return m[1] === "pt" ? "pt-BR" : m[1];
 }
-// const T = (window.PTP_I18N || {})[ detectLang() ] || window.PTP_I18N["en"];
-const T =  window.PTP_I18N["fr"];
+const T = (window.PTP_I18N || {})[ detectLang() ] || window.PTP_I18N["en"];
 
 // ── Presets ───────────────────────────────────────────────────────────────────
 const PRESETS = {
     bw: {
-        colormode: "binary", mode: "spline",
-        filter_speckle: 4, corner_threshold: 60,
-        length_threshold: 4.0, splice_threshold: 45, path_precision: 3,
+        colormode: "binary", turdsize: 2,
+        alphamax: 1.0, opttolerance: 0.2,
     },
     poster: {
         colormode: "color", hierarchical: "stacked", mode: "spline",
@@ -117,10 +120,16 @@ function getSegVal(id) { return document.querySelector(`#${id} button.active`)?.
 function setSegVal(id, val) {
     document.querySelectorAll(`#${id} button`).forEach(b => b.classList.toggle("active", b.dataset.val === val));
 }
+// Formatage décimal par curseur — les autres affichent la valeur brute
+const SL_FMT = {
+    length_threshold: v => v.toFixed(1),
+    alphamax:         v => v.toFixed(1),
+    opttolerance:     v => v.toFixed(2),
+};
 function setSlider(id, v) {
     const sl = document.getElementById("sl-" + id), vl = document.getElementById("v-" + id);
     if (sl) sl.value = v;
-    if (vl) vl.textContent = id === "length_threshold" ? (+v).toFixed(1) : v;
+    if (vl) vl.textContent = SL_FMT[id] ? SL_FMT[id](+v) : v;
 }
 function updateColormodeVis() {
     const m = getSegVal("seg-colormode");
@@ -129,6 +138,17 @@ function updateColormodeVis() {
 }
 function getParams() {
     const colormode = getSegVal("seg-colormode");
+    if (colormode === "binary") {
+        // Moteur Potrace — les curseurs vtracer n'ont aucun effet ici,
+        // on n'envoie que ses réglages propres (comme le logiciel desktop)
+        return {
+            colormode,
+            turdsize:     +document.getElementById("sl-turdsize").value,
+            alphamax:     +document.getElementById("sl-alphamax").value,
+            opttolerance: +document.getElementById("sl-opttolerance").value,
+            invert:       document.getElementById("sw-invert").checked,
+        };
+    }
     return {
         colormode,
         hierarchical:     getSegVal("seg-hierarchical"),
@@ -140,7 +160,6 @@ function getParams() {
         length_threshold: +document.getElementById("sl-length_threshold").value,
         splice_threshold: +document.getElementById("sl-splice_threshold").value,
         path_precision:   +document.getElementById("sl-path_precision").value,
-        invert: colormode === "binary" && document.getElementById("sw-invert").checked,
     };
 }
 function clearActivePreset() {
@@ -149,6 +168,7 @@ function clearActivePreset() {
 function setOverlay(show, text) {
     document.getElementById("overlay").classList.toggle("active", show);
     document.getElementById("overlay-text").textContent = text ?? T.converting;
+    if (show && window.closeDocuNestPopup) window.closeDocuNestPopup();
 }
 function setStatus(msg, type) {
     const el = document.getElementById("status");
@@ -191,13 +211,15 @@ function applyPreset(key, triggerConversion = true) {
     document.querySelectorAll(".presets__btn")
             .forEach(b => b.classList.toggle("presets__btn--active", b.dataset.preset === key));
     setSegVal("seg-colormode", p.colormode);
-    setSegVal("seg-mode", p.mode);
+    if (p.mode) setSegVal("seg-mode", p.mode);
     if (p.colormode === "color" && p.hierarchical) setSegVal("seg-hierarchical", p.hierarchical);
     updateColormodeVis();
     ["filter_speckle","corner_threshold","length_threshold","splice_threshold","path_precision"]
         .forEach(k => { if (p[k] !== undefined) setSlider(k, p[k]); });
     if (p.colormode === "color")
         ["color_precision","layer_difference"].forEach(k => { if (p[k] !== undefined) setSlider(k, p[k]); });
+    if (p.colormode === "binary")
+        ["turdsize","alphamax","opttolerance"].forEach(k => { if (p[k] !== undefined) setSlider(k, p[k]); });
     if (triggerConversion && currentSession) runConversion();
 }
 
@@ -206,13 +228,15 @@ function applyRecommendedParams(params, detectedType) {
     if (!params) return;
     clearActivePreset();
     setSegVal("seg-colormode", params.colormode);
-    setSegVal("seg-mode", params.mode);
+    if (params.mode) setSegVal("seg-mode", params.mode);
     if (params.colormode === "color" && params.hierarchical) setSegVal("seg-hierarchical", params.hierarchical);
     updateColormodeVis();
     ["filter_speckle","corner_threshold","length_threshold","splice_threshold","path_precision"]
         .forEach(k => { if (params[k] !== undefined) setSlider(k, params[k]); });
     if (params.colormode === "color")
         ["color_precision","layer_difference"].forEach(k => { if (params[k] !== undefined) setSlider(k, params[k]); });
+    if (params.colormode === "binary")
+        ["turdsize","alphamax","opttolerance"].forEach(k => { if (params[k] !== undefined) setSlider(k, params[k]); });
     const labels = { photo: T.type_photo, illustration: T.type_illustration, logo: T.type_logo, line_art: T.type_line_art };
     if (detectedType && labels[detectedType]) setStatus(labels[detectedType] + " " + T.type_adjusted, "info");
 }
@@ -402,7 +426,7 @@ document.addEventListener("paste", e => { const f = e.clipboardData.files[0]; if
 
 document.querySelectorAll("input[type=range]").forEach(sl => {
     const key = sl.id.replace("sl-",""), vl = document.getElementById("v-"+key);
-    sl.addEventListener("input",  () => { if (vl) vl.textContent = key==="length_threshold" ? (+sl.value).toFixed(1) : sl.value; });
+    sl.addEventListener("input",  () => { if (vl) vl.textContent = SL_FMT[key] ? SL_FMT[key](+sl.value) : sl.value; });
     sl.addEventListener("change", () => { clearActivePreset(); if (currentSession) runConversion(); });
 });
 document.querySelectorAll(".seg").forEach(seg => {

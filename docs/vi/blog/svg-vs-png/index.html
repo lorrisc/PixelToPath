@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" dir="ltr">
 <head>
     <script>
     var _paq = window._paq = window._paq || [];
@@ -14,6 +14,9 @@
         g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
     })();
 </script>
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,12 +28,23 @@
 
     <meta property="og:title" content="SVG vs PNG/JPG: Core Web Vitals và SEO | PixelToPath">
     <meta property="og:description" content="Thay thế logo và biểu tượng PNG/JPG bằng SVG: tệp nhẹ hơn, độ sắc nét trên màn hình Retina và 4K, LCP và CLS tốt hơn. Hướng dẫn dành cho nhà phát triển và SEO.">
-    <meta property="og:image" content="../../../assets/images/screenshot.png">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-photo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a photo next to its vectorized SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SVG vs PNG/JPG: Core Web Vitals và SEO | PixelToPath">
+    <meta name="twitter:description" content="Thay thế logo và biểu tượng PNG/JPG bằng SVG: tệp nhẹ hơn, độ sắc nét trên màn hình Retina và 4K, LCP và CLS tốt hơn. Hướng dẫn dành cho nhà phát triển và SEO.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-photo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a photo next to its vectorized SVG output by PixelToPath">
     <meta property="og:url" content="https://pixel-to-path.com/vi/blog/svg-vs-png/">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="PixelToPath">
 
     <link rel="canonical" href="https://pixel-to-path.com/vi/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/svg-vs-png/">
     
     <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/svg-vs-png/">
     
@@ -66,111 +80,194 @@
     
     <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/svg-vs-png/">
     
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/svg-vs-png/">
+    
     <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/svg-vs-png/">
     
     <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/svg-vs-png/">
     
     <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/vi/blog/svg-vs-png/">
 
-    <link rel="stylesheet" href="../../../assets/css/style.css">
-    <link rel="stylesheet" href="../../../assets/css/components.css">
-    <link rel="stylesheet" href="../../../assets/css/containers.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/footer.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/navbar.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/donate.css">
-    <link rel="stylesheet" href="../../../assets/css/pages/blog-page.css">
+    <link rel="stylesheet" href="../../../assets/css/bundle.d34e5a48.css">
 
     <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
 
     <!-- Schema: BlogPosting -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "SVG vs PNG/JPG: tại sao định dạng vector lại cần thiết cho hiệu suất và SEO",
-        "description": "Thay thế logo và biểu tượng PNG/JPG bằng SVG: tệp nhẹ hơn, độ sắc nét trên màn hình Retina và 4K, LCP và CLS tốt hơn. Hướng dẫn dành cho nhà phát triển và SEO.",
-        "url": "https://pixel-to-path.com/vi/blog/svg-vs-png/",
-        "inLanguage": "fr",
-        "author": { "@type": "Person", "name": "Lorris C." },
-        "publisher": { "@type": "Person", "name": "Lorris C." }
-    }
-    </script>
-
-    <!-- Schema: WebApplication -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "PixelToPath – SVG vs PNG/JPG: Core Web Vitals và SEO | PixelToPath",
-        "url": "https://pixel-to-path.com/fr/online/",
-        "description": "Thay thế logo và biểu tượng PNG/JPG bằng SVG: tệp nhẹ hơn, độ sắc nét trên màn hình Retina và 4K, LCP và CLS tốt hơn. Hướng dẫn dành cho nhà phát triển và SEO.",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Any",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": 5,
-            "reviewCount": 1
-        }
-    }
-    </script>
-
-    <!-- Schema: HowTo -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "Cách tối ưu hóa logo PNG hoặc JPG sang SVG (3 bước)",
-        "step": [
-            { "@type": "HowToStep", "name": "Tải lên PNG hoặc JPG", "text": "Kéo thả logo, biểu tượng hoặc hình tượng hiện đang phục vụ dưới dạng PNG hoặc JPG. Đường nét càng đơn giản (nền phẳng, các cạnh sắc nét), SVG sẽ càng nhẹ." },
-            { "@type": "HowToStep", "name": "Chọn cài sẵn phù hợp", "text": "Đen &amp; Trắng cho logotype hoặc biểu tượng đơn sắc. Poster nếu logo có một số màu phẳng. Tránh Ảnh: quá nhiều chi tiết làm nặng SVG mà không cải thiện hình ảnh cho một logo." },
-            { "@type": "HowToStep", "name": "Tích hợp SVG trên trang web", "text": "Tải xuống tệp và sử dụng nó dưới dạng hình ảnh, sprite hoặc inline SVG. Một tệp duy nhất thay thế các biến thể @1x, @2x và @3x." }
-        ]
-    }
-    </script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/vi/blog/svg-vs-png/#article",
+  "headline": "SVG vs PNG/JPG: tại sao định dạng vector lại cần thiết cho hiệu suất và SEO",
+  "description": "Thay thế logo và biểu tượng PNG/JPG bằng SVG: tệp nhẹ hơn, độ sắc nét trên màn hình Retina và 4K, LCP và CLS tốt hơn. Hướng dẫn dành cho nhà phát triển và SEO.",
+  "url": "https://pixel-to-path.com/vi/blog/svg-vs-png/",
+  "mainEntityOfPage": "https://pixel-to-path.com/vi/blog/svg-vs-png/",
+  "inLanguage": "vi",
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-09-09",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/vi/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-photo.jpg"
+}</script>
 
     <!-- Schema: FAQPage -->
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            { "@type": "Question", "name": "Có phải SVG lúc nào cũng có dung lượng nhẹ hơn PNG hay JPG?", "acceptedAnswer": { "@type": "Answer", "text": "Đối với các logo, biểu tượng hoặc hình minh họa phẳng: có, hầu như luôn luôn, nhất là khi đem so PNG với phiên bản Retina của nó. Còn đối với ảnh chụp thì không: tệp SVG &#34;ảnh chụp&#34; sẽ trở thành một hệ thống các đường nét phức tạp và nặng nề hơn cả ảnh JPG hay WebP. Do đó, hãy vector hóa giao diện, nhưng nên nén các ảnh chụp lại." } },
-            { "@type": "Question", "name": "SVG có thật sự cải thiện các chỉ số Core Web Vitals và SEO không?", "acceptedAnswer": { "@type": "Answer", "text": "Định dạng này sẽ giúp cải thiện những gì hình ảnh giao diện có thể cải thiện: giảm số lượng byte (đối với LCP, nếu logo hoặc hình minh họa là các phần tử lớn nhất trang), hộp kết xuất ổn định (đối với CLS) và giảm thiểu các biến thể cần tải xuống. Google đã ứng dụng tốc độ tải làm yếu tố đo lường, đặc biệt ở môi trường di động. Đây không phải là một công cụ giúp nhảy vọt thứ hạng một cách ảo diệu, mà nó là kỹ thuật vệ sinh mã có thể được đánh giá trong PageSpeed Insights." } },
-            { "@type": "Question", "name": "Chúng ta có cần đổi mọi hình ảnh trong trang web sang định dạng SVG không?", "acceptedAnswer": { "@type": "Answer", "text": "Không. Đối với các ảnh chụp, ảnh chụp màn hình, kết cấu bề mặt, chuyển màu phức tạp thì hãy sử dụng: JPG, WebP hay AVIF. Chỉ dùng SVG với các dạng logo, biểu tượng, sơ đồ, biểu tượng tượng hình và những hình minh họa tĩnh. Nếu thiết kế quá nhiều chi tiết cho tệp SVG thì nó có thể kéo INP đi xuống. Tính năng Ảnh được cài sẵn của PixelToPath chỉ dùng để thiết kế định kiểu hình ảnh chứ không để thay cho nội dung JPEG." } },
-            { "@type": "Question", "name": "Làm thế nào để tích hợp một tệp SVG mà không gây hiện tượng CLS?", "acceptedAnswer": { "@type": "Answer", "text": "Việc cần làm luôn luôn là đặt chiều rộng và chiều cao (hoặc một aspect-ratio ở CSS) theo tỷ lệ phù hợp với viewBox. Bằng cách dùng thẻ hình ảnh (src, width, height, alt), trình duyệt sẽ định hình sẵn không gian trước khi tải nó xuống. Với định dạng SVG inline, hãy giữ lại viewBox và không được chèn code ngay sau khi hình vừa hiện lên mà chưa có các kích thước." } },
-            { "@type": "Question", "name": "Sử dụng PixelToPath để tạo một SVG từ PNG của logo bằng cách nào?", "acceptedAnswer": { "@type": "Answer", "text": "Hãy mở công cụ trực tuyến, tải PNG lên (tốt nhất là dùng nền trong suốt, kích thước khá lớn), sau đó chọn Đen &amp; Trắng hoặc Poster, điều chỉnh độ chi tiết, sau đó chuyển đổi. Mở SVG trong trình duyệt hoặc Figma để kiểm tra các đường viền, sau đó đưa vào sản xuất. Miễn phí, không cần tài khoản, các tệp không được lưu giữ lại." } }
-        ]
+      "@type": "Question",
+      "name": "Có phải SVG lúc nào cũng có dung lượng nhẹ hơn PNG hay JPG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Đối với các logo, biểu tượng hoặc hình minh họa phẳng: có, hầu như luôn luôn, nhất là khi đem so PNG với phiên bản Retina của nó. Còn đối với ảnh chụp thì không: tệp SVG \"ảnh chụp\" sẽ trở thành một hệ thống các đường nét phức tạp và nặng nề hơn cả ảnh JPG hay WebP. Do đó, hãy vector hóa giao diện, nhưng nên nén các ảnh chụp lại."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SVG có thật sự cải thiện các chỉ số Core Web Vitals và SEO không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Định dạng này sẽ giúp cải thiện những gì hình ảnh giao diện có thể cải thiện: giảm số lượng byte (đối với LCP, nếu logo hoặc hình minh họa là các phần tử lớn nhất trang), hộp kết xuất ổn định (đối với CLS) và giảm thiểu các biến thể cần tải xuống. Google đã ứng dụng tốc độ tải làm yếu tố đo lường, đặc biệt ở môi trường di động. Đây không phải là một công cụ giúp nhảy vọt thứ hạng một cách ảo diệu, mà nó là kỹ thuật vệ sinh mã có thể được đánh giá trong PageSpeed Insights."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Chúng ta có cần đổi mọi hình ảnh trong trang web sang định dạng SVG không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Không. Đối với các ảnh chụp, ảnh chụp màn hình, kết cấu bề mặt, chuyển màu phức tạp thì hãy sử dụng: JPG, WebP hay AVIF. Chỉ dùng SVG với các dạng logo, biểu tượng, sơ đồ, biểu tượng tượng hình và những hình minh họa tĩnh. Nếu thiết kế quá nhiều chi tiết cho tệp SVG thì nó có thể kéo INP đi xuống. Tính năng Ảnh được cài sẵn của PixelToPath chỉ dùng để thiết kế định kiểu hình ảnh chứ không để thay cho nội dung JPEG."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Làm thế nào để tích hợp một tệp SVG mà không gây hiện tượng CLS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Việc cần làm luôn luôn là đặt chiều rộng và chiều cao (hoặc một aspect-ratio ở CSS) theo tỷ lệ phù hợp với viewBox. Bằng cách dùng thẻ hình ảnh (src, width, height, alt), trình duyệt sẽ định hình sẵn không gian trước khi tải nó xuống. Với định dạng SVG inline, hãy giữ lại viewBox và không được chèn code ngay sau khi hình vừa hiện lên mà chưa có các kích thước."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sử dụng PixelToPath để tạo một SVG từ PNG của logo bằng cách nào?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hãy mở công cụ trực tuyến, tải PNG lên (tốt nhất là dùng nền trong suốt, kích thước khá lớn), sau đó chọn Đen & Trắng hoặc Poster, điều chỉnh độ chi tiết, sau đó chuyển đổi. Mở SVG trong trình duyệt hoặc Figma để kiểm tra các đường viền, sau đó đưa vào sản xuất. Miễn phí, không cần tài khoản, các tệp không được lưu giữ lại."
+      }
     }
-    </script>
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/vi/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tìm hiểu Chuyển đổi Hình ảnh sang SVG",
+      "item": "https://pixel-to-path.com/vi/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SVG vs PNG/JPG: tại sao định dạng vector lại cần thiết cho hiệu suất và SEO",
+      "item": "https://pixel-to-path.com/vi/blog/svg-vs-png/"
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
     <nav class="navbar">
     <div class="container nav-container">
 
-        <a href="/vi/"" class="brand">
+        <a href="/vi/" class="brand">
             <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
             PixelToPath
         </a>
 
         <div class="nav-links">
 
-            <a href="/vi/" 
+            <a href="/vi/"
             class="">Trang chủ</a>
 
-            <a href="/vi/online/" 
-            class="">Công cụ Trực tuyến</a>
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Sản phẩm <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/vi/online/"
+                       class="">Công cụ Trực tuyến</a>
+                    <a href="/vi/offline/"
+                       class="">Ứng dụng Máy tính bàn</a>
+                    <a href="/vi/pro/"
+                       class="">Ứng dụng desktop Pro</a>
+                    <a href="/api/" class="">API</a>
+                </div>
+            </div>
 
-            <a href="/vi/offline/" 
-            class="">Ứng dụng Máy tính bàn</a>
-            
-            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+            <a href="/pricing/" class="">Giá</a>
 
             <div class="lang-switch">
                 <span>🇻🇳 VI</span>
                 <div class="lang-dropdown">
                     
+                    <a href="https://pixel-to-path.com/ar/blog/svg-vs-png/">🇸🇦 العربية</a>
                     <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/">🇧🇩 বাংলা</a>
                     <a href="https://pixel-to-path.com/de/blog/svg-vs-png/">🇩🇪 Deutsch</a>
                     <a href="https://pixel-to-path.com/blog/svg-vs-png/">🇺🇸 English</a>
@@ -188,6 +285,7 @@
                     <a href="https://pixel-to-path.com/th/blog/svg-vs-png/">🇹🇭 ไทย</a>
                     <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/">🇹🇷 Türkçe</a>
                     <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/svg-vs-png/">🇵🇰 اردو</a>
                     <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/">🇻🇳 Tiếng Việt</a>
                     <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/">🇨🇳 中文 (简体)</a>
                 </div>
@@ -214,19 +312,21 @@
                 <span class="mobile-link-number">01</span>
                 <span class="mobile-link-text">Trang chủ</span>
             </a>
-            <a href="/vi/online/"
-               class="mobile-link ">
+
+            <span class="mobile-link mobile-link--group">Sản phẩm</span>
+            <div class="mobile-sublist">
+                <a href="/vi/online/"
+                   class="">Công cụ Trực tuyến</a>
+                <a href="/vi/offline/"
+                   class="">Ứng dụng Máy tính bàn</a>
+                <a href="/vi/pro/"
+                   class="">Ứng dụng desktop Pro</a>
+                <a href="/api/" class="">API</a>
+            </div>
+
+            <a href="/pricing/" class="mobile-link ">
                 <span class="mobile-link-number">02</span>
-                <span class="mobile-link-text">Công cụ Trực tuyến</span>
-            </a>
-            <a href="/vi/offline/"
-               class="mobile-link ">
-                <span class="mobile-link-number">03</span>
-                <span class="mobile-link-text">Ứng dụng Máy tính bàn</span>
-            </a>
-            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
-                <span class="mobile-link-number">04</span>
-                <span class="mobile-link-text">GitHub</span>
+                <span class="mobile-link-text">Giá</span>
             </a>
         </div>
 
@@ -235,6 +335,7 @@
                 <span class="mobile-lang-label">Ngôn ngữ</span>
                 <div class="mobile-lang-options">
                     
+                    <a href="https://pixel-to-path.com/ar/blog/svg-vs-png/" class="mobile-lang-btn">🇸🇦 العربية</a>
                     <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
                     <a href="https://pixel-to-path.com/de/blog/svg-vs-png/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
                     <a href="https://pixel-to-path.com/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇸 English</a>
@@ -252,6 +353,7 @@
                     <a href="https://pixel-to-path.com/th/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇭 ไทย</a>
                     <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
                     <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/svg-vs-png/" class="mobile-lang-btn">🇵🇰 اردو</a>
                     <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
                     <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
                 </div>
@@ -281,6 +383,7 @@
         });
     });
 </script>
+
     <main>
 
         <!-- ═══════════════════════════════════════
@@ -317,7 +420,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -325,14 +428,11 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
         <!-- ═══════════════════════════════════════
-             HOW TO – 3-step guide + HowTo schema
+             HOW TO – 3-step guide
         ════════════════════════════════════════ -->
         <section class="section bg-light">
             <div class="container">
@@ -367,7 +467,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -375,9 +475,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -404,25 +501,63 @@
                     <h2>PNG vs SVG: dung lượng của một logo không hề nhỏ</h2>
                     <p>Hình ảnh vẫn là một trong những thành phần nặng nhất của một trang. Chúng ta tối ưu hóa ảnh ở định dạng WebP, nhưng lại quên mất logo ở tiêu đề và khoảng hai mươi biểu tượng PNG trong CSS. Tuy nhiên, các tệp này được lặp lại trên tất cả các URL: mỗi mili giây bị mất đều được tính cho toàn bộ trang web.</p>
                     <p>Các chỉ số quan sát được sau khi vector hóa bằng PixelToPath, trên các kịch bản thực tế của trang web giới thiệu hoặc ứng dụng web:</p>
-                    <ul>
-                        <li>Logo PNG 512 px nền trong suốt: thường từ 40 đến 80 KB. Cùng họa tiết ở định dạng SVG: thường từ 2 đến 12 KB tùy thuộc vào số lượng màu sắc và điểm node</li>
-                        <li>Để giữ cho màn hình Retina luôn sắc nét, định dạng PNG được phân phối ở 1024 px hoặc qua srcset @2x: trọng lượng tăng gấp đôi, đôi khi gấp ba. Mặt khác, SVG không thay đổi tệp</li>
-                        <li>Biểu tượng 24×24 xuất ra ở định dạng PNG @3x (72×72) nặng từ 2 đến 8 KB. Nhân lên 20 biểu tượng, bạn đã thêm 40 đến 160 KB vào giao diện. Các biểu tượng SVG tương tự thường có dung lượng vài KB cho tất cả</li>
-                        <li>Một JPG logo "nền trắng" trông có vẻ nhẹ, nhưng các màu phẳng và văn bản bị giảm chất lượng khi nén. SVG giữ lại các cạnh sắc nét, không có quầng sáng, cho trọng lượng tệp nhẹ hơn nữa</li>
-                    </ul>
+                    <table class="vs-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Kịch bản</th>
+                                <th scope="col">PNG / JPG</th>
+                                <th scope="col">SVG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Logo 512 px có độ trong suốt</th>
+                                <td data-label="PNG / JPG">40 đến 80 KB</td>
+                                <td class="yes" data-label="SVG">2 đến 12 KB tùy số màu sắc và điểm nốt</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Cùng logo được phát ở @2x (1024 px) cho Retina</th>
+                                <td data-label="PNG / JPG">Khối lượng gấp đôi, đôi khi gấp ba</td>
+                                <td class="yes" data-label="SVG">Một tệp duy nhất, không đổi</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">20 biểu tượng giao diện xuất ở @3x (72×72)</th>
+                                <td data-label="PNG / JPG">Thêm 40 đến 160 KB</td>
+                                <td class="yes" data-label="SVG">Chỉ vài KB tổng cộng</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Logo màu phẳng từ JPG</th>
+                                <td data-label="PNG / JPG">Lỗi nén và quầng sáng quanh hình khối và chữ</td>
+                                <td class="yes" data-label="SVG">Cạnh sạch, và tệp còn nhẹ hơn</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <p>Quy tắc rất đơn giản: bất kỳ thứ gì là hình dạng, văn bản, hình vẽ tượng hình hoặc logotype đều được hưởng lợi từ việc sử dụng SVG. Ảnh chụp và ảnh chụp màn hình thì lưu ở định dạng JPG, WebP hoặc AVIF. SVG không phải là sự thay thế cho tất cả: nó là định dạng phù hợp cho giao diện.</p>
 
                     <h2>Khả năng mở rộng: tệp sắc nét từ điện thoại thông minh đến 4K</h2>
                     <p>PNG chỉ hiển thị rõ nét ở độ phân giải gốc của nó. Khi phóng to, bạn sẽ thấy các điểm pixel. Nếu thu nhỏ đột ngột, trình duyệt phải lấy mẫu lại. Do đó mà có sự linh hoạt của các tệp @1x, @2x, @3x, srcset và mật độ CSS. Mỗi điểm gãy mới hoặc mật độ màn hình mới (Retina, điện thoại đời mới, màn hình 4K) đều yêu cầu xuất một phiên bản tệp khác hoặc phải tạo một tệp quá lớn "phòng hờ".</p>
                     <p>SVG không quan tâm đến những hạn chế này. Công cụ kết xuất tính toán các đường cong theo kích thước CSS được yêu cầu. Favicon 32 px, logo 48 px trong điều hướng, cùng một nhãn hiệu ở 400 px trong biểu ngữ, trình chiếu 4K: chúng đều là cùng một tệp. Không bị mờ, không bị răng cưa, không có yêu cầu tải xuống lần hai cho phiên bản phân giải cao. Đối với thư viện các thành phần, nó cũng giảm bớt gánh nặng về sau: một biểu tượng, một tệp, cho mọi kích thước.</p>
 
+                    
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/logo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="Cùng logo đó phóng to 400%: bên trái, các điểm ảnh của PNG hiện rõ; bên phải, đường cong của SVG vẫn hoàn toàn mượt mà.">
+    <figcaption>Cùng logo đó phóng to 400%: bên trái, các điểm ảnh của PNG hiện rõ; bên phải, đường cong của SVG vẫn hoàn toàn mượt mà.</figcaption>
+</figure>
+
+                    
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/photo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="Thu phóng 400% vào khinh khí cầu: mờ JPEG và điểm ảnh bên trái, màu vector đơn giản hóa bên phải.">
+    <figcaption>Thu phóng 400% vào khinh khí cầu: mờ JPEG và điểm ảnh bên trái, màu vector đơn giản hóa bên phải.</figcaption>
+</figure>
+
+
                     <h2>Core Web Vitals và SEO: tại sao Google quan tâm đến định dạng</h2>
-                    <p>Tốc độ di động là một yếu tố xếp hạng. Core Web Vitals (LCP, INP, CLS) đánh giá trải nghiệm thực tế của người dùng. Việc thay thế một logo PNG nặng hoặc một chuỗi các biểu tượng raster bằng SVG sẽ không khiến một trang giảm từ 4 MB xuống 40 KB. Nhưng đối với bố cục trang web, hiệu ứng này ngay lập tức mang lại kết quả, đặc biệt trên mạng 4G hoặc trong trường hợp LCP bị nghẽn bởi logo trên tiêu đề trang.</p>
+                    <p>Tốc độ di động là một yếu tố xếp hạng. <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener">Core Web Vitals</a> (LCP, INP, CLS) đánh giá trải nghiệm thực tế của người dùng. Việc thay thế một logo PNG nặng hoặc một chuỗi các biểu tượng raster bằng SVG sẽ không khiến một trang giảm từ 4 MB xuống 40 KB. Nhưng đối với bố cục trang web, hiệu ứng này ngay lập tức mang lại kết quả, đặc biệt trên mạng 4G hoặc trong trường hợp LCP bị nghẽn bởi logo trên tiêu đề trang.</p>
                     <p>Cụ thể, định dạng vector hỗ trợ 3 số liệu, với điều kiện độ phức tạp của đường nét được giữ ở mức hợp lý:</p>
                     <ul>
-                        <li>LCP (Largest Contentful Paint): nếu phần tử hiển thị lớn nhất là logo hoặc hình minh họa phẳng, tệp SVG vài KB sẽ tải nhanh hơn tệp PNG @2x 150 KB. Nhờ vậy, băng thông còn lại sẽ được phân bổ cho phần còn lại của trang web</li>
-                        <li>CLS (Cumulative Layout Shift): tệp SVG với các thuộc tính width, height và viewBox sẽ định hình sẵn khung của nó ngay từ khi phân tích cú pháp HTML. Không cần chờ quá trình giải mã của bitmap để xác định tỉ lệ khung hình, do đó giảm thiểu việc bố cục bị giật cục</li>
-                        <li>INP và luồng thực thi chính: một tệp SVG đơn giản (logo, biểu tượng) sẽ tốn rất ít chi phí để vẽ lại. Ngược lại, hãy tránh các tệp SVG dạng "ảnh" với hàng ngàn đường dẫn: chúng có thể nặng hơn một tệp PNG và buộc CPU phải hoạt động liên tục. Đó là lý do tại sao một đường nét gọn gàng được tạo thông qua PixelToPath lại đem đến hiệu quả, chứ không phải một bản sao y hệt đến từng pixel</li>
+                        <li><a href="https://web.dev/articles/optimize-lcp" target="_blank" rel="noopener">LCP</a> (Largest Contentful Paint): nếu phần tử hiển thị lớn nhất là logo hoặc hình minh họa phẳng, tệp SVG vài KB sẽ tải nhanh hơn tệp PNG @2x 150 KB. Nhờ vậy, băng thông còn lại sẽ được phân bổ cho phần còn lại của trang web</li>
+                        <li><a href="https://web.dev/articles/optimize-cls" target="_blank" rel="noopener">CLS</a> (Cumulative Layout Shift): tệp SVG với các thuộc tính width, height và viewBox sẽ định hình sẵn khung của nó ngay từ khi phân tích cú pháp HTML. Không cần chờ quá trình giải mã của bitmap để xác định tỉ lệ khung hình, do đó giảm thiểu việc bố cục bị giật cục</li>
+                        <li><a href="https://web.dev/articles/inp" target="_blank" rel="noopener">INP</a> và luồng thực thi chính: một tệp SVG đơn giản (logo, biểu tượng) sẽ tốn rất ít chi phí để vẽ lại. Ngược lại, hãy tránh các tệp SVG dạng "ảnh" với hàng ngàn đường dẫn: chúng có thể nặng hơn một tệp PNG và buộc CPU phải hoạt động liên tục. Đó là lý do tại sao một đường nét gọn gàng được tạo thông qua PixelToPath lại đem đến hiệu quả, chứ không phải một bản sao y hệt đến từng pixel</li>
                         <li>SEO vượt ra ngoài tốc độ: Google lập chỉ mục cho các tệp SVG. Một logo được tích hợp vào trang web có thể chứa tiêu đề hỗ trợ tính năng tiếp cận. Việc dùng thẻ image SVG với thuộc tính alt là một kỹ thuật SEO căn bản. Thêm vào đó, một trang tải nhanh hơn sẽ làm giảm tỷ lệ thoát, một tín hiệu về trải nghiệm người dùng ảnh hưởng trực tiếp đến kết quả xếp hạng</li>
                     </ul>
                 </div>
@@ -430,7 +565,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -438,9 +573,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -488,7 +620,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -496,9 +628,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -523,7 +652,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -531,9 +660,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -546,10 +672,6 @@
                 <p class="section-intro">Vector hóa các tệp của bạn, sau đó xem xét các định dạng khác theo nhu cầu.</p>
 
                 <div class="related-tools">
-                    
-                    <a href="/vi/blog/png-to-svg/" class="related-tool-link">
-                        🔄 Trình chuyển đổi PNG sang SVG
-                    </a>
                     
                     <a href="/vi/blog/jpg-to-svg/" class="related-tool-link">
                         🔄 Trình chuyển đổi JPG sang SVG
@@ -572,7 +694,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -580,9 +702,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -618,7 +737,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -626,9 +745,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -656,22 +772,6 @@
     </main>
 
     
-<a class="sponsor" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=banner&amp;utm_campaign=site_footer" target="_blank" rel="sponsored noopener noreferrer">
-    <div class="container sponsor__inner">
-        <div class="sponsor__mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
-                <path d="M8 4.5h11.2L24 9.3V26a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 8 26V4.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M19 4.5V9h4.8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M12 14.5h8M12 18.5h8M12 22.5h5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-            </svg>
-        </div>
-        <div class="sponsor__copy">
-            <strong class="sponsor__title">DocuNest: chỉnh PDF 100% ngoại tuyến</strong>
-            <span class="sponsor__text">26 công cụ trong một trình soạn thảo. Ký, gộp, chuyển đổi: tệp không rời máy tính của bạn.</span>
-        </div>
-        <span class="sponsor__cta">Dùng thử 7 ngày miễn phí</span>
-    </div>
-</a>
 
 <footer>
     <div class="container" id="footernavigation">
@@ -679,105 +779,25 @@
         <a href="/vi/">Trang chủ</a>
         <a href="/vi/online/">Công cụ Trực tuyến</a>
         <a href="/vi/offline/">Ứng dụng Máy tính bàn</a>
+        <a href="/vi/pro/">Pro</a>
+        <a href="/api/">API</a>
         <a href="/vi/blog/">Blog</a>
         <a href="https://github.com/lorrisc/PixelToPath">Mã nguồn mở (MIT)</a>
     </div>
     <div class="container" id="footerlegal">
-        <a href="/legal">Legal notice</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Cổng khách hàng</a>
     </div>
 </footer>
 
-<link rel="stylesheet" href="../../../assets/css/partials/docunest-popup.css">
-<div id="dn-popup" class="dn-popup" hidden>
-    <div class="dn-popup__dialog" role="dialog" aria-modal="true" aria-labelledby="dn-popup-title">
-        <div class="dn-popup__top">
-            <p class="dn-popup__brand" id="dn-popup-title">DocuNest</p>
-            <button type="button" class="dn-popup__close" data-dn-close aria-label="Đóng">&times;</button>
-        </div>
-
-        <div class="dn-carousel" data-dn-carousel>
-            <div class="dn-carousel__viewport">
-                <div class="dn-carousel__track">
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">Làm sao để che thông tin trong PDF vĩnh viễn?</h2>
-                        <p class="dn-slide__text">Che dữ liệu nhạy cảm hẳn: chữ và ảnh dưới vùng đánh dấu bị hủy, không chỉ bị che. Tất cả trên máy bạn: tệp không bao giờ được tải lên.</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/redact.png" alt="Che PDF trong DocuNest" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">Làm sao ký PDF mà không tải lên mạng?</h2>
-                        <p class="dn-slide__text">Vẽ hoặc nhập chữ ký, đặt và đổi kích thước. Không tài khoản, không gửi đi: tài liệu ở lại máy bạn.</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/sign.png" alt="Ký PDF trong DocuNest" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">Làm sao thêm watermark vào PDF?</h2>
-                        <p class="dn-slide__text">Đóng dấu mỗi trang bằng chữ hoặc ảnh: Mật, logo, ngày. Nội bộ, không giới hạn, không watermark bắt buộc từ công cụ đám mây.</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/watermark.png" alt="Watermark PDF trong DocuNest" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide dn-slide--offer">
-                        <h2 class="dn-slide__title dn-slide__title--xl">Trình sửa PDF đầy đủ. 100% ngoại tuyến.</h2>
-                        <p class="dn-slide__text">26 công cụ trong một ứng dụng máy tính. Sửa chữ, ký, gộp, chuyển đổi. Tệp không bao giờ rời máy bạn.</p>
-                        <ul class="dn-offer">
-                            <li class="dn-offer__item">
-                                <strong>100% ngoại tuyến</strong>
-                                <span>Không gửi tệp. Không tài khoản. Không đám mây.</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>Giấy phép trọn đời, 30 €</strong>
-                                <span>Trả một lần. Không gói tháng.</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>26 công cụ, một trình sửa</strong>
-                                <span>Che, ký, gộp, chuyển đổi: tất cả ở đây.</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>Dùng thử 7 ngày miễn phí</strong>
-                                <span>Không cần thẻ. Windows, macOS và Linux.</span>
-                            </li>
-                        </ul>
-                        <a class="dn-offer__cta" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup" target="_blank" rel="noopener noreferrer">Tải DocuNest</a>
-                    </article>
-                </div>
-            </div>
-            <button type="button" class="dn-carousel__nav dn-carousel__nav--prev" data-dn-prev aria-label="Slide trước">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15.5 4.5 8 12l7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <button type="button" class="dn-carousel__nav dn-carousel__nav--next" data-dn-next aria-label="Slide sau">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8.5 4.5 16 12l-7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="dn-carousel__dots" data-dn-dots>
-                <button type="button" class="is-active" aria-label="1"></button>
-                <button type="button" aria-label="2"></button>
-                <button type="button" aria-label="3"></button>
-                <button type="button" aria-label="4"></button>
-            </div>
-        </div>
-
-        <div class="dn-bar">
-            <nav class="dn-bar__tools" aria-label="DocuNest">
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">Che</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">Ký</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">Watermark</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">Gộp</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">Sửa</a>
-            </nav>
-            <div class="dn-bar__cta-wrap">
-                <span class="dn-bar__note">Dùng thử 7 ngày · không cần thẻ</span>
-                <a class="dn-bar__cta" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup" target="_blank" rel="noopener noreferrer">Dùng thử miễn phí</a>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="../../../assets/js/docunest-popup.js" defer></script>
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
 
 
-    <script src="../../../assets/js/ui-state.js"></script>
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
 </body>
 </html>

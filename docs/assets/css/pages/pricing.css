@@ -1,0 +1,209 @@
+/* ============================================================
+   PixelToPath — Page Pricing (EN uniquement)
+   Dépend de style.css / components.css / containers.css
+   ============================================================ */
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.pr-hero {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--dark-accent) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 72px 0 56px;
+}
+.pr-tag {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+}
+.pr-hero h1 { font-size: 2.4rem; margin-bottom: 12px; }
+.pr-hero__text {
+    max-width: 640px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.05rem;
+}
+
+/* ── Bande élargie : déborde du conteneur standard (1100px) ─ */
+.pr-band {
+    max-width: 1440px;
+    margin: 30px auto 0;
+    padding: 0 24px;
+}
+
+/* ── Grille de plans ──────────────────────────────────────── */
+.pr-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    align-items: stretch;
+}
+.pr-plan {
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.pr-plan--highlight {
+    border: 2px solid var(--primary);
+    box-shadow: 0 14px 36px rgba(255, 153, 0, 0.18);
+}
+.pr-badge {
+    align-self: flex-start;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--light);
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+.pr-badge--primary { background: var(--primary); color: var(--dark); }
+.pr-badge--dark    { background: var(--dark);    color: #fff; }
+
+.pr-plan h3 {
+    color: var(--dark);
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+.pr-price {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.15;
+    margin-bottom: 8px;
+}
+.pr-price span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--gray);
+}
+.pr-desc {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 14px;
+}
+.pr-plan .checklist {
+    flex: 1;
+    margin-bottom: 18px;
+    font-size: 0.88rem;
+}
+.pr-cta { text-align: center; display: block; }
+.pr-note {
+    font-size: 0.75rem;
+    color: var(--gray);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.pr-portal {
+    text-align: center;
+    margin-top: 26px;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+.pr-portal a { color: var(--primary-dark); font-weight: 700; }
+
+/* ── Tableau « which one » ────────────────────────────────── */
+.pr-table-wrap {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    background: #fff;
+    max-width: 760px;
+    margin: 24px auto 0;
+}
+.pr-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+.pr-table th {
+    background: var(--dark);
+    color: #fff;
+    text-align: left;
+    padding: 12px 16px;
+}
+.pr-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eef1f4;
+}
+.pr-table tr:last-child td { border-bottom: 0; }
+.pr-table tbody tr:nth-child(even) { background: var(--light); }
+.pr-table a { color: var(--primary-dark); font-weight: 700; white-space: nowrap; }
+
+/* ── FAQ ──────────────────────────────────────────────────── */
+.pr-faq { max-width: 760px; margin: 24px auto 0; }
+.pr-faq-item {
+    background: var(--light);
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+}
+.pr-faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--dark);
+    padding: 14px 18px;
+    list-style: none;
+    position: relative;
+    padding-right: 40px;
+}
+.pr-faq-item summary::-webkit-details-marker { display: none; }
+.pr-faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+.pr-faq-item[open] summary::after { content: "–"; }
+.pr-faq-item p {
+    padding: 0 18px 16px;
+    color: var(--gray);
+    font-size: 0.94rem;
+}
+
+/* ── « What you don't pay for » ───────────────────────────── */
+.pr-free {
+    list-style: none;
+    max-width: 760px;
+    margin: 24px auto 0;
+    padding: 0;
+    font-size: 0.95rem;
+}
+.pr-free li {
+    position: relative;
+    padding: 10px 0 10px 32px;
+    border-bottom: 1px solid var(--light);
+}
+.pr-free li:last-child { border-bottom: 0; }
+.pr-free li::before {
+    content: "✓";
+    position: absolute;
+    left: 4px;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 1120px) {
+    .pr-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+    .pr-hero h1 { font-size: 1.7rem; }
+    .pr-band { padding: 0 20px; }
+    .pr-grid { grid-template-columns: 1fr; }
+}
+

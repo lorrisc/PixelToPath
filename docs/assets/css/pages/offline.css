@@ -1,8 +1,43 @@
+/* Pro banner */
+.pro-banner {
+    padding: 0.5rem 0;
+}
+.pro-banner-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background: var(--dark-accent);
+    color: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: var(--radius);
+}
+.pro-banner-text h2 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+.pro-banner-text p {
+    color: #d7dee5;
+    max-width: 620px;
+}
+.pro-banner-text strong {
+    color: var(--primary);
+}
+.pro-banner-cta {
+    text-align: center;
+}
+.pro-banner-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
 /* Comparison Table */
 .comparison-table-wrapper {
     overflow-x: auto;
-}
-.comparison-table {
+}.comparison-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.95rem;

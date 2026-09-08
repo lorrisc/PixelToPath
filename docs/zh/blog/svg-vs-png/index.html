@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" dir="ltr">
 <head>
     <script>
     var _paq = window._paq = window._paq || [];
@@ -14,6 +14,9 @@
         g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
     })();
 </script>
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,12 +28,23 @@
 
     <meta property="og:title" content="SVG vs PNG/JPG：核心网页指标 (Core Web Vitals) 与 SEO | PixelToPath">
     <meta property="og:description" content="使用 SVG 替换 PNG/JPG 徽标和图标：文件更小，Retina 和 4K 级清晰度，更好的 LCP 和 CLS。开发者与 SEO 指南。">
-    <meta property="og:image" content="../../../assets/images/screenshot.png">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-photo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a photo next to its vectorized SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SVG vs PNG/JPG：核心网页指标 (Core Web Vitals) 与 SEO | PixelToPath">
+    <meta name="twitter:description" content="使用 SVG 替换 PNG/JPG 徽标和图标：文件更小，Retina 和 4K 级清晰度，更好的 LCP 和 CLS。开发者与 SEO 指南。">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-photo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a photo next to its vectorized SVG output by PixelToPath">
     <meta property="og:url" content="https://pixel-to-path.com/zh/blog/svg-vs-png/">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="PixelToPath">
 
     <link rel="canonical" href="https://pixel-to-path.com/zh/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/svg-vs-png/">
     
     <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/svg-vs-png/">
     
@@ -66,111 +80,194 @@
     
     <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/svg-vs-png/">
     
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/svg-vs-png/">
+    
     <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/svg-vs-png/">
     
     <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/svg-vs-png/">
     
     <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/zh/blog/svg-vs-png/">
 
-    <link rel="stylesheet" href="../../../assets/css/style.css">
-    <link rel="stylesheet" href="../../../assets/css/components.css">
-    <link rel="stylesheet" href="../../../assets/css/containers.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/footer.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/navbar.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/donate.css">
-    <link rel="stylesheet" href="../../../assets/css/pages/blog-page.css">
+    <link rel="stylesheet" href="../../../assets/css/bundle.d34e5a48.css">
 
     <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
 
     <!-- Schema: BlogPosting -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "SVG vs PNG/JPG：为什么矢量格式对性能和 SEO 至关重要",
-        "description": "使用 SVG 替换 PNG/JPG 徽标和图标：文件更小，Retina 和 4K 级清晰度，更好的 LCP 和 CLS。开发者与 SEO 指南。",
-        "url": "https://pixel-to-path.com/zh/blog/svg-vs-png/",
-        "inLanguage": "fr",
-        "author": { "@type": "Person", "name": "Lorris C." },
-        "publisher": { "@type": "Person", "name": "Lorris C." }
-    }
-    </script>
-
-    <!-- Schema: WebApplication -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "PixelToPath – SVG vs PNG/JPG：核心网页指标 (Core Web Vitals) 与 SEO | PixelToPath",
-        "url": "https://pixel-to-path.com/fr/online/",
-        "description": "使用 SVG 替换 PNG/JPG 徽标和图标：文件更小，Retina 和 4K 级清晰度，更好的 LCP 和 CLS。开发者与 SEO 指南。",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Any",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": 5,
-            "reviewCount": 1
-        }
-    }
-    </script>
-
-    <!-- Schema: HowTo -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "如何将 PNG 或 JPG 徽标瘦身为 SVG（只需 3 步）",
-        "step": [
-            { "@type": "HowToStep", "name": "上传 PNG 或 JPG", "text": "拖放当前以 PNG 或 JPG 格式提供的徽标、图标或象形图。线条越简单（纯色背景、清晰边缘），SVG 就越小。" },
-            { "@type": "HowToStep", "name": "选择合适的预设", "text": "黑白预设适用于单色徽标或图标。如果徽标有一些纯色，请选择海报。避免使用照片：过多的细节会使 SVG 变得庞大，并且不会在徽标上带来视觉提升。" },
-            { "@type": "HowToStep", "name": "在网站上集成 SVG", "text": "下载文件并将其作为图像、精灵图或内联 SVG 提供。只需一个文件即可替换 @1x、@2x 和 @3x 变体。" }
-        ]
-    }
-    </script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/zh/blog/svg-vs-png/#article",
+  "headline": "SVG vs PNG/JPG：为什么矢量格式对性能和 SEO 至关重要",
+  "description": "使用 SVG 替换 PNG/JPG 徽标和图标：文件更小，Retina 和 4K 级清晰度，更好的 LCP 和 CLS。开发者与 SEO 指南。",
+  "url": "https://pixel-to-path.com/zh/blog/svg-vs-png/",
+  "mainEntityOfPage": "https://pixel-to-path.com/zh/blog/svg-vs-png/",
+  "inLanguage": "zh",
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-09-09",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/zh/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-photo.jpg"
+}</script>
 
     <!-- Schema: FAQPage -->
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            { "@type": "Question", "name": "SVG 总是比 PNG 或 JPG 更小吗？", "acceptedAnswer": { "@type": "Answer", "text": "对于徽标、图标或纯色插图：是的，几乎总是如此，特别是当您将 PNG 与其 Retina 版本进行比较时。对于照片：不是，&#39;照片&#39;级 SVG 会变成一片路径云，比 JPG 或 WebP 还要重。矢量化界面，压缩照片。" } },
-            { "@type": "Question", "name": "SVG 真的能改善核心网页指标和 SEO 吗？", "acceptedAnswer": { "@type": "Answer", "text": "它能改善界面图像可以改善的方面：更少的字节（如果徽标或插图是主要元素，则改善 LCP），可预测的渲染框（CLS），需要下载的变体更少。谷歌使用速度作为信号，特别是在移动端。这不是一个神奇的排名捷径，而是可以在 PageSpeed Insights 中测量的技术卫生。" } },
-            { "@type": "Question", "name": "需要将网站上的所有图像替换为 SVG 吗？", "acceptedAnswer": { "@type": "Answer", "text": "不。照片、屏幕截图、纹理、复杂的渐变：使用 JPG、WebP 或 AVIF。徽标、图标、图表、象形图、扁平化插图：使用 SVG。过于详细的 SVG 可能会损害 INP。PixelToPath 的照片预设用于风格化，而不是用于替换内容 JPEG。" } },
-            { "@type": "Question", "name": "如何集成 SVG 而不引起 CLS？", "acceptedAnswer": { "@type": "Answer", "text": "始终提供与 viewBox 相匹配的宽度和高度（或 CSS 纵横比）。使用图像标签（src, width, height, alt），浏览器会在下载前保留空间。如果是内联 SVG，请保留 viewBox 并避免在没有尺寸的情况下在首次绘制后注入代码。" } },
-            { "@type": "Question", "name": "如何使用 PixelToPath 从 PNG 获取徽标 SVG？", "acceptedAnswer": { "@type": "Answer", "text": "打开在线工具，拖放 PNG（最好是透明背景且足够大），选择黑白或海报，调整细节，然后进行转换。在浏览器或 Figma 中打开 SVG 以检查轮廓，然后在生产环境中提供。免费，无需账号，不保存文件。" } }
-        ]
+      "@type": "Question",
+      "name": "SVG 总是比 PNG 或 JPG 更小吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "对于徽标、图标或纯色插图：是的，几乎总是如此，特别是当您将 PNG 与其 Retina 版本进行比较时。对于照片：不是，'照片'级 SVG 会变成一片路径云，比 JPG 或 WebP 还要重。矢量化界面，压缩照片。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SVG 真的能改善核心网页指标和 SEO 吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "它能改善界面图像可以改善的方面：更少的字节（如果徽标或插图是主要元素，则改善 LCP），可预测的渲染框（CLS），需要下载的变体更少。谷歌使用速度作为信号，特别是在移动端。这不是一个神奇的排名捷径，而是可以在 PageSpeed Insights 中测量的技术卫生。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "需要将网站上的所有图像替换为 SVG 吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不。照片、屏幕截图、纹理、复杂的渐变：使用 JPG、WebP 或 AVIF。徽标、图标、图表、象形图、扁平化插图：使用 SVG。过于详细的 SVG 可能会损害 INP。PixelToPath 的照片预设用于风格化，而不是用于替换内容 JPEG。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何集成 SVG 而不引起 CLS？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "始终提供与 viewBox 相匹配的宽度和高度（或 CSS 纵横比）。使用图像标签（src, width, height, alt），浏览器会在下载前保留空间。如果是内联 SVG，请保留 viewBox 并避免在没有尺寸的情况下在首次绘制后注入代码。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何使用 PixelToPath 从 PNG 获取徽标 SVG？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "打开在线工具，拖放 PNG（最好是透明背景且足够大），选择黑白或海报，调整细节，然后进行转换。在浏览器或 Figma 中打开 SVG 以检查轮廓，然后在生产环境中提供。免费，无需账号，不保存文件。"
+      }
     }
-    </script>
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/zh/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "学习图像转 SVG 转换",
+      "item": "https://pixel-to-path.com/zh/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SVG vs PNG/JPG：为什么矢量格式对性能和 SEO 至关重要",
+      "item": "https://pixel-to-path.com/zh/blog/svg-vs-png/"
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
     <nav class="navbar">
     <div class="container nav-container">
 
-        <a href="/zh/"" class="brand">
+        <a href="/zh/" class="brand">
             <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
             PixelToPath
         </a>
 
         <div class="nav-links">
 
-            <a href="/zh/" 
+            <a href="/zh/"
             class="">首页</a>
 
-            <a href="/zh/online/" 
-            class="">在线工具</a>
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">产品 <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/zh/online/"
+                       class="">在线工具</a>
+                    <a href="/zh/offline/"
+                       class="">桌面应用</a>
+                    <a href="/zh/pro/"
+                       class="">桌面应用 Pro</a>
+                    <a href="/api/" class="">API</a>
+                </div>
+            </div>
 
-            <a href="/zh/offline/" 
-            class="">桌面应用</a>
-            
-            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+            <a href="/pricing/" class="">价格</a>
 
             <div class="lang-switch">
                 <span>🇨🇳 ZH</span>
                 <div class="lang-dropdown">
                     
+                    <a href="https://pixel-to-path.com/ar/blog/svg-vs-png/">🇸🇦 العربية</a>
                     <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/">🇧🇩 বাংলা</a>
                     <a href="https://pixel-to-path.com/de/blog/svg-vs-png/">🇩🇪 Deutsch</a>
                     <a href="https://pixel-to-path.com/blog/svg-vs-png/">🇺🇸 English</a>
@@ -188,6 +285,7 @@
                     <a href="https://pixel-to-path.com/th/blog/svg-vs-png/">🇹🇭 ไทย</a>
                     <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/">🇹🇷 Türkçe</a>
                     <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/svg-vs-png/">🇵🇰 اردو</a>
                     <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/">🇻🇳 Tiếng Việt</a>
                     <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/">🇨🇳 中文 (简体)</a>
                 </div>
@@ -214,19 +312,21 @@
                 <span class="mobile-link-number">01</span>
                 <span class="mobile-link-text">首页</span>
             </a>
-            <a href="/zh/online/"
-               class="mobile-link ">
+
+            <span class="mobile-link mobile-link--group">产品</span>
+            <div class="mobile-sublist">
+                <a href="/zh/online/"
+                   class="">在线工具</a>
+                <a href="/zh/offline/"
+                   class="">桌面应用</a>
+                <a href="/zh/pro/"
+                   class="">桌面应用 Pro</a>
+                <a href="/api/" class="">API</a>
+            </div>
+
+            <a href="/pricing/" class="mobile-link ">
                 <span class="mobile-link-number">02</span>
-                <span class="mobile-link-text">在线工具</span>
-            </a>
-            <a href="/zh/offline/"
-               class="mobile-link ">
-                <span class="mobile-link-number">03</span>
-                <span class="mobile-link-text">桌面应用</span>
-            </a>
-            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
-                <span class="mobile-link-number">04</span>
-                <span class="mobile-link-text">GitHub</span>
+                <span class="mobile-link-text">价格</span>
             </a>
         </div>
 
@@ -235,6 +335,7 @@
                 <span class="mobile-lang-label">语言</span>
                 <div class="mobile-lang-options">
                     
+                    <a href="https://pixel-to-path.com/ar/blog/svg-vs-png/" class="mobile-lang-btn">🇸🇦 العربية</a>
                     <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
                     <a href="https://pixel-to-path.com/de/blog/svg-vs-png/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
                     <a href="https://pixel-to-path.com/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇸 English</a>
@@ -252,6 +353,7 @@
                     <a href="https://pixel-to-path.com/th/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇭 ไทย</a>
                     <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
                     <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/svg-vs-png/" class="mobile-lang-btn">🇵🇰 اردو</a>
                     <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
                     <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
                 </div>
@@ -281,6 +383,7 @@
         });
     });
 </script>
+
     <main>
 
         <!-- ═══════════════════════════════════════
@@ -317,7 +420,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -325,14 +428,11 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
         <!-- ═══════════════════════════════════════
-             HOW TO – 3-step guide + HowTo schema
+             HOW TO – 3-step guide
         ════════════════════════════════════════ -->
         <section class="section bg-light">
             <div class="container">
@@ -367,7 +467,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -375,9 +475,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -404,25 +501,63 @@
                     <h2>PNG vs SVG：徽标的体积并非微不足道</h2>
                     <p>图像仍然是页面重量的最大来源之一。我们用 WebP 优化了照片，却忘记了页眉中的徽标和 CSS 中的二十多个 PNG 图标。但是这些文件在所有 URL 上都会重复：每一毫秒的损失都是整个网站的损失。</p>
                     <p>在展示网站或网络应用程序的典型场景中，使用 PixelToPath 矢量化后观察到的数量级：</p>
-                    <ul>
-                        <li>带有透明度的 512 像素 PNG 徽标：通常为 40 到 80 KB。相同的图案在 SVG 中：通常只有 2 到 12 KB，具体取决于颜色和节点的数量</li>
-                        <li>为了在 Retina 下保持清晰，PNG 以 1024 像素提供，或通过 srcset @2x 提供：体积会翻倍，有时甚至三倍。而 SVG 不需要更改文件</li>
-                        <li>以 @3x (72×72) 导出的 24×24 PNG 图标重 2 到 8 KB。乘以 20 个图标，您就增加了 40 到 160 KB 的界面负担。而相同的 SVG 象形图总共通常只有几 KB</li>
-                        <li>“白底”徽标的 JPG 看起来很轻，但纯色区域和文本会受到压缩的影响。SVG 保持清晰的边缘，没有光晕，体积甚至更小</li>
-                    </ul>
+                    <table class="vs-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">场景</th>
+                                <th scope="col">PNG / JPG</th>
+                                <th scope="col">SVG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">带透明度的 512 px 徽标</th>
+                                <td data-label="PNG / JPG">40 到 80 KB</td>
+                                <td class="yes" data-label="SVG">2 到 12 KB，取决于颜色和节点数量</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">同一徽标为 Retina 以 @2x（1024 px）提供</th>
+                                <td data-label="PNG / JPG">体积翻倍，有时增至三倍</td>
+                                <td class="yes" data-label="SVG">单个文件，保持不变</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">以 @3x（72×72）导出的 20 个界面图标</th>
+                                <td data-label="PNG / JPG">额外增加 40 到 160 KB</td>
+                                <td class="yes" data-label="SVG">总共只有几 KB</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">来自 JPG 的平色徽标</th>
+                                <td data-label="PNG / JPG">图形和文字周围出现伪影和光晕</td>
+                                <td class="yes" data-label="SVG">边缘干净，文件也更轻</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <p>规则很简单：所有形状、文本、象形图或徽标，转换为 SVG 后都会受益。照片和屏幕截图保留为 JPG、WebP 或 AVIF。SVG 不是万能的替代品：它是适合界面的正确格式。</p>
 
                     <h2>可扩展性：从智能手机到 4K 始终清晰的文件</h2>
                     <p>PNG 仅在其原始分辨率下清晰。放大时会看到像素。大幅度缩小时，浏览器必须重新采样。这就导致了对 @1x、@2x、@3x 文件、srcset 和 CSS 密度的复杂处理。每一个新的断点或新的屏幕密度（Retina、较新的手机、4K 显示器）都需要一次新的导出，或者一个“以防万一”过大的文件。</p>
                     <p>SVG 无视这种限制。渲染引擎根据请求的 CSS 尺寸计算曲线。32 像素的网站图标，导航中 48 像素的徽标，横幅中 400 像素的同一个品牌，4K 投影：都是同一个文件。没有模糊，没有锯齿，无需为高密度版本发起第二次请求。对于组件库来说，这也意味着更少的技术债务：一个图标，一个文件，适用于所有尺寸。</p>
 
+                    
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/logo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="同一徽标放大到 400%：左侧 PNG 的像素清晰可见，右侧 SVG 的曲线依旧平滑。">
+    <figcaption>同一徽标放大到 400%：左侧 PNG 的像素清晰可见，右侧 SVG 的曲线依旧平滑。</figcaption>
+</figure>
+
+                    
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/photo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="热气球 400% 放大：左侧是 JPEG 模糊与像素，右侧是海报化的矢量色块。">
+    <figcaption>热气球 400% 放大：左侧是 JPEG 模糊与像素，右侧是海报化的矢量色块。</figcaption>
+</figure>
+
+
                     <h2>核心网页指标与 SEO：为什么谷歌在乎格式</h2>
-                    <p>移动速度是一个排名因素。核心网页指标 (LCP, INP, CLS) 衡量用户的体验。用 SVG 替换沉重的 PNG 徽标或一堆光栅图标，不会让页面从 4 MB 变成 40 KB。但在网站的视觉表现上，效果是立竿见影的，尤其是在 4G 网络上或 LCP 被页眉徽标卡住时。</p>
+                    <p>移动速度是一个排名因素。<a href="https://web.dev/articles/vitals" target="_blank" rel="noopener">核心网页指标</a> (LCP, INP, CLS) 衡量用户的体验。用 SVG 替换沉重的 PNG 徽标或一堆光栅图标，不会让页面从 4 MB 变成 40 KB。但在网站的视觉表现上，效果是立竿见影的，尤其是在 4G 网络上或 LCP 被页眉徽标卡住时。</p>
                     <p>具体来说，矢量格式在保持路径复杂性合理的前提下，有助于改善三个指标：</p>
                     <ul>
-                        <li>LCP（最大内容绘制）：如果最大的可见元素是徽标或扁平化插图，几 KB 的 SVG 会比 150 KB 的 @2x PNG 到达得更早。这减少了页面其余部分的网络拥塞</li>
-                        <li>CLS（累积布局偏移）：带有 width、height 和 viewBox 的 SVG 在解析 HTML 时就会保留其显示框。不再需要等待位图解码才能知道比例，从而减少布局跳动</li>
-                        <li>INP 和主线程：一个简单的 SVG（徽标、图标）绘制成本很低。但请避免使用包含数千条路径的“照片”级 SVG：它们可能比 PNG 更重，并会增加处理器的负担。这就是为什么通过 PixelToPath 获得干净的路径（而不是逐像素复制）具有优势</li>
+                        <li><a href="https://web.dev/articles/optimize-lcp" target="_blank" rel="noopener">LCP</a>（最大内容绘制）：如果最大的可见元素是徽标或扁平化插图，几 KB 的 SVG 会比 150 KB 的 @2x PNG 到达得更早。这减少了页面其余部分的网络拥塞</li>
+                        <li><a href="https://web.dev/articles/optimize-cls" target="_blank" rel="noopener">CLS</a>（累积布局偏移）：带有 width、height 和 viewBox 的 SVG 在解析 HTML 时就会保留其显示框。不再需要等待位图解码才能知道比例，从而减少布局跳动</li>
+                        <li><a href="https://web.dev/articles/inp" target="_blank" rel="noopener">INP</a> 和主线程：一个简单的 SVG（徽标、图标）绘制成本很低。但请避免使用包含数千条路径的“照片”级 SVG：它们可能比 PNG 更重，并会增加处理器的负担。这就是为什么通过 PixelToPath 获得干净的路径（而不是逐像素复制）具有优势</li>
                         <li>速度之外的 SEO：谷歌会索引 SVG。集成的徽标可以携带无障碍标题。带有 alt 属性的 SVG 图像仍然是基础。而更轻的页面可以降低技术上的跳出率，这是排名所考虑的体验信号</li>
                     </ul>
                 </div>
@@ -430,7 +565,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -438,9 +573,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -488,7 +620,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -496,9 +628,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -523,7 +652,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -531,9 +660,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -546,10 +672,6 @@
                 <p class="section-intro">矢量化您的文件，然后深入了解与您相关的格式。</p>
 
                 <div class="related-tools">
-                    
-                    <a href="/zh/blog/png-to-svg/" class="related-tool-link">
-                        🔄 PNG 转 SVG 转换器
-                    </a>
                     
                     <a href="/zh/blog/jpg-to-svg/" class="related-tool-link">
                         🔄 JPG 转 SVG 转换器
@@ -572,7 +694,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -580,9 +702,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -618,7 +737,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -626,9 +745,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -656,22 +772,6 @@
     </main>
 
     
-<a class="sponsor" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=banner&amp;utm_campaign=site_footer" target="_blank" rel="sponsored noopener noreferrer">
-    <div class="container sponsor__inner">
-        <div class="sponsor__mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
-                <path d="M8 4.5h11.2L24 9.3V26a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 8 26V4.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M19 4.5V9h4.8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M12 14.5h8M12 18.5h8M12 22.5h5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-            </svg>
-        </div>
-        <div class="sponsor__copy">
-            <strong class="sponsor__title">DocuNest: 100% 离线编辑 PDF</strong>
-            <span class="sponsor__text">一款桌面编辑器内含 26 项工具。签名、合并、转换: 文件不会离开你的电脑。</span>
-        </div>
-        <span class="sponsor__cta">免费试用 7 天</span>
-    </div>
-</a>
 
 <footer>
     <div class="container" id="footernavigation">
@@ -679,105 +779,25 @@
         <a href="/zh/">首页</a>
         <a href="/zh/online/">在线工具</a>
         <a href="/zh/offline/">桌面应用</a>
+        <a href="/zh/pro/">Pro</a>
+        <a href="/api/">API</a>
         <a href="/zh/blog/">博客</a>
         <a href="https://github.com/lorrisc/PixelToPath">开源 (MIT)</a>
     </div>
     <div class="container" id="footerlegal">
-        <a href="/legal">Legal notice</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">客户门户</a>
     </div>
 </footer>
 
-<link rel="stylesheet" href="../../../assets/css/partials/docunest-popup.css">
-<div id="dn-popup" class="dn-popup" hidden>
-    <div class="dn-popup__dialog" role="dialog" aria-modal="true" aria-labelledby="dn-popup-title">
-        <div class="dn-popup__top">
-            <p class="dn-popup__brand" id="dn-popup-title">DocuNest</p>
-            <button type="button" class="dn-popup__close" data-dn-close aria-label="关闭">&times;</button>
-        </div>
-
-        <div class="dn-carousel" data-dn-carousel>
-            <div class="dn-carousel__viewport">
-                <div class="dn-carousel__track">
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">如何彻底涂黑 PDF 中的敏感内容？</h2>
-                        <p class="dn-slide__text">永久涂黑敏感数据：标记下方的文字和图片会被销毁，而不是简单遮盖。全程在你的电脑上完成，文件绝不会上传。</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/redact.png" alt="在 DocuNest 中涂黑 PDF" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">如何在不上传的情况下签署 PDF？</h2>
-                        <p class="dn-slide__text">手写或导入签名，再放置、缩放。无需账号，无需上传：文件不会离开你的电脑。</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/sign.png" alt="在 DocuNest 中签署 PDF" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">如何给 PDF 添加水印？</h2>
-                        <p class="dn-slide__text">用文字或图片给每一页盖章：机密、Logo、日期。本地处理、无限制，没有云工具强加的水印。</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/watermark.png" alt="在 DocuNest 中为 PDF 加水印" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide dn-slide--offer">
-                        <h2 class="dn-slide__title dn-slide__title--xl">完整的 PDF 编辑器。100% 离线。</h2>
-                        <p class="dn-slide__text">一款桌面应用内含 26 项工具。编辑文字、签名、合并、转换。文件不会离开你的电脑。</p>
-                        <ul class="dn-offer">
-                            <li class="dn-offer__item">
-                                <strong>100% 离线</strong>
-                                <span>不上传文件。无需账号。无需云端。</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>终身许可，30 €</strong>
-                                <span>一次付费。没有月费订阅。</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>26 项工具，一个编辑器</strong>
-                                <span>涂黑、签名、合并、转换：全都有。</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>7 天免费试用</strong>
-                                <span>无需信用卡。支持 Windows、macOS 和 Linux。</span>
-                            </li>
-                        </ul>
-                        <a class="dn-offer__cta" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup" target="_blank" rel="noopener noreferrer">下载 DocuNest</a>
-                    </article>
-                </div>
-            </div>
-            <button type="button" class="dn-carousel__nav dn-carousel__nav--prev" data-dn-prev aria-label="上一张">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15.5 4.5 8 12l7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <button type="button" class="dn-carousel__nav dn-carousel__nav--next" data-dn-next aria-label="下一张">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8.5 4.5 16 12l-7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="dn-carousel__dots" data-dn-dots>
-                <button type="button" class="is-active" aria-label="1"></button>
-                <button type="button" aria-label="2"></button>
-                <button type="button" aria-label="3"></button>
-                <button type="button" aria-label="4"></button>
-            </div>
-        </div>
-
-        <div class="dn-bar">
-            <nav class="dn-bar__tools" aria-label="DocuNest">
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">涂黑</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">签名</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">水印</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">合并</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">编辑</a>
-            </nav>
-            <div class="dn-bar__cta-wrap">
-                <span class="dn-bar__note">7 天试用 · 无需信用卡</span>
-                <a class="dn-bar__cta" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup" target="_blank" rel="noopener noreferrer">免费试用</a>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="../../../assets/js/docunest-popup.js" defer></script>
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
 
 
-    <script src="../../../assets/js/ui-state.js"></script>
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" dir="ltr">
 <head>
     <script>
     var _paq = window._paq = window._paq || [];
@@ -14,6 +14,9 @@
         g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
     })();
 </script>
+    
+<script defer src="../../assets/js/ads-lazy.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,12 +28,23 @@
 
     <meta property="og:title" content="คู่มือและเคล็ดลับการแปลง SVG – บล็อก PixelToPath">
     <meta property="og:description" content="คู่มือฟรีเกี่ยวกับการแปลง PNG, JPG และรูปภาพอื่นๆ เป็น SVG เรียนรู้การแปลงเป็นเวกเตอร์ แนวทางปฏิบัติที่ดีที่สุด และวิธีใช้ PixelToPath อย่างมีประสิทธิภาพ">
-    <meta property="og:image" content="../../assets/images/screenshot.png">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="PixelToPath app screenshot">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="คู่มือและเคล็ดลับการแปลง SVG – บล็อก PixelToPath">
+    <meta name="twitter:description" content="คู่มือฟรีเกี่ยวกับการแปลง PNG, JPG และรูปภาพอื่นๆ เป็น SVG เรียนรู้การแปลงเป็นเวกเตอร์ แนวทางปฏิบัติที่ดีที่สุด และวิธีใช้ PixelToPath อย่างมีประสิทธิภาพ">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="PixelToPath app screenshot">
     <meta property="og:url" content="https://pixel-to-path.com/blog/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="PixelToPath">
 
     <link rel="canonical" href="https://pixel-to-path.com/th/blog/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/">
     
     <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/">
     
@@ -66,120 +80,174 @@
     
     <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/">
     
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/">
+    
     <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/">
     
     <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/">
     
     <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/blog/">
 
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/components.css">
-    <link rel="stylesheet" href="../../assets/css/containers.css">
-    <link rel="stylesheet" href="../../assets/css/partials/footer.css">
-    <link rel="stylesheet" href="../../assets/css/partials/navbar.css">
-    <link rel="stylesheet" href="../../assets/css/partials/donate.css">
-    <link rel="stylesheet" href="../../assets/css/pages/blog.css">
+    <link rel="stylesheet" href="../../assets/css/bundle.6f5e5d3a.css">
 
     <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96">
 
     <!-- Schema: Blog -->
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://pixel-to-path.com/th/blog/#blog",
+  "name": "คู่มือและเคล็ดลับการแปลง SVG – บล็อก PixelToPath",
+  "url": "https://pixel-to-path.com/th/blog/",
+  "inLanguage": "th",
+  "description": "คู่มือฟรีเกี่ยวกับการแปลง PNG, JPG และรูปภาพอื่นๆ เป็น SVG เรียนรู้การแปลงเป็นเวกเตอร์ แนวทางปฏิบัติที่ดีที่สุด และวิธีใช้ PixelToPath อย่างมีประสิทธิภาพ",
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "blogPost": [
     {
-        "@context": "https://schema.org",
-        "@type": "Blog",
-        "name": "คู่มือและเคล็ดลับการแปลง SVG – บล็อก PixelToPath",
-        "url": "https://pixel-to-path.com/blog/",
-        "description": "คู่มือฟรีเกี่ยวกับการแปลง PNG, JPG และรูปภาพอื่นๆ เป็น SVG เรียนรู้การแปลงเป็นเวกเตอร์ แนวทางปฏิบัติที่ดีที่สุด และวิธีใช้ PixelToPath อย่างมีประสิทธิภาพ",
-        "publisher": {
-            "@type": "Person",
-            "name": "Lorris C."
-        },
-        "blogPost": [
-            {
-                "@type": "BlogPosting",
-                "headline": "โปรแกรมแปลง PNG เป็น SVG ออนไลน์ฟรี",
-                "description": "เรียนรู้วิธีแปลงรูปภาพ PNG เป็นไฟล์เวกเตอร์ SVG ที่สะอาดและปรับขนาดได้ - ทันทีและฟรี ครอบคลุมแนวทางปฏิบัติที่ดีที่สุดและคำแนะนำทีละขั้นตอน",
-                "url": "https://pixel-to-path.com/th/blog/png-to-svg/"
-            },
-            {
-                "@type": "BlogPosting",
-                "headline": "โปรแกรมแปลง JPG เป็น SVG ออนไลน์ฟรี",
-                "description": "เปลี่ยนภาพถ่ายหรือภาพประกอบ JPEG ให้เป็นเวกเตอร์ SVG ที่ปรับขนาดได้ ค้นพบว่าการแปลง JPG เป็น SVG มีประโยชน์เมื่อใดและจะให้ได้ผลลัพธ์ที่ดีที่สุด",
-                "url": "https://pixel-to-path.com/th/blog/jpg-to-svg/"
-            },
-            {
-                "@type": "BlogPosting",
-                "headline": "โปรแกรมแปลง SVG ฟรี: รูปแบบรูปภาพใดๆ เป็น SVG",
-                "description": "เครื่องมือฟรีหนึ่งเดียวสำหรับการแปลงรูปภาพ PNG, JPG, BMP และ WebP เป็น SVG ทำความเข้าใจความแตกต่างของรูปแบบและเลือกพรีเซ็ตที่เหมาะสม",
-                "url": "https://pixel-to-path.com/th/blog/svg-converter-free/"
-            },
-            {
-                "@type": "BlogPosting",
-                "headline": "เครื่องมือแปลงรูปภาพเป็นเวกเตอร์ออนไลน์ฟรี",
-                "description": "การแปลงรูปภาพเป็นเวกเตอร์หมายความว่าอย่างไรจริงๆ คู่มือนี้อธิบายการแปลงแรสเตอร์เป็นเวกเตอร์ และวิธีให้ได้ผลลัพธ์ที่คมชัดด้วย PixelToPath",
-                "url": "https://pixel-to-path.com/th/blog/vectorize-image/"
-            },
-            {
-                "@type": "BlogPosting",
-                "headline": "โปรแกรมแปลงรูปภาพเป็น SVG ฟรี",
-                "description": "คู่มือสำหรับผู้เริ่มต้นฉบับสมบูรณ์ เรียนรู้ว่า SVG คืออะไร ทำไมจึงสำคัญ และวิธีแปลงรูปแบบรูปภาพใดๆ เป็นกราฟิกเวกเตอร์ได้ฟรี",
-                "url": "https://pixel-to-path.com/th/blog/image-to-svg/"
-            },
-            {
-                "@type": "BlogPosting",
-                "headline": "Free SVG Files for Cricut, Silhouette &amp; Laser Cutting",
-                "description": "Cutting machines need vectors, not pixels. Learn how to turn a PNG or JPG into a clean SVG ready for Cricut, Silhouette, or a laser cutter.",
-                "url": "https://pixel-to-path.com/th/blog/svg-cricut/"
-            },
-            {
-                "@type": "BlogPosting",
-                "headline": "SVG vs PNG/JPG: Core Web Vitals และ SEO",
-                "description": "ทำไมโลโก้และไอคอนแบบ SVG จึงเบากว่า คงความคมชัดตั้งแต่มือถือจนถึง 4K และปรับปรุง LCP, CLS และ SEO ด้วย PixelToPath",
-                "url": "https://pixel-to-path.com/th/blog/svg-vs-png/"
-            },
-            {
-                "@type": "BlogPosting",
-                "headline": "โลโก้ของคุณเบลอใช่ไหม? แปลงเป็น SVG ใน 1 นาที",
-                "description": "คุณมีโลโก้เฉพาะในรูปแบบ JPG หรือ PNG หรือไม่? มันแตกเมื่อใช้กับโปสเตอร์ ซ่อมแซมด้วย SVG ที่คมชัด ฟรี โดยไม่ต้องใช้ Illustrator",
-                "url": "https://pixel-to-path.com/th/blog/vectorize-logo/"
-            },
-            {
-                "@type": "BlogPosting",
-                "headline": "วิธีนำเข้าและแก้ไข SVG ของคุณใน Figma, Canva หรือ WordPress",
-                "description": "ขั้นตอนหลังจากการแปลง: ลาก SVG จาก PixelToPath ลงใน Figma เพื่อเปลี่ยนสี, เปิดใน Canva, หรืออัปโหลดบน WordPress อย่างปลอดภัย",
-                "url": "https://pixel-to-path.com/th/blog/import-svg/"
-            }
-        ]
+      "@type": "BlogPosting",
+      "headline": "โปรแกรมแปลง JPG เป็น SVG ออนไลน์ฟรี",
+      "description": "เปลี่ยนภาพถ่ายหรือภาพประกอบ JPEG ให้เป็นเวกเตอร์ SVG ที่ปรับขนาดได้ ค้นพบว่าการแปลง JPG เป็น SVG มีประโยชน์เมื่อใดและจะให้ได้ผลลัพธ์ที่ดีที่สุด",
+      "url": "https://pixel-to-path.com/th/blog/jpg-to-svg/"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "เครื่องมือแปลงรูปภาพเป็นเวกเตอร์ออนไลน์ฟรี",
+      "description": "การแปลงรูปภาพเป็นเวกเตอร์หมายความว่าอย่างไรจริงๆ คู่มือนี้อธิบายการแปลงแรสเตอร์เป็นเวกเตอร์ และวิธีให้ได้ผลลัพธ์ที่คมชัดด้วย PixelToPath",
+      "url": "https://pixel-to-path.com/th/blog/vectorize-image/"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "โปรแกรมแปลงรูปภาพเป็น SVG ฟรี",
+      "description": "คู่มือสำหรับผู้เริ่มต้นฉบับสมบูรณ์ เรียนรู้ว่า SVG คืออะไร ทำไมจึงสำคัญ และวิธีแปลงรูปแบบรูปภาพใดๆ เป็นกราฟิกเวกเตอร์ได้ฟรี",
+      "url": "https://pixel-to-path.com/th/blog/image-to-svg/"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Free SVG Files for Cricut, Silhouette & Laser Cutting",
+      "description": "Cutting machines need vectors, not pixels. Learn how to turn a PNG or JPG into a clean SVG ready for Cricut, Silhouette, or a laser cutter.",
+      "url": "https://pixel-to-path.com/th/blog/svg-cricut/"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "SVG vs PNG/JPG: Core Web Vitals และ SEO",
+      "description": "ทำไมโลโก้และไอคอนแบบ SVG จึงเบากว่า คงความคมชัดตั้งแต่มือถือจนถึง 4K และปรับปรุง LCP, CLS และ SEO ด้วย PixelToPath",
+      "url": "https://pixel-to-path.com/th/blog/svg-vs-png/"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "โลโก้ของคุณเบลอใช่ไหม? แปลงเป็น SVG ใน 1 นาที",
+      "description": "คุณมีโลโก้เฉพาะในรูปแบบ JPG หรือ PNG หรือไม่? มันแตกเมื่อใช้กับโปสเตอร์ ซ่อมแซมด้วย SVG ที่คมชัด ฟรี โดยไม่ต้องใช้ Illustrator",
+      "url": "https://pixel-to-path.com/th/blog/vectorize-logo/"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "วิธีนำเข้าและแก้ไข SVG ของคุณใน Figma, Canva หรือ WordPress",
+      "description": "ขั้นตอนหลังจากการแปลง: ลาก SVG จาก PixelToPath ลงใน Figma เพื่อเปลี่ยนสี, เปิดใน Canva, หรืออัปโหลดบน WordPress อย่างปลอดภัย",
+      "url": "https://pixel-to-path.com/th/blog/import-svg/"
     }
-    </script>
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/th/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "เรียนรู้การแปลงรูปภาพเป็น SVG",
+      "item": "https://pixel-to-path.com/th/blog/"
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
     <nav class="navbar">
     <div class="container nav-container">
 
-        <a href="/th/"" class="brand">
+        <a href="/th/" class="brand">
             <img src="../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
             PixelToPath
         </a>
 
         <div class="nav-links">
 
-            <a href="/th/" 
+            <a href="/th/"
             class="">หน้าแรก</a>
 
-            <a href="/th/online/" 
-            class="">เครื่องมือออนไลน์</a>
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">ผลิตภัณฑ์ <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/th/online/"
+                       class="">เครื่องมือออนไลน์</a>
+                    <a href="/th/offline/"
+                       class="">แอปเดสก์ท็อป</a>
+                    <a href="/th/pro/"
+                       class="">แอปเดสก์ท็อป Pro</a>
+                    <a href="/api/" class="">API</a>
+                </div>
+            </div>
 
-            <a href="/th/offline/" 
-            class="">แอปเดสก์ท็อป</a>
-            
-            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+            <a href="/pricing/" class="">ราคา</a>
 
             <div class="lang-switch">
                 <span>🇹🇭 TH</span>
                 <div class="lang-dropdown">
                     
+                    <a href="https://pixel-to-path.com/ar/blog/">🇸🇦 العربية</a>
                     <a href="https://pixel-to-path.com/bn/blog/">🇧🇩 বাংলা</a>
                     <a href="https://pixel-to-path.com/de/blog/">🇩🇪 Deutsch</a>
                     <a href="https://pixel-to-path.com/blog/">🇺🇸 English</a>
@@ -197,6 +265,7 @@
                     <a href="https://pixel-to-path.com/th/blog/">🇹🇭 ไทย</a>
                     <a href="https://pixel-to-path.com/tr/blog/">🇹🇷 Türkçe</a>
                     <a href="https://pixel-to-path.com/uk/blog/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/">🇵🇰 اردو</a>
                     <a href="https://pixel-to-path.com/vi/blog/">🇻🇳 Tiếng Việt</a>
                     <a href="https://pixel-to-path.com/zh/blog/">🇨🇳 中文 (简体)</a>
                 </div>
@@ -223,19 +292,21 @@
                 <span class="mobile-link-number">01</span>
                 <span class="mobile-link-text">หน้าแรก</span>
             </a>
-            <a href="/th/online/"
-               class="mobile-link ">
+
+            <span class="mobile-link mobile-link--group">ผลิตภัณฑ์</span>
+            <div class="mobile-sublist">
+                <a href="/th/online/"
+                   class="">เครื่องมือออนไลน์</a>
+                <a href="/th/offline/"
+                   class="">แอปเดสก์ท็อป</a>
+                <a href="/th/pro/"
+                   class="">แอปเดสก์ท็อป Pro</a>
+                <a href="/api/" class="">API</a>
+            </div>
+
+            <a href="/pricing/" class="mobile-link ">
                 <span class="mobile-link-number">02</span>
-                <span class="mobile-link-text">เครื่องมือออนไลน์</span>
-            </a>
-            <a href="/th/offline/"
-               class="mobile-link ">
-                <span class="mobile-link-number">03</span>
-                <span class="mobile-link-text">แอปเดสก์ท็อป</span>
-            </a>
-            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
-                <span class="mobile-link-number">04</span>
-                <span class="mobile-link-text">GitHub</span>
+                <span class="mobile-link-text">ราคา</span>
             </a>
         </div>
 
@@ -244,6 +315,7 @@
                 <span class="mobile-lang-label">ภาษา</span>
                 <div class="mobile-lang-options">
                     
+                    <a href="https://pixel-to-path.com/ar/blog/" class="mobile-lang-btn">🇸🇦 العربية</a>
                     <a href="https://pixel-to-path.com/bn/blog/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
                     <a href="https://pixel-to-path.com/de/blog/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
                     <a href="https://pixel-to-path.com/blog/" class="mobile-lang-btn">🇺🇸 English</a>
@@ -261,6 +333,7 @@
                     <a href="https://pixel-to-path.com/th/blog/" class="mobile-lang-btn">🇹🇭 ไทย</a>
                     <a href="https://pixel-to-path.com/tr/blog/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
                     <a href="https://pixel-to-path.com/uk/blog/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/" class="mobile-lang-btn">🇵🇰 اردو</a>
                     <a href="https://pixel-to-path.com/vi/blog/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
                     <a href="https://pixel-to-path.com/zh/blog/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
                 </div>
@@ -290,6 +363,7 @@
         });
     });
 </script>
+
     <main>
 
         <!-- ═══════════════════════════════════════
@@ -310,7 +384,7 @@
         <div class="container">
             <div class="blog-meta-strip">
                 <p class="blog-meta-strip__count">
-                    กำลังดู <strong>9</strong> คำแนะนำ
+                    กำลังดู <strong>7</strong> คำแนะนำ
                 </p>
                 <span class="blog-meta-strip__tag">SVG · Vector · Conversion</span>
             </div>
@@ -318,18 +392,18 @@
 
 
         <!-- ═══════════════════════════════════════
-             FEATURED ARTICLE – png to svg (most searched)
+             FEATURED ARTICLE – jpg to svg
         ════════════════════════════════════════ -->
         <section class="blog-featured">
             <div class="container">
-                <a href="/th/blog/png-to-svg/" class="featured-card">
+                <a href="/th/blog/jpg-to-svg/" class="featured-card">
 
                     <!-- Visual panel -->
                     <div class="featured-card__visual">
                         <span class="featured-label">★ ยอดนิยมที่สุด</span>
                         <div class="featured-card__fmt-stack">
                             <div class="featured-card__fmt-from">
-                                <span class="fmt-pill">PNG</span>
+                                <span class="fmt-pill">JPG</span>
                             </div>
                             <span class="fmt-arrow-lg">↓</span>
                             <div class="featured-card__fmt-from">
@@ -341,8 +415,8 @@
                     <!-- Content panel -->
                     <div class="featured-card__content">
                         <span class="article-tag">ตัวแปลงรูปแบบ</span>
-                        <h2>โปรแกรมแปลง PNG เป็น SVG ออนไลน์ฟรี</h2>
-                        <p>เรียนรู้วิธีแปลงรูปภาพ PNG เป็นไฟล์เวกเตอร์ SVG ที่สะอาดและปรับขนาดได้ - ทันทีและฟรี ครอบคลุมแนวทางปฏิบัติที่ดีที่สุดและคำแนะนำทีละขั้นตอน</p>
+                        <h3>โปรแกรมแปลง JPG เป็น SVG ออนไลน์ฟรี</h3>
+                        <p>เปลี่ยนภาพถ่ายหรือภาพประกอบ JPEG ให้เป็นเวกเตอร์ SVG ที่ปรับขนาดได้ ค้นพบว่าการแปลง JPG เป็น SVG มีประโยชน์เมื่อใดและจะให้ได้ผลลัพธ์ที่ดีที่สุด</p>
                         <div class="article-footer">
                             <span class="article-readtime">⏱ อ่าน 5 นาที</span>
                             <span class="article-cta">อ่านคู่มือ →</span>
@@ -354,7 +428,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -362,9 +436,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -429,30 +500,6 @@
                         </div>
                     </a>
 
-                    <!-- JPG to SVG -->
-                    <a href="/th/blog/jpg-to-svg/" class="article-card">
-                        <div class="article-card__icon">🔄</div>
-                        <span class="article-tag">ตัวแปลงรูปแบบ</span>
-                        <h3>โปรแกรมแปลง JPG เป็น SVG ออนไลน์ฟรี</h3>
-                        <p>เปลี่ยนภาพถ่ายหรือภาพประกอบ JPEG ให้เป็นเวกเตอร์ SVG ที่ปรับขนาดได้ ค้นพบว่าการแปลง JPG เป็น SVG มีประโยชน์เมื่อใดและจะให้ได้ผลลัพธ์ที่ดีที่สุด</p>
-                        <div class="article-footer">
-                            <span class="article-readtime">⏱ อ่าน 5 นาที</span>
-                            <span class="article-cta">อ่านคู่มือ →</span>
-                        </div>
-                    </a>
-
-                    <!-- SVG Converter Free -->
-                    <a href="/th/blog/svg-converter-free/" class="article-card">
-                        <div class="article-card__icon">⚡</div>
-                        <span class="article-tag">เครื่องมือ</span>
-                        <h3>โปรแกรมแปลง SVG ฟรี: รูปแบบรูปภาพใดๆ เป็น SVG</h3>
-                        <p>เครื่องมือฟรีหนึ่งเดียวสำหรับการแปลงรูปภาพ PNG, JPG, BMP และ WebP เป็น SVG ทำความเข้าใจความแตกต่างของรูปแบบและเลือกพรีเซ็ตที่เหมาะสม</p>
-                        <div class="article-footer">
-                            <span class="article-readtime">⏱ อ่าน 6 นาที</span>
-                            <span class="article-cta">อ่านคู่มือ →</span>
-                        </div>
-                    </a>
-
                     <!-- Vectorize Image -->
                     <a href="/th/blog/vectorize-image/" class="article-card">
                         <div class="article-card__icon">✏️</div>
@@ -497,7 +544,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -505,9 +552,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
         <section class="section donate-section">
@@ -518,7 +562,7 @@
     </div>
 </section>
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -526,30 +570,11 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
     </main>
 
     
-<a class="sponsor" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=banner&amp;utm_campaign=site_footer" target="_blank" rel="sponsored noopener noreferrer">
-    <div class="container sponsor__inner">
-        <div class="sponsor__mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
-                <path d="M8 4.5h11.2L24 9.3V26a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 8 26V4.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M19 4.5V9h4.8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M12 14.5h8M12 18.5h8M12 22.5h5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-            </svg>
-        </div>
-        <div class="sponsor__copy">
-            <strong class="sponsor__title">DocuNest: แก้ไข PDF ออฟไลน์ 100%</strong>
-            <span class="sponsor__text">26 เครื่องมือในโปรแกรมเดสก์ท็อปเดียว ลงนาม รวม แปลง: ไฟล์ไม่เคยออกจากคอมพิวเตอร์</span>
-        </div>
-        <span class="sponsor__cta">ทดลองใช้ฟรี 7 วัน</span>
-    </div>
-</a>
 
 <footer>
     <div class="container" id="footernavigation">
@@ -557,105 +582,25 @@
         <a href="/th/">หน้าแรก</a>
         <a href="/th/online/">เครื่องมือออนไลน์</a>
         <a href="/th/offline/">แอปเดสก์ท็อป</a>
+        <a href="/th/pro/">Pro</a>
+        <a href="/api/">API</a>
         <a href="/th/blog/">บล็อก</a>
         <a href="https://github.com/lorrisc/PixelToPath">โอเพ่นซอร์ส (MIT)</a>
     </div>
     <div class="container" id="footerlegal">
-        <a href="/legal">Legal notice</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">พอร์ทัลลูกค้า</a>
     </div>
 </footer>
 
-<link rel="stylesheet" href="../../assets/css/partials/docunest-popup.css">
-<div id="dn-popup" class="dn-popup" hidden>
-    <div class="dn-popup__dialog" role="dialog" aria-modal="true" aria-labelledby="dn-popup-title">
-        <div class="dn-popup__top">
-            <p class="dn-popup__brand" id="dn-popup-title">DocuNest</p>
-            <button type="button" class="dn-popup__close" data-dn-close aria-label="ปิด">&times;</button>
-        </div>
-
-        <div class="dn-carousel" data-dn-carousel>
-            <div class="dn-carousel__viewport">
-                <div class="dn-carousel__track">
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">จะปิดทับข้อมูลใน PDF อย่างถาวรได้อย่างไร?</h2>
-                        <p class="dn-slide__text">ทาบดำข้อมูลสำคัญอย่างถาวร: ข้อความและรูปใต้พื้นที่ถูกทำลาย ไม่ใช่แค่ปิดบัง ทุกอย่างทำบนคอมพิวเตอร์ของคุณ: ไฟล์ไม่ถูกอัปโหลด</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../assets/images/docunest/redact.png" alt="การปิดทับ PDF ใน DocuNest" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">จะเซ็น PDF โดยไม่อัปโหลดได้อย่างไร?</h2>
-                        <p class="dn-slide__text">วาดหรือนำเข้าลายเซ็น วางแล้วปรับขนาด ไม่มีบัญชี ไม่มีการส่ง: เอกสารไม่ไปไหนจากเครื่องคุณ</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../assets/images/docunest/sign.png" alt="การเซ็น PDF ใน DocuNest" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">จะใส่ลายน้ำบน PDF ได้อย่างไร?</h2>
-                        <p class="dn-slide__text">ประทับทุกหน้าด้วยข้อความหรือรูป: ลับ โลโก้ วันที่ ทำในเครื่อง ไม่จำกัด ไม่มีลายน้ำบังคับจากเครื่องมือคลาวด์</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../assets/images/docunest/watermark.png" alt="ลายน้ำ PDF ใน DocuNest" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide dn-slide--offer">
-                        <h2 class="dn-slide__title dn-slide__title--xl">โปรแกรมแก้ไข PDF ครบชุด 100% ออฟไลน์</h2>
-                        <p class="dn-slide__text">26 เครื่องมือในแอปเดสก์ท็อปเดียว แก้ข้อความ เซ็น รวม แปลง ไฟล์ไม่เคยออกจากคอมพิวเตอร์</p>
-                        <ul class="dn-offer">
-                            <li class="dn-offer__item">
-                                <strong>100% ออฟไลน์</strong>
-                                <span>ไม่ส่งไฟล์ ไม่มีบัญชี ไม่มีคลาวด์</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>ลิขสิทธิ์ตลอดชีพ 30 €</strong>
-                                <span>จ่ายครั้งเดียว ไม่มีรายเดือน</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>26 เครื่องมือ หนึ่งตัวแก้ไข</strong>
-                                <span>ปิดทับ เซ็น รวม แปลง: ครบในที่เดียว</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>ทดลองใช้ฟรี 7 วัน</strong>
-                                <span>ไม่ต้องใช้บัตร Windows, macOS และ Linux</span>
-                            </li>
-                        </ul>
-                        <a class="dn-offer__cta" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup" target="_blank" rel="noopener noreferrer">ดาวน์โหลด DocuNest</a>
-                    </article>
-                </div>
-            </div>
-            <button type="button" class="dn-carousel__nav dn-carousel__nav--prev" data-dn-prev aria-label="สไลด์ก่อนหน้า">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15.5 4.5 8 12l7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <button type="button" class="dn-carousel__nav dn-carousel__nav--next" data-dn-next aria-label="สไลด์ถัดไป">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8.5 4.5 16 12l-7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="dn-carousel__dots" data-dn-dots>
-                <button type="button" class="is-active" aria-label="1"></button>
-                <button type="button" aria-label="2"></button>
-                <button type="button" aria-label="3"></button>
-                <button type="button" aria-label="4"></button>
-            </div>
-        </div>
-
-        <div class="dn-bar">
-            <nav class="dn-bar__tools" aria-label="DocuNest">
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">ปิดทับ</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">เซ็น</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">ลายน้ำ</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">รวม</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">แก้ไข</a>
-            </nav>
-            <div class="dn-bar__cta-wrap">
-                <span class="dn-bar__note">ทดลอง 7 วัน · ไม่ต้องใช้บัตร</span>
-                <a class="dn-bar__cta" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup" target="_blank" rel="noopener noreferrer">ทดลองใช้ฟรี</a>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="../../assets/js/docunest-popup.js" defer></script>
+<script src="../../assets/js/docunest-strings.js" defer></script>
+<script src="../../assets/js/docunest-popup.js" data-asset="../../assets/" defer></script>
 
 
-    <script src="../../assets/js/ui-state.js"></script>
+
+
+    <script defer src="../../assets/js/ui-state.js"></script>
 </body>
 </html>

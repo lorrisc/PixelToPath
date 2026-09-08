@@ -1,0 +1,154 @@
+/* ============================================================
+   RTL pass — actif uniquement sur <html dir="rtl"> (ar, fa, ur)
+   Miroir des propriétés physiques (left/right) des feuilles LTR.
+   Ce fichier est lié en dernier dans chaque template → il gagne
+   les égalités de cascade avec les CSS de page.
+   ============================================================ */
+
+/* ── Listes à puces / numérotées : gap des marqueurs à droite ── */
+[dir="rtl"] .content-section ul,
+[dir="rtl"] .content-section ol {
+    padding-left: 0;
+    padding-right: 1.6rem;
+}
+[dir="rtl"] .preset-explain-grid__card ul {
+    padding-left: 0;
+    padding-right: 1.2rem;
+}
+[dir="rtl"] .feature-list {
+    padding-left: 0;
+    padding-right: 1.2rem;
+}
+[dir="rtl"] .steps-list {
+    padding-left: 0;
+    padding-right: 1.4rem;
+}
+[dir="rtl"] .checklist li {
+    padding-left: 0;
+    padding-right: 1.6rem;
+}
+[dir="rtl"] .checklist li::before {
+    left: auto;
+    right: 0;
+}
+
+/* ── Encarts / blocs à bordure d'accent ── */
+[dir="rtl"] .content-callout {
+    border-left: 0;
+    border-right: 4px solid var(--primary);
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+[dir="rtl"] .content-callout--warn {
+    border-right-color: #dc2626;
+}
+[dir="rtl"] .explainer-block {
+    border-left: 0;
+    border-right: 4px solid var(--primary);
+}
+
+/* ── Tableaux comparatifs ── */
+[dir="rtl"] .comparison-table th,
+[dir="rtl"] .comparison-table td,
+[dir="rtl"] .vs-table th,
+[dir="rtl"] .vs-table td {
+    text-align: right;
+}
+
+/* ── Blocs alignés à gauche en LTR ── */
+[dir="rtl"] .choice-section__features,
+[dir="rtl"] .pricing-checklist,
+[dir="rtl"] .dn-offer__item {
+    text-align: right;
+}
+
+/* ── Séparateurs verticaux de la feature strip (home) ── */
+[dir="rtl"] .feature-strip__item {
+    border-right: 0;
+    border-left: 1px solid #eee;
+}
+[dir="rtl"] .feature-strip__item:last-child {
+    border-left: none;
+}
+
+/* ── Sidebar du convertisseur (grid inversée en RTL) ── */
+[dir="rtl"] .conv-sidebar {
+    border-right: 0;
+    border-left: 1px solid #eee;
+}
+
+/* ── Toggle switch : bouton ancré à droite, course inversée ── */
+[dir="rtl"] .sw-track::after {
+    left: auto;
+    right: 3px;
+}
+[dir="rtl"] .sw input:checked + .sw-track::after {
+    transform: translateX(-17px);
+}
+
+/* ── Navbar ── */
+/* Dropdown langue : s'ouvre vers le centre (la gauche) au lieu du bord */
+[dir="rtl"] .lang-dropdown {
+    right: auto;
+    left: 0;
+}
+/* Soulignement animé des liens du menu mobile : croît depuis la droite */
+[dir="rtl"] .mobile-link::after {
+    left: auto;
+    right: 0;
+}
+/* Entrée des liens du menu mobile : glisse depuis la droite */
+@keyframes linkInRtl {
+    from { opacity: 0; transform: translateX(18px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+[dir="rtl"] .mobile-menu.is-open .mobile-link:nth-child(1) { animation-name: linkInRtl; }
+[dir="rtl"] .mobile-menu.is-open .mobile-link:nth-child(2) { animation-name: linkInRtl; }
+[dir="rtl"] .mobile-menu.is-open .mobile-link:nth-child(3) { animation-name: linkInRtl; }
+[dir="rtl"] .mobile-menu.is-open .mobile-link:nth-child(4) { animation-name: linkInRtl; }
+
+/* ── Bouton fermer du bandeau don ── */
+[dir="rtl"] .donate-nudge__close {
+    right: auto;
+    left: 12px;
+}
+
+/* ── Footer : séparateur « • » entre les liens ── */
+[dir="rtl"] footer #footernavigation > *:not(:first-child)::before {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* ── Cartes blog ── */
+/* Disque décoratif de la carte mise en avant */
+[dir="rtl"] .featured-card__visual::before {
+    right: auto;
+    left: -40px;
+}
+/* Badge « À la une » */
+[dir="rtl"] .featured-label {
+    left: auto;
+    right: 14px;
+}
+/* Ligne de survol au bas des cartes */
+[dir="rtl"] .article-card::after {
+    left: auto;
+    right: 0;
+    border-radius: 0 0 12px 0;
+}
+
+/* ── Carrousel popup DocuNest : flèches inversées ── */
+[dir="rtl"] .dn-carousel__nav--prev {
+    left: auto;
+    right: 8px;
+}
+[dir="rtl"] .dn-carousel__nav--next {
+    right: auto;
+    left: 8px;
+}
+
+/* ── Flèches « → » du contenu (format converters, comparaisons) ── */
+[dir="rtl"] .fmt-arrow,
+[dir="rtl"] .ba-compare__arrow {
+    display: inline-block;
+    transform: scaleX(-1);
+}

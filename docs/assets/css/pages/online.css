@@ -220,6 +220,10 @@
 }
 .presets__btn {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
     padding: 7px 0;
     background: #fff;
     border: 1.5px solid #ddd;
@@ -773,4 +777,245 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 12.5px;
     line-height: 1.55;
     color: rgba(255, 255, 255, 0.88);
+}
+/* ── Before / After — real conversion sample (component ported from blog-page.css) ── */
+.ba-compare {
+    max-width: 820px;
+    margin: 2rem auto 2.5rem;
+}
+.ba-compare__pair {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0.75rem;
+    align-items: stretch;
+}
+.ba-compare__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+.ba-panel {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.ba-panel__label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.55rem 0.9rem;
+}
+.ba-panel--before .ba-panel__label {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+.ba-panel--after .ba-panel__label {
+    background: #ecfdf5;
+    color: #047857;
+}
+.ba-stage {
+    flex: 1;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        repeating-conic-gradient(#ececec 0% 25%, #fafafa 0% 50%)
+        50% / 16px 16px;
+    padding: 1.25rem;
+}
+.ba-zoom,
+.ba-vector {
+    display: block;
+    width: min(320px, 100%);
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+.ba-zoom {
+    image-rendering: pixelated;
+}
+.gallery-title {
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 0 auto 1.25rem;
+}
+.preset-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.preset-gallery__tile {
+    margin: 0;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.preset-gallery__tile .ba-stage {
+    min-height: 200px;
+}
+.preset-gallery__tile img {
+    width: 140px;
+    height: 140px;
+}
+.preset-gallery__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.55rem 0.9rem;
+}
+.preset-gallery__label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.size-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #047857;
+    background: #ecfdf5;
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    white-space: nowrap;
+}
+.gallery-caption {
+    text-align: center;
+    color: var(--gray);
+    font-size: 0.92rem;
+    max-width: 720px;
+    margin: 1.25rem auto 0;
+}
+.ba-compare figcaption {
+    color: var(--gray);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-top: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .ba-compare__pair {
+        grid-template-columns: 1fr;
+    }
+    .ba-compare__arrow {
+        transform: rotate(90deg);
+        padding: 0.25rem 0;
+    }
+    .ba-stage {
+        min-height: 190px;
+    }
+    .preset-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ── Tableau comparatif PNG vs SVG ── */
+.vs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin: 1.5rem 0 1.75rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: #fff;
+}
+.vs-table thead tr {
+    background: var(--dark);
+    color: #fff;
+}
+.vs-table th,
+.vs-table td {
+    padding: 14px 20px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #eee;
+}
+.vs-table tbody th {
+    font-weight: 700;
+    color: var(--dark);
+}
+.vs-table td {
+    color: var(--gray);
+    width: 31%;
+}
+.vs-table td.yes {
+    color: #2e7d32;
+    font-weight: bold;
+    background: #f2fbf5;
+}
+.vs-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+.vs-table tbody tr:hover {
+    background: #fff8ee;
+}
+.vs-table tbody tr:last-child th,
+.vs-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ── Mobile : tableau → cartes ── */
+@media (max-width: 640px) {
+    .vs-table thead {
+        display: none;
+    }
+    .vs-table,
+    .vs-table tbody,
+    .vs-table tr,
+    .vs-table th,
+    .vs-table td {
+        display: block;
+        width: 100%;
+    }
+    .vs-table tbody tr {
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: var(--radius);
+        margin-bottom: 1rem;
+        overflow: hidden;
+    }
+    .vs-table tbody tr:nth-child(even),
+    .vs-table tbody tr:hover {
+        background: #fff;
+    }
+    .vs-table tbody th {
+        background: var(--dark);
+        color: #fff;
+        border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+    }
+    .vs-table td {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        padding: 10px 16px;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 0.9rem;
+    }
+    .vs-table td:last-child {
+        border-bottom: none;
+    }
+    .vs-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: var(--dark);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        flex-shrink: 0;
+        min-width: 110px;
+    }
 }

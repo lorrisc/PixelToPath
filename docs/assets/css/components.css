@@ -135,3 +135,48 @@
 .lin-btn:hover {
     background: #000;
 }
+/* ============================================
+   BLOC VERSIONS (partial versions.ejs)
+   ============================================ */
+.versions-section { text-align: center; }
+.versions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 26px;
+    text-align: center;
+}
+.versions-card {
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+.versions-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(20, 35, 50, 0.14);
+}
+.versions-card--highlight { border: 2px solid var(--primary); }
+.versions-card__icon { font-size: 1.9rem; margin-bottom: 10px; }
+.versions-card h3 { color: var(--dark); font-size: 1.05rem; margin-bottom: 4px; }
+.versions-card__price {
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+.versions-card__desc {
+    flex: 1;
+    font-size: 0.88rem;
+    color: var(--gray);
+    margin-bottom: 16px;
+}
+.versions-card__cta { display: block; font-size: 0.88rem; }
+.versions-links { margin-top: 22px; font-size: 1rem; }
+.versions-links a { color: var(--primary-dark); font-weight: 700; }
+.versions-links--portal { margin-top: 8px; color: var(--gray); font-size: 0.92rem; }
+
+@media (max-width: 1024px) { .versions-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .versions-grid { grid-template-columns: 1fr; } }
+.choice-section__pricing-link { text-align: center; margin-top: 24px; font-size: 1.05rem; }
+.choice-section__pricing-link a { color: var(--primary-dark); font-weight: 700; }

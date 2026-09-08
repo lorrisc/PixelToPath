@@ -1,0 +1,3074 @@
+# PixelToPath — full page content
+
+> Plain-text version of the main English pages, regenerated at each build from the published HTML. Page list and 21 localized versions: see https://pixel-to-path.com/llms.txt and https://pixel-to-path.com/sitemap.xml.
+
+---
+
+## PixelToPath - PNG to SVG Converter, Online & Desktop App
+
+URL: https://pixel-to-path.com/
+
+# Convert Images to SVG
+Free & Open Source
+
+PixelToPath transforms PNG, JPG, BMP and WebP images into scalable vector graphics - with full color support, live preview, and zero watermarks.
+
+PNG
+JPG
+BMP
+WebP
+→
+SVG
+
+✓ 100% free
+No registration
+No watermarks
+Full color support
+Open source - MIT
+
+✓ 100% free
+No registration
+No watermarks
+Full color support
+Open source - MIT
+
+🎨
+
+### Full color support
+
+Powered by VTracer - not just black & white
+
+⚡
+
+### Live preview
+
+SVG updates as you adjust settings
+
+🔒
+
+### Privacy first
+
+Desktop: files never leave your device
+
+♾️
+
+### No limits
+
+Unlimited conversions, forever free
+
+## Choose Your Version
+
+Same powerful engine - pick the format that fits your workflow.
+
+🌐
+
+No install needed
+
+## Online Tool
+
+Convert images directly in your browser. Nothing to install, no account required. Just upload and download.
+
+- Works on any device & operating system
+
+- Full color & black & white modes
+
+- Live SVG preview
+
+- Preset modes: black & white, Poster, Photo
+
+- Advanced parameter tuning
+
+Use Online Tool →
+
+💻
+
+Windows & Linux
+
+## Desktop App
+
+Install once and convert files entirely offline. Your images never leave your computer - ideal for sensitive or professional work.
+
+- 100% offline - no internet needed
+
+- Files never uploaded anywhere
+
+- No file size limit
+
+- Focus mode for distraction-free use
+
+- Same live preview & presets
+
+Download Desktop App →
+
+⌨️
+
+One-time purchase
+
+## Desktop App Pro
+
+The desktop app, unlocked for production work. One payment, lifetime license.
+
+- Everything in the free desktop app
+
+- Hot folder monitoring — instant conversion
+
+- Batch conversion of hundreds of images
+
+- Full command-line interface (CLI)
+
+- Lifetime license · 1 user · up to 3 machines
+
+Discover Pro →
+
+🔌
+
+For developers & automation
+
+## API
+
+Vectorize at scale from your code. One REST call: send an image, get a clean SVG.
+
+- 10 free conversions every month
+
+- Same engines as the website (Potrace + VTracer)
+
+- Production-ready SVG output
+
+- Up to 5 API keys, per-key rate limits
+
+- Credit packs that never expire
+
+Explore the API →
+
+Compare all versions & pricing →
+
+---
+
+## PNG to SVG Converter - Free, No Signup, No Watermark
+
+URL: https://pixel-to-path.com/online/
+
+# Free Online PNG to SVG Converter
+
+Convert any image to scalable vector graphics in seconds - no registration, no limits, full color support.
+
+✓ Free forever
+PNG · JPG · BMP · WebP → SVG
+Live preview
+Color & B&W modes
+No watermarks
+No signup or registration
+
+⬆️
+Drop an image here
+
+or browse
+
+Presets
+
+Color Mode
+
+Color
+
+Color Precision
+
+8
+
+Layer Difference
+
+16
+
+Hierarchical
+
+Curve Fitting
+
+Filter Speckle
+
+4
+
+Corner Threshold
+
+60
+
+Length Threshold
+
+4.0
+
+Splice Threshold
+
+45
+
+Path precision
+
+3
+
+Invert
+
+Swap black ↔ white
+
+Despeckle
+
+2
+
+Corner smoothing
+
+1.0
+
+Curve optimization
+
+0.20
+
+SVG Preview
+
+live
+
+⬡
+
+Upload an image to get started
+
+Ready
+
+Converting...
+
+## PNG vs SVG, with real output from the tool
+
+Below, a real conversion made with the converter on this page. This tiny 128px logo, enlarged: the PNG dissolves into square pixels while the traced SVG stays perfectly sharp.
+
+Before · PNG
+
+→
+
+After · SVG
+
+The sample: the kind of 128px PNG a client sends over (4 KB). Enlarged, it dissolves into visible square pixels. The SVG traced with the Photo preset (4 KB) weighs the same yet stays sharp at every size, from a 16px favicon to a billboard. That is the whole difference between pixels and curves.
+
+A PNG stores an image as a fixed grid of pixels, so it only looks right at the size it was exported for: enlarge a logo and the edges blur, serve it on a high-density screen and you have to ship two or three heavier versions of the same file. An SVG describes those shapes with curves and coordinates instead, so the browser redraws them sharp at every size from one small file. The side-by-side above shows the result on a real logo. In practice: convert logos, icons, line art and flat illustrations to SVG, and keep photographs, screenshots and textures in PNG, WebP or JPG, where pixel formats actually compress better.
+
+### PNG vs SVG at a glance
+
+The same difference, summarized side by side:
+
+| Aspect
+| PNG (raster)
+| SVG (vector)
+
+| Scaling
+| Blurs as soon as the image is enlarged
+| Sharp at any size, from 16px to 4K
+
+| File size (logo)
+| 40 to 80 KB, and it doubles at @2x
+| 2 to 12 KB, one single file for every screen
+
+| High-density screens
+| Requires separate @1x, @2x and @3x exports
+| One unchanged file
+
+| Editing
+| Flattened pixels: any change requires the source file
+| Every shape is an editable path
+
+| Best for
+| Photos, screenshots, complex images
+| Logos, icons, flat illustrations
+
+### One file, three presets
+
+Original PNG
+24 KB
+
+B&W
+21 KB
+
+Poster
+25 KB
+
+Photo
+22 KB
+
+All three SVGs are real conversions of this 512px PNG, produced by the presets of this converter. Whatever the screen - 16px favicon or 4K display - the same file stays sharp.
+
+## Free Image Vectorizer
+
+PixelToPath is a free online image vectorizer: it converts any PNG, JPG, BMP or WebP file into a clean, scalable SVG. The technique is called raster-to-vector conversion or image tracing : instead of storing one color value per pixel, the engine rebuilds your image as mathematical curves that the browser redraws perfectly at any size, from a 16px favicon to a 4K display. A bitmap blurs every time it is enlarged; a vector file never does. Upload an image, watch the live preview update as you fine-tune the settings, then download an SVG ready for Illustrator, Inkscape and Figma, for embedding on a website, or for a laser cutter or vinyl plotter.
+
+Two tracing modes are available: full color for illustrations and photographs, and black & white for logos and icons - with every parameter adjustable for a cleaner result.
+
+Learn more: how to vectorize an image →
+
+## How It Works
+
+No setup, no account. Upload, preview, download - in under 10 seconds.
+
+📁
+
+### 1. Upload
+
+Drag and drop or click to upload any PNG, JPG, BMP or WebP image. Paste from clipboard also works.
+
+⚡
+
+### 2. Preview live
+
+The SVG updates automatically as you change settings. No need to click a Convert button - everything is instant.
+
+💾
+
+### 3. Download
+
+Click Download SVG to get your vector file. Open it in Illustrator, Inkscape, Figma or any modern browser.
+
+## Which Preset Should You Use?
+
+PixelToPath offers three optimized presets depending on the nature of your image. You can also fine-tune every parameter manually.
+
+### B&W Black & White
+
+Converts the image to grayscale before tracing. Produces clean, single-color paths. Best for:
+
+- Logos and brand marks
+
+- Icons and pictograms
+
+- Line art and sketches
+
+- Vinyl cutting and laser engraving
+
+### Poster Flat color
+
+Traces the image as multiple color layers stacked on top of each other with high color precision. Best for:
+
+- Flat illustrations and cartoons
+
+- Infographics and diagrams
+
+- Clipart and stickers
+
+- Digital artwork with distinct colors
+
+### Photo Photographs
+
+Uses broader color grouping and noise filtering to handle the complexity of real photographs. Best for:
+
+- Portraits and faces
+
+- Landscape photographs
+
+- Product photos
+
+- Complex images with many gradients
+
+## What Can You Do With Your SVG?
+
+SVG files produced by PixelToPath are fully standard and work everywhere. Here are the most common use cases.
+
+🎨
+
+### Edit in Figma or Illustrator
+
+Import the SVG directly into your design tool. Every shape is a fully editable path - change colors, resize, and modify curves without any quality loss.
+
+🌐
+
+### Use on websites
+
+SVG files are resolution-independent and load faster than PNG for icons and logos. Embed them inline, use them as <img> tags, or style them with CSS.
+
+🖨️
+
+### Print at any size
+
+Send your SVG to a print shop and get a perfect result at any size - from a business card to a billboard. No more blurry or pixelated prints.
+
+✂️
+
+### Laser cutting & vinyl plotting
+
+Cutting machines require vector paths. Convert your PNG design to SVG and import it directly into LightBurn, Cricut Design Space or RDWorks.
+
+💻
+
+### App & web icons
+
+Convert a PNG icon set to SVG once, then scale it from 16px to 512px without touching Photoshop. Works perfectly with React, Vue and all component libraries.
+
+🎞️
+
+### Animations with CSS & JS
+
+SVG elements can be animated with CSS transitions and JavaScript. Convert your static PNG to SVG and bring it to life with motion on your website.
+
+## Frequently Asked Questions
+
+Is this online SVG converter really free with no limits?
+
+Yes, completely free. No registration, no watermarks, no daily conversion limits. PixelToPath is an open-source project (MIT license). You can convert as many files as you want.
+
+Does this converter support color images?
+
+Yes. Unlike most free online tools that only produce black-and-white SVGs, PixelToPath uses VTracer - a modern vectorization engine that natively handles full-color images. Choose the Poster or Photo preset for color output.
+
+Are my uploaded files stored or shared?
+
+No. Your files are sent to our server for processing and are immediately deleted after the SVG is returned. We do not store, log, or share any uploaded images.
+
+What image formats are supported?
+
+PNG, JPG, JPEG, BMP and WebP are all accepted. You can also paste an image directly from your clipboard (Ctrl+V / Cmd+V).
+
+What is the maximum file size?
+
+The online converter accepts files up to 20 MB . For larger files or batch processing, download the desktop application - it has no size or quantity limits and works entirely offline.
+
+Why does the B&W result look wrong on my colored image?
+
+In Binary mode, the image is first converted to grayscale using perceptual weights (the same as human vision). If the traced result is still too light, enable the Invert switch in Advanced settings - this is especially useful for logos or icons with a white background.
+
+What is the difference between Spline, Polygon, and Pixel modes?
+
+Spline produces smooth Bézier curves - the best quality for organic shapes. Polygon uses straight-line segments - ideal for geometric artwork with sharp angles. Pixel traces the exact pixel boundary without any smoothing - perfect for pixel art or retro game sprites.
+
+Can I use the converted SVG for commercial projects?
+
+Yes. The SVG files you generate are yours to use freely for any purpose, including commercial projects. There are no licensing restrictions on the output files.
+
+## Choose Your Version
+
+Same powerful engine - pick the format that fits your workflow.
+
+🌐
+
+### Online Tool
+
+Free
+
+Convert images right in your browser. No install, no account.
+
+Open the tool
+
+💻
+
+### Desktop App
+
+Free & open source
+
+The full converter on your machine, for Windows & Linux.
+
+Download free
+
+⌨️
+
+### Desktop App Pro
+
+€39 one-time
+
+Hot folder, batch conversion and CLI for heavy workloads.
+
+Get Pro
+
+🔌
+
+### API
+
+Free tier + credit packs
+
+One REST call: send an image, get a clean SVG. 10 free/month.
+
+Get an API key
+
+Compare all versions & pricing →
+
+Already have an account?
+Sign in to the client portal →
+
+## Need Unlimited Conversions Offline?
+
+The desktop version of PixelToPath runs entirely on your computer - no internet required, no file size limits, same powerful VTracer engine.
+
+⬇ Download for Windows
+⬇ Download for Linux
+
+---
+
+## Offline PNG to SVG Converter - Free Desktop App (Windows & Linux)
+
+URL: https://pixel-to-path.com/offline/
+
+Powered by VTracer technology • 100% Open Source • Offline Privacy
+
+## Why Choose the Desktop App?
+
+### 100% Private & Offline
+
+Your images never leave your computer. No upload, no server, no cloud. PixelToPath runs entirely on your local machine - the safest way to convert sensitive or confidential designs.
+
+### Lightning Fast Results
+
+No upload, no waiting, no server queue. PixelToPath converts images in milliseconds using the powerful VTracer engine directly on your CPU.
+
+### Unlimited Conversions
+
+No "3 free credits per day" limits. Convert as many PNGs as you want, whenever you want. Ideal for batch processing assets for web development or graphic design.
+
+## Need Automation? Meet PixelToPath Pro
+
+The free app converts one image at a time. PixelToPath Pro adds a hot folder that converts every new image to SVG automatically, batch conversion of hundreds of images at once, and a CLI for scripting your conversions - still 100% offline.
+
+€39 excl. VAT
+
+Discover PixelToPath Pro →
+
+## How to Convert Raster to Vector
+
+Vectorization is essential for designers who need to scale logos without losing quality. Here is how to use PixelToPath:
+
+- Download and Install: Get the version for Windows or Linux below.
+
+- Select Image: Launch the app and pick your .PNG file.
+
+- Configure: Adjust settings if needed (simplification, opacity).
+
+- Export: Click "Convert" and save your new .SVG file.
+
+The resulting SVG path is compatible with Adobe Illustrator, Inkscape, Figma, and web browsers.
+
+## Get PixelToPath Today
+
+Join the 4,000+ users who have already downloaded PixelToPath on GitHub and SourceForge .
+
+Download for Windows .exe (64-bit)
+Download for Linux .tar.gz
+
+Also available on:
+SourceForge |
+GitHub Releases
+
+## Who Uses PixelToPath?
+
+Whether you're a professional designer or a hobbyist, PixelToPath fits seamlessly into your workflow - especially when privacy and speed matter.
+
+### Graphic Designers
+
+Convert client logos, hand-drawn sketches, and raster icons into clean, scalable SVGs. No need to trust a third-party server with confidential brand assets. Work offline at full speed, even without Wi-Fi.
+
+### Web Developers
+
+Batch-convert PNG icon sets to SVG for your web projects. SVG files load faster, scale perfectly on retina displays, and can be styled with CSS. PixelToPath handles the conversion instantly, so you can focus on building.
+
+### Print & Laser Cutting
+
+Prepare artwork for vinyl cutters, laser engravers, and large-format printing. These machines require vector paths, not pixels. PixelToPath converts your PNG template into a print-ready SVG file in seconds.
+
+### Privacy-Conscious Users
+
+Working with sensitive documents, medical illustrations, legal diagrams, or proprietary blueprints? Online converters upload your files to remote servers. PixelToPath is a PNG to SVG converter without upload - your files stay local, always.
+
+### Students & Educators
+
+Use PixelToPath in classrooms, labs, or on school computers where internet access may be restricted. Its zero-dependency, offline-first design makes it ideal for educational environments on Windows or Linux.
+
+### Developers & Makers
+
+Integrate vectorized assets into hardware projects, embedded interfaces, or microcontroller displays. SVG paths generated by PixelToPath are clean, compact, and ready for further processing or scripting.
+
+## Prefer to Work in Your Browser?
+
+PixelToPath is also available as a free online tool - no installation required. Upload your image, adjust settings, and download your SVG in seconds from any device.
+
+Try the Online Tool →
+
+## Choose Your Version
+
+Same powerful engine - pick the format that fits your workflow.
+
+🌐
+
+### Online Tool
+
+Free
+
+Convert images right in your browser. No install, no account.
+
+Open the tool
+
+💻
+
+### Desktop App
+
+Free & open source
+
+The full converter on your machine, for Windows & Linux.
+
+Download free
+
+⌨️
+
+### Desktop App Pro
+
+€39 one-time
+
+Hot folder, batch conversion and CLI for heavy workloads.
+
+Get Pro
+
+🔌
+
+### API
+
+Free tier + credit packs
+
+One REST call: send an image, get a clean SVG. 10 free/month.
+
+Get an API key
+
+Compare all versions & pricing →
+
+Already have an account?
+Sign in to the client portal →
+
+## Desktop App vs Other Online Tools
+
+PixelToPath also offers a free online version - but if you need maximum privacy, speed, or work without internet, the desktop app is the right choice.
+
+| Feature
+| PixelToPath Desktop
+| Other Online Tools
+
+| Works offline
+| ✅ Yes - no internet needed
+| ❌ No - requires internet
+
+| File privacy
+| ✅ Files never leave your device
+| ❌ Files uploaded to remote servers
+
+| Conversion limits
+| ✅ Unlimited
+| ❌ Often 3-5 free/day
+
+| Speed
+| ✅ Milliseconds (local CPU)
+| ⚠️ Depends on server load
+
+| Subscription required
+| ✅ Never
+| ❌ Often paywalled for full quality
+
+| Open source
+| ✅ MIT License
+| ❌ Proprietary
+
+| File size limit
+| ✅ None
+| ❌ Often capped at 5-10 MB
+
+## PNG vs SVG: What's the Difference?
+
+### What is a PNG file?
+
+PNG (Portable Network Graphics) is a raster image format . It stores images as a fixed grid of pixels. When you zoom in or print a PNG at a large size, you will notice the image becomes blurry or pixelated. PNG files are great for photographs, screenshots, and web graphics at a fixed size - but they do not scale.
+
+### What is an SVG file?
+
+SVG (Scalable Vector Graphics) is a vector image format . Instead of pixels, it describes shapes using mathematical paths and coordinates. An SVG logo can be displayed at 10px or 10 meters with perfect sharpness. SVG files are also smaller in size, editable in code, and stylable with CSS - making them ideal for logos, icons, and illustrations.
+
+### What is vectorization (raster to vector)?
+
+Vectorization is the process of converting a raster image (like a PNG) into a vector file (like an SVG). PixelToPath uses the VTracer engine to trace the shapes and colors of your image and generate smooth, scalable SVG paths. This is essential when you need to resize a logo without losing quality, or prepare artwork for a laser cutter or screen printer.
+
+### When should you convert PNG to SVG?
+
+- Resizing a logo for a billboard or large print
+
+- Preparing artwork for a vinyl cutter or laser engraver
+
+- Converting an icon set for a web or mobile app
+
+- Editing vector paths in Inkscape, Figma, or Illustrator
+
+- Reducing file size for web performance
+
+- Animating shapes with CSS or JavaScript
+
+## Frequently Asked Questions
+
+Does PixelToPath work without an internet connection?
+
+Yes. PixelToPath is a fully offline PNG to SVG converter . Once installed, it requires zero internet connection to function. This makes it ideal for use in restricted environments, on flights, or anywhere Wi-Fi is unavailable.
+
+Is it really free? No hidden fees, watermarks, or limits?
+
+Completely free. PixelToPath is open-source software released under the MIT license. There are no conversion limits, no watermarks on exported SVGs, and no subscriptions. You can convert as many files as you want, forever - and if you need hot folders, batch conversion or a CLI, PixelToPath Pro is there for that.
+
+Is PixelToPath safe for confidential or professional designs?
+
+Yes - this is one of PixelToPath's biggest advantages. Because it runs entirely on your local machine, your files are never uploaded to any server . This makes it the safest choice for converting confidential logos, legal documents, medical illustrations, or any proprietary artwork.
+
+What software can open the SVG files generated by PixelToPath?
+
+The exported SVG files are fully standard and compatible with Adobe Illustrator, Inkscape, Figma, Affinity Designer, CorelDRAW , all modern web browsers (Chrome, Firefox, Safari, Edge), and any other application that supports the SVG format.
+
+What operating systems are supported?
+
+PixelToPath is currently available for Windows (64-bit) and Linux . macOS support may be added in a future release. Check the GitHub repository for the latest updates.
+
+What is VTracer and why is it used?
+
+VTracer is a modern open-source vectorization engine written in Rust. Unlike older tools that only handle black-and-white images, VTracer natively supports full-color vectorization using a multi-layer clustering algorithm. It produces clean, compact SVG paths and is significantly faster than traditional bitmap tracers. PixelToPath provides a user-friendly interface on top of VTracer so anyone can use it without command-line skills.
+
+Can I use PixelToPath for batch conversions?
+
+Yes. Unlike online tools that throttle you to a few free conversions per day, PixelToPath has no limits. You can convert hundreds or thousands of PNG files without any restrictions - one conversion at a time. To queue hundreds of images in a single automated run, PixelToPath Pro adds batch conversion, hot folders and a CLI.
+
+---
+
+## PixelToPath Pro - Hot Folder, Batch Conversion & CLI | €39 excl. VAT
+
+URL: https://pixel-to-path.com/pro/
+
+Hot Folder automation • Batch conversion • CLI • Still 100% Offline
+
+## Everything in the Free App - Plus Automation
+
+PixelToPath Pro keeps the same VTracer engine and the same privacy: everything runs locally on your machine. What changes is how much of it you never have to do by hand.
+
+### Hot Folder Monitoring
+
+Turn any folder into an automated conversion pipeline. The moment a new image appears, PixelToPath Pro detects it and converts it to SVG instantly - no clicks, no waiting, no babysitting.
+
+- Drop a file in, get a ready-to-use SVG out
+
+- New files are detected and converted within seconds
+
+- Original files stay untouched; SVGs land in your output folder
+
+- Ideal for shared drives, export folders and asset pipelines
+
+### Batch Conversion
+
+Stop converting images one by one. Import your whole library - 10, 100 or more PNG, JPG, BMP or WebP files - and convert them all to SVG in a single run.
+
+- Queue hundreds of images at once
+
+- One settings profile applied to every file
+
+- Convert an entire icon set in a single click
+
+- Progress and results in one clear view
+
+### Command-Line Interface (CLI)
+
+Drive conversions from your terminal. The CLI gives you the full power of the VTracer engine in a single command, so vectorization becomes just another step in your scripts.
+
+- Convert with one command, no interface needed
+
+- Integrate SVG export into build scripts and CI pipelines
+
+- Schedule recurring jobs with cron or Task Scheduler
+
+- Same settings and output quality as the desktop app
+
+## How the Hot Folder Works
+
+Set it up once, then forget about it - every file you drop in is converted on its own.
+
+- Choose your folders: pick the folder to watch and where the SVGs should go.
+
+- Drop an image: save or copy any PNG, JPG, BMP or WebP file into the watch folder.
+
+- It converts instantly: PixelToPath Pro detects the new file and converts it automatically.
+
+- Collect your SVG: the finished, ready-to-use vector file is waiting in your output folder.
+
+## Free vs Pro
+
+The desktop app stays free and open source - download it here . PixelToPath Pro is for professionals who work with volume and automation.
+
+| Feature
+| Free Desktop App
+| Pro
+
+| Single image conversion
+| ✅ Yes
+| ✅ Yes
+
+| 100% offline & private
+| ✅ Yes
+| ✅ Yes
+
+| Unlimited conversions
+| ✅ Yes
+| ✅ Yes
+
+| Batch conversion (100+ images at once)
+| ❌ No
+| ✅ Yes
+
+| Hot folder monitoring
+| ❌ No
+| ✅ Yes
+
+| Command-line interface (CLI)
+| ❌ No
+| ✅ Yes
+
+| Price
+| Free (MIT, open source)
+| €39 excl. VAT - lifetime
+
+## One License, Every Automation Feature
+
+One payment, yours for life. Unlock hot folders, batch conversion and the CLI - on top of everything the free app already does.
+
+€39
+
+excl. VAT
+
+one-time payment - lifetime license
+
+1 user · up to 3 machines
+
+What you get:
+
+- Everything in the free desktop app
+
+- Hot folder monitoring with instant conversion
+
+- Batch conversion of hundreds of images at once
+
+- Full command-line interface (CLI)
+
+- Lifetime license for 1 user, usable on up to 3 machines
+
+Get PixelToPath Pro
+
+Secure checkout by Lemon Squeezy · VAT handled automatically · License key delivered instantly by email.
+
+The free version remains free, unlimited and open source. Not sure you need Pro? Start with the free desktop app .
+
+## Frequently Asked Questions
+
+Do I need PixelToPath Pro to convert images?
+
+No. The free desktop app already converts PNG, JPG, BMP and WebP files to SVG, offline and without limits. PixelToPath Pro adds automation on top: hot folder monitoring, batch conversion of hundreds of images at once, and a command-line interface.
+
+What exactly is a hot folder?
+
+A hot folder is a folder that PixelToPath Pro keeps watching. Whenever a new image appears in it - because you saved, copied or dropped it there - the app detects it and converts it to SVG automatically, then places the result in the output folder you chose. You never have to open the app or click convert.
+
+How many images can I convert at once with batch mode?
+
+You can queue your entire library - import 100 images, or several hundred - and convert them all in one run. The only limit is your own machine, since every conversion runs locally on your CPU with the VTracer engine.
+
+What can I do with the CLI?
+
+The command-line interface lets you convert images with a single command, without opening the graphical interface. You can integrate vectorization into shell scripts, build pipelines and CI jobs, or schedule recurring conversions with tools like cron or Windows Task Scheduler.
+
+Does the free version stay free?
+
+Yes. The free desktop app remains free, unlimited and open source under the MIT license. PixelToPath Pro is an optional upgrade for professional workflows - the free app is not crippled or time-limited in any way.
+
+Which operating systems does PixelToPath Pro support?
+
+PixelToPath Pro runs on Windows (64-bit) and Linux, the same platforms as the free desktop app. Everything works fully offline, exactly like the free version.
+
+Is the €39 price including taxes?
+
+No - €39 is the price excluding VAT. Depending on your country and where you complete the purchase, VAT or sales tax may be added at checkout.
+
+How many machines can I install PixelToPath Pro on?
+
+The Pro license is a one-time purchase: €39 excl. VAT, yours for life. It covers a single user and can be activated on up to 3 machines - for example a desktop workstation, a laptop, and a studio computer.
+
+## Stop Converting Images One by One
+
+Set up a hot folder once, or clear your backlog of 100 images in a single run. PixelToPath Pro turns vectorization into a step you never think about. One payment, yours forever.
+
+Get PixelToPath Pro - €39 excl. VAT
+
+## Choose Your Version
+
+Same powerful engine - pick the format that fits your workflow.
+
+🌐
+
+### Online Tool
+
+Free
+
+Convert images right in your browser. No install, no account.
+
+Open the tool
+
+💻
+
+### Desktop App
+
+Free & open source
+
+The full converter on your machine, for Windows & Linux.
+
+Download free
+
+⌨️
+
+### Desktop App Pro
+
+€39 one-time
+
+Hot folder, batch conversion and CLI for heavy workloads.
+
+Get Pro
+
+🔌
+
+### API
+
+Free tier + credit packs
+
+One REST call: send an image, get a clean SVG. 10 free/month.
+
+Get an API key
+
+Compare all versions & pricing →
+
+Already have an account?
+Sign in to the client portal →
+
+---
+
+## Pricing – Free Online Converter, Pro Desktop App & API
+
+URL: https://pixel-to-path.com/pricing/
+
+Pricing
+
+# One tool, four ways to use it
+
+The same powerful conversion engine everywhere — pick the version that fits your workflow. Start free, upgrade only if you need more.
+
+## Versions & pricing
+
+No subscriptions except where you choose credits. No hidden fees. VAT handled automatically at checkout.
+
+Free
+
+### Online Tool
+
+€0 forever
+
+Convert images directly in your browser. Nothing to install, nothing to pay.
+
+- Unlimited conversions, no account
+
+- Color & black & white engines
+
+- Presets: black & white, Poster, Photo
+
+- Live SVG preview & download
+
+Open the tool
+
+Open source
+
+### Desktop App
+
+€0 forever
+
+The full converter on your own machine. Free and open source (MIT).
+
+- Windows & Linux
+
+- 100% offline — files never leave your computer
+
+- Same engine as the online tool
+
+- Free forever, MIT license
+
+Download free
+
+Most complete
+
+### Desktop App Pro
+
+€39 one-time
+
+For production workloads: automation and bulk conversion, unlocked for life.
+
+- Everything in the free desktop app
+
+- Hot folder monitoring — instant conversion
+
+- Batch conversion of hundreds of images
+
+- Full command-line interface (CLI)
+
+- Lifetime license · 1 user · up to 3 machines
+
+Buy Pro
+
+excl. VAT · secure checkout by Lemon Squeezy · license key delivered instantly by email
+
+For developers
+
+### API
+
+Free tier + credit packs
+
+Vectorize at scale from your code. One REST call: send an image, get a clean SVG.
+
+- 10 free conversions every month
+
+- Same engines as the website (Potrace + VTracer)
+
+- Prepaid images: 50 for €2.50 · 500 for €20 · 2,500 for €75 · 10,000 for €200 · 50,000 for €500
+
+- 1 credit = 1 image converted · never expires
+
+- Up to 5 API keys, per-key rate limits
+
+Get an API key
+
+Already have an account?
+Sign in to the client portal →
+
+## Which version is right for me?
+
+| You want to… | Pick
+
+| Convert a few images, occasionally, in the browser | Online Tool →
+
+| Convert offline, keep full control of your files | Desktop App →
+
+| Automate folders or convert in bulk on your computer | Desktop App Pro →
+
+| Integrate conversions into your app or pipeline | API →
+
+## What you don't pay for
+
+Every price on this page is the whole price. What never shows up on your bill:
+
+- Nothing recurring — the online tool and the desktop app are free forever, Pro is a one-time payment, and the API runs on prepaid credits that never expire.
+
+- No account or credit card to start — convert in the browser without signing up, and the API free tier only asks for an email.
+
+- No watermarks, ever — the SVG you download is identical whether it comes from a free or a paid version.
+
+- No surprise charges — VAT is calculated automatically at checkout, and unused API credits simply wait until you need them.
+
+## Pricing FAQ
+
+Is the online converter really free?
+
+Yes. The online tool is unlimited and requires no account. It is the same engine as every other version — free means free, with no watermark on the output.
+
+Is the Pro license a subscription?
+
+No. Desktop App Pro is a one-time payment of €39 (excl. VAT) for a lifetime license: 1 user, usable on up to 3 machines. There is no recurring charge.
+
+Do API credits expire?
+
+No. Purchased credits stay on your account until you use them. Every account also gets 10 free conversions every month, consumed before credits.
+
+How are payments handled?
+
+All payments go through Lemon Squeezy as merchant of record: card, Apple Pay or PayPal, VAT/sales tax calculated automatically, and an invoice sent by email.
+
+Can I upgrade later?
+
+Anytime. The free versions have no time limit, and Pro or API credits can be added whenever your needs grow — they all use the same conversion engine.
+
+## Start free today
+
+Every version starts free. Pick one and convert your first image in seconds.
+
+Open the tool
+Get an API key
+
+---
+
+## PixelToPath API – Image to SVG REST API, 10 Free Conversions/Month
+
+URL: https://pixel-to-path.com/api/
+
+API
+
+# PixelToPath API
+
+Vectorize images programmatically with one REST call . Upload a PNG, JPG, BMP or WebP file, get a clean, production-ready SVG back. Black & white line art is traced by Potrace , color images by VTracer — the same engines as the free online converter.
+
+Get your API key
+Sign in to portal
+Read the docs ↓
+
+10 free conversions every month · No credit card required
+
+10 free conversions / month • 1 REST call • Potrace + VTracer engines • Credits never expire
+
+On this page
+
+- Quickstart
+
+- Authentication
+
+- POST /v1/convert
+
+- Engines
+
+- Response
+
+- Errors
+
+- Rate limits
+
+- Pricing
+
+- Code examples
+
+- FAQ
+
+## Quickstart
+
+Three steps and you are converting images to SVG from your terminal, your scripts or your app.
+
+### 1 · Create your account
+
+Register on the client portal with your email and a password (10+ characters). No credit card required.
+
+### 2 · Create an API key
+
+In the portal, create a key. It is shown once — store it safely. Keys look like ptp_live_… and can be revoked at any time.
+
+### 3 · Call /v1/convert
+
+Send your image as multipart/form-data with your key in the Authorization header. The SVG comes back in the response body.
+
+Your first conversion
+
+curl -X POST https://pixel-to-path.com/v1/convert \
+-H "Authorization: Bearer ptp_live_YOUR_KEY" \
+-F "file=@logo.png" \
+-F "colormode=binary" \
+-o logo.svg
+
+Interactive reference: pixel-to-path.com/v1/docs (OpenAPI/Swagger).
+
+## Authentication
+
+Every request is authenticated with a Bearer token in the Authorization header:
+
+Authorization: Bearer ptp_live_0123abc…
+
+- Keys are secrets: they are stored hashed server-side and displayed only once at creation. Lost key? Revoke it and create a new one.
+
+- One account, several keys: create up to 5 active keys to separate your projects. Your monthly free quota is counted per account, not per key.
+
+- Instant revocation: a revoked key stops working immediately, from the portal or the API response of a banned account.
+
+## POST /v1/convert
+
+Upload + conversion in a single stateless call. One successful call costs at most 1 credit — failed, invalid or rate-limited calls cost nothing.
+
+### Request (multipart/form-data)
+
+| Field
+| Type
+| Default
+| Description
+
+| file
+| file
+| —
+| The image to convert. PNG, JPEG, BMP or WebP · max 20 MB · max 50 Mpx · min 64×64 px.
+
+| colormode
+| string
+| color
+| <code>color</code> uses the VTracer engine, <code>binary</code> uses Potrace (black & white).
+
+| mode
+| string
+| spline
+| Color (VTracer) only — ignored in binary mode. spline | polygon | none
+
+| hierarchical
+| string
+| stacked
+| Color (VTracer) only — ignored in binary mode. stacked | cutout
+
+| filter_speckle
+| int
+| 4
+| Color (VTracer) only — ignored in binary mode. 0–16 — remove small noise patches.
+
+| color_precision
+| int
+| 6
+| Color (VTracer) only — ignored in binary mode. 1–8 — number of significant bits per color channel.
+
+| layer_difference
+| int
+| 16
+| Color (VTracer) only — ignored in binary mode. 0–64 — distance between color layers.
+
+| corner_threshold
+| int
+| 60
+| 0–180 — corner detection angle (both engines).
+
+| length_threshold
+| float
+| 4.0
+| 3.5–10 — minimum segment length (both engines).
+
+| splice_threshold
+| int
+| 45
+| 0–180 — path splicing angle (both engines).
+
+| path_precision
+| int
+| 3
+| 0–8 — decimal digits in path coordinates.
+
+| invert
+| bool
+| false
+| Binary (Potrace) only — ignored in color mode. Trace the light areas instead of the dark ones.
+
+| turdsize
+| int
+| 2
+| Binary (Potrace) only — ignored in color mode. 0–20 — suppress speckles up to this size.
+
+| alphamax
+| float
+| 1.0
+| Binary (Potrace) only — ignored in color mode. 0–1.334 — corner smoothing threshold.
+
+| opttolerance
+| float
+| 0.2
+| Binary (Potrace) only — ignored in color mode. 0–10 — curve optimization tolerance.
+
+## Two engines, chosen by "colormode"
+
+The API runs the exact same engines as the free online converter and the desktop app:
+
+### binary — Potrace
+
+Black & white tracing of line art, scans, sketches and logos. The dark part of the image (grayscale < 50%) is traced on a white background. Fine-tune the output with turdsize (noise removal), alphamax (corner smoothing) and opttolerance (path optimization).
+
+### color — VTracer
+
+Layered color vectorization for illustrations, cartoons and photos. Control the level of detail with filter_speckle , color_precision , layer_difference and the curve fitting with mode (spline, polygon, none).
+
+Images are preprocessed exactly like on the website: the longest side is resized to 1500 px before conversion, and the API returns the detected image type ( line_art , logo , photo or illustration ) in the X-Detected-Type header.
+
+## Response
+
+On success: 200 OK with image/svg+xml — the body is the SVG file itself. Informative headers:
+
+| Header
+| Description
+
+| X-Credits-Remaining | Paid credits left on the account, after this call's debit.
+
+| X-Free-Remaining | Free conversions left this month.
+
+| X-Detected-Type | Detected image type (info): line_art, logo, photo or illustration.
+
+| X-Processing-Time | Server processing time in seconds.
+
+### GET /v1/me
+
+Account status for the key used to call it. Free — never counted against your quota, never debited.
+
+Example response
+
+GET /v1/me
+Authorization: Bearer ptp_live_…
+
+{
+"key": { "name": "prod", "prefix": "ptp_live_0123abc", … },
+"usage": {
+"month": "2026-09", "free_used": 7, "free_limit": 10,
+"free_remaining": 3, "resets_at": "2026-10-01T00:00:00+00:00"
+},
+"credits": { "balance": 120 }
+}
+
+## Errors
+
+Every error returns a consistent JSON envelope. Failed calls never consume credits.
+
+HTTP/1.1 402 Payment Required
+{
+"error": {
+"code": "quota_exceeded",
+"message": "Monthly free quota used and no credits left.",
+"usage": { "free_used": 10, "free_limit": 10, "credits": 0 }
+}
+}
+
+| HTTP
+| Code
+| When
+
+| 401 | invalid_api_key | Missing, malformed, unknown or revoked API key.
+
+| 402 | quota_exceeded | Monthly free quota used and no credits left.
+
+| 403 | account_banned | The account is banned — all its keys are refused.
+
+| 403 | ip_blocked | Caller IP is blocklisted.
+
+| 413 | file_too_large | File larger than 20 MB.
+
+| 422 | invalid_image / image_too_small / invalid_params | Invalid image, image too small or invalid parameter value.
+
+| 429 | rate_limited | Per-key rate limit exceeded (see below). Includes a Retry-After header.
+
+| 500 | internal_error | Conversion failed server-side — no credit is charged.
+
+## Rate limits
+
+Limits apply per API key, not per IP, so a shared office or CI runner is never penalized for someone else's traffic.
+
+| Limit
+| Value
+
+| Requests per minute, per key | 60
+
+| Requests per day, per key | 2 000
+
+| Concurrent conversions, per key | 2 (extra calls wait, then 429)
+
+| Max file size / resolution | 20 MB / 50 Mpx
+
+## Pricing
+
+Every new account gets 10 free conversions every month , no credit card required. Need more? Buy prepaid images — any quantity (in batches of 50), with volume discounts. They never expire and stack with your monthly free quota (free conversions are consumed first).
+
+### Free
+
+€0 /month
+
+- 10 conversions / month
+
+- Both engines (Potrace + VTracer)
+
+- Up to 5 API keys
+
+Create an account
+
+### Prepaid images
+
+€0.050 / image
+
+Volume pricing — the more images you buy, the cheaper each one gets
+
+| Images | 50–450 | 500–2 450 | 2 500–9 950 | 10 000–49 950 | 50 000+
+
+| €/image | 0.050 | 0.040 | 0.030 | 0.020 | 0.010
+
+- 1 image bought = 1 conversion (credits never expire)
+
+- Never expires, stacks with the free tier
+
+- Any quantity: €0.040/image from 500, down to €0.010/image
+
+Buy images
+
+Automatic credit: your balance is updated within seconds of the payment, via the payment webhook. Refunds deduct the purchased credits, capped at the current balance. Secure checkout by Lemon Squeezy (VAT handled automatically).
+
+## Code examples
+
+Copy-paste and adapt. The API speaks plain multipart/form-data, so any HTTP client works.
+
+cURL
+
+curl -X POST https://pixel-to-path.com/v1/convert \
+-H "Authorization: Bearer ptp_live_YOUR_KEY" \
+-F "file=@photo.jpg" \
+-F "colormode=color" \
+-F "filter_speckle=4" \
+-o photo.svg
+
+Python
+
+import requests
+
+resp = requests.post(
+"https://pixel-to-path.com/v1/convert",
+headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
+files={"file": open("photo.jpg", "rb")},
+data={"colormode": "color", "filter_speckle": 4},
+)
+resp.raise_for_status()
+print(resp.headers["X-Credits-Remaining"], "credits left")
+with open("photo.svg", "wb") as f:
+f.write(resp.content)
+
+JavaScript
+
+const form = new FormData();
+form.append("file", new Blob([imageBytes]), "photo.jpg");
+form.append("colormode", "color");
+
+const resp = await fetch("https://pixel-to-path.com/v1/convert", {
+method: "POST",
+headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
+body: form,
+});
+if (!resp.ok) {
+const { error } = await resp.json();
+throw new Error(`${error.code}: ${error.message}`);
+}
+const svg = await resp.text();
+console.log(resp.headers.get("X-Credits-Remaining"), "credits left");
+
+## Frequently asked questions
+
+What counts as one conversion?
+
+One successful POST /v1/convert call that returns an SVG. Failed calls (invalid image, wrong parameters, rate limited, server error) and GET /v1/me calls are never charged.
+
+How is the monthly free quota counted?
+
+Per account, on the UTC calendar month — it resets on the 1st at 00:00 UTC. Creating several API keys does not multiply the free quota: all keys of an account share the same 10 free conversions.
+
+Do credits expire?
+
+No. Purchased credits stay on your account until you use them. They are consumed only after your 10 free monthly conversions are exhausted.
+
+How do I get more conversions in a month?
+
+Buy prepaid images from the client portal — any quantity, in batches of 50. You always see exactly how many images you get: 50 images €2.50, 500 images €20, 2,500 €75, 10,000 €200, 50,000 €500. Credits are added to your account automatically within seconds of the payment — no license key, nothing to enter.
+
+What happens if I lose my API key?
+
+Keys are stored hashed, so they cannot be recovered. Revoke the lost key in the portal and create a new one — it takes effect immediately.
+
+Which image formats are supported?
+
+PNG, JPEG, BMP and WebP, up to 20 MB and 50 megapixels, at least 64×64 pixels. Images larger than 1500 px on their longest side are resized before conversion, exactly like on the free website.
+
+## Choose Your Version
+
+Same powerful engine - pick the format that fits your workflow.
+
+🌐
+
+### Online Tool
+
+Free
+
+Convert images right in your browser. No install, no account.
+
+Open the tool
+
+💻
+
+### Desktop App
+
+Free & open source
+
+The full converter on your machine, for Windows & Linux.
+
+Download free
+
+⌨️
+
+### Desktop App Pro
+
+€39 one-time
+
+Hot folder, batch conversion and CLI for heavy workloads.
+
+Get Pro
+
+🔌
+
+### API
+
+Free tier + credit packs
+
+One REST call: send an image, get a clean SVG. 10 free/month.
+
+Get an API key
+
+Compare all versions & pricing →
+
+Already have an account?
+Sign in to the client portal →
+
+## Ready to vectorize at scale?
+
+Create your account, grab a key and make your first call in under two minutes.
+
+Get your free API key
+
+Questions about the API? Open an issue on GitHub .
+
+---
+
+## SVG Conversion Guides & Tips – PixelToPath Blog
+
+URL: https://pixel-to-path.com/blog/
+
+📖 Guides & Resources
+
+# Learn Image-to-SVG Conversion
+
+Practical guides on converting raster images to scalable vector graphics - free tools, clear explanations, and real-world use cases.
+
+Browsing 7 guides
+
+SVG · Vector · Conversion
+
+★ Most Popular
+
+JPG
+
+↓
+
+SVG
+
+Format Converter
+
+### Free JPG to SVG Converter Online
+
+Turn any JPEG photo or illustration into a scalable SVG vector. Discover when JPG-to-SVG conversion is useful and how to get the best results.
+
+⏱ 5 min read
+Read guide →
+
+🎨
+
+Designers & Integration
+
+### How to import and edit your SVGs in Figma, Canva, or WordPress
+
+The step after conversion: drag the PixelToPath SVG into Figma to change a color, open it in Canva, or upload it safely to WordPress.
+
+⏱ 8 min read
+Read guide →
+
+🔧
+
+Business & Freelance
+
+### Is your logo blurry? Vectorize it to SVG in 1 minute
+
+Do you only have your logo in JPG or PNG? It pixelates on a poster. Fix it to a crisp SVG, for free, without Illustrator.
+
+⏱ 7 min read
+Read guide →
+
+📈
+
+Performance & SEO
+
+### SVG vs PNG/JPG: Core Web Vitals and SEO
+
+Why SVG logos and icons weigh less, stay crisp from mobile to 4K, and improve LCP, CLS, and SEO, using PixelToPath.
+
+⏱ 8 min read
+Read guide →
+
+✂️
+
+DIY & Crafts
+
+### Free SVG Files for Cricut, Silhouette & Laser Cutting
+
+Cutting machines need vectors, not pixels. Learn how to turn a PNG or JPG into a clean SVG ready for Cricut, Silhouette, or a laser cutter.
+
+⏱ 6 min read
+Read guide →
+
+✏️
+
+Vectorization
+
+### Free Online Image Vectorizer
+
+What does it really mean to vectorize an image? This guide explains raster-to-vector conversion, when it matters, and how to get crisp results with PixelToPath.
+
+⏱ 6 min read
+Read guide →
+
+🖼️
+
+Beginner Guide
+
+### Free Image to SVG Converter
+
+A complete beginner's guide to image-to-SVG conversion. Learn what SVG is, why it matters, and how to convert any image format to scalable vector graphics for free.
+
+⏱ 5 min read
+Read guide →
+
+## Ready to Try It Yourself?
+
+Stop reading - start converting. Upload your first image and download a clean SVG in under a minute, free, no account needed.
+
+Open Online Tool →
+⬇️ Download Desktop App
+
+---
+
+## JPG to SVG Converter – Free Online Vector Tool
+
+URL: https://pixel-to-path.com/blog/jpg-to-svg/
+
+# Free JPG to SVG Converter Online
+
+Convert any JPG or JPEG photo into a clean, scalable SVG vector - instantly, at no cost, with no account required.
+
+JPG
+
+JPEG
+
+→
+
+SVG
+
+✓ 100% Free
+No signup required
+JPG · PNG · BMP · WebP
+Privacy-first
+
+Convert JPG to SVG Now →
+
+## How to Convert JPG to SVG in 3 Steps
+
+No design experience needed. Upload your JPEG, adjust the settings, and download your vector file in seconds.
+
+1
+
+📁
+
+### Upload your JPG
+
+Drag and drop any JPG or JPEG file onto the tool, or click to browse. Supports all standard JPEG files.
+
+2
+
+⚙️
+
+### Pick your preset
+
+Choose Black & White, Poster, or Photo - then fine-tune the threshold and detail level for best results.
+
+3
+
+💾
+
+### Download your SVG
+
+Click Convert and download your SVG instantly. Ready to use in any design tool, browser, or cutter.
+
+Convert JPG to SVG Now →
+
+## Real results from the converter
+
+Before · original
+5 KB
+
+→
+
+After · SVG
+B&W preset · 2 KB
+
+A real conversion made with this tool: the original PNG on the left was traced with the Black & White preset into the SVG on the right — a vector file that stays sharp at any zoom level.
+
+The same logo enlarged to 400%: on the left, the PNG pixels become visible; on the right, the SVG curves stay perfectly smooth.
+
+## What is JPG - and Why Convert it to SVG?
+
+JPG (also written JPEG) is the world's most widely used image format for photographs and complex visuals. Its lossy compression keeps file sizes small, making it the go-to format for cameras, social media, and web images. But that same compression introduces subtle artifacts - and more importantly, JPG shares the fundamental weakness of all raster formats: it's made of pixels. Zoom in on a JPG image and you'll see blurring and blocky artifacts that make it unsuitable for logos, icons, print graphics, or vector-based workflows.
+
+Converting JPG to SVG solves this problem. PixelToPath traces the shapes and contours in your JPEG and produces a clean SVG vector file that scales to any dimension without quality loss. Whether you're vectorizing a scanned signature, a hand-drawn sketch, or a photograph for a poster effect, JPG to SVG conversion is the starting point.
+
+### What is SVG and Why Does It Matter?
+
+SVG (Scalable Vector Graphics) is an open, XML-based format for 2D graphics. Where JPG stores pixels, SVG stores mathematical descriptions of shapes, paths, and colors. The result is a file that can be enlarged to any size - from a small app icon to a full-wall mural - without ever becoming blurry.
+
+Converting your JPG images to SVG format gives you access to a range of capabilities that raster formats simply can't match:
+
+- Infinite scalability: render crisp on any screen, from mobile to 8K billboard
+
+- Editable paths: modify shapes, colors, and curves in Illustrator, Inkscape, or Figma
+
+- Ideal for print: send to professional printers, plotters, and large-format machines
+
+- Web-efficient: inline SVGs load without extra HTTP requests and are animatable with CSS
+
+## Why Use PixelToPath to Convert JPG to SVG?
+
+PixelToPath delivers clean, accurate vectorization - without cost, complexity, or privacy compromises.
+
+🆓
+
+### Completely Free
+
+No subscription, no watermark, no file limit. Convert as many JPEGs as you want, for free, forever.
+
+⚡
+
+### Instant Results
+
+Conversion happens in your browser in seconds. No upload queue, no waiting for email delivery.
+
+🔒
+
+### Your Files Stay Private
+
+Images are processed and immediately deleted. We never store or share any of your uploaded files.
+
+🎨
+
+### Optimized Presets
+
+Three smart presets - Black & White, Poster, Photo - ensure the best output for each JPG type.
+
+💻
+
+### Desktop App Available
+
+Prefer offline or batch conversion? Get the free, open-source desktop app for Windows and Linux.
+
+♾️
+
+### Multi-Format Support
+
+JPG is just the start - also convert PNG, BMP, and WebP to SVG with the same tool.
+
+## When to Convert JPG to SVG
+
+JPEG to SVG conversion is particularly useful when you need to use a photo or scanned image in a vector-based context:
+
+- Logo recreation: vectorize an old logo that only exists as a low-resolution JPG scan
+
+- Poster and illustration effects: convert a photo to a poster-style SVG for striking visual designs
+
+- Scanned artwork: turn hand-drawn sketches or signatures scanned as JPEG into clean vector paths
+
+- Print and merchandise: prepare JPG source material for large-format printing or embroidery
+
+- Laser engraving and CNC routing: most machines require vector input - start from your JPG and export SVG
+
+From professional print production to hobbyist craft projects, JPG to SVG conversion opens doors that pixel-based files keep firmly closed.
+
+## Related Conversion Tools
+
+More free image-to-vector tools from PixelToPath.
+
+🖼️ Image to SVG
+
+✏️ Vectorize Any Image
+
+🌐 Full Online Tool
+
+## Frequently Asked Questions
+
+How do I convert a JPG to SVG?
+
+Go to the PixelToPath online tool, upload your JPG or JPEG file, select the best preset (Black & White works great for logos and sketches; Photo for detailed images), then click Convert and download your SVG. The whole process takes under a minute.
+
+Is JPG to SVG conversion free?
+
+Yes - completely free. No account needed, no watermarks, and no file count limits. PixelToPath is free to use for everyone, forever.
+
+Will a JPG photo look good as an SVG?
+
+Results depend on the image. Simple, high-contrast images - logos, illustrations, text, sketches - convert extremely well. Complex photographs will be simplified and stylized, which can be a great creative effect. Use the Photo preset for the best approximation of detailed images.
+
+What can I do with the SVG after converting?
+
+A lot. You can edit the SVG in Illustrator, Inkscape, or Figma; embed it directly in HTML; use it with a laser cutter or vinyl cutter; send it to a professional printer; or import it into animation software. SVG is a highly versatile, open standard.
+
+Is there a file size limit for JPG uploads?
+
+The online tool handles most standard JPG files without issue. For very large files or bulk conversion, consider downloading the free PixelToPath desktop app for Windows or Linux, which offers more control and offline processing.
+
+## Ready to Convert Your JPG to SVG?
+
+Open PixelToPath in your browser and vectorize your first JPEG in under 60 seconds - free, instant, no account needed.
+
+Convert JPG to SVG Now →
+⬇️ Download Desktop App
+
+---
+
+## Image to SVG Converter (Free, Fast & Online)
+
+URL: https://pixel-to-path.com/blog/image-to-svg/
+
+# Free Image to SVG Converter
+
+Upload any image - PNG, JPG, BMP, or WebP - and convert it to a clean, scalable SVG vector file. Free, instant, and no account needed.
+
+PNG
+
+JPG
+
+BMP
+
+WebP
+
+→
+
+SVG
+
+✓ 100% free
+No account needed
+All major formats
+Privacy-first
+
+Convert Image to SVG →
+
+## How to Convert an Image to SVG
+
+Three simple steps are all it takes. No design background required.
+
+1
+
+⬆️
+
+### Upload your image
+
+Drag and drop or click to upload any PNG, JPG, BMP, or WebP image. No size limit, no format restrictions.
+
+2
+
+🎨
+
+### Choose conversion style
+
+Pick a preset - Black & White for clean lines, Poster for bold colors, Photo for detailed images.
+
+3
+
+⬇️
+
+### Download SVG
+
+Your vector file is ready in seconds. Download and use it in any tool, browser, or production workflow.
+
+Convert Image to SVG →
+
+## Real results from the converter
+
+Before · original
+11 KB
+
+→
+
+After · SVG
+Poster preset · 15 KB
+
+A flat-color sticker traced with the Poster preset: each color region becomes a clean, editable vector shape.
+
+400% zoom on the mountain edge: pixels on the left, clean vector lines on the right.
+
+## What is Image to SVG Conversion?
+
+Converting an image to SVG means transforming a pixel-based raster image into a scalable vector graphic . Raster images - like PNG, JPG, BMP, and WebP - store visual information as a fixed grid of colored pixels. They're great for photographs and screenshots at their native resolution, but they become blurry and pixelated when enlarged. SVG, by contrast, stores shapes as mathematical coordinates and paths, allowing them to scale to any dimension without loss of quality.
+
+The image-to-SVG conversion process - technically called vectorization or auto-tracing - analyses the edges, colors, and shapes in your raster image and recreates them as vector paths. PixelToPath handles this automatically, giving you a clean SVG file from any image format in seconds.
+
+### Why SVG is the Format of Choice for Graphics
+
+SVG (Scalable Vector Graphics) has become the standard format for logos, icons, UI elements, and any graphic that needs to look sharp at multiple sizes. Unlike raster formats, SVG scales without degradation - it's the same file whether you're viewing it at 24 pixels or printing it at 2 metres.
+
+Converting your images to SVG unlocks capabilities that raster formats can't offer:
+
+- Resolution-independent: renders perfectly on standard screens, Retina displays, 4K monitors, and print
+
+- Fully editable: open and modify the file in Adobe Illustrator, Inkscape, Figma, or any SVG editor
+
+- Compact and web-friendly: SVG is often smaller than PNG for logos and icons, loads faster, and is animatable
+
+- Machine-compatible: laser cutters, vinyl plotters, and embroidery machines all accept SVG as input
+
+## Why PixelToPath for Image to SVG Conversion?
+
+PixelToPath combines simplicity, quality, and privacy in a genuinely free image-to-SVG conversion experience.
+
+🆓
+
+### Free with No Limits
+
+No credits, no paywalls, no file count restrictions. Convert any image to SVG as many times as you need.
+
+⚡
+
+### All Formats Accepted
+
+PNG, JPG, BMP, WebP - upload any common raster format and get a clean SVG back in seconds.
+
+🔒
+
+### Smart Conversion Presets
+
+Three presets - Black & White, Poster, Photo - automatically optimize the tracing algorithm for your image type.
+
+🎨
+
+### Complete Privacy
+
+Files are processed and deleted immediately. PixelToPath never stores, analyzes, or shares your images.
+
+💻
+
+### Works On Any Device
+
+Browser-based and fully responsive - convert images to SVG on desktop, tablet, or mobile without installing anything.
+
+♾️
+
+### Desktop Version Available
+
+Prefer offline use? Download the free PixelToPath desktop app for Windows and Linux with batch conversion support.
+
+## Who Uses Image to SVG Conversion?
+
+Image to SVG conversion is one of the most broadly useful operations in digital design. Here's who needs it and why:
+
+- Graphic designers: convert client-supplied raster logos, scanned artwork, or digital illustrations into editable vector files
+
+- Web developers: replace heavy PNG sprites with lightweight inline SVGs for sharper, faster-loading interfaces
+
+- Content creators and marketers: prepare branded graphics, social media assets, and print-ready vectors from existing images
+
+- Crafters and makers: vectorize designs for use with Cricut, Silhouette, or any vinyl and laser cutting machine
+
+- Educators and students: understand vector graphics by converting familiar images and examining the resulting SVG paths
+
+Whether your workflow is professional or creative, converting images to SVG with PixelToPath is the fastest route from raster to vector.
+
+## Related Conversion Tools
+
+Need a format-specific converter? Try these free tools.
+
+🔄 JPG to SVG
+
+✏️ Vectorize Image
+
+🌐 Full Online Tool
+
+## Frequently Asked Questions
+
+What image formats can I convert to SVG?
+
+PixelToPath accepts PNG, JPG/JPEG, BMP, and WebP as input. All four formats can be converted to SVG for free, with no account or software required.
+
+How long does image to SVG conversion take?
+
+Most conversions complete in just a few seconds, directly in your browser. The exact time depends on image complexity and your device, but there's no server queue or waiting period.
+
+Can I convert a photo to SVG?
+
+Yes. Use the Photo preset for photographic images. The result will be a stylized, vector-traced version of the photo - ideal for poster effects, screen printing, and artistic projects. For an exact pixel-by-pixel reproduction, raster formats remain better suited.
+
+Is the SVG output editable?
+
+Fully. SVG is an open, XML-based format. Open the file in Adobe Illustrator, Inkscape, Figma, Affinity Designer, or any SVG editor to modify paths, change colors, delete elements, or combine with other artwork.
+
+Do I need to create an account to convert images to SVG?
+
+No account is needed - ever. PixelToPath is completely free and anonymous. Open the tool, upload your image, download your SVG. That's it.
+
+## Convert Your Image to SVG Right Now
+
+Free, instant, no account needed. Upload your image and download a clean SVG vector in under a minute.
+
+Convert Image to SVG →
+⬇️ Download Desktop App
+
+---
+
+## Vectorize Image Free – Raster to Vector Online
+
+URL: https://pixel-to-path.com/blog/vectorize-image/
+
+# Free Online Image Vectorizer
+
+Automatically vectorize any raster image and convert it to a clean, scalable SVG vector - free, instant, and no account needed.
+
+PNG
+
+JPG
+
+BMP
+
+WebP
+
+→
+
+SVG
+
+✓ Auto-Trace Technology
+No signup required
+PNG · JPG · BMP · WebP
+100% Free
+
+Vectorize My Image →
+
+## How to Vectorize an Image Online
+
+Automatic image vectorization in three simple steps - no Illustrator, no Inkscape, no design skills required.
+
+1
+
+🖼️
+
+### Upload your image
+
+Drag and drop a PNG, JPG, BMP, or WebP image. Any raster format is accepted, any size.
+
+2
+
+🎛️
+
+### Adjust vectorization settings
+
+Select a preset and fine-tune parameters like color count and path detail to control the result.
+
+3
+
+✅
+
+### Download your vector SVG
+
+Get a clean, optimized SVG file ready for use in any editor, browser, or cutting machine.
+
+Vectorize My Image →
+
+## Real results from the converter
+
+Before · original
+5 KB
+
+→
+
+After · SVG
+B&W preset · 2 KB
+
+A real conversion made with this tool: the original PNG on the left was traced with the Black & White preset into the SVG on the right — a vector file that stays sharp at any zoom level.
+
+Before · original
+11 KB
+
+→
+
+After · SVG
+Poster preset · 15 KB
+
+A flat-color sticker traced with the Poster preset: each color region becomes a clean, editable vector shape.
+
+Before · original
+24 KB
+
+→
+
+After · SVG
+Photo preset · 42 KB
+
+A real photo processed with the Photo preset: the balloon is rebuilt as flat vector layers — heavier than a logo trace, yet it scales without any pixelation.
+
+## What Does It Mean to Vectorize an Image?
+
+Vectorizing an image is the process of converting a raster graphic - made of a fixed grid of pixels - into a vector graphic made of mathematical paths, curves, and shapes. The technique is often called auto-tracing or image tracing , and it's the bridge between the world of photography and the world of design.
+
+When you vectorize an image, the software analyses the colors and edges in the original and reconstructs them as geometric objects stored in SVG format . The resulting file is resolution-independent: it can be scaled to any size - from a thumbnail to a skyscraper billboard - without ever becoming pixelated or blurry.
+
+### Raster vs. Vector: Why It Matters
+
+Raster images (PNG, JPG, BMP, WebP) store data as a grid of pixels. Every image has a fixed resolution. Zoom in far enough and you'll see individual squares - the image degrades. This is acceptable for screen display at native sizes, but it's a serious limitation for any professional workflow that requires flexibility.
+
+Vector images (SVG, AI, EPS) store shapes mathematically. There are no pixels - only paths. The advantages are profound:
+
+- Scale without limits: a vectorized logo looks identical at 100px and at 10 metres
+
+- Editable geometry: manipulate individual shapes, nodes, and curves in any vector editor
+
+- Smaller file size for graphic content: icons and logos as SVG are typically a fraction of their PNG equivalent
+
+- Machine-ready: laser cutters, vinyl plotters, and CNC machines all require vector paths
+
+## Why Use PixelToPath to Vectorize Your Images?
+
+Other auto-trace tools exist, but PixelToPath is built specifically for clean, production-quality results.
+
+🆓
+
+### Free, Always
+
+No credits, no subscriptions, no watermarks. Vectorize unlimited images at no cost, no conditions.
+
+⚡
+
+### Purpose-Built Presets
+
+Black & White, Poster, and Photo presets give different tracing strategies for different image types - not a single generic algorithm.
+
+🔒
+
+### Works Offline Too
+
+Download the free PixelToPath desktop app for Windows or Linux and vectorize images without an internet connection.
+
+🎨
+
+### No File Retention
+
+Your images are processed in your browser or on our servers and immediately discarded. We never keep your files.
+
+💻
+
+### Clean SVG Output
+
+Optimized paths with minimal redundant nodes - resulting SVG files are clean, lightweight, and editor-ready.
+
+♾️
+
+### Open Source
+
+PixelToPath is fully open source. You can inspect the code, self-host it, or contribute on GitHub.
+
+## Popular Uses for Image Vectorization
+
+Auto-tracing and vectorization are essential skills across many creative and technical disciplines:
+
+- Logo modernization: take a scanned or pixelated old logo and convert it to a clean, scalable vector asset
+
+- Craft cutting machines: Cricut and Silhouette users need SVG vector files to cut shapes - vectorize your designs first
+
+- Illustration workflow: vectorize hand-drawn sketches scanned as JPG or PNG to refine them in Illustrator or Inkscape
+
+- Embroidery and screen printing: many embroidery software packages require vector input for digitizing patterns
+
+- Architectural and engineering: vectorize scanned technical drawings or maps for use in CAD and design environments
+
+Image vectorization transforms a fixed, fragile pixel file into a flexible, professional-grade asset. PixelToPath makes that transformation free and instant.
+
+## Related Tools
+
+More free conversion and vectorization tools from PixelToPath.
+
+🔄 JPG to SVG
+
+🖼️ Image to SVG
+
+🌐 Full Online Tool
+
+## Frequently Asked Questions
+
+What is image vectorization?
+
+Image vectorization (also called auto-tracing or raster-to-vector conversion) is the process of converting a pixel-based image (PNG, JPG, etc.) into a vector graphic (SVG). The resulting file is made of mathematical paths rather than pixels, making it infinitely scalable and editable.
+
+Is the image vectorizer free to use?
+
+Yes, completely free. No account, no watermark, and no file limits. PixelToPath is a free, open-source tool available both online and as a desktop download.
+
+What types of images vectorize best?
+
+Images with clear shapes and high contrast vectorize best: logos, icons, illustrations, line art, text-based graphics, and hand-drawn sketches. Complex photographs can also be vectorized using the Photo preset, producing a stylized, poster-like result.
+
+Can I use vectorized SVGs in cutting machines like Cricut?
+
+Yes. Cricut Design Space, Silhouette Studio, and most other cutting machine software accept SVG files. Vectorize your image with PixelToPath, download the SVG, and import it directly into your cutting software.
+
+How do I vectorize a logo from a raster image?
+
+Upload your raster logo (PNG or JPG) to PixelToPath, select the Black & White preset for a clean traced result, adjust the detail level if needed, then download the SVG. The result is an editable, scalable vector logo ready for any use.
+
+## Vectorize Your Image Now - It's Free
+
+No account, no software, no cost. Upload your image and download your vector SVG in under a minute.
+
+Vectorize My Image →
+⬇️ Download Desktop App
+
+---
+
+## Free SVG for Cricut, Silhouette, and laser cutting
+
+URL: https://pixel-to-path.com/blog/svg-cricut/
+
+# How to create free SVG files for Cricut, Silhouette, or laser cutting?
+
+Cutting machines read paths, not pixels. Transform any image into a crisp, cut-ready SVG - for free and without an account.
+
+PNG
+
+JPG
+
+→
+
+SVG
+
+✓ 100% Free
+Cricut Compatible
+Silhouette · Laser
+No Signup
+
+Create my SVG cut file →
+
+## How to create an SVG for Cricut or Silhouette in 3 steps
+
+No design skills required. Your image becomes a cut file in under a minute.
+
+1
+
+📁
+
+### Upload your image
+
+Drag and drop a PNG, JPG, BMP, or WebP: a design found on the web, a scanned drawing, or a logo. Any size.
+
+2
+
+⚙️
+
+### Choose the Black & White preset
+
+This is the ideal mode for cutting: it produces clean, closed paths without pixel noise. Refine the level of detail if needed.
+
+3
+
+💾
+
+### Download and import the SVG
+
+Open the file in Cricut Design Space, Silhouette Studio, or LightBurn. The paths are ready to cut.
+
+Create my SVG cut file →
+
+## Real results from the converter
+
+Before · original
+11 KB
+
+→
+
+After · SVG
+Poster preset · 15 KB
+
+A flat-color sticker traced with the Poster preset: each color region becomes a clean, editable vector shape.
+
+## Why does a cutting machine reject a simple image?
+
+A PNG or JPG is a grid of pixels. Cricut, Silhouette Cameo, and laser engravers don't cut colored dots: they follow paths. If you import a raster image as is, the software has to "guess" the outlines. The result is often irregular, with jagged edges, too many nodes, or areas the blade can't follow.
+
+Converting the image to SVG solves the problem at the source. PixelToPath traces the shapes and produces clean vector paths - the format that Design Space, Silhouette Studio, LightBurn, and RDWorks expect. You get a crisp outline, at any scale, even if the original image was small or compressed.
+
+### What is a "cut-ready" SVG?
+
+An SVG (Scalable Vector Graphics) describes shapes using mathematical curves, not pixels. For cutting, what matters isn't having a pretty picture on the screen: it's having closed paths, few unnecessary nodes, and clear contrast between the shape to cut and the background.
+
+That's exactly what PixelToPath aims for with the Black & White preset. The benefits for crafting:
+
+- Crisp outlines: the blade or laser follows a smooth curve, not a staircase of pixels
+
+- Infinite scalability: enlarge a design for a tote bag or shrink it for a sticker without losing quality
+
+- Machine compatible: SVG is accepted by Cricut Design Space , Silhouette Studio , Brother ScanNCut, and LightBurn
+
+- Editable: open the file in Inkscape to weld, hollow out, or separate layers before cutting
+
+## Why choose PixelToPath for your cut files?
+
+Crafters don't need Illustrator or a subscription. They need a clean path, right away.
+
+🆓
+
+### Completely Free
+
+No subscription, no watermarks, no pay-per-design shop. Convert as many images as you want.
+
+⚡
+
+### Crisp Paths for Cutting
+
+The engine produces closed, smooth paths tailored for a Cricut blade, a Cameo, or a laser - not just an artistic effect.
+
+🔒
+
+### Privacy First
+
+Your images are processed and then discarded. Nothing is stored, nothing is sold.
+
+🎨
+
+### Black & White Preset
+
+Designed for vinyl, paper, HTV, and laser: high contrast and outlines usable straight out of the export.
+
+💻
+
+### Offline Too
+
+Download the open-source desktop app for Windows or Linux if you prefer keeping everything on your computer.
+
+♾️
+
+### PNG, JPG, BMP, and WebP
+
+A single tool to vectorize any image found on the web or scanned from a sketch.
+
+## What can you cut with a PixelToPath SVG?
+
+Once your design is in SVG format, it opens in the most popular cutting software:
+
+- Adhesive vinyl and stickers: a PNG design becomes an SVG that Cricut Design Space can cut cleanly
+
+- HTV for textiles: import the file into Silhouette Studio and press it onto a tote bag, t-shirt, or sweatshirt
+
+- Laser cutting: wood, acrylic, leather, or cardboard - LightBurn and diode engravers follow vector paths
+
+- Paper and scrapbooking: stencils, invitations, cards, and embellishments with clean edges
+
+- Stencils and engraving: isolate the shape, invert it if needed, then engrave or cut the negative space
+
+Whether you're using a Cricut Explore, Maker, Silhouette Cameo, or a laser engraver, the same clean SVG gets the job done.
+
+## Related Conversion Guides
+
+Other free tutorials for turning an image into a vector with PixelToPath.
+
+🔄 JPG to SVG Converter
+
+🖼️ Image to SVG
+
+✏️ Vectorize an Image
+
+🌐 Online Tool
+
+## Frequently Asked Questions
+
+Does Cricut Design Space accept SVGs created with PixelToPath?
+
+Yes. Design Space imports SVG files natively. Download the SVG from PixelToPath, then use "Upload" in Cricut Design Space. The paths will appear as cut layers that you can resize, duplicate, or weld.
+
+Which preset should I use for cutting?
+
+The Black & White preset is the most suitable: it produces high contrast and closed outlines, ideal for vinyl, paper, and laser. The Poster mode is good if your design has multiple colors to cut into separate layers. Avoid Photo for mechanical cutting: too many details will break the path.
+
+Is it compatible with Silhouette Cameo and laser cutting?
+
+Yes. Silhouette Studio (Designer Edition or higher) opens SVGs. For laser cutting, import the same file into LightBurn, RDWorks, or your engraver's software. A vector path is the standard input format for these machines.
+
+Can I convert a photo into a cut-ready SVG?
+
+A detailed photo isn't great for cutting: too many gradients, too many small paths. Choose a high-contrast design instead - like a logo, silhouette, doodle, stamp, or clipart. If you really want to use a photo, the Poster preset simplifies colors, but line art will always be cleaner under the blade.
+
+Is the converter really free - and can I vectorize any image from the web?
+
+PixelToPath is 100% free, with no account or watermarks. However, vectorizing an image doesn't give you the rights to use it. Only cut designs that you created, that are royalty-free, or for which you have a license - copyrighted characters remain prohibited for sale.
+
+## Ready to cut your first SVG?
+
+Upload an image and get a Cricut, Silhouette, or laser-compatible file in under a minute - for free.
+
+Create my SVG cut file →
+Download Desktop App →
+
+---
+
+## SVG vs PNG/JPG: Core Web Vitals and SEO
+
+URL: https://pixel-to-path.com/blog/svg-vs-png/
+
+# SVG vs PNG/JPG: why vector formats are essential for performance and SEO
+
+Fewer KB to download, crisp rendering from mobile to 4K, better Core Web Vitals. Here's why developers and SEO experts are switching their logos and icons to SVG.
+
+PNG
+
+JPG
+
+→
+
+SVG
+
+✓ Core Web Vitals
+Technical SEO
+Retina · 4K crispness
+100% Free
+
+Vectorize my logo to SVG →
+
+## How to optimize a PNG or JPG logo to SVG (3 steps)
+
+No Illustrator needed. PixelToPath vectorizes your file and gives you an SVG ready to embed in HTML.
+
+1
+
+📁
+
+### Upload the PNG or JPG
+
+Drop the logo, icon, or pictogram currently served as PNG or JPG. The simpler the path (solid colors, sharp edges), the smaller the SVG will be.
+
+2
+
+⚙️
+
+### Choose the right preset
+
+Black & White for a logotype or monochrome icon. Poster if the logo has a few flat colors. Avoid Photo: too much detail bloats the SVG with no visual gain for a logo.
+
+3
+
+💾
+
+### Embed the SVG on the site
+
+Download the file and serve it as an image, a sprite, or an inline SVG. A single file replaces the @1x, @2x, and @3x variants.
+
+Vectorize my logo to SVG →
+
+## PNG and JPG: perfect for photos, too heavy for UI
+
+PNG and JPG are raster formats: the image is a grid of pixels. A logo exported as a 512×512 PNG "photographs" every dot. To stay crisp on a Retina screen, you often have to serve a version two or three times larger, meaning two or three times more KB. JPG compresses photos better, but it destroys flat colors, adds artifacts around text, and doesn't support transparency. Neither is designed for a logotype or icon that needs to display at 24px in navigation and 240px in the hero banner.
+
+SVG (Scalable Vector Graphics) describes shapes using curves and coordinates, not pixels. Vectorizing a PNG with PixelToPath means replacing a static bitmap with a path that the browser redraws to the exact screen size. The result: typically a much lighter file, and identical sharpness on mobile, desktop, and 4K screens.
+
+### What SVG practically changes for a website
+
+For the interface, SVG isn't an aesthetic "bonus". It's a performance lever: fewer bytes over the network, fewer variants to maintain, simpler caching, and native vector rendering in all modern browsers.
+
+The most visible gains for a developer or SEO:
+
+- Weight: a simple logo often goes from 40 to 80 KB in PNG to a few KB in SVG, and you eliminate the @2x / @3x exports
+
+- Scalability: a single file, sharp at 16px as well as full 4K screen, without srcset or image media queries
+
+- Core Web Vitals: less data to download (LCP) and a stable placeholder via viewBox (CLS)
+
+- Technical SEO: faster pages on mobile, a format Google understands, and text potentially present within the SVG
+
+## PNG vs SVG: a logo's weight is not trivial
+
+Images remain one of the biggest weight factors of a page. We optimize photos in WebP, but forget the header logo and the twenty PNG icons in the CSS. Yet these files are repeated across all URLs: every millisecond lost is lost across the entire site.
+
+Orders of magnitude observed after vectorization with PixelToPath, in the typical scenario of a showcase site or web app:
+
+| Scenario
+| PNG / JPG
+| SVG
+
+| 512px logo with transparency
+| 40 to 80 KB
+| 2 to 12 KB depending on colors and nodes
+
+| Same logo served @2x (1024px) for Retina
+| Weight doubles, sometimes triples
+| One single file, unchanged
+
+| 20 UI icons exported @3x (72×72)
+| 40 to 160 KB added to the interface
+| A few KB in total
+
+| Flat-color logo from a JPG
+| Artifacts and halos around shapes and text
+| Clean edges, and an even lighter file
+
+The rule is simple: anything that is a shape, text, pictogram, or logotype benefits from being an SVG. Photographs and screenshots stay in JPG, WebP, or AVIF. SVG isn't a universal replacement: it's the right format for the interface.
+
+## Scalability: one crisp file from smartphone to 4K
+
+A PNG is only sharp at its native resolution. Scaled up, you see the pixels. Scaled down aggressively, the browser has to resample. Hence the gymnastics of @1x, @2x, @3x files, srcsets, and CSS densities. Each new breakpoint or new screen density (Retina, recent phones, 4K monitors) requires a new export, or a file that is too large "just in case".
+
+An SVG ignores this constraint. The rendering engine calculates the curves at the requested CSS size. 32px favicon, 48px logo in the navigation, same brand mark at 400px in the banner, 4K projection: it's the same file. No blurriness, no aliasing, no second request for the high-density version. For a component library, it also means less debt: one icon, one file, all sizes.
+
+The same logo enlarged to 400%: on the left, the PNG pixels become visible; on the right, the SVG curves stay perfectly smooth.
+
+400% zoom on the balloon: JPEG blur and pixels on the left, posterized vector colors on the right.
+
+## Core Web Vitals and SEO: why Google cares about the format
+
+Mobile speed is a ranking factor. Core Web Vitals (LCP, INP, CLS) measure what the user experiences. Replacing a heavy PNG logo or a bunch of raster icons with SVGs won't make a page go from 4 MB to 40 KB. But on the site's layout, the effect is immediate, especially on a 4G network or when an LCP is bottlenecked by the header logo.
+
+Practically, the vector format helps three metrics, provided you keep the path complexity reasonable:
+
+- LCP (Largest Contentful Paint) : if the largest visible element is a logo or a flat illustration, a few-KB SVG arrives sooner than a 150 KB PNG @2x. Less network contention for the rest of the page
+
+- CLS (Cumulative Layout Shift) : an SVG with width, height, and viewBox reserves its box right from the HTML parsing. No more waiting for bitmap decoding to know the ratio, thus fewer layout shifts
+
+- INP and main thread : a simple SVG (logo, icon) is cheap to paint. However, avoid "photo" SVGs with thousands of paths: they can weigh more than a PNG and make the CPU work hard. Hence the value of clean tracing via PixelToPath, not a pixel-by-pixel copy
+
+- SEO beyond speed: Google indexes SVGs. An embedded logo can have an accessible title. An SVG image with an alt attribute remains foundational. And a lighter page reduces technical bounce rate, an experience signal factored into ranking
+
+## Why vectorize with PixelToPath rather than exporting manually?
+
+You already have the client's PNG, not the Illustrator source file. PixelToPath recreates clean paths, free and ready for the web.
+
+📉
+
+### Lightweight SVG, ready to use
+
+The engine produces usable paths, not a node factory. Ideal for a logo or icon you'll serve on every page view.
+
+🆓
+
+### Completely free
+
+No design subscription, no watermark on the SVG. Vectorize your entire brand guidelines (logo, favicon, icon set) at zero cost.
+
+🔒
+
+### File privacy
+
+Brand files are processed and then discarded. Nothing is stored, nothing is reused. Suitable for brand guidelines under NDA.
+
+🎨
+
+### Logos and pictograms presets
+
+Black & White for monochrome icons, Poster for flat color logos. You control the level of detail before export.
+
+💻
+
+### Batch processing on desktop
+
+Have a set of PNG icons to convert to SVG? The open-source Windows / Linux app processes files offline, without quotas.
+
+♾️
+
+### PNG, JPG, BMP, WebP
+
+One single tool, whether the logo arrives as a transparent PNG, a scanned JPG, or a WebP export from Figma.
+
+## Where SVG beats PNG/JPG on a real site
+
+This isn't theoretical. Here are the places where the vector format pays off immediately:
+
+- Header and footer logo: a single file, crisp on Retina, often one of the most viewed elements, and sometimes the LCP on a minimalist homepage
+
+- Icon system: no more 1x/2x PNG sprites. Each pictogram is an SVG (or SVG sprite), stylable with CSS (currentColor) without a new export
+
+- Favicon and apple-touch: a modern SVG favicon plus a fallback PNG avoids maintaining a bunch of 16, 32, 180px sizes
+
+- UI illustrations and empty states: flat vector drawings stay sharp full screen, without costing the weight of a hero image
+
+- SEO landing page: every KB saved on the layout improves Lighthouse, PageSpeed Insights, and the mobile experience, signals that ranking aggregates
+
+Keep JPG/WebP for photos. Move logos, pictograms, and flat illustrations to SVG. This is the split that the fastest sites already apply.
+
+## Related conversion guides
+
+Vectorize your files, then dive deeper into the format that concerns you.
+
+🔄 JPG to SVG Converter
+
+✏️ Vectorize an Image
+
+🖼️ Image to SVG
+
+🌐 Online Tool
+
+## Frequently Asked Questions
+
+Is an SVG always lighter than a PNG or a JPG?
+
+For a logo, icon, or flat illustration: yes, almost always, especially if you compare the PNG to its Retina version. For a photograph, no: a "photo" SVG becomes a cloud of paths heavier than a JPG or WebP. Vectorize the UI, compress the photos.
+
+Does SVG really improve Core Web Vitals and SEO?
+
+It improves what UI images can improve: fewer bytes (LCP if the logo or illustration is the main element), a predictable rendering box (CLS), fewer variants to download. Google uses speed as a signal, especially on mobile. It's not a magic ranking shortcut, it's technical hygiene measured in PageSpeed Insights.
+
+Should I replace all site images with SVG?
+
+No. Photos, screenshots, textures, complex gradients: JPG, WebP, or AVIF. SVG for logos, icons, diagrams, pictograms, flat illustrations. An overly detailed SVG can harm INP. PixelToPath's Photo preset is for stylizing, not for replacing a content JPEG.
+
+How to embed an SVG without causing CLS?
+
+Always provide a width and a height (or a CSS aspect-ratio) that match the viewBox. With an image tag (src, width, height, alt), the browser reserves the space before downloading. For inline SVG, keep the viewBox and avoid injecting the code after the first paint without dimensions.
+
+How do I get a logo SVG from a PNG with PixelToPath?
+
+Open the online tool, drop the PNG (ideally on a transparent background, fairly large), choose Black & White or Poster, adjust the detail, then convert. Open the SVG in the browser or Figma to check the outlines, then serve it in production. Free, no account, files are not retained.
+
+## Convert your PNG logo to SVG, measure the weight
+
+Upload your current file, download the SVG, compare the KBs. Free, no signup. The first Core Web Vitals lever is often right there.
+
+Vectorize my logo to SVG →
+Download Desktop App →
+
+---
+
+## Vectorize a blurry logo to SVG for free
+
+URL: https://pixel-to-path.com/blog/vectorize-logo/
+
+# Is your logo blurry or pixelated? Here is how to vectorize a logo (PNG/JPG to SVG) for free in 1 minute
+
+You no longer have the source file, only a JPG sent via WhatsApp or a PNG that's too small. PixelToPath recreates crisp paths: an SVG usable on the web, a poster, or a business card - without Adobe Illustrator.
+
+PNG
+
+JPG
+
+→
+
+SVG
+
+✓ 100% Free
+No Illustrator
+1 minute
+No registration
+
+Fix my logo to SVG →
+
+## How to vectorize a logo in 3 steps (1 minute)
+
+No paid software, no account. The JPG or PNG you already have becomes a crisp SVG.
+
+1
+
+📁
+
+### Upload the PNG or JPG
+
+Drag and drop the logo file: website export, scan, screenshot, client attachment. The larger and more contrasted it is, the cleaner the trace will be.
+
+2
+
+⚙️
+
+### Choose the logo preset
+
+Black & White for a logotype or a monochrome icon. Poster if the logo has a few flat colors. Avoid Photo: too much detail weighs down a logo without making it crisper.
+
+3
+
+💾
+
+### Download the fixed SVG
+
+Convert, preview, download. A single file, crisp from the size of a favicon to that of a storefront sign.
+
+Fix my logo to SVG →
+
+## Before / After: a pixelated logo, then fixed
+
+This is the most common case for freelancers and small businesses: the only available file is a raster image. Enlarged, it falls apart. Vectorized, it becomes a usable path again. The two examples below show the same motif: on the left, an export that is too small (the enlarged JPG/PNG effect); on the right, the crisp SVG that PixelToPath aims for.
+
+Before · original
+5 KB
+
+→
+
+After · SVG
+B&W preset · 2 KB
+
+A real conversion made with this tool: the original PNG on the left was traced with the Black & White preset into the SVG on the right — a vector file that stays sharp at any zoom level.
+
+The same logo enlarged to 400%: on the left, the PNG pixels become visible; on the right, the SVG curves stay perfectly smooth.
+
+These visuals are illustrations of the problem, not screenshots of your brand. The good candidate: logo, initials, icon, simple shapes. A photorealistic or heavily gradient logo will remain an approximation.
+
+## Why does your JPG or PNG logo get blurry?
+
+A JPG or PNG logo is not a drawing: it's a photo of that drawing, a fixed grid of pixels. As long as you display it at its original size - a thumbnail in an email, a LinkedIn avatar - it works. The day you enlarge it for a poster, a Retina website, a business card, or a sign, each pixel becomes a visible square. The JPG also adds artifacts around letters and flat colors: a halo, noise, and jagged edges.
+
+The scenario is almost always the same. The designer delivered an .ai or .svg years ago, and the file is lost. What remains is a PNG from the website, a JPG compressed by a social network, sometimes a photo of the logo on a window. Rebranding a complete identity in Adobe Illustrator is expensive and time-consuming. You don't need a new logo. You need to fix the one you already have.
+
+### Vectorizing a logo is fixing it
+
+Vectorizing is not "magically enhancing" a photo. It's replacing the pixel grid with curves: SVG paths that the screen, printer, or cutting machine redraw at any size. PixelToPath traces the outlines of the PNG or JPG and gives you an SVG file - the format that printers, developers, and cutting software expect.
+
+In practice, once the logo is in SVG:
+
+- Crisp at all sizes: 32px favicon, website header, 2m banner, vehicle wrap - the same file
+
+- File often much lighter than a @2x PNG, therefore faster to load on a website
+
+- Editable: open it in Inkscape, Figma, or Illustrator to change a color or isolate an icon
+
+- Professional deliverable: you can finally send "the vector logo" to the printer, developer, or client
+
+## What file to upload for a good trace?
+
+PixelToPath cannot invent details that the image no longer has. Start with the least bad original you have:
+
+- The largest file available: an 800px PNG vectorizes better than a 120px thumbnail, even if blurry
+
+- Prefer a transparent PNG over a compressed white background JPG; crop unnecessary margins
+
+- A logo with flat colors, solid letters, and few gradients: this is the ideal case. A complex gradient or a photo shadow will be simplified
+
+- If you have multiple versions (black, color, icon only), vectorize them one by one: a clean file for each variant
+
+## Do you need Adobe Illustrator to vectorize a logo?
+
+Illustrator remains the reference tool if you are redrawing an identity by hand, or if the source .ai file still exists. The Image Trace feature is powerful - and paid, with a learning curve. Figma does not vectorize a JPG: it displays it. Inkscape does it, for free, but you need to install the software and adjust the bitmap tracing .
+
+If your need is: "I have a PNG, I need a crisp SVG today", PixelToPath is the shortest route. Free, in the browser, no account. You get an SVG that you can always refine later in Inkscape or Illustrator if an anchor or a color needs adjusting.
+
+## Why fix the logo with PixelToPath?
+
+The source file is gone. The design subscription is not in the budget. You only have the website PNG - and one minute.
+
+🆓
+
+### Free, no watermark
+
+No Creative Cloud subscription for a trace. As many logo variants as you want, at zero cost.
+
+⚡
+
+### One minute, not a redesign
+
+Upload, preset, export. You fix the existing file instead of hiring a designer for a simple SVG.
+
+🔒
+
+### Logo = sensitive file
+
+Images are processed then discarded. Nothing is stored. Suitable for brand guidelines and identities under NDA.
+
+🎨
+
+### Presets made for logos
+
+Black & White for monochrome, Poster for flat colors. You control the detail before downloading.
+
+💻
+
+### Offline batch
+
+Multiple versions (icon, horizontal, inverted)? The open source Windows / Linux app processes them on your machine.
+
+♾️
+
+### PNG, JPG, BMP, WebP
+
+It doesn't matter if the client sent a WhatsApp JPG, a WordPress PNG, or a WebP export: just one tool.
+
+## Where a fixed SVG logo changes everything
+
+As soon as the file is vector, you stop tinkering with PNGs that are too small:
+
+- Website and social media: a crisp Retina header, a clean favicon, no more blurry logo on the homepage
+
+- Print: poster, flyer, roll-up, business card - the printer asks for vector, you have it
+
+- Signage, wrapping, wayfinding: enlarge without fearing pixelation
+
+- Freelance deliverable: send the client an SVG + a PNG version back, even if you only received a JPG
+
+- Apparel and merch: flex, embroidery, screen printing - workshops work from paths, not a compressed JPEG
+
+Keep the JPG for photos. Fix the logo in SVG. It's the action that printers and web developers expect, and that many small businesses have never been able to do without Illustrator.
+
+## Related Conversion Guides
+
+The logo is just one case. Here are the other PixelToPath tutorials.
+
+🔄 JPG to SVG Converter
+
+📈 SVG vs PNG: perf and SEO
+
+✏️ Vectorize an Image
+
+🌐 Online Tool
+
+## Frequently Asked Questions
+
+I only have the logo in JPG, is that enough to get an SVG?
+
+Yes, that's exactly the use case. Start from the largest JPG or PNG you have. A file that is too small (under 200 px) will result in an approximate trace: PixelToPath follows what is still visible, it doesn't "hallucinate" missing letters. If the logo is readable on screen, the vectorization has a good chance of being usable.
+
+Do I need Adobe Illustrator to vectorize a logo?
+
+No. Illustrator is useful for redrawing or retouching by hand. To transform a PNG/JPG into an SVG, PixelToPath is enough: free, no installation, no account. You can open the SVG later in Illustrator, Inkscape, or Figma if you want to tweak a node.
+
+Will the SVG be identical to the original logo?
+
+On a logo with flat colors, solid letters, and clean outlines: very close, often indistinguishable in use. Gradients, photo shadows, textures, and very fine lines will be simplified. Always check the preview before sending the file to the printer. A quick retouch in Inkscape is still possible: the SVG is an editable file, not a flat image.
+
+Which preset should I choose for a color logo?
+
+Poster for a logo with a few flat colors (blue + orange, for example). Black & White for a monochrome version, a stamp, or a single icon. Photo only if you want a stylized effect: it's not the right mode for a professional logotype.
+
+Can I use this SVG for a large format poster or a sign?
+
+Yes: that's the whole point of vector graphics. An SVG has no "resolution". Check that the shapes are closed and the colors match the brand guidelines (printer swatches, RAL, etc.). For wrapping or cutting, the Black & White preset often produces the cleanest paths.
+
+## Fix your blurry logo in one minute
+
+Upload the PNG or JPG you have, download the SVG. Free, no account, no Illustrator.
+
+Fix my logo to SVG →
+Download Desktop App →
+
+---
+
+## Import an SVG into Figma, Canva, WordPress
+
+URL: https://pixel-to-path.com/blog/import-svg/
+
+# How to import and edit your SVG files in Figma, Canva, or WordPress?
+
+Conversion is just the first step. Once the SVG is downloaded from PixelToPath, drag it into Figma to change a color, drop it into Canva, or publish it on WordPress without opening a security flaw.
+
+SVG
+
+→
+
+Figma
+
+Canva
+
+WordPress
+
+✓ Practical guide
+Figma · Canva · WP
+After conversion
+100% Free
+
+Create my SVG first →
+
+## From image to ready-to-import SVG (3 steps)
+
+Without a vector file, Figma, Canva, and WordPress have nothing to edit. PixelToPath produces this file in one minute.
+
+1
+
+📁
+
+### Convert the image
+
+Upload the PNG or JPG into PixelToPath. For a logo or an icon to recolor later, choose Black & White or Poster: flat colors, not a vectorized photo.
+
+2
+
+💾
+
+### Download the SVG
+
+Preview, then save the .svg file. It's a real path, not a disguised PNG: Figma and Canva will be able to change its colors.
+
+3
+
+🎨
+
+### Import it into your tool
+
+Drag the file into Figma, Uploads in Canva, or Media in WordPress (cleaned file). All three methods are detailed below.
+
+Create my SVG first →
+
+## Real results from the converter
+
+Before · original
+5 KB
+
+→
+
+After · SVG
+B&W preset · 2 KB
+
+A real conversion made with this tool: the original PNG on the left was traced with the Black & White preset into the SVG on the right — a vector file that stays sharp at any zoom level.
+
+## You have the SVG. Now what?
+
+Most converters stop at the Download button. Yet the file is useless if it stays in the Downloads folder. A designer opens it in Figma to apply brand guidelines. A community manager drops it into Canva to create variations of a post. A developer puts it in WordPress for the header logo. It's this next step that proves PixelToPath fits into a real workflow, not just a demo.
+
+A PixelToPath SVG is not a static image. It is a set of paths : each shape has a fill, and possibly a stroke. Changing the logo's blue to burgundy, isolating the icon, enlarging it for a 1080x1920 story: all of this is done in the tool you already use, without going back to Illustrator.
+
+### Why Figma, Canva, and WordPress love this format
+
+PNG and JPG, once imported, are bitmaps. Recoloring a PNG logo in Figma means placing a layer on top, not changing the path's color. Canva won't offer color swatches. WordPress will serve a heavy file, blurry on Retina screens. SVG solves all three problems at once.
+
+In practice, an SVG from PixelToPath gives you:
+
+- Editable paths: one color per shape, modifiable in Figma (Fill) or Canva (swatches)
+
+- A lightweight file, well under Canva's 3 MB limit, and faster to load on a WordPress site than a @2x PNG
+
+- Identical sharpness as a favicon, a LinkedIn banner, or a roll-up banner: one single file
+
+- A deliverable you can send to the client: they open it in the tool they have, not in Creative Cloud
+
+## Three destinations, one file
+
+The SVG doesn't change. Only the destination interface changes. Choose your tool, follow the clicks.
+
+### Figma
+
+Drag and drop, ungroup, change the fill. The most common design workflow.
+
+### Canva
+
+Upload, place on the design, recolor via the swatches. Ideal for posts and presentations.
+
+### WordPress
+
+Allow uploading securely, then insert the logo or icon into the site.
+
+## Figma: import the SVG and change colors
+
+Figma imports an SVG as a group of vectors, not as a photo. That's the whole point: each shape remains a layer that you recolor, move, or hide.
+
+- Download the .svg from PixelToPath and open your Figma file.
+
+- Drag the file from the explorer directly onto the canvas. Alternatively: File → Place image, or Ctrl+Shift+K (Cmd+Shift+K on Mac) to place the SVG.
+
+- The layer appears as a group. Double-click to enter it, or right-click → Ungroup (Shift+Ctrl+G / Shift+Cmd+G) if you want to manipulate the shapes one by one.
+
+- Select a path. In the right panel, Fill section, click the color swatch: hex, palette, eyedropper. The whole shape changes, the edges remain crisp.
+
+- For a monochrome logo, select all shapes in the group and apply a single color. Then export as SVG, PNG, or PDF from the Export section if the deliverable is no longer vector.
+
+If Figma displays a flat image instead of vector layers, the file embedded a bitmap (an encapsulated PNG). This is not the case with PixelToPath exports in Black & White or Poster presets. Reconvert the original with one of these two modes, not Photo.
+
+## Canva: upload the SVG and recolor
+
+Canva accepts SVGs in Free as well as Pro. Recoloring works when the file is simple: flat colors, few nodes, no gradients. This is exactly what PixelToPath produces with Poster or Black & White.
+
+- In Canva, open a design. Left panel → Uploads → Upload files. Choose your .svg (under 3 MB; a PixelToPath export is well below that).
+
+- Once the file is in your uploads, drag it onto the page. Resize it using the handles: the vector remains sharp, including in story or A4 formats.
+
+- Click the SVG. In the toolbar, color swatches appear, one for each shade in the file. Click a swatch, choose the new color: Canva applies it to all shapes of that shade.
+
+- If no swatch appears, the SVG is too complex (gradients, too many colors, Photo-style paths). Go back to PixelToPath, switch to Poster or Black & White, re-export, re-import.
+
+Canva recommends an SVG 1.1 profile, same-color shapes grouped, and zero texture. PixelToPath's logo presets already respect these constraints. No need to go through Illustrator to "prepare" the file.
+
+## WordPress: allow SVG upload without opening a vulnerability
+
+WordPress blocks SVGs by default, and it's not a whim. An SVG is XML: it can contain JavaScript, external entities, an XSS payload . A visitor, or a compromised Editor account, uploading a malicious SVG can execute code in the admin. Hence the block. You must allow the format and sanitize the file.
+
+Do not just add image/svg+xml in functions.php. Without sanitizing the file, you open a vulnerability. The secure method: a maintained plugin that purges scripts, onload events, and XML entities. Safe SVG (10up) , over a million installations.
+
+- In the WordPress admin: Plugins → Add New. Search for Safe SVG (author: 10up). Install and activate.
+
+- Go to Settings → Media. Restrict SVG uploads to administrators (or trusted roles). Do not open the format to all Author accounts if the site has multiple contributors.
+
+- Media → Add New. Drop the PixelToPath .svg. The plugin sanitizes it on import and displays a preview in the library, which WordPress doesn't do natively.
+
+- In a post or page, insert an Image block and choose the SVG. For a header logo, use Customize / Site Identity, or an Image block in the theme template (Site Editor).
+
+- Developer alternative: skip the media library. Place the file in the theme (assets/logo.svg) and reference it in the template, or inline it to style it with CSS. No upload, so no media library attack surface.
+
+Safe SVG can also restrict who has the right to upload. Keep the plugin updated: file sanitization is the real control, not just the "allow SVG" checkbox.
+
+## Which PixelToPath SVG to paste into these tools?
+
+The editor accepts what you give it. A bad preset pays off at import time: too many shapes, unselectable colors, rejected file.
+
+- Logo, icon, lettering: Black & White or Poster. These are flat colors, Figma and Canva recolor them in one click.
+
+- Avoid Photo if you plan to change colors. This mode creates a multitude of small shapes; Canva will often show no useful swatches.
+
+- Crop the original before converting: less background, fewer nodes, a cleaner SVG in the Figma layer.
+
+- One variation per use: a monochrome SVG for Figma (guidelines), a color SVG for Canva (post), the same sanitized file for WordPress (header).
+
+## Why this particular SVG fits into the workflow
+
+A converter that outputs a PNG encapsulated in an svg tag is useless to both Figma and Canva. PixelToPath outputs paths.
+
+✏️
+
+### Real paths, not a bitmap
+
+Figma sees vector layers. Canva sees shades. You change a color, you don't overlay a filter on a photo.
+
+🎨
+
+### Flat colors designed for recoloring
+
+The Black & White and Poster presets limit the number of shades. This is exactly what Figma and Canva require.
+
+📉
+
+### Light enough for Canva and WP
+
+Canva limit: 3 MB. A PixelToPath logo typically weighs a few kilobytes. WordPress serves it faster than a Retina PNG.
+
+🆓
+
+### Free, without Illustrator
+
+The client's PNG becomes an editable SVG without Creative Cloud. Figma and Canva do the rest.
+
+🔒
+
+### Client files, no storage
+
+Logos, brand guidelines, mockups: processed then ignored. Nothing is kept on the server. Suitable for NDAs.
+
+💻
+
+### Also offline
+
+The open-source Windows / Linux app vectorizes locally if the file must not leave the machine, then you import it into Figma.
+
+## Where this workflow changes the day-to-day
+
+As soon as the SVG is in the tool, you stop reconverting for each variation:
+
+- Figma guidelines: the client's PNG becomes a component that you recolor (primary, inverted, monochrome) without redrawing
+
+- Canva publications: one SVG, six campaign colors, crisp stories and carousels
+
+- WordPress logo: a file in the header, sharp on mobile and Retina, lighter than the legacy PNG
+
+- Freelance deliverable: you hand over the SVG plus the Figma / Canva instructions. The client is no longer stuck
+
+- UI Icons: import them into Figma in bulk, snap them to a 24 px grid, export the set
+
+Keep PNG for photos. For anything that needs to change color or stay crisp, the combination of PixelToPath + Figma / Canva / WordPress is enough.
+
+## Related conversion guides
+
+No SVG yet? Start with conversion, then come back to import.
+
+🔧 Vectorize a blurry logo
+
+📈 SVG vs PNG: perf and SEO
+
+✏️ Vectorize an image
+
+🌐 Online Tool
+
+## Frequently Asked Questions
+
+Figma imports my SVG as an image, not as vectors. Why?
+
+The file likely contains a bitmap (a PNG inside an image tag) rather than paths. PixelToPath exports in Black & White or Poster are paths. Reconvert with one of these presets, then drag the .svg onto the canvas again, or use File → Place image. You should see a group of layers, not a single image layer.
+
+Canva doesn't show the swatches to change colors. What can I do?
+
+Canva only recolors simple SVGs: flat colors, few shades, no gradient or texture. A Photo preset produces too many shapes. Run the image through PixelToPath again in Poster (a few flat colors) or Black & White, then re-import. Click the SVG once placed: the swatches will appear in the top bar.
+
+Is allowing SVGs on WordPress dangerous?
+
+Yes, if you just add the MIME type. An SVG can embed JavaScript. Use Safe SVG (10up): the file is sanitized upon upload, the preview shows in the media library, and you can restrict the right to administrators. Stricter alternative: place the SVG in the theme, outside the media library.
+
+Do I need Adobe Illustrator after PixelToPath?
+
+Not for this workflow. Figma is enough to recolor, ungroup, export. Canva is enough for social media variations. Illustrator remains useful for hand redrawing or a very demanding print file, not for pasting a logo into a mockup or a site.
+
+Which preset should I choose if I want to recolor the logo in Figma?
+
+Black & White for a logotype or monochrome icon: one shade, one click. Poster if the logo has two or three flat colors. Avoid Photo: you will get dozens of tiny shapes, tedious to select and recolor.
+
+## Create the SVG, then open it in your tool
+
+Upload the PNG or JPG, download the SVG, drag it into Figma, Canva, or WordPress. Free, no account, no Illustrator.
+
+Create my SVG first →
+Download the Desktop App →

@@ -17,6 +17,11 @@
     margin: 0;
     padding: 0;
 }
+/* Réserve la place de la scrollbar : évite le décalage (~15px) quand
+   body.dn-popup-open passe en overflow:hidden à l'ouverture de la popup. */
+html {
+    scrollbar-gutter: stable;
+}
 body {
     font-family: "Segoe UI", system-ui, sans-serif;
     line-height: 1.6;
@@ -40,6 +45,15 @@ a {
 .ads-slot {
     margin-top: 10px;
     margin-bottom: 10px;
+    /* Réserve la place de l'unité AdSense responsive (data-ad-format="auto"),
+       sinon ins.adsbygoogle passe de 0 à ~250px (desktop) / ~390px (mobile)
+       ~2s après le chargement et fait un CLS de 0.22 sur /online/. */
+    min-height: 250px;
+}
+@media (max-width: 768px) {
+    .ads-slot {
+        min-height: 390px;
+    }
 }
 ol {
     margin: 0;

@@ -70,8 +70,8 @@ body.dn-popup-open {
 }
 
 .dn-popup__close {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border: 0;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.08);
@@ -213,8 +213,8 @@ body.dn-popup-open {
 .dn-carousel__nav {
     position: absolute;
     top: 58%;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     display: grid;
     place-items: center;
     border: 0;
@@ -237,21 +237,34 @@ body.dn-popup-open {
 .dn-carousel__dots {
     display: flex;
     justify-content: center;
-    gap: 8px;
-    padding: 12px 0 6px;
+    align-items: center;
+    padding: 2px 0 0;
 }
 
 .dn-carousel__dots button {
-    width: 8px;
-    height: 8px;
+    position: relative;
+    width: 44px;
+    height: 44px;
     padding: 0;
     border: 0;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.28);
+    background: transparent;
     cursor: pointer;
 }
 
-.dn-carousel__dots button.is-active {
+.dn-carousel__dots button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    transform: translate(-50%, -50%);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.28);
+    transition: width 0.2s ease, background 0.2s ease;
+}
+
+.dn-carousel__dots button.is-active::after {
     width: 22px;
     background: var(--primary);
 }
@@ -357,8 +370,6 @@ body.dn-popup-open {
     .dn-carousel__nav {
         top: auto;
         bottom: 44px;
-        width: 36px;
-        height: 36px;
     }
 
     .dn-bar {

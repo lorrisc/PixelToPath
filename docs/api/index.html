@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelToPath API – Image to SVG REST API, 10 Free Conversions/Month</title>
+    <meta name="description" content="Convert PNG, JPG, BMP or WebP to clean SVG with one REST call. Potrace for black &amp; white line art, VTracer for color vectors. 10 free conversions every month, prepaid images from €0.05 (down to €0.01/image at volume), credits never expire.">
+    <meta name="keywords" content="pixeltopath api, image to svg api, png to svg rest api, vectorize api, potrace api, vtracer api, svg converter api">
+    <meta name="author" content="Lorris C.">
+
+    <meta property="og:title" content="PixelToPath API – Image to SVG REST API, 10 Free Conversions/Month">
+    <meta property="og:description" content="Convert PNG, JPG, BMP or WebP to clean SVG with one REST call. Potrace for black &amp; white line art, VTracer for color vectors. 10 free conversions every month, prepaid images from €0.05 (down to €0.01/image at volume), credits never expire.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="PixelToPath app screenshot">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PixelToPath API – Image to SVG REST API, 10 Free Conversions/Month">
+    <meta name="twitter:description" content="Convert PNG, JPG, BMP or WebP to clean SVG with one REST call. Potrace for black &amp; white line art, VTracer for color vectors. 10 free conversions every month, prepaid images from €0.05 (down to €0.01/image at volume), credits never expire.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="PixelToPath app screenshot">
+    <meta property="og:url" content="https://pixel-to-path.com/api/">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://pixel-to-path.com/api/" />
+
+    <link rel="stylesheet" href="../assets/css/bundle.bca844cf.css">
+
+
+
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebService",
+  "@id": "https://pixel-to-path.com/api/#api",
+  "name": "PixelToPath API",
+  "url": "https://pixel-to-path.com/api/",
+  "description": "Convert PNG, JPG, BMP or WebP to clean SVG with one REST call. Potrace for black & white line art, VTracer for color vectors. 10 free conversions every month, prepaid images from €0.05 (down to €0.01/image at volume), credits never expire.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://pixel-to-path.com/#organization",
+    "name": "PixelToPath"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "10 free conversions per month, credit packs of 50 permanent credits."
+  },
+  "isPartOf": {
+    "@id": "https://pixel-to-path.com/#website"
+  }
+}</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What counts as one conversion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One successful POST /v1/convert call that returns an SVG. Failed calls (invalid image, wrong parameters, rate limited, server error) and GET /v1/me calls are never charged."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the monthly free quota counted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per account, on the UTC calendar month — it resets on the 1st at 00:00 UTC. Creating several API keys does not multiply the free quota: all keys of an account share the same 10 free conversions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do credits expire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Purchased credits stay on your account until you use them. They are consumed only after your 10 free monthly conversions are exhausted."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get more conversions in a month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Buy prepaid images from the client portal — any quantity, in batches of 50. You always see exactly how many images you get: 50 images €2.50, 500 images €20, 2,500 €75, 10,000 €200, 50,000 €500. Credits are added to your account automatically within seconds of the payment — no license key, nothing to enter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I lose my API key?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Keys are stored hashed, so they cannot be recovered. Revoke the lost key in the portal and create a new one — it takes effect immediately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which image formats are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG, JPEG, BMP and WebP, up to 20 MB and 50 megapixels, at least 64×64 pixels. Images larger than 1500 px on their longest side are resized before conversion, exactly like on the free website."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "API",
+      "item": "https://pixel-to-path.com/api/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/" class="brand">
+            <img src="../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/"
+            class="">Home</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Products <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/online/"
+                       class="">Online Tool</a>
+                    <a href="/offline/"
+                       class="">Desktop App</a>
+                    <a href="/pro/"
+                       class="">Desktop App Pro</a>
+                    <a href="/api/" class="active">API</a>
+                </div>
+            </div>
+
+            <a href="/pricing/" class="">Pricing</a>
+
+            <div class="lang-switch">
+                <span>🇺🇸 EN</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Home</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">Products</span>
+            <div class="mobile-sublist">
+                <a href="/online/"
+                   class="">Online Tool</a>
+                <a href="/offline/"
+                   class="">Desktop App</a>
+                <a href="/pro/"
+                   class="">Desktop App Pro</a>
+                <a href="/api/" class="active">API</a>
+            </div>
+
+            <a href="/pricing/" class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Pricing</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Language</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- Hero -->
+        <div class="api-hero">
+            <div class="container">
+                <span class="api-tag">API</span>
+                <h1>PixelToPath API</h1>
+                <p class="api-hero__text">Vectorize images programmatically with <strong>one REST call</strong>. Upload a PNG, JPG, BMP or WebP file, get a clean, production-ready SVG back. Black &amp; white line art is traced by <strong>Potrace</strong>, color images by <strong>VTracer</strong> — the same engines as the free online converter.</p>
+                <div class="api-hero__cta">
+                    <a class="btn primary-btn big-btn" href="/portal/"> Get your API key</a>
+                    <a class="btn secondary-btn big-btn" href="/portal/">Sign in to portal</a>
+                    <a class="api-hero__docs" href="#quickstart">Read the docs ↓</a>
+                </div>
+                <p class="api-hero__note">10 free conversions every month · No credit card required</p>
+            </div>
+        </div>
+
+        <!-- Accroche -->
+        <div class="api-strip">
+            <div class="container">
+                <p>10 free conversions / month • <strong>1 REST call</strong> • Potrace + VTracer engines • Credits <strong>never expire</strong></p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="api-body">
+            <div class="container">
+                <div class="api-layout">
+
+                    <!-- TOC -->
+                    <aside class="api-toc">
+                        <p class="api-toc__title">On this page</p>
+                        <ul>
+                            <li><a href="#quickstart">Quickstart</a></li>
+                            <li><a href="#authentication">Authentication</a></li>
+                            <li><a href="#convert">POST /v1/convert</a></li>
+                            <li><a href="#engines">Engines</a></li>
+                            <li><a href="#response">Response</a></li>
+                            <li><a href="#errors">Errors</a></li>
+                            <li><a href="#limits">Rate limits</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#examples">Code examples</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Content -->
+                    <article class="api-content">
+
+                        <!-- Quickstart -->
+                        <section id="quickstart" class="api-section">
+                            <h2>Quickstart</h2>
+                            <p>Three steps and you are converting images to SVG from your terminal, your scripts or your app.</p>
+                            <div class="api-steps">
+                                <div class="api-step">
+                                    <h3>1 · Create your account</h3>
+                                    <p>Register on the client portal with your email and a password (10+ characters). No credit card required.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>2 · Create an API key</h3>
+                                    <p>In the portal, create a key. It is shown <strong>once</strong> — store it safely. Keys look like <code>ptp_live_…</code> and can be revoked at any time.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>3 · Call /v1/convert</h3>
+                                    <p>Send your image as multipart/form-data with your key in the Authorization header. The SVG comes back in the response body.</p>
+                                </div>
+                            </div>
+
+                            <p class="api-code-label">Your first conversion</p>
+                            <pre class="api-code"><code>curl -X POST https://pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@logo.png" \
+  -F "colormode=binary" \
+  -o logo.svg</code></pre>
+                            <p class="api-note">Interactive reference: <a href="https://pixel-to-path.com/v1/docs">pixel-to-path.com/v1/docs</a> (OpenAPI/Swagger).</p>
+                        </section>
+
+                        <!-- Authentication -->
+                        <section id="authentication" class="api-section">
+                            <h2>Authentication</h2>
+                            <p>Every request is authenticated with a Bearer token in the <code>Authorization</code> header:</p>
+                            <pre class="api-code"><code>Authorization: Bearer ptp_live_0123abc…</code></pre>
+                            <ul class="api-list">
+                                <li><strong>Keys are secrets:</strong> they are stored hashed server-side and displayed only once at creation. Lost key? Revoke it and create a new one.</li>
+                                <li><strong>One account, several keys:</strong> create up to 5 active keys to separate your projects. Your monthly free quota is counted per account, not per key.</li>
+                                <li><strong>Instant revocation:</strong> a revoked key stops working immediately, from the portal or the API response of a banned account.</li>
+                            </ul>
+                        </section>
+
+                        <!-- POST /v1/convert -->
+                        <section id="convert" class="api-section">
+                            <h2><span class="api-method api-method--post">POST</span> /v1/convert</h2>
+                            <p>Upload + conversion in a single stateless call. One successful call costs at most 1 credit — failed, invalid or rate-limited calls cost nothing.</p>
+
+                            <h3>Request (multipart/form-data)</h3>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Field</th>
+                                            <th>Type</th>
+                                            <th>Default</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>file</code></td>
+                                            <td>file</td>
+                                            <td>—</td>
+                                            <td>The image to convert. PNG, JPEG, BMP or WebP · max 20 MB · max 50 Mpx · min 64×64 px.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>colormode</code></td>
+                                            <td>string</td>
+                                            <td><code>color</code></td>
+                                            <td>&lt;code&gt;color&lt;/code&gt; uses the VTracer engine, &lt;code&gt;binary&lt;/code&gt; uses Potrace (black &amp; white).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>mode</code></td>
+                                            <td>string</td>
+                                            <td><code>spline</code></td>
+                                            <td>Color (VTracer) only — ignored in binary mode. <code>spline</code> | <code>polygon</code> | <code>none</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>hierarchical</code></td>
+                                            <td>string</td>
+                                            <td><code>stacked</code></td>
+                                            <td>Color (VTracer) only — ignored in binary mode. <code>stacked</code> | <code>cutout</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>filter_speckle</code></td>
+                                            <td>int</td>
+                                            <td><code>4</code></td>
+                                            <td>Color (VTracer) only — ignored in binary mode. 0–16 — remove small noise patches.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>color_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>6</code></td>
+                                            <td>Color (VTracer) only — ignored in binary mode. 1–8 — number of significant bits per color channel.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>layer_difference</code></td>
+                                            <td>int</td>
+                                            <td><code>16</code></td>
+                                            <td>Color (VTracer) only — ignored in binary mode. 0–64 — distance between color layers.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>corner_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>60</code></td>
+                                            <td>0–180 — corner detection angle (both engines).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>length_threshold</code></td>
+                                            <td>float</td>
+                                            <td><code>4.0</code></td>
+                                            <td>3.5–10 — minimum segment length (both engines).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>splice_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>45</code></td>
+                                            <td>0–180 — path splicing angle (both engines).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>path_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>3</code></td>
+                                            <td>0–8 — decimal digits in path coordinates.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>invert</code></td>
+                                            <td>bool</td>
+                                            <td><code>false</code></td>
+                                            <td>Binary (Potrace) only — ignored in color mode. Trace the light areas instead of the dark ones.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>turdsize</code></td>
+                                            <td>int</td>
+                                            <td><code>2</code></td>
+                                            <td>Binary (Potrace) only — ignored in color mode. 0–20 — suppress speckles up to this size.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>alphamax</code></td>
+                                            <td>float</td>
+                                            <td><code>1.0</code></td>
+                                            <td>Binary (Potrace) only — ignored in color mode. 0–1.334 — corner smoothing threshold.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>opttolerance</code></td>
+                                            <td>float</td>
+                                            <td><code>0.2</code></td>
+                                            <td>Binary (Potrace) only — ignored in color mode. 0–10 — curve optimization tolerance.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Engines -->
+                        <section id="engines" class="api-section">
+                            <h2>Two engines, chosen by &#34;colormode&#34;</h2>
+                            <p>The API runs the exact same engines as the free online converter and the desktop app:</p>
+                            <div class="grid-3">
+                                <div class="card api-engine">
+                                    <h3>binary — Potrace</h3>
+                                    <p>Black &amp; white tracing of line art, scans, sketches and logos. The dark part of the image (grayscale &lt; 50%) is traced on a white background. Fine-tune the output with <code>turdsize</code> (noise removal), <code>alphamax</code> (corner smoothing) and <code>opttolerance</code> (path optimization).</p>
+                                </div>
+                                <div class="card api-engine">
+                                    <h3>color — VTracer</h3>
+                                    <p>Layered color vectorization for illustrations, cartoons and photos. Control the level of detail with <code>filter_speckle</code>, <code>color_precision</code>, <code>layer_difference</code> and the curve fitting with <code>mode</code> (spline, polygon, none).</p>
+                                </div>
+                            </div>
+                            <p class="api-note">Images are preprocessed exactly like on the website: the longest side is resized to 1500 px before conversion, and the API returns the detected image type (<code>line_art</code>, <code>logo</code>, <code>photo</code> or <code>illustration</code>) in the <code>X-Detected-Type</code> header.</p>
+                        </section>
+
+                        <!-- Response -->
+                        <section id="response" class="api-section">
+                            <h2>Response</h2>
+                            <p>On success: <code>200 OK</code> with <code>image/svg+xml</code> — the body is the SVG file itself. Informative headers:</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Header</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><code>X-Credits-Remaining</code></td><td>Paid credits left on the account, after this call&#39;s debit.</td></tr>
+                                        <tr><td><code>X-Free-Remaining</code></td><td>Free conversions left this month.</td></tr>
+                                        <tr><td><code>X-Detected-Type</code></td><td>Detected image type (info): line_art, logo, photo or illustration.</td></tr>
+                                        <tr><td><code>X-Processing-Time</code></td><td>Server processing time in seconds.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>GET /v1/me</h3>
+                            <p>Account status for the key used to call it. <strong>Free</strong> — never counted against your quota, never debited.</p>
+                            <p class="api-code-label">Example response</p>
+                            <pre class="api-code"><code>GET /v1/me
+Authorization: Bearer ptp_live_…
+
+{
+  "key": { "name": "prod", "prefix": "ptp_live_0123abc", … },
+  "usage": {
+    "month": "2026-09", "free_used": 7, "free_limit": 10,
+    "free_remaining": 3, "resets_at": "2026-10-01T00:00:00+00:00"
+  },
+  "credits": { "balance": 120 }
+}</code></pre>
+                        </section>
+
+                        <!-- Errors -->
+                        <section id="errors" class="api-section">
+                            <h2>Errors</h2>
+                            <p>Every error returns a consistent JSON envelope. Failed calls never consume credits.</p>
+                            <pre class="api-code"><code>HTTP/1.1 402 Payment Required
+{
+  "error": {
+    "code": "quota_exceeded",
+    "message": "Monthly free quota used and no credits left.",
+    "usage": { "free_used": 10, "free_limit": 10, "credits": 0 }
+  }
+}</code></pre>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>HTTP</th>
+                                            <th>Code</th>
+                                            <th>When</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>401</td><td><code>invalid_api_key</code></td><td>Missing, malformed, unknown or revoked API key.</td></tr>
+                                        <tr><td>402</td><td><code>quota_exceeded</code></td><td>Monthly free quota used and no credits left.</td></tr>
+                                        <tr><td>403</td><td><code>account_banned</code></td><td>The account is banned — all its keys are refused.</td></tr>
+                                        <tr><td>403</td><td><code>ip_blocked</code></td><td>Caller IP is blocklisted.</td></tr>
+                                        <tr><td>413</td><td><code>file_too_large</code></td><td>File larger than 20 MB.</td></tr>
+                                        <tr><td>422</td><td><code>invalid_image</code> / <code>image_too_small</code> / <code>invalid_params</code></td><td>Invalid image, image too small or invalid parameter value.</td></tr>
+                                        <tr><td>429</td><td><code>rate_limited</code></td><td>Per-key rate limit exceeded (see below). Includes a Retry-After header.</td></tr>
+                                        <tr><td>500</td><td><code>internal_error</code></td><td>Conversion failed server-side — no credit is charged.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Rate limits -->
+                        <section id="limits" class="api-section">
+                            <h2>Rate limits</h2>
+                            <p>Limits apply per API key, not per IP, so a shared office or CI runner is never penalized for someone else&#39;s traffic.</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Limit</th>
+                                            <th>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Requests per minute, per key</td><td><strong>60</strong></td></tr>
+                                        <tr><td>Requests per day, per key</td><td><strong>2 000</strong></td></tr>
+                                        <tr><td>Concurrent conversions, per key</td><td>2 (extra calls wait, then 429)</td></tr>
+                                        <tr><td>Max file size / resolution</td><td>20 MB / 50 Mpx</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Pricing -->
+                        <section id="pricing" class="api-section">
+                            <h2>Pricing</h2>
+                            <p>Every new account gets <strong>10 free conversions every month</strong>, no credit card required. Need more? Buy prepaid images — any quantity (in batches of 50), with volume discounts. They never expire and stack with your monthly free quota (free conversions are consumed first).</p>
+                            <div class="api-pricing">
+                                <div class="card api-price-card">
+                                    <h3>Free</h3>
+                                    <p class="api-price">€0<span>/month</span></p>
+                                    <ul class="checklist">
+                                        <li>10 conversions / month</li>
+                                        <li>Both engines (Potrace + VTracer)</li>
+                                        <li>Up to 5 API keys</li>
+                                    </ul>
+                                    <a class="btn secondary-btn" href="/portal/">Create an account</a>
+                                </div>
+                                <div class="card api-price-card api-price-card--highlight">
+                                    <h3>Prepaid images</h3>
+                                    <p class="api-price">€0.050<span>/ image</span></p>
+                                    <table class="tiers">
+                                        <caption>Volume pricing — the more images you buy, the cheaper each one gets</caption>
+                                        <tr><th scope="row">Images</th><td>50–450</td><td>500–2 450</td><td>2 500–9 950</td><td>10 000–49 950</td><td>50 000+</td></tr>
+                                        <tr><th scope="row">€/image</th><td>0.050</td><td>0.040</td><td>0.030</td><td>0.020</td><td>0.010</td></tr>
+                                    </table>
+                                    <ul class="checklist">
+                                        <li>1 image bought = 1 conversion (credits never expire)</li>
+                                        <li>Never expires, stacks with the free tier</li>
+                                        <li>Any quantity: €0.040/image from 500, down to €0.010/image</li>
+                                    </ul>
+                                    <a class="btn primary-btn" href="/portal/">Buy images</a>
+                                </div>
+                            </div>
+                            <p class="api-note">Automatic credit: your balance is updated within seconds of the payment, via the payment webhook. Refunds deduct the purchased credits, capped at the current balance. Secure checkout by Lemon Squeezy (VAT handled automatically).</p>
+                        </section>
+
+                        <!-- Code examples -->
+                        <section id="examples" class="api-section">
+                            <h2>Code examples</h2>
+                            <p>Copy-paste and adapt. The API speaks plain multipart/form-data, so any HTTP client works.</p>
+
+                            <p class="api-code-label">cURL</p>
+                            <pre class="api-code"><code>curl -X POST https://pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@photo.jpg" \
+  -F "colormode=color" \
+  -F "filter_speckle=4" \
+  -o photo.svg</code></pre>
+
+                            <p class="api-code-label">Python</p>
+                            <pre class="api-code"><code>import requests
+
+resp = requests.post(
+    "https://pixel-to-path.com/v1/convert",
+    headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
+    files={"file": open("photo.jpg", "rb")},
+    data={"colormode": "color", "filter_speckle": 4},
+)
+resp.raise_for_status()
+print(resp.headers["X-Credits-Remaining"], "credits left")
+with open("photo.svg", "wb") as f:
+    f.write(resp.content)</code></pre>
+
+                            <p class="api-code-label">JavaScript</p>
+                            <pre class="api-code"><code>const form = new FormData();
+form.append("file", new Blob([imageBytes]), "photo.jpg");
+form.append("colormode", "color");
+
+const resp = await fetch("https://pixel-to-path.com/v1/convert", {
+  method: "POST",
+  headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
+  body: form,
+});
+if (!resp.ok) {
+  const { error } = await resp.json();
+  throw new Error(`${error.code}: ${error.message}`);
+}
+const svg = await resp.text();
+console.log(resp.headers.get("X-Credits-Remaining"), "credits left");</code></pre>
+                        </section>
+
+                        <!-- FAQ -->
+                        <section id="faq" class="api-section">
+                            <h2>Frequently asked questions</h2>
+                            <details class="api-faq-item">
+                                <summary>What counts as one conversion?</summary>
+                                <p>One successful POST /v1/convert call that returns an SVG. Failed calls (invalid image, wrong parameters, rate limited, server error) and GET /v1/me calls are never charged.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>How is the monthly free quota counted?</summary>
+                                <p>Per account, on the UTC calendar month — it resets on the 1st at 00:00 UTC. Creating several API keys does not multiply the free quota: all keys of an account share the same 10 free conversions.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Do credits expire?</summary>
+                                <p>No. Purchased credits stay on your account until you use them. They are consumed only after your 10 free monthly conversions are exhausted.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>How do I get more conversions in a month?</summary>
+                                <p>Buy prepaid images from the client portal — any quantity, in batches of 50. You always see exactly how many images you get: 50 images €2.50, 500 images €20, 2,500 €75, 10,000 €200, 50,000 €500. Credits are added to your account automatically within seconds of the payment — no license key, nothing to enter.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>What happens if I lose my API key?</summary>
+                                <p>Keys are stored hashed, so they cannot be recovered. Revoke the lost key in the portal and create a new one — it takes effect immediately.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Which image formats are supported?</summary>
+                                <p>PNG, JPEG, BMP and WebP, up to 20 MB and 50 megapixels, at least 64×64 pixels. Images larger than 1500 px on their longest side are resized before conversion, exactly like on the free website.</p>
+                            </details>
+                        </section>
+
+                        <!-- Autres versions -->
+                        <!-- Versions : les 4 façons d'utiliser PixelToPath (clés pv_* — fallback EN) -->
+<section class="section versions-section">
+    <div class="container">
+        <h2 class="section-title">Choose Your Version</h2>
+        <p class="section-intro">Same powerful engine - pick the format that fits your workflow.</p>
+
+        <div class="versions-grid">
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🌐</div>
+                <h3>Online Tool</h3>
+                <p class="versions-card__price">Free</p>
+                <p class="versions-card__desc">Convert images right in your browser. No install, no account.</p>
+                <a class="btn secondary-btn versions-card__cta" href="online/">Open the tool</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">💻</div>
+                <h3>Desktop App</h3>
+                <p class="versions-card__price">Free &amp; open source</p>
+                <p class="versions-card__desc">The full converter on your machine, for Windows &amp; Linux.</p>
+                <a class="btn secondary-btn versions-card__cta" href="offline/">Download free</a>
+            </article>
+
+            <article class="card versions-card versions-card--highlight">
+                <div class="versions-card__icon">⌨️</div>
+                <h3>Desktop App Pro</h3>
+                <p class="versions-card__price">€39 one-time</p>
+                <p class="versions-card__desc">Hot folder, batch conversion and CLI for heavy workloads.</p>
+                <a class="btn primary-btn versions-card__cta" href="pro/">Get Pro</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🔌</div>
+                <h3>API</h3>
+                <p class="versions-card__price">Free tier + credit packs</p>
+                <p class="versions-card__desc">One REST call: send an image, get a clean SVG. 10 free/month.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/api/">Get an API key</a>
+            </article>
+
+        </div>
+
+        <p class="versions-links">
+            <a href="/pricing/">Compare all versions &amp; pricing →</a>
+        </p>
+        <p class="versions-links versions-links--portal">
+            Already have an account?
+            <a href="/portal/">Sign in to the client portal →</a>
+        </p>
+    </div>
+</section>
+
+
+                        <!-- CTA finale -->
+                        <section class="api-cta">
+                            <h2>Ready to vectorize at scale?</h2>
+                            <p>Create your account, grab a key and make your first call in under two minutes.</p>
+                            <a class="btn primary-btn big-btn" href="/portal/">Get your free API key</a>
+                        </section>
+
+                        <p class="api-footer-note">Questions about the API? Open an issue on <a href="https://github.com/lorrisc/PixelToPath" target="_blank" rel="noopener">GitHub</a>.</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/">Home</a>
+        <a href="/online/">Online Tool</a>
+        <a href="/offline/">Desktop App</a>
+        <a href="/pro/">Pro</a>
+        <a href="/api/">API</a>
+        <a href="/blog/">Blog</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Client Portal</a>
+    </div>
+</footer>
+
+<script src="../assets/js/docunest-strings.js" defer></script>
+<script src="../assets/js/docunest-popup.js" data-asset="../assets/" defer></script>
+
+
+
+
+    <script defer src="../assets/js/ui-state.js"></script>
+</body>
+</html>

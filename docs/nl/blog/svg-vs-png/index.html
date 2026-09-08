@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" dir="ltr">
 <head>
     <script>
     var _paq = window._paq = window._paq || [];
@@ -14,6 +14,9 @@
         g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
     })();
 </script>
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,12 +28,23 @@
 
     <meta property="og:title" content="SVG vs PNG/JPG: Core Web Vitals en SEO | PixelToPath">
     <meta property="og:description" content="Vervang PNG/JPG logo&#39;s en iconen door SVG: kleinere bestanden, scherp op Retina en 4K, betere LCP en CLS. Gids voor ontwikkelaars en SEO.">
-    <meta property="og:image" content="../../../assets/images/screenshot.png">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-photo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a photo next to its vectorized SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SVG vs PNG/JPG: Core Web Vitals en SEO | PixelToPath">
+    <meta name="twitter:description" content="Vervang PNG/JPG logo&#39;s en iconen door SVG: kleinere bestanden, scherp op Retina en 4K, betere LCP en CLS. Gids voor ontwikkelaars en SEO.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-photo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a photo next to its vectorized SVG output by PixelToPath">
     <meta property="og:url" content="https://pixel-to-path.com/nl/blog/svg-vs-png/">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="PixelToPath">
 
     <link rel="canonical" href="https://pixel-to-path.com/nl/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/svg-vs-png/">
     
     <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/svg-vs-png/">
     
@@ -66,111 +80,194 @@
     
     <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/svg-vs-png/">
     
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/svg-vs-png/">
+    
     <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/svg-vs-png/">
     
     <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/svg-vs-png/">
     
     <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/nl/blog/svg-vs-png/">
 
-    <link rel="stylesheet" href="../../../assets/css/style.css">
-    <link rel="stylesheet" href="../../../assets/css/components.css">
-    <link rel="stylesheet" href="../../../assets/css/containers.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/footer.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/navbar.css">
-    <link rel="stylesheet" href="../../../assets/css/partials/donate.css">
-    <link rel="stylesheet" href="../../../assets/css/pages/blog-page.css">
+    <link rel="stylesheet" href="../../../assets/css/bundle.d34e5a48.css">
 
     <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
 
     <!-- Schema: BlogPosting -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "SVG vs PNG/JPG: waarom het vectorformaat essentieel is voor prestaties en SEO",
-        "description": "Vervang PNG/JPG logo&#39;s en iconen door SVG: kleinere bestanden, scherp op Retina en 4K, betere LCP en CLS. Gids voor ontwikkelaars en SEO.",
-        "url": "https://pixel-to-path.com/nl/blog/svg-vs-png/",
-        "inLanguage": "fr",
-        "author": { "@type": "Person", "name": "Lorris C." },
-        "publisher": { "@type": "Person", "name": "Lorris C." }
-    }
-    </script>
-
-    <!-- Schema: WebApplication -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "PixelToPath – SVG vs PNG/JPG: Core Web Vitals en SEO | PixelToPath",
-        "url": "https://pixel-to-path.com/fr/online/",
-        "description": "Vervang PNG/JPG logo&#39;s en iconen door SVG: kleinere bestanden, scherp op Retina en 4K, betere LCP en CLS. Gids voor ontwikkelaars en SEO.",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Any",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": 5,
-            "reviewCount": 1
-        }
-    }
-    </script>
-
-    <!-- Schema: HowTo -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "Hoe u een PNG of JPG logo lichter maakt met SVG (3 stappen)",
-        "step": [
-            { "@type": "HowToStep", "name": "Upload de PNG of JPG", "text": "Sleep het logo, het icoon of het pictogram dat momenteel als PNG of JPG wordt geserveerd. Hoe eenvoudiger het ontwerp (effen achtergrond, scherpe randen), hoe lichter de SVG zal zijn." },
-            { "@type": "HowToStep", "name": "Kies de juiste preset", "text": "Zwart &amp; Wit voor een logotype of een monochroom icoon. Poster als het logo enkele platte kleuren heeft. Vermijd Foto: te veel detail maakt de SVG zwaarder zonder visuele winst voor een logo." },
-            { "@type": "HowToStep", "name": "Integreer de SVG op de site", "text": "Download het bestand en serveer het als afbeelding, in een sprite of als inline SVG. Eén enkel bestand vervangt de @1x, @2x en @3x varianten." }
-        ]
-    }
-    </script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/nl/blog/svg-vs-png/#article",
+  "headline": "SVG vs PNG/JPG: waarom het vectorformaat essentieel is voor prestaties en SEO",
+  "description": "Vervang PNG/JPG logo's en iconen door SVG: kleinere bestanden, scherp op Retina en 4K, betere LCP en CLS. Gids voor ontwikkelaars en SEO.",
+  "url": "https://pixel-to-path.com/nl/blog/svg-vs-png/",
+  "mainEntityOfPage": "https://pixel-to-path.com/nl/blog/svg-vs-png/",
+  "inLanguage": "nl",
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-09-09",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/nl/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-photo.jpg"
+}</script>
 
     <!-- Schema: FAQPage -->
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            { "@type": "Question", "name": "Is een SVG altijd lichter dan een PNG of JPG?", "acceptedAnswer": { "@type": "Answer", "text": "Voor een logo, icoon of platte illustratie: ja, bijna altijd, vooral als u de PNG vergelijkt met zijn Retina-versie. Voor een foto, nee: een &#39;foto&#39; SVG wordt een complexe wolk van paden die zwaarder is dan een JPG of WebP. Vectoriseer de interface, comprimeer foto&#39;s." } },
-            { "@type": "Question", "name": "Verbetert SVG echt de Core Web Vitals en SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Het verbetert wat interface-afbeeldingen kunnen verbeteren: minder bytes (LCP als het logo of de illustratie het hoofdelement is), een voorspelbaar weergavevak (CLS), minder varianten om te downloaden. Google gebruikt snelheid als signaal, vooral op mobiel. Het is geen magische ranking-snelkoppeling, het is technische hygiëne die wordt gemeten in PageSpeed Insights." } },
-            { "@type": "Question", "name": "Moet ik alle afbeeldingen op de site vervangen door SVG?", "acceptedAnswer": { "@type": "Answer", "text": "Nee. Foto&#39;s, screenshots, texturen, complexe gradiënten: JPG, WebP of AVIF. SVG is voor logo&#39;s, iconen, schema&#39;s, pictogrammen, platte illustraties. Een te gedetailleerde SVG kan INP schaden. De Foto-preset in PixelToPath wordt gebruikt om te stileren, niet om een content-JPEG te vervangen." } },
-            { "@type": "Question", "name": "Hoe kan ik een SVG integreren zonder CLS te veroorzaken?", "acceptedAnswer": { "@type": "Answer", "text": "Geef altijd een breedte en hoogte (of een CSS aspect-ratio) op die overeenkomen met de viewBox. Met een image-tag (src, width, height, alt) reserveert de browser de ruimte vóór het downloaden. Bij inline SVG, behoud de viewBox en vermijd het injecteren van de code ná de eerste weergave zonder afmetingen." } },
-            { "@type": "Question", "name": "Hoe krijg ik een SVG logo van een PNG met PixelToPath?", "acceptedAnswer": { "@type": "Answer", "text": "Open de online tool, upload de PNG (idealiter op een transparante achtergrond, vrij groot), kies Zwart &amp; Wit of Poster, pas de details aan en converteer. Open de SVG in de browser of Figma om de randen te controleren en serveer het vervolgens in productie. Gratis, geen account, bestanden worden niet bewaard." } }
-        ]
+      "@type": "Question",
+      "name": "Is een SVG altijd lichter dan een PNG of JPG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Voor een logo, icoon of platte illustratie: ja, bijna altijd, vooral als u de PNG vergelijkt met zijn Retina-versie. Voor een foto, nee: een 'foto' SVG wordt een complexe wolk van paden die zwaarder is dan een JPG of WebP. Vectoriseer de interface, comprimeer foto's."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Verbetert SVG echt de Core Web Vitals en SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Het verbetert wat interface-afbeeldingen kunnen verbeteren: minder bytes (LCP als het logo of de illustratie het hoofdelement is), een voorspelbaar weergavevak (CLS), minder varianten om te downloaden. Google gebruikt snelheid als signaal, vooral op mobiel. Het is geen magische ranking-snelkoppeling, het is technische hygiëne die wordt gemeten in PageSpeed Insights."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Moet ik alle afbeeldingen op de site vervangen door SVG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nee. Foto's, screenshots, texturen, complexe gradiënten: JPG, WebP of AVIF. SVG is voor logo's, iconen, schema's, pictogrammen, platte illustraties. Een te gedetailleerde SVG kan INP schaden. De Foto-preset in PixelToPath wordt gebruikt om te stileren, niet om een content-JPEG te vervangen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hoe kan ik een SVG integreren zonder CLS te veroorzaken?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Geef altijd een breedte en hoogte (of een CSS aspect-ratio) op die overeenkomen met de viewBox. Met een image-tag (src, width, height, alt) reserveert de browser de ruimte vóór het downloaden. Bij inline SVG, behoud de viewBox en vermijd het injecteren van de code ná de eerste weergave zonder afmetingen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hoe krijg ik een SVG logo van een PNG met PixelToPath?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open de online tool, upload de PNG (idealiter op een transparante achtergrond, vrij groot), kies Zwart & Wit of Poster, pas de details aan en converteer. Open de SVG in de browser of Figma om de randen te controleren en serveer het vervolgens in productie. Gratis, geen account, bestanden worden niet bewaard."
+      }
     }
-    </script>
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/nl/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Leer Afbeelding-naar-SVG Conversie",
+      "item": "https://pixel-to-path.com/nl/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SVG vs PNG/JPG: waarom het vectorformaat essentieel is voor prestaties en SEO",
+      "item": "https://pixel-to-path.com/nl/blog/svg-vs-png/"
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
     <nav class="navbar">
     <div class="container nav-container">
 
-        <a href="/nl/"" class="brand">
+        <a href="/nl/" class="brand">
             <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
             PixelToPath
         </a>
 
         <div class="nav-links">
 
-            <a href="/nl/" 
+            <a href="/nl/"
             class="">Home</a>
 
-            <a href="/nl/online/" 
-            class="">Online Tool</a>
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Producten <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/nl/online/"
+                       class="">Online Tool</a>
+                    <a href="/nl/offline/"
+                       class="">Desktop App</a>
+                    <a href="/nl/pro/"
+                       class="">Desktopapp Pro</a>
+                    <a href="/api/" class="">API</a>
+                </div>
+            </div>
 
-            <a href="/nl/offline/" 
-            class="">Desktop App</a>
-            
-            <a href="https://github.com/lorrisc/PixelToPath" target="_blank">GitHub</a>
+            <a href="/pricing/" class="">Prijzen</a>
 
             <div class="lang-switch">
                 <span>🇳🇱 NL</span>
                 <div class="lang-dropdown">
                     
+                    <a href="https://pixel-to-path.com/ar/blog/svg-vs-png/">🇸🇦 العربية</a>
                     <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/">🇧🇩 বাংলা</a>
                     <a href="https://pixel-to-path.com/de/blog/svg-vs-png/">🇩🇪 Deutsch</a>
                     <a href="https://pixel-to-path.com/blog/svg-vs-png/">🇺🇸 English</a>
@@ -188,6 +285,7 @@
                     <a href="https://pixel-to-path.com/th/blog/svg-vs-png/">🇹🇭 ไทย</a>
                     <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/">🇹🇷 Türkçe</a>
                     <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/svg-vs-png/">🇵🇰 اردو</a>
                     <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/">🇻🇳 Tiếng Việt</a>
                     <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/">🇨🇳 中文 (简体)</a>
                 </div>
@@ -214,19 +312,21 @@
                 <span class="mobile-link-number">01</span>
                 <span class="mobile-link-text">Home</span>
             </a>
-            <a href="/nl/online/"
-               class="mobile-link ">
+
+            <span class="mobile-link mobile-link--group">Producten</span>
+            <div class="mobile-sublist">
+                <a href="/nl/online/"
+                   class="">Online Tool</a>
+                <a href="/nl/offline/"
+                   class="">Desktop App</a>
+                <a href="/nl/pro/"
+                   class="">Desktopapp Pro</a>
+                <a href="/api/" class="">API</a>
+            </div>
+
+            <a href="/pricing/" class="mobile-link ">
                 <span class="mobile-link-number">02</span>
-                <span class="mobile-link-text">Online Tool</span>
-            </a>
-            <a href="/nl/offline/"
-               class="mobile-link ">
-                <span class="mobile-link-number">03</span>
-                <span class="mobile-link-text">Desktop App</span>
-            </a>
-            <a href="https://github.com/lorrisc/PixelToPath" target="_blank" class="mobile-link">
-                <span class="mobile-link-number">04</span>
-                <span class="mobile-link-text">GitHub</span>
+                <span class="mobile-link-text">Prijzen</span>
             </a>
         </div>
 
@@ -235,6 +335,7 @@
                 <span class="mobile-lang-label">Taal</span>
                 <div class="mobile-lang-options">
                     
+                    <a href="https://pixel-to-path.com/ar/blog/svg-vs-png/" class="mobile-lang-btn">🇸🇦 العربية</a>
                     <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
                     <a href="https://pixel-to-path.com/de/blog/svg-vs-png/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
                     <a href="https://pixel-to-path.com/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇸 English</a>
@@ -252,6 +353,7 @@
                     <a href="https://pixel-to-path.com/th/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇭 ไทย</a>
                     <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
                     <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/svg-vs-png/" class="mobile-lang-btn">🇵🇰 اردو</a>
                     <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
                     <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
                 </div>
@@ -281,6 +383,7 @@
         });
     });
 </script>
+
     <main>
 
         <!-- ═══════════════════════════════════════
@@ -317,7 +420,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -325,14 +428,11 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
         <!-- ═══════════════════════════════════════
-             HOW TO – 3-step guide + HowTo schema
+             HOW TO – 3-step guide
         ════════════════════════════════════════ -->
         <section class="section bg-light">
             <div class="container">
@@ -367,7 +467,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -375,9 +475,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -404,25 +501,63 @@
                     <h2>PNG vs SVG: het gewicht van een logo is niet onbelangrijk</h2>
                     <p>Afbeeldingen blijven een van de belangrijkste oorzaken van paginagewicht. We optimaliseren foto's in WebP, maar vergeten het header-logo en de twintigtal PNG-iconen in de CSS. Echter, deze bestanden worden herhaald op alle URL's: elke verloren milliseconde geldt voor de hele site.</p>
                     <p>Grootteordes waargenomen na vectorisatie met PixelToPath, op het typische scenario van een showcase-site of een webapplicatie:</p>
-                    <ul>
-                        <li>PNG logo 512 px met transparantie: vaak 40 tot 80 KB. Hetzelfde motief in SVG: vaak 2 tot 12 KB, afhankelijk van het aantal kleuren en knooppunten</li>
-                        <li>Om scherp te blijven op Retina, wordt de PNG geserveerd op 1024 px of via srcset @2x: het gewicht verdubbelt, soms verdrievoudigt. De SVG daarentegen verandert niet van bestand</li>
-                        <li>Een 24×24 icoon geëxporteerd in PNG @3x (72×72) weegt 2 tot 8 KB. Vermenigvuldigd met 20 iconen, voegt u 40 tot 160 KB toe aan de interface. Dezelfde pictogrammen in SVG passen vaak in enkele KB's in totaal</li>
-                        <li>Een JPG logo op 'witte achtergrond' lijkt licht, maar platte kleuren en tekst lijden onder de compressie. SVG behoudt scherpe randen, zonder halo, voor een nog lager gewicht</li>
-                    </ul>
+                    <table class="vs-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Scenario</th>
+                                <th scope="col">PNG / JPG</th>
+                                <th scope="col">SVG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">512px-logo met transparantie</th>
+                                <td data-label="PNG / JPG">40 tot 80 KB</td>
+                                <td class="yes" data-label="SVG">2 tot 12 KB, afhankelijk van kleuren en knooppunten</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Zelfde logo geleverd als @2x (1024 px) voor Retina</th>
+                                <td data-label="PNG / JPG">Gewicht verdubbelt, soms verdrievoudigt</td>
+                                <td class="yes" data-label="SVG">Eén enkel bestand, onveranderd</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">20 UI-iconen geëxporteerd als @3x (72×72)</th>
+                                <td data-label="PNG / JPG">40 tot 160 KB extra</td>
+                                <td class="yes" data-label="SVG">Samen slechts enkele KB</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Logo met vlakke kleuren uit een JPG</th>
+                                <td data-label="PNG / JPG">Artefacten en halo's rond vormen en tekst</td>
+                                <td class="yes" data-label="SVG">Schone randen en een nog lichter bestand</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <p>De regel is simpel: alles wat vorm, tekst, pictogram of logotype is, is beter af als SVG. Foto's en screenshots blijven in JPG, WebP of AVIF. SVG is geen universele vervanger: het is het juiste formaat voor de interface.</p>
 
                     <h2>Schaalbaarheid: een scherp bestand van smartphone tot 4K</h2>
                     <p>Een PNG is alleen scherp op zijn native resolutie. Uitvergroot zie je pixels. Bruut verkleind moet de browser resamplen. Vandaar de gymnastiek van @1x, @2x, @3x bestanden, srcset en CSS dichtheden. Elk nieuw breekpunt of nieuwe schermdichtheid (Retina, recente telefoons, 4K monitoren) vereist een nieuwe export, of een te groot bestand 'voor het geval dat'.</p>
                     <p>Een SVG negeert deze beperking. De rendering engine berekent de curven op de gevraagde CSS grootte. Favicon 32 px, logo 48 px in navigatie, hetzelfde merk op 400 px in de header, 4K projectie: het is hetzelfde bestand. Geen vervaging, geen aliasing, geen tweede verzoek voor de hoge dichtheid versie. Voor een componentenbibliotheek betekent het ook minder schulden: één icoon, één bestand, alle groottes.</p>
 
+                    
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/logo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="Hetzelfde logo vergroot tot 400 %: links worden de PNG-pixels zichtbaar, rechts blijven de SVG-curven volledig glad.">
+    <figcaption>Hetzelfde logo vergroot tot 400 %: links worden de PNG-pixels zichtbaar, rechts blijven de SVG-curven volledig glad.</figcaption>
+</figure>
+
+                    
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/photo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="400 % zoom op de ballon: JPEG-onscherpte en pixels links, geposteriseerde vectorkleuren rechts.">
+    <figcaption>400 % zoom op de ballon: JPEG-onscherpte en pixels links, geposteriseerde vectorkleuren rechts.</figcaption>
+</figure>
+
+
                     <h2>Core Web Vitals en SEO: waarom Google om het formaat geeft</h2>
-                    <p>Mobiele snelheid is een rankingfactor. Core Web Vitals (LCP, INP, CLS) meten wat de gebruiker ervaart. Het vervangen van een zwaar PNG logo of een reeks rastericonen door SVG's zal een pagina niet van 4 MB naar 40 KB brengen. Voor de opmaak van de site is het effect echter onmiddellijk, vooral op een 4G-netwerk of een LCP die wordt tegengehouden door het header-logo.</p>
+                    <p>Mobiele snelheid is een rankingfactor. <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener">Core Web Vitals</a> (LCP, INP, CLS) meten wat de gebruiker ervaart. Het vervangen van een zwaar PNG logo of een reeks rastericonen door SVG's zal een pagina niet van 4 MB naar 40 KB brengen. Voor de opmaak van de site is het effect echter onmiddellijk, vooral op een 4G-netwerk of een LCP die wordt tegengehouden door het header-logo.</p>
                     <p>Concreet helpt het vectorformaat drie metrieken, op voorwaarde dat u redelijk blijft over de complexiteit van het pad:</p>
                     <ul>
-                        <li>LCP (Largest Contentful Paint): als het grootste zichtbare element een logo of platte illustratie is, arriveert een SVG van enkele KB's eerder dan een PNG @2x van 150 KB. Minder netwerkcongestie voor de rest van de pagina</li>
-                        <li>CLS (Cumulative Layout Shift): een SVG met width, height en viewBox reserveert zijn ruimte zodra de HTML wordt geparseerd. Geen noodzaak meer om te wachten op het decoderen van een bitmap om de verhouding te kennen, dus minder lay-out verschuivingen</li>
-                        <li>INP en main thread: een eenvoudige SVG (logo, icoon) kost weinig om te renderen. Vermijd daarentegen 'foto' SVG's met duizenden paden: ze kunnen meer wegen dan een PNG en de processor belasten. Vandaar het nut van een schoon pad via PixelToPath, in plaats van een pixel-voor-pixel kopie</li>
+                        <li><a href="https://web.dev/articles/optimize-lcp" target="_blank" rel="noopener">LCP</a> (Largest Contentful Paint): als het grootste zichtbare element een logo of platte illustratie is, arriveert een SVG van enkele KB's eerder dan een PNG @2x van 150 KB. Minder netwerkcongestie voor de rest van de pagina</li>
+                        <li><a href="https://web.dev/articles/optimize-cls" target="_blank" rel="noopener">CLS</a> (Cumulative Layout Shift): een SVG met width, height en viewBox reserveert zijn ruimte zodra de HTML wordt geparseerd. Geen noodzaak meer om te wachten op het decoderen van een bitmap om de verhouding te kennen, dus minder lay-out verschuivingen</li>
+                        <li><a href="https://web.dev/articles/inp" target="_blank" rel="noopener">INP</a> en main thread: een eenvoudige SVG (logo, icoon) kost weinig om te renderen. Vermijd daarentegen 'foto' SVG's met duizenden paden: ze kunnen meer wegen dan een PNG en de processor belasten. Vandaar het nut van een schoon pad via PixelToPath, in plaats van een pixel-voor-pixel kopie</li>
                         <li>SEO voorbij snelheid: Google indexeert SVG's. Een geïntegreerd logo kan een toegankelijke titel hebben. Een SVG-afbeelding met een alt-attribuut blijft de basis. En een lichtere pagina verlaagt het technische bouncepercentage, het ervaringssignaal dat de ranking meeneemt</li>
                     </ul>
                 </div>
@@ -430,7 +565,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -438,9 +573,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -488,7 +620,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -496,9 +628,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -523,7 +652,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -531,9 +660,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -546,10 +672,6 @@
                 <p class="section-intro">Vectoriseer uw bestanden en verdiep u vervolgens in het formaat dat u aangaat.</p>
 
                 <div class="related-tools">
-                    
-                    <a href="/nl/blog/png-to-svg/" class="related-tool-link">
-                        🔄 PNG naar SVG Converter
-                    </a>
                     
                     <a href="/nl/blog/jpg-to-svg/" class="related-tool-link">
                         🔄 JPG naar SVG Converter
@@ -572,7 +694,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -580,9 +702,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -618,7 +737,7 @@
         </section>
 
         <div class="container ads-slot">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281752767600519" crossorigin="anonymous"></script>
+    
     <!-- display1 -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -626,9 +745,6 @@
          data-ad-slot="5925419098"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
@@ -656,22 +772,6 @@
     </main>
 
     
-<a class="sponsor" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=banner&amp;utm_campaign=site_footer" target="_blank" rel="sponsored noopener noreferrer">
-    <div class="container sponsor__inner">
-        <div class="sponsor__mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
-                <path d="M8 4.5h11.2L24 9.3V26a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 8 26V4.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M19 4.5V9h4.8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M12 14.5h8M12 18.5h8M12 22.5h5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-            </svg>
-        </div>
-        <div class="sponsor__copy">
-            <strong class="sponsor__title">DocuNest: PDF’s 100% offline bewerken</strong>
-            <span class="sponsor__text">26 tools in één desktop-editor. Ondertekenen, samenvoegen, converteren: bestanden blijven op je computer.</span>
-        </div>
-        <span class="sponsor__cta">7 dagen gratis proberen</span>
-    </div>
-</a>
 
 <footer>
     <div class="container" id="footernavigation">
@@ -679,105 +779,25 @@
         <a href="/nl/">Home</a>
         <a href="/nl/online/">Online Tool</a>
         <a href="/nl/offline/">Desktop App</a>
+        <a href="/nl/pro/">Pro</a>
+        <a href="/api/">API</a>
         <a href="/nl/blog/">Blog</a>
         <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
     </div>
     <div class="container" id="footerlegal">
-        <a href="/legal">Legal notice</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Klantenportaal</a>
     </div>
 </footer>
 
-<link rel="stylesheet" href="../../../assets/css/partials/docunest-popup.css">
-<div id="dn-popup" class="dn-popup" hidden>
-    <div class="dn-popup__dialog" role="dialog" aria-modal="true" aria-labelledby="dn-popup-title">
-        <div class="dn-popup__top">
-            <p class="dn-popup__brand" id="dn-popup-title">DocuNest</p>
-            <button type="button" class="dn-popup__close" data-dn-close aria-label="Sluiten">&times;</button>
-        </div>
-
-        <div class="dn-carousel" data-dn-carousel>
-            <div class="dn-carousel__viewport">
-                <div class="dn-carousel__track">
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">Hoe redigeer je een PDF definitief?</h2>
-                        <p class="dn-slide__text">Zet gevoelige gegevens definitief zwart: tekst en afbeeldingen onder het vlak worden vernietigd, niet alleen bedekt. Alles op je computer: het bestand wordt nooit geüpload.</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/redact.png" alt="PDF redigeren in DocuNest" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">Hoe onderteken je een PDF zonder te uploaden?</h2>
-                        <p class="dn-slide__text">Teken of importeer je handtekening, plaats en schaal. Geen account, geen upload: het document blijft op je machine.</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/sign.png" alt="PDF ondertekenen in DocuNest" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide">
-                        <h2 class="dn-slide__title">Hoe voeg je een watermerk toe aan een PDF?</h2>
-                        <p class="dn-slide__text">Stempel elke pagina met tekst of een afbeelding: Vertrouwelijk, logo, datum. Lokaal, onbeperkt, zonder opgelegd watermerk van een cloudtool.</p>
-                        <div class="dn-slide__frame">
-                            <img src="../../../assets/images/docunest/watermark.png" alt="Watermerk op een PDF in DocuNest" width="1920" height="1080">
-                        </div>
-                    </article>
-                    <article class="dn-slide dn-slide--offer">
-                        <h2 class="dn-slide__title dn-slide__title--xl">De complete PDF-editor. 100% offline.</h2>
-                        <p class="dn-slide__text">26 tools in één desktop-app. Tekst bewerken, ondertekenen, samenvoegen, converteren. Je bestanden verlaten je computer nooit.</p>
-                        <ul class="dn-offer">
-                            <li class="dn-offer__item">
-                                <strong>100% offline</strong>
-                                <span>Geen uploads. Geen account. Geen cloud.</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>Levenslange licentie, €30</strong>
-                                <span>Eenmalig betalen. Geen maandelijks abonnement.</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>26 tools, één editor</strong>
-                                <span>Redigeren, ondertekenen, samenvoegen, converteren: alles erin.</span>
-                            </li>
-                            <li class="dn-offer__item">
-                                <strong>7 dagen gratis testen</strong>
-                                <span>Geen creditcard. Windows, macOS en Linux.</span>
-                            </li>
-                        </ul>
-                        <a class="dn-offer__cta" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup" target="_blank" rel="noopener noreferrer">DocuNest downloaden</a>
-                    </article>
-                </div>
-            </div>
-            <button type="button" class="dn-carousel__nav dn-carousel__nav--prev" data-dn-prev aria-label="Vorige slide">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15.5 4.5 8 12l7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <button type="button" class="dn-carousel__nav dn-carousel__nav--next" data-dn-next aria-label="Volgende slide">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8.5 4.5 16 12l-7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="dn-carousel__dots" data-dn-dots>
-                <button type="button" class="is-active" aria-label="1"></button>
-                <button type="button" aria-label="2"></button>
-                <button type="button" aria-label="3"></button>
-                <button type="button" aria-label="4"></button>
-            </div>
-        </div>
-
-        <div class="dn-bar">
-            <nav class="dn-bar__tools" aria-label="DocuNest">
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">Redigeren</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">Ondertekenen</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">Watermerk</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">Samenvoegen</a>
-                <a href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup&amp;utm_content=tools" target="_blank" rel="noopener noreferrer">Bewerken</a>
-            </nav>
-            <div class="dn-bar__cta-wrap">
-                <span class="dn-bar__note">7 dagen testen · geen kaart</span>
-                <a class="dn-bar__cta" href="https://docunest.app/?utm_source=pixeltopath&amp;utm_medium=popup&amp;utm_campaign=site_popup" target="_blank" rel="noopener noreferrer">Gratis proberen</a>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="../../../assets/js/docunest-popup.js" defer></script>
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
 
 
-    <script src="../../../assets/js/ui-state.js"></script>
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
 </body>
 </html>

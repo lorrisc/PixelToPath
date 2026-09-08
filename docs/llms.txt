@@ -13,18 +13,23 @@ Author: Lorris C. (Lorrisc)
 
 ## Main pages
 
-- [Home](https://pixel-to-path.com/): Product overview, features, and entry point to online and desktop tools
-- [Online converter](https://pixel-to-path.com/online/): Free browser-based PNG/JPG to SVG conversion
-- [Desktop app (offline)](https://pixel-to-path.com/offline/): Download Windows and Linux builds for offline, unlimited use
-- [Blog](https://pixel-to-path.com/blog/): Guides on image-to-SVG conversion and vectorization
+- [PixelToPath - PNG to SVG Converter, Online & Desktop App](https://pixel-to-path.com/): PixelToPath is an open-source image to SVG converter: use the online tool in your browser, the desktop app for offline work, or the API for automation.
+- [PNG to SVG Converter - Free, No Signup, No Watermark](https://pixel-to-path.com/online/): Vectorize PNG, JPG, BMP or WebP to SVG online - free, instant, no registration. Powered by VTracer with color and black-and-white modes. Live preview.
+- [Offline PNG to SVG Converter - Free Desktop App (Windows & Linux)](https://pixel-to-path.com/offline/): Download PixelToPath, the best free offline software to convert PNG, JPG, BMP and WebP images to SVG vectors. Unlimited conversions, privacy-focused. Windows & Linux.
+- [PixelToPath Pro - Hot Folder, Batch Conversion & CLI | €39 excl. VAT](https://pixel-to-path.com/pro/): Upgrade to PixelToPath Pro: hot folder monitoring that converts images to SVG automatically, batch conversion of hundreds of images at once, and a full command-line interface. One-time payment, lifetime license for 1 user on up to 3 machines. €39 excl. VAT.
+- [Pricing – Free Online Converter, Pro Desktop App & API](https://pixel-to-path.com/pricing/): All PixelToPath versions and prices in one place: free online converter, free open-source desktop app, Pro desktop app at €39 one-time, and the developer API with 10 free conversions per month.
+- [PixelToPath API – Image to SVG REST API, 10 Free Conversions/Month](https://pixel-to-path.com/api/): Convert PNG, JPG, BMP or WebP to clean SVG with one REST call. Potrace for black & white line art, VTracer for color vectors. 10 free conversions every month, prepaid images from €0.05 (down to €0.01/image at volume), credits never expire.
+- [SVG Conversion Guides & Tips – PixelToPath Blog](https://pixel-to-path.com/blog/): Free guides on converting PNG, JPG, and other images to SVG. Learn vectorization, best practices, and how to get the most out of PixelToPath.
 
 ## Guides
 
-- [PNG to SVG](https://pixel-to-path.com/blog/png-to-svg/): How to convert PNG images to SVG with PixelToPath
-- [JPG to SVG](https://pixel-to-path.com/blog/jpg-to-svg/): How to convert JPG/JPEG images to SVG
-- [Image to SVG](https://pixel-to-path.com/blog/image-to-svg/): General raster-to-vector workflow
-- [Free SVG converter](https://pixel-to-path.com/blog/svg-converter-free/): Using PixelToPath as a free SVG converter
-- [Vectorize an image](https://pixel-to-path.com/blog/vectorize-image/): Vectorization tips for logos, posters, and photos
+- [JPG to SVG Converter – Free Online Vector Tool](https://pixel-to-path.com/blog/jpg-to-svg/): Turn any JPG or JPEG image into a scalable SVG vector file for free. No account needed, instant results, high-quality output every time.
+- [Image to SVG Converter (Free, Fast & Online)](https://pixel-to-path.com/blog/image-to-svg/): Convert any image to SVG format for free. Upload PNG, JPG, BMP, or WebP and download a clean vector file instantly. No software needed.
+- [Vectorize Image Free – Raster to Vector Online](https://pixel-to-path.com/blog/vectorize-image/): Vectorize any image for free online. Convert raster PNG, JPG, BMP, or WebP files to clean SVG vectors. Fast, high-quality, no signup required.
+- [Free SVG for Cricut, Silhouette, and laser cutting](https://pixel-to-path.com/blog/svg-cricut/): Convert a PNG or JPG into a free SVG for Cricut, Silhouette Cameo, or laser cutting. Crisp paths, no signup, ready to cut.
+- [SVG vs PNG/JPG: Core Web Vitals and SEO](https://pixel-to-path.com/blog/svg-vs-png/): Replace PNG/JPG logos and icons with SVG: smaller files, Retina and 4K crispness, better LCP and CLS. A guide for developers and SEO experts.
+- [Vectorize a blurry logo to SVG for free](https://pixel-to-path.com/blog/vectorize-logo/): Blurry JPG or PNG logo on a poster or website? Vectorize it to a crisp SVG with PixelToPath: free, no Illustrator, in under a minute.
+- [Import an SVG into Figma, Canva, WordPress](https://pixel-to-path.com/blog/import-svg/): Your PixelToPath SVG is ready. Import it into Figma to change colors, into Canva, or onto WordPress without security flaws. A guide for designers.
 
 ## Project & source
 
@@ -35,31 +40,33 @@ Author: Lorris C. (Lorrisc)
 
 ## Locales
 
-Localized versions of the site (same structure: home, online, offline, blog):
+Localized versions of the site (home, online, offline, blog, pro): 21 languages.
 
 - [English](https://pixel-to-path.com/)
-- [Bengali](https://pixel-to-path.com/bn/)
-- [German](https://pixel-to-path.com/de/)
-- [Spanish](https://pixel-to-path.com/es/)
-- [Persian](https://pixel-to-path.com/fa/)
-- [French](https://pixel-to-path.com/fr/)
-- [Hindi](https://pixel-to-path.com/hi/)
-- [Indonesian](https://pixel-to-path.com/id/)
-- [Japanese](https://pixel-to-path.com/ja/)
-- [Korean](https://pixel-to-path.com/ko/)
-- [Dutch](https://pixel-to-path.com/nl/)
-- [Polish](https://pixel-to-path.com/pl/)
-- [Portuguese (Brazil)](https://pixel-to-path.com/pt/)
-- [Russian](https://pixel-to-path.com/ru/)
-- [Thai](https://pixel-to-path.com/th/)
-- [Turkish](https://pixel-to-path.com/tr/)
-- [Ukrainian](https://pixel-to-path.com/uk/)
-- [Vietnamese](https://pixel-to-path.com/vi/)
-- [Chinese](https://pixel-to-path.com/zh/)
+- [العربية](https://pixel-to-path.com/ar/)
+- [বাংলা](https://pixel-to-path.com/bn/)
+- [Deutsch](https://pixel-to-path.com/de/)
+- [Español](https://pixel-to-path.com/es/)
+- [فارسی](https://pixel-to-path.com/fa/)
+- [Français](https://pixel-to-path.com/fr/)
+- [हिन्दी](https://pixel-to-path.com/hi/)
+- [Bahasa Indonesia](https://pixel-to-path.com/id/)
+- [日本語](https://pixel-to-path.com/ja/)
+- [한국어](https://pixel-to-path.com/ko/)
+- [Nederlands](https://pixel-to-path.com/nl/)
+- [Polski](https://pixel-to-path.com/pl/)
+- [Português (Brasil)](https://pixel-to-path.com/pt/)
+- [Русский](https://pixel-to-path.com/ru/)
+- [ไทย](https://pixel-to-path.com/th/)
+- [Türkçe](https://pixel-to-path.com/tr/)
+- [Українська](https://pixel-to-path.com/uk/)
+- [اردو](https://pixel-to-path.com/ur/)
+- [Tiếng Việt](https://pixel-to-path.com/vi/)
+- [中文 (简体)](https://pixel-to-path.com/zh/)
 
 ## Optional
 
-- [Privacy](https://pixel-to-path.com/privacy/)
-- [Terms](https://pixel-to-path.com/terms/)
-- [Legal](https://pixel-to-path.com/legal/)
-- [humans.txt](https://pixel-to-path.com/humans.txt)
+- [Privacy](https://pixel-to-path.com/privacy/): Privacy policy
+- [Terms](https://pixel-to-path.com/terms/): Terms of service
+- [Legal](https://pixel-to-path.com/legal/): Legal notices
+- [humans.txt](https://pixel-to-path.com/humans.txt): Site credits
