@@ -1145,7 +1145,7 @@ Send your image as multipart/form-data with your key in the Authorization header
 
 Your first conversion
 
-curl -X POST https://api.pixel-to-path.com/v1/convert \
+curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
 -H "Authorization: Bearer ptp_live_YOUR_KEY" \
 -F "file=@logo.png" \
 -F "colormode=binary" \
@@ -1388,7 +1388,7 @@ Copy-paste and adapt. The API speaks plain multipart/form-data, so any HTTP clie
 
 cURL
 
-curl -X POST https://api.pixel-to-path.com/v1/convert \
+curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
 -H "Authorization: Bearer ptp_live_YOUR_KEY" \
 -F "file=@photo.jpg" \
 -F "colormode=color" \

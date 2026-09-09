@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelToPath API – API REST chuyển đổi hình ảnh sang SVG, 10 lượt chuyển đổi miễn phí/tháng</title>
+    <meta name="description" content="Chuyển đổi PNG, JPG, BMP hoặc WebP sang SVG bằng một lệnh gọi REST. Potrace cho ảnh đường nét đen trắng, VTracer cho vector có màu. 10 lượt chuyển đổi miễn phí mỗi tháng, mua gói ảnh trả trước từ 0,05€ (giảm còn 0,01€/ảnh với số lượng lớn), số dư không bao giờ hết hạn.">
+    <meta name="keywords" content="api pixeltopath, api chuyển đổi ảnh sang svg, api rest png sang svg, api vector hóa, api potrace, api vtracer, api chuyển đổi svg">
+    <meta name="author" content="Lorris C.">
+
+    <meta property="og:title" content="PixelToPath API – API REST chuyển đổi hình ảnh sang SVG, 10 lượt chuyển đổi miễn phí/tháng">
+    <meta property="og:description" content="Chuyển đổi PNG, JPG, BMP hoặc WebP sang SVG bằng một lệnh gọi REST. Potrace cho ảnh đường nét đen trắng, VTracer cho vector có màu. 10 lượt chuyển đổi miễn phí mỗi tháng, mua gói ảnh trả trước từ 0,05€ (giảm còn 0,01€/ảnh với số lượng lớn), số dư không bao giờ hết hạn.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="PixelToPath app screenshot">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PixelToPath API – API REST chuyển đổi hình ảnh sang SVG, 10 lượt chuyển đổi miễn phí/tháng">
+    <meta name="twitter:description" content="Chuyển đổi PNG, JPG, BMP hoặc WebP sang SVG bằng một lệnh gọi REST. Potrace cho ảnh đường nét đen trắng, VTracer cho vector có màu. 10 lượt chuyển đổi miễn phí mỗi tháng, mua gói ảnh trả trước từ 0,05€ (giảm còn 0,01€/ảnh với số lượng lớn), số dư không bao giờ hết hạn.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="PixelToPath app screenshot">
+    <meta property="og:url" content="https://pixel-to-path.com/vi/api/">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://pixel-to-path.com/vi/api/" />
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/api/" />
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/api/" />
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/api/" />
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/api/" />
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/api/" />
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/api/" />
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/api/" />
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/api/" />
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/api/" />
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/api/" />
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/api/" />
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/api/" />
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/api/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/api/" />
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/api/" />
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/api/" />
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/api/" />
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/api/" />
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/api/" />
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/api/" />
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/api/" />
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/api/" />
+
+    <link rel="stylesheet" href="../../assets/css/bundle.7f66facb.css">
+
+
+
+    <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebService",
+  "@id": "https://pixel-to-path.com/vi/api/#api",
+  "name": "PixelToPath API",
+  "url": "https://pixel-to-path.com/vi/api/",
+  "description": "Chuyển đổi PNG, JPG, BMP hoặc WebP sang SVG bằng một lệnh gọi REST. Potrace cho ảnh đường nét đen trắng, VTracer cho vector có màu. 10 lượt chuyển đổi miễn phí mỗi tháng, mua gói ảnh trả trước từ 0,05€ (giảm còn 0,01€/ảnh với số lượng lớn), số dư không bao giờ hết hạn.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://pixel-to-path.com/#organization",
+    "name": "PixelToPath"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "Vector hóa ở quy mô lớn từ mã của bạn. Một lệnh gọi REST: gửi hình ảnh, nhận về một tệp SVG rõ nét."
+  },
+  "isPartOf": {
+    "@id": "https://pixel-to-path.com/#website"
+  }
+}</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Thế nào được tính là một lượt chuyển đổi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Một lệnh gọi POST /v1/convert thành công và trả về một SVG. Các lệnh gọi thất bại (hình ảnh không hợp lệ, sai tham số, bị giới hạn tốc độ, lỗi máy chủ) và các lệnh gọi GET /v1/me sẽ không bao giờ bị tính phí."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hạn mức miễn phí hàng tháng được tính như thế nào?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tính trên mỗi tài khoản, theo tháng dương lịch UTC — nó sẽ làm mới vào ngày 1 lúc 00:00 UTC. Việc tạo nhiều khóa API không làm tăng hạn mức miễn phí: tất cả các khóa của một tài khoản cùng chia sẻ 10 lượt chuyển đổi miễn phí."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tín dụng có hết hạn không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Không. Số tín dụng đã mua sẽ nằm trong tài khoản cho đến khi bạn sử dụng. Chúng chỉ được tiêu thụ sau khi bạn đã dùng hết 10 lượt chuyển đổi miễn phí hàng tháng."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Làm thế nào để có thêm lượt chuyển đổi trong tháng?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mua gói ảnh trả trước từ cổng thông tin khách hàng — mọi số lượng, theo từng lô 50 ảnh. Bạn luôn nhìn thấy chính xác số lượng ảnh bạn sẽ nhận được: 50 ảnh 2,50€, 500 ảnh 20€, 2.500 ảnh 75€, 10.000 ảnh 200€, 50.000 ảnh 500€. Tín dụng được tự động thêm vào tài khoản của bạn trong vài giây sau khi thanh toán — không có khóa cấp phép, không cần nhập gì cả."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Chuyện gì xảy ra nếu tôi mất khóa API?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Các khóa được lưu trữ băm, nên không thể khôi phục được. Hãy thu hồi khóa bị mất trong cổng thông tin và tạo một khóa mới — nó sẽ có hiệu lực ngay lập tức."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Những định dạng hình ảnh nào được hỗ trợ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG, JPEG, BMP và WebP, lên tới 20 MB và 50 megapixel, tối thiểu 64×64 pixel. Các hình ảnh có cạnh dài nhất lớn hơn 1500 px sẽ được điều chỉnh kích thước trước khi chuyển đổi, giống hệt như trên trang web miễn phí."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/vi/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "API",
+      "item": "https://pixel-to-path.com/vi/api/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/vi/" class="brand">
+            <img src="../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/vi/"
+            class="">Trang chủ</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Sản phẩm <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/vi/online/"
+                       class="">Công cụ Trực tuyến</a>
+                    <a href="/vi/offline/"
+                       class="">Ứng dụng Máy tính bàn</a>
+                    <a href="/vi/pro/"
+                       class="">Ứng dụng desktop Pro</a>
+                    <a href="/vi/api/"
+                       class="active">API</a>
+                </div>
+            </div>
+
+            <a href="/vi/pricing/"
+               class="">Giá</a>
+
+            <div class="lang-switch">
+                <span>🇻🇳 VI</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/vi/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Trang chủ</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">Sản phẩm</span>
+            <div class="mobile-sublist">
+                <a href="/vi/online/"
+                   class="">Công cụ Trực tuyến</a>
+                <a href="/vi/offline/"
+                   class="">Ứng dụng Máy tính bàn</a>
+                <a href="/vi/pro/"
+                   class="">Ứng dụng desktop Pro</a>
+                <a href="/vi/api/"
+                   class="active">API</a>
+            </div>
+
+            <a href="/vi/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Giá</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Ngôn ngữ</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- Hero -->
+        <div class="api-hero">
+            <div class="container">
+                <span class="api-tag">API</span>
+                <h1>PixelToPath API</h1>
+                <p class="api-hero__text">Vector hóa hình ảnh tự động bằng <strong>một lệnh gọi REST</strong>. Tải lên tệp PNG, JPG, BMP hoặc WebP, nhận lại một tệp SVG rõ nét, sẵn sàng sử dụng. Hình ảnh đường nét đen trắng được xử lý bởi <strong>Potrace</strong>, hình ảnh có màu bởi <strong>VTracer</strong> — cùng chung công cụ với trình chuyển đổi miễn phí trực tuyến.</p>
+                <div class="api-hero__cta">
+                    <a class="btn primary-btn big-btn" href="/portal/"> Nhận khóa API của bạn</a>
+                    <a class="btn secondary-btn big-btn" href="/portal/">Đăng nhập vào cổng thông tin</a>
+                    <a class="api-hero__docs" href="#quickstart">Đọc tài liệu ↓</a>
+                </div>
+                <p class="api-hero__note">10 lượt chuyển đổi miễn phí mỗi tháng · Không cần thẻ tín dụng</p>
+            </div>
+        </div>
+
+        <!-- Accroche -->
+        <div class="api-strip">
+            <div class="container">
+                <p>10 lượt chuyển đổi miễn phí / tháng • <strong>1 lệnh gọi REST</strong> • Công cụ Potrace + VTracer • Số dư <strong>không bao giờ hết hạn</strong></p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="api-body">
+            <div class="container">
+                <div class="api-layout">
+
+                    <!-- TOC -->
+                    <aside class="api-toc">
+                        <p class="api-toc__title">Trên trang này</p>
+                        <ul>
+                            
+                            <li><a href="#quickstart">Bắt đầu nhanh</a></li>
+                            <li><a href="#authentication">Xác thực</a></li>
+                            <li><a href="#convert">POST /v1/convert</a></li>
+                            <li><a href="#engines">Công cụ</a></li>
+                            <li><a href="#response">Phản hồi</a></li>
+                            <li><a href="#errors">Lỗi</a></li>
+                            <li><a href="#limits">Giới hạn tốc độ</a></li>
+                            <li><a href="#pricing">Bảng giá</a></li>
+                            <li><a href="#examples">Ví dụ về mã</a></li>
+                            <li><a href="#faq">Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Content -->
+                    <article class="api-content">
+
+                        <!-- Quickstart -->
+                        <section id="quickstart" class="api-section">
+                            <h2>Bắt đầu nhanh</h2>
+                            <p>Chỉ ba bước là bạn có thể chuyển đổi hình ảnh sang SVG từ thiết bị đầu cuối, tập lệnh hoặc ứng dụng của mình.</p>
+                            <div class="api-steps">
+                                <div class="api-step">
+                                    <h3>1 · Tạo tài khoản</h3>
+                                    <p>Đăng ký trên cổng thông tin khách hàng bằng email và mật khẩu của bạn (10 ký tự trở lên). Không cần thẻ tín dụng.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>2 · Tạo khóa API</h3>
+                                    <p>Trong cổng thông tin, hãy tạo một khóa. Nó chỉ được hiển thị <strong>một lần</strong> — hãy lưu giữ cẩn thận. Khóa có dạng <code>ptp_live_…</code> và có thể thu hồi bất cứ lúc nào.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>3 · Gọi /v1/convert</h3>
+                                    <p>Gửi hình ảnh của bạn dưới dạng multipart/form-data cùng khóa của bạn trong tiêu đề Authorization. Tệp SVG sẽ được trả về trong nội dung phản hồi.</p>
+                                </div>
+                            </div>
+
+                            <p class="api-code-label">Chuyển đổi đầu tiên của bạn</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@logo.png" \
+  -F "colormode=binary" \
+  -o logo.svg</code></pre>
+                            <p class="api-note">Tài liệu tham khảo tương tác: <a href="https://api.pixel-to-path.com/v1/docs">pixel-to-path.com/v1/docs</a> (OpenAPI/Swagger).</p>
+                        </section>
+
+                        <!-- Authentication -->
+                        <section id="authentication" class="api-section">
+                            <h2>Xác thực</h2>
+                            <p>Mọi yêu cầu đều được xác thực bằng mã thông báo Bearer trong tiêu đề <code>Authorization</code>:</p>
+                            <pre class="api-code"><code>Authorization: Bearer ptp_live_0123abc…</code></pre>
+                            <ul class="api-list">
+                                <li><strong>Khóa là bí mật:</strong> chúng được lưu trữ dưới dạng băm trên máy chủ và chỉ hiển thị một lần khi tạo. Mất khóa? Hãy thu hồi nó và tạo khóa mới.</li>
+                                <li><strong>Một tài khoản, nhiều khóa:</strong> tạo tối đa 5 khóa đang hoạt động để phân chia các dự án của bạn. Hạn ngạch miễn phí hàng tháng được tính trên mỗi tài khoản, không phải trên mỗi khóa.</li>
+                                <li><strong>Thu hồi ngay lập tức:</strong> khóa bị thu hồi sẽ ngừng hoạt động ngay lập tức, từ cổng thông tin hoặc phản hồi API của một tài khoản bị cấm.</li>
+                            </ul>
+                        </section>
+
+                        <!-- POST /v1/convert -->
+                        <section id="convert" class="api-section">
+                            <h2><span class="api-method api-method--post">POST</span> /v1/convert</h2>
+                            <p>Tải lên + chuyển đổi trong một lệnh gọi không trạng thái duy nhất. Một lệnh gọi thành công tiêu tốn tối đa 1 tín dụng — các lệnh gọi thất bại, không hợp lệ hoặc bị giới hạn tốc độ sẽ không tính phí.</p>
+
+                            <h3>Yêu cầu (multipart/form-data)</h3>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Trường dữ liệu</th>
+                                            <th>Loại</th>
+                                            <th>Mặc định</th>
+                                            <th>Mô tả</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>file</code></td>
+                                            <td>file</td>
+                                            <td>—</td>
+                                            <td>Hình ảnh cần chuyển đổi. PNG, JPEG, BMP hoặc WebP · tối đa 20 MB · tối đa 50 Mpx · tối thiểu 64×64 px.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>colormode</code></td>
+                                            <td>string</td>
+                                            <td><code>color</code></td>
+                                            <td>&lt;code&gt;color&lt;/code&gt; sử dụng công cụ VTracer, &lt;code&gt;binary&lt;/code&gt; sử dụng Potrace (đen &amp; trắng).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>mode</code></td>
+                                            <td>string</td>
+                                            <td><code>spline</code></td>
+                                            <td>Chỉ dành cho chế độ màu (VTracer) — bỏ qua ở chế độ binary. <code>spline</code> | <code>polygon</code> | <code>none</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>hierarchical</code></td>
+                                            <td>string</td>
+                                            <td><code>stacked</code></td>
+                                            <td>Chỉ dành cho chế độ màu (VTracer) — bỏ qua ở chế độ binary. <code>stacked</code> | <code>cutout</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>filter_speckle</code></td>
+                                            <td>int</td>
+                                            <td><code>4</code></td>
+                                            <td>Chỉ dành cho chế độ màu (VTracer) — bỏ qua ở chế độ binary. 0–16 — loại bỏ các đốm nhiễu nhỏ.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>color_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>6</code></td>
+                                            <td>Chỉ dành cho chế độ màu (VTracer) — bỏ qua ở chế độ binary. 1–8 — số bit có nghĩa mỗi kênh màu.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>layer_difference</code></td>
+                                            <td>int</td>
+                                            <td><code>16</code></td>
+                                            <td>Chỉ dành cho chế độ màu (VTracer) — bỏ qua ở chế độ binary. 0–64 — khoảng cách giữa các lớp màu.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>corner_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>60</code></td>
+                                            <td>0–180 — góc nhận diện góc cạnh (cả hai công cụ).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>length_threshold</code></td>
+                                            <td>float</td>
+                                            <td><code>4.0</code></td>
+                                            <td>3.5–10 — độ dài phân đoạn tối thiểu (cả hai công cụ).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>splice_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>45</code></td>
+                                            <td>0–180 — góc chia tách đường dẫn (cả hai công cụ).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>path_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>3</code></td>
+                                            <td>0–8 — chữ số thập phân trong tọa độ đường dẫn.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>invert</code></td>
+                                            <td>bool</td>
+                                            <td><code>false</code></td>
+                                            <td>Chỉ dành cho Binary (Potrace) — bỏ qua ở chế độ màu. Viền vùng sáng thay vì vùng tối.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>turdsize</code></td>
+                                            <td>int</td>
+                                            <td><code>2</code></td>
+                                            <td>Chỉ dành cho Binary (Potrace) — bỏ qua ở chế độ màu. 0–20 — ức chế đốm nhiễu đến kích thước này.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>alphamax</code></td>
+                                            <td>float</td>
+                                            <td><code>1.0</code></td>
+                                            <td>Chỉ dành cho Binary (Potrace) — bỏ qua ở chế độ màu. 0–1.334 — ngưỡng làm mượt góc cạnh.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>opttolerance</code></td>
+                                            <td>float</td>
+                                            <td><code>0.2</code></td>
+                                            <td>Chỉ dành cho Binary (Potrace) — bỏ qua ở chế độ màu. 0–10 — dung sai tối ưu hóa đường cong.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Engines -->
+                        <section id="engines" class="api-section">
+                            <h2>Hai công cụ, được chọn bởi &#34;colormode&#34;</h2>
+                            <p>API chạy cùng một bộ công cụ giống hệt trình chuyển đổi miễn phí trực tuyến và ứng dụng dành cho máy tính để bàn:</p>
+                            <div class="grid-3">
+                                <div class="card api-engine">
+                                    <h3>binary — Potrace</h3>
+                                    <p>Theo dấu đen trắng cho ảnh vẽ tay, ảnh quét, phác thảo và logo. Phần tối của hình ảnh (grayscale &lt; 50%) được viền trên nền trắng. Tinh chỉnh đầu ra với <code>turdsize</code> (loại bỏ nhiễu), <code>alphamax</code> (làm mịn góc) và <code>opttolerance</code> (tối ưu hóa đường dẫn).</p>
+                                </div>
+                                <div class="card api-engine">
+                                    <h3>color — VTracer</h3>
+                                    <p>Vector hóa màu theo lớp cho hình minh họa, phim hoạt hình và ảnh. Kiểm soát mức độ chi tiết bằng <code>filter_speckle</code>, <code>color_precision</code>, <code>layer_difference</code> và độ khớp đường cong với <code>mode</code> (spline, polygon, none).</p>
+                                </div>
+                            </div>
+                            <p class="api-note">Hình ảnh được tiền xử lý giống hệt như trên trang web: cạnh dài nhất được thay đổi kích thước thành 1500 px trước khi chuyển đổi và API sẽ trả về loại hình ảnh được phát hiện (<code>line_art</code>, <code>logo</code>, <code>photo</code> hoặc <code>illustration</code>) trong tiêu đề <code>X-Detected-Type</code>.</p>
+                        </section>
+
+                        <!-- Response -->
+                        <section id="response" class="api-section">
+                            <h2>Phản hồi</h2>
+                            <p>Khi thành công: <code>200 OK</code> với <code>image/svg+xml</code> — nội dung là chính tệp SVG. Các tiêu đề thông tin:</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Tiêu đề</th>
+                                            <th>Mô tả</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><code>X-Credits-Remaining</code></td><td>Số dư tín dụng trả phí còn lại trên tài khoản, sau khi đã trừ cho lệnh gọi này.</td></tr>
+                                        <tr><td><code>X-Free-Remaining</code></td><td>Số lượt chuyển đổi miễn phí còn lại trong tháng này.</td></tr>
+                                        <tr><td><code>X-Detected-Type</code></td><td>Loại ảnh được phát hiện (thông tin): line_art, logo, photo hoặc illustration.</td></tr>
+                                        <tr><td><code>X-Processing-Time</code></td><td>Thời gian xử lý của máy chủ (tính bằng giây).</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>GET /v1/me</h3>
+                            <p>Trạng thái tài khoản của khóa được sử dụng để gọi. <strong>Miễn phí</strong> — không bao giờ tính vào hạn mức của bạn, không bao giờ bị trừ tín dụng.</p>
+                            <p class="api-code-label">Ví dụ về phản hồi</p>
+                            <pre class="api-code"><code>GET /v1/me
+Authorization: Bearer ptp_live_…
+
+{
+  "key": { "name": "prod", "prefix": "ptp_live_0123abc", … },
+  "usage": {
+    "month": "2026-09", "free_used": 7, "free_limit": 10,
+    "free_remaining": 3, "resets_at": "2026-10-01T00:00:00+00:00"
+  },
+  "credits": { "balance": 120 }
+}</code></pre>
+                        </section>
+
+                        <!-- Errors -->
+                        <section id="errors" class="api-section">
+                            <h2>Lỗi</h2>
+                            <p>Mọi lỗi đều trả về một JSON đồng nhất. Các lệnh gọi thất bại sẽ không bao giờ tiêu tốn tín dụng.</p>
+                            <pre class="api-code"><code>HTTP/1.1 402 Payment Required
+{
+  "error": {
+    "code": "quota_exceeded",
+    "message": "Monthly free quota used and no credits left.",
+    "usage": { "free_used": 10, "free_limit": 10, "credits": 0 }
+  }
+}</code></pre>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>HTTP</th>
+                                            <th>Mã</th>
+                                            <th>Khi nào</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>401</td><td><code>invalid_api_key</code></td><td>Thiếu khóa API, khóa bị sai định dạng, không xác định hoặc đã bị thu hồi.</td></tr>
+                                        <tr><td>402</td><td><code>quota_exceeded</code></td><td>Đã sử dụng hết hạn mức miễn phí hàng tháng và không còn tín dụng.</td></tr>
+                                        <tr><td>403</td><td><code>account_banned</code></td><td>Tài khoản bị cấm — tất cả các khóa của tài khoản đó đều bị từ chối.</td></tr>
+                                        <tr><td>403</td><td><code>ip_blocked</code></td><td>IP của người gọi nằm trong danh sách chặn.</td></tr>
+                                        <tr><td>413</td><td><code>file_too_large</code></td><td>Tệp lớn hơn 20 MB.</td></tr>
+                                        <tr><td>422</td><td><code>invalid_image</code> / <code>image_too_small</code> / <code>invalid_params</code></td><td>Hình ảnh không hợp lệ, hình ảnh quá nhỏ hoặc giá trị tham số không hợp lệ.</td></tr>
+                                        <tr><td>429</td><td><code>rate_limited</code></td><td>Vượt quá giới hạn tốc độ trên mỗi khóa (xem bên dưới). Bao gồm tiêu đề Retry-After.</td></tr>
+                                        <tr><td>500</td><td><code>internal_error</code></td><td>Chuyển đổi không thành công ở phía máy chủ — không bị trừ tín dụng.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Rate limits -->
+                        <section id="limits" class="api-section">
+                            <h2>Giới hạn tốc độ</h2>
+                            <p>Các giới hạn được áp dụng trên mỗi khóa API, không phải trên mỗi IP, do đó một văn phòng dùng chung hoặc trình chạy CI sẽ không bao giờ bị phạt vì lưu lượng truy cập của người khác.</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Giới hạn</th>
+                                            <th>Giá trị</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Yêu cầu mỗi phút, trên mỗi khóa</td><td><strong>60</strong></td></tr>
+                                        <tr><td>Yêu cầu mỗi ngày, trên mỗi khóa</td><td><strong>2 000</strong></td></tr>
+                                        <tr><td>Chuyển đổi đồng thời, trên mỗi khóa</td><td>2 (các cuộc gọi bổ sung sẽ chờ, sau đó 429)</td></tr>
+                                        <tr><td>Kích thước tệp / độ phân giải tối đa</td><td>20 MB / 50 Mpx</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Pricing -->
+                        <section id="pricing" class="api-section">
+                            <h2>Bảng giá</h2>
+                            <p>Mọi tài khoản mới đều có <strong>10 lượt chuyển đổi miễn phí mỗi tháng</strong>, không cần thẻ tín dụng. Cần thêm? Mua gói ảnh trả trước — với mọi số lượng (từng lô 50 ảnh), có giảm giá số lượng lớn. Chúng không bao giờ hết hạn và cộng dồn với hạn mức miễn phí hàng tháng của bạn (lượt chuyển đổi miễn phí sẽ được sử dụng trước).</p>
+                            <div class="api-pricing">
+                                <div class="card api-price-card">
+                                    <h3>Miễn phí</h3>
+                                    <p class="api-price">0€<span>/tháng</span></p>
+                                    <ul class="checklist">
+                                        <li>10 lượt chuyển đổi / tháng</li>
+                                        <li>Cả hai công cụ (Potrace + VTracer)</li>
+                                        <li>Tối đa 5 khóa API</li>
+                                    </ul>
+                                    <a class="btn secondary-btn" href="/portal/">Tạo tài khoản</a>
+                                </div>
+                                <div class="card api-price-card api-price-card--highlight">
+                                    <h3>Ảnh trả trước</h3>
+                                    <p class="api-price">0,050€<span>/ ảnh</span></p>
+                                    <table class="tiers">
+                                        <caption>Định giá theo khối lượng — mua càng nhiều ảnh, giá càng rẻ</caption>
+                                        <tr><th scope="row">Ảnh</th><td>50–450</td><td>500–2 450</td><td>2 500–9 950</td><td>10 000–49 950</td><td>50 000+</td></tr>
+                                        <tr><th scope="row">€/image</th><td>0.050</td><td>0.040</td><td>0.030</td><td>0.020</td><td>0.010</td></tr>
+                                    </table>
+                                    <ul class="checklist">
+                                        <li>Mua 1 ảnh = 1 lượt chuyển đổi (tín dụng không hết hạn)</li>
+                                        <li>Không bao giờ hết hạn, cộng dồn với gói miễn phí</li>
+                                        <li>Mọi số lượng: 0,040€/ảnh từ 500 ảnh, giảm còn 0,010€/ảnh</li>
+                                    </ul>
+                                    <a class="btn primary-btn" href="/portal/">Mua ảnh</a>
+                                </div>
+                            </div>
+                            <p class="api-note">Tín dụng tự động: số dư của bạn sẽ được cập nhật trong vài giây sau khi thanh toán, thông qua webhook thanh toán. Tiền hoàn lại sẽ khấu trừ tín dụng đã mua, giới hạn ở mức số dư hiện tại. Thanh toán an toàn bằng Lemon Squeezy (thuế GTGT được xử lý tự động).</p>
+                        </section>
+
+                        <!-- Code examples -->
+                        <section id="examples" class="api-section">
+                            <h2>Ví dụ về mã</h2>
+                            <p>Sao chép, dán và tùy chỉnh. API sử dụng định dạng multipart/form-data thuần túy, nên mọi máy khách HTTP đều hoạt động được.</p>
+
+                            <p class="api-code-label">cURL</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@photo.jpg" \
+  -F "colormode=color" \
+  -F "filter_speckle=4" \
+  -o photo.svg</code></pre>
+
+                            <p class="api-code-label">Python</p>
+                            <pre class="api-code"><code>import requests
+
+resp = requests.post(
+    "https://api.pixel-to-path.com/v1/convert",
+    headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
+    files={"file": open("photo.jpg", "rb")},
+    data={"colormode": "color", "filter_speckle": 4},
+)
+resp.raise_for_status()
+print(resp.headers["X-Credits-Remaining"], "credits left")
+with open("photo.svg", "wb") as f:
+    f.write(resp.content)</code></pre>
+
+                            <p class="api-code-label">JavaScript</p>
+                            <pre class="api-code"><code>const form = new FormData();
+form.append("file", new Blob([imageBytes]), "photo.jpg");
+form.append("colormode", "color");
+
+const resp = await fetch("https://api.pixel-to-path.com/v1/convert", {
+  method: "POST",
+  headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
+  body: form,
+});
+if (!resp.ok) {
+  const { error } = await resp.json();
+  throw new Error(`${error.code}: ${error.message}`);
+}
+const svg = await resp.text();
+console.log(resp.headers.get("X-Credits-Remaining"), "credits left");</code></pre>
+                        </section>
+
+                        <!-- FAQ -->
+                        <section id="faq" class="api-section">
+                            <h2>Những câu hỏi thường gặp</h2>
+                            <details class="api-faq-item">
+                                <summary>Thế nào được tính là một lượt chuyển đổi?</summary>
+                                <p>Một lệnh gọi POST /v1/convert thành công và trả về một SVG. Các lệnh gọi thất bại (hình ảnh không hợp lệ, sai tham số, bị giới hạn tốc độ, lỗi máy chủ) và các lệnh gọi GET /v1/me sẽ không bao giờ bị tính phí.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Hạn mức miễn phí hàng tháng được tính như thế nào?</summary>
+                                <p>Tính trên mỗi tài khoản, theo tháng dương lịch UTC — nó sẽ làm mới vào ngày 1 lúc 00:00 UTC. Việc tạo nhiều khóa API không làm tăng hạn mức miễn phí: tất cả các khóa của một tài khoản cùng chia sẻ 10 lượt chuyển đổi miễn phí.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Tín dụng có hết hạn không?</summary>
+                                <p>Không. Số tín dụng đã mua sẽ nằm trong tài khoản cho đến khi bạn sử dụng. Chúng chỉ được tiêu thụ sau khi bạn đã dùng hết 10 lượt chuyển đổi miễn phí hàng tháng.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Làm thế nào để có thêm lượt chuyển đổi trong tháng?</summary>
+                                <p>Mua gói ảnh trả trước từ cổng thông tin khách hàng — mọi số lượng, theo từng lô 50 ảnh. Bạn luôn nhìn thấy chính xác số lượng ảnh bạn sẽ nhận được: 50 ảnh 2,50€, 500 ảnh 20€, 2.500 ảnh 75€, 10.000 ảnh 200€, 50.000 ảnh 500€. Tín dụng được tự động thêm vào tài khoản của bạn trong vài giây sau khi thanh toán — không có khóa cấp phép, không cần nhập gì cả.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Chuyện gì xảy ra nếu tôi mất khóa API?</summary>
+                                <p>Các khóa được lưu trữ băm, nên không thể khôi phục được. Hãy thu hồi khóa bị mất trong cổng thông tin và tạo một khóa mới — nó sẽ có hiệu lực ngay lập tức.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Những định dạng hình ảnh nào được hỗ trợ?</summary>
+                                <p>PNG, JPEG, BMP và WebP, lên tới 20 MB và 50 megapixel, tối thiểu 64×64 pixel. Các hình ảnh có cạnh dài nhất lớn hơn 1500 px sẽ được điều chỉnh kích thước trước khi chuyển đổi, giống hệt như trên trang web miễn phí.</p>
+                            </details>
+                        </section>
+
+                        <!-- Autres versions -->
+                        <!-- Versions : les 4 façons d'utiliser PixelToPath (clés pv_* — fallback EN) -->
+<section class="section versions-section">
+    <div class="container">
+        <h2 class="section-title">Chọn Phiên bản Của Bạn</h2>
+        <p class="section-intro">Cùng một công cụ mạnh mẽ - chọn định dạng phù hợp với quy trình làm việc của bạn.</p>
+
+        <div class="versions-grid">
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🌐</div>
+                <h3>Công cụ Trực tuyến</h3>
+                <p class="versions-card__price">Miễn phí</p>
+                <p class="versions-card__desc">Chuyển đổi hình ảnh ngay trong trình duyệt của bạn. Không cần cài đặt, không cần tài khoản.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/vi/online/">Mở công cụ</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">💻</div>
+                <h3>Ứng dụng Máy tính bàn</h3>
+                <p class="versions-card__price">Miễn phí &amp; mã nguồn mở</p>
+                <p class="versions-card__desc">Trình chuyển đổi đầy đủ ngay trên máy tính của bạn, cho Windows &amp; Linux.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/vi/offline/">Tải xuống miễn phí</a>
+            </article>
+
+            <article class="card versions-card versions-card--highlight">
+                <div class="versions-card__icon">⌨️</div>
+                <h3>Ứng dụng desktop Pro</h3>
+                <p class="versions-card__price">Thanh toán một lần 39€</p>
+                <p class="versions-card__desc">Giám sát thư mục, chuyển đổi hàng loạt và CLI cho khối lượng công việc lớn.</p>
+                <a class="btn primary-btn versions-card__cta" href="/vi/pro/">Mua Pro</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🔌</div>
+                <h3>API</h3>
+                <p class="versions-card__price">Gói miễn phí + các gói tín dụng</p>
+                <p class="versions-card__desc">Một lệnh gọi REST: gửi hình ảnh, nhận lại tệp SVG rõ nét. 10 lượt miễn phí/tháng.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/vi/api/">Nhận khóa API</a>
+            </article>
+
+        </div>
+
+        <p class="versions-links">
+            <a href="/vi/pricing/">So sánh tất cả các phiên bản &amp; bảng giá →</a>
+        </p>
+        <p class="versions-links versions-links--portal">
+            Đã có tài khoản?
+            <a href="/portal/">Đăng nhập vào cổng thông tin khách hàng →</a>
+        </p>
+    </div>
+</section>
+
+
+                        <!-- CTA finale -->
+                        <section class="api-cta">
+                            <h2>Sẵn sàng vector hóa ở quy mô lớn?</h2>
+                            <p>Tạo tài khoản của bạn, lấy khóa API và thực hiện lệnh gọi đầu tiên của bạn trong vòng chưa tới hai phút.</p>
+                            <a class="btn primary-btn big-btn" href="/portal/">Nhận khóa API miễn phí</a>
+                        </section>
+
+                        <p class="api-footer-note">Bạn có thắc mắc về API? Mở một vấn đề trên <a href="https://github.com/lorrisc/PixelToPath" target="_blank" rel="noopener">GitHub</a>.</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/vi/">Trang chủ</a>
+        <a href="/vi/online/">Công cụ Trực tuyến</a>
+        <a href="/vi/offline/">Ứng dụng Máy tính bàn</a>
+        <a href="/vi/pro/">Pro</a>
+        <a href="/vi/api/">API</a>
+        <a href="/vi/blog/">Blog</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Mã nguồn mở (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Cổng khách hàng</a>
+    </div>
+</footer>
+
+<script src="../../assets/js/docunest-strings.js" defer></script>
+<script src="../../assets/js/docunest-popup.js" data-asset="../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../assets/js/ui-state.js"></script>
+</body>
+</html>

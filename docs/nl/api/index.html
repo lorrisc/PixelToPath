@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelToPath API – Afbeelding naar SVG REST API, 10 Gratis Conversies/Maand</title>
+    <meta name="description" content="Converteer PNG, JPG, BMP of WebP naar strakke SVG met één REST-call. Potrace voor zwart-wit lijntekeningen, VTracer voor kleurenvectoren. 10 gratis conversies per maand, prepaid afbeeldingen vanaf € 0,05 (tot € 0,01/afbeelding bij grote volumes), credits vervallen nooit.">
+    <meta name="keywords" content="pixeltopath api, afbeelding naar svg api, png naar svg rest api, vectoriseren api, potrace api, vtracer api, svg converter api">
+    <meta name="author" content="Lorris C.">
+
+    <meta property="og:title" content="PixelToPath API – Afbeelding naar SVG REST API, 10 Gratis Conversies/Maand">
+    <meta property="og:description" content="Converteer PNG, JPG, BMP of WebP naar strakke SVG met één REST-call. Potrace voor zwart-wit lijntekeningen, VTracer voor kleurenvectoren. 10 gratis conversies per maand, prepaid afbeeldingen vanaf € 0,05 (tot € 0,01/afbeelding bij grote volumes), credits vervallen nooit.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="PixelToPath app screenshot">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PixelToPath API – Afbeelding naar SVG REST API, 10 Gratis Conversies/Maand">
+    <meta name="twitter:description" content="Converteer PNG, JPG, BMP of WebP naar strakke SVG met één REST-call. Potrace voor zwart-wit lijntekeningen, VTracer voor kleurenvectoren. 10 gratis conversies per maand, prepaid afbeeldingen vanaf € 0,05 (tot € 0,01/afbeelding bij grote volumes), credits vervallen nooit.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="PixelToPath app screenshot">
+    <meta property="og:url" content="https://pixel-to-path.com/nl/api/">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://pixel-to-path.com/nl/api/" />
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/api/" />
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/api/" />
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/api/" />
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/api/" />
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/api/" />
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/api/" />
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/api/" />
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/api/" />
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/api/" />
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/api/" />
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/api/" />
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/api/" />
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/api/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/api/" />
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/api/" />
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/api/" />
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/api/" />
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/api/" />
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/api/" />
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/api/" />
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/api/" />
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/api/" />
+
+    <link rel="stylesheet" href="../../assets/css/bundle.7f66facb.css">
+
+
+
+    <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebService",
+  "@id": "https://pixel-to-path.com/nl/api/#api",
+  "name": "PixelToPath API",
+  "url": "https://pixel-to-path.com/nl/api/",
+  "description": "Converteer PNG, JPG, BMP of WebP naar strakke SVG met één REST-call. Potrace voor zwart-wit lijntekeningen, VTracer voor kleurenvectoren. 10 gratis conversies per maand, prepaid afbeeldingen vanaf € 0,05 (tot € 0,01/afbeelding bij grote volumes), credits vervallen nooit.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://pixel-to-path.com/#organization",
+    "name": "PixelToPath"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "Vectoriseer op schaal vanuit je code. Eén REST-call: stuur een afbeelding, ontvang een strakke SVG."
+  },
+  "isPartOf": {
+    "@id": "https://pixel-to-path.com/#website"
+  }
+}</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wat telt als één conversie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eén succesvolle POST /v1/convert call die een SVG retourneert. Mislukte calls (ongeldige afbeelding, verkeerde parameters, snelheidslimiet, serverfout) en GET /v1/me calls worden nooit in rekening gebracht."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hoe wordt het maandelijkse gratis quotum berekend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per account, op basis van de UTC-kalendermaand — het wordt gereset op de 1e van de maand om 00:00 UTC. Het aanmaken van meerdere API-sleutels vermenigvuldigt het gratis quotum niet: alle sleutels van een account delen dezelfde 10 gratis conversies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vervallen credits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nee. Gekochte credits blijven op je account staan totdat je ze gebruikt. Ze worden pas verbruikt nadat je 10 gratis maandelijkse conversies zijn opgebruikt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hoe krijg ik meer conversies in een maand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Koop prepaid afbeeldingen via het klantenportaal — elke hoeveelheid, in bundels van 50. Je ziet altijd precies hoeveel afbeeldingen je krijgt: 50 afbeeldingen voor € 2,50, 500 afbeeldingen voor € 20, 2.500 voor € 75, 10.000 voor € 200, 50.000 voor € 500. Credits worden binnen enkele seconden na betaling automatisch aan je account toegevoegd — geen licentiesleutel, niets in te voeren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat gebeurt er als ik mijn API-sleutel kwijtraak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sleutels worden gehasht opgeslagen, waardoor ze niet hersteld kunnen worden. Trek de verloren sleutel in via het portaal en maak een nieuwe aan — dit is direct van kracht."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welke afbeeldingsformaten worden ondersteund?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG, JPEG, BMP en WebP, tot 20 MB en 50 megapixels, minimaal 64×64 pixels. Afbeeldingen groter dan 1500 px aan de langste zijde worden voor de conversie verkleind, precies zoals op de gratis website."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/nl/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "API",
+      "item": "https://pixel-to-path.com/nl/api/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/nl/" class="brand">
+            <img src="../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/nl/"
+            class="">Home</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Producten <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/nl/online/"
+                       class="">Online Tool</a>
+                    <a href="/nl/offline/"
+                       class="">Desktop App</a>
+                    <a href="/nl/pro/"
+                       class="">Desktopapp Pro</a>
+                    <a href="/nl/api/"
+                       class="active">API</a>
+                </div>
+            </div>
+
+            <a href="/nl/pricing/"
+               class="">Prijzen</a>
+
+            <div class="lang-switch">
+                <span>🇳🇱 NL</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/nl/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Home</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">Producten</span>
+            <div class="mobile-sublist">
+                <a href="/nl/online/"
+                   class="">Online Tool</a>
+                <a href="/nl/offline/"
+                   class="">Desktop App</a>
+                <a href="/nl/pro/"
+                   class="">Desktopapp Pro</a>
+                <a href="/nl/api/"
+                   class="active">API</a>
+            </div>
+
+            <a href="/nl/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Prijzen</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Taal</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- Hero -->
+        <div class="api-hero">
+            <div class="container">
+                <span class="api-tag">API</span>
+                <h1>PixelToPath API</h1>
+                <p class="api-hero__text">Vectoriseer afbeeldingen programmatisch met <strong>één REST-call</strong>. Upload een PNG-, JPG-, BMP- of WebP-bestand, en je krijgt een strakke, productieklare SVG terug. Zwart-wit lijntekeningen worden overgetrokken door <strong>Potrace</strong>, kleurenafbeeldingen door <strong>VTracer</strong> — dezelfde engines als de gratis online converter.</p>
+                <div class="api-hero__cta">
+                    <a class="btn primary-btn big-btn" href="/portal/"> Haal je API-sleutel op</a>
+                    <a class="btn secondary-btn big-btn" href="/portal/">Inloggen op portaal</a>
+                    <a class="api-hero__docs" href="#quickstart">Lees de documentatie ↓</a>
+                </div>
+                <p class="api-hero__note">10 gratis conversies elke maand · Geen creditcard vereist</p>
+            </div>
+        </div>
+
+        <!-- Accroche -->
+        <div class="api-strip">
+            <div class="container">
+                <p>10 gratis conversies / maand • <strong>1 REST-call</strong> • Potrace + VTracer engines • Credits <strong>vervallen nooit</strong></p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="api-body">
+            <div class="container">
+                <div class="api-layout">
+
+                    <!-- TOC -->
+                    <aside class="api-toc">
+                        <p class="api-toc__title">Op deze pagina</p>
+                        <ul>
+                            
+                            <li><a href="#quickstart">Snel aan de slag</a></li>
+                            <li><a href="#authentication">Authenticatie</a></li>
+                            <li><a href="#convert">POST /v1/convert</a></li>
+                            <li><a href="#engines">Engines</a></li>
+                            <li><a href="#response">Respons</a></li>
+                            <li><a href="#errors">Fouten</a></li>
+                            <li><a href="#limits">Snelheidslimieten</a></li>
+                            <li><a href="#pricing">Prijzen</a></li>
+                            <li><a href="#examples">Codevoorbeelden</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Content -->
+                    <article class="api-content">
+
+                        <!-- Quickstart -->
+                        <section id="quickstart" class="api-section">
+                            <h2>Snel aan de slag</h2>
+                            <p>Drie stappen en je converteert afbeeldingen naar SVG vanuit je terminal, je scripts of je app.</p>
+                            <div class="api-steps">
+                                <div class="api-step">
+                                    <h3>1 · Maak je account aan</h3>
+                                    <p>Registreer je in het klantenportaal met je e-mailadres en een wachtwoord (10+ tekens). Geen creditcard vereist.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>2 · Maak een API-sleutel aan</h3>
+                                    <p>Maak in het portaal een sleutel aan. Deze wordt <strong>één keer</strong> getoond — bewaar hem veilig. Sleutels zien eruit als <code>ptp_live_…</code> en kunnen op elk moment worden ingetrokken.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>3 · Roep /v1/convert aan</h3>
+                                    <p>Stuur je afbeelding als multipart/form-data met je sleutel in de Authorization-header. De SVG komt terug in de response body.</p>
+                                </div>
+                            </div>
+
+                            <p class="api-code-label">Je eerste conversie</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@logo.png" \
+  -F "colormode=binary" \
+  -o logo.svg</code></pre>
+                            <p class="api-note">Interactieve referentie: <a href="https://api.pixel-to-path.com/v1/docs">pixel-to-path.com/v1/docs</a> (OpenAPI/Swagger).</p>
+                        </section>
+
+                        <!-- Authentication -->
+                        <section id="authentication" class="api-section">
+                            <h2>Authenticatie</h2>
+                            <p>Elk verzoek wordt geauthenticeerd met een Bearer-token in de <code>Authorization</code> header:</p>
+                            <pre class="api-code"><code>Authorization: Bearer ptp_live_0123abc…</code></pre>
+                            <ul class="api-list">
+                                <li><strong>Sleutels zijn geheimen:</strong> ze worden gehasht opgeslagen op de server en slechts één keer getoond bij creatie. Sleutel kwijt? Trek hem in en maak een nieuwe aan.</li>
+                                <li><strong>Eén account, meerdere sleutels:</strong> maak tot 5 actieve sleutels aan om je projecten te scheiden. Je maandelijkse gratis quotum wordt per account geteld, niet per sleutel.</li>
+                                <li><strong>Directe intrekking:</strong> een ingetrokken sleutel stopt onmiddellijk met werken, vanuit het portaal of de API-respons van een verbannen account.</li>
+                            </ul>
+                        </section>
+
+                        <!-- POST /v1/convert -->
+                        <section id="convert" class="api-section">
+                            <h2><span class="api-method api-method--post">POST</span> /v1/convert</h2>
+                            <p>Uploaden + conversie in een enkele stateless call. Eén succesvolle call kost maximaal 1 credit — mislukte, ongeldige of snelheidsbeperkte (rate-limited) calls kosten niets.</p>
+
+                            <h3>Verzoek (multipart/form-data)</h3>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Veld</th>
+                                            <th>Type</th>
+                                            <th>Standaard</th>
+                                            <th>Beschrijving</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>file</code></td>
+                                            <td>file</td>
+                                            <td>—</td>
+                                            <td>De te converteren afbeelding. PNG, JPEG, BMP of WebP · max 20 MB · max 50 Mpx · min 64×64 px.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>colormode</code></td>
+                                            <td>string</td>
+                                            <td><code>color</code></td>
+                                            <td>&lt;code&gt;color&lt;/code&gt; gebruikt de VTracer-engine, &lt;code&gt;binary&lt;/code&gt; gebruikt Potrace (zwart-wit).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>mode</code></td>
+                                            <td>string</td>
+                                            <td><code>spline</code></td>
+                                            <td>Alleen Color (VTracer) — genegeerd in binaire modus. <code>spline</code> | <code>polygon</code> | <code>none</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>hierarchical</code></td>
+                                            <td>string</td>
+                                            <td><code>stacked</code></td>
+                                            <td>Alleen Color (VTracer) — genegeerd in binaire modus. <code>stacked</code> | <code>cutout</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>filter_speckle</code></td>
+                                            <td>int</td>
+                                            <td><code>4</code></td>
+                                            <td>Alleen Color (VTracer) — genegeerd in binaire modus. 0–16 — verwijdert kleine ruisvlekken.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>color_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>6</code></td>
+                                            <td>Alleen Color (VTracer) — genegeerd in binaire modus. 1–8 — aantal significante bits per kleurkanaal.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>layer_difference</code></td>
+                                            <td>int</td>
+                                            <td><code>16</code></td>
+                                            <td>Alleen Color (VTracer) — genegeerd in binaire modus. 0–64 — afstand tussen kleurlagen.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>corner_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>60</code></td>
+                                            <td>0–180 — hoek voor hoekdetectie (beide engines).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>length_threshold</code></td>
+                                            <td>float</td>
+                                            <td><code>4.0</code></td>
+                                            <td>3.5–10 — minimale segmentlengte (beide engines).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>splice_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>45</code></td>
+                                            <td>0–180 — hoek voor padsplitsing (beide engines).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>path_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>3</code></td>
+                                            <td>0–8 — decimalen in padcoördinaten.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>invert</code></td>
+                                            <td>bool</td>
+                                            <td><code>false</code></td>
+                                            <td>Alleen Binary (Potrace) — genegeerd in kleurmodus. Trek de lichte gebieden over in plaats van de donkere.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>turdsize</code></td>
+                                            <td>int</td>
+                                            <td><code>2</code></td>
+                                            <td>Alleen Binary (Potrace) — genegeerd in kleurmodus. 0–20 — onderdrukt vlekken tot deze grootte.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>alphamax</code></td>
+                                            <td>float</td>
+                                            <td><code>1.0</code></td>
+                                            <td>Alleen Binary (Potrace) — genegeerd in kleurmodus. 0–1.334 — drempel voor hoekafvlakking.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>opttolerance</code></td>
+                                            <td>float</td>
+                                            <td><code>0.2</code></td>
+                                            <td>Alleen Binary (Potrace) — genegeerd in kleurmodus. 0–10 — tolerantie voor krommingsoptimalisatie.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Engines -->
+                        <section id="engines" class="api-section">
+                            <h2>Twee engines, gekozen door &#34;colormode&#34;</h2>
+                            <p>De API draait precies dezelfde engines als de gratis online converter en de desktop-app:</p>
+                            <div class="grid-3">
+                                <div class="card api-engine">
+                                    <h3>binary — Potrace</h3>
+                                    <p>Zwart-wit overtrekken van lijntekeningen, scans, schetsen en logo's. Het donkere deel van de afbeelding (grijswaarden &lt; 50%) wordt overgetrokken op een witte achtergrond. Verfijn de uitvoer met <code>turdsize</code> (ruisverwijdering), <code>alphamax</code> (hoekafronding) en <code>opttolerance</code> (padoptimalisatie).</p>
+                                </div>
+                                <div class="card api-engine">
+                                    <h3>color — VTracer</h3>
+                                    <p>Gelaagde kleurenvectorisatie voor illustraties, cartoons en foto's. Bepaal het detailniveau met <code>filter_speckle</code>, <code>color_precision</code>, <code>layer_difference</code> en de curve-aanpassing met <code>mode</code> (spline, polygon, none).</p>
+                                </div>
+                            </div>
+                            <p class="api-note">Afbeeldingen worden precies zo voorbewerkt als op de website: de langste zijde wordt voor de conversie verkleind naar 1500 px, en de API retourneert het gedetecteerde afbeeldingstype (<code>line_art</code>, <code>logo</code>, <code>photo</code> of <code>illustration</code>) in de <code>X-Detected-Type</code> header.</p>
+                        </section>
+
+                        <!-- Response -->
+                        <section id="response" class="api-section">
+                            <h2>Respons</h2>
+                            <p>Bij succes: <code>200 OK</code> met <code>image/svg+xml</code> — de body is het SVG-bestand zelf. Informatieve headers:</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Header</th>
+                                            <th>Beschrijving</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><code>X-Credits-Remaining</code></td><td>Betaalde credits die over zijn op het account, na afschrijving voor deze call.</td></tr>
+                                        <tr><td><code>X-Free-Remaining</code></td><td>Gratis conversies die deze maand over zijn.</td></tr>
+                                        <tr><td><code>X-Detected-Type</code></td><td>Gedetecteerd afbeeldingstype (info): line_art, logo, photo of illustration.</td></tr>
+                                        <tr><td><code>X-Processing-Time</code></td><td>Verwerkingstijd van de server in seconden.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>GET /v1/me</h3>
+                            <p>Accountstatus voor de sleutel die gebruikt is om het aan te roepen. <strong>Gratis</strong> — wordt nooit meegeteld voor je quotum, wordt nooit in rekening gebracht.</p>
+                            <p class="api-code-label">Voorbeeldrespons</p>
+                            <pre class="api-code"><code>GET /v1/me
+Authorization: Bearer ptp_live_…
+
+{
+  "key": { "name": "prod", "prefix": "ptp_live_0123abc", … },
+  "usage": {
+    "month": "2026-09", "free_used": 7, "free_limit": 10,
+    "free_remaining": 3, "resets_at": "2026-10-01T00:00:00+00:00"
+  },
+  "credits": { "balance": 120 }
+}</code></pre>
+                        </section>
+
+                        <!-- Errors -->
+                        <section id="errors" class="api-section">
+                            <h2>Fouten</h2>
+                            <p>Elke fout retourneert een consistente JSON-envelop. Mislukte calls verbruiken nooit credits.</p>
+                            <pre class="api-code"><code>HTTP/1.1 402 Payment Required
+{
+  "error": {
+    "code": "quota_exceeded",
+    "message": "Monthly free quota used and no credits left.",
+    "usage": { "free_used": 10, "free_limit": 10, "credits": 0 }
+  }
+}</code></pre>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>HTTP</th>
+                                            <th>Code</th>
+                                            <th>Wanneer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>401</td><td><code>invalid_api_key</code></td><td>Ontbrekende, onjuiste, onbekende of ingetrokken API-sleutel.</td></tr>
+                                        <tr><td>402</td><td><code>quota_exceeded</code></td><td>Maandelijks gratis quotum verbruikt en geen credits meer over.</td></tr>
+                                        <tr><td>403</td><td><code>account_banned</code></td><td>Het account is verbannen — al zijn sleutels worden geweigerd.</td></tr>
+                                        <tr><td>403</td><td><code>ip_blocked</code></td><td>Het IP-adres van de aanroeper staat op een blokkeerlijst (blocklist).</td></tr>
+                                        <tr><td>413</td><td><code>file_too_large</code></td><td>Bestand groter dan 20 MB.</td></tr>
+                                        <tr><td>422</td><td><code>invalid_image</code> / <code>image_too_small</code> / <code>invalid_params</code></td><td>Ongeldige afbeelding, afbeelding te klein of ongeldige parameterwaarde.</td></tr>
+                                        <tr><td>429</td><td><code>rate_limited</code></td><td>Snelheidslimiet per sleutel overschreden (zie hieronder). Bevat een Retry-After header.</td></tr>
+                                        <tr><td>500</td><td><code>internal_error</code></td><td>Conversie mislukt aan de serverkant — er wordt geen credit in rekening gebracht.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Rate limits -->
+                        <section id="limits" class="api-section">
+                            <h2>Snelheidslimieten</h2>
+                            <p>Limieten gelden per API-sleutel, niet per IP, dus een gedeeld kantoor of CI-runner wordt nooit benadeeld door het verkeer van iemand anders.</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Limiet</th>
+                                            <th>Waarde</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Verzoeken per minuut, per sleutel</td><td><strong>60</strong></td></tr>
+                                        <tr><td>Verzoeken per dag, per sleutel</td><td><strong>2 000</strong></td></tr>
+                                        <tr><td>Gelijktijdige conversies, per sleutel</td><td>2 (extra calls wachten, daarna 429)</td></tr>
+                                        <tr><td>Max bestandsgrootte / resolutie</td><td>20 MB / 50 Mpx</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Pricing -->
+                        <section id="pricing" class="api-section">
+                            <h2>Prijzen</h2>
+                            <p>Elk nieuw account krijgt <strong>10 gratis conversies elke maand</strong>, geen creditcard vereist. Heb je meer nodig? Koop prepaid afbeeldingen — elke hoeveelheid (in bundels van 50), met volumekortingen. Ze vervallen nooit en stapelen op met je maandelijkse gratis quotum (gratis conversies worden eerst verbruikt).</p>
+                            <div class="api-pricing">
+                                <div class="card api-price-card">
+                                    <h3>Gratis</h3>
+                                    <p class="api-price">€ 0<span>/maand</span></p>
+                                    <ul class="checklist">
+                                        <li>10 conversies / maand</li>
+                                        <li>Beide engines (Potrace + VTracer)</li>
+                                        <li>Tot 5 API-sleutels</li>
+                                    </ul>
+                                    <a class="btn secondary-btn" href="/portal/">Maak een account aan</a>
+                                </div>
+                                <div class="card api-price-card api-price-card--highlight">
+                                    <h3>Prepaid afbeeldingen</h3>
+                                    <p class="api-price">€ 0,050<span>/ afbeelding</span></p>
+                                    <table class="tiers">
+                                        <caption>Volumeprijzen — hoe meer afbeeldingen je koopt, hoe goedkoper ze per stuk worden</caption>
+                                        <tr><th scope="row">Afbeeldingen</th><td>50–450</td><td>500–2 450</td><td>2 500–9 950</td><td>10 000–49 950</td><td>50 000+</td></tr>
+                                        <tr><th scope="row">€/image</th><td>0.050</td><td>0.040</td><td>0.030</td><td>0.020</td><td>0.010</td></tr>
+                                    </table>
+                                    <ul class="checklist">
+                                        <li>1 gekochte afbeelding = 1 conversie (credits vervallen nooit)</li>
+                                        <li>Vervalt nooit, stapelt op met het gratis niveau</li>
+                                        <li>Elke hoeveelheid: € 0,040/afbeelding vanaf 500, tot € 0,010/afbeelding</li>
+                                    </ul>
+                                    <a class="btn primary-btn" href="/portal/">Koop afbeeldingen</a>
+                                </div>
+                            </div>
+                            <p class="api-note">Automatisch tegoed: je saldo wordt binnen enkele seconden na de betaling bijgewerkt, via de betalingswebhook. Terugbetalingen verminderen de gekochte credits, gemaximeerd op het huidige saldo. Veilig afrekenen via Lemon Squeezy (btw wordt automatisch verwerkt).</p>
+                        </section>
+
+                        <!-- Code examples -->
+                        <section id="examples" class="api-section">
+                            <h2>Codevoorbeelden</h2>
+                            <p>Kopieer, plak en pas aan. De API spreekt plain multipart/form-data, dus elke HTTP-client werkt.</p>
+
+                            <p class="api-code-label">cURL</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@photo.jpg" \
+  -F "colormode=color" \
+  -F "filter_speckle=4" \
+  -o photo.svg</code></pre>
+
+                            <p class="api-code-label">Python</p>
+                            <pre class="api-code"><code>import requests
+
+resp = requests.post(
+    "https://api.pixel-to-path.com/v1/convert",
+    headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
+    files={"file": open("photo.jpg", "rb")},
+    data={"colormode": "color", "filter_speckle": 4},
+)
+resp.raise_for_status()
+print(resp.headers["X-Credits-Remaining"], "credits left")
+with open("photo.svg", "wb") as f:
+    f.write(resp.content)</code></pre>
+
+                            <p class="api-code-label">JavaScript</p>
+                            <pre class="api-code"><code>const form = new FormData();
+form.append("file", new Blob([imageBytes]), "photo.jpg");
+form.append("colormode", "color");
+
+const resp = await fetch("https://api.pixel-to-path.com/v1/convert", {
+  method: "POST",
+  headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
+  body: form,
+});
+if (!resp.ok) {
+  const { error } = await resp.json();
+  throw new Error(`${error.code}: ${error.message}`);
+}
+const svg = await resp.text();
+console.log(resp.headers.get("X-Credits-Remaining"), "credits left");</code></pre>
+                        </section>
+
+                        <!-- FAQ -->
+                        <section id="faq" class="api-section">
+                            <h2>Veelgestelde vragen</h2>
+                            <details class="api-faq-item">
+                                <summary>Wat telt als één conversie?</summary>
+                                <p>Eén succesvolle POST /v1/convert call die een SVG retourneert. Mislukte calls (ongeldige afbeelding, verkeerde parameters, snelheidslimiet, serverfout) en GET /v1/me calls worden nooit in rekening gebracht.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Hoe wordt het maandelijkse gratis quotum berekend?</summary>
+                                <p>Per account, op basis van de UTC-kalendermaand — het wordt gereset op de 1e van de maand om 00:00 UTC. Het aanmaken van meerdere API-sleutels vermenigvuldigt het gratis quotum niet: alle sleutels van een account delen dezelfde 10 gratis conversies.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Vervallen credits?</summary>
+                                <p>Nee. Gekochte credits blijven op je account staan totdat je ze gebruikt. Ze worden pas verbruikt nadat je 10 gratis maandelijkse conversies zijn opgebruikt.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Hoe krijg ik meer conversies in een maand?</summary>
+                                <p>Koop prepaid afbeeldingen via het klantenportaal — elke hoeveelheid, in bundels van 50. Je ziet altijd precies hoeveel afbeeldingen je krijgt: 50 afbeeldingen voor € 2,50, 500 afbeeldingen voor € 20, 2.500 voor € 75, 10.000 voor € 200, 50.000 voor € 500. Credits worden binnen enkele seconden na betaling automatisch aan je account toegevoegd — geen licentiesleutel, niets in te voeren.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Wat gebeurt er als ik mijn API-sleutel kwijtraak?</summary>
+                                <p>Sleutels worden gehasht opgeslagen, waardoor ze niet hersteld kunnen worden. Trek de verloren sleutel in via het portaal en maak een nieuwe aan — dit is direct van kracht.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Welke afbeeldingsformaten worden ondersteund?</summary>
+                                <p>PNG, JPEG, BMP en WebP, tot 20 MB en 50 megapixels, minimaal 64×64 pixels. Afbeeldingen groter dan 1500 px aan de langste zijde worden voor de conversie verkleind, precies zoals op de gratis website.</p>
+                            </details>
+                        </section>
+
+                        <!-- Autres versions -->
+                        <!-- Versions : les 4 façons d'utiliser PixelToPath (clés pv_* — fallback EN) -->
+<section class="section versions-section">
+    <div class="container">
+        <h2 class="section-title">Kies Uw Versie</h2>
+        <p class="section-intro">Dezelfde krachtige engine - kies het formaat dat bij uw workflow past.</p>
+
+        <div class="versions-grid">
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🌐</div>
+                <h3>Online Tool</h3>
+                <p class="versions-card__price">Gratis</p>
+                <p class="versions-card__desc">Converteer afbeeldingen direct in je browser. Geen installatie, geen account.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/nl/online/">Open de tool</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">💻</div>
+                <h3>Desktop App</h3>
+                <p class="versions-card__price">Gratis &amp; open source</p>
+                <p class="versions-card__desc">De volledige converter op je computer, voor Windows &amp; Linux.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/nl/offline/">Gratis downloaden</a>
+            </article>
+
+            <article class="card versions-card versions-card--highlight">
+                <div class="versions-card__icon">⌨️</div>
+                <h3>Desktopapp Pro</h3>
+                <p class="versions-card__price">€ 39 eenmalig</p>
+                <p class="versions-card__desc">Hot folder, batchconversie en CLI voor zware workloads.</p>
+                <a class="btn primary-btn versions-card__cta" href="/nl/pro/">Koop Pro</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🔌</div>
+                <h3>API</h3>
+                <p class="versions-card__price">Gratis niveau + creditpakketten</p>
+                <p class="versions-card__desc">Één REST-call: stuur een afbeelding, krijg een strakke SVG. 10 gratis/maand.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/nl/api/">Haal een API-sleutel op</a>
+            </article>
+
+        </div>
+
+        <p class="versions-links">
+            <a href="/nl/pricing/">Vergelijk alle versies &amp; prijzen →</a>
+        </p>
+        <p class="versions-links versions-links--portal">
+            Heb je al een account?
+            <a href="/portal/">Inloggen op het klantenportaal →</a>
+        </p>
+    </div>
+</section>
+
+
+                        <!-- CTA finale -->
+                        <section class="api-cta">
+                            <h2>Klaar om op schaal te vectoriseren?</h2>
+                            <p>Maak je account aan, haal een sleutel op en voer je eerste call uit in minder dan twee minuten.</p>
+                            <a class="btn primary-btn big-btn" href="/portal/">Haal je gratis API-sleutel op</a>
+                        </section>
+
+                        <p class="api-footer-note">Vragen over de API? Open een issue op <a href="https://github.com/lorrisc/PixelToPath" target="_blank" rel="noopener">GitHub</a>.</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/nl/">Home</a>
+        <a href="/nl/online/">Online Tool</a>
+        <a href="/nl/offline/">Desktop App</a>
+        <a href="/nl/pro/">Pro</a>
+        <a href="/nl/api/">API</a>
+        <a href="/nl/blog/">Blog</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Klantenportaal</a>
+    </div>
+</footer>
+
+<script src="../../assets/js/docunest-strings.js" defer></script>
+<script src="../../assets/js/docunest-popup.js" data-asset="../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../assets/js/ui-state.js"></script>
+</body>
+</html>

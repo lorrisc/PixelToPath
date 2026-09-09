@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelToPath API – 이미지 SVG 변환 REST API, 월 10회 무료 변환</title>
+    <meta name="description" content="단 한 번의 REST 호출로 PNG, JPG, BMP 또는 WebP를 깔끔한 SVG로 변환하세요. 흑백 라인 아트를 위한 Potrace, 컬러 벡터를 위한 VTracer. 매월 10회 무료 변환, 0.05€부터 시작하는 선불 이미지(대량 구매 시 이미지당 최저 0.01€), 만료되지 않는 크레딧.">
+    <meta name="keywords" content="pixeltopath api, 이미지 svg api, png svg rest api, 벡터화 api, potrace api, vtracer api, svg 변환기 api">
+    <meta name="author" content="Lorris C.">
+
+    <meta property="og:title" content="PixelToPath API – 이미지 SVG 변환 REST API, 월 10회 무료 변환">
+    <meta property="og:description" content="단 한 번의 REST 호출로 PNG, JPG, BMP 또는 WebP를 깔끔한 SVG로 변환하세요. 흑백 라인 아트를 위한 Potrace, 컬러 벡터를 위한 VTracer. 매월 10회 무료 변환, 0.05€부터 시작하는 선불 이미지(대량 구매 시 이미지당 최저 0.01€), 만료되지 않는 크레딧.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="PixelToPath app screenshot">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PixelToPath API – 이미지 SVG 변환 REST API, 월 10회 무료 변환">
+    <meta name="twitter:description" content="단 한 번의 REST 호출로 PNG, JPG, BMP 또는 WebP를 깔끔한 SVG로 변환하세요. 흑백 라인 아트를 위한 Potrace, 컬러 벡터를 위한 VTracer. 매월 10회 무료 변환, 0.05€부터 시작하는 선불 이미지(대량 구매 시 이미지당 최저 0.01€), 만료되지 않는 크레딧.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="PixelToPath app screenshot">
+    <meta property="og:url" content="https://pixel-to-path.com/ko/api/">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://pixel-to-path.com/ko/api/" />
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/api/" />
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/api/" />
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/api/" />
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/api/" />
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/api/" />
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/api/" />
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/api/" />
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/api/" />
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/api/" />
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/api/" />
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/api/" />
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/api/" />
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/api/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/api/" />
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/api/" />
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/api/" />
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/api/" />
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/api/" />
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/api/" />
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/api/" />
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/api/" />
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/api/" />
+
+    <link rel="stylesheet" href="../../assets/css/bundle.7f66facb.css">
+
+
+
+    <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebService",
+  "@id": "https://pixel-to-path.com/ko/api/#api",
+  "name": "PixelToPath API",
+  "url": "https://pixel-to-path.com/ko/api/",
+  "description": "단 한 번의 REST 호출로 PNG, JPG, BMP 또는 WebP를 깔끔한 SVG로 변환하세요. 흑백 라인 아트를 위한 Potrace, 컬러 벡터를 위한 VTracer. 매월 10회 무료 변환, 0.05€부터 시작하는 선불 이미지(대량 구매 시 이미지당 최저 0.01€), 만료되지 않는 크레딧.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://pixel-to-path.com/#organization",
+    "name": "PixelToPath"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "코드에서 대규모로 벡터화하세요. 하나의 REST 호출: 이미지를 전송하고 깔끔한 SVG를 받으세요."
+  },
+  "isPartOf": {
+    "@id": "https://pixel-to-path.com/#website"
+  }
+}</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "1회 변환의 기준은 무엇인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SVG를 반환하는 하나의 성공적인 POST /v1/convert 호출입니다. 실패한 호출(잘못된 이미지, 잘못된 매개변수, 속도 제한, 서버 오류) 및 GET /v1/me 호출은 절대 청구되지 않습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "월별 무료 할당량은 어떻게 계산되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "계정당, UTC 달력을 기준으로 계산되며 — 1일 00:00 UTC에 재설정됩니다. 여러 개의 API 키를 생성한다고 해서 무료 할당량이 늘어나는 것은 아니며, 계정의 모든 키는 동일한 10회의 무료 변환을 공유합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "크레딧은 만료되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니요. 구매한 크레딧은 사용할 때까지 계정에 남아 있습니다. 매월 제공되는 10회의 무료 변환이 모두 소진된 후에만 소비됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "한 달에 더 많은 변환을 하려면 어떻게 해야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "고객 포털에서 선불 이미지를 50개 단위로 원하는 만큼 구매하세요. 항상 정확히 몇 개의 이미지를 받는지 확인할 수 있습니다: 50개 2.50€, 500개 20€, 2,500개 75€, 10,000개 200€, 50,000개 500€. 크레딧은 결제 후 몇 초 내에 계정에 자동으로 추가되며 라이선스 키나 입력할 항목은 없습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "API 키를 분실하면 어떻게 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "키는 해시되어 저장되므로 복구할 수 없습니다. 포털에서 분실한 키를 취소하고 새 키를 생성하세요 — 즉시 적용됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "어떤 이미지 형식이 지원되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "최대 20MB 및 50메가픽셀, 최소 64×64 픽셀의 PNG, JPEG, BMP 및 WebP. 가장 긴 면이 1500px보다 큰 이미지는 변환 전에 무료 웹사이트와 정확히 동일하게 크기가 조정됩니다."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/ko/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "API",
+      "item": "https://pixel-to-path.com/ko/api/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/ko/" class="brand">
+            <img src="../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/ko/"
+            class="">홈</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">제품 <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/ko/online/"
+                       class="">온라인 도구</a>
+                    <a href="/ko/offline/"
+                       class="">데스크톱 앱</a>
+                    <a href="/ko/pro/"
+                       class="">데스크톱 앱 Pro</a>
+                    <a href="/ko/api/"
+                       class="active">API</a>
+                </div>
+            </div>
+
+            <a href="/ko/pricing/"
+               class="">가격</a>
+
+            <div class="lang-switch">
+                <span>🇰🇷 KO</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/ko/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">홈</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">제품</span>
+            <div class="mobile-sublist">
+                <a href="/ko/online/"
+                   class="">온라인 도구</a>
+                <a href="/ko/offline/"
+                   class="">데스크톱 앱</a>
+                <a href="/ko/pro/"
+                   class="">데스크톱 앱 Pro</a>
+                <a href="/ko/api/"
+                   class="active">API</a>
+            </div>
+
+            <a href="/ko/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">가격</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">언어</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- Hero -->
+        <div class="api-hero">
+            <div class="container">
+                <span class="api-tag">API</span>
+                <h1>PixelToPath API</h1>
+                <p class="api-hero__text"><strong>단 하나의 REST 호출</strong>로 이미지를 프로그래밍 방식으로 벡터화하세요. PNG, JPG, BMP 또는 WebP 파일을 업로드하고 프로덕션 환경에 바로 사용할 수 있는 깔끔한 SVG를 받아보세요. 흑백 라인 아트는 <strong>Potrace</strong>, 컬러 이미지는 <strong>VTracer</strong>로 트레이싱됩니다. (무료 온라인 변환기와 동일한 엔진 지원)</p>
+                <div class="api-hero__cta">
+                    <a class="btn primary-btn big-btn" href="/portal/"> API 키 발급받기</a>
+                    <a class="btn secondary-btn big-btn" href="/portal/">포털에 로그인하기</a>
+                    <a class="api-hero__docs" href="#quickstart">문서 읽기 ↓</a>
+                </div>
+                <p class="api-hero__note">매월 10회 무료 변환 · 신용카드 불필요</p>
+            </div>
+        </div>
+
+        <!-- Accroche -->
+        <div class="api-strip">
+            <div class="container">
+                <p>월 10회 무료 변환 • <strong>1번의 REST 호출</strong> • Potrace + VTracer 엔진 • <strong>만료되지 않는</strong> 크레딧</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="api-body">
+            <div class="container">
+                <div class="api-layout">
+
+                    <!-- TOC -->
+                    <aside class="api-toc">
+                        <p class="api-toc__title">이 페이지 내용</p>
+                        <ul>
+                            
+                            <li><a href="#quickstart">빠른 시작</a></li>
+                            <li><a href="#authentication">인증</a></li>
+                            <li><a href="#convert">POST /v1/convert</a></li>
+                            <li><a href="#engines">엔진</a></li>
+                            <li><a href="#response">응답</a></li>
+                            <li><a href="#errors">오류</a></li>
+                            <li><a href="#limits">속도 제한</a></li>
+                            <li><a href="#pricing">가격</a></li>
+                            <li><a href="#examples">코드 예시</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Content -->
+                    <article class="api-content">
+
+                        <!-- Quickstart -->
+                        <section id="quickstart" class="api-section">
+                            <h2>빠른 시작</h2>
+                            <p>단 3단계만으로 터미널, 스크립트 또는 앱에서 이미지를 SVG로 변환할 수 있습니다.</p>
+                            <div class="api-steps">
+                                <div class="api-step">
+                                    <h3>1 · 계정 생성</h3>
+                                    <p>이메일과 비밀번호(10자 이상)로 고객 포털에 등록하세요. 신용카드는 필요하지 않습니다.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>2 · API 키 생성</h3>
+                                    <p>포털에서 키를 생성하세요. 키는 <strong>한 번만</strong> 표시되므로 안전하게 보관하세요. 키는 <code>ptp_live_…</code> 형식이며 언제든지 취소할 수 있습니다.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>3 · /v1/convert 호출</h3>
+                                    <p>Authorization 헤더에 키를 포함하여 multipart/form-data 형식으로 이미지를 전송하세요. SVG가 응답 본문으로 반환됩니다.</p>
+                                </div>
+                            </div>
+
+                            <p class="api-code-label">첫 번째 변환</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@logo.png" \
+  -F "colormode=binary" \
+  -o logo.svg</code></pre>
+                            <p class="api-note">인터랙티브 레퍼런스: <a href="https://api.pixel-to-path.com/v1/docs">pixel-to-path.com/v1/docs</a> (OpenAPI/Swagger).</p>
+                        </section>
+
+                        <!-- Authentication -->
+                        <section id="authentication" class="api-section">
+                            <h2>인증</h2>
+                            <p>모든 요청은 <code>Authorization</code> 헤더의 Bearer 토큰으로 인증됩니다:</p>
+                            <pre class="api-code"><code>Authorization: Bearer ptp_live_0123abc…</code></pre>
+                            <ul class="api-list">
+                                <li><strong>키는 비밀입니다:</strong> 서버 측에서 해시되어 저장되며 생성 시 한 번만 표시됩니다. 키를 분실하셨나요? 키를 취소하고 새로 생성하세요.</li>
+                                <li><strong>하나의 계정, 여러 개의 키:</strong> 최대 5개의 활성 키를 생성하여 프로젝트를 분리할 수 있습니다. 월별 무료 할당량은 키가 아닌 계정당 계산됩니다.</li>
+                                <li><strong>즉각적인 취소:</strong> 취소된 키는 포털에서 또는 차단된 계정의 API 응답에서 즉시 작동을 멈춥니다.</li>
+                            </ul>
+                        </section>
+
+                        <!-- POST /v1/convert -->
+                        <section id="convert" class="api-section">
+                            <h2><span class="api-method api-method--post">POST</span> /v1/convert</h2>
+                            <p>단일 상태 비저장 호출로 업로드와 변환을 수행합니다. 성공한 호출은 최대 1 크레딧을 소비하며 실패, 유효하지 않은 또는 속도 제한에 걸린 호출은 비용이 발생하지 않습니다.</p>
+
+                            <h3>요청 (multipart/form-data)</h3>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>필드</th>
+                                            <th>유형</th>
+                                            <th>기본값</th>
+                                            <th>설명</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>file</code></td>
+                                            <td>file</td>
+                                            <td>—</td>
+                                            <td>변환할 이미지. PNG, JPEG, BMP 또는 WebP · 최대 20 MB · 최대 50 Mpx · 최소 64×64 px.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>colormode</code></td>
+                                            <td>string</td>
+                                            <td><code>color</code></td>
+                                            <td>&lt;code&gt;color&lt;/code&gt;는 VTracer 엔진을 사용하고, &lt;code&gt;binary&lt;/code&gt;는 Potrace(흑백)를 사용합니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>mode</code></td>
+                                            <td>string</td>
+                                            <td><code>spline</code></td>
+                                            <td>컬러(VTracer) 전용 — 이진 모드에서는 무시됩니다. <code>spline</code> | <code>polygon</code> | <code>none</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>hierarchical</code></td>
+                                            <td>string</td>
+                                            <td><code>stacked</code></td>
+                                            <td>컬러(VTracer) 전용 — 이진 모드에서는 무시됩니다. <code>stacked</code> | <code>cutout</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>filter_speckle</code></td>
+                                            <td>int</td>
+                                            <td><code>4</code></td>
+                                            <td>컬러(VTracer) 전용 — 이진 모드에서는 무시됩니다. 0–16 — 작은 노이즈 덩어리를 제거합니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>color_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>6</code></td>
+                                            <td>컬러(VTracer) 전용 — 이진 모드에서는 무시됩니다. 1–8 — 색상 채널당 유효 비트 수.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>layer_difference</code></td>
+                                            <td>int</td>
+                                            <td><code>16</code></td>
+                                            <td>컬러(VTracer) 전용 — 이진 모드에서는 무시됩니다. 0–64 — 색상 레이어 간 거리.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>corner_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>60</code></td>
+                                            <td>0–180 — 코너 감지 각도(두 엔진 모두).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>length_threshold</code></td>
+                                            <td>float</td>
+                                            <td><code>4.0</code></td>
+                                            <td>3.5–10 — 세그먼트 최소 길이(두 엔진 모두).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>splice_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>45</code></td>
+                                            <td>0–180 — 경로 분할 각도(두 엔진 모두).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>path_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>3</code></td>
+                                            <td>0–8 — 경로 좌표의 소수 자릿수.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>invert</code></td>
+                                            <td>bool</td>
+                                            <td><code>false</code></td>
+                                            <td>이진(Potrace) 전용 — 컬러 모드에서는 무시됩니다. 어두운 영역 대신 밝은 영역을 트레이싱합니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>turdsize</code></td>
+                                            <td>int</td>
+                                            <td><code>2</code></td>
+                                            <td>이진(Potrace) 전용 — 컬러 모드에서는 무시됩니다. 0–20 — 이 크기까지의 노이즈를 제거합니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>alphamax</code></td>
+                                            <td>float</td>
+                                            <td><code>1.0</code></td>
+                                            <td>이진(Potrace) 전용 — 컬러 모드에서는 무시됩니다. 0–1.334 — 코너 스무딩 임계값.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>opttolerance</code></td>
+                                            <td>float</td>
+                                            <td><code>0.2</code></td>
+                                            <td>이진(Potrace) 전용 — 컬러 모드에서는 무시됩니다. 0–10 — 곡선 최적화 허용 오차.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Engines -->
+                        <section id="engines" class="api-section">
+                            <h2>&#34;colormode&#34;에 따라 선택되는 두 가지 엔진</h2>
+                            <p>API는 무료 온라인 변환기 및 데스크톱 앱과 완전히 동일한 엔진을 실행합니다:</p>
+                            <div class="grid-3">
+                                <div class="card api-engine">
+                                    <h3>binary — Potrace</h3>
+                                    <p>라인 아트, 스캔, 스케치 및 로고의 흑백 트레이싱. 이미지의 어두운 부분(그레이스케일 &lt; 50%)이 흰색 배경 위에 트레이싱됩니다. <code>turdsize</code>(노이즈 제거), <code>alphamax</code>(코너 스무딩) 및 <code>opttolerance</code>(경로 최적화)로 출력을 미세 조정하세요.</p>
+                                </div>
+                                <div class="card api-engine">
+                                    <h3>color — VTracer</h3>
+                                    <p>일러스트레이션, 만화 및 사진을 위한 계층형 컬러 벡터화. <code>filter_speckle</code>, <code>color_precision</code>, <code>layer_difference</code>로 디테일 수준을, <code>mode</code>(스플라인, 다각형, 없음)로 곡선 맞춤을 제어하세요.</p>
+                                </div>
+                            </div>
+                            <p class="api-note">이미지는 웹사이트와 정확히 동일하게 전처리됩니다. 변환 전에 가장 긴 면이 1500px로 크기 조정되며, API는 감지된 이미지 유형(<code>line_art</code>, <code>logo</code>, <code>photo</code> 또는 <code>illustration</code>)을 <code>X-Detected-Type</code> 헤더로 반환합니다.</p>
+                        </section>
+
+                        <!-- Response -->
+                        <section id="response" class="api-section">
+                            <h2>응답</h2>
+                            <p>성공 시: <code>image/svg+xml</code>과 함께 <code>200 OK</code> — 본문은 SVG 파일 자체입니다. 유용한 헤더:</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>헤더</th>
+                                            <th>설명</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><code>X-Credits-Remaining</code></td><td>이 호출에 대한 차감 후 계정에 남은 유료 크레딧.</td></tr>
+                                        <tr><td><code>X-Free-Remaining</code></td><td>이번 달 남은 무료 변환 횟수.</td></tr>
+                                        <tr><td><code>X-Detected-Type</code></td><td>감지된 이미지 유형(정보): line_art, logo, photo 또는 illustration.</td></tr>
+                                        <tr><td><code>X-Processing-Time</code></td><td>서버 처리 시간(초).</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>GET /v1/me</h3>
+                            <p>호출에 사용된 키의 계정 상태. <strong>무료</strong> — 할당량에 포함되지 않으며 차감되지 않습니다.</p>
+                            <p class="api-code-label">응답 예시</p>
+                            <pre class="api-code"><code>GET /v1/me
+Authorization: Bearer ptp_live_…
+
+{
+  "key": { "name": "prod", "prefix": "ptp_live_0123abc", … },
+  "usage": {
+    "month": "2026-09", "free_used": 7, "free_limit": 10,
+    "free_remaining": 3, "resets_at": "2026-10-01T00:00:00+00:00"
+  },
+  "credits": { "balance": 120 }
+}</code></pre>
+                        </section>
+
+                        <!-- Errors -->
+                        <section id="errors" class="api-section">
+                            <h2>오류</h2>
+                            <p>모든 오류는 일관된 JSON 봉투를 반환합니다. 실패한 호출은 절대 크레딧을 소비하지 않습니다.</p>
+                            <pre class="api-code"><code>HTTP/1.1 402 Payment Required
+{
+  "error": {
+    "code": "quota_exceeded",
+    "message": "Monthly free quota used and no credits left.",
+    "usage": { "free_used": 10, "free_limit": 10, "credits": 0 }
+  }
+}</code></pre>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>HTTP</th>
+                                            <th>코드</th>
+                                            <th>발생 시기</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>401</td><td><code>invalid_api_key</code></td><td>API 키가 누락되었거나, 형식이 잘못되었거나, 알 수 없거나 취소되었습니다.</td></tr>
+                                        <tr><td>402</td><td><code>quota_exceeded</code></td><td>월별 무료 할당량을 모두 사용했으며 남은 크레딧이 없습니다.</td></tr>
+                                        <tr><td>403</td><td><code>account_banned</code></td><td>계정이 차단되었습니다 — 계정의 모든 키가 거부됩니다.</td></tr>
+                                        <tr><td>403</td><td><code>ip_blocked</code></td><td>발신자 IP가 차단 목록에 있습니다.</td></tr>
+                                        <tr><td>413</td><td><code>file_too_large</code></td><td>파일 크기가 20MB를 초과합니다.</td></tr>
+                                        <tr><td>422</td><td><code>invalid_image</code> / <code>image_too_small</code> / <code>invalid_params</code></td><td>유효하지 않은 이미지, 너무 작은 이미지 또는 유효하지 않은 매개변수 값입니다.</td></tr>
+                                        <tr><td>429</td><td><code>rate_limited</code></td><td>키당 속도 제한을 초과했습니다(아래 참조). Retry-After 헤더가 포함됩니다.</td></tr>
+                                        <tr><td>500</td><td><code>internal_error</code></td><td>서버 측에서 변환에 실패했습니다 — 크레딧이 청구되지 않습니다.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Rate limits -->
+                        <section id="limits" class="api-section">
+                            <h2>속도 제한</h2>
+                            <p>제한은 IP가 아닌 API 키당 적용되므로, 공유 사무실이나 CI 러너는 다른 사람의 트래픽으로 인해 불이익을 받지 않습니다.</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>제한</th>
+                                            <th>값</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>분당 요청, 키당</td><td><strong>60</strong></td></tr>
+                                        <tr><td>일당 요청, 키당</td><td><strong>2 000</strong></td></tr>
+                                        <tr><td>동시 변환, 키당</td><td>2 (추가 호출은 대기 후 429 반환)</td></tr>
+                                        <tr><td>최대 파일 크기 / 해상도</td><td>20 MB / 50 Mpx</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Pricing -->
+                        <section id="pricing" class="api-section">
+                            <h2>가격</h2>
+                            <p>모든 신규 계정은 신용카드 없이 <strong>매월 10회의 무료 변환</strong>을 받습니다. 더 필요하신가요? 선불 이미지를 대량 할인과 함께 50개 단위로 원하는 만큼 구매하세요. 만료되지 않으며 월별 무료 할당량과 함께 중첩됩니다 (무료 변환이 먼저 소진됩니다).</p>
+                            <div class="api-pricing">
+                                <div class="card api-price-card">
+                                    <h3>무료</h3>
+                                    <p class="api-price">0€<span>/월</span></p>
+                                    <ul class="checklist">
+                                        <li>월 10회 변환</li>
+                                        <li>두 가지 엔진 모두 사용 가능 (Potrace + VTracer)</li>
+                                        <li>최대 5개의 API 키</li>
+                                    </ul>
+                                    <a class="btn secondary-btn" href="/portal/">계정 만들기</a>
+                                </div>
+                                <div class="card api-price-card api-price-card--highlight">
+                                    <h3>선불 이미지</h3>
+                                    <p class="api-price">0.050€<span>/ 이미지</span></p>
+                                    <table class="tiers">
+                                        <caption>대량 할인 — 이미지를 많이 구매할수록 단가가 저렴해집니다</caption>
+                                        <tr><th scope="row">이미지 수</th><td>50–450</td><td>500–2 450</td><td>2 500–9 950</td><td>10 000–49 950</td><td>50 000+</td></tr>
+                                        <tr><th scope="row">€/image</th><td>0.050</td><td>0.040</td><td>0.030</td><td>0.020</td><td>0.010</td></tr>
+                                    </table>
+                                    <ul class="checklist">
+                                        <li>구매한 이미지 1개 = 변환 1회 (크레딧은 만료되지 않음)</li>
+                                        <li>만료 없음, 무료 티어와 중첩됨</li>
+                                        <li>수량 무관: 500개부터 이미지당 0.040€, 최저 0.010€까지</li>
+                                    </ul>
+                                    <a class="btn primary-btn" href="/portal/">이미지 구매</a>
+                                </div>
+                            </div>
+                            <p class="api-note">자동 크레딧 충전: 잔액은 결제 웹훅을 통해 결제 후 몇 초 내에 업데이트됩니다. 환불 시 구매한 크레딧이 차감되며, 현재 잔액까지만 차감됩니다. Lemon Squeezy를 통한 안전한 결제(VAT 자동 처리).</p>
+                        </section>
+
+                        <!-- Code examples -->
+                        <section id="examples" class="api-section">
+                            <h2>코드 예시</h2>
+                            <p>복사하여 붙여넣고 조정하세요. API는 평범한 multipart/form-data를 사용하므로 모든 HTTP 클라이언트에서 작동합니다.</p>
+
+                            <p class="api-code-label">cURL</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@photo.jpg" \
+  -F "colormode=color" \
+  -F "filter_speckle=4" \
+  -o photo.svg</code></pre>
+
+                            <p class="api-code-label">Python</p>
+                            <pre class="api-code"><code>import requests
+
+resp = requests.post(
+    "https://api.pixel-to-path.com/v1/convert",
+    headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
+    files={"file": open("photo.jpg", "rb")},
+    data={"colormode": "color", "filter_speckle": 4},
+)
+resp.raise_for_status()
+print(resp.headers["X-Credits-Remaining"], "credits left")
+with open("photo.svg", "wb") as f:
+    f.write(resp.content)</code></pre>
+
+                            <p class="api-code-label">JavaScript</p>
+                            <pre class="api-code"><code>const form = new FormData();
+form.append("file", new Blob([imageBytes]), "photo.jpg");
+form.append("colormode", "color");
+
+const resp = await fetch("https://api.pixel-to-path.com/v1/convert", {
+  method: "POST",
+  headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
+  body: form,
+});
+if (!resp.ok) {
+  const { error } = await resp.json();
+  throw new Error(`${error.code}: ${error.message}`);
+}
+const svg = await resp.text();
+console.log(resp.headers.get("X-Credits-Remaining"), "credits left");</code></pre>
+                        </section>
+
+                        <!-- FAQ -->
+                        <section id="faq" class="api-section">
+                            <h2>자주 묻는 질문</h2>
+                            <details class="api-faq-item">
+                                <summary>1회 변환의 기준은 무엇인가요?</summary>
+                                <p>SVG를 반환하는 하나의 성공적인 POST /v1/convert 호출입니다. 실패한 호출(잘못된 이미지, 잘못된 매개변수, 속도 제한, 서버 오류) 및 GET /v1/me 호출은 절대 청구되지 않습니다.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>월별 무료 할당량은 어떻게 계산되나요?</summary>
+                                <p>계정당, UTC 달력을 기준으로 계산되며 — 1일 00:00 UTC에 재설정됩니다. 여러 개의 API 키를 생성한다고 해서 무료 할당량이 늘어나는 것은 아니며, 계정의 모든 키는 동일한 10회의 무료 변환을 공유합니다.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>크레딧은 만료되나요?</summary>
+                                <p>아니요. 구매한 크레딧은 사용할 때까지 계정에 남아 있습니다. 매월 제공되는 10회의 무료 변환이 모두 소진된 후에만 소비됩니다.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>한 달에 더 많은 변환을 하려면 어떻게 해야 하나요?</summary>
+                                <p>고객 포털에서 선불 이미지를 50개 단위로 원하는 만큼 구매하세요. 항상 정확히 몇 개의 이미지를 받는지 확인할 수 있습니다: 50개 2.50€, 500개 20€, 2,500개 75€, 10,000개 200€, 50,000개 500€. 크레딧은 결제 후 몇 초 내에 계정에 자동으로 추가되며 라이선스 키나 입력할 항목은 없습니다.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>API 키를 분실하면 어떻게 되나요?</summary>
+                                <p>키는 해시되어 저장되므로 복구할 수 없습니다. 포털에서 분실한 키를 취소하고 새 키를 생성하세요 — 즉시 적용됩니다.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>어떤 이미지 형식이 지원되나요?</summary>
+                                <p>최대 20MB 및 50메가픽셀, 최소 64×64 픽셀의 PNG, JPEG, BMP 및 WebP. 가장 긴 면이 1500px보다 큰 이미지는 변환 전에 무료 웹사이트와 정확히 동일하게 크기가 조정됩니다.</p>
+                            </details>
+                        </section>
+
+                        <!-- Autres versions -->
+                        <!-- Versions : les 4 façons d'utiliser PixelToPath (clés pv_* — fallback EN) -->
+<section class="section versions-section">
+    <div class="container">
+        <h2 class="section-title">버전 선택</h2>
+        <p class="section-intro">동일한 강력한 엔진 - 워크플로에 맞는 형식을 선택하세요.</p>
+
+        <div class="versions-grid">
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🌐</div>
+                <h3>온라인 도구</h3>
+                <p class="versions-card__price">무료</p>
+                <p class="versions-card__desc">브라우저에서 직접 이미지를 변환하세요. 설치 불필요, 계정 불필요.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/ko/online/">도구 열기</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">💻</div>
+                <h3>데스크톱 앱</h3>
+                <p class="versions-card__price">무료 및 오픈 소스</p>
+                <p class="versions-card__desc">내 컴퓨터에 설치되는 완벽한 변환기, Windows 및 Linux용.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/ko/offline/">무료 다운로드</a>
+            </article>
+
+            <article class="card versions-card versions-card--highlight">
+                <div class="versions-card__icon">⌨️</div>
+                <h3>데스크톱 앱 Pro</h3>
+                <p class="versions-card__price">39€ 일회성 결제</p>
+                <p class="versions-card__desc">대규모 작업을 위한 핫 폴더, 일괄 변환 및 CLI 지원.</p>
+                <a class="btn primary-btn versions-card__cta" href="/ko/pro/">Pro 구매하기</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🔌</div>
+                <h3>API</h3>
+                <p class="versions-card__price">무료 티어 + 크레딧 팩</p>
+                <p class="versions-card__desc">하나의 REST 호출: 이미지를 보내고 깔끔한 SVG를 받으세요. 월 10회 무료.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/ko/api/">API 키 발급받기</a>
+            </article>
+
+        </div>
+
+        <p class="versions-links">
+            <a href="/ko/pricing/">모든 버전 및 가격 비교하기 →</a>
+        </p>
+        <p class="versions-links versions-links--portal">
+            이미 계정이 있으신가요?
+            <a href="/portal/">고객 포털에 로그인하기 →</a>
+        </p>
+    </div>
+</section>
+
+
+                        <!-- CTA finale -->
+                        <section class="api-cta">
+                            <h2>대규모로 벡터화할 준비가 되셨나요?</h2>
+                            <p>2분 이내에 계정을 만들고, 키를 받아 첫 번째 호출을 실행하세요.</p>
+                            <a class="btn primary-btn big-btn" href="/portal/">무료 API 키 발급받기</a>
+                        </section>
+
+                        <p class="api-footer-note">API에 대한 질문이 있으신가요? <a href="https://github.com/lorrisc/PixelToPath" target="_blank" rel="noopener">GitHub</a>에서 이슈를 열어주세요.</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/ko/">홈</a>
+        <a href="/ko/online/">온라인 도구</a>
+        <a href="/ko/offline/">데스크톱 앱</a>
+        <a href="/ko/pro/">Pro</a>
+        <a href="/ko/api/">API</a>
+        <a href="/ko/blog/">블로그</a>
+        <a href="https://github.com/lorrisc/PixelToPath">오픈 소스 (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">고객 포털</a>
+    </div>
+</footer>
+
+<script src="../../assets/js/docunest-strings.js" defer></script>
+<script src="../../assets/js/docunest-popup.js" data-asset="../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../assets/js/ui-state.js"></script>
+</body>
+</html>

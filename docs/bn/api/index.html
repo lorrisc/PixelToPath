@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="bn" dir="ltr">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelToPath API – ইমেজ থেকে SVG REST API, প্রতি মাসে ১০টি ফ্রি রূপান্তর</title>
+    <meta name="description" content="একটি REST কল দিয়ে PNG, JPG, BMP বা WebP-কে পরিষ্কার SVG-তে রূপান্তর করুন। সাদাকালো লাইন আর্টের জন্য Potrace, রঙিন ভেক্টরের জন্য VTracer। প্রতি মাসে ১০টি ফ্রি রূপান্তর, ভলিউম অনুযায়ী €০.০৫ (সর্বনিম্ন €০.০১/ছবি) থেকে প্রিপেইড ছবি, ক্রেডিটের কোনো মেয়াদ শেষ হয় না।">
+    <meta name="keywords" content="pixeltopath api, image to svg api, png to svg rest api, vectorize api, potrace api, vtracer api, svg converter api">
+    <meta name="author" content="Lorris C.">
+
+    <meta property="og:title" content="PixelToPath API – ইমেজ থেকে SVG REST API, প্রতি মাসে ১০টি ফ্রি রূপান্তর">
+    <meta property="og:description" content="একটি REST কল দিয়ে PNG, JPG, BMP বা WebP-কে পরিষ্কার SVG-তে রূপান্তর করুন। সাদাকালো লাইন আর্টের জন্য Potrace, রঙিন ভেক্টরের জন্য VTracer। প্রতি মাসে ১০টি ফ্রি রূপান্তর, ভলিউম অনুযায়ী €০.০৫ (সর্বনিম্ন €০.০১/ছবি) থেকে প্রিপেইড ছবি, ক্রেডিটের কোনো মেয়াদ শেষ হয় না।">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="PixelToPath app screenshot">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PixelToPath API – ইমেজ থেকে SVG REST API, প্রতি মাসে ১০টি ফ্রি রূপান্তর">
+    <meta name="twitter:description" content="একটি REST কল দিয়ে PNG, JPG, BMP বা WebP-কে পরিষ্কার SVG-তে রূপান্তর করুন। সাদাকালো লাইন আর্টের জন্য Potrace, রঙিন ভেক্টরের জন্য VTracer। প্রতি মাসে ১০টি ফ্রি রূপান্তর, ভলিউম অনুযায়ী €০.০৫ (সর্বনিম্ন €০.০১/ছবি) থেকে প্রিপেইড ছবি, ক্রেডিটের কোনো মেয়াদ শেষ হয় না।">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="PixelToPath app screenshot">
+    <meta property="og:url" content="https://pixel-to-path.com/bn/api/">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://pixel-to-path.com/bn/api/" />
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/api/" />
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/api/" />
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/api/" />
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/api/" />
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/api/" />
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/api/" />
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/api/" />
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/api/" />
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/api/" />
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/api/" />
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/api/" />
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/api/" />
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/api/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/api/" />
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/api/" />
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/api/" />
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/api/" />
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/api/" />
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/api/" />
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/api/" />
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/api/" />
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/api/" />
+
+    <link rel="stylesheet" href="../../assets/css/bundle.7f66facb.css">
+
+
+
+    <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebService",
+  "@id": "https://pixel-to-path.com/bn/api/#api",
+  "name": "PixelToPath API",
+  "url": "https://pixel-to-path.com/bn/api/",
+  "description": "একটি REST কল দিয়ে PNG, JPG, BMP বা WebP-কে পরিষ্কার SVG-তে রূপান্তর করুন। সাদাকালো লাইন আর্টের জন্য Potrace, রঙিন ভেক্টরের জন্য VTracer। প্রতি মাসে ১০টি ফ্রি রূপান্তর, ভলিউম অনুযায়ী €০.০৫ (সর্বনিম্ন €০.০১/ছবি) থেকে প্রিপেইড ছবি, ক্রেডিটের কোনো মেয়াদ শেষ হয় না।",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://pixel-to-path.com/#organization",
+    "name": "PixelToPath"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "আপনার কোড থেকে বড় পরিসরে ভেক্টরাইজ করুন। একটি REST কল: একটি ছবি পাঠান, একটি পরিষ্কার SVG পান।"
+  },
+  "isPartOf": {
+    "@id": "https://pixel-to-path.com/#website"
+  }
+}</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "একটি রূপান্তর হিসেবে কী গণনা করা হয়?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "একটি সফল POST /v1/convert কল যা একটি SVG প্রদান করে। ব্যর্থ কলগুলি (অবৈধ ছবি, ভুল প্যারামিটার, রেট লিমিটেড, সার্ভার ত্রুটি) এবং GET /v1/me কলগুলিতে কখনো চার্জ করা হয় না।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "মাসিক ফ্রি কোটা কীভাবে গণনা করা হয়?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "প্রতি অ্যাকাউন্টে, UTC ক্যালেন্ডার মাসের ভিত্তিতে — এটি ১ তারিখে 00:00 UTC-তে রিসেট হয়। একাধিক API কি তৈরি করলে ফ্রি কোটা গুণিত হয় না: একটি অ্যাকাউন্টের সমস্ত কি একই ১০টি ফ্রি রূপান্তর শেয়ার করে।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ক্রেডিটগুলির কি মেয়াদ শেষ হয়?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "না। আপনার কেনা ক্রেডিটগুলি ব্যবহার না করা পর্যন্ত আপনার অ্যাকাউন্টে থাকে। আপনার ১০টি ফ্রি মাসিক রূপান্তর শেষ হওয়ার পরেই কেবল এগুলি ব্যবহৃত হয়।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "আমি এক মাসে আরও রূপান্তর কীভাবে পেতে পারি?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ক্লায়েন্ট পোর্টাল থেকে প্রিপেইড ছবি কিনুন — যেকোনো পরিমাণ, ৫০-এর ব্যাচে। আপনি সর্বদা ঠিক কতগুলি ছবি পাবেন তা দেখতে পান: ৫০টি ছবি €২.৫০, ৫০০টি ছবি €২০, ২,৫০০টি €৭৫, ১০,০০০টি €২০০, ৫০,০০০টি €৫০০। পেমেন্টের কয়েক সেকেন্ডের মধ্যেই ক্রেডিটগুলি আপনার অ্যাকাউন্টে স্বয়ংক্রিয়ভাবে যোগ করা হয় — কোনো লাইসেন্স কি নেই, কিছু প্রবেশ করার নেই।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "আমার API কি হারিয়ে গেলে কী হবে?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "কিগুলি হ্যাশ করে সংরক্ষণ করা হয়, তাই সেগুলি পুনরুদ্ধার করা যায় না। পোর্টালে হারিয়ে যাওয়া কি-টি প্রত্যাহার করুন এবং একটি নতুন তৈরি করুন — এটি অবিলম্বে কার্যকর হয়।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "কোন কোন ইমজে ফরম্যাট সমর্থিত?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG, JPEG, BMP এবং WebP, ২০ MB এবং ৫০ মেগাপিক্সেল পর্যন্ত, ন্যূনতম ৬৪×৬৪ পিক্সেল। ১৫০০ পিক্সেলের চেয়ে বড় দিকযুক্ত ছবিগুলি রূপান্তরের আগে রিসাইজ করা হয়, ঠিক বিনামূল্যে ওয়েবসাইটের মতোই।"
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/bn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "API",
+      "item": "https://pixel-to-path.com/bn/api/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/bn/" class="brand">
+            <img src="../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/bn/"
+            class="">হোম</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">প্রোডাক্ট <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/bn/online/"
+                       class="">অনলাইন টুল</a>
+                    <a href="/bn/offline/"
+                       class="">ডেস্কটপ অ্যাপ</a>
+                    <a href="/bn/pro/"
+                       class="">ডেস্কটপ অ্যাপ Pro</a>
+                    <a href="/bn/api/"
+                       class="active">API</a>
+                </div>
+            </div>
+
+            <a href="/bn/pricing/"
+               class="">মূল্য</a>
+
+            <div class="lang-switch">
+                <span>🇧🇩 BN</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/bn/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">হোম</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">প্রোডাক্ট</span>
+            <div class="mobile-sublist">
+                <a href="/bn/online/"
+                   class="">অনলাইন টুল</a>
+                <a href="/bn/offline/"
+                   class="">ডেস্কটপ অ্যাপ</a>
+                <a href="/bn/pro/"
+                   class="">ডেস্কটপ অ্যাপ Pro</a>
+                <a href="/bn/api/"
+                   class="active">API</a>
+            </div>
+
+            <a href="/bn/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">মূল্য</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">ভাষা</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- Hero -->
+        <div class="api-hero">
+            <div class="container">
+                <span class="api-tag">API</span>
+                <h1>PixelToPath API</h1>
+                <p class="api-hero__text"><strong>একটি REST কল</strong> দিয়ে প্রোগ্রামাটিকভাবে ছবিগুলিকে ভেক্টরাইজ করুন। একটি PNG, JPG, BMP বা WebP ফাইল আপলোড করুন, এবং একটি পরিষ্কার, প্রোডাকশন-রেডি SVG ফিরে পান। সাদাকালো লাইন আর্ট <strong>Potrace</strong> দ্বারা ট্রেস করা হয়, রঙিন ছবিগুলি <strong>VTracer</strong> দ্বারা — বিনামূল্যে অনলাইন কনভার্টারের মতো একই ইঞ্জিন।</p>
+                <div class="api-hero__cta">
+                    <a class="btn primary-btn big-btn" href="/portal/"> আপনার API কি (key) পান</a>
+                    <a class="btn secondary-btn big-btn" href="/portal/">পোর্টালে সাইন ইন করুন</a>
+                    <a class="api-hero__docs" href="#quickstart">ডক্স পড়ুন ↓</a>
+                </div>
+                <p class="api-hero__note">প্রতি মাসে ১০টি ফ্রি রূপান্তর · কোনো ক্রেডিট কার্ডের প্রয়োজন নেই</p>
+            </div>
+        </div>
+
+        <!-- Accroche -->
+        <div class="api-strip">
+            <div class="container">
+                <p>প্রতি মাসে ১০টি ফ্রি রূপান্তর • <strong>১টি REST কল</strong> • Potrace + VTracer ইঞ্জিন • ক্রেডিটগুলির <strong>মেয়াদ কখনো শেষ হয় না</strong></p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="api-body">
+            <div class="container">
+                <div class="api-layout">
+
+                    <!-- TOC -->
+                    <aside class="api-toc">
+                        <p class="api-toc__title">এই পৃষ্ঠায়</p>
+                        <ul>
+                            
+                            <li><a href="#quickstart">দ্রুত শুরু</a></li>
+                            <li><a href="#authentication">প্রমাণীকরণ (Authentication)</a></li>
+                            <li><a href="#convert">POST /v1/convert</a></li>
+                            <li><a href="#engines">ইঞ্জিন</a></li>
+                            <li><a href="#response">রেসপন্স</a></li>
+                            <li><a href="#errors">ত্রুটি (Errors)</a></li>
+                            <li><a href="#limits">রেট লিমিট</a></li>
+                            <li><a href="#pricing">মূল্য (Pricing)</a></li>
+                            <li><a href="#examples">কোডের উদাহরণ</a></li>
+                            <li><a href="#faq">সাধারণ প্রশ্ন</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Content -->
+                    <article class="api-content">
+
+                        <!-- Quickstart -->
+                        <section id="quickstart" class="api-section">
+                            <h2>দ্রুত শুরু</h2>
+                            <p>মাত্র তিনটি ধাপে আপনি আপনার টার্মিনাল, স্ক্রিপ্ট বা অ্যাপ থেকে ছবিগুলিকে SVG-তে রূপান্তর করতে পারবেন।</p>
+                            <div class="api-steps">
+                                <div class="api-step">
+                                    <h3>১ · আপনার অ্যাকাউন্ট তৈরি করুন</h3>
+                                    <p>আপনার ইমেইল এবং একটি পাসওয়ার্ড (১০+ অক্ষর) দিয়ে ক্লায়েন্ট পোর্টালে নিবন্ধন করুন। কোনো ক্রেডিট কার্ডের প্রয়োজন নেই।</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>২ · একটি API কি তৈরি করুন</h3>
+                                    <p>পোর্টালে একটি কি (key) তৈরি করুন। এটি <strong>একবারই</strong> দেখানো হবে — সাবধানে সংরক্ষণ করুন। কি-গুলি দেখতে <code>ptp_live_…</code> এর মতো এবং যে কোনো সময় প্রত্যাহার (revoke) করা যেতে পারে।</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>৩ · কল করুন /v1/convert</h3>
+                                    <p>আপনার ছবিটিকে multipart/form-data হিসাবে পাঠান, Authorization হেডারে আপনার কি (key) দিয়ে। SVG রেসপন্স বডিতে ফিরে আসবে।</p>
+                                </div>
+                            </div>
+
+                            <p class="api-code-label">আপনার প্রথম রূপান্তর</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@logo.png" \
+  -F "colormode=binary" \
+  -o logo.svg</code></pre>
+                            <p class="api-note">ইন্টারঅ্যাক্টিভ রেফারেন্স: <a href="https://api.pixel-to-path.com/v1/docs">pixel-to-path.com/v1/docs</a> (OpenAPI/Swagger).</p>
+                        </section>
+
+                        <!-- Authentication -->
+                        <section id="authentication" class="api-section">
+                            <h2>প্রমাণীকরণ (Authentication)</h2>
+                            <p>প্রতিটি রিকোয়েস্ট <code>Authorization</code> হেডারে একটি Bearer টোকেন দিয়ে প্রমাণীকৃত হয়:</p>
+                            <pre class="api-code"><code>Authorization: Bearer ptp_live_0123abc…</code></pre>
+                            <ul class="api-list">
+                                <li><strong>কি (keys) হলো গোপনীয়:</strong> এগুলি সার্ভার-সাইডে হ্যাশ করে সংরক্ষিত থাকে এবং তৈরি করার সময় শুধুমাত্র একবারই দেখানো হয়। কি হারিয়ে গেছে? এটি প্রত্যাহার করুন এবং একটি নতুন কি তৈরি করুন।</li>
+                                <li><strong>এক অ্যাকাউন্ট, একাধিক কি:</strong> আপনার প্রোজেক্টগুলিকে আলাদা রাখতে ৫টি পর্যন্ত সক্রিয় কি তৈরি করুন। আপনার মাসিক ফ্রি কোটা প্রতি অ্যাকাউন্টের ভিত্তিতে গণনা করা হয়, প্রতি কি-এর ভিত্তিতে নয়।</li>
+                                <li><strong>তাত্ক্ষণিক প্রত্যাহার:</strong> একটি প্রত্যাহার করা কি অবিলম্বে কাজ করা বন্ধ করে দেয়, তা পোর্টাল থেকেই হোক বা নিষিদ্ধ অ্যাকাউন্টের API রেসপন্স থেকে।</li>
+                            </ul>
+                        </section>
+
+                        <!-- POST /v1/convert -->
+                        <section id="convert" class="api-section">
+                            <h2><span class="api-method api-method--post">POST</span> /v1/convert</h2>
+                            <p>একটি একক স্টেটলেস কলে আপলোড + রূপান্তর। একটি সফল কলে সর্বাধিক ১টি ক্রেডিট খরচ হয় — ব্যর্থ, অবৈধ বা রেট-লিমিটেড কলে কোনো খরচ হয় না।</p>
+
+                            <h3>রিকোয়েস্ট (multipart/form-data)</h3>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ফিল্ড</th>
+                                            <th>টাইপ</th>
+                                            <th>ডিফল্ট</th>
+                                            <th>বিবরণ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>file</code></td>
+                                            <td>file</td>
+                                            <td>—</td>
+                                            <td>রূপান্তর করার ছবি। PNG, JPEG, BMP বা WebP · সর্বাধিক ২০ MB · সর্বাধিক ৫০ Mpx · সর্বনিম্ন ৬৪×৬৪ px।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>colormode</code></td>
+                                            <td>string</td>
+                                            <td><code>color</code></td>
+                                            <td>&lt;code&gt;color&lt;/code&gt; VTracer ইঞ্জিন ব্যবহার করে, &lt;code&gt;binary&lt;/code&gt; Potrace (সাদাকালো) ব্যবহার করে।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>mode</code></td>
+                                            <td>string</td>
+                                            <td><code>spline</code></td>
+                                            <td>শুধুমাত্র কালার (VTracer) — বাইনারি মোডে উপেক্ষিত। <code>spline</code> | <code>polygon</code> | <code>none</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>hierarchical</code></td>
+                                            <td>string</td>
+                                            <td><code>stacked</code></td>
+                                            <td>শুধুমাত্র কালার (VTracer) — বাইনারি মোডে উপেক্ষিত। <code>stacked</code> | <code>cutout</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>filter_speckle</code></td>
+                                            <td>int</td>
+                                            <td><code>4</code></td>
+                                            <td>শুধুমাত্র কালার (VTracer) — বাইনারি মোডে উপেক্ষিত। 0–16 — ছোট নয়েজের দাগ সরায়।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>color_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>6</code></td>
+                                            <td>শুধুমাত্র কালার (VTracer) — বাইনারি মোডে উপেক্ষিত। 1–8 — প্রতি রঙ চ্যানেলে তাৎপর্যপূর্ণ বিট সংখ্যা।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>layer_difference</code></td>
+                                            <td>int</td>
+                                            <td><code>16</code></td>
+                                            <td>শুধুমাত্র কালার (VTracer) — বাইনারি মোডে উপেক্ষিত। 0–64 — রঙের স্তরগুলির মধ্যে দূরত্ব।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>corner_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>60</code></td>
+                                            <td>0–180 — কোণা শনাক্তকরণের কোণ (উভয় ইঞ্জিন)।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>length_threshold</code></td>
+                                            <td>float</td>
+                                            <td><code>4.0</code></td>
+                                            <td>3.5–10 — সেগমেন্টের সর্বনিম্ন দৈর্ঘ্য (উভয় ইঞ্জিন)।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>splice_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>45</code></td>
+                                            <td>0–180 — পথ বিভাজনের কোণ (উভয় ইঞ্জিন)।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>path_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>3</code></td>
+                                            <td>0–8 — পথের স্থানাঙ্কে দশমিক সংখ্যা।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>invert</code></td>
+                                            <td>bool</td>
+                                            <td><code>false</code></td>
+                                            <td>শুধুমাত্র বাইনারি (Potrace) — কালার মোডে উপেক্ষিত। অন্ধকার অংশের পরিবর্তে আলোকিত অংশগুলি ট্রেস করে।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>turdsize</code></td>
+                                            <td>int</td>
+                                            <td><code>2</code></td>
+                                            <td>শুধুমাত্র বাইনারি (Potrace) — কালার মোডে উপেক্ষিত। 0–20 — এই আকার পর্যন্ত দাগ দমন করে।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>alphamax</code></td>
+                                            <td>float</td>
+                                            <td><code>1.0</code></td>
+                                            <td>শুধুমাত্র বাইনারি (Potrace) — কালার মোডে উপেক্ষিত। 0–1.334 — কোণা মসৃণকরণের সীমা।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>opttolerance</code></td>
+                                            <td>float</td>
+                                            <td><code>0.2</code></td>
+                                            <td>শুধুমাত্র বাইনারি (Potrace) — কালার মোডে উপেক্ষিত। 0–10 — বক্ররেখা অপ্টিমাইজেশনের সহনশীলতা।</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Engines -->
+                        <section id="engines" class="api-section">
+                            <h2>দুটি ইঞ্জিন, &#34;colormode&#34; দ্বারা নির্বাচিত</h2>
+                            <p>API বিনামূল্যে অনলাইন কনভার্টার এবং ডেস্কটপ অ্যাপের মতো একই ইঞ্জিন চালায়:</p>
+                            <div class="grid-3">
+                                <div class="card api-engine">
+                                    <h3>binary — Potrace</h3>
+                                    <p>লাইন আর্ট, স্ক্যান, স্কেচ এবং লোগোগুলির সাদাকালো ট্রেসিং। ছবির অন্ধকার অংশ (গ্রেস্কেল &lt; ৫০%) একটি সাদা ব্যাকগ্রাউন্ডে ট্রেস করা হয়। <code>turdsize</code> (নয়েজ রিমুভাল), <code>alphamax</code> (কর্নার স্মুদিং) এবং <code>opttolerance</code> (পাথ অপ্টিমাইজেশন) দিয়ে আউটপুট নিখুঁত করুন।</p>
+                                </div>
+                                <div class="card api-engine">
+                                    <h3>color — VTracer</h3>
+                                    <p>ইলাস্ট্রেশন, কার্টুন এবং ছবির জন্য লেয়ার করা রঙিন ভেক্টরাইজেশন। <code>filter_speckle</code>, <code>color_precision</code>, <code>layer_difference</code> দিয়ে ডিটেল লেভেল এবং <code>mode</code> (spline, polygon, none) দিয়ে কার্ভ ফিটিং নিয়ন্ত্রণ করুন।</p>
+                                </div>
+                            </div>
+                            <p class="api-note">ছবিগুলি ঠিক ওয়েবসাইটের মতোই প্রি-প্রসেস করা হয়: রূপান্তরের আগে দীর্ঘতম দিকটিকে ১৫০০ px-এ রিসাইজ করা হয়, এবং API <code>X-Detected-Type</code> হেডারে শনাক্ত করা ছবির টাইপ (<code>line_art</code>, <code>logo</code>, <code>photo</code> বা <code>illustration</code>) প্রদান করে।</p>
+                        </section>
+
+                        <!-- Response -->
+                        <section id="response" class="api-section">
+                            <h2>রেসপন্স</h2>
+                            <p>সফল হলে: <code>200 OK</code> সাথে <code>image/svg+xml</code> — বডিতে থাকে আসল SVG ফাইলটি। তথ্যমূলক হেডারগুলি:</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>হেডার</th>
+                                            <th>বিবরণ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><code>X-Credits-Remaining</code></td><td>এই কলের চার্জ কাটার পর, অ্যাকাউন্টে অবশিষ্ট পেইড ক্রেডিট।</td></tr>
+                                        <tr><td><code>X-Free-Remaining</code></td><td>এই মাসে অবশিষ্ট ফ্রি রূপান্তর।</td></tr>
+                                        <tr><td><code>X-Detected-Type</code></td><td>শনাক্ত করা ছবির টাইপ (তথ্য): line_art, logo, photo বা illustration।</td></tr>
+                                        <tr><td><code>X-Processing-Time</code></td><td>সার্ভার প্রসেসিং সময়, সেকেন্ডে।</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>GET /v1/me</h3>
+                            <p>এটি কল করতে ব্যবহৃত কি (key)-এর অ্যাকাউন্টের অবস্থা। <strong>বিনামূল্যে</strong> — কখনো আপনার কোটা থেকে গণনা করা হয় না, কখনো চার্জ করা হয় না।</p>
+                            <p class="api-code-label">উদাহরণ রেসপন্স</p>
+                            <pre class="api-code"><code>GET /v1/me
+Authorization: Bearer ptp_live_…
+
+{
+  "key": { "name": "prod", "prefix": "ptp_live_0123abc", … },
+  "usage": {
+    "month": "2026-09", "free_used": 7, "free_limit": 10,
+    "free_remaining": 3, "resets_at": "2026-10-01T00:00:00+00:00"
+  },
+  "credits": { "balance": 120 }
+}</code></pre>
+                        </section>
+
+                        <!-- Errors -->
+                        <section id="errors" class="api-section">
+                            <h2>ত্রুটি (Errors)</h2>
+                            <p>প্রতিটি ত্রুটি একটি সুসংগত JSON এনভেলপ প্রদান করে। ব্যর্থ কলগুলিতে কখনো ক্রেডিট খরচ হয় না।</p>
+                            <pre class="api-code"><code>HTTP/1.1 402 Payment Required
+{
+  "error": {
+    "code": "quota_exceeded",
+    "message": "Monthly free quota used and no credits left.",
+    "usage": { "free_used": 10, "free_limit": 10, "credits": 0 }
+  }
+}</code></pre>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>HTTP</th>
+                                            <th>কোড</th>
+                                            <th>কখন</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>401</td><td><code>invalid_api_key</code></td><td>অনুপস্থিত, ত্রুটিপূর্ণ, অজানা বা প্রত্যাহার করা API কি।</td></tr>
+                                        <tr><td>402</td><td><code>quota_exceeded</code></td><td>মাসিক ফ্রি কোটা শেষ এবং কোনো ক্রেডিট অবশিষ্ট নেই।</td></tr>
+                                        <tr><td>403</td><td><code>account_banned</code></td><td>অ্যাকাউন্টটি নিষিদ্ধ করা হয়েছে — এর সমস্ত কি প্রত্যাখ্যান করা হবে।</td></tr>
+                                        <tr><td>403</td><td><code>ip_blocked</code></td><td>কলার IP ব্লক করা আছে।</td></tr>
+                                        <tr><td>413</td><td><code>file_too_large</code></td><td>ফাইল ২০ MB এর চেয়ে বড়।</td></tr>
+                                        <tr><td>422</td><td><code>invalid_image</code> / <code>image_too_small</code> / <code>invalid_params</code></td><td>অবৈধ ছবি, ছবি খুব ছোট বা অবৈধ প্যারামিটার মান।</td></tr>
+                                        <tr><td>429</td><td><code>rate_limited</code></td><td>প্রতি-কি রেট লিমিট অতিক্রম করেছে (নিচে দেখুন)। একটি Retry-After হেডার অন্তর্ভুক্ত থাকে।</td></tr>
+                                        <tr><td>500</td><td><code>internal_error</code></td><td>সার্ভার-সাইডে রূপান্তর ব্যর্থ হয়েছে — কোনো ক্রেডিট কাটা হয় না।</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Rate limits -->
+                        <section id="limits" class="api-section">
+                            <h2>রেট লিমিট</h2>
+                            <p>লিমিটগুলি প্রতি API কি-তে প্রযোজ্য, প্রতি IP-তে নয়, তাই অন্য কারও ট্রাফিকের জন্য একটি শেয়ার করা অফিস বা CI রানার কখনো শাস্তি পাবে না।</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>লিমিট</th>
+                                            <th>মান</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>প্রতি মিনিটে রিকোয়েস্ট, প্রতি কি</td><td><strong>60</strong></td></tr>
+                                        <tr><td>প্রতি দিন রিকোয়েস্ট, প্রতি কি</td><td><strong>2 000</strong></td></tr>
+                                        <tr><td>যুগপৎ রূপান্তর, প্রতি কি</td><td>২ (অতিরিক্ত কলগুলি অপেক্ষা করে, তারপর 429)</td></tr>
+                                        <tr><td>সর্বোচ্চ ফাইলের আকার / রেজোলিউশন</td><td>২০ MB / ৫০ Mpx</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Pricing -->
+                        <section id="pricing" class="api-section">
+                            <h2>মূল্য (Pricing)</h2>
+                            <p>প্রতিটি নতুন অ্যাকাউন্ট <strong>প্রতি মাসে ১০টি ফ্রি রূপান্তর</strong> পায়, কোনো ক্রেডিট কার্ডের প্রয়োজন নেই। আরও প্রয়োজন? প্রিপেইড ছবি কিনুন — যেকোনো পরিমাণ (৫০-এর ব্যাচে), ভলিউম ডিসকাউন্ট সহ। এগুলোর মেয়াদ কখনো শেষ হয় না এবং আপনার মাসিক ফ্রি কোটার সাথে যুক্ত হয় (আগে ফ্রি রূপান্তরগুলি ব্যবহৃত হয়)।</p>
+                            <div class="api-pricing">
+                                <div class="card api-price-card">
+                                    <h3>ফ্রি</h3>
+                                    <p class="api-price">€০<span>/মাস</span></p>
+                                    <ul class="checklist">
+                                        <li>১০ রূপান্তর / মাস</li>
+                                        <li>উভয় ইঞ্জিন (Potrace + VTracer)</li>
+                                        <li>৫টি পর্যন্ত API কি</li>
+                                    </ul>
+                                    <a class="btn secondary-btn" href="/portal/">অ্যাকাউন্ট তৈরি করুন</a>
+                                </div>
+                                <div class="card api-price-card api-price-card--highlight">
+                                    <h3>প্রিপেইড ছবি</h3>
+                                    <p class="api-price">€০.০৫০<span>/ ছবি</span></p>
+                                    <table class="tiers">
+                                        <caption>ভলিউম প্রাইসিং — যত বেশি ছবি কিনবেন, প্রতিটির দাম তত কমবে</caption>
+                                        <tr><th scope="row">ছবি</th><td>50–450</td><td>500–2 450</td><td>2 500–9 950</td><td>10 000–49 950</td><td>50 000+</td></tr>
+                                        <tr><th scope="row">€/image</th><td>0.050</td><td>0.040</td><td>0.030</td><td>0.020</td><td>0.010</td></tr>
+                                    </table>
+                                    <ul class="checklist">
+                                        <li>১টি ছবি কেনা = ১টি রূপান্তর (ক্রেডিটের মেয়াদ কখনো শেষ হয় না)</li>
+                                        <li>কখনো মেয়াদ শেষ হয় না, ফ্রি টিয়ারের সাথে যুক্ত হয়</li>
+                                        <li>যেকোনো পরিমাণ: ৫০০টি থেকে €০.০৪০/ছবি, সর্বনিম্ন €০.০১০/ছবি পর্যন্ত</li>
+                                    </ul>
+                                    <a class="btn primary-btn" href="/portal/">ছবি কিনুন</a>
+                                </div>
+                            </div>
+                            <p class="api-note">স্বয়ংক্রিয় ক্রেডিট: পেমেন্ট ওয়েবহুকের মাধ্যমে পেমেন্টের কয়েক সেকেন্ডের মধ্যে আপনার ব্যালেন্স আপডেট হয়। রিফান্ড করলে কেনা ক্রেডিট কেটে নেওয়া হয়, যা বর্তমান ব্যালেন্স পর্যন্ত সীমিত। Lemon Squeezy দ্বারা সুরক্ষিত পেমেন্ট (ভ্যাট স্বয়ংক্রিয়ভাবে পরিচালিত)।</p>
+                        </section>
+
+                        <!-- Code examples -->
+                        <section id="examples" class="api-section">
+                            <h2>কোডের উদাহরণ</h2>
+                            <p>কপি-পেস্ট এবং সংশোধন করুন। API সাধারণ multipart/form-data ব্যবহার করে, তাই যেকোনো HTTP ক্লায়েন্ট কাজ করে।</p>
+
+                            <p class="api-code-label">cURL</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@photo.jpg" \
+  -F "colormode=color" \
+  -F "filter_speckle=4" \
+  -o photo.svg</code></pre>
+
+                            <p class="api-code-label">Python</p>
+                            <pre class="api-code"><code>import requests
+
+resp = requests.post(
+    "https://api.pixel-to-path.com/v1/convert",
+    headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
+    files={"file": open("photo.jpg", "rb")},
+    data={"colormode": "color", "filter_speckle": 4},
+)
+resp.raise_for_status()
+print(resp.headers["X-Credits-Remaining"], "credits left")
+with open("photo.svg", "wb") as f:
+    f.write(resp.content)</code></pre>
+
+                            <p class="api-code-label">JavaScript</p>
+                            <pre class="api-code"><code>const form = new FormData();
+form.append("file", new Blob([imageBytes]), "photo.jpg");
+form.append("colormode", "color");
+
+const resp = await fetch("https://api.pixel-to-path.com/v1/convert", {
+  method: "POST",
+  headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
+  body: form,
+});
+if (!resp.ok) {
+  const { error } = await resp.json();
+  throw new Error(`${error.code}: ${error.message}`);
+}
+const svg = await resp.text();
+console.log(resp.headers.get("X-Credits-Remaining"), "credits left");</code></pre>
+                        </section>
+
+                        <!-- FAQ -->
+                        <section id="faq" class="api-section">
+                            <h2>প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী (FAQ)</h2>
+                            <details class="api-faq-item">
+                                <summary>একটি রূপান্তর হিসেবে কী গণনা করা হয়?</summary>
+                                <p>একটি সফল POST /v1/convert কল যা একটি SVG প্রদান করে। ব্যর্থ কলগুলি (অবৈধ ছবি, ভুল প্যারামিটার, রেট লিমিটেড, সার্ভার ত্রুটি) এবং GET /v1/me কলগুলিতে কখনো চার্জ করা হয় না।</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>মাসিক ফ্রি কোটা কীভাবে গণনা করা হয়?</summary>
+                                <p>প্রতি অ্যাকাউন্টে, UTC ক্যালেন্ডার মাসের ভিত্তিতে — এটি ১ তারিখে 00:00 UTC-তে রিসেট হয়। একাধিক API কি তৈরি করলে ফ্রি কোটা গুণিত হয় না: একটি অ্যাকাউন্টের সমস্ত কি একই ১০টি ফ্রি রূপান্তর শেয়ার করে।</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>ক্রেডিটগুলির কি মেয়াদ শেষ হয়?</summary>
+                                <p>না। আপনার কেনা ক্রেডিটগুলি ব্যবহার না করা পর্যন্ত আপনার অ্যাকাউন্টে থাকে। আপনার ১০টি ফ্রি মাসিক রূপান্তর শেষ হওয়ার পরেই কেবল এগুলি ব্যবহৃত হয়।</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>আমি এক মাসে আরও রূপান্তর কীভাবে পেতে পারি?</summary>
+                                <p>ক্লায়েন্ট পোর্টাল থেকে প্রিপেইড ছবি কিনুন — যেকোনো পরিমাণ, ৫০-এর ব্যাচে। আপনি সর্বদা ঠিক কতগুলি ছবি পাবেন তা দেখতে পান: ৫০টি ছবি €২.৫০, ৫০০টি ছবি €২০, ২,৫০০টি €৭৫, ১০,০০০টি €২০০, ৫০,০০০টি €৫০০। পেমেন্টের কয়েক সেকেন্ডের মধ্যেই ক্রেডিটগুলি আপনার অ্যাকাউন্টে স্বয়ংক্রিয়ভাবে যোগ করা হয় — কোনো লাইসেন্স কি নেই, কিছু প্রবেশ করার নেই।</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>আমার API কি হারিয়ে গেলে কী হবে?</summary>
+                                <p>কিগুলি হ্যাশ করে সংরক্ষণ করা হয়, তাই সেগুলি পুনরুদ্ধার করা যায় না। পোর্টালে হারিয়ে যাওয়া কি-টি প্রত্যাহার করুন এবং একটি নতুন তৈরি করুন — এটি অবিলম্বে কার্যকর হয়।</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>কোন কোন ইমজে ফরম্যাট সমর্থিত?</summary>
+                                <p>PNG, JPEG, BMP এবং WebP, ২০ MB এবং ৫০ মেগাপিক্সেল পর্যন্ত, ন্যূনতম ৬৪×৬৪ পিক্সেল। ১৫০০ পিক্সেলের চেয়ে বড় দিকযুক্ত ছবিগুলি রূপান্তরের আগে রিসাইজ করা হয়, ঠিক বিনামূল্যে ওয়েবসাইটের মতোই।</p>
+                            </details>
+                        </section>
+
+                        <!-- Autres versions -->
+                        <!-- Versions : les 4 façons d'utiliser PixelToPath (clés pv_* — fallback EN) -->
+<section class="section versions-section">
+    <div class="container">
+        <h2 class="section-title">আপনার সংস্করণ চয়ন করুন</h2>
+        <p class="section-intro">একই শক্তিশালী ইঞ্জিন - আপনার কাজের প্রবাহের সাথে মানানসই ফর্ম্যাটটি বেছে নিন।</p>
+
+        <div class="versions-grid">
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🌐</div>
+                <h3>অনলাইন টুল</h3>
+                <p class="versions-card__price">বিনামূল্যে</p>
+                <p class="versions-card__desc">সরাসরি আপনার ব্রাউজারে ছবিগুলি রূপান্তর করুন। কোনো ইনস্টলেশন নেই, কোনো অ্যাকাউন্ট নেই।</p>
+                <a class="btn secondary-btn versions-card__cta" href="/bn/online/">টুলটি খুলুন</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">💻</div>
+                <h3>ডেস্কটপ অ্যাপ</h3>
+                <p class="versions-card__price">ফ্রি ও ওপেন সোর্স</p>
+                <p class="versions-card__desc">আপনার মেশিনে সম্পূর্ণ কনভার্টার, Windows ও Linux-এর জন্য।</p>
+                <a class="btn secondary-btn versions-card__cta" href="/bn/offline/">বিনামূল্যে ডাউনলোড করুন</a>
+            </article>
+
+            <article class="card versions-card versions-card--highlight">
+                <div class="versions-card__icon">⌨️</div>
+                <h3>ডেস্কটপ অ্যাপ Pro</h3>
+                <p class="versions-card__price">€৩৯ এককালীন</p>
+                <p class="versions-card__desc">ভারী কাজের জন্য হট ফোল্ডার, ব্যাচ রূপান্তর এবং CLI।</p>
+                <a class="btn primary-btn versions-card__cta" href="/bn/pro/">Pro কিনুন</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🔌</div>
+                <h3>API</h3>
+                <p class="versions-card__price">ফ্রি টিয়ার + ক্রেডিট প্যাক</p>
+                <p class="versions-card__desc">একটি REST কল: একটি ছবি পাঠান, একটি পরিষ্কার SVG পান। মাসে ১০টি ফ্রি।</p>
+                <a class="btn secondary-btn versions-card__cta" href="/bn/api/">একটি API কি পান</a>
+            </article>
+
+        </div>
+
+        <p class="versions-links">
+            <a href="/bn/pricing/">সমস্ত সংস্করণ ও মূল্য তুলনা করুন →</a>
+        </p>
+        <p class="versions-links versions-links--portal">
+            আগে থেকেই একটি অ্যাকাউন্ট আছে?
+            <a href="/portal/">ক্লায়েন্ট পোর্টালে সাইন ইন করুন →</a>
+        </p>
+    </div>
+</section>
+
+
+                        <!-- CTA finale -->
+                        <section class="api-cta">
+                            <h2>বড় পরিসরে ভেক্টরাইজ করতে প্রস্তুত?</h2>
+                            <p>আপনার অ্যাকাউন্ট তৈরি করুন, একটি কি নিন এবং দুই মিনিটেরও কম সময়ে আপনার প্রথম কল করুন।</p>
+                            <a class="btn primary-btn big-btn" href="/portal/">আপনার ফ্রি API কি পান</a>
+                        </section>
+
+                        <p class="api-footer-note">API সম্পর্কে প্রশ্ন আছে? <a href="https://github.com/lorrisc/PixelToPath" target="_blank" rel="noopener">GitHub</a>-এ একটি ইস্যু খুলুন।</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/bn/">হোম</a>
+        <a href="/bn/online/">অনলাইন টুল</a>
+        <a href="/bn/offline/">ডেস্কটপ অ্যাপ</a>
+        <a href="/bn/pro/">Pro</a>
+        <a href="/bn/api/">API</a>
+        <a href="/bn/blog/">ব্লগ</a>
+        <a href="https://github.com/lorrisc/PixelToPath">ওপেন সোর্স (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">ক্লায়েন্ট পোর্টাল</a>
+    </div>
+</footer>
+
+<script src="../../assets/js/docunest-strings.js" defer></script>
+<script src="../../assets/js/docunest-popup.js" data-asset="../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../assets/js/ui-state.js"></script>
+</body>
+</html>

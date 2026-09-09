@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="uk" dir="ltr">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>API PixelToPath – REST API для конвертації зображень у SVG, 10 безкоштовних конвертацій/місяць</title>
+    <meta name="description" content="Конвертуйте PNG, JPG, BMP або WebP у чистий SVG за один REST-виклик. Potrace для чорно-білої графіки, VTracer для кольорових векторів. 10 безкоштовних конвертацій щомісяця, передплачені пакети зображень від 0,05 € (або від 0,01 € за об’єм), кредити не згорають.">
+    <meta name="keywords" content="api pixeltopath, api конвертації зображень у svg, rest api png у svg, api для векторизації, api potrace, api vtracer, api конвертера svg">
+    <meta name="author" content="Lorris C.">
+
+    <meta property="og:title" content="API PixelToPath – REST API для конвертації зображень у SVG, 10 безкоштовних конвертацій/місяць">
+    <meta property="og:description" content="Конвертуйте PNG, JPG, BMP або WebP у чистий SVG за один REST-виклик. Potrace для чорно-білої графіки, VTracer для кольорових векторів. 10 безкоштовних конвертацій щомісяця, передплачені пакети зображень від 0,05 € (або від 0,01 € за об’єм), кредити не згорають.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="PixelToPath app screenshot">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="API PixelToPath – REST API для конвертації зображень у SVG, 10 безкоштовних конвертацій/місяць">
+    <meta name="twitter:description" content="Конвертуйте PNG, JPG, BMP або WebP у чистий SVG за один REST-виклик. Potrace для чорно-білої графіки, VTracer для кольорових векторів. 10 безкоштовних конвертацій щомісяця, передплачені пакети зображень від 0,05 € (або від 0,01 € за об’єм), кредити не згорають.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="PixelToPath app screenshot">
+    <meta property="og:url" content="https://pixel-to-path.com/uk/api/">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://pixel-to-path.com/uk/api/" />
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/api/" />
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/api/" />
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/api/" />
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/api/" />
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/api/" />
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/api/" />
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/api/" />
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/api/" />
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/api/" />
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/api/" />
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/api/" />
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/api/" />
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/api/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/api/" />
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/api/" />
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/api/" />
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/api/" />
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/api/" />
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/api/" />
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/api/" />
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/api/" />
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/api/" />
+
+    <link rel="stylesheet" href="../../assets/css/bundle.7f66facb.css">
+
+
+
+    <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebService",
+  "@id": "https://pixel-to-path.com/uk/api/#api",
+  "name": "PixelToPath API",
+  "url": "https://pixel-to-path.com/uk/api/",
+  "description": "Конвертуйте PNG, JPG, BMP або WebP у чистий SVG за один REST-виклик. Potrace для чорно-білої графіки, VTracer для кольорових векторів. 10 безкоштовних конвертацій щомісяця, передплачені пакети зображень від 0,05 € (або від 0,01 € за об’єм), кредити не згорають.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://pixel-to-path.com/#organization",
+    "name": "PixelToPath"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "Векторизуйте у великих масштабах зі свого коду. Один REST-виклик: надсилаєте зображення, отримуєте чистий SVG."
+  },
+  "isPartOf": {
+    "@id": "https://pixel-to-path.com/#website"
+  }
+}</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Що вважається за одну конвертацію?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Один успішний виклик POST /v1/convert, що повертає SVG. Невдалі виклики (невалідне зображення, неправильні параметри, перевищення ліміту, помилка сервера) та запити GET /v1/me ніколи не списуються."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Як рахується місячна безкоштовна квота?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "На акаунт, за календарним місяцем UTC — обнуляється 1-го числа о 00:00 UTC. Створення кількох API-ключів не множить безкоштовний ліміт: усі ключі акаунта спільно використовують ті самі 10 безкоштовних конвертацій."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Чи згорають кредити?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ні. Придбані кредити залишаються на акаунті, поки ви їх не використаєте. Вони списуються лише після того, як буде вичерпано 10 безкоштовних місячних конвертацій."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Як отримати більше конвертацій на місяць?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Купуйте передплачені зображення на клієнтському порталі — будь-яку кількість пакетами по 50 шт. Ви завжди бачите, скільки зображень отримуєте: 50 за 2,50 €, 500 за 20 €, 2 500 за 75 €, 10 000 за 200 €, 50 000 за 500 €. Кредити додаються на ваш баланс автоматично протягом кількох секунд після оплати — без ліцензійних ключів та зайвих налаштувань."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Що робити, якщо я втрачу свій API-ключ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ключі зберігаються у хешованому вигляді, тому їх неможливо відновити. Відкличте втрачений ключ на порталі та створіть новий — зміни застосовуються миттєво."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Які формати зображень підтримуються?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG, JPEG, BMP та WebP, до 20 МБ та 50 мегапікселів, щонайменше 64×64 пікселів. Зображення, більші за 1500 пкс по найдовшій стороні, перед конвертацією зменшуються, як і на безкоштовному вебсайті."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "API",
+      "item": "https://pixel-to-path.com/uk/api/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/uk/" class="brand">
+            <img src="../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/uk/"
+            class="">Головна</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Продукти <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/uk/online/"
+                       class="">Онлайн-інструмент</a>
+                    <a href="/uk/offline/"
+                       class="">Десктопний додаток</a>
+                    <a href="/uk/pro/"
+                       class="">Десктоп-застосунок Pro</a>
+                    <a href="/uk/api/"
+                       class="active">API</a>
+                </div>
+            </div>
+
+            <a href="/uk/pricing/"
+               class="">Ціни</a>
+
+            <div class="lang-switch">
+                <span>🇺🇦 UK</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/uk/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Головна</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">Продукти</span>
+            <div class="mobile-sublist">
+                <a href="/uk/online/"
+                   class="">Онлайн-інструмент</a>
+                <a href="/uk/offline/"
+                   class="">Десктопний додаток</a>
+                <a href="/uk/pro/"
+                   class="">Десктоп-застосунок Pro</a>
+                <a href="/uk/api/"
+                   class="active">API</a>
+            </div>
+
+            <a href="/uk/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Ціни</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Мова</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- Hero -->
+        <div class="api-hero">
+            <div class="container">
+                <span class="api-tag">API</span>
+                <h1>API PixelToPath</h1>
+                <p class="api-hero__text">Векторизуйте зображення програмно за допомогою <strong>одного REST-виклику</strong>. Завантажте файл PNG, JPG, BMP або WebP і отримайте назад чистий, готовий до використання SVG. Чорно-білу графіку трасує <strong>Potrace</strong>, а кольорові зображення — <strong>VTracer</strong> (ті самі рушії, що й у безкоштовному онлайн-конвертері).</p>
+                <div class="api-hero__cta">
+                    <a class="btn primary-btn big-btn" href="/portal/"> Отримати API-ключ</a>
+                    <a class="btn secondary-btn big-btn" href="/portal/">Увійти на портал</a>
+                    <a class="api-hero__docs" href="#quickstart">Читати документацію ↓</a>
+                </div>
+                <p class="api-hero__note">10 безкоштовних конвертацій щомісяця · Кредитна картка не потрібна</p>
+            </div>
+        </div>
+
+        <!-- Accroche -->
+        <div class="api-strip">
+            <div class="container">
+                <p>10 безкоштовних конвертацій / місяць • <strong>1 REST-виклик</strong> • Рушії Potrace + VTracer • Кредити <strong>ніколи не згорають</strong></p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="api-body">
+            <div class="container">
+                <div class="api-layout">
+
+                    <!-- TOC -->
+                    <aside class="api-toc">
+                        <p class="api-toc__title">На цій сторінці</p>
+                        <ul>
+                            
+                            <li><a href="#quickstart">Швидкий старт</a></li>
+                            <li><a href="#authentication">Аутентифікація</a></li>
+                            <li><a href="#convert">POST /v1/convert</a></li>
+                            <li><a href="#engines">Рушії</a></li>
+                            <li><a href="#response">Відповідь</a></li>
+                            <li><a href="#errors">Помилки</a></li>
+                            <li><a href="#limits">Обмеження (Rate limits)</a></li>
+                            <li><a href="#pricing">Ціни</a></li>
+                            <li><a href="#examples">Приклади коду</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Content -->
+                    <article class="api-content">
+
+                        <!-- Quickstart -->
+                        <section id="quickstart" class="api-section">
+                            <h2>Швидкий старт</h2>
+                            <p>Три кроки — і ви зможете конвертувати зображення в SVG з терміналу, скриптів або свого застосунку.</p>
+                            <div class="api-steps">
+                                <div class="api-step">
+                                    <h3>1 · Створіть акаунт</h3>
+                                    <p>Зареєструйтеся на клієнтському порталі, вказавши email та пароль (10+ символів). Кредитна картка не потрібна.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>2 · Створіть API-ключ</h3>
+                                    <p>На порталі створіть ключ. Він відображається <strong>лише один раз</strong> — збережіть його в надійному місці. Ключі починаються з <code>ptp_live_…</code>, їх можна відкликати в будь-який момент.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>3 · Викличте /v1/convert</h3>
+                                    <p>Надішліть зображення у форматі multipart/form-data, додавши ключ у заголовок Authorization. Відповідь міститиме готовий SVG-файл у тілі (body).</p>
+                                </div>
+                            </div>
+
+                            <p class="api-code-label">Ваша перша конвертація</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@logo.png" \
+  -F "colormode=binary" \
+  -o logo.svg</code></pre>
+                            <p class="api-note">Інтерактивна довідка: <a href="https://api.pixel-to-path.com/v1/docs">pixel-to-path.com/v1/docs</a> (OpenAPI/Swagger).</p>
+                        </section>
+
+                        <!-- Authentication -->
+                        <section id="authentication" class="api-section">
+                            <h2>Аутентифікація</h2>
+                            <p>Кожен запит аутентифікується за допомогою Bearer-токена в заголовку <code>Authorization</code>:</p>
+                            <pre class="api-code"><code>Authorization: Bearer ptp_live_0123abc…</code></pre>
+                            <ul class="api-list">
+                                <li><strong>Ключі — це секретні дані:</strong> вони зберігаються на сервері у хешованому вигляді і відображаються лише один раз під час створення. Втратили ключ? Відкличте його і створіть новий.</li>
+                                <li><strong>Один акаунт, кілька ключів:</strong> ви можете створити до 5 активних ключів для розділення своїх проєктів. Безкоштовний ліміт рахується на акаунт, а не на кожен ключ.</li>
+                                <li><strong>Миттєве відкликання:</strong> відкликаний ключ перестає працювати відразу. Це також стосується заблокованих акаунтів.</li>
+                            </ul>
+                        </section>
+
+                        <!-- POST /v1/convert -->
+                        <section id="convert" class="api-section">
+                            <h2><span class="api-method api-method--post">POST</span> /v1/convert</h2>
+                            <p>Завантаження та конвертація за один stateless-виклик (без збереження стану). Успішний запит знімає максимум 1 кредит. За невдалі, невалідні або відхилені через перевищення ліміту виклики кредити не знімаються.</p>
+
+                            <h3>Запит (multipart/form-data)</h3>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Поле</th>
+                                            <th>Тип</th>
+                                            <th>За замовчуванням</th>
+                                            <th>Опис</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>file</code></td>
+                                            <td>file</td>
+                                            <td>—</td>
+                                            <td>Зображення для конвертації. PNG, JPEG, BMP або WebP · макс. 20 МБ · макс. 50 Мп · мін. 64×64 пкс.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>colormode</code></td>
+                                            <td>string</td>
+                                            <td><code>color</code></td>
+                                            <td>&lt;code&gt;color&lt;/code&gt; використовує рушій VTracer, &lt;code&gt;binary&lt;/code&gt; — Potrace (чорно-білий).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>mode</code></td>
+                                            <td>string</td>
+                                            <td><code>spline</code></td>
+                                            <td>Тільки для Color (VTracer) — ігнорується в бінарному режимі. <code>spline</code> | <code>polygon</code> | <code>none</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>hierarchical</code></td>
+                                            <td>string</td>
+                                            <td><code>stacked</code></td>
+                                            <td>Тільки для Color (VTracer) — ігнорується в бінарному режимі. <code>stacked</code> | <code>cutout</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>filter_speckle</code></td>
+                                            <td>int</td>
+                                            <td><code>4</code></td>
+                                            <td>Тільки для Color (VTracer) — ігнорується в бінарному режимі. 0–16 — видаляє дрібні плями шуму.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>color_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>6</code></td>
+                                            <td>Тільки для Color (VTracer) — ігнорується в бінарному режимі. 1–8 — кількість значущих біт на колірний канал.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>layer_difference</code></td>
+                                            <td>int</td>
+                                            <td><code>16</code></td>
+                                            <td>Тільки для Color (VTracer) — ігнорується в бінарному режимі. 0–64 — відстань між кольоровими шарамi.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>corner_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>60</code></td>
+                                            <td>0–180 — кут виявлення кутів (обидва рушії).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>length_threshold</code></td>
+                                            <td>float</td>
+                                            <td><code>4.0</code></td>
+                                            <td>3.5–10 — мінімальна довжина сегмента (обидва рушії).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>splice_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>45</code></td>
+                                            <td>0–180 — кут розбиття шляхів (обидва рушії).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>path_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>3</code></td>
+                                            <td>0–8 — десяткові знаки у координатах шляхів.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>invert</code></td>
+                                            <td>bool</td>
+                                            <td><code>false</code></td>
+                                            <td>Тільки для Binary (Potrace) — ігнорується в кольоровому режимі. Трасувати світлі ділянки замість темних.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>turdsize</code></td>
+                                            <td>int</td>
+                                            <td><code>2</code></td>
+                                            <td>Тільки для Binary (Potrace) — ігнорується в кольоровому режимі. 0–20 — пригнічує плями до цього розміру.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>alphamax</code></td>
+                                            <td>float</td>
+                                            <td><code>1.0</code></td>
+                                            <td>Тільки для Binary (Potrace) — ігнорується в кольоровому режимі. 0–1.334 — поріг згладжування кутів.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>opttolerance</code></td>
+                                            <td>float</td>
+                                            <td><code>0.2</code></td>
+                                            <td>Тільки для Binary (Potrace) — ігнорується в кольоровому режимі. 0–10 — допуск оптимізації кривих.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Engines -->
+                        <section id="engines" class="api-section">
+                            <h2>Два рушії, що обираються за допомогою &#34;colormode&#34;</h2>
+                            <p>API використовує ті самі рушії, що й безкоштовний онлайн-конвертер або десктопний додаток:</p>
+                            <div class="grid-3">
+                                <div class="card api-engine">
+                                    <h3>binary — Potrace</h3>
+                                    <p>Чорно-біле трасування лінійної графіки, сканів, ескізів та логотипів. Темна частина зображення (відтінки сірого &lt; 50%) трасується на білому тлі. Налаштуйте результат за допомогою параметрів <code>turdsize</code> (видалення шуму), <code>alphamax</code> (згладжування кутів) та <code>opttolerance</code> (оптимізація шляхів).</p>
+                                </div>
+                                <div class="card api-engine">
+                                    <h3>color — VTracer</h3>
+                                    <p>Багатошарова кольорова векторизація для ілюстрацій, мультфільмів та фотографій. Контролюйте рівень деталізації за допомогою <code>filter_speckle</code>, <code>color_precision</code>, <code>layer_difference</code> та налаштуйте згладжування кривих за допомогою <code>mode</code> (spline, polygon, none).</p>
+                                </div>
+                            </div>
+                            <p class="api-note">Зображення попередньо обробляються так само, як і на вебсайті: найдовша сторона зменшується до 1500 пкс перед конвертацією, а API повертає виявлений тип зображення (<code>line_art</code>, <code>logo</code>, <code>photo</code> або <code>illustration</code>) у заголовку <code>X-Detected-Type</code>.</p>
+                        </section>
+
+                        <!-- Response -->
+                        <section id="response" class="api-section">
+                            <h2>Відповідь</h2>
+                            <p>У разі успіху: <code>200 OK</code> з <code>image/svg+xml</code> — саме тіло (body) є файлом SVG. Інформативні заголовки:</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Заголовок</th>
+                                            <th>Опис</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><code>X-Credits-Remaining</code></td><td>Залишок платних кредитів на акаунті після списання за цей виклик.</td></tr>
+                                        <tr><td><code>X-Free-Remaining</code></td><td>Залишок безкоштовних конвертацій на цей місяць.</td></tr>
+                                        <tr><td><code>X-Detected-Type</code></td><td>Виявлений тип зображення (інфо): line_art, logo, photo або illustration.</td></tr>
+                                        <tr><td><code>X-Processing-Time</code></td><td>Час обробки на сервері (у секундах).</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>GET /v1/me</h3>
+                            <p>Статус акаунта для ключа, використаного для виклику. <strong>Безкоштовно</strong> — ніколи не враховується в квоті і не списує кредити.</p>
+                            <p class="api-code-label">Приклад відповіді</p>
+                            <pre class="api-code"><code>GET /v1/me
+Authorization: Bearer ptp_live_…
+
+{
+  "key": { "name": "prod", "prefix": "ptp_live_0123abc", … },
+  "usage": {
+    "month": "2026-09", "free_used": 7, "free_limit": 10,
+    "free_remaining": 3, "resets_at": "2026-10-01T00:00:00+00:00"
+  },
+  "credits": { "balance": 120 }
+}</code></pre>
+                        </section>
+
+                        <!-- Errors -->
+                        <section id="errors" class="api-section">
+                            <h2>Помилки</h2>
+                            <p>Кожна помилка повертається в єдиному JSON-форматі. За невдалі виклики кредити ніколи не списуються.</p>
+                            <pre class="api-code"><code>HTTP/1.1 402 Payment Required
+{
+  "error": {
+    "code": "quota_exceeded",
+    "message": "Monthly free quota used and no credits left.",
+    "usage": { "free_used": 10, "free_limit": 10, "credits": 0 }
+  }
+}</code></pre>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>HTTP</th>
+                                            <th>Код</th>
+                                            <th>Коли виникає</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>401</td><td><code>invalid_api_key</code></td><td>Відсутній, неправильний, невідомий або відкликаний API-ключ.</td></tr>
+                                        <tr><td>402</td><td><code>quota_exceeded</code></td><td>Безкоштовна квота вичерпана, кредитів не залишилось.</td></tr>
+                                        <tr><td>403</td><td><code>account_banned</code></td><td>Акаунт заблоковано — усі його ключі відхиляються.</td></tr>
+                                        <tr><td>403</td><td><code>ip_blocked</code></td><td>IP-адреса абонента у чорному списку.</td></tr>
+                                        <tr><td>413</td><td><code>file_too_large</code></td><td>Розмір файлу перевищує 20 МБ.</td></tr>
+                                        <tr><td>422</td><td><code>invalid_image</code> / <code>image_too_small</code> / <code>invalid_params</code></td><td>Недійсне зображення, надто мале зображення або невірне значення параметра.</td></tr>
+                                        <tr><td>429</td><td><code>rate_limited</code></td><td>Перевищено ліміт запитів для ключа (див. нижче). Включає заголовок Retry-After.</td></tr>
+                                        <tr><td>500</td><td><code>internal_error</code></td><td>Помилка конвертації на сервері — кредит не списується.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Rate limits -->
+                        <section id="limits" class="api-section">
+                            <h2>Обмеження (Rate limits)</h2>
+                            <p>Обмеження діють на кожен API-ключ, а не на IP-адресу. Тому спільний офіс або CI-сервер ніколи не постраждають від чужого трафіку.</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Обмеження</th>
+                                            <th>Значення</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Запитів на хвилину, на ключ</td><td><strong>60</strong></td></tr>
+                                        <tr><td>Запитів на день, на ключ</td><td><strong>2 000</strong></td></tr>
+                                        <tr><td>Одночасних конвертацій, на ключ</td><td>2 (додаткові виклики чекають, потім 429)</td></tr>
+                                        <tr><td>Макс. розмір файлу / роздільна здатність</td><td>20 МБ / 50 Мп</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Pricing -->
+                        <section id="pricing" class="api-section">
+                            <h2>Ціни</h2>
+                            <p>Кожен новий акаунт отримує <strong>10 безкоштовних конвертацій щомісяця</strong>, кредитна картка не потрібна. Потрібно більше? Купуйте передплачені зображення — будь-яку кількість (пакетами по 50 шт.) зі знижкою за об’єм. Вони ніколи не згорають і сумуються з безкоштовним місячним лімітом (спершу списуються безкоштовні).</p>
+                            <div class="api-pricing">
+                                <div class="card api-price-card">
+                                    <h3>Безкоштовно</h3>
+                                    <p class="api-price">0 €<span>/місяць</span></p>
+                                    <ul class="checklist">
+                                        <li>10 конвертацій / місяць</li>
+                                        <li>Обидва рушії (Potrace + VTracer)</li>
+                                        <li>До 5 API-ключів</li>
+                                    </ul>
+                                    <a class="btn secondary-btn" href="/portal/">Створити акаунт</a>
+                                </div>
+                                <div class="card api-price-card api-price-card--highlight">
+                                    <h3>Передплачені зображення</h3>
+                                    <p class="api-price">0,050 €<span>/ зображення</span></p>
+                                    <table class="tiers">
+                                        <caption>Ціни за об’єм — чим більше зображень ви купуєте, тим дешевшим стає кожне з них</caption>
+                                        <tr><th scope="row">Зображення</th><td>50–450</td><td>500–2 450</td><td>2 500–9 950</td><td>10 000–49 950</td><td>50 000+</td></tr>
+                                        <tr><th scope="row">€/image</th><td>0.050</td><td>0.040</td><td>0.030</td><td>0.020</td><td>0.010</td></tr>
+                                    </table>
+                                    <ul class="checklist">
+                                        <li>1 куплене зображення = 1 конвертація (кредити не згорають)</li>
+                                        <li>Ніколи не згорають, сумуються з безкоштовним лімітом</li>
+                                        <li>Будь-яка кількість: 0,040 €/зображення від 500 шт., аж до 0,010 €/зображення</li>
+                                    </ul>
+                                    <a class="btn primary-btn" href="/portal/">Купити зображення</a>
+                                </div>
+                            </div>
+                            <p class="api-note">Автоматичне поповнення: баланс оновлюється через кілька секунд після оплати за допомогою webhook&#39;у. Повернення коштів списує куплені кредити, обмежені поточним балансом. Безпечне оформлення замовлення через Lemon Squeezy (ПДВ обчислюється автоматично).</p>
+                        </section>
+
+                        <!-- Code examples -->
+                        <section id="examples" class="api-section">
+                            <h2>Приклади коду</h2>
+                            <p>Скопіюйте та адаптуйте під свої потреби. API працює зі звичайним multipart/form-data, тому підійде будь-який HTTP-клієнт.</p>
+
+                            <p class="api-code-label">cURL</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@photo.jpg" \
+  -F "colormode=color" \
+  -F "filter_speckle=4" \
+  -o photo.svg</code></pre>
+
+                            <p class="api-code-label">Python</p>
+                            <pre class="api-code"><code>import requests
+
+resp = requests.post(
+    "https://api.pixel-to-path.com/v1/convert",
+    headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
+    files={"file": open("photo.jpg", "rb")},
+    data={"colormode": "color", "filter_speckle": 4},
+)
+resp.raise_for_status()
+print(resp.headers["X-Credits-Remaining"], "credits left")
+with open("photo.svg", "wb") as f:
+    f.write(resp.content)</code></pre>
+
+                            <p class="api-code-label">JavaScript</p>
+                            <pre class="api-code"><code>const form = new FormData();
+form.append("file", new Blob([imageBytes]), "photo.jpg");
+form.append("colormode", "color");
+
+const resp = await fetch("https://api.pixel-to-path.com/v1/convert", {
+  method: "POST",
+  headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
+  body: form,
+});
+if (!resp.ok) {
+  const { error } = await resp.json();
+  throw new Error(`${error.code}: ${error.message}`);
+}
+const svg = await resp.text();
+console.log(resp.headers.get("X-Credits-Remaining"), "credits left");</code></pre>
+                        </section>
+
+                        <!-- FAQ -->
+                        <section id="faq" class="api-section">
+                            <h2>Часті запитання (FAQ)</h2>
+                            <details class="api-faq-item">
+                                <summary>Що вважається за одну конвертацію?</summary>
+                                <p>Один успішний виклик POST /v1/convert, що повертає SVG. Невдалі виклики (невалідне зображення, неправильні параметри, перевищення ліміту, помилка сервера) та запити GET /v1/me ніколи не списуються.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Як рахується місячна безкоштовна квота?</summary>
+                                <p>На акаунт, за календарним місяцем UTC — обнуляється 1-го числа о 00:00 UTC. Створення кількох API-ключів не множить безкоштовний ліміт: усі ключі акаунта спільно використовують ті самі 10 безкоштовних конвертацій.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Чи згорають кредити?</summary>
+                                <p>Ні. Придбані кредити залишаються на акаунті, поки ви їх не використаєте. Вони списуються лише після того, як буде вичерпано 10 безкоштовних місячних конвертацій.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Як отримати більше конвертацій на місяць?</summary>
+                                <p>Купуйте передплачені зображення на клієнтському порталі — будь-яку кількість пакетами по 50 шт. Ви завжди бачите, скільки зображень отримуєте: 50 за 2,50 €, 500 за 20 €, 2 500 за 75 €, 10 000 за 200 €, 50 000 за 500 €. Кредити додаються на ваш баланс автоматично протягом кількох секунд після оплати — без ліцензійних ключів та зайвих налаштувань.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Що робити, якщо я втрачу свій API-ключ?</summary>
+                                <p>Ключі зберігаються у хешованому вигляді, тому їх неможливо відновити. Відкличте втрачений ключ на порталі та створіть новий — зміни застосовуються миттєво.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Які формати зображень підтримуються?</summary>
+                                <p>PNG, JPEG, BMP та WebP, до 20 МБ та 50 мегапікселів, щонайменше 64×64 пікселів. Зображення, більші за 1500 пкс по найдовшій стороні, перед конвертацією зменшуються, як і на безкоштовному вебсайті.</p>
+                            </details>
+                        </section>
+
+                        <!-- Autres versions -->
+                        <!-- Versions : les 4 façons d'utiliser PixelToPath (clés pv_* — fallback EN) -->
+<section class="section versions-section">
+    <div class="container">
+        <h2 class="section-title">Оберіть свою версію</h2>
+        <p class="section-intro">Той самий потужний рушій - виберіть формат для вашої роботи.</p>
+
+        <div class="versions-grid">
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🌐</div>
+                <h3>Онлайн-інструмент</h3>
+                <p class="versions-card__price">Безкоштовно</p>
+                <p class="versions-card__desc">Конвертуйте зображення прямо в браузері. Без встановлення, без акаунта.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/uk/online/">Відкрити інструмент</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">💻</div>
+                <h3>Десктопний додаток</h3>
+                <p class="versions-card__price">Безкоштовно та Open Source</p>
+                <p class="versions-card__desc">Повний конвертер на вашому комп&#39;ютері для Windows та Linux.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/uk/offline/">Завантажити безкоштовно</a>
+            </article>
+
+            <article class="card versions-card versions-card--highlight">
+                <div class="versions-card__icon">⌨️</div>
+                <h3>Десктоп-застосунок Pro</h3>
+                <p class="versions-card__price">39 € одноразово</p>
+                <p class="versions-card__desc">Гаряча папка, пакетна конвертація та CLI для великих навантажень.</p>
+                <a class="btn primary-btn versions-card__cta" href="/uk/pro/">Отримати Pro</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🔌</div>
+                <h3>API</h3>
+                <p class="versions-card__price">Безкоштовний рівень + пакети кредитів</p>
+                <p class="versions-card__desc">Один REST-виклик: надсилаєте зображення, отримуєте чистий SVG. 10 безкоштовних/місяць.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/uk/api/">Отримати API-ключ</a>
+            </article>
+
+        </div>
+
+        <p class="versions-links">
+            <a href="/uk/pricing/">Порівняти всі версії та ціни →</a>
+        </p>
+        <p class="versions-links versions-links--portal">
+            Вже є акаунт?
+            <a href="/portal/">Увійти в клієнтський портал →</a>
+        </p>
+    </div>
+</section>
+
+
+                        <!-- CTA finale -->
+                        <section class="api-cta">
+                            <h2>Готові векторизувати у великих масштабах?</h2>
+                            <p>Створіть акаунт, отримайте ключ і зробіть свій перший виклик менш ніж за дві хвилини.</p>
+                            <a class="btn primary-btn big-btn" href="/portal/">Отримати безкоштовний API-ключ</a>
+                        </section>
+
+                        <p class="api-footer-note">Є запитання щодо API? Відкрийте issue на <a href="https://github.com/lorrisc/PixelToPath" target="_blank" rel="noopener">GitHub</a>.</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/uk/">Головна</a>
+        <a href="/uk/online/">Онлайн-інструмент</a>
+        <a href="/uk/offline/">Десктопний додаток</a>
+        <a href="/uk/pro/">Pro</a>
+        <a href="/uk/api/">API</a>
+        <a href="/uk/blog/">Блог</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Клієнтський портал</a>
+    </div>
+</footer>
+
+<script src="../../assets/js/docunest-strings.js" defer></script>
+<script src="../../assets/js/docunest-popup.js" data-asset="../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../assets/js/ui-state.js"></script>
+</body>
+</html>

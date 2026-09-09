@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelToPath API – REST API Gambar ke SVG, 10 Konversi Gratis/Bulan</title>
+    <meta name="description" content="Konversi PNG, JPG, BMP, atau WebP ke SVG bersih dengan satu panggilan REST. Potrace untuk seni garis hitam &amp; putih, VTracer untuk vektor berwarna. 10 konversi gratis setiap bulan, gambar prabayar mulai €0,05 (hingga €0,01/gambar dalam jumlah besar), kredit tidak pernah kedaluwarsa.">
+    <meta name="keywords" content="api pixeltopath, api gambar ke svg, api rest png ke svg, api vektorisasi, api potrace, api vtracer, api konverter svg">
+    <meta name="author" content="Lorris C.">
+
+    <meta property="og:title" content="PixelToPath API – REST API Gambar ke SVG, 10 Konversi Gratis/Bulan">
+    <meta property="og:description" content="Konversi PNG, JPG, BMP, atau WebP ke SVG bersih dengan satu panggilan REST. Potrace untuk seni garis hitam &amp; putih, VTracer untuk vektor berwarna. 10 konversi gratis setiap bulan, gambar prabayar mulai €0,05 (hingga €0,01/gambar dalam jumlah besar), kredit tidak pernah kedaluwarsa.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="PixelToPath app screenshot">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PixelToPath API – REST API Gambar ke SVG, 10 Konversi Gratis/Bulan">
+    <meta name="twitter:description" content="Konversi PNG, JPG, BMP, atau WebP ke SVG bersih dengan satu panggilan REST. Potrace untuk seni garis hitam &amp; putih, VTracer untuk vektor berwarna. 10 konversi gratis setiap bulan, gambar prabayar mulai €0,05 (hingga €0,01/gambar dalam jumlah besar), kredit tidak pernah kedaluwarsa.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="PixelToPath app screenshot">
+    <meta property="og:url" content="https://pixel-to-path.com/id/api/">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://pixel-to-path.com/id/api/" />
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/api/" />
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/api/" />
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/api/" />
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/api/" />
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/api/" />
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/api/" />
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/api/" />
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/api/" />
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/api/" />
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/api/" />
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/api/" />
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/api/" />
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/api/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/api/" />
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/api/" />
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/api/" />
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/api/" />
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/api/" />
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/api/" />
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/api/" />
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/api/" />
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/api/" />
+
+    <link rel="stylesheet" href="../../assets/css/bundle.7f66facb.css">
+
+
+
+    <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebService",
+  "@id": "https://pixel-to-path.com/id/api/#api",
+  "name": "PixelToPath API",
+  "url": "https://pixel-to-path.com/id/api/",
+  "description": "Konversi PNG, JPG, BMP, atau WebP ke SVG bersih dengan satu panggilan REST. Potrace untuk seni garis hitam & putih, VTracer untuk vektor berwarna. 10 konversi gratis setiap bulan, gambar prabayar mulai €0,05 (hingga €0,01/gambar dalam jumlah besar), kredit tidak pernah kedaluwarsa.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://pixel-to-path.com/#organization",
+    "name": "PixelToPath"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "Vektorisasi dalam skala besar dari kode Anda. Satu panggilan REST: kirim gambar, dapatkan SVG bersih."
+  },
+  "isPartOf": {
+    "@id": "https://pixel-to-path.com/#website"
+  }
+}</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apa yang dihitung sebagai satu konversi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Satu panggilan POST /v1/convert yang berhasil dan mengembalikan file SVG. Panggilan yang gagal (gambar tidak valid, parameter salah, batas laju, kesalahan server) dan panggilan GET /v1/me tidak pernah dikenakan biaya."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana kuota gratis bulanan dihitung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per akun, berdasarkan bulan kalender UTC — diatur ulang pada tanggal 1 pukul 00:00 UTC. Membuat beberapa kunci API tidak menggandakan kuota gratis: semua kunci dari satu akun berbagi 10 konversi gratis yang sama."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah kredit bisa kedaluwarsa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tidak. Kredit yang dibeli tetap berada di akun Anda hingga Anda menggunakannya. Kredit tersebut baru digunakan setelah 10 konversi bulanan gratis Anda habis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana cara mendapatkan lebih banyak konversi dalam sebulan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Beli gambar prabayar dari portal klien — jumlah berapa pun, dalam kelipatan 50. Anda selalu dapat melihat jumlah gambar yang Anda dapatkan secara pasti: 50 gambar €2,50, 500 gambar €20, 2.500 €75, 10.000 €200, 50.000 €500. Kredit ditambahkan ke akun Anda secara otomatis dalam hitungan detik setelah pembayaran — tanpa kunci lisensi, tidak ada yang perlu dimasukkan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apa yang terjadi jika saya kehilangan kunci API saya?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kunci disimpan dalam bentuk hash, sehingga tidak dapat dipulihkan. Cabut kunci yang hilang di portal dan buat yang baru — pencabutan berlaku segera."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Format gambar apa saja yang didukung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG, JPEG, BMP, dan WebP, hingga 20 MB dan 50 megapiksel, setidaknya berukuran 64×64 piksel. Gambar yang lebih besar dari 1500 piksel pada sisi terpanjangnya akan diubah ukurannya sebelum konversi, persis seperti di situs web gratis."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/id/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "API",
+      "item": "https://pixel-to-path.com/id/api/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/id/" class="brand">
+            <img src="../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/id/"
+            class="">Beranda</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Produk <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/id/online/"
+                       class="">Alat Online</a>
+                    <a href="/id/offline/"
+                       class="">Aplikasi Desktop</a>
+                    <a href="/id/pro/"
+                       class="">Aplikasi Desktop Pro</a>
+                    <a href="/id/api/"
+                       class="active">API</a>
+                </div>
+            </div>
+
+            <a href="/id/pricing/"
+               class="">Harga</a>
+
+            <div class="lang-switch">
+                <span>🇮🇩 ID</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/id/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Beranda</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">Produk</span>
+            <div class="mobile-sublist">
+                <a href="/id/online/"
+                   class="">Alat Online</a>
+                <a href="/id/offline/"
+                   class="">Aplikasi Desktop</a>
+                <a href="/id/pro/"
+                   class="">Aplikasi Desktop Pro</a>
+                <a href="/id/api/"
+                   class="active">API</a>
+            </div>
+
+            <a href="/id/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Harga</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Bahasa</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- Hero -->
+        <div class="api-hero">
+            <div class="container">
+                <span class="api-tag">API</span>
+                <h1>PixelToPath API</h1>
+                <p class="api-hero__text">Vektorisasi gambar secara terprogram dengan <strong>satu panggilan REST</strong>. Unggah file PNG, JPG, BMP, atau WebP, dan dapatkan SVG bersih yang siap produksi. Seni garis hitam &amp; putih dilacak oleh <strong>Potrace</strong>, gambar berwarna oleh <strong>VTracer</strong> — mesin yang sama dengan konverter online gratis.</p>
+                <div class="api-hero__cta">
+                    <a class="btn primary-btn big-btn" href="/portal/"> Dapatkan kunci API Anda</a>
+                    <a class="btn secondary-btn big-btn" href="/portal/">Masuk ke portal</a>
+                    <a class="api-hero__docs" href="#quickstart">Baca dokumentasi ↓</a>
+                </div>
+                <p class="api-hero__note">10 konversi gratis setiap bulan · Tidak memerlukan kartu kredit</p>
+            </div>
+        </div>
+
+        <!-- Accroche -->
+        <div class="api-strip">
+            <div class="container">
+                <p>10 konversi gratis / bulan • <strong>1 panggilan REST</strong> • Mesin Potrace + VTracer • Kredit <strong>tidak pernah kedaluwarsa</strong></p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="api-body">
+            <div class="container">
+                <div class="api-layout">
+
+                    <!-- TOC -->
+                    <aside class="api-toc">
+                        <p class="api-toc__title">Di halaman ini</p>
+                        <ul>
+                            
+                            <li><a href="#quickstart">Mulai Cepat</a></li>
+                            <li><a href="#authentication">Autentikasi</a></li>
+                            <li><a href="#convert">POST /v1/convert</a></li>
+                            <li><a href="#engines">Mesin</a></li>
+                            <li><a href="#response">Respons</a></li>
+                            <li><a href="#errors">Kesalahan</a></li>
+                            <li><a href="#limits">Batas laju</a></li>
+                            <li><a href="#pricing">Harga</a></li>
+                            <li><a href="#examples">Contoh kode</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Content -->
+                    <article class="api-content">
+
+                        <!-- Quickstart -->
+                        <section id="quickstart" class="api-section">
+                            <h2>Mulai Cepat</h2>
+                            <p>Tiga langkah dan Anda sudah mengonversi gambar ke SVG dari terminal, skrip, atau aplikasi Anda.</p>
+                            <div class="api-steps">
+                                <div class="api-step">
+                                    <h3>1 · Buat akun Anda</h3>
+                                    <p>Daftar di portal klien dengan email dan kata sandi Anda (10+ karakter). Tidak memerlukan kartu kredit.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>2 · Buat kunci API</h3>
+                                    <p>Di portal, buat sebuah kunci. Kunci hanya ditampilkan <strong>sekali</strong> — simpan dengan aman. Kunci terlihat seperti <code>ptp_live_…</code> dan dapat dicabut kapan saja.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>3 · Panggil /v1/convert</h3>
+                                    <p>Kirim gambar Anda sebagai multipart/form-data dengan kunci Anda di header Authorization. SVG akan dikembalikan dalam badan respons.</p>
+                                </div>
+                            </div>
+
+                            <p class="api-code-label">Konversi pertama Anda</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@logo.png" \
+  -F "colormode=binary" \
+  -o logo.svg</code></pre>
+                            <p class="api-note">Referensi interaktif: <a href="https://api.pixel-to-path.com/v1/docs">pixel-to-path.com/v1/docs</a> (OpenAPI/Swagger).</p>
+                        </section>
+
+                        <!-- Authentication -->
+                        <section id="authentication" class="api-section">
+                            <h2>Autentikasi</h2>
+                            <p>Setiap permintaan diautentikasi dengan token Bearer di header <code>Authorization</code>:</p>
+                            <pre class="api-code"><code>Authorization: Bearer ptp_live_0123abc…</code></pre>
+                            <ul class="api-list">
+                                <li><strong>Kunci adalah rahasia:</strong> kunci disimpan dalam bentuk hash di sisi server dan hanya ditampilkan sekali saat pembuatan. Kunci hilang? Cabut dan buat yang baru.</li>
+                                <li><strong>Satu akun, beberapa kunci:</strong> buat hingga 5 kunci aktif untuk memisahkan proyek Anda. Kuota gratis bulanan Anda dihitung per akun, bukan per kunci.</li>
+                                <li><strong>Pencabutan instan:</strong> kunci yang dicabut akan langsung berhenti berfungsi, dari portal atau respons API pada akun yang diblokir.</li>
+                            </ul>
+                        </section>
+
+                        <!-- POST /v1/convert -->
+                        <section id="convert" class="api-section">
+                            <h2><span class="api-method api-method--post">POST</span> /v1/convert</h2>
+                            <p>Unggah + konversi dalam satu panggilan tanpa status (stateless). Satu panggilan yang berhasil paling banyak membutuhkan 1 kredit — panggilan yang gagal, tidak valid, atau terkena batas laju tidak memakan biaya.</p>
+
+                            <h3>Permintaan (multipart/form-data)</h3>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Bidang</th>
+                                            <th>Tipe</th>
+                                            <th>Default</th>
+                                            <th>Deskripsi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>file</code></td>
+                                            <td>file</td>
+                                            <td>—</td>
+                                            <td>Gambar yang akan dikonversi. PNG, JPEG, BMP, atau WebP · maks 20 MB · maks 50 Mpx · min 64×64 px.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>colormode</code></td>
+                                            <td>string</td>
+                                            <td><code>color</code></td>
+                                            <td>&lt;code&gt;color&lt;/code&gt; menggunakan mesin VTracer, &lt;code&gt;binary&lt;/code&gt; menggunakan Potrace (hitam &amp; putih).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>mode</code></td>
+                                            <td>string</td>
+                                            <td><code>spline</code></td>
+                                            <td>Hanya Color (VTracer) — diabaikan dalam mode biner. <code>spline</code> | <code>polygon</code> | <code>none</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>hierarchical</code></td>
+                                            <td>string</td>
+                                            <td><code>stacked</code></td>
+                                            <td>Hanya Color (VTracer) — diabaikan dalam mode biner. <code>stacked</code> | <code>cutout</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>filter_speckle</code></td>
+                                            <td>int</td>
+                                            <td><code>4</code></td>
+                                            <td>Hanya Color (VTracer) — diabaikan dalam mode biner. 0–16 — menghapus bercak noise kecil.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>color_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>6</code></td>
+                                            <td>Hanya Color (VTracer) — diabaikan dalam mode biner. 1–8 — jumlah bit signifikan per kanal warna.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>layer_difference</code></td>
+                                            <td>int</td>
+                                            <td><code>16</code></td>
+                                            <td>Hanya Color (VTracer) — diabaikan dalam mode biner. 0–64 — jarak antar lapisan warna.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>corner_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>60</code></td>
+                                            <td>0–180 — sudut deteksi titik sudut (kedua mesin).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>length_threshold</code></td>
+                                            <td>float</td>
+                                            <td><code>4.0</code></td>
+                                            <td>3.5–10 — panjang segmen minimum (kedua mesin).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>splice_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>45</code></td>
+                                            <td>0–180 — sudut pemisahan jalur (kedua mesin).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>path_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>3</code></td>
+                                            <td>0–8 — digit desimal dalam koordinat jalur.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>invert</code></td>
+                                            <td>bool</td>
+                                            <td><code>false</code></td>
+                                            <td>Hanya Binary (Potrace) — diabaikan dalam mode warna. Lacak area terang alih-alih area gelap.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>turdsize</code></td>
+                                            <td>int</td>
+                                            <td><code>2</code></td>
+                                            <td>Hanya Binary (Potrace) — diabaikan dalam mode warna. 0–20 — menekan bercak hingga ukuran ini.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>alphamax</code></td>
+                                            <td>float</td>
+                                            <td><code>1.0</code></td>
+                                            <td>Hanya Binary (Potrace) — diabaikan dalam mode warna. 0–1.334 — ambang penghalusan titik sudut.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>opttolerance</code></td>
+                                            <td>float</td>
+                                            <td><code>0.2</code></td>
+                                            <td>Hanya Binary (Potrace) — diabaikan dalam mode warna. 0–10 — toleransi optimasi kurva.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Engines -->
+                        <section id="engines" class="api-section">
+                            <h2>Dua mesin, dipilih dengan &#34;colormode&#34;</h2>
+                            <p>API menjalankan mesin yang sama persis dengan konverter online gratis dan aplikasi desktop:</p>
+                            <div class="grid-3">
+                                <div class="card api-engine">
+                                    <h3>binary — Potrace</h3>
+                                    <p>Pelacakan hitam &amp; putih dari seni garis, pindaian, sketsa, dan logo. Bagian gelap dari gambar (skala abu-abu &lt; 50%) dilacak di atas latar belakang putih. Sempurnakan output dengan <code>turdsize</code> (penghapusan noise), <code>alphamax</code> (penghalusan sudut), dan <code>opttolerance</code> (pengoptimalan jalur).</p>
+                                </div>
+                                <div class="card api-engine">
+                                    <h3>color — VTracer</h3>
+                                    <p>Vektorisasi warna berlapis untuk ilustrasi, kartun, dan foto. Kontrol tingkat detail dengan <code>filter_speckle</code>, <code>color_precision</code>, <code>layer_difference</code>, dan penyesuaian kurva dengan <code>mode</code> (spline, polygon, none).</p>
+                                </div>
+                            </div>
+                            <p class="api-note">Gambar diproses persis seperti di situs web: sisi terpanjang diubah ukurannya menjadi 1500 px sebelum konversi, dan API mengembalikan tipe gambar yang terdeteksi (<code>line_art</code>, <code>logo</code>, <code>photo</code>, atau <code>illustration</code>) di header <code>X-Detected-Type</code>.</p>
+                        </section>
+
+                        <!-- Response -->
+                        <section id="response" class="api-section">
+                            <h2>Respons</h2>
+                            <p>Saat berhasil: <code>200 OK</code> dengan <code>image/svg+xml</code> — badan respons adalah file SVG itu sendiri. Header informatif:</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Header</th>
+                                            <th>Deskripsi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><code>X-Credits-Remaining</code></td><td>Kredit berbayar yang tersisa di akun, setelah pemotongan untuk panggilan ini.</td></tr>
+                                        <tr><td><code>X-Free-Remaining</code></td><td>Sisa konversi gratis bulan ini.</td></tr>
+                                        <tr><td><code>X-Detected-Type</code></td><td>Tipe gambar yang terdeteksi (info): line_art, logo, photo, atau illustration.</td></tr>
+                                        <tr><td><code>X-Processing-Time</code></td><td>Waktu pemrosesan server dalam detik.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>GET /v1/me</h3>
+                            <p>Status akun untuk kunci yang digunakan untuk memanggilnya. <strong>Gratis</strong> — tidak pernah dihitung dalam kuota Anda, tidak pernah dipotong.</p>
+                            <p class="api-code-label">Contoh respons</p>
+                            <pre class="api-code"><code>GET /v1/me
+Authorization: Bearer ptp_live_…
+
+{
+  "key": { "name": "prod", "prefix": "ptp_live_0123abc", … },
+  "usage": {
+    "month": "2026-09", "free_used": 7, "free_limit": 10,
+    "free_remaining": 3, "resets_at": "2026-10-01T00:00:00+00:00"
+  },
+  "credits": { "balance": 120 }
+}</code></pre>
+                        </section>
+
+                        <!-- Errors -->
+                        <section id="errors" class="api-section">
+                            <h2>Kesalahan</h2>
+                            <p>Setiap kesalahan mengembalikan struktur (envelope) JSON yang konsisten. Panggilan yang gagal tidak pernah menggunakan kredit.</p>
+                            <pre class="api-code"><code>HTTP/1.1 402 Payment Required
+{
+  "error": {
+    "code": "quota_exceeded",
+    "message": "Monthly free quota used and no credits left.",
+    "usage": { "free_used": 10, "free_limit": 10, "credits": 0 }
+  }
+}</code></pre>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>HTTP</th>
+                                            <th>Kode</th>
+                                            <th>Kapan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>401</td><td><code>invalid_api_key</code></td><td>Kunci API hilang, salah format, tidak diketahui, atau dicabut.</td></tr>
+                                        <tr><td>402</td><td><code>quota_exceeded</code></td><td>Kuota gratis bulanan habis dan tidak ada kredit tersisa.</td></tr>
+                                        <tr><td>403</td><td><code>account_banned</code></td><td>Akun dilarang (banned) — semua kuncinya ditolak.</td></tr>
+                                        <tr><td>403</td><td><code>ip_blocked</code></td><td>IP pemanggil masuk dalam daftar blokir.</td></tr>
+                                        <tr><td>413</td><td><code>file_too_large</code></td><td>File lebih besar dari 20 MB.</td></tr>
+                                        <tr><td>422</td><td><code>invalid_image</code> / <code>image_too_small</code> / <code>invalid_params</code></td><td>Gambar tidak valid, terlalu kecil, atau nilai parameter tidak valid.</td></tr>
+                                        <tr><td>429</td><td><code>rate_limited</code></td><td>Batas laju per kunci terlampaui (lihat di bawah). Menyertakan header Retry-After.</td></tr>
+                                        <tr><td>500</td><td><code>internal_error</code></td><td>Konversi gagal di sisi server — tidak ada kredit yang dikenakan.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Rate limits -->
+                        <section id="limits" class="api-section">
+                            <h2>Batas laju</h2>
+                            <p>Batasan berlaku per kunci API, bukan per IP, sehingga kantor atau CI runner yang berbagi koneksi tidak pernah dihukum karena lalu lintas orang lain.</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Batas</th>
+                                            <th>Nilai</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Permintaan per menit, per kunci</td><td><strong>60</strong></td></tr>
+                                        <tr><td>Permintaan per hari, per kunci</td><td><strong>2 000</strong></td></tr>
+                                        <tr><td>Konversi serentak, per kunci</td><td>2 (panggilan tambahan menunggu, lalu 429)</td></tr>
+                                        <tr><td>Ukuran / resolusi file maks</td><td>20 MB / 50 Mpx</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Pricing -->
+                        <section id="pricing" class="api-section">
+                            <h2>Harga</h2>
+                            <p>Setiap akun baru mendapatkan <strong>10 konversi gratis setiap bulan</strong>, tidak memerlukan kartu kredit. Butuh lebih banyak? Beli gambar prabayar — jumlah berapa pun (dalam kelipatan 50), dengan diskon volume. Kredit tidak pernah kedaluwarsa dan ditumpuk dengan kuota gratis bulanan Anda (konversi gratis digunakan terlebih dahulu).</p>
+                            <div class="api-pricing">
+                                <div class="card api-price-card">
+                                    <h3>Gratis</h3>
+                                    <p class="api-price">€0<span>/bulan</span></p>
+                                    <ul class="checklist">
+                                        <li>10 konversi / bulan</li>
+                                        <li>Kedua mesin (Potrace + VTracer)</li>
+                                        <li>Hingga 5 kunci API</li>
+                                    </ul>
+                                    <a class="btn secondary-btn" href="/portal/">Buat akun</a>
+                                </div>
+                                <div class="card api-price-card api-price-card--highlight">
+                                    <h3>Gambar prabayar</h3>
+                                    <p class="api-price">€0,050<span>/ gambar</span></p>
+                                    <table class="tiers">
+                                        <caption>Harga volume — semakin banyak gambar yang Anda beli, semakin murah harganya</caption>
+                                        <tr><th scope="row">Gambar</th><td>50–450</td><td>500–2 450</td><td>2 500–9 950</td><td>10 000–49 950</td><td>50 000+</td></tr>
+                                        <tr><th scope="row">€/image</th><td>0.050</td><td>0.040</td><td>0.030</td><td>0.020</td><td>0.010</td></tr>
+                                    </table>
+                                    <ul class="checklist">
+                                        <li>1 gambar dibeli = 1 konversi (kredit tidak pernah kedaluwarsa)</li>
+                                        <li>Tidak pernah kedaluwarsa, terakumulasi dengan paket gratis</li>
+                                        <li>Jumlah berapa pun: €0,040/gambar mulai dari 500, turun hingga €0,010/gambar</li>
+                                    </ul>
+                                    <a class="btn primary-btn" href="/portal/">Beli gambar</a>
+                                </div>
+                            </div>
+                            <p class="api-note">Kredit otomatis: saldo Anda diperbarui dalam hitungan detik setelah pembayaran, melalui webhook pembayaran. Pengembalian dana memotong kredit yang dibeli, dibatasi hingga saldo saat ini. Pembayaran aman oleh Lemon Squeezy (PPN ditangani secara otomatis).</p>
+                        </section>
+
+                        <!-- Code examples -->
+                        <section id="examples" class="api-section">
+                            <h2>Contoh kode</h2>
+                            <p>Salin-tempel dan sesuaikan. API menggunakan multipart/form-data biasa, sehingga klien HTTP apa pun dapat digunakan.</p>
+
+                            <p class="api-code-label">cURL</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@photo.jpg" \
+  -F "colormode=color" \
+  -F "filter_speckle=4" \
+  -o photo.svg</code></pre>
+
+                            <p class="api-code-label">Python</p>
+                            <pre class="api-code"><code>import requests
+
+resp = requests.post(
+    "https://api.pixel-to-path.com/v1/convert",
+    headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
+    files={"file": open("photo.jpg", "rb")},
+    data={"colormode": "color", "filter_speckle": 4},
+)
+resp.raise_for_status()
+print(resp.headers["X-Credits-Remaining"], "credits left")
+with open("photo.svg", "wb") as f:
+    f.write(resp.content)</code></pre>
+
+                            <p class="api-code-label">JavaScript</p>
+                            <pre class="api-code"><code>const form = new FormData();
+form.append("file", new Blob([imageBytes]), "photo.jpg");
+form.append("colormode", "color");
+
+const resp = await fetch("https://api.pixel-to-path.com/v1/convert", {
+  method: "POST",
+  headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
+  body: form,
+});
+if (!resp.ok) {
+  const { error } = await resp.json();
+  throw new Error(`${error.code}: ${error.message}`);
+}
+const svg = await resp.text();
+console.log(resp.headers.get("X-Credits-Remaining"), "credits left");</code></pre>
+                        </section>
+
+                        <!-- FAQ -->
+                        <section id="faq" class="api-section">
+                            <h2>Pertanyaan yang sering diajukan</h2>
+                            <details class="api-faq-item">
+                                <summary>Apa yang dihitung sebagai satu konversi?</summary>
+                                <p>Satu panggilan POST /v1/convert yang berhasil dan mengembalikan file SVG. Panggilan yang gagal (gambar tidak valid, parameter salah, batas laju, kesalahan server) dan panggilan GET /v1/me tidak pernah dikenakan biaya.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Bagaimana kuota gratis bulanan dihitung?</summary>
+                                <p>Per akun, berdasarkan bulan kalender UTC — diatur ulang pada tanggal 1 pukul 00:00 UTC. Membuat beberapa kunci API tidak menggandakan kuota gratis: semua kunci dari satu akun berbagi 10 konversi gratis yang sama.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Apakah kredit bisa kedaluwarsa?</summary>
+                                <p>Tidak. Kredit yang dibeli tetap berada di akun Anda hingga Anda menggunakannya. Kredit tersebut baru digunakan setelah 10 konversi bulanan gratis Anda habis.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Bagaimana cara mendapatkan lebih banyak konversi dalam sebulan?</summary>
+                                <p>Beli gambar prabayar dari portal klien — jumlah berapa pun, dalam kelipatan 50. Anda selalu dapat melihat jumlah gambar yang Anda dapatkan secara pasti: 50 gambar €2,50, 500 gambar €20, 2.500 €75, 10.000 €200, 50.000 €500. Kredit ditambahkan ke akun Anda secara otomatis dalam hitungan detik setelah pembayaran — tanpa kunci lisensi, tidak ada yang perlu dimasukkan.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Apa yang terjadi jika saya kehilangan kunci API saya?</summary>
+                                <p>Kunci disimpan dalam bentuk hash, sehingga tidak dapat dipulihkan. Cabut kunci yang hilang di portal dan buat yang baru — pencabutan berlaku segera.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Format gambar apa saja yang didukung?</summary>
+                                <p>PNG, JPEG, BMP, dan WebP, hingga 20 MB dan 50 megapiksel, setidaknya berukuran 64×64 piksel. Gambar yang lebih besar dari 1500 piksel pada sisi terpanjangnya akan diubah ukurannya sebelum konversi, persis seperti di situs web gratis.</p>
+                            </details>
+                        </section>
+
+                        <!-- Autres versions -->
+                        <!-- Versions : les 4 façons d'utiliser PixelToPath (clés pv_* — fallback EN) -->
+<section class="section versions-section">
+    <div class="container">
+        <h2 class="section-title">Pilih Versi Anda</h2>
+        <p class="section-intro">Mesin tangguh yang sama - pilih format yang sesuai dengan alur kerja Anda.</p>
+
+        <div class="versions-grid">
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🌐</div>
+                <h3>Alat Online</h3>
+                <p class="versions-card__price">Gratis</p>
+                <p class="versions-card__desc">Konversi gambar langsung di browser Anda. Tanpa instalasi, tanpa akun.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/id/online/">Buka alat ini</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">💻</div>
+                <h3>Aplikasi Desktop</h3>
+                <p class="versions-card__price">Gratis &amp; sumber terbuka</p>
+                <p class="versions-card__desc">Konverter lengkap di mesin Anda, untuk Windows &amp; Linux.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/id/offline/">Unduh gratis</a>
+            </article>
+
+            <article class="card versions-card versions-card--highlight">
+                <div class="versions-card__icon">⌨️</div>
+                <h3>Aplikasi Desktop Pro</h3>
+                <p class="versions-card__price">€39 sekali bayar</p>
+                <p class="versions-card__desc">Hot folder, konversi massal, dan CLI untuk beban kerja berat.</p>
+                <a class="btn primary-btn versions-card__cta" href="/id/pro/">Dapatkan Pro</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🔌</div>
+                <h3>API</h3>
+                <p class="versions-card__price">Paket gratis + paket kredit</p>
+                <p class="versions-card__desc">Satu panggilan REST: kirim gambar, dapatkan SVG bersih. 10 gratis/bulan.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/id/api/">Dapatkan kunci API</a>
+            </article>
+
+        </div>
+
+        <p class="versions-links">
+            <a href="/id/pricing/">Bandingkan semua versi &amp; harga →</a>
+        </p>
+        <p class="versions-links versions-links--portal">
+            Sudah punya akun?
+            <a href="/portal/">Masuk ke portal klien →</a>
+        </p>
+    </div>
+</section>
+
+
+                        <!-- CTA finale -->
+                        <section class="api-cta">
+                            <h2>Siap untuk vektorisasi dalam skala besar?</h2>
+                            <p>Buat akun Anda, dapatkan kunci, dan lakukan panggilan pertama Anda dalam waktu kurang dari dua menit.</p>
+                            <a class="btn primary-btn big-btn" href="/portal/">Dapatkan kunci API gratis</a>
+                        </section>
+
+                        <p class="api-footer-note">Punya pertanyaan tentang API? Buka masalah (issue) di <a href="https://github.com/lorrisc/PixelToPath" target="_blank" rel="noopener">GitHub</a>.</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/id/">Beranda</a>
+        <a href="/id/online/">Alat Online</a>
+        <a href="/id/offline/">Aplikasi Desktop</a>
+        <a href="/id/pro/">Pro</a>
+        <a href="/id/api/">API</a>
+        <a href="/id/blog/">Blog</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Sumber Terbuka (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Portal Klien</a>
+    </div>
+</footer>
+
+<script src="../../assets/js/docunest-strings.js" defer></script>
+<script src="../../assets/js/docunest-popup.js" data-asset="../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../assets/js/ui-state.js"></script>
+</body>
+</html>

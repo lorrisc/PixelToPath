@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelToPath API – واجهة برمجة تطبيقات لتحويل الصور إلى SVG، 10 تحويلات مجانية/شهريًا</title>
+    <meta name="description" content="قم بتحويل PNG أو JPG أو BMP أو WebP إلى SVG نظيف باستدعاء REST واحد. Potrace للرسومات الخطية بالأبيض والأسود، VTracer للمتجهات الملونة. 10 تحويلات مجانية كل شهر، صور مسبقة الدفع تبدأ من 0.05 يورو (تصل إلى 0.01 يورو/صورة مع الكميات)، الأرصدة لا تنتهي صلاحيتها أبدًا.">
+    <meta name="keywords" content="pixeltopath api, image to svg api, png to svg rest api, vectorize api, potrace api, vtracer api, svg converter api">
+    <meta name="author" content="Lorris C.">
+
+    <meta property="og:title" content="PixelToPath API – واجهة برمجة تطبيقات لتحويل الصور إلى SVG، 10 تحويلات مجانية/شهريًا">
+    <meta property="og:description" content="قم بتحويل PNG أو JPG أو BMP أو WebP إلى SVG نظيف باستدعاء REST واحد. Potrace للرسومات الخطية بالأبيض والأسود، VTracer للمتجهات الملونة. 10 تحويلات مجانية كل شهر، صور مسبقة الدفع تبدأ من 0.05 يورو (تصل إلى 0.01 يورو/صورة مع الكميات)، الأرصدة لا تنتهي صلاحيتها أبدًا.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="PixelToPath app screenshot">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PixelToPath API – واجهة برمجة تطبيقات لتحويل الصور إلى SVG، 10 تحويلات مجانية/شهريًا">
+    <meta name="twitter:description" content="قم بتحويل PNG أو JPG أو BMP أو WebP إلى SVG نظيف باستدعاء REST واحد. Potrace للرسومات الخطية بالأبيض والأسود، VTracer للمتجهات الملونة. 10 تحويلات مجانية كل شهر، صور مسبقة الدفع تبدأ من 0.05 يورو (تصل إلى 0.01 يورو/صورة مع الكميات)، الأرصدة لا تنتهي صلاحيتها أبدًا.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="PixelToPath app screenshot">
+    <meta property="og:url" content="https://pixel-to-path.com/ar/api/">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://pixel-to-path.com/ar/api/" />
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/api/" />
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/api/" />
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/api/" />
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/api/" />
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/api/" />
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/api/" />
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/api/" />
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/api/" />
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/api/" />
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/api/" />
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/api/" />
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/api/" />
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/api/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/api/" />
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/api/" />
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/api/" />
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/api/" />
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/api/" />
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/api/" />
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/api/" />
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/api/" />
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/api/" />
+
+    <link rel="stylesheet" href="../../assets/css/bundle.7f66facb.css">
+
+
+
+    <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebService",
+  "@id": "https://pixel-to-path.com/ar/api/#api",
+  "name": "PixelToPath API",
+  "url": "https://pixel-to-path.com/ar/api/",
+  "description": "قم بتحويل PNG أو JPG أو BMP أو WebP إلى SVG نظيف باستدعاء REST واحد. Potrace للرسومات الخطية بالأبيض والأسود، VTracer للمتجهات الملونة. 10 تحويلات مجانية كل شهر، صور مسبقة الدفع تبدأ من 0.05 يورو (تصل إلى 0.01 يورو/صورة مع الكميات)، الأرصدة لا تنتهي صلاحيتها أبدًا.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://pixel-to-path.com/#organization",
+    "name": "PixelToPath"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "تحويل المتجهات على نطاق واسع من التعليمات البرمجية الخاصة بك. استدعاء REST واحد: أرسل صورة، واحصل على SVG نظيف."
+  },
+  "isPartOf": {
+    "@id": "https://pixel-to-path.com/#website"
+  }
+}</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما الذي يُحسب كتحويل واحد؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "استدعاء POST /v1/convert ناجح واحد يُرجع SVG. الاستدعاءات الفاشلة (صورة غير صالحة، معلمات خاطئة، حد المعدل، خطأ في الخادم) واستدعاءات GET /v1/me لا يتم فرض رسوم عليها أبدًا."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يتم حساب الحصة المجانية الشهرية؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "لكل حساب، في الشهر التقويمي بالتوقيت العالمي المنسق (UTC) — يتم إعادة تعيينه في اليوم الأول الساعة 00:00 بالتوقيت العالمي المنسق. إن إنشاء عدة مفاتيح API لا يضاعف الحصة المجانية: تشترك جميع مفاتيح الحساب في نفس الـ 10 تحويلات المجانية."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل تنتهي صلاحية الأرصدة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "لا. تبقى الأرصدة المشتراة في حسابك حتى تستخدمها. يتم استهلاكها فقط بعد استنفاد التحويلات الـ 10 المجانية الشهرية الخاصة بك."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يمكنني الحصول على المزيد من التحويلات في الشهر؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "اشترِ صورًا مسبقة الدفع من بوابة العملاء — أي كمية، في دفعات من 50. ترى دائمًا بالضبط عدد الصور التي تحصل عليها: 50 صورة بـ 2.50 يورو، 500 صورة بـ 20 يورو، 2,500 بـ 75 يورو، 10,000 بـ 200 يورو، 50,000 بـ 500 يورو. يتم إضافة الأرصدة إلى حسابك تلقائيًا في غضون ثوانٍ من الدفع — لا يوجد مفتاح ترخيص ولا شيء لإدخاله."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ماذا يحدث إذا فقدت مفتاح API الخاص بي؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "يتم تخزين المفاتيح مجزأة، لذلك لا يمكن استردادها. قم بإبطال المفتاح المفقود في البوابة وأنشئ مفتاحًا جديدًا — يتم تفعيله على الفور."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ما هي صيغ الصور المدعومة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG و JPEG و BMP و WebP، بحجم يصل إلى 20 ميغابايت و 50 ميغابكسل، وبحد أدنى 64×64 بكسل. يتم تغيير حجم الصور الأكبر من 1500 بكسل على أطول جوانبها قبل التحويل، تمامًا كما هو الحال في الموقع المجاني."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/ar/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "API",
+      "item": "https://pixel-to-path.com/ar/api/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/ar/" class="brand">
+            <img src="../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/ar/"
+            class="">الرئيسية</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">المنتجات <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/ar/online/"
+                       class="">أداة عبر الإنترنت</a>
+                    <a href="/ar/offline/"
+                       class="">تطبيق سطح المكتب</a>
+                    <a href="/ar/pro/"
+                       class="">تطبيق سطح المكتب Pro</a>
+                    <a href="/ar/api/"
+                       class="active">API</a>
+                </div>
+            </div>
+
+            <a href="/ar/pricing/"
+               class="">الأسعار</a>
+
+            <div class="lang-switch">
+                <span>🇸🇦 AR</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/ar/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">الرئيسية</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">المنتجات</span>
+            <div class="mobile-sublist">
+                <a href="/ar/online/"
+                   class="">أداة عبر الإنترنت</a>
+                <a href="/ar/offline/"
+                   class="">تطبيق سطح المكتب</a>
+                <a href="/ar/pro/"
+                   class="">تطبيق سطح المكتب Pro</a>
+                <a href="/ar/api/"
+                   class="active">API</a>
+            </div>
+
+            <a href="/ar/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">الأسعار</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">اللغة</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- Hero -->
+        <div class="api-hero">
+            <div class="container">
+                <span class="api-tag">API</span>
+                <h1>PixelToPath API</h1>
+                <p class="api-hero__text">قم بتحويل الصور إلى متجهات برمجيًا من خلال <strong>استدعاء REST واحد</strong>. قم برفع ملف PNG أو JPG أو BMP أو WebP، واحصل على SVG نظيف جاهز للإنتاج. يتم تتبع الرسومات الخطية بالأبيض والأسود بواسطة <strong>Potrace</strong>، والصور الملونة بواسطة <strong>VTracer</strong> — نفس المحركات الموجودة في المحول المجاني عبر الإنترنت.</p>
+                <div class="api-hero__cta">
+                    <a class="btn primary-btn big-btn" href="/portal/"> احصل على مفتاح API الخاص بك</a>
+                    <a class="btn secondary-btn big-btn" href="/portal/">تسجيل الدخول إلى البوابة</a>
+                    <a class="api-hero__docs" href="#quickstart">اقرأ الوثائق ↓</a>
+                </div>
+                <p class="api-hero__note">10 تحويلات مجانية كل شهر · لا يتطلب بطاقة ائتمان</p>
+            </div>
+        </div>
+
+        <!-- Accroche -->
+        <div class="api-strip">
+            <div class="container">
+                <p>10 تحويلات مجانية / شهر • <strong>استدعاء REST واحد</strong> • محركات Potrace + VTracer • الأرصدة <strong>لا تنتهي صلاحيتها أبدًا</strong></p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="api-body">
+            <div class="container">
+                <div class="api-layout">
+
+                    <!-- TOC -->
+                    <aside class="api-toc">
+                        <p class="api-toc__title">في هذه الصفحة</p>
+                        <ul>
+                            
+                            <li><a href="#quickstart">البدء السريع</a></li>
+                            <li><a href="#authentication">المصادقة</a></li>
+                            <li><a href="#convert">POST /v1/convert</a></li>
+                            <li><a href="#engines">المحركات</a></li>
+                            <li><a href="#response">الاستجابة</a></li>
+                            <li><a href="#errors">الأخطاء</a></li>
+                            <li><a href="#limits">حدود المعدل</a></li>
+                            <li><a href="#pricing">التسعير</a></li>
+                            <li><a href="#examples">أمثلة برمجية</a></li>
+                            <li><a href="#faq">الأسئلة الشائعة</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Content -->
+                    <article class="api-content">
+
+                        <!-- Quickstart -->
+                        <section id="quickstart" class="api-section">
+                            <h2>البدء السريع</h2>
+                            <p>ثلاث خطوات وستقوم بتحويل الصور إلى SVG من الطرفية الخاصة بك أو نصوصك البرمجية أو تطبيقك.</p>
+                            <div class="api-steps">
+                                <div class="api-step">
+                                    <h3>1 · أنشئ حسابك</h3>
+                                    <p>سجل في بوابة العملاء باستخدام بريدك الإلكتروني وكلمة مرور (10+ أحرف). لا يتطلب بطاقة ائتمان.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>2 · أنشئ مفتاح API</h3>
+                                    <p>في البوابة، أنشئ مفتاحًا. يتم عرضه <strong>مرة واحدة</strong> — احفظه في مكان آمن. تبدو المفاتيح مثل <code>ptp_live_…</code> ويمكن إبطالها في أي وقت.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>3 · استدعِ /v1/convert</h3>
+                                    <p>أرسل صورتك كـ multipart/form-data مع مفتاحك في ترويسة Authorization. يعود ملف SVG في جسم الاستجابة.</p>
+                                </div>
+                            </div>
+
+                            <p class="api-code-label">تحويلك الأول</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@logo.png" \
+  -F "colormode=binary" \
+  -o logo.svg</code></pre>
+                            <p class="api-note">مرجع تفاعلي: <a href="https://api.pixel-to-path.com/v1/docs">pixel-to-path.com/v1/docs</a> (OpenAPI/Swagger).</p>
+                        </section>
+
+                        <!-- Authentication -->
+                        <section id="authentication" class="api-section">
+                            <h2>المصادقة</h2>
+                            <p>تتم مصادقة كل طلب باستخدام رمز Bearer في ترويسة <code>Authorization</code>:</p>
+                            <pre class="api-code"><code>Authorization: Bearer ptp_live_0123abc…</code></pre>
+                            <ul class="api-list">
+                                <li><strong>المفاتيح أسرار:</strong> يتم تخزينها مجزأة من جانب الخادم وتُعرض مرة واحدة فقط عند الإنشاء. هل فقدت مفتاحك؟ قم بإبطاله وأنشئ واحدًا جديدًا.</li>
+                                <li><strong>حساب واحد، مفاتيح متعددة:</strong> أنشئ حتى 5 مفاتيح نشطة لفصل مشاريعك. يتم حساب حصتك المجانية الشهرية لكل حساب، وليس لكل مفتاح.</li>
+                                <li><strong>إبطال فوري:</strong> يتوقف المفتاح المُبطل عن العمل فورًا، من البوابة أو من استجابة API لحساب محظور.</li>
+                            </ul>
+                        </section>
+
+                        <!-- POST /v1/convert -->
+                        <section id="convert" class="api-section">
+                            <h2><span class="api-method api-method--post">POST</span> /v1/convert</h2>
+                            <p>رفع + تحويل في استدعاء واحد عديم الحالة (stateless). الاستدعاء الناجح يكلف رصيدًا واحدًا على الأكثر — الاستدعاءات الفاشلة أو غير الصالحة أو المحدودة المعدل لا تكلف شيئًا.</p>
+
+                            <h3>الطلب (multipart/form-data)</h3>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>الحقل</th>
+                                            <th>النوع</th>
+                                            <th>الافتراضي</th>
+                                            <th>الوصف</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>file</code></td>
+                                            <td>file</td>
+                                            <td>—</td>
+                                            <td>الصورة المراد تحويلها. PNG أو JPEG أو BMP أو WebP · بحد أقصى 20 ميغابايت · بحد أقصى 50 ميغابكسل · بحد أدنى 64×64 بكسل.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>colormode</code></td>
+                                            <td>string</td>
+                                            <td><code>color</code></td>
+                                            <td>&lt;code&gt;color&lt;/code&gt; يستخدم محرك VTracer، و &lt;code&gt;binary&lt;/code&gt; يستخدم Potrace (أبيض وأسود).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>mode</code></td>
+                                            <td>string</td>
+                                            <td><code>spline</code></td>
+                                            <td>Color (VTracer) فقط — يتم تجاهله في الوضع الثنائي. <code>spline</code> | <code>polygon</code> | <code>none</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>hierarchical</code></td>
+                                            <td>string</td>
+                                            <td><code>stacked</code></td>
+                                            <td>Color (VTracer) فقط — يتم تجاهله في الوضع الثنائي. <code>stacked</code> | <code>cutout</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>filter_speckle</code></td>
+                                            <td>int</td>
+                                            <td><code>4</code></td>
+                                            <td>Color (VTracer) فقط — يتم تجاهله في الوضع الثنائي. 0–16 — إزالة بقع الضوضاء الصغيرة.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>color_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>6</code></td>
+                                            <td>Color (VTracer) فقط — يتم تجاهله في الوضع الثنائي. 1–8 — عدد البتات المعنوية لكل قناة لون.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>layer_difference</code></td>
+                                            <td>int</td>
+                                            <td><code>16</code></td>
+                                            <td>Color (VTracer) فقط — يتم تجاهله في الوضع الثنائي. 0–64 — المسافة بين طبقات الألوان.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>corner_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>60</code></td>
+                                            <td>0–180 — زاوية اكتشاف الزوايا (كلا المحركين).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>length_threshold</code></td>
+                                            <td>float</td>
+                                            <td><code>4.0</code></td>
+                                            <td>3.5–10 — الحد الأدنى لطول المقطع (كلا المحركين).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>splice_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>45</code></td>
+                                            <td>0–180 — زاوية تقسيم المسارات (كلا المحركين).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>path_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>3</code></td>
+                                            <td>0–8 — المنازل العشرية في إحداثيات المسار.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>invert</code></td>
+                                            <td>bool</td>
+                                            <td><code>false</code></td>
+                                            <td>Binary (Potrace) فقط — يتم تجاهله في وضع الألوان. تتبع المناطق الفاتحة بدلاً من المناطق الداكنة.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>turdsize</code></td>
+                                            <td>int</td>
+                                            <td><code>2</code></td>
+                                            <td>Binary (Potrace) فقط — يتم تجاهله في وضع الألوان. 0–20 — إزالة البقع حتى هذا الحجم.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>alphamax</code></td>
+                                            <td>float</td>
+                                            <td><code>1.0</code></td>
+                                            <td>Binary (Potrace) فقط — يتم تجاهله في وضع الألوان. 0–1.334 — حد تمهيد الزوايا.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>opttolerance</code></td>
+                                            <td>float</td>
+                                            <td><code>0.2</code></td>
+                                            <td>Binary (Potrace) فقط — يتم تجاهله في وضع الألوان. 0–10 — حد تحسين المنحنيات.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Engines -->
+                        <section id="engines" class="api-section">
+                            <h2>محركان، يتم اختيارهما بواسطة &#34;colormode&#34;</h2>
+                            <p>تشغل واجهة برمجة التطبيقات نفس المحركات تمامًا مثل المحول المجاني عبر الإنترنت وتطبيق سطح المكتب:</p>
+                            <div class="grid-3">
+                                <div class="card api-engine">
+                                    <h3>binary — Potrace</h3>
+                                    <p>تتبع بالأبيض والأسود للرسومات الخطية والمسوحات الضوئية والرسومات التخطيطية والشعارات. يتم تتبع الجزء المظلم من الصورة (تدرج الرمادي &lt; 50%) على خلفية بيضاء. قم بضبط المخرجات بدقة باستخدام <code>turdsize</code> (إزالة الضوضاء) و <code>alphamax</code> (تنعيم الزوايا) و <code>opttolerance</code> (تحسين المسار).</p>
+                                </div>
+                                <div class="card api-engine">
+                                    <h3>color — VTracer</h3>
+                                    <p>تحويل متجه ملون متعدد الطبقات للرسوم التوضيحية والرسوم المتحركة والصور. تحكم في مستوى التفاصيل باستخدام <code>filter_speckle</code> و <code>color_precision</code> و <code>layer_difference</code> وملاءمة المنحنى باستخدام <code>mode</code> (spline, polygon, none).</p>
+                                </div>
+                            </div>
+                            <p class="api-note">تتم معالجة الصور مسبقًا تمامًا كما هو الحال في الموقع: يتم تغيير حجم الجانب الأطول إلى 1500 بكسل قبل التحويل، وتُرجع واجهة برمجة التطبيقات نوع الصورة المكتشف (<code>line_art</code> أو <code>logo</code> أو <code>photo</code> أو <code>illustration</code>) في ترويسة <code>X-Detected-Type</code>.</p>
+                        </section>
+
+                        <!-- Response -->
+                        <section id="response" class="api-section">
+                            <h2>الاستجابة</h2>
+                            <p>عند النجاح: <code>200 OK</code> مع <code>image/svg+xml</code> — الجسم هو ملف SVG نفسه. الترويسات المفيدة:</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>الترويسة</th>
+                                            <th>الوصف</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><code>X-Credits-Remaining</code></td><td>الأرصدة المدفوعة المتبقية في الحساب، بعد خصم هذا الاستدعاء.</td></tr>
+                                        <tr><td><code>X-Free-Remaining</code></td><td>التحويلات المجانية المتبقية هذا الشهر.</td></tr>
+                                        <tr><td><code>X-Detected-Type</code></td><td>نوع الصورة المكتشف (معلومة): line_art أو logo أو photo أو illustration.</td></tr>
+                                        <tr><td><code>X-Processing-Time</code></td><td>وقت معالجة الخادم بالثواني.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>GET /v1/me</h3>
+                            <p>حالة الحساب للمفتاح المستخدم لاستدعائه. <strong>مجاني</strong> — لا يُحسب أبدًا ضمن حصتك، ولا يتم خصمه أبدًا.</p>
+                            <p class="api-code-label">استجابة مثال</p>
+                            <pre class="api-code"><code>GET /v1/me
+Authorization: Bearer ptp_live_…
+
+{
+  "key": { "name": "prod", "prefix": "ptp_live_0123abc", … },
+  "usage": {
+    "month": "2026-09", "free_used": 7, "free_limit": 10,
+    "free_remaining": 3, "resets_at": "2026-10-01T00:00:00+00:00"
+  },
+  "credits": { "balance": 120 }
+}</code></pre>
+                        </section>
+
+                        <!-- Errors -->
+                        <section id="errors" class="api-section">
+                            <h2>الأخطاء</h2>
+                            <p>يرجع كل خطأ غلاف JSON متسق. الاستدعاءات الفاشلة لا تستهلك الأرصدة أبدًا.</p>
+                            <pre class="api-code"><code>HTTP/1.1 402 Payment Required
+{
+  "error": {
+    "code": "quota_exceeded",
+    "message": "Monthly free quota used and no credits left.",
+    "usage": { "free_used": 10, "free_limit": 10, "credits": 0 }
+  }
+}</code></pre>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>HTTP</th>
+                                            <th>الرمز</th>
+                                            <th>متى</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>401</td><td><code>invalid_api_key</code></td><td>مفتاح API مفقود أو مشوه أو غير معروف أو مُبطل.</td></tr>
+                                        <tr><td>402</td><td><code>quota_exceeded</code></td><td>تم استخدام الحصة المجانية الشهرية ولم يتبق أي أرصدة.</td></tr>
+                                        <tr><td>403</td><td><code>account_banned</code></td><td>الحساب محظور — يتم رفض جميع مفاتيحه.</td></tr>
+                                        <tr><td>403</td><td><code>ip_blocked</code></td><td>عنوان IP للمتصل مدرج في القائمة السوداء.</td></tr>
+                                        <tr><td>413</td><td><code>file_too_large</code></td><td>حجم الملف أكبر من 20 ميغابايت.</td></tr>
+                                        <tr><td>422</td><td><code>invalid_image</code> / <code>image_too_small</code> / <code>invalid_params</code></td><td>صورة غير صالحة، أو صورة صغيرة جدًا، أو قيمة معلمة غير صالحة.</td></tr>
+                                        <tr><td>429</td><td><code>rate_limited</code></td><td>تم تجاوز حد المعدل لكل مفتاح (انظر أدناه). يتضمن ترويسة Retry-After.</td></tr>
+                                        <tr><td>500</td><td><code>internal_error</code></td><td>فشل التحويل من جانب الخادم — لا يتم خصم أي رصيد.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Rate limits -->
+                        <section id="limits" class="api-section">
+                            <h2>حدود المعدل</h2>
+                            <p>تُطبق الحدود لكل مفتاح API، وليس لكل IP، لذلك لا يتم معاقبة مكتب مشترك أو مشغل CI أبدًا بسبب حركة مرور شخص آخر.</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>الحد</th>
+                                            <th>القيمة</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>الطلبات في الدقيقة، لكل مفتاح</td><td><strong>60</strong></td></tr>
+                                        <tr><td>الطلبات في اليوم، لكل مفتاح</td><td><strong>2 000</strong></td></tr>
+                                        <tr><td>التحويلات المتزامنة، لكل مفتاح</td><td>2 (الاستدعاءات الإضافية تنتظر، ثم 429)</td></tr>
+                                        <tr><td>أقصى حجم / دقة للملف</td><td>20 ميغابايت / 50 ميغابكسل</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Pricing -->
+                        <section id="pricing" class="api-section">
+                            <h2>التسعير</h2>
+                            <p>يحصل كل حساب جديد على <strong>10 تحويلات مجانية كل شهر</strong>، ولا يتطلب بطاقة ائتمان. هل تحتاج إلى المزيد؟ اشترِ صورًا مسبقة الدفع — أي كمية (في دفعات من 50)، مع خصومات على الكمية. لا تنتهي صلاحيتها أبدًا وتتراكم مع حصتك المجانية الشهرية (يتم استهلاك التحويلات المجانية أولاً).</p>
+                            <div class="api-pricing">
+                                <div class="card api-price-card">
+                                    <h3>مجاني</h3>
+                                    <p class="api-price">0€<span>/شهر</span></p>
+                                    <ul class="checklist">
+                                        <li>10 تحويلات / شهر</li>
+                                        <li>كلا المحركين (Potrace + VTracer)</li>
+                                        <li>ما يصل إلى 5 مفاتيح API</li>
+                                    </ul>
+                                    <a class="btn secondary-btn" href="/portal/">إنشاء حساب</a>
+                                </div>
+                                <div class="card api-price-card api-price-card--highlight">
+                                    <h3>صور مسبقة الدفع</h3>
+                                    <p class="api-price">0.050€<span>/ صورة</span></p>
+                                    <table class="tiers">
+                                        <caption>تسعير الكمية — كلما اشتريت صورًا أكثر، أصبحت كل صورة أرخص</caption>
+                                        <tr><th scope="row">الصور</th><td>50–450</td><td>500–2 450</td><td>2 500–9 950</td><td>10 000–49 950</td><td>50 000+</td></tr>
+                                        <tr><th scope="row">€/image</th><td>0.050</td><td>0.040</td><td>0.030</td><td>0.020</td><td>0.010</td></tr>
+                                    </table>
+                                    <ul class="checklist">
+                                        <li>شراء صورة واحدة = تحويل واحد (الأرصدة لا تنتهي صلاحيتها أبدًا)</li>
+                                        <li>لا تنتهي صلاحيتها أبدًا، تتراكم مع الباقة المجانية</li>
+                                        <li>أي كمية: 0.040 يورو/صورة من 500، وتصل إلى 0.010 يورو/صورة</li>
+                                    </ul>
+                                    <a class="btn primary-btn" href="/portal/">شراء الصور</a>
+                                </div>
+                            </div>
+                            <p class="api-note">إضافة رصيد تلقائي: يتم تحديث رصيدك في غضون ثوانٍ من الدفع، عبر خطاف الدفع (webhook). تقوم المبالغ المستردة بخصم الأرصدة المشتراة، وبحد أقصى للرصيد الحالي. إتمام دفع آمن عبر Lemon Squeezy (يتم التعامل مع ضريبة القيمة المضافة تلقائيًا).</p>
+                        </section>
+
+                        <!-- Code examples -->
+                        <section id="examples" class="api-section">
+                            <h2>أمثلة برمجية</h2>
+                            <p>انسخ والصق وقم بالتعديل. تتحدث واجهة برمجة التطبيقات بصيغة multipart/form-data العادية، لذا سيعمل أي عميل HTTP.</p>
+
+                            <p class="api-code-label">cURL</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@photo.jpg" \
+  -F "colormode=color" \
+  -F "filter_speckle=4" \
+  -o photo.svg</code></pre>
+
+                            <p class="api-code-label">Python</p>
+                            <pre class="api-code"><code>import requests
+
+resp = requests.post(
+    "https://api.pixel-to-path.com/v1/convert",
+    headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
+    files={"file": open("photo.jpg", "rb")},
+    data={"colormode": "color", "filter_speckle": 4},
+)
+resp.raise_for_status()
+print(resp.headers["X-Credits-Remaining"], "credits left")
+with open("photo.svg", "wb") as f:
+    f.write(resp.content)</code></pre>
+
+                            <p class="api-code-label">JavaScript</p>
+                            <pre class="api-code"><code>const form = new FormData();
+form.append("file", new Blob([imageBytes]), "photo.jpg");
+form.append("colormode", "color");
+
+const resp = await fetch("https://api.pixel-to-path.com/v1/convert", {
+  method: "POST",
+  headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
+  body: form,
+});
+if (!resp.ok) {
+  const { error } = await resp.json();
+  throw new Error(`${error.code}: ${error.message}`);
+}
+const svg = await resp.text();
+console.log(resp.headers.get("X-Credits-Remaining"), "credits left");</code></pre>
+                        </section>
+
+                        <!-- FAQ -->
+                        <section id="faq" class="api-section">
+                            <h2>الأسئلة الشائعة</h2>
+                            <details class="api-faq-item">
+                                <summary>ما الذي يُحسب كتحويل واحد؟</summary>
+                                <p>استدعاء POST /v1/convert ناجح واحد يُرجع SVG. الاستدعاءات الفاشلة (صورة غير صالحة، معلمات خاطئة، حد المعدل، خطأ في الخادم) واستدعاءات GET /v1/me لا يتم فرض رسوم عليها أبدًا.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>كيف يتم حساب الحصة المجانية الشهرية؟</summary>
+                                <p>لكل حساب، في الشهر التقويمي بالتوقيت العالمي المنسق (UTC) — يتم إعادة تعيينه في اليوم الأول الساعة 00:00 بالتوقيت العالمي المنسق. إن إنشاء عدة مفاتيح API لا يضاعف الحصة المجانية: تشترك جميع مفاتيح الحساب في نفس الـ 10 تحويلات المجانية.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>هل تنتهي صلاحية الأرصدة؟</summary>
+                                <p>لا. تبقى الأرصدة المشتراة في حسابك حتى تستخدمها. يتم استهلاكها فقط بعد استنفاد التحويلات الـ 10 المجانية الشهرية الخاصة بك.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>كيف يمكنني الحصول على المزيد من التحويلات في الشهر؟</summary>
+                                <p>اشترِ صورًا مسبقة الدفع من بوابة العملاء — أي كمية، في دفعات من 50. ترى دائمًا بالضبط عدد الصور التي تحصل عليها: 50 صورة بـ 2.50 يورو، 500 صورة بـ 20 يورو، 2,500 بـ 75 يورو، 10,000 بـ 200 يورو، 50,000 بـ 500 يورو. يتم إضافة الأرصدة إلى حسابك تلقائيًا في غضون ثوانٍ من الدفع — لا يوجد مفتاح ترخيص ولا شيء لإدخاله.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>ماذا يحدث إذا فقدت مفتاح API الخاص بي؟</summary>
+                                <p>يتم تخزين المفاتيح مجزأة، لذلك لا يمكن استردادها. قم بإبطال المفتاح المفقود في البوابة وأنشئ مفتاحًا جديدًا — يتم تفعيله على الفور.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>ما هي صيغ الصور المدعومة؟</summary>
+                                <p>PNG و JPEG و BMP و WebP، بحجم يصل إلى 20 ميغابايت و 50 ميغابكسل، وبحد أدنى 64×64 بكسل. يتم تغيير حجم الصور الأكبر من 1500 بكسل على أطول جوانبها قبل التحويل، تمامًا كما هو الحال في الموقع المجاني.</p>
+                            </details>
+                        </section>
+
+                        <!-- Autres versions -->
+                        <!-- Versions : les 4 façons d'utiliser PixelToPath (clés pv_* — fallback EN) -->
+<section class="section versions-section">
+    <div class="container">
+        <h2 class="section-title">اختر نسختك</h2>
+        <p class="section-intro">نفس المحرك القوي - اختر التنسيق الذي يناسب سير عملك.</p>
+
+        <div class="versions-grid">
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🌐</div>
+                <h3>أداة عبر الإنترنت</h3>
+                <p class="versions-card__price">مجاني</p>
+                <p class="versions-card__desc">قم بتحويل الصور مباشرة في متصفحك. لا يوجد تثبيت، ولا حساب.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/ar/online/">افتح الأداة</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">💻</div>
+                <h3>تطبيق سطح المكتب</h3>
+                <p class="versions-card__price">مجاني ومفتوح المصدر</p>
+                <p class="versions-card__desc">المحول الكامل على جهازك، لأنظمة Windows و Linux.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/ar/offline/">تنزيل مجاني</a>
+            </article>
+
+            <article class="card versions-card versions-card--highlight">
+                <div class="versions-card__icon">⌨️</div>
+                <h3>تطبيق سطح المكتب Pro</h3>
+                <p class="versions-card__price">39€ لمرة واحدة</p>
+                <p class="versions-card__desc">مجلد نشط (Hot folder)، وتحويل جماعي وواجهة سطر أوامر (CLI) لأعباء العمل الثقيلة.</p>
+                <a class="btn primary-btn versions-card__cta" href="/ar/pro/">احصل على Pro</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🔌</div>
+                <h3>API</h3>
+                <p class="versions-card__price">باقة مجانية + باقات أرصدة</p>
+                <p class="versions-card__desc">استدعاء REST واحد: أرسل صورة، واحصل على SVG نظيف. 10 مجانًا/شهريًا.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/ar/api/">احصل على مفتاح API</a>
+            </article>
+
+        </div>
+
+        <p class="versions-links">
+            <a href="/ar/pricing/">قارن جميع الإصدارات والأسعار ←</a>
+        </p>
+        <p class="versions-links versions-links--portal">
+            هل لديك حساب بالفعل؟
+            <a href="/portal/">قم بتسجيل الدخول إلى بوابة العملاء ←</a>
+        </p>
+    </div>
+</section>
+
+
+                        <!-- CTA finale -->
+                        <section class="api-cta">
+                            <h2>هل أنت جاهز لتحويل المتجهات على نطاق واسع؟</h2>
+                            <p>أنشئ حسابك، واحصل على مفتاح وقم بإجراء استدعائك الأول في أقل من دقيقتين.</p>
+                            <a class="btn primary-btn big-btn" href="/portal/">احصل على مفتاح API المجاني الخاص بك</a>
+                        </section>
+
+                        <p class="api-footer-note">هل لديك أسئلة حول API؟ افتح مشكلة على <a href="https://github.com/lorrisc/PixelToPath" target="_blank" rel="noopener">GitHub</a>.</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/ar/">الرئيسية</a>
+        <a href="/ar/online/">أداة عبر الإنترنت</a>
+        <a href="/ar/offline/">تطبيق سطح المكتب</a>
+        <a href="/ar/pro/">Pro</a>
+        <a href="/ar/api/">API</a>
+        <a href="/ar/blog/">المدونة</a>
+        <a href="https://github.com/lorrisc/PixelToPath">مفتوح المصدر (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">بوابة العميل</a>
+    </div>
+</footer>
+
+<script src="../../assets/js/docunest-strings.js" defer></script>
+<script src="../../assets/js/docunest-popup.js" data-asset="../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../assets/js/ui-state.js"></script>
+</body>
+</html>

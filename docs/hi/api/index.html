@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelToPath API – छवि से SVG REST API, प्रति माह 10 मुफ़्त रूपांतरण</title>
+    <meta name="description" content="एक REST कॉल के साथ PNG, JPG, BMP या WebP को साफ़ SVG में बदलें। श्वेत-श्याम रेखाचित्रों के लिए Potrace, रंगीन वेक्टर के लिए VTracer। हर महीने 10 मुफ़्त रूपांतरण, €0.05 से प्रीपेड छवियां (वॉल्यूम पर €0.01/छवि तक), क्रेडिट कभी समाप्त नहीं होते।">
+    <meta name="keywords" content="pixeltopath api, image to svg api, png to svg rest api, vectorize api, potrace api, vtracer api, svg converter api">
+    <meta name="author" content="Lorris C.">
+
+    <meta property="og:title" content="PixelToPath API – छवि से SVG REST API, प्रति माह 10 मुफ़्त रूपांतरण">
+    <meta property="og:description" content="एक REST कॉल के साथ PNG, JPG, BMP या WebP को साफ़ SVG में बदलें। श्वेत-श्याम रेखाचित्रों के लिए Potrace, रंगीन वेक्टर के लिए VTracer। हर महीने 10 मुफ़्त रूपांतरण, €0.05 से प्रीपेड छवियां (वॉल्यूम पर €0.01/छवि तक), क्रेडिट कभी समाप्त नहीं होते।">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="PixelToPath app screenshot">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PixelToPath API – छवि से SVG REST API, प्रति माह 10 मुफ़्त रूपांतरण">
+    <meta name="twitter:description" content="एक REST कॉल के साथ PNG, JPG, BMP या WebP को साफ़ SVG में बदलें। श्वेत-श्याम रेखाचित्रों के लिए Potrace, रंगीन वेक्टर के लिए VTracer। हर महीने 10 मुफ़्त रूपांतरण, €0.05 से प्रीपेड छवियां (वॉल्यूम पर €0.01/छवि तक), क्रेडिट कभी समाप्त नहीं होते।">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="PixelToPath app screenshot">
+    <meta property="og:url" content="https://pixel-to-path.com/hi/api/">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://pixel-to-path.com/hi/api/" />
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/api/" />
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/api/" />
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/api/" />
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/api/" />
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/api/" />
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/api/" />
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/api/" />
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/api/" />
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/api/" />
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/api/" />
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/api/" />
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/api/" />
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/api/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/api/" />
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/api/" />
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/api/" />
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/api/" />
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/api/" />
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/api/" />
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/api/" />
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/api/" />
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/api/" />
+
+    <link rel="stylesheet" href="../../assets/css/bundle.7f66facb.css">
+
+
+
+    <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebService",
+  "@id": "https://pixel-to-path.com/hi/api/#api",
+  "name": "PixelToPath API",
+  "url": "https://pixel-to-path.com/hi/api/",
+  "description": "एक REST कॉल के साथ PNG, JPG, BMP या WebP को साफ़ SVG में बदलें। श्वेत-श्याम रेखाचित्रों के लिए Potrace, रंगीन वेक्टर के लिए VTracer। हर महीने 10 मुफ़्त रूपांतरण, €0.05 से प्रीपेड छवियां (वॉल्यूम पर €0.01/छवि तक), क्रेडिट कभी समाप्त नहीं होते।",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://pixel-to-path.com/#organization",
+    "name": "PixelToPath"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "अपने कोड से बड़े पैमाने पर वेक्टराइज़ करें। एक REST कॉल: एक छवि भेजें, एक साफ़ SVG प्राप्त करें।"
+  },
+  "isPartOf": {
+    "@id": "https://pixel-to-path.com/#website"
+  }
+}</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "एक रूपांतरण के रूप में क्या गिना जाता है?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "एक सफल POST /v1/convert कॉल जो एक SVG लौटाती है। विफल कॉल (अमान्य छवि, गलत पैरामीटर, दर सीमित, सर्वर त्रुटि) और GET /v1/me कॉल के लिए कभी शुल्क नहीं लिया जाता है।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "मासिक मुफ़्त कोटा की गणना कैसे की जाती है?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "प्रति खाता, UTC कैलेंडर माह पर — यह हर महीने की 1 तारीख को 00:00 UTC पर रीसेट होता है। कई API कुंजियाँ बनाने से मुफ़्त कोटा नहीं बढ़ता: किसी खाते की सभी कुंजियाँ समान 10 मुफ़्त रूपांतरणों को साझा करती हैं।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "क्या क्रेडिट समाप्त (एक्सपायर) होते हैं?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "नहीं। खरीदे गए क्रेडिट आपके उपयोग करने तक आपके खाते में रहते हैं। उनका उपयोग आपके 10 मुफ़्त मासिक रूपांतरणों के समाप्त होने के बाद ही किया जाता है।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "मैं एक महीने में अधिक रूपांतरण कैसे प्राप्त करूँ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "क्लाइंट पोर्टल से प्रीपेड छवियां खरीदें — 50 के बैच में कोई भी मात्रा। आप हमेशा देखते हैं कि आपको कितनी छवियां मिलती हैं: 50 छवियां €2.50, 500 छवियां €20, 2,500 €75, 10,000 €200, 50,000 €500। भुगतान के कुछ सेकंड के भीतर आपके खाते में स्वचालित रूप से क्रेडिट जुड़ जाते हैं — कोई लाइसेंस कुंजी नहीं, दर्ज करने के लिए कुछ भी नहीं।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "यदि मैं अपनी API कुंजी खो दूँ तो क्या होगा?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "कुंजियों को हैश करके संग्रहीत किया जाता है, इसलिए उन्हें पुनर्प्राप्त नहीं किया जा सकता है। खोई हुई कुंजी को पोर्टल में रद्द करें और एक नई बनाएं — यह तुरंत लागू हो जाती है।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "कौन से छवि प्रारूप समर्थित हैं?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG, JPEG, BMP और WebP, 20 MB और 50 मेगापिक्सेल तक, कम से कम 64×64 पिक्सेल। 1500 px से बड़ी छवियों को कनवर्ट करने से पहले आकार में छोटा कर दिया जाता है, बिल्कुल मुफ़्त वेबसाइट की तरह।"
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/hi/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "API",
+      "item": "https://pixel-to-path.com/hi/api/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/hi/" class="brand">
+            <img src="../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/hi/"
+            class="">होम</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">उत्पाद <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/hi/online/"
+                       class="">ऑनलाइन टूल</a>
+                    <a href="/hi/offline/"
+                       class="">डेस्कटॉप ऐप</a>
+                    <a href="/hi/pro/"
+                       class="">डेस्कटॉप ऐप Pro</a>
+                    <a href="/hi/api/"
+                       class="active">API</a>
+                </div>
+            </div>
+
+            <a href="/hi/pricing/"
+               class="">मूल्य</a>
+
+            <div class="lang-switch">
+                <span>🇮🇳 HI</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/hi/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">होम</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">उत्पाद</span>
+            <div class="mobile-sublist">
+                <a href="/hi/online/"
+                   class="">ऑनलाइन टूल</a>
+                <a href="/hi/offline/"
+                   class="">डेस्कटॉप ऐप</a>
+                <a href="/hi/pro/"
+                   class="">डेस्कटॉप ऐप Pro</a>
+                <a href="/hi/api/"
+                   class="active">API</a>
+            </div>
+
+            <a href="/hi/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">मूल्य</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">भाषा</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- Hero -->
+        <div class="api-hero">
+            <div class="container">
+                <span class="api-tag">API</span>
+                <h1>PixelToPath API</h1>
+                <p class="api-hero__text"><strong>एक REST कॉल</strong> के साथ छवियों को प्रोग्रामेटिक रूप से वेक्टराइज़ करें। PNG, JPG, BMP या WebP फ़ाइल अपलोड करें, और एक साफ़, उत्पादन के लिए तैयार SVG प्राप्त करें। श्वेत-श्याम रेखाचित्रों को <strong>Potrace</strong> द्वारा और रंगीन छवियों को <strong>VTracer</strong> द्वारा ट्रेस किया जाता है — वही इंजन जो मुफ़्त ऑनलाइन कनवर्टर में उपयोग होते हैं।</p>
+                <div class="api-hero__cta">
+                    <a class="btn primary-btn big-btn" href="/portal/"> अपनी API कुंजी प्राप्त करें</a>
+                    <a class="btn secondary-btn big-btn" href="/portal/">पोर्टल में साइन इन करें</a>
+                    <a class="api-hero__docs" href="#quickstart">दस्तावेज़ पढ़ें ↓</a>
+                </div>
+                <p class="api-hero__note">हर महीने 10 मुफ़्त रूपांतरण · क्रेडिट कार्ड की आवश्यकता नहीं</p>
+            </div>
+        </div>
+
+        <!-- Accroche -->
+        <div class="api-strip">
+            <div class="container">
+                <p>10 मुफ़्त रूपांतरण / माह • <strong>1 REST कॉल</strong> • Potrace + VTracer इंजन • क्रेडिट <strong>कभी समाप्त नहीं होते</strong></p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="api-body">
+            <div class="container">
+                <div class="api-layout">
+
+                    <!-- TOC -->
+                    <aside class="api-toc">
+                        <p class="api-toc__title">इस पृष्ठ पर</p>
+                        <ul>
+                            
+                            <li><a href="#quickstart">त्वरित शुरुआत</a></li>
+                            <li><a href="#authentication">प्रमाणीकरण</a></li>
+                            <li><a href="#convert">POST /v1/convert</a></li>
+                            <li><a href="#engines">इंजन</a></li>
+                            <li><a href="#response">प्रतिक्रिया</a></li>
+                            <li><a href="#errors">त्रुटियाँ</a></li>
+                            <li><a href="#limits">दर सीमाएँ</a></li>
+                            <li><a href="#pricing">मूल्य</a></li>
+                            <li><a href="#examples">कोड के उदाहरण</a></li>
+                            <li><a href="#faq">सामान्य प्रश्न</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Content -->
+                    <article class="api-content">
+
+                        <!-- Quickstart -->
+                        <section id="quickstart" class="api-section">
+                            <h2>त्वरित शुरुआत</h2>
+                            <p>तीन कदम और आप अपने टर्मिनल, अपनी स्क्रिप्ट या अपने ऐप से छवियों को SVG में कनवर्ट कर रहे होंगे।</p>
+                            <div class="api-steps">
+                                <div class="api-step">
+                                    <h3>1 · अपना खाता बनाएँ</h3>
+                                    <p>अपने ईमेल और एक पासवर्ड (10+ वर्ण) के साथ क्लाइंट पोर्टल पर पंजीकरण करें। क्रेडिट कार्ड की आवश्यकता नहीं है।</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>2 · एक API कुंजी बनाएँ</h3>
+                                    <p>पोर्टल में, एक कुंजी बनाएँ। यह <strong>एक बार</strong> दिखाई जाती है — इसे सुरक्षित रूप से सहेजें। कुंजियाँ <code>ptp_live_…</code> जैसी दिखती हैं और इन्हें किसी भी समय रद्द किया जा सकता है।</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>3 · /v1/convert को कॉल करें</h3>
+                                    <p>ऑथराइज़ेशन हेडर (Authorization header) में अपनी कुंजी के साथ अपनी छवि को multipart/form-data के रूप में भेजें। SVG प्रतिक्रिया बॉडी (response body) में वापस आता है।</p>
+                                </div>
+                            </div>
+
+                            <p class="api-code-label">आपका पहला रूपांतरण</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@logo.png" \
+  -F "colormode=binary" \
+  -o logo.svg</code></pre>
+                            <p class="api-note">इंटरैक्टिव संदर्भ: <a href="https://api.pixel-to-path.com/v1/docs">pixel-to-path.com/v1/docs</a> (OpenAPI/Swagger).</p>
+                        </section>
+
+                        <!-- Authentication -->
+                        <section id="authentication" class="api-section">
+                            <h2>प्रमाणीकरण</h2>
+                            <p>प्रत्येक अनुरोध को <code>Authorization</code> हेडर में एक Bearer टोकन के साथ प्रमाणित किया जाता है:</p>
+                            <pre class="api-code"><code>Authorization: Bearer ptp_live_0123abc…</code></pre>
+                            <ul class="api-list">
+                                <li><strong>कुंजियाँ गुप्त हैं:</strong> उन्हें सर्वर-साइड पर हैश करके संग्रहीत किया जाता है और निर्माण के समय केवल एक बार प्रदर्शित किया जाता है। कुंजी खो गई? इसे रद्द करें और एक नई बनाएं।</li>
+                                <li><strong>एक खाता, कई कुंजियाँ:</strong> अपने प्रोजेक्ट्स को अलग करने के लिए 5 सक्रिय कुंजियाँ तक बनाएँ। आपका मासिक मुफ़्त कोटा प्रति खाता गिना जाता है, प्रति कुंजी नहीं।</li>
+                                <li><strong>तत्काल निरस्तीकरण:</strong> रद्द की गई कुंजी तुरंत काम करना बंद कर देती है, चाहे वह पोर्टल से हो या प्रतिबंधित खाते की API प्रतिक्रिया से।</li>
+                            </ul>
+                        </section>
+
+                        <!-- POST /v1/convert -->
+                        <section id="convert" class="api-section">
+                            <h2><span class="api-method api-method--post">POST</span> /v1/convert</h2>
+                            <p>एक ही स्टेटलेस कॉल में अपलोड + रूपांतरण। एक सफल कॉल की कीमत अधिकतम 1 क्रेडिट होती है — विफल, अमान्य या दर-सीमित कॉल के लिए कोई कीमत नहीं लगती है।</p>
+
+                            <h3>अनुरोध (multipart/form-data)</h3>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>फ़ील्ड</th>
+                                            <th>प्रकार</th>
+                                            <th>डिफ़ॉल्ट</th>
+                                            <th>विवरण</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>file</code></td>
+                                            <td>file</td>
+                                            <td>—</td>
+                                            <td>कनवर्ट करने के लिए छवि। PNG, JPEG, BMP या WebP · अधिकतम 20 MB · अधिकतम 50 Mpx · न्यूनतम 64×64 px।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>colormode</code></td>
+                                            <td>string</td>
+                                            <td><code>color</code></td>
+                                            <td>&lt;code&gt;color&lt;/code&gt; VTracer इंजन का उपयोग करता है, &lt;code&gt;binary&lt;/code&gt; Potrace (श्वेत और श्याम) का उपयोग करता है।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>mode</code></td>
+                                            <td>string</td>
+                                            <td><code>spline</code></td>
+                                            <td>केवल कलर (VTracer) — बाइनरी मोड में अनदेखा किया गया। <code>spline</code> | <code>polygon</code> | <code>none</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>hierarchical</code></td>
+                                            <td>string</td>
+                                            <td><code>stacked</code></td>
+                                            <td>केवल कलर (VTracer) — बाइनरी मोड में अनदेखा किया गया। <code>stacked</code> | <code>cutout</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>filter_speckle</code></td>
+                                            <td>int</td>
+                                            <td><code>4</code></td>
+                                            <td>केवल कलर (VTracer) — बाइनरी मोड में अनदेखा किया गया। 0–16 — छोटे शोर के धब्बे हटाता है।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>color_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>6</code></td>
+                                            <td>केवल कलर (VTracer) — बाइनरी मोड में अनदेखा किया गया। 1–8 — प्रत्येक रंग चैनल में सार्थक बिट्स की संख्या।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>layer_difference</code></td>
+                                            <td>int</td>
+                                            <td><code>16</code></td>
+                                            <td>केवल कलर (VTracer) — बाइनरी मोड में अनदेखा किया गया। 0–64 — रंग परतों के बीच की दूरी।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>corner_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>60</code></td>
+                                            <td>0–180 — कोना पहचान कोण (दोनों इंजन)।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>length_threshold</code></td>
+                                            <td>float</td>
+                                            <td><code>4.0</code></td>
+                                            <td>3.5–10 — खंड की न्यूनतम लंबाई (दोनों इंजन)।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>splice_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>45</code></td>
+                                            <td>0–180 — पथ विभाजन कोण (दोनों इंजन)।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>path_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>3</code></td>
+                                            <td>0–8 — पथ निर्देशांक में दशमलव अंक।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>invert</code></td>
+                                            <td>bool</td>
+                                            <td><code>false</code></td>
+                                            <td>केवल बाइनरी (Potrace) — कलर मोड में अनदेखा किया गया। अंधेरे वाले क्षेत्रों के बजाय हल्के क्षेत्रों को ट्रेस करें।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>turdsize</code></td>
+                                            <td>int</td>
+                                            <td><code>2</code></td>
+                                            <td>केवल बाइनरी (Potrace) — कलर मोड में अनदेखा किया गया। 0–20 — इस आकार तक के धब्बे दबाता है।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>alphamax</code></td>
+                                            <td>float</td>
+                                            <td><code>1.0</code></td>
+                                            <td>केवल बाइनरी (Potrace) — कलर मोड में अनदेखा किया गया। 0–1.334 — कोना चिकनाई सीमा।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>opttolerance</code></td>
+                                            <td>float</td>
+                                            <td><code>0.2</code></td>
+                                            <td>केवल बाइनरी (Potrace) — कलर मोड में अनदेखा किया गया। 0–10 — वक्र अनुकूलन सहनशीलता।</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Engines -->
+                        <section id="engines" class="api-section">
+                            <h2>दो इंजन, &#34;colormode&#34; द्वारा चुने गए</h2>
+                            <p>API बिल्कुल वही इंजन चलाती है जो मुफ़्त ऑनलाइन कनवर्टर और डेस्कटॉप ऐप चलाते हैं:</p>
+                            <div class="grid-3">
+                                <div class="card api-engine">
+                                    <h3>binary (बाइनरी) — Potrace</h3>
+                                    <p>लाइन आर्ट, स्कैन, स्केच और लोगो की श्वेत और श्याम ट्रेसिंग। छवि के गहरे हिस्से (ग्रेस्केल &lt; 50%) को सफेद पृष्ठभूमि पर ट्रेस किया जाता है। <code>turdsize</code> (शोर हटाना), <code>alphamax</code> (कोने को चिकना करना) और <code>opttolerance</code> (पथ अनुकूलन) के साथ आउटपुट को फाइन-ट्यून करें।</p>
+                                </div>
+                                <div class="card api-engine">
+                                    <h3>color (कलर) — VTracer</h3>
+                                    <p>चित्रों, कार्टून और तस्वीरों के लिए लेयर्ड कलर वेक्टराइजेशन। <code>filter_speckle</code>, <code>color_precision</code>, <code>layer_difference</code> के साथ विवरण के स्तर को और <code>mode</code> (स्पलाइन, पॉलीगॉन, कोई नहीं) के साथ कर्व फिटिंग को नियंत्रित करें।</p>
+                                </div>
+                            </div>
+                            <p class="api-note">छवियों को बिल्कुल वेबसाइट की तरह प्रीप्रोसेस किया जाता है: कनवर्ट करने से पहले सबसे लंबे हिस्से का आकार 1500 px कर दिया जाता है, और API <code>X-Detected-Type</code> हेडर में पता लगाए गए छवि प्रकार (<code>line_art</code>, <code>logo</code>, <code>photo</code> या <code>illustration</code>) को लौटाता है।</p>
+                        </section>
+
+                        <!-- Response -->
+                        <section id="response" class="api-section">
+                            <h2>प्रतिक्रिया</h2>
+                            <p>सफलता पर: <code>200 OK</code> के साथ <code>image/svg+xml</code> — मुख्य भाग (body) में ही SVG फ़ाइल है। सूचनात्मक हेडर:</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>हेडर</th>
+                                            <th>विवरण</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><code>X-Credits-Remaining</code></td><td>इस कॉल के कटने के बाद, खाते में बचे भुगतान किए गए क्रेडिट।</td></tr>
+                                        <tr><td><code>X-Free-Remaining</code></td><td>इस महीने बचे मुफ़्त रूपांतरण।</td></tr>
+                                        <tr><td><code>X-Detected-Type</code></td><td>पता लगाया गया छवि प्रकार (जानकारी): line_art, logo, photo या illustration।</td></tr>
+                                        <tr><td><code>X-Processing-Time</code></td><td>सर्वर प्रोसेसिंग समय (सेकंड में)।</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>GET /v1/me</h3>
+                            <p>इसे कॉल करने के लिए उपयोग की गई कुंजी के लिए खाता स्थिति। <strong>मुफ़्त</strong> — कभी भी आपके कोटे में नहीं गिना जाता, कभी भी काटा नहीं जाता।</p>
+                            <p class="api-code-label">प्रतिक्रिया का उदाहरण</p>
+                            <pre class="api-code"><code>GET /v1/me
+Authorization: Bearer ptp_live_…
+
+{
+  "key": { "name": "prod", "prefix": "ptp_live_0123abc", … },
+  "usage": {
+    "month": "2026-09", "free_used": 7, "free_limit": 10,
+    "free_remaining": 3, "resets_at": "2026-10-01T00:00:00+00:00"
+  },
+  "credits": { "balance": 120 }
+}</code></pre>
+                        </section>
+
+                        <!-- Errors -->
+                        <section id="errors" class="api-section">
+                            <h2>त्रुटियाँ</h2>
+                            <p>प्रत्येक त्रुटि एक सुसंगत JSON लिफाफा लौटाती है। विफल कॉल कभी भी क्रेडिट का उपभोग नहीं करती हैं।</p>
+                            <pre class="api-code"><code>HTTP/1.1 402 Payment Required
+{
+  "error": {
+    "code": "quota_exceeded",
+    "message": "Monthly free quota used and no credits left.",
+    "usage": { "free_used": 10, "free_limit": 10, "credits": 0 }
+  }
+}</code></pre>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>HTTP</th>
+                                            <th>कोड</th>
+                                            <th>कब</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>401</td><td><code>invalid_api_key</code></td><td>अनुपस्थित, विकृत, अज्ञात या रद्द की गई API कुंजी।</td></tr>
+                                        <tr><td>402</td><td><code>quota_exceeded</code></td><td>मासिक मुफ़्त कोटा उपयोग किया गया और कोई क्रेडिट नहीं बचा।</td></tr>
+                                        <tr><td>403</td><td><code>account_banned</code></td><td>खाता प्रतिबंधित है — इसकी सभी कुंजियाँ अस्वीकार कर दी गई हैं।</td></tr>
+                                        <tr><td>403</td><td><code>ip_blocked</code></td><td>कॉलर का IP ब्लॉकलिस्ट में है।</td></tr>
+                                        <tr><td>413</td><td><code>file_too_large</code></td><td>फ़ाइल 20 MB से बड़ी है।</td></tr>
+                                        <tr><td>422</td><td><code>invalid_image</code> / <code>image_too_small</code> / <code>invalid_params</code></td><td>अमान्य छवि, छवि बहुत छोटी है या अमान्य पैरामीटर मान।</td></tr>
+                                        <tr><td>429</td><td><code>rate_limited</code></td><td>प्रति-कुंजी दर सीमा पार हो गई (नीचे देखें)। इसमें Retry-After हेडर शामिल है।</td></tr>
+                                        <tr><td>500</td><td><code>internal_error</code></td><td>रूपांतरण सर्वर-साइड पर विफल रहा — कोई क्रेडिट नहीं काटा जाता।</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Rate limits -->
+                        <section id="limits" class="api-section">
+                            <h2>दर सीमाएँ</h2>
+                            <p>सीमाएँ प्रति API कुंजी लागू होती हैं, प्रति IP नहीं, इसलिए साझा कार्यालय या CI रनर को किसी और के ट्रैफ़िक के लिए कभी दंडित नहीं किया जाता है।</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>सीमा</th>
+                                            <th>मान</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>प्रति मिनट अनुरोध, प्रति कुंजी</td><td><strong>60</strong></td></tr>
+                                        <tr><td>प्रति दिन अनुरोध, प्रति कुंजी</td><td><strong>2 000</strong></td></tr>
+                                        <tr><td>समवर्ती रूपांतरण, प्रति कुंजी</td><td>2 (अतिरिक्त कॉल प्रतीक्षा करते हैं, फिर 429)</td></tr>
+                                        <tr><td>अधिकतम फ़ाइल आकार / रिज़ॉल्यूशन</td><td>20 MB / 50 Mpx</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Pricing -->
+                        <section id="pricing" class="api-section">
+                            <h2>मूल्य</h2>
+                            <p>हर नए खाते को <strong>हर महीने 10 मुफ़्त रूपांतरण</strong> मिलते हैं, किसी क्रेडिट कार्ड की आवश्यकता नहीं है। और चाहिए? प्रीपेड छवियां खरीदें — किसी भी मात्रा में (50 के बैच में), वॉल्यूम छूट के साथ। वे कभी समाप्त नहीं होते और आपके मासिक मुफ़्त कोटे के साथ जुड़ जाते हैं (पहले मुफ़्त रूपांतरणों का उपयोग किया जाता है)।</p>
+                            <div class="api-pricing">
+                                <div class="card api-price-card">
+                                    <h3>मुफ़्त</h3>
+                                    <p class="api-price">€0<span>/माह</span></p>
+                                    <ul class="checklist">
+                                        <li>10 रूपांतरण / माह</li>
+                                        <li>दोनों इंजन (Potrace + VTracer)</li>
+                                        <li>अधिकतम 5 API कुंजियाँ</li>
+                                    </ul>
+                                    <a class="btn secondary-btn" href="/portal/">खाता बनाएँ</a>
+                                </div>
+                                <div class="card api-price-card api-price-card--highlight">
+                                    <h3>प्रीपेड छवियां</h3>
+                                    <p class="api-price">€0.050<span>/ छवि</span></p>
+                                    <table class="tiers">
+                                        <caption>वॉल्यूम मूल्य निर्धारण — आप जितनी अधिक छवियां खरीदेंगे, प्रत्येक उतनी ही सस्ती मिलेगी</caption>
+                                        <tr><th scope="row">छवियाँ</th><td>50–450</td><td>500–2 450</td><td>2 500–9 950</td><td>10 000–49 950</td><td>50 000+</td></tr>
+                                        <tr><th scope="row">€/image</th><td>0.050</td><td>0.040</td><td>0.030</td><td>0.020</td><td>0.010</td></tr>
+                                    </table>
+                                    <ul class="checklist">
+                                        <li>1 खरीदी गई छवि = 1 रूपांतरण (क्रेडिट कभी समाप्त नहीं होते)</li>
+                                        <li>कभी समाप्त नहीं होते, मुफ़्त टियर के साथ जुड़ जाते हैं</li>
+                                        <li>कोई भी मात्रा: 500 से €0.040/छवि, €0.010/छवि तक</li>
+                                    </ul>
+                                    <a class="btn primary-btn" href="/portal/">छवियां खरीदें</a>
+                                </div>
+                            </div>
+                            <p class="api-note">स्वचालित क्रेडिट: भुगतान वेबहुक के माध्यम से भुगतान के कुछ ही सेकंड में आपका बैलेंस अपडेट कर दिया जाता है। रिफंड में खरीदे गए क्रेडिट काट लिए जाते हैं, जो मौजूदा बैलेंस तक सीमित होते हैं। Lemon Squeezy द्वारा सुरक्षित चेकआउट (VAT स्वचालित रूप से संभाला जाता है)।</p>
+                        </section>
+
+                        <!-- Code examples -->
+                        <section id="examples" class="api-section">
+                            <h2>कोड के उदाहरण</h2>
+                            <p>कॉपी-पेस्ट करें और अनुकूलित करें। API सादे multipart/form-data में बात करती है, इसलिए कोई भी HTTP क्लाइंट काम करता है।</p>
+
+                            <p class="api-code-label">cURL</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@photo.jpg" \
+  -F "colormode=color" \
+  -F "filter_speckle=4" \
+  -o photo.svg</code></pre>
+
+                            <p class="api-code-label">Python</p>
+                            <pre class="api-code"><code>import requests
+
+resp = requests.post(
+    "https://api.pixel-to-path.com/v1/convert",
+    headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
+    files={"file": open("photo.jpg", "rb")},
+    data={"colormode": "color", "filter_speckle": 4},
+)
+resp.raise_for_status()
+print(resp.headers["X-Credits-Remaining"], "credits left")
+with open("photo.svg", "wb") as f:
+    f.write(resp.content)</code></pre>
+
+                            <p class="api-code-label">JavaScript</p>
+                            <pre class="api-code"><code>const form = new FormData();
+form.append("file", new Blob([imageBytes]), "photo.jpg");
+form.append("colormode", "color");
+
+const resp = await fetch("https://api.pixel-to-path.com/v1/convert", {
+  method: "POST",
+  headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
+  body: form,
+});
+if (!resp.ok) {
+  const { error } = await resp.json();
+  throw new Error(`${error.code}: ${error.message}`);
+}
+const svg = await resp.text();
+console.log(resp.headers.get("X-Credits-Remaining"), "credits left");</code></pre>
+                        </section>
+
+                        <!-- FAQ -->
+                        <section id="faq" class="api-section">
+                            <h2>अक्सर पूछे जाने वाले प्रश्न</h2>
+                            <details class="api-faq-item">
+                                <summary>एक रूपांतरण के रूप में क्या गिना जाता है?</summary>
+                                <p>एक सफल POST /v1/convert कॉल जो एक SVG लौटाती है। विफल कॉल (अमान्य छवि, गलत पैरामीटर, दर सीमित, सर्वर त्रुटि) और GET /v1/me कॉल के लिए कभी शुल्क नहीं लिया जाता है।</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>मासिक मुफ़्त कोटा की गणना कैसे की जाती है?</summary>
+                                <p>प्रति खाता, UTC कैलेंडर माह पर — यह हर महीने की 1 तारीख को 00:00 UTC पर रीसेट होता है। कई API कुंजियाँ बनाने से मुफ़्त कोटा नहीं बढ़ता: किसी खाते की सभी कुंजियाँ समान 10 मुफ़्त रूपांतरणों को साझा करती हैं।</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>क्या क्रेडिट समाप्त (एक्सपायर) होते हैं?</summary>
+                                <p>नहीं। खरीदे गए क्रेडिट आपके उपयोग करने तक आपके खाते में रहते हैं। उनका उपयोग आपके 10 मुफ़्त मासिक रूपांतरणों के समाप्त होने के बाद ही किया जाता है।</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>मैं एक महीने में अधिक रूपांतरण कैसे प्राप्त करूँ?</summary>
+                                <p>क्लाइंट पोर्टल से प्रीपेड छवियां खरीदें — 50 के बैच में कोई भी मात्रा। आप हमेशा देखते हैं कि आपको कितनी छवियां मिलती हैं: 50 छवियां €2.50, 500 छवियां €20, 2,500 €75, 10,000 €200, 50,000 €500। भुगतान के कुछ सेकंड के भीतर आपके खाते में स्वचालित रूप से क्रेडिट जुड़ जाते हैं — कोई लाइसेंस कुंजी नहीं, दर्ज करने के लिए कुछ भी नहीं।</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>यदि मैं अपनी API कुंजी खो दूँ तो क्या होगा?</summary>
+                                <p>कुंजियों को हैश करके संग्रहीत किया जाता है, इसलिए उन्हें पुनर्प्राप्त नहीं किया जा सकता है। खोई हुई कुंजी को पोर्टल में रद्द करें और एक नई बनाएं — यह तुरंत लागू हो जाती है।</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>कौन से छवि प्रारूप समर्थित हैं?</summary>
+                                <p>PNG, JPEG, BMP और WebP, 20 MB और 50 मेगापिक्सेल तक, कम से कम 64×64 पिक्सेल। 1500 px से बड़ी छवियों को कनवर्ट करने से पहले आकार में छोटा कर दिया जाता है, बिल्कुल मुफ़्त वेबसाइट की तरह।</p>
+                            </details>
+                        </section>
+
+                        <!-- Autres versions -->
+                        <!-- Versions : les 4 façons d'utiliser PixelToPath (clés pv_* — fallback EN) -->
+<section class="section versions-section">
+    <div class="container">
+        <h2 class="section-title">अपना संस्करण चुनें</h2>
+        <p class="section-intro">वही शक्तिशाली इंजन - वह प्रारूप चुनें जो आपके वर्कफ़्लो के अनुकूल हो।</p>
+
+        <div class="versions-grid">
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🌐</div>
+                <h3>ऑनलाइन टूल</h3>
+                <p class="versions-card__price">मुफ़्त</p>
+                <p class="versions-card__desc">छवियों को सीधे अपने ब्राउज़र में कनवर्ट करें। कोई इंस्टॉल नहीं, कोई खाता नहीं।</p>
+                <a class="btn secondary-btn versions-card__cta" href="/hi/online/">टूल खोलें</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">💻</div>
+                <h3>डेस्कटॉप ऐप</h3>
+                <p class="versions-card__price">मुफ़्त और ओपन सोर्स</p>
+                <p class="versions-card__desc">आपकी मशीन पर पूरा कनवर्टर, Windows और Linux के लिए।</p>
+                <a class="btn secondary-btn versions-card__cta" href="/hi/offline/">मुफ़्त डाउनलोड करें</a>
+            </article>
+
+            <article class="card versions-card versions-card--highlight">
+                <div class="versions-card__icon">⌨️</div>
+                <h3>डेस्कटॉप ऐप Pro</h3>
+                <p class="versions-card__price">€39 एक बार</p>
+                <p class="versions-card__desc">भारी कार्यभार के लिए हॉट फोल्डर, बैच रूपांतरण और CLI।</p>
+                <a class="btn primary-btn versions-card__cta" href="/hi/pro/">Pro प्राप्त करें</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🔌</div>
+                <h3>API</h3>
+                <p class="versions-card__price">मुफ़्त टियर + क्रेडिट पैक</p>
+                <p class="versions-card__desc">एक REST कॉल: छवि भेजें, साफ़ SVG पाएं। 10 मुफ़्त/माह।</p>
+                <a class="btn secondary-btn versions-card__cta" href="/hi/api/">एक API कुंजी प्राप्त करें</a>
+            </article>
+
+        </div>
+
+        <p class="versions-links">
+            <a href="/hi/pricing/">सभी संस्करणों और कीमतों की तुलना करें →</a>
+        </p>
+        <p class="versions-links versions-links--portal">
+            क्या आपके पास पहले से एक खाता है?
+            <a href="/portal/">क्लाइंट पोर्टल में साइन इन करें →</a>
+        </p>
+    </div>
+</section>
+
+
+                        <!-- CTA finale -->
+                        <section class="api-cta">
+                            <h2>क्या आप बड़े पैमाने पर वेक्टराइज़ करने के लिए तैयार हैं?</h2>
+                            <p>अपना खाता बनाएँ, एक कुंजी प्राप्त करें और दो मिनट से भी कम समय में अपनी पहली कॉल करें।</p>
+                            <a class="btn primary-btn big-btn" href="/portal/">अपनी मुफ़्त API कुंजी प्राप्त करें</a>
+                        </section>
+
+                        <p class="api-footer-note">API के बारे में प्रश्न? <a href="https://github.com/lorrisc/PixelToPath" target="_blank" rel="noopener">GitHub</a> पर एक समस्या (issue) खोलें।</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/hi/">होम</a>
+        <a href="/hi/online/">ऑनलाइन टूल</a>
+        <a href="/hi/offline/">डेस्कटॉप ऐप</a>
+        <a href="/hi/pro/">Pro</a>
+        <a href="/hi/api/">API</a>
+        <a href="/hi/blog/">ब्लॉग</a>
+        <a href="https://github.com/lorrisc/PixelToPath">ओपन सोर्स (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">क्लाइंट पोर्टल</a>
+    </div>
+</footer>
+
+<script src="../../assets/js/docunest-strings.js" defer></script>
+<script src="../../assets/js/docunest-popup.js" data-asset="../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../assets/js/ui-state.js"></script>
+</body>
+</html>

@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelToPath API – 图像转 SVG REST API，每月 10 次免费转换</title>
+    <meta name="description" content="只需一个 REST 请求，即可将 PNG、JPG、BMP 或 WebP 转换为干净的 SVG。Potrace 用于黑白线稿，VTracer 用于彩色矢量图。每月 10 次免费转换，预付费图像低至 0.05 欧元起（按量低至 0.01 欧元/张），积分永不过期。">
+    <meta name="keywords" content="pixeltopath api, 图像转 svg api, png 转 svg rest api, 矢量化 api, potrace api, vtracer api, svg 转换器 api">
+    <meta name="author" content="Lorris C.">
+
+    <meta property="og:title" content="PixelToPath API – 图像转 SVG REST API，每月 10 次免费转换">
+    <meta property="og:description" content="只需一个 REST 请求，即可将 PNG、JPG、BMP 或 WebP 转换为干净的 SVG。Potrace 用于黑白线稿，VTracer 用于彩色矢量图。每月 10 次免费转换，预付费图像低至 0.05 欧元起（按量低至 0.01 欧元/张），积分永不过期。">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="PixelToPath app screenshot">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PixelToPath API – 图像转 SVG REST API，每月 10 次免费转换">
+    <meta name="twitter:description" content="只需一个 REST 请求，即可将 PNG、JPG、BMP 或 WebP 转换为干净的 SVG。Potrace 用于黑白线稿，VTracer 用于彩色矢量图。每月 10 次免费转换，预付费图像低至 0.05 欧元起（按量低至 0.01 欧元/张），积分永不过期。">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="PixelToPath app screenshot">
+    <meta property="og:url" content="https://pixel-to-path.com/zh/api/">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://pixel-to-path.com/zh/api/" />
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/api/" />
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/api/" />
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/api/" />
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/api/" />
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/api/" />
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/api/" />
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/api/" />
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/api/" />
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/api/" />
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/api/" />
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/api/" />
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/api/" />
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/api/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/api/" />
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/api/" />
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/api/" />
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/api/" />
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/api/" />
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/api/" />
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/api/" />
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/api/" />
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/api/" />
+
+    <link rel="stylesheet" href="../../assets/css/bundle.7f66facb.css">
+
+
+
+    <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebService",
+  "@id": "https://pixel-to-path.com/zh/api/#api",
+  "name": "PixelToPath API",
+  "url": "https://pixel-to-path.com/zh/api/",
+  "description": "只需一个 REST 请求，即可将 PNG、JPG、BMP 或 WebP 转换为干净的 SVG。Potrace 用于黑白线稿，VTracer 用于彩色矢量图。每月 10 次免费转换，预付费图像低至 0.05 欧元起（按量低至 0.01 欧元/张），积分永不过期。",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://pixel-to-path.com/#organization",
+    "name": "PixelToPath"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "通过代码大规模进行矢量化。一个 REST 请求：发送图像，获取干净的 SVG。"
+  },
+  "isPartOf": {
+    "@id": "https://pixel-to-path.com/#website"
+  }
+}</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "什么算作一次转换？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一次成功返回 SVG 的 POST /v1/convert 调用。失败的调用 (无效图像、错误参数、速率受限、服务器错误) 和 GET /v1/me 调用永远不会被收费。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何计算每月免费额度？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "按帐户，以 UTC 日历月计算 — 它在 1 日的 00:00 UTC 重置。创建多个 API 密钥不会增加免费额度：一个帐户的所有密钥共享相同的 10 次免费转换。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "积分会过期吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不会。购买的积分会保留在您的帐户中，直到您使用它们。只有在您的每月 10 次免费转换次数耗尽后，才会消耗它们。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我如何在一个月内获得更多转换次数？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "从客户门户购买预付费图像 — 任意数量，以 50 张为一批。您始终能准确看到您获得的图像数量：50 张 2.50 €，500 张 20 €，2,500 张 75 €，10,000 张 200 €，50,000 张 500 €。积分将在付款后几秒钟内自动添加到您的帐户中 — 没有许可证密钥，不需要输入任何内容。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如果我丢失了 API 密钥怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "密钥以哈希形式存储，因此无法恢复。在门户中撤销丢失的密钥并创建一个新密钥 — 它会立即生效。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "支持哪些图像格式？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG、JPEG、BMP 和 WebP，最大 20 MB 和 5000 万像素，至少 64×64 像素。最长边超过 1500 像素的图像会在转换前调整大小，这与免费网站上完全相同。"
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/zh/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "API",
+      "item": "https://pixel-to-path.com/zh/api/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/zh/" class="brand">
+            <img src="../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/zh/"
+            class="">首页</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">产品 <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/zh/online/"
+                       class="">在线工具</a>
+                    <a href="/zh/offline/"
+                       class="">桌面应用</a>
+                    <a href="/zh/pro/"
+                       class="">桌面应用 Pro</a>
+                    <a href="/zh/api/"
+                       class="active">API</a>
+                </div>
+            </div>
+
+            <a href="/zh/pricing/"
+               class="">价格</a>
+
+            <div class="lang-switch">
+                <span>🇨🇳 ZH</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/zh/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">首页</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">产品</span>
+            <div class="mobile-sublist">
+                <a href="/zh/online/"
+                   class="">在线工具</a>
+                <a href="/zh/offline/"
+                   class="">桌面应用</a>
+                <a href="/zh/pro/"
+                   class="">桌面应用 Pro</a>
+                <a href="/zh/api/"
+                   class="active">API</a>
+            </div>
+
+            <a href="/zh/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">价格</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">语言</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/api/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- Hero -->
+        <div class="api-hero">
+            <div class="container">
+                <span class="api-tag">API</span>
+                <h1>PixelToPath API</h1>
+                <p class="api-hero__text">只需<strong>一个 REST 请求</strong>即可通过编程方式矢量化图像。上传 PNG、JPG、BMP 或 WebP 文件，即可返回干净、生产级的 SVG。黑白线稿由 <strong>Potrace</strong> 描摹，彩色图像由 <strong>VTracer</strong> 描摹 — 引擎与免费在线转换器相同。</p>
+                <div class="api-hero__cta">
+                    <a class="btn primary-btn big-btn" href="/portal/"> 获取您的 API 密钥</a>
+                    <a class="btn secondary-btn big-btn" href="/portal/">登录到门户</a>
+                    <a class="api-hero__docs" href="#quickstart">阅读文档 ↓</a>
+                </div>
+                <p class="api-hero__note">每月 10 次免费转换 · 无需信用卡</p>
+            </div>
+        </div>
+
+        <!-- Accroche -->
+        <div class="api-strip">
+            <div class="container">
+                <p>每月 10 次免费转换 • <strong>1 个 REST 请求</strong> • Potrace + VTracer 引擎 • 积分<strong>永不过期</strong></p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="api-body">
+            <div class="container">
+                <div class="api-layout">
+
+                    <!-- TOC -->
+                    <aside class="api-toc">
+                        <p class="api-toc__title">本页内容</p>
+                        <ul>
+                            
+                            <li><a href="#quickstart">快速入门</a></li>
+                            <li><a href="#authentication">身份验证</a></li>
+                            <li><a href="#convert">POST /v1/convert</a></li>
+                            <li><a href="#engines">引擎</a></li>
+                            <li><a href="#response">响应</a></li>
+                            <li><a href="#errors">错误</a></li>
+                            <li><a href="#limits">速率限制</a></li>
+                            <li><a href="#pricing">定价</a></li>
+                            <li><a href="#examples">代码示例</a></li>
+                            <li><a href="#faq">常见问题</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Content -->
+                    <article class="api-content">
+
+                        <!-- Quickstart -->
+                        <section id="quickstart" class="api-section">
+                            <h2>快速入门</h2>
+                            <p>只需三步，您就可以从终端、脚本或应用中将图像转换为 SVG。</p>
+                            <div class="api-steps">
+                                <div class="api-step">
+                                    <h3>1 · 创建您的帐户</h3>
+                                    <p>使用您的电子邮件和密码（10 个字符以上）在客户门户上注册。无需信用卡。</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>2 · 创建 API 密钥</h3>
+                                    <p>在门户中创建一个密钥。它仅显示<strong>一次</strong> — 请妥善保存。密钥类似于 <code>ptp_live_…</code>，可随时撤销。</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>3 · 调用 /v1/convert</h3>
+                                    <p>将图像作为 multipart/form-data 发送，并在 Authorization 标头中附上密钥。SVG 会在响应主体中返回。</p>
+                                </div>
+                            </div>
+
+                            <p class="api-code-label">您的第一次转换</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@logo.png" \
+  -F "colormode=binary" \
+  -o logo.svg</code></pre>
+                            <p class="api-note">交互式参考文档：<a href="https://api.pixel-to-path.com/v1/docs">pixel-to-path.com/v1/docs</a> (OpenAPI/Swagger).</p>
+                        </section>
+
+                        <!-- Authentication -->
+                        <section id="authentication" class="api-section">
+                            <h2>身份验证</h2>
+                            <p>每个请求都通过 <code>Authorization</code> 标头中的 Bearer 令牌进行身份验证：</p>
+                            <pre class="api-code"><code>Authorization: Bearer ptp_live_0123abc…</code></pre>
+                            <ul class="api-list">
+                                <li><strong>密钥是秘密：</strong>它们在服务器端经过哈希存储，并且在创建时仅显示一次。丢失密钥？撤销它并创建一个新密钥。</li>
+                                <li><strong>一个帐户，多个密钥：</strong>最多可创建 5 个有效密钥以分离您的项目。您的每月免费额度按帐户计算，而不是按密钥计算。</li>
+                                <li><strong>即时撤销：</strong>已撤销的密钥会立即停止工作，无论是从门户撤销还是封禁帐户的 API 响应。</li>
+                            </ul>
+                        </section>
+
+                        <!-- POST /v1/convert -->
+                        <section id="convert" class="api-section">
+                            <h2><span class="api-method api-method--post">POST</span> /v1/convert</h2>
+                            <p>在单个无状态调用中完成上传和转换。一次成功的调用最多消耗 1 个积分 — 失败、无效或受速率限制的调用不收费。</p>
+
+                            <h3>请求 (multipart/form-data)</h3>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>字段</th>
+                                            <th>类型</th>
+                                            <th>默认值</th>
+                                            <th>描述</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>file</code></td>
+                                            <td>file</td>
+                                            <td>—</td>
+                                            <td>要转换的图像。PNG、JPEG、BMP 或 WebP · 最大 20 MB · 最大 5000 万像素 · 最小 64×64 像素。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>colormode</code></td>
+                                            <td>string</td>
+                                            <td><code>color</code></td>
+                                            <td>&lt;code&gt;color&lt;/code&gt; 使用 VTracer 引擎，&lt;code&gt;binary&lt;/code&gt; 使用 Potrace（黑白）。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>mode</code></td>
+                                            <td>string</td>
+                                            <td><code>spline</code></td>
+                                            <td>仅限 Color (VTracer) — 在 binary 模式下被忽略。 <code>spline</code> | <code>polygon</code> | <code>none</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>hierarchical</code></td>
+                                            <td>string</td>
+                                            <td><code>stacked</code></td>
+                                            <td>仅限 Color (VTracer) — 在 binary 模式下被忽略。 <code>stacked</code> | <code>cutout</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>filter_speckle</code></td>
+                                            <td>int</td>
+                                            <td><code>4</code></td>
+                                            <td>仅限 Color (VTracer) — 在 binary 模式下被忽略。 0–16 — 去除细小的噪点斑块。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>color_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>6</code></td>
+                                            <td>仅限 Color (VTracer) — 在 binary 模式下被忽略。 1–8 — 每个颜色通道的有效位数。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>layer_difference</code></td>
+                                            <td>int</td>
+                                            <td><code>16</code></td>
+                                            <td>仅限 Color (VTracer) — 在 binary 模式下被忽略。 0–64 — 颜色图层之间的距离。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>corner_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>60</code></td>
+                                            <td>0–180 — 角点检测角度（两种引擎通用）。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>length_threshold</code></td>
+                                            <td>float</td>
+                                            <td><code>4.0</code></td>
+                                            <td>3.5–10 — 最小分段长度（两种引擎通用）。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>splice_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>45</code></td>
+                                            <td>0–180 — 路径拆分角度（两种引擎通用）。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>path_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>3</code></td>
+                                            <td>0–8 — 路径坐标中的小数位数。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>invert</code></td>
+                                            <td>bool</td>
+                                            <td><code>false</code></td>
+                                            <td>仅限 Binary (Potrace) — 在 color 模式下被忽略。 描摹浅色区域而不是深色区域。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>turdsize</code></td>
+                                            <td>int</td>
+                                            <td><code>2</code></td>
+                                            <td>仅限 Binary (Potrace) — 在 color 模式下被忽略。 0–20 — 抑制不超过此尺寸的斑点。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>alphamax</code></td>
+                                            <td>float</td>
+                                            <td><code>1.0</code></td>
+                                            <td>仅限 Binary (Potrace) — 在 color 模式下被忽略。 0–1.334 — 角点平滑阈值。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>opttolerance</code></td>
+                                            <td>float</td>
+                                            <td><code>0.2</code></td>
+                                            <td>仅限 Binary (Potrace) — 在 color 模式下被忽略。 0–10 — 曲线优化容差。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Engines -->
+                        <section id="engines" class="api-section">
+                            <h2>由 &#34;colormode&#34; 决定的两个引擎</h2>
+                            <p>API 运行的引擎与免费在线转换器和桌面应用完全相同：</p>
+                            <div class="grid-3">
+                                <div class="card api-engine">
+                                    <h3>binary — Potrace</h3>
+                                    <p>对线稿、扫描件、草图和徽标进行黑白描摹。图像的暗部（灰度 &lt; 50%）将被描摹在白色背景上。可以使用 <code>turdsize</code>（降噪）、<code>alphamax</code>（平滑拐角）和 <code>opttolerance</code>（路径优化）微调输出。</p>
+                                </div>
+                                <div class="card api-engine">
+                                    <h3>color — VTracer</h3>
+                                    <p>用于插画、卡通和照片的分层彩色矢量化。通过 <code>filter_speckle</code>、<code>color_precision</code>、<code>layer_difference</code> 控制细节水平，并通过 <code>mode</code> (spline, polygon, none) 控制曲线拟合。</p>
+                                </div>
+                            </div>
+                            <p class="api-note">图像的预处理与网站上完全相同：在转换之前，最长边将被调整为 1500 像素，API 会在 <code>X-Detected-Type</code> 标头中返回检测到的图像类型（<code>line_art</code>、<code>logo</code>、<code>photo</code> 或 <code>illustration</code>）。</p>
+                        </section>
+
+                        <!-- Response -->
+                        <section id="response" class="api-section">
+                            <h2>响应</h2>
+                            <p>成功时：<code>200 OK</code> 并且带有 <code>image/svg+xml</code> — 主体即是 SVG 文件本身。包含信息的标头：</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>标头</th>
+                                            <th>描述</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><code>X-Credits-Remaining</code></td><td>扣除本次调用后，帐户上剩余的付费积分。</td></tr>
+                                        <tr><td><code>X-Free-Remaining</code></td><td>本月剩余的免费转换次数。</td></tr>
+                                        <tr><td><code>X-Detected-Type</code></td><td>检测到的图像类型 (信息)：line_art, logo, photo 或 illustration。</td></tr>
+                                        <tr><td><code>X-Processing-Time</code></td><td>服务器处理时间（秒）。</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>GET /v1/me</h3>
+                            <p>用于调用该请求的密钥的帐户状态。<strong>免费</strong> — 绝不计入您的额度，绝不扣分。</p>
+                            <p class="api-code-label">响应示例</p>
+                            <pre class="api-code"><code>GET /v1/me
+Authorization: Bearer ptp_live_…
+
+{
+  "key": { "name": "prod", "prefix": "ptp_live_0123abc", … },
+  "usage": {
+    "month": "2026-09", "free_used": 7, "free_limit": 10,
+    "free_remaining": 3, "resets_at": "2026-10-01T00:00:00+00:00"
+  },
+  "credits": { "balance": 120 }
+}</code></pre>
+                        </section>
+
+                        <!-- Errors -->
+                        <section id="errors" class="api-section">
+                            <h2>错误</h2>
+                            <p>每个错误都会返回一致的 JSON 格式。失败的调用永远不会消耗积分。</p>
+                            <pre class="api-code"><code>HTTP/1.1 402 Payment Required
+{
+  "error": {
+    "code": "quota_exceeded",
+    "message": "Monthly free quota used and no credits left.",
+    "usage": { "free_used": 10, "free_limit": 10, "credits": 0 }
+  }
+}</code></pre>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>HTTP</th>
+                                            <th>代码</th>
+                                            <th>出现情况</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>401</td><td><code>invalid_api_key</code></td><td>缺少、格式错误、未知或已撤销的 API 密钥。</td></tr>
+                                        <tr><td>402</td><td><code>quota_exceeded</code></td><td>每月免费额度已用完，且无剩余积分。</td></tr>
+                                        <tr><td>403</td><td><code>account_banned</code></td><td>该帐户已被封禁 — 其所有密钥均被拒绝。</td></tr>
+                                        <tr><td>403</td><td><code>ip_blocked</code></td><td>调用者 IP 在阻止列表中。</td></tr>
+                                        <tr><td>413</td><td><code>file_too_large</code></td><td>文件大于 20 MB。</td></tr>
+                                        <tr><td>422</td><td><code>invalid_image</code> / <code>image_too_small</code> / <code>invalid_params</code></td><td>图像无效、图像太小或参数值无效。</td></tr>
+                                        <tr><td>429</td><td><code>rate_limited</code></td><td>超出了每个密钥的速率限制 (见下文)。包含 Retry-After 标头。</td></tr>
+                                        <tr><td>500</td><td><code>internal_error</code></td><td>服务器端转换失败 — 不收取积分。</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Rate limits -->
+                        <section id="limits" class="api-section">
+                            <h2>速率限制</h2>
+                            <p>限制按 API 密钥应用，而不是按 IP 应用，因此共享办公室或 CI 运行器永远不会因为其他人的流量而受罚。</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>限制</th>
+                                            <th>值</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>每分钟请求数 (每个密钥)</td><td><strong>60</strong></td></tr>
+                                        <tr><td>每天请求数 (每个密钥)</td><td><strong>2 000</strong></td></tr>
+                                        <tr><td>并发转换数 (每个密钥)</td><td>2 (多余的调用将等待，随后返回 429)</td></tr>
+                                        <tr><td>最大文件大小 / 分辨率</td><td>20 MB / 5000 万像素</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Pricing -->
+                        <section id="pricing" class="api-section">
+                            <h2>定价</h2>
+                            <p>每个新帐户都会获得<strong>每月 10 次免费转换</strong>，无需信用卡。需要更多？购买预付费图像 — 任意数量 (以 50 张为一批次)，并享受批量折扣。它们永不过期，并可与您的每月免费额度叠加 (优先消耗免费转换次数)。</p>
+                            <div class="api-pricing">
+                                <div class="card api-price-card">
+                                    <h3>免费</h3>
+                                    <p class="api-price">0 €<span>/ 月</span></p>
+                                    <ul class="checklist">
+                                        <li>每月 10 次转换</li>
+                                        <li>两种引擎 (Potrace + VTracer)</li>
+                                        <li>最多 5 个 API 密钥</li>
+                                    </ul>
+                                    <a class="btn secondary-btn" href="/portal/">创建帐户</a>
+                                </div>
+                                <div class="card api-price-card api-price-card--highlight">
+                                    <h3>预付费图像</h3>
+                                    <p class="api-price">0.050 €<span>/ 张图像</span></p>
+                                    <table class="tiers">
+                                        <caption>阶梯定价 — 购买的图像越多，单价越便宜</caption>
+                                        <tr><th scope="row">图片数</th><td>50–450</td><td>500–2 450</td><td>2 500–9 950</td><td>10 000–49 950</td><td>50 000+</td></tr>
+                                        <tr><th scope="row">€/image</th><td>0.050</td><td>0.040</td><td>0.030</td><td>0.020</td><td>0.010</td></tr>
+                                    </table>
+                                    <ul class="checklist">
+                                        <li>购买 1 张图像 = 1 次转换 (积分永不过期)</li>
+                                        <li>永不过期，与免费层叠加</li>
+                                        <li>任意数量：从 500 张起 0.040 €/张，最低 0.010 €/张</li>
+                                    </ul>
+                                    <a class="btn primary-btn" href="/portal/">购买图像</a>
+                                </div>
+                            </div>
+                            <p class="api-note">自动发放积分：付款后几秒钟内通过付款 webhook 更新您的余额。退款将扣除购买的积分，上限为当前余额。由 Lemon Squeezy 提供安全结账 (自动处理增值税)。</p>
+                        </section>
+
+                        <!-- Code examples -->
+                        <section id="examples" class="api-section">
+                            <h2>代码示例</h2>
+                            <p>复制并修改使用。该 API 使用简单的 multipart/form-data，因此任何 HTTP 客户端均可运行。</p>
+
+                            <p class="api-code-label">cURL</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@photo.jpg" \
+  -F "colormode=color" \
+  -F "filter_speckle=4" \
+  -o photo.svg</code></pre>
+
+                            <p class="api-code-label">Python</p>
+                            <pre class="api-code"><code>import requests
+
+resp = requests.post(
+    "https://api.pixel-to-path.com/v1/convert",
+    headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
+    files={"file": open("photo.jpg", "rb")},
+    data={"colormode": "color", "filter_speckle": 4},
+)
+resp.raise_for_status()
+print(resp.headers["X-Credits-Remaining"], "credits left")
+with open("photo.svg", "wb") as f:
+    f.write(resp.content)</code></pre>
+
+                            <p class="api-code-label">JavaScript</p>
+                            <pre class="api-code"><code>const form = new FormData();
+form.append("file", new Blob([imageBytes]), "photo.jpg");
+form.append("colormode", "color");
+
+const resp = await fetch("https://api.pixel-to-path.com/v1/convert", {
+  method: "POST",
+  headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
+  body: form,
+});
+if (!resp.ok) {
+  const { error } = await resp.json();
+  throw new Error(`${error.code}: ${error.message}`);
+}
+const svg = await resp.text();
+console.log(resp.headers.get("X-Credits-Remaining"), "credits left");</code></pre>
+                        </section>
+
+                        <!-- FAQ -->
+                        <section id="faq" class="api-section">
+                            <h2>常见问题解答</h2>
+                            <details class="api-faq-item">
+                                <summary>什么算作一次转换？</summary>
+                                <p>一次成功返回 SVG 的 POST /v1/convert 调用。失败的调用 (无效图像、错误参数、速率受限、服务器错误) 和 GET /v1/me 调用永远不会被收费。</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>如何计算每月免费额度？</summary>
+                                <p>按帐户，以 UTC 日历月计算 — 它在 1 日的 00:00 UTC 重置。创建多个 API 密钥不会增加免费额度：一个帐户的所有密钥共享相同的 10 次免费转换。</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>积分会过期吗？</summary>
+                                <p>不会。购买的积分会保留在您的帐户中，直到您使用它们。只有在您的每月 10 次免费转换次数耗尽后，才会消耗它们。</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>我如何在一个月内获得更多转换次数？</summary>
+                                <p>从客户门户购买预付费图像 — 任意数量，以 50 张为一批。您始终能准确看到您获得的图像数量：50 张 2.50 €，500 张 20 €，2,500 张 75 €，10,000 张 200 €，50,000 张 500 €。积分将在付款后几秒钟内自动添加到您的帐户中 — 没有许可证密钥，不需要输入任何内容。</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>如果我丢失了 API 密钥怎么办？</summary>
+                                <p>密钥以哈希形式存储，因此无法恢复。在门户中撤销丢失的密钥并创建一个新密钥 — 它会立即生效。</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>支持哪些图像格式？</summary>
+                                <p>PNG、JPEG、BMP 和 WebP，最大 20 MB 和 5000 万像素，至少 64×64 像素。最长边超过 1500 像素的图像会在转换前调整大小，这与免费网站上完全相同。</p>
+                            </details>
+                        </section>
+
+                        <!-- Autres versions -->
+                        <!-- Versions : les 4 façons d'utiliser PixelToPath (clés pv_* — fallback EN) -->
+<section class="section versions-section">
+    <div class="container">
+        <h2 class="section-title">选择您的版本</h2>
+        <p class="section-intro">同样强大的引擎 - 选择适合您工作流程的格式。</p>
+
+        <div class="versions-grid">
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🌐</div>
+                <h3>在线工具</h3>
+                <p class="versions-card__price">免费</p>
+                <p class="versions-card__desc">直接在浏览器中转换图像。无需安装，无需注册。</p>
+                <a class="btn secondary-btn versions-card__cta" href="/zh/online/">打开工具</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">💻</div>
+                <h3>桌面应用</h3>
+                <p class="versions-card__price">免费 &amp; 开源</p>
+                <p class="versions-card__desc">在您的计算机上的完整转换器，适用于 Windows &amp; Linux。</p>
+                <a class="btn secondary-btn versions-card__cta" href="/zh/offline/">免费下载</a>
+            </article>
+
+            <article class="card versions-card versions-card--highlight">
+                <div class="versions-card__icon">⌨️</div>
+                <h3>桌面应用 Pro</h3>
+                <p class="versions-card__price">39 € 一次性付费</p>
+                <p class="versions-card__desc">热文件夹、批量转换和 CLI，适合繁重的工作负载。</p>
+                <a class="btn primary-btn versions-card__cta" href="/zh/pro/">获取 Pro 版</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🔌</div>
+                <h3>API</h3>
+                <p class="versions-card__price">免费套餐 + 积分包</p>
+                <p class="versions-card__desc">一个 REST 请求：发送图像，获取干净的 SVG。每月 10 次免费。</p>
+                <a class="btn secondary-btn versions-card__cta" href="/zh/api/">获取 API 密钥</a>
+            </article>
+
+        </div>
+
+        <p class="versions-links">
+            <a href="/zh/pricing/">比较所有版本与价格 →</a>
+        </p>
+        <p class="versions-links versions-links--portal">
+            已有帐户？
+            <a href="/portal/">登录到客户门户 →</a>
+        </p>
+    </div>
+</section>
+
+
+                        <!-- CTA finale -->
+                        <section class="api-cta">
+                            <h2>准备好进行大规模矢量化了吗？</h2>
+                            <p>不到两分钟即可创建您的帐户，获取密钥并进行首次调用。</p>
+                            <a class="btn primary-btn big-btn" href="/portal/">获取免费的 API 密钥</a>
+                        </section>
+
+                        <p class="api-footer-note">对 API 有疑问？在 <a href="https://github.com/lorrisc/PixelToPath" target="_blank" rel="noopener">GitHub</a> 上开启 issue。</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/zh/">首页</a>
+        <a href="/zh/online/">在线工具</a>
+        <a href="/zh/offline/">桌面应用</a>
+        <a href="/zh/pro/">Pro</a>
+        <a href="/zh/api/">API</a>
+        <a href="/zh/blog/">博客</a>
+        <a href="https://github.com/lorrisc/PixelToPath">开源 (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">客户门户</a>
+    </div>
+</footer>
+
+<script src="../../assets/js/docunest-strings.js" defer></script>
+<script src="../../assets/js/docunest-popup.js" data-asset="../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../assets/js/ui-state.js"></script>
+</body>
+</html>
