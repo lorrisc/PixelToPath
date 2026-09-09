@@ -404,12 +404,12 @@
                             </div>
 
                             <p class="api-code-label">Your first conversion</p>
-                            <pre class="api-code"><code>curl -X POST https://pixel-to-path.com/v1/convert \
+                            <pre class="api-code"><code>curl -X POST https://api.pixel-to-path.com/v1/convert \
   -H "Authorization: Bearer ptp_live_YOUR_KEY" \
   -F "file=@logo.png" \
   -F "colormode=binary" \
   -o logo.svg</code></pre>
-                            <p class="api-note">Interactive reference: <a href="https://pixel-to-path.com/v1/docs">pixel-to-path.com/v1/docs</a> (OpenAPI/Swagger).</p>
+                            <p class="api-note">Interactive reference: <a href="https://api.pixel-to-path.com/v1/docs">pixel-to-path.com/v1/docs</a> (OpenAPI/Swagger).</p>
                         </section>
 
                         <!-- Authentication -->
@@ -687,7 +687,7 @@ Authorization: Bearer ptp_live_…
                             <p>Copy-paste and adapt. The API speaks plain multipart/form-data, so any HTTP client works.</p>
 
                             <p class="api-code-label">cURL</p>
-                            <pre class="api-code"><code>curl -X POST https://pixel-to-path.com/v1/convert \
+                            <pre class="api-code"><code>curl -X POST https://api.pixel-to-path.com/v1/convert \
   -H "Authorization: Bearer ptp_live_YOUR_KEY" \
   -F "file=@photo.jpg" \
   -F "colormode=color" \
@@ -698,7 +698,7 @@ Authorization: Bearer ptp_live_…
                             <pre class="api-code"><code>import requests
 
 resp = requests.post(
-    "https://pixel-to-path.com/v1/convert",
+    "https://api.pixel-to-path.com/v1/convert",
     headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
     files={"file": open("photo.jpg", "rb")},
     data={"colormode": "color", "filter_speckle": 4},
@@ -713,7 +713,7 @@ with open("photo.svg", "wb") as f:
 form.append("file", new Blob([imageBytes]), "photo.jpg");
 form.append("colormode", "color");
 
-const resp = await fetch("https://pixel-to-path.com/v1/convert", {
+const resp = await fetch("https://api.pixel-to-path.com/v1/convert", {
   method: "POST",
   headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
   body: form,

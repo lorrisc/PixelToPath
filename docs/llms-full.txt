@@ -1145,7 +1145,7 @@ Send your image as multipart/form-data with your key in the Authorization header
 
 Your first conversion
 
-curl -X POST https://pixel-to-path.com/v1/convert \
+curl -X POST https://api.pixel-to-path.com/v1/convert \
 -H "Authorization: Bearer ptp_live_YOUR_KEY" \
 -F "file=@logo.png" \
 -F "colormode=binary" \
@@ -1388,7 +1388,7 @@ Copy-paste and adapt. The API speaks plain multipart/form-data, so any HTTP clie
 
 cURL
 
-curl -X POST https://pixel-to-path.com/v1/convert \
+curl -X POST https://api.pixel-to-path.com/v1/convert \
 -H "Authorization: Bearer ptp_live_YOUR_KEY" \
 -F "file=@photo.jpg" \
 -F "colormode=color" \
@@ -1400,7 +1400,7 @@ Python
 import requests
 
 resp = requests.post(
-"https://pixel-to-path.com/v1/convert",
+"https://api.pixel-to-path.com/v1/convert",
 headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
 files={"file": open("photo.jpg", "rb")},
 data={"colormode": "color", "filter_speckle": 4},
@@ -1416,7 +1416,7 @@ const form = new FormData();
 form.append("file", new Blob([imageBytes]), "photo.jpg");
 form.append("colormode", "color");
 
-const resp = await fetch("https://pixel-to-path.com/v1/convert", {
+const resp = await fetch("https://api.pixel-to-path.com/v1/convert", {
 method: "POST",
 headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
 body: form,
