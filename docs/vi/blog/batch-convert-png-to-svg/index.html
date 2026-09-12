@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cách chuyển đổi hàng loạt PNG sang SVG (So sánh 5 phương pháp)</title>
+    <meta name="description" content="Cách chuyển đổi hàng loạt PNG sang SVG: So sánh 5 phương pháp đã thử nghiệm - công cụ trực tuyến, hot folder Pro, Inkscape, tập lệnh CLI và API. Dành cho 10 tệp hoặc 10.000 tệp.">
+    <meta name="keywords" content="cách chuyển đổi hàng loạt png sang svg, chuyển đổi nhiều png sang svg cùng lúc, vector hóa hình ảnh hàng loạt, chuyển đổi nhiều tệp png sang svg trực tuyến, công cụ chuyển đổi png sang svg hàng loạt tốt nhất">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Cách chuyển đổi hàng loạt PNG sang SVG (So sánh 5 phương pháp)">
+    <meta property="og:description" content="Cách chuyển đổi hàng loạt PNG sang SVG: So sánh 5 phương pháp đã thử nghiệm - công cụ trực tuyến, hot folder Pro, Inkscape, tập lệnh CLI và API. Dành cho 10 tệp hoặc 10.000 tệp.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cách chuyển đổi hàng loạt PNG sang SVG (So sánh 5 phương pháp)">
+    <meta name="twitter:description" content="Cách chuyển đổi hàng loạt PNG sang SVG: So sánh 5 phương pháp đã thử nghiệm - công cụ trực tuyến, hot folder Pro, Inkscape, tập lệnh CLI và API. Dành cho 10 tệp hoặc 10.000 tệp.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta property="og:url" content="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">
+
+    <link rel="stylesheet" href="../../../assets/css/bundle.b1ddb27b.css">
+
+    <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: BlogPosting -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/#article",
+  "headline": "Cách chuyển đổi hàng loạt PNG sang SVG (So sánh 5 phương pháp)",
+  "description": "Cách chuyển đổi hàng loạt PNG sang SVG: So sánh 5 phương pháp đã thử nghiệm - công cụ trực tuyến, hot folder Pro, Inkscape, tập lệnh CLI và API. Dành cho 10 tệp hoặc 10.000 tệp.",
+  "url": "https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/",
+  "mainEntityOfPage": "https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/",
+  "inLanguage": "vi",
+  "datePublished": "2026-09-12",
+  "dateModified": "2026-09-12",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/vi/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-logo.jpg"
+}</script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Tôi có thể chuyển đổi hàng loạt PNG sang SVG miễn phí không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Có, theo hai cách. Các tập lệnh dòng lệnh (Potrace, ImageMagick, VTracer) là miễn phí và không có giới hạn tệp; và ứng dụng máy tính để bàn miễn phí cộng với Inkscape là miễn phí nhưng chỉ chuyển đổi từng tệp một. Các công cụ trực tuyến chấp nhận nhiều tệp miễn phí cũng tồn tại - chỉ cần xác minh xem chúng có thực sự vector hóa và đọc điều khoản quyền riêng tư của chúng trước khi gửi các tác phẩm nghệ thuật thương mại."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Làm thế nào để giữ được màu sắc khi chuyển đổi hàng loạt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hãy sử dụng một công cụ theo dõi (tracer) có hỗ trợ màu. Potrace hoàn toàn là đen trắng bất kể bạn viết lệnh (script) thế nào; VTracer, PixelToPath Pro và PixelToPath API đều chạy một công cụ màu sắc (color engine) nhằm tái tạo lại từng vùng màu dưới dạng một hình dạng vector riêng của nó. Lập trình kịch bản vòng lặp với vtracer, hoặc sử dụng Pro hoặc API nếu bạn không muốn tự bảo trì quá trình này."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tôi có thể tải lên một tệp ZIP chứa nhiều PNG và nhận lại một tệp ZIP chứa SVG không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Một số công cụ trực tuyến (ví dụ: Pixelied) chấp nhận số lượng tải lên lớn và trả về một tệp ZIP. Chế độ xử lý hàng loạt trên máy tính để bàn và tập lệnh ghi kết quả vào một thư mục đầu ra mà bạn có thể nén (zip) trong một bước. API trả về một SVG cho mỗi cuộc gọi, vì vậy việc lưu trữ sẽ nằm ở phía bạn - vốn là điều mà quy trình biên dịch (build pipeline) thường mong muốn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tại sao loạt tệp tôi chuyển đổi lại ra các hình chữ nhật màu đen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Đó chính là bẫy nhúng: công cụ đã bọc mỗi ảnh PNG bên trong vỏ SVG thay vì đồ lại nó (tracing) và những gì bạn đang thấy là ảnh raster được nhúng không hiển thị được. Mở một tệp kết quả đầu ra trong trình soạn thảo văn bản - một thẻ base64 &lt;image&gt; duy nhất đã xác nhận điều đó. Chạy lại tiến trình hàng loạt bằng một công cụ cho ra các phần tử &lt;path&gt; đích thực."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tôi có 50.000 tệp. Điều gì sẽ thực sự hiệu quả?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Một thư mục nóng (hot folder) hoặc API - mọi thứ khác sẽ đạt giới hạn trước đó rất lâu. Ở mức 60 yêu cầu mỗi phút, API hoàn thành 50.000 hình ảnh trong thời gian thực khoảng 14 giờ với khoản tín dụng trả trước trị giá €200. Thư mục nóng cục bộ thực hiện cùng một công việc ở trạng thái ngoại tuyến, với thông lượng được cài đặt bởi CPU của bạn. Cả hai giải pháp đều giữ cho các cài đặt giống hệt nhau trong toàn bộ quá trình chạy."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/vi/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tìm hiểu Chuyển đổi Hình ảnh sang SVG",
+      "item": "https://pixel-to-path.com/vi/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cách chuyển đổi hàng loạt PNG sang SVG (So sánh 5 phương pháp)",
+      "item": "https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/vi/" class="brand">
+            <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/vi/"
+            class="">Trang chủ</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Sản phẩm <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/vi/online/"
+                       class="">Công cụ Trực tuyến</a>
+                    <a href="/vi/offline/"
+                       class="">Ứng dụng Máy tính bàn</a>
+                    <a href="/vi/pro/"
+                       class="">Ứng dụng desktop Pro</a>
+                    <a href="/vi/api/"
+                       class="">API</a>
+                </div>
+            </div>
+
+            <a href="/vi/pricing/"
+               class="">Giá</a>
+
+            <div class="lang-switch">
+                <span>🇻🇳 VI</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/vi/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Trang chủ</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">Sản phẩm</span>
+            <div class="mobile-sublist">
+                <a href="/vi/online/"
+                   class="">Công cụ Trực tuyến</a>
+                <a href="/vi/offline/"
+                   class="">Ứng dụng Máy tính bàn</a>
+                <a href="/vi/pro/"
+                   class="">Ứng dụng desktop Pro</a>
+                <a href="/vi/api/"
+                   class="">API</a>
+            </div>
+
+            <a href="/vi/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Giá</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Ngôn ngữ</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO – above the fold, H1 + CTA
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>Cách chuyển đổi hàng loạt PNG sang SVG (So sánh 5 phương pháp)</h1>
+                <p class="blog-hero__subtitle">Năm cách đã được kiểm chứng để chuyển đổi nhiều tệp PNG sang SVG cùng một lúc - công cụ trực tuyến, thư mục nóng (hot folder), ứng dụng dành cho máy tính để bàn miễn phí, tập lệnh và API - so sánh về chi phí, thông lượng, hỗ trợ màu sắc và quyền riêng tư.</p>
+
+                <!-- Format badges -->
+                <div class="big-badges">
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG × 10</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG × 10.000</span>
+                    
+                    <span class="fmt-arrow">→</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">SVG</span>
+                    
+                </div>
+
+                <!-- Trust badges -->
+                <div class="badges">
+                    <span class="badge__item badge__item--accent">✓ So sánh 5 phương pháp</span>
+                    <span class="badge__item">10 tệp hoặc 10.000 tệp</span>
+                    <span class="badge__item">Bao gồm các tùy chọn miễn phí</span>
+                    <span class="badge__item">Đồ lại thực sự, không nhúng</span>
+                </div>
+
+                <a href="/vi/online/" class="btn primary-btn blog-hero__cta">Chuyển đổi một tệp miễn phí ngay →</a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             INTRO – the batch problem + embed-vs-trace warning
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Vấn đề khi chuyển đổi hàng loạt - và cái bẫy cần tránh</h2>
+                    <p>Bạn có mười tệp PNG. Hoặc bốn trăm. Hoặc - giống như nhà thiết kế với câu hỏi về 51.000 tệp đã mở ra một trong những chủ đề dài nhất trên diễn đàn cộng đồng của Adobe - toàn bộ thư viện nội dung cần phải trở thành vector. Chuyển đổi một hình ảnh bằng tay thì ổn; nhưng vượt qua con số đó, bạn cần một quy trình làm việc hàng loạt: một quy trình biến toàn bộ một thư mục ảnh raster thành một thư mục SVG. Và nếu hôm nay thực sự chỉ có một tệp quan trọng, <a href="/vi/online/">công cụ chuyển đổi PNG sang SVG trực tuyến miễn phí</a>sẽ hoàn thành công việc trong chưa đầy một phút - hướng dẫn này đề cập đến mọi thứ vượt xa hơn thế.</p>
+                    <p>Một định nghĩa trước khi so sánh các phương pháp. Chuyển đổi hàng loạt thực sự có nghĩa là mọi PNG đều được vector hóa: các hình dạng của nó được vẽ lại dưới dạng các đường dẫn toán học, đó là <a href="/vi/blog/vectorize-image/">những gì vector hóa thực sự làm</a>. Rất nhiều công cụ bỏ qua hoàn toàn bước đó và nó thay đổi mọi thứ về kết quả đầu ra.</p>
+                    <p class="content-callout content-callout--warn">Lỗi phổ biến nhất: một số "trình chuyển đổi SVG" không đồ lại (trace) bất kỳ thứ gì - chúng bọc tệp PNG của bạn bên trong một tệp .svg dưới dạng một hình ảnh được nhúng. Kết quả có tỷ lệ thu phóng "hoàn hảo" vì nó vẫn là một bitmap được ngụy trang. Mở bất kỳ tệp đầu ra nào trong trình chỉnh sửa văn bản: một thẻ &lt;image&gt; base64 khổng lồ thay vì các phần tử &lt;path&gt; có nghĩa là bạn chưa vector hóa bất kỳ thứ gì. Mỗi phương pháp dưới đây được đánh giá dựa trên khả năng đồ lại (tracing) thực sự.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             REAL OUTPUT – before/after traced by the tool
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Kết quả thực tế từ công cụ chuyển đổi</h2>
+                
+
+<figure class="ba-compare ba-compare--sample">
+    <div class="ba-compare__pair">
+        <div class="ba-panel ba-panel--before">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">Trước · bản gốc</span>
+                <span class="size-badge">5 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-input.png" width="320" height="320" loading="lazy" decoding="async" alt="Tệp PNG: logo tròn màu xanh navy với hình chữ V màu trắng">
+            </div>
+        </div>
+        <span class="ba-compare__arrow" aria-hidden="true">→</span>
+        <div class="ba-panel ba-panel--after">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">Sau · SVG</span>
+                <span class="size-badge">Cài sẵn Trắng &amp; Đen · 2 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-bw.svg" width="320" height="320" loading="lazy" decoding="async" alt="Cùng logo đó được chuyển sang SVG với cài sẵn Trắng và Đen: đường cong mượt, tô màu đen">
+            </div>
+        </div>
+    </div>
+    <figcaption>Một lượt chuyển đổi thực tế bằng công cụ này: tệp PNG gốc bên trái đã được vẽ vector với cài sẵn Trắng &amp; Đen thành tệp SVG bên phải — một tệp vector sắc nét ở mọi mức thu phóng.</figcaption>
+</figure>
+
+                
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/logo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="Cùng logo đó phóng to 400%: bên trái, các điểm ảnh của PNG hiện rõ; bên phải, đường cong của SVG vẫn hoàn toàn mượt mà.">
+    <figcaption>Cùng logo đó phóng to 400%: bên trái, các điểm ảnh của PNG hiện rõ; bên phải, đường cong của SVG vẫn hoàn toàn mượt mà.</figcaption>
+</figure>
+
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             METHODS 1–3 – online, hot folder, free desktop
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Phương pháp 1: Trình chuyển đổi hàng loạt trực tuyến</h2>
+                    <p>Tuyến đường nhanh nhất cho một đợt nhỏ. Có một số công cụ trực tuyến chấp nhận nhiều tệp cùng một lúc: to.imagestool.com cho phép bạn kéo và thả một tập hợp ảnh PNG và xử lý chúng cục bộ trong trình duyệt; Pixelied nhận số lượng tải lên lớn và gửi cho bạn một tệp ZIP chứa các kết quả; bản dùng thử web của ImageResizer.com và reaConverter hoạt động theo cùng một cách. Không cần cài đặt, không cần dòng lệnh - chỉ cần thả tệp, tải xuống kết quả.</p>
+                    <p>Hai điều cần kiểm tra trước khi bạn tin tưởng giao việc cho chúng. Đầu tiên, hãy đảm bảo rằng công cụ đó thực sự đồ lại: một số trang web "hàng loạt" chỉ lặp lại các chuyển đổi tệp đơn lẻ trên máy chủ và trả về một tệp ZIP gồm các SVG giả mạo - chính là bẫy nhúng từ cảnh báo ở trên. Thứ hai, hãy đọc các điều khoản bảo mật nếu tác phẩm nghệ thuật mang tính thương mại hoặc theo thỏa thuận NDA: các công cụ dựa trên trình duyệt không bao giờ tải tệp của bạn lên, còn các công cụ dựa trên máy chủ gửi mọi hình ảnh đến máy của người khác. Vì sự minh bạch: trình chuyển đổi trực tuyến miễn phí của riêng PixelToPath cố tình chỉ dùng cho từng tệp một. Đó là công cụ phù hợp cho một logo quan trọng, chứ không phải cho một thư mục chứa bốn trăm ảnh - và nó nằm trong sự so sánh này chính xác với tư cách đó.</p>
+
+                    <h2>Phương pháp 2: Ứng dụng Desktop với thư mục nóng (PixelToPath Pro)</h2>
+                    <p>Nếu việc xử lý hàng loạt diễn ra hàng tuần chứ không phải một lần, thì một thư mục nóng (hot folder) sẽ loại bỏ hoàn toàn bước thủ công. PixelToPath Pro (Windows và Linux) giám sát một thư mục và tự động chuyển đổi mọi hình ảnh được đưa vào đó. Toàn bộ quy trình gồm bốn bước:</p>
+                    <ol>
+                        <li>Chọn thư mục của bạn: chọn thư mục cần giám sát và thư mục đầu ra nơi các SVG sẽ được lưu.</li>
+                        <li>Thả ảnh PNG của bạn: lưu, sao chép hoặc kéo toàn bộ đợt vào thư mục đầu vào - mười tệp hoặc vài trăm tệp.</li>
+                        <li>Hãy để nó hoạt động: mỗi tệp sẽ được đồ lại ngay khi đến với hồ sơ cài đặt bạn đã lưu, hoàn toàn trên máy tính của bạn.</li>
+                        <li>Thu thập các SVG: kết quả xuất hiện trong thư mục đầu ra, được đặt tên theo tên các tệp gốc.</li>
+                    </ol>
+                    <p>Phần quan trọng đối với các đợt hàng loạt: một hồ sơ cài đặt áp dụng cho toàn bộ hàng đợi. Nếu bạn chuyển đổi bốn trăm biểu tượng bằng tay, thì tệp thứ 300 sẽ không bao giờ khớp hoàn toàn với tệp thứ 12; với một hồ sơ cài đặt, mọi kết quả đầu ra đều nhất quán - chi tiết có thể phá vỡ các quy trình làm việc thủ công. Mọi thứ chạy cục bộ, vì vậy không có giới hạn tải lên và không có tệp nào bị rò rỉ khỏi máy tính của bạn. Pro có giá một lần €39 (chưa VAT), bản quyền trọn đời cho một người dùng trên tối đa 3 máy; trang <a href="/vi/pro/">chuyển đổi hàng loạt với thư mục nóng</a> chia nhỏ mọi thứ được bao gồm. Đây là một trong năm tùy chọn ở đây - nhưng là tùy chọn duy nhất được xây dựng để làm cho chuyển đổi hàng loạt trở thành một bước mà bạn không cần phải bận tâm đến nữa.</p>
+
+                    <h2>Phương pháp 3: Ứng dụng Desktop miễn phí và Inkscape</h2>
+                    <p>Bạn đã sử dụng ứng dụng dành cho máy tính để bàn miễn phí chưa? Nó chuyển đổi PNG, JPG, BMP và WebP sang SVG ngoại tuyến, không giới hạn số lượng tệp và có quyền truy cập đầy đủ vào các cài đặt tracing nâng cao - nhưng chỉ từng tệp một. Xử lý hàng loạt chính là điều mà bản nâng cấp Pro bổ sung, và điều đó đáng để nói thẳng ra chứ không phải giả vờ ngược lại. Nếu bạn muốn miễn phí, cục bộ và dựa trên GUI (giao diện đồ họa), <a href="/vi/offline/">trình chuyển đổi desktop miễn phí</a> là sự lựa chọn trung thực cho các tệp đơn lẻ: thông lượng thực tế là hàng chục tệp mỗi ngày, không phải hàng trăm.</p>
+                    <p>Inkscape là một cỗ máy miễn phí khác. Hộp thoại Trace Bitmap của nó cũng dành cho một hình ảnh duy nhất, và mặc dù Inkscape cung cấp các tùy chọn dòng lệnh có thể được lập trình thành một vòng lặp, trải nghiệm đó khá thô và hầu như không có tài liệu hướng dẫn. Nhân tiện, GIMP không có tính năng xuất vector hàng loạt gốc nào cả - các chủ đề trên diễn đàn của nó thường xuyên xác nhận điều đó. Trước khi bỏ ra hàng giờ đồng hồ cho quy trình làm việc với giao diện đồ họa (GUI), hãy kiểm tra xem bạn có thực sự cần các vector cho mỗi tệp hay không: bài viết so sánh <a href="/vi/blog/svg-vs-png/">SVG và PNG dành cho web</a> sẽ giải đáp khi nào việc chuyển đổi là đáng giá.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             METHODS 4–5 + COMPARISON TABLE
+             cluster-link placeholders: CLI (cluster-2-post-0)
+             and potrace/imagemagick (cluster-2-post-1) articles
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Phương pháp 4: Tập lệnh Dòng lệnh (ImageMagick, Potrace, VTracer)</h2>
+                    <p>Đối với các công việc số lượng lớn diễn ra một lần, một tập lệnh shell mười dòng sẽ đánh bại mọi giao diện GUI. Đường ống dẫn đen trắng cổ điển kết nối ImageMagick vào Potrace - chuyển đổi, sau đó đồ lại: <code>magick input.png input.pbm &amp;&amp; potrace -s -o input.svg input.pbm</code></p>
+                    <p>Đặt dòng lệnh đó vào một vòng lặp "for" quét qua thư mục của bạn và Potrace sẽ xuất ra các đường dẫn vector thực sự với tốc độ của CPU - nhưng hoàn toàn là đen trắng. Đối với màu sắc, hãy trỏ vòng lặp đó vào vtracer, trình theo dõi (tracer) mã nguồn mở bằng ngôn ngữ Rust cũng được sử dụng trong PixelToPath. Cả hai công cụ đều có đủ các tùy chọn (flags) để lấp đầy một cuốn sổ tay, đó là lý do tại sao mỗi công cụ đều có một hướng dẫn dành riêng (sẽ được liên kết tại đây sau khi xuất bản). Các tập lệnh chiến thắng về chi phí (miễn phí), quyền riêng tư (cục bộ) và số lượng (hàng nghìn cho mỗi lần chạy); chúng thua ở phần chuẩn bị - bạn đang duy trì một quy trình hệ thống, và sẽ không ai hoàn trả lại cho bạn thời gian của cái buổi chiều mà hệ thống bị lỗi.</p>
+                    <!-- cluster-link:cluster-2-post-0 -->
+                    <!-- cluster-link:cluster-2-post-1 -->
+
+                    <h2>Phương pháp 5: Vòng lặp API cho quy trình CI và công việc Phía Máy chủ</h2>
+                    <p>Khi các chuyển đổi phải diễn ra trên máy chủ - trong quá trình triển khai, bên trong quy trình bản dựng (build pipeline), từ phần phụ trợ (backend) - thì các công cụ cục bộ không còn là một lựa chọn. Mô hình này là một vòng lặp: một lệnh POST không trạng thái cho mỗi hình ảnh với khóa Bearer của bạn, mỗi SVG được ghi thẳng vào quy trình tài sản của bạn. Giới hạn là 60 yêu cầu mỗi phút cho mỗi khóa, vì vậy hãy điều chỉnh tốc độ vòng lặp và thử lại các cuộc gọi bị giới hạn tốc độ với mức độ lùi theo cấp số nhân (exponential backoff); các cuộc gọi thất bại không bao giờ tiêu tốn credit. Bạn có thể <a href="/vi/api/">tự động hóa toàn bộ công việc hàng loạt với API REST</a> mà không cần bất kỳ cài đặt cục bộ nào - đó chính xác là điểm quan trọng.</p>
+                    <p>Chi phí có thể dự đoán được: với hình ảnh trả trước thì mức giá dao động từ €0.05 xuống €0.01 cho mỗi hình ảnh đối với số lượng lớn, như vậy 500 hình ảnh tốn khoảng €20 và 10.000 hình ảnh tốn khoảng €200 - và mỗi tài khoản sẽ có thêm 10 lần chuyển đổi miễn phí, mỗi tháng. Chọn API khi các chuyển đổi phải có khả năng tái tạo, ở phía máy chủ và không phụ thuộc vào thiết lập cục bộ. Chọn thư mục nóng (hot folder) khi các chuyển đổi diễn ra cục bộ và có tính tương tác. Hai phương pháp này đáp ứng gần như mọi công việc hàng loạt trong thế giới thực.</p>
+
+                    <h2>Hàng loạt PNG sang SVG: So sánh cả năm phương pháp</h2>
+                    <p>Cùng một đầu vào, năm phương pháp xử lý rất khác nhau. Chi phí và quyền riêng tư là những yếu tố cấu trúc chứ không phải chiêu trò quảng cáo; thông lượng giả định một người vận hành (hoặc một máy chủ khiêm tốn) trên phần cứng thực tế; và "màu sắc" có nghĩa là đầu ra vector nhiều màu sắc thực sự, chứ không phải hình bóng đen trắng.</p>
+                    <table class="vs-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Phương pháp</th>
+                                <th scope="col">Chi phí</th>
+                                <th scope="col">Tệp/ngày (thực tế)</th>
+                                <th scope="col">Màu sắc</th>
+                                <th scope="col">Kiểm soát chất lượng</th>
+                                <th scope="col">Quyền riêng tư</th>
+                                <th scope="col">Kỹ năng cần thiết</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Công cụ trực tuyến</th>
+                                <td data-label="Chi phí">Miễn phí</td>
+                                <td data-label="Tệp/ngày (thực tế)">50-500 (thủ công)</td>
+                                <td data-label="Màu sắc">Tùy thuộc vào công cụ</td>
+                                <td data-label="Kiểm soát chất lượng">Chỉ các mẫu (preset)</td>
+                                <td data-label="Quyền riêng tư">Khác nhau - kiểm tra điều khoản</td>
+                                <td data-label="Kỹ năng cần thiết">Không</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Thư mục nóng Pro</th>
+                                <td data-label="Chi phí">€39 thanh toán một lần</td>
+                                <td data-label="Tệp/ngày (thực tế)">Hàng nghìn (CPU cục bộ)</td>
+                                <td data-label="Màu sắc">Có</td>
+                                <td data-label="Kiểm soát chất lượng">Một hồ sơ, tất cả cài đặt</td>
+                                <td data-label="Quyền riêng tư">100% cục bộ</td>
+                                <td data-label="Kỹ năng cần thiết">Không</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Desktop miễn phí / Inkscape</th>
+                                <td data-label="Chi phí">Miễn phí</td>
+                                <td data-label="Tệp/ngày (thực tế)">20-100 (từng tệp một)</td>
+                                <td data-label="Màu sắc">Có (tệp đơn lẻ)</td>
+                                <td data-label="Kiểm soát chất lượng">Đầy đủ, cho mỗi tệp</td>
+                                <td data-label="Quyền riêng tư">100% cục bộ</td>
+                                <td data-label="Kỹ năng cần thiết">Cơ bản</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tập lệnh (CLI)</th>
+                                <td data-label="Chi phí">Miễn phí</td>
+                                <td data-label="Tệp/ngày (thực tế)">Hàng nghìn+ (CPU cục bộ)</td>
+                                <td data-label="Màu sắc">Potrace Không - VTracer Có</td>
+                                <td data-label="Kiểm soát chất lượng">Đầy đủ (các lệnh flags)</td>
+                                <td data-label="Quyền riêng tư">Cục bộ</td>
+                                <td data-label="Kỹ năng cần thiết">Dòng lệnh</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Vòng lặp API</th>
+                                <td data-label="Chi phí">10 miễn phí/tháng, sau đó €0.01-0.05/hình</td>
+                                <td data-label="Tệp/ngày (thực tế)">Hàng chục nghìn (60 y.cầu/phút)</td>
+                                <td data-label="Màu sắc">Có</td>
+                                <td data-label="Kiểm soát chất lượng">Tham số động cơ (engine) cho mỗi cuộc gọi</td>
+                                <td data-label="Quyền riêng tư">Tệp được tải lên</td>
+                                <td data-label="Kỹ năng cần thiết">Nhà phát triển (Developer)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Nếu bạn chuyển đổi hàng loạt thường xuyên hơn một lần một tháng, thì Phương pháp 2 và 5 sẽ tự hòa vốn ngay trong buổi chiều đầu tiên. Đối với những thứ nhỏ hơn thế, Phương pháp 1 hoặc 3 không tốn chi phí gì ngoài một chút thời gian của bạn.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             RELATED GUIDES – internal links
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container" style="text-align:center;">
+                <h2 class="section-title">Hướng dẫn Chuyển đổi Liên quan</h2>
+                <p class="section-intro">Chuyển đổi hàng loạt là bước một. Các bài viết này trình bày phần còn lại.</p>
+
+                <div class="related-tools">
+                    
+                    <a href="/blog/vectorize-image/" class="related-tool-link">
+                        ✏️ Vector hóa thực sự có ý nghĩa gì
+                    </a>
+                    
+                    <a href="/blog/svg-vs-png/" class="related-tool-link">
+                        📈 SVG và PNG dành cho trang web
+                    </a>
+                    
+                    <a href="/blog/import-svg/" class="related-tool-link">
+                        🎨 Nhập các tệp SVG của bạn vào Figma hoặc Canva
+                    </a>
+                    
+                    <a href="/online/" class="related-tool-link">
+                        🌐 Trình chuyển đổi trực tuyến miễn phí
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FAQ – FAQPage schema injected in <head>
+        ════════════════════════════════════════ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">Câu hỏi thường gặp (FAQ)</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Tôi có thể chuyển đổi hàng loạt PNG sang SVG miễn phí không?</summary>
+                        <p>Có, theo hai cách. Các tập lệnh dòng lệnh (Potrace, ImageMagick, VTracer) là miễn phí và không có giới hạn tệp; và ứng dụng máy tính để bàn miễn phí cộng với Inkscape là miễn phí nhưng chỉ chuyển đổi từng tệp một. Các công cụ trực tuyến chấp nhận nhiều tệp miễn phí cũng tồn tại - chỉ cần xác minh xem chúng có thực sự vector hóa và đọc điều khoản quyền riêng tư của chúng trước khi gửi các tác phẩm nghệ thuật thương mại.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Làm thế nào để giữ được màu sắc khi chuyển đổi hàng loạt?</summary>
+                        <p>Hãy sử dụng một công cụ theo dõi (tracer) có hỗ trợ màu. Potrace hoàn toàn là đen trắng bất kể bạn viết lệnh (script) thế nào; VTracer, PixelToPath Pro và PixelToPath API đều chạy một công cụ màu sắc (color engine) nhằm tái tạo lại từng vùng màu dưới dạng một hình dạng vector riêng của nó. Lập trình kịch bản vòng lặp với vtracer, hoặc sử dụng Pro hoặc API nếu bạn không muốn tự bảo trì quá trình này.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Tôi có thể tải lên một tệp ZIP chứa nhiều PNG và nhận lại một tệp ZIP chứa SVG không?</summary>
+                        <p>Một số công cụ trực tuyến (ví dụ: Pixelied) chấp nhận số lượng tải lên lớn và trả về một tệp ZIP. Chế độ xử lý hàng loạt trên máy tính để bàn và tập lệnh ghi kết quả vào một thư mục đầu ra mà bạn có thể nén (zip) trong một bước. API trả về một SVG cho mỗi cuộc gọi, vì vậy việc lưu trữ sẽ nằm ở phía bạn - vốn là điều mà quy trình biên dịch (build pipeline) thường mong muốn.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Tại sao loạt tệp tôi chuyển đổi lại ra các hình chữ nhật màu đen?</summary>
+                        <p>Đó chính là bẫy nhúng: công cụ đã bọc mỗi ảnh PNG bên trong vỏ SVG thay vì đồ lại nó (tracing) và những gì bạn đang thấy là ảnh raster được nhúng không hiển thị được. Mở một tệp kết quả đầu ra trong trình soạn thảo văn bản - một thẻ base64 &lt;image&gt; duy nhất đã xác nhận điều đó. Chạy lại tiến trình hàng loạt bằng một công cụ cho ra các phần tử &lt;path&gt; đích thực.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Tôi có 50.000 tệp. Điều gì sẽ thực sự hiệu quả?</summary>
+                        <p>Một thư mục nóng (hot folder) hoặc API - mọi thứ khác sẽ đạt giới hạn trước đó rất lâu. Ở mức 60 yêu cầu mỗi phút, API hoàn thành 50.000 hình ảnh trong thời gian thực khoảng 14 giờ với khoản tín dụng trả trước trị giá €200. Thư mục nóng cục bộ thực hiện cùng một công việc ở trạng thái ngoại tuyến, với thông lượng được cài đặt bởi CPU của bạn. Cả hai giải pháp đều giữ cho các cài đặt giống hệt nhau trong toàn bộ quá trình chạy.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FINAL CTA
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container blog-cta-wrap">
+                <h2>Bạn Đã Sẵn Sàng Để Xử Lý Khối Lượng Tệp PNG Tồn Đọng Chưa?</h2>
+                <p>Chuyển đổi một tệp đơn trên công cụ trực tuyến miễn phí, thiết lập một thư mục nóng (hot folder) bằng bản Pro, hoặc chạy vòng lặp API - mọi lộ trình đều dẫn đến các đường nét vector gọn gàng, đích thực.</p>
+                <div class="double-buttons">
+                    <a href="/vi/online/" class="btn primary-btn big-btn">Chuyển đổi một tệp miễn phí ngay →</a>
+                    <a href="/vi/offline/" class="btn secondary-btn big-btn">⬇️ Tải xuống ứng dụng Desktop</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>Hỗ trợ phát triển mã nguồn mở</h3>
+        <p>PixelToPath sử dụng miễn phí. Nếu công cụ này giúp bạn tiết kiệm thời gian, hãy cân nhắc mời tôi một tách cà phê.</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Quyên góp qua PayPal</a>
+    </div>
+</section>
+    </main>
+
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/vi/">Trang chủ</a>
+        <a href="/vi/online/">Công cụ Trực tuyến</a>
+        <a href="/vi/offline/">Ứng dụng Máy tính bàn</a>
+        <a href="/vi/pro/">Pro</a>
+        <a href="/vi/api/">API</a>
+        <a href="/vi/blog/">Blog</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Mã nguồn mở (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Cổng khách hàng</a>
+    </div>
+</footer>
+
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
+</body>
+</html>

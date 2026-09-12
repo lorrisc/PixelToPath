@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PNGをSVGに一括変換する方法（5つの方法の比較）</title>
+    <meta name="description" content="PNGをSVGに一括変換する方法：オンラインツール、Proのホットフォルダー、Inkscape、CLIスクリプト、APIなど、テスト済みの5つの方法を比較。10ファイルから1万ファイルまで。">
+    <meta name="keywords" content="png svg 一括変換, 複数のpngをsvgに一括変換, 画像 一括 ベクター化, 複数のpngファイルをオンラインでsvgに変換, png svg 一括変換 フリー">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="PNGをSVGに一括変換する方法（5つの方法の比較）">
+    <meta property="og:description" content="PNGをSVGに一括変換する方法：オンラインツール、Proのホットフォルダー、Inkscape、CLIスクリプト、APIなど、テスト済みの5つの方法を比較。10ファイルから1万ファイルまで。">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PNGをSVGに一括変換する方法（5つの方法の比較）">
+    <meta name="twitter:description" content="PNGをSVGに一括変換する方法：オンラインツール、Proのホットフォルダー、Inkscape、CLIスクリプト、APIなど、テスト済みの5つの方法を比較。10ファイルから1万ファイルまで。">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta property="og:url" content="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">
+
+    <link rel="stylesheet" href="../../../assets/css/bundle.b1ddb27b.css">
+
+    <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: BlogPosting -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/#article",
+  "headline": "PNGをSVGに一括変換する方法（5つの方法の比較）",
+  "description": "PNGをSVGに一括変換する方法：オンラインツール、Proのホットフォルダー、Inkscape、CLIスクリプト、APIなど、テスト済みの5つの方法を比較。10ファイルから1万ファイルまで。",
+  "url": "https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/",
+  "mainEntityOfPage": "https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/",
+  "inLanguage": "ja",
+  "datePublished": "2026-09-12",
+  "dateModified": "2026-09-12",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/ja/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-logo.jpg"
+}</script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "無料でPNGをSVGに一括変換できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、2つの方法があります。コマンドラインスクリプト（Potrace、ImageMagick、VTracer）はファイル数の制限なしで無料であり、無料のデスクトップアプリやInkscapeも無料ですが、一度に変換できるのは1ファイルのみです。複数ファイルを無料で受け付けるオンラインツールも存在しますが、商業的なアートワークを送信する前に、本当にベクター化が行われているか確認し、プライバシー規約を必ず読んでください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "一括変換時に色を保持するにはどうすればよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "カラートレーサーを使用してください。Potraceはどのようにスクリプトを組んでも完全に白黒になります。VTracer、PixelToPath Pro、およびPixelToPath APIはすべて、各色の領域を独自のベクター図形として再構築するカラーエンジンを実行します。vtracerを使用してループをスクリプト化するか、保守の手間を省きたい場合はProやAPIを使用してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PNGのZIPをアップロードしてSVGのZIPを取得することはできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一部のオンラインツール（例えばPixelied）は一括アップロードを受け付け、ZIPを返します。デスクトップの一括処理モードやスクリプトは、ワンステップでZIP化できる出力フォルダーに結果を書き込みます。APIは呼び出しごとに1つのSVGを返すため、アーカイブの処理はご自身の側で行う必要があります。通常、ビルドパイプラインが求めているのはまさにそのような動作です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "一括処理の結果が黒い長方形になってしまったのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "それは「埋め込みの罠」です。ツールが各PNGをトレースする代わりにSVGのラッパー内に包んだため、表示に失敗した埋め込みラスター画像が見えているのです。出力されたファイルを1つテキストエディタで開いてみてください。単一のbase64の&lt;image&gt;タグがあることで確認できます。本物の&lt;path&gt;要素を出力するツールを使って、一括処理を再実行してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "50,000個のファイルがあります。実際に機能するのはどれですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ホットフォルダーかAPIです。それ以外のすべては、その数に到達するずっと前に上限に達します。1分間に60リクエストのペースで、APIは約14時間の実時間と、約200ユーロのプリペイドクレジットで50,000枚の画像を処理します。ローカルのホットフォルダーはオフラインで同じ作業を行い、スループットはCPUの性能に依存します。どちらも、実行プロセス全体を通じて同一の設定を維持します。"
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "画像からSVGへの変換を学ぶ",
+      "item": "https://pixel-to-path.com/ja/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "PNGをSVGに一括変換する方法（5つの方法の比較）",
+      "item": "https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/ja/" class="brand">
+            <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/ja/"
+            class="">ホーム</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">製品 <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/ja/online/"
+                       class="">オンラインツール</a>
+                    <a href="/ja/offline/"
+                       class="">デスクトップアプリ</a>
+                    <a href="/ja/pro/"
+                       class="">デスクトップアプリ Pro</a>
+                    <a href="/ja/api/"
+                       class="">API</a>
+                </div>
+            </div>
+
+            <a href="/ja/pricing/"
+               class="">料金</a>
+
+            <div class="lang-switch">
+                <span>🇯🇵 JA</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/ja/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">ホーム</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">製品</span>
+            <div class="mobile-sublist">
+                <a href="/ja/online/"
+                   class="">オンラインツール</a>
+                <a href="/ja/offline/"
+                   class="">デスクトップアプリ</a>
+                <a href="/ja/pro/"
+                   class="">デスクトップアプリ Pro</a>
+                <a href="/ja/api/"
+                   class="">API</a>
+            </div>
+
+            <a href="/ja/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">料金</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">言語</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO – above the fold, H1 + CTA
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>PNGをSVGに一括変換する方法（5つの方法の比較）</h1>
+                <p class="blog-hero__subtitle">複数のPNGファイルをSVGに一括で変換するテスト済みの5つの方法（オンラインツール、ホットフォルダー、無料のデスクトップアプリ、スクリプト、API）について、コスト、スループット、カラー対応、プライバシーの観点から比較します。</p>
+
+                <!-- Format badges -->
+                <div class="big-badges">
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG × 10</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG × 10,000</span>
+                    
+                    <span class="fmt-arrow">→</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">SVG</span>
+                    
+                </div>
+
+                <!-- Trust badges -->
+                <div class="badges">
+                    <span class="badge__item badge__item--accent">✓ 5つの方法を比較</span>
+                    <span class="badge__item">10ファイルから1万ファイルまで</span>
+                    <span class="badge__item">無料オプションあり</span>
+                    <span class="badge__item">埋め込みではない、真のトレース</span>
+                </div>
+
+                <a href="/ja/online/" class="btn primary-btn blog-hero__cta">今すぐ無料で1ファイルを変換 →</a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             INTRO – the batch problem + embed-vs-trace warning
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>一括処理の問題点と避けるべき落とし穴</h2>
+                    <p>10個のPNGがある。あるいは400個。または、Adobeのコミュニティフォーラムで最も長いスレッドの1つを引き起こしたデザイナーの51,000ファイルに関する質問のように、アセットライブラリ全体をベクター化する必要がある。手作業で1つの画像を変換するのは構いませんが、それ以上の数になると、フォルダ全体のラスター画像をSVGのフォルダに変換する「一括処理のワークフロー」が必要になります。もし本当に重要なファイルが1つだけなら、 <a href="/ja/online/">無料のオンラインPNG-SVGコンバーター</a>が1分以内で作業を完了させます。このガイドでは、それ以上の規模の作業について網羅しています。</p>
+                    <p>方法を比較する前に、定義を1つ。真の一括変換とは、すべてのPNGが「ベクター化」されることを意味します。つまり、図形が数学的なパスとして再描画されることであり、それが <a href="/ja/blog/vectorize-image/">ベクター化が実際に意味するもの</a>です。多くのツールはこのステップを完全にスキップしており、それが結果のすべてを変えてしまいます。</p>
+                    <p class="content-callout content-callout--warn">よくある失敗のパターン：一部の「SVGコンバーター」は何もトレースせず、単にPNGを埋め込み画像として.svgファイル内にラップするだけです。結果は「完璧」に拡大縮小できるように見えますが、それは単なるビットマップの偽装にすぎません。出力されたファイルをテキストエディタで開いてみてください。&lt;path&gt;要素の代わりに巨大なbase64の&lt;image&gt;タグがある場合、それは何もベクター化されていないことを意味します。以下のすべての方法は、実際のトレースが行われるかどうかで評価されています。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             REAL OUTPUT – before/after traced by the tool
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">コンバーターの実際の結果</h2>
+                
+
+<figure class="ba-compare ba-compare--sample">
+    <div class="ba-compare__pair">
+        <div class="ba-panel ba-panel--before">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">変換前 · 元ファイル</span>
+                <span class="size-badge">5 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-input.png" width="320" height="320" loading="lazy" decoding="async" alt="PNGファイル：白のシェブロンが入った紺色の円形ロゴ">
+            </div>
+        </div>
+        <span class="ba-compare__arrow" aria-hidden="true">→</span>
+        <div class="ba-panel ba-panel--after">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">変換後 · SVG</span>
+                <span class="size-badge">白黒プリセット · 2 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-bw.svg" width="320" height="320" loading="lazy" decoding="async" alt="同じロゴを白黒プリセットでSVG化：滑らかな曲線と黒の塗り">
+            </div>
+        </div>
+    </div>
+    <figcaption>このツールで実際に行った変換です。左の元PNGを白黒プリセットでトレースし、右のSVGになりました。どんな倍率でも鮮明さを保てるベクターファイルです。</figcaption>
+</figure>
+
+                
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/logo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="同じロゴを400%に拡大：左ではPNGのピクセルが見えてきますが、右のSVGの曲線は完全に滑らかなままです。">
+    <figcaption>同じロゴを400%に拡大：左ではPNGのピクセルが見えてきますが、右のSVGの曲線は完全に滑らかなままです。</figcaption>
+</figure>
+
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             METHODS 1–3 – online, hot folder, free desktop
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="content-section">
+                    <h2>方法1：オンラインの一括コンバーター</h2>
+                    <p>小規模なバッチを最も速く処理する方法です。複数のオンラインツールが一度に複数ファイルを処理できます：to.imagestool.comではPNGのセットをドラッグ＆ドロップし、ブラウザ上でローカルに処理します。Pixeliedは一括アップロードを受け付け、結果をZIPで提供します。ImageResizer.comやreaConverterのウェブ試用版も同様に機能します。インストールもコマンドラインも不要です。ファイルをドロップし、結果をダウンロードするだけです。</p>
+                    <p>実際の業務を任せる前に、2つの確認事項があります。第1に、ツールが実際にトレースを行うか確認してください。一部の「一括」サイトは、サーバー上で単一ファイルの変換をループ処理し、偽のSVGのZIPを返すだけです（前述の「埋め込みの罠」）。第2に、アートワークが商業目的またはNDA（秘密保持契約）の対象である場合は、プライバシー規約を読んでください。ブラウザベースのツールはファイルを決してアップロードしませんが、サーバーベースのツールは各画像を他人のマシンに送信します。透明性のために言及すると、PixelToPath独自の無料オンラインコンバーターは、意図的に単一ファイル専用となっています。これは400個のファイルが入ったフォルダのためではなく、1つの重要なロゴのための適切なツールであり、この比較でもまさにそのようなものとして位置づけられています。</p>
+
+                    <h2>方法2：ホットフォルダー機能付きのデスクトップアプリ (PixelToPath Pro)</h2>
+                    <p>一括処理が単発ではなく毎週発生するような場合、ホットフォルダー機能を使えば手作業のステップを完全に排除できます。PixelToPath Pro（WindowsおよびLinux対応）はフォルダーを監視し、そこに保存された画像を自動的に変換します。全体のフローは以下の4ステップです：</p>
+                    <ol>
+                        <li>フォルダーを選択する: 監視するフォルダーと、SVGを出力するフォルダーを選択します。</li>
+                        <li>PNGをドロップする: 10個でも数百個でも、入力フォルダーにすべてのファイルを保存、コピー、またはドラッグします。</li>
+                        <li>処理を任せる: ファイルが到着するたびに、保存した設定プロファイルを使用して、すべてローカルマシン上でトレースが行われます。</li>
+                        <li>SVGを回収する: 出力フォルダーに、元のファイル名で結果が表示されます。</li>
+                    </ol>
+                    <p>一括処理で重要な点：キュー全体に1つの設定プロファイルが適用されるということです。400個のアイコンを手作業で変換すると、300番目のファイルが12番目のファイルと完全に一致することは決してありません。プロファイルを使用すれば、すべての出力が一貫します。これが手作業のワークフローをダメにする原因なのです。すべてがローカルで実行されるため、アップロードの制限はなく、ファイルがマシンから外部に送信されることはありません。Proは1回買い切りで39ユーロ（税別）で、1ユーザーにつき最大3台のマシンで永久ライセンスとして利用できます。 <a href="/ja/pro/">ホットフォルダーによる一括変換</a>のページで、含まれるすべての機能の詳細を確認できます。これはここで紹介する5つの選択肢のうちの1つですが、一括変換を「何も考える必要のないステップ」にするために構築された唯一の選択肢です。</p>
+
+                    <h2>方法3：無料のデスクトップアプリとInkscape</h2>
+                    <p>すでに無料のデスクトップアプリを使用していますか？ このアプリはオフラインでPNG、JPG、BMP、WebPをSVGに変換し、ファイル数の制限はなく、高度なトレース設定に完全にアクセスできますが、一度に変換できるのは1ファイルのみです。「一括処理」こそがProのアップグレードで追加される機能であり、誤魔化さずに明確に伝える価値があります。無料で、ローカル環境で、GUIベースのものを求めているなら、 <a href="/ja/offline/">無料のデスクトップコンバーター</a>が単一ファイルにおける最も誠実な選択肢です。現実的なスループットは数百ファイルではなく、1日に数十ファイルです。</p>
+                    <p>Inkscapeも無料で使える定番ツールです。「ビットマップをトレース」ダイアログも単一画像向けであり、Inkscapeにはループ処理のスクリプトに組み込めるコマンドラインオプションも用意されていますが、使い勝手は粗削りで、ドキュメントもほとんどありません。ちなみに、GIMPにはネイティブでの一括ベクターエクスポート機能は一切ありません（フォーラムのスレッドで定期的に確認されています）。GUIのワークフローに何時間も費やす前に、各ファイルに本当にベクター画像が必要かどうかを確認してください： <a href="/ja/blog/svg-vs-png/">ウェブにおけるSVG対PNG</a>の比較記事では、変換する価値があるケースについて解説しています。</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             METHODS 4–5 + COMPARISON TABLE
+             cluster-link placeholders: CLI (cluster-2-post-0)
+             and potrace/imagemagick (cluster-2-post-1) articles
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>方法4：コマンドラインスクリプト (ImageMagick, Potrace, VTracer)</h2>
+                    <p>単発の大規模なジョブなら、10行のシェルスクリプトがどんなGUIにも勝ります。白黒処理の古典的なパイプラインは、ImageMagickをPotraceに連結します。つまり、変換してからトレースします： <code>magick input.png input.pbm &amp;&amp; potrace -s -o input.svg input.pbm</code></p>
+                    <p>これをフォルダー内の "for" ループで囲むと、PotraceはCPUの速度で真のベクターパスを出力します。ただし、完全に白黒のみです。カラーが必要な場合は、同じループを「vtracer」（PixelToPathも採用しているオープンソースのRust製トレーサー）に向けます。どちらのツールもマニュアルが1冊書けるほどの十分なフラグを持っているため、それぞれに専用のガイドが用意されています（公開され次第、ここにリンクされます）。スクリプトはコスト（無料）、プライバシー（ローカル）、ボリューム（1回の実行で数千件）の面で優れていますが、導入の面では劣ります。パイプラインのメンテナンスが必要になり、スクリプトが壊れた午後の時間を誰も補償してくれません。</p>
+                    <!-- cluster-link:cluster-2-post-0 -->
+                    <!-- cluster-link:cluster-2-post-1 -->
+
+                    <h2>方法5：CIやサーバーサイド作業向けのAPIループ</h2>
+                    <p>デプロイ中、ビルドパイプライン内、バックエンドからなど、変換をサーバー上で行う必要がある場合、ローカルツールは選択肢から外れます。このパターンはループ処理になります。Bearerキーを使用して画像ごとに1回のステートレスなPOSTを行い、各SVGがアセットパイプラインに直接書き込まれます。制限はキー1つにつき1分間に60リクエストなので、ループのペースを調整し、レート制限に達した呼び出しにはエクスポネンシャルバックオフで再試行してください。失敗した呼び出しでクレジットが消費されることはありません。 <a href="/ja/api/">REST APIで一括処理全体を自動化</a>でき、ローカルでのインストールは一切不要です。これこそがまさにAPIの目的です。</p>
+                    <p>コスト計算は予測可能です。プリペイドの画像は大量になれば1枚あたり0.05ユーロから0.01ユーロに下がるため、500画像で約20ユーロ、1万画像で約200ユーロになります。さらに、どのアカウントにも毎月10回の無料変換が付与されます。変換が再現可能で、サーバーサイドで実行され、ローカルの依存関係を持たない必要がある場合は、APIを選択してください。ローカルで対話的に実行する場合は、ホットフォルダーを選択してください。この2つで現実世界の一括処理のほぼすべてをカバーできます。</p>
+
+                    <h2>PNGのSVG一括変換：5つの方法の比較</h2>
+                    <p>同じ入力でも、5つの条件は大きく異なります。コストとプライバシーは構造的なものであり、プロモーションではありません。スループットは、現実的なハードウェア上の1人のオペレーター（または控えめなサーバー）を想定しています。また、「カラー」とは黒いシルエットではなく、真のマルチカラーのベクター出力を意味します。</p>
+                    <table class="vs-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">方法</th>
+                                <th scope="col">コスト</th>
+                                <th scope="col">ファイル数/日 (現実的)</th>
+                                <th scope="col">カラー</th>
+                                <th scope="col">品質管理</th>
+                                <th scope="col">プライバシー</th>
+                                <th scope="col">必要なスキル</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">オンラインコンバーター</th>
+                                <td data-label="コスト">無料</td>
+                                <td data-label="ファイル数/日 (現実的)">50〜500 (手動)</td>
+                                <td data-label="カラー">ツールに依存</td>
+                                <td data-label="品質管理">プリセットのみ</td>
+                                <td data-label="プライバシー">様々 - 規約を確認</td>
+                                <td data-label="必要なスキル">不要</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Proのホットフォルダー</th>
+                                <td data-label="コスト">1回買い切りで39ユーロ</td>
+                                <td data-label="ファイル数/日 (現実的)">数千 (ローカルのCPU)</td>
+                                <td data-label="カラー">対応</td>
+                                <td data-label="品質管理">1つのプロファイル、全設定</td>
+                                <td data-label="プライバシー">100%ローカル</td>
+                                <td data-label="必要なスキル">不要</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">無料デスクトップ / Inkscape</th>
+                                <td data-label="コスト">無料</td>
+                                <td data-label="ファイル数/日 (現実的)">20〜100 (1度に1つ)</td>
+                                <td data-label="カラー">対応 (単一ファイル)</td>
+                                <td data-label="品質管理">フル機能、ファイルごと</td>
+                                <td data-label="プライバシー">100%ローカル</td>
+                                <td data-label="必要なスキル">基本操作</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">スクリプト (CLI)</th>
+                                <td data-label="コスト">無料</td>
+                                <td data-label="ファイル数/日 (現実的)">数千以上 (ローカルのCPU)</td>
+                                <td data-label="カラー">Potraceは非対応 - VTracerは対応</td>
+                                <td data-label="品質管理">フル機能 (フラグ)</td>
+                                <td data-label="プライバシー">ローカル</td>
+                                <td data-label="必要なスキル">コマンドライン</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">APIループ</th>
+                                <td data-label="コスト">月10枚無料、以降画像あたり0.01〜0.05ユーロ</td>
+                                <td data-label="ファイル数/日 (現実的)">数万 (60リクエスト/分)</td>
+                                <td data-label="カラー">対応</td>
+                                <td data-label="品質管理">呼び出しごとのエンジンパラメータ</td>
+                                <td data-label="プライバシー">ファイルはアップロードされる</td>
+                                <td data-label="必要なスキル">開発者</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>1か月に1回以上の一括変換を行う場合、方法2と5は導入初日で元が取れます。それより規模が小さいすべての作業について、方法1または3は少しの時間を除けばコストはかかりません。</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             RELATED GUIDES – internal links
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container" style="text-align:center;">
+                <h2 class="section-title">関連する変換ガイド</h2>
+                <p class="section-intro">一括変換はステップ1です。これらはその後のステップをカバーしています。</p>
+
+                <div class="related-tools">
+                    
+                    <a href="/blog/vectorize-image/" class="related-tool-link">
+                        ✏️ ベクター化が実際に意味するもの
+                    </a>
+                    
+                    <a href="/blog/svg-vs-png/" class="related-tool-link">
+                        📈 ウェブにおけるSVG対PNG
+                    </a>
+                    
+                    <a href="/blog/import-svg/" class="related-tool-link">
+                        🎨 SVGをFigmaやCanvaにインポートする
+                    </a>
+                    
+                    <a href="/online/" class="related-tool-link">
+                        🌐 無料のオンラインコンバーター
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FAQ – FAQPage schema injected in <head>
+        ════════════════════════════════════════ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">よくある質問</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>無料でPNGをSVGに一括変換できますか？</summary>
+                        <p>はい、2つの方法があります。コマンドラインスクリプト（Potrace、ImageMagick、VTracer）はファイル数の制限なしで無料であり、無料のデスクトップアプリやInkscapeも無料ですが、一度に変換できるのは1ファイルのみです。複数ファイルを無料で受け付けるオンラインツールも存在しますが、商業的なアートワークを送信する前に、本当にベクター化が行われているか確認し、プライバシー規約を必ず読んでください。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>一括変換時に色を保持するにはどうすればよいですか？</summary>
+                        <p>カラートレーサーを使用してください。Potraceはどのようにスクリプトを組んでも完全に白黒になります。VTracer、PixelToPath Pro、およびPixelToPath APIはすべて、各色の領域を独自のベクター図形として再構築するカラーエンジンを実行します。vtracerを使用してループをスクリプト化するか、保守の手間を省きたい場合はProやAPIを使用してください。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>PNGのZIPをアップロードしてSVGのZIPを取得することはできますか？</summary>
+                        <p>一部のオンラインツール（例えばPixelied）は一括アップロードを受け付け、ZIPを返します。デスクトップの一括処理モードやスクリプトは、ワンステップでZIP化できる出力フォルダーに結果を書き込みます。APIは呼び出しごとに1つのSVGを返すため、アーカイブの処理はご自身の側で行う必要があります。通常、ビルドパイプラインが求めているのはまさにそのような動作です。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>一括処理の結果が黒い長方形になってしまったのはなぜですか？</summary>
+                        <p>それは「埋め込みの罠」です。ツールが各PNGをトレースする代わりにSVGのラッパー内に包んだため、表示に失敗した埋め込みラスター画像が見えているのです。出力されたファイルを1つテキストエディタで開いてみてください。単一のbase64の&lt;image&gt;タグがあることで確認できます。本物の&lt;path&gt;要素を出力するツールを使って、一括処理を再実行してください。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>50,000個のファイルがあります。実際に機能するのはどれですか？</summary>
+                        <p>ホットフォルダーかAPIです。それ以外のすべては、その数に到達するずっと前に上限に達します。1分間に60リクエストのペースで、APIは約14時間の実時間と、約200ユーロのプリペイドクレジットで50,000枚の画像を処理します。ローカルのホットフォルダーはオフラインで同じ作業を行い、スループットはCPUの性能に依存します。どちらも、実行プロセス全体を通じて同一の設定を維持します。</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FINAL CTA
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container blog-cta-wrap">
+                <h2>溜まったPNGを片付ける準備はできましたか？</h2>
+                <p>無料のオンラインツールで単一ファイルを変換する、Proでホットフォルダーを設定する、またはAPIをループ処理する。どのルートを選んでも、最後はクリーンで真のベクターパスにたどり着きます。</p>
+                <div class="double-buttons">
+                    <a href="/ja/online/" class="btn primary-btn big-btn">今すぐ無料で1ファイルを変換 →</a>
+                    <a href="/ja/offline/" class="btn secondary-btn big-btn">⬇️ デスクトップアプリをダウンロード</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>オープンソース開発をサポートする</h3>
+        <p>PixelToPathは無料で使用できます。このツールで時間を節約できた場合は、コーヒーを一杯おごることを検討してください。</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ PayPalで寄付する</a>
+    </div>
+</section>
+    </main>
+
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/ja/">ホーム</a>
+        <a href="/ja/online/">オンラインツール</a>
+        <a href="/ja/offline/">デスクトップアプリ</a>
+        <a href="/ja/pro/">Pro</a>
+        <a href="/ja/api/">API</a>
+        <a href="/ja/blog/">ブログ</a>
+        <a href="https://github.com/lorrisc/PixelToPath">オープンソース (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">クライアントポータル</a>
+    </div>
+</footer>
+
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
+</body>
+</html>

@@ -124,6 +124,14 @@
 .content-section ol li {
     margin-bottom: 0.45rem;
 }
+/* Liens du corps d'article et des réponses FAQ : formalisme des liens texte
+   du site (pricing.css, pro.css, api.css) — couleur marque + graisse, le
+   `a { color: inherit }` global les rendrait sinon invisibles dans le texte. */
+.content-section a,
+.faq-item a {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
 .content-callout {
     background: #fff7ed;
     border-left: 4px solid var(--primary);

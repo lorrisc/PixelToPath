@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.pixel-to-path.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>如何批量将PNG转换为SVG（5种方法比较）</title>
+    <meta name="description" content="如何批量将PNG转换为SVG：比较5种经过测试的方法——在线工具、Pro热文件夹、Inkscape、CLI脚本和API。适用于10个或10,000个文件。">
+    <meta name="keywords" content="如何批量将png转换为svg, 批量转换png为svg, 批量矢量化图片, 在线将多个png文件转换为svg, 最佳png转svg批量转换器, 最佳批量png转svg工具">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="如何批量将PNG转换为SVG（5种方法比较）">
+    <meta property="og:description" content="如何批量将PNG转换为SVG：比较5种经过测试的方法——在线工具、Pro热文件夹、Inkscape、CLI脚本和API。适用于10个或10,000个文件。">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="如何批量将PNG转换为SVG（5种方法比较）">
+    <meta name="twitter:description" content="如何批量将PNG转换为SVG：比较5种经过测试的方法——在线工具、Pro热文件夹、Inkscape、CLI脚本和API。适用于10个或10,000个文件。">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta property="og:url" content="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">
+
+    <link rel="stylesheet" href="../../../assets/css/bundle.b1ddb27b.css">
+
+    <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: BlogPosting -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/#article",
+  "headline": "如何批量将PNG转换为SVG（5种方法比较）",
+  "description": "如何批量将PNG转换为SVG：比较5种经过测试的方法——在线工具、Pro热文件夹、Inkscape、CLI脚本和API。适用于10个或10,000个文件。",
+  "url": "https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/",
+  "mainEntityOfPage": "https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/",
+  "inLanguage": "zh",
+  "datePublished": "2026-09-12",
+  "dateModified": "2026-09-12",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/zh/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-logo.jpg"
+}</script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "我可以免费将PNG批量转换为SVG吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是的，有两种方式。命令行脚本（Potrace、ImageMagick、VTracer）免费且没有文件限制，免费的桌面应用程序加上Inkscape也是免费的，但它们一次只能转换一个文件。也存在免费接受多个文件的在线工具——但在发送商业艺术作品之前，只需验证它们是否真的进行了矢量化并阅读其隐私条款。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何在批量转换时保留颜色？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "使用彩色描摹工具。无论你如何编写脚本，Potrace都严格限制为黑白；VTracer、PixelToPath Pro和PixelToPath API都运行着一个色彩引擎，将每个颜色区域重建为其自身的矢量形状。使用vtracer编写循环脚本，如果你不想自己维护脚本，可以使用Pro版本或API。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我可以上传一个包含PNG的ZIP文件并获得一个包含SVG的ZIP文件吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一些在线工具（例如Pixelied）接受批量上传并返回一个ZIP。桌面批量模式和脚本将结果写入一个输出文件夹，你可以一步将其打包。API每次调用返回一个SVG，因此归档工作留给了你——这通常也是构建管道（build pipeline）所希望的方式。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么我批量转换出来的都是黑色矩形？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "那是“嵌入陷阱”：工具将每个PNG包装在SVG容器中，而不是描摹它，而你看到的是未能显示的嵌入式光栅图像。在文本编辑器中打开一个输出文件——单个base64 &lt;image&gt;标签就证实了这一点。使用能输出真正&lt;path&gt;元素的工具重新运行批量处理。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我有50,000个文件。什么方法真正有效？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "热文件夹或API——其他所有方法在达到这个数量之前很早就碰壁了。在每分钟60次请求的速度下，API可在约14小时的实际时间内处理50,000张图像，消耗约200欧元的预付费积分。本地热文件夹在离线状态下执行相同的工作，吞吐量由你的CPU决定。两者在整个运行过程中都能保持设置完全一致。"
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/zh/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "学习图像转 SVG 转换",
+      "item": "https://pixel-to-path.com/zh/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "如何批量将PNG转换为SVG（5种方法比较）",
+      "item": "https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/zh/" class="brand">
+            <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/zh/"
+            class="">首页</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">产品 <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/zh/online/"
+                       class="">在线工具</a>
+                    <a href="/zh/offline/"
+                       class="">桌面应用</a>
+                    <a href="/zh/pro/"
+                       class="">桌面应用 Pro</a>
+                    <a href="/zh/api/"
+                       class="">API</a>
+                </div>
+            </div>
+
+            <a href="/zh/pricing/"
+               class="">价格</a>
+
+            <div class="lang-switch">
+                <span>🇨🇳 ZH</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/zh/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">首页</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">产品</span>
+            <div class="mobile-sublist">
+                <a href="/zh/online/"
+                   class="">在线工具</a>
+                <a href="/zh/offline/"
+                   class="">桌面应用</a>
+                <a href="/zh/pro/"
+                   class="">桌面应用 Pro</a>
+                <a href="/zh/api/"
+                   class="">API</a>
+            </div>
+
+            <a href="/zh/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">价格</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">语言</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO – above the fold, H1 + CTA
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>如何批量将PNG转换为SVG（5种方法比较）</h1>
+                <p class="blog-hero__subtitle">五种经过测试的一次性将多个PNG文件转换为SVG的方法——在线工具、热文件夹（hot folder）、免费桌面应用程序、脚本和API——从成本、吞吐量、色彩支持和隐私方面进行了比较。</p>
+
+                <!-- Format badges -->
+                <div class="big-badges">
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG × 10</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG × 10,000</span>
+                    
+                    <span class="fmt-arrow">→</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">SVG</span>
+                    
+                </div>
+
+                <!-- Trust badges -->
+                <div class="badges">
+                    <span class="badge__item badge__item--accent">✓ 5种方法比较</span>
+                    <span class="badge__item">10个文件或10,000个文件</span>
+                    <span class="badge__item">包含免费选项</span>
+                    <span class="badge__item">真正的描摹，无嵌入</span>
+                </div>
+
+                <a href="/zh/online/" class="btn primary-btn blog-hero__cta">立即免费转换一个文件 →</a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             INTRO – the batch problem + embed-vs-trace warning
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>批量处理的问题——以及需要避免的陷阱</h2>
+                    <p>你有10个PNG文件。或者400个。或者——就像那个因询问关于51,000个文件的问题而在Adobe社区论坛上引发了最长帖子之一的设计师一样——需要将整个资产库矢量化。手动转换一张图片没问题；但超过这个数量，你就需要一个批量工作流：一个将整个光栅图像文件夹变成SVG文件夹的流程。如果今天真的只有一个重要文件， <a href="/zh/online/">免费的在线PNG转SVG转换器</a>不到一分钟就能搞定——而本指南涵盖了超越此范围的所有内容。</p>
+                    <p>在比较方法之前先明确一个定义。真正的批量转换意味着每个PNG都被“矢量化”了：它的形状被重新绘制为数学路径，这就是 <a href="/zh/blog/vectorize-image/">矢量化实际在做的事情</a>。许多工具完全跳过了这一步，这会彻底改变输出结果。</p>
+                    <p class="content-callout content-callout--warn">最常见的失败模式：一些“SVG转换器”根本没有进行任何描摹——它们只是将你的PNG作为嵌入图片包裹在一个.svg文件中。结果看起来能“完美”缩放，因为它仍然是一个伪装的位图。在文本编辑器中打开任何输出文件：如果看到的是一个巨大的base64 &lt;image&gt;标签，而不是&lt;path&gt;元素，这意味着你什么都没有矢量化。下面评估每一种方法时，都会以是否进行了真正的描摹为标准。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             REAL OUTPUT – before/after traced by the tool
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">转换器的真实效果</h2>
+                
+
+<figure class="ba-compare ba-compare--sample">
+    <div class="ba-compare__pair">
+        <div class="ba-panel ba-panel--before">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">转换前 · 原图</span>
+                <span class="size-badge">5 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-input.png" width="320" height="320" loading="lazy" decoding="async" alt="PNG 文件：藏青色圆形徽标，带白色 V 形图案">
+            </div>
+        </div>
+        <span class="ba-compare__arrow" aria-hidden="true">→</span>
+        <div class="ba-panel ba-panel--after">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">转换后 · SVG</span>
+                <span class="size-badge">黑白预设 · 2 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-bw.svg" width="320" height="320" loading="lazy" decoding="async" alt="同一徽标经黑白预设转换为 SVG：曲线平滑，黑色填充">
+            </div>
+        </div>
+    </div>
+    <figcaption>用本工具完成的一次真实转换：左侧的原始 PNG 经黑白预设描摹为右侧的 SVG——一个在任何缩放级别下都保持清晰的矢量文件。</figcaption>
+</figure>
+
+                
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/logo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="同一徽标放大到 400%：左侧 PNG 的像素清晰可见，右侧 SVG 的曲线依旧平滑。">
+    <figcaption>同一徽标放大到 400%：左侧 PNG 的像素清晰可见，右侧 SVG 的曲线依旧平滑。</figcaption>
+</figure>
+
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             METHODS 1–3 – online, hot folder, free desktop
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="content-section">
+                    <h2>方法1：在线批量转换器</h2>
+                    <p>对于小批量来说是最快的途径。有几个在线工具可以一次接受多个文件：to.imagestool.com允许你拖放一组PNG，并在浏览器中本地处理它们；Pixelied接受批量上传并为你提供一个包含结果的ZIP压缩包；ImageResizer.com的网页试用版和reaConverter的工作原理也相同。无需安装，没有命令行——拖入文件，下载结果。</p>
+                    <p>在将实际工作交托给它们之前，需做两项检查。首先，确保工具真的在描摹：一些“批量”网站只是在服务器上循环进行单文件转换，并返回一个伪SVG的ZIP文件——这就是上面警告过的嵌入陷阱。其次，如果艺术作品是商业性质的或受保密协议（NDA）约束，请阅读隐私条款：基于浏览器的工具绝不会上传你的文件，而基于服务器的工具则会将每一张图片发送到别人的机器上。为了透明起见：PixelToPath自家的免费在线转换器有意被设计为只能单文件处理。它是处理那一个重要徽标的合适工具，而不是用来处理一个包含400个文件的文件夹——它在这次比较中正是以此身份出现的。</p>
+
+                    <h2>方法2：带有热文件夹的桌面应用 (PixelToPath Pro)</h2>
+                    <p>如果批量处理是每周的例行工作而不是一次性任务，热文件夹（hot folder）可以完全消除手动步骤。PixelToPath Pro（支持Windows和Linux）会监控一个文件夹，并自动转换进入其中的每一张图片。整个流程只需四步：</p>
+                    <ol>
+                        <li>选择你的文件夹：选择要监控的文件夹和SVG存放的输出文件夹。</li>
+                        <li>拖入你的PNG：保存、复制或将整个批次的文件拖入输入文件夹——无论是十个还是几百个文件。</li>
+                        <li>让它工作：每个文件到达时都会使用你保存的设置配置文件进行描摹，整个过程完全在你的机器上运行。</li>
+                        <li>收集SVG：结果出现在输出文件夹中，并以原始文件名命名。</li>
+                    </ol>
+                    <p>对批量处理至关重要的部分：一个设置配置文件适用于整个队列。如果手动转换400个图标，第300个文件永远不可能和第12个文件完全一致；使用配置文件，每个输出都是一致的——正是这种细节摧毁了手动工作流。所有操作都在本地运行，因此没有上传上限，且任何文件都不会离开你的机器。Pro是一次性付费39欧元（不含增值税），提供一名用户在最多3台机器上的终身授权； <a href="/zh/pro/">热文件夹批量转换</a>页面详细列出了所有包含的内容。这是本文提到的五种选项之一——但它是唯一一种旨在让批量转换成为你不再需要操心的步骤而构建的选项。</p>
+
+                    <h2>方法3：免费桌面应用和Inkscape</h2>
+                    <p>已经在使用免费桌面应用了？它可以离线将PNG、JPG、BMP和WebP转换为SVG，没有文件数量限制，并且可以完全访问高级描摹设置——但每次只能处理一个文件。批量处理正是升级到Pro版本所添加的功能，最好是直说，而不是假装并非如此。如果你想要免费、本地且基于图形界面（GUI）的工具， <a href="/zh/offline/">免费桌面转换器</a>对于单个文件来说是一个实在的选择：实际的吞吐量是每天几十个文件，而不是几百个。</p>
+                    <p>Inkscape是另一款免费主力工具。它的“描摹位图”对话框也是针对单张图片的，虽然Inkscape提供了可以写进循环脚本的命令行选项，但体验很粗糙，而且几乎没有文档。顺便说一句，GIMP根本没有原生的批量矢量导出功能——其论坛上的帖子定期证实了这一点。在将数小时投入到图形界面工作流之前，请检查你是否真的需要每个文件都是矢量的： <a href="/zh/blog/svg-vs-png/">Web的SVG与PNG对比</a>一文探讨了在何时这种转换是值得的。</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             METHODS 4–5 + COMPARISON TABLE
+             cluster-link placeholders: CLI (cluster-2-post-0)
+             and potrace/imagemagick (cluster-2-post-1) articles
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>方法4：命令行脚本 (ImageMagick, Potrace, VTracer)</h2>
+                    <p>对于一次性的大规模作业，一个十行的shell脚本胜过任何GUI。经典的黑白处理管道将ImageMagick与Potrace串联起来——先转换，后描摹： <code>magick input.png input.pbm &amp;&amp; potrace -s -o input.svg input.pbm</code></p>
+                    <p>将其包装在针对你文件夹的"for"循环中，Potrace将以你的CPU速度输出真正的矢量路径——但严格限制在黑白范围内。对于彩色，将同样的循环指向vtracer，这是一款开源的Rust描摹工具，也是驱动PixelToPath的技术。这两种工具都有足以写满一本手册的命令参数（flags），这就是为什么每个工具都有专门的指南（发布后将在此处链接）。脚本在成本（免费）、隐私（本地）和数量（每次运行数千个）方面胜出；但在入门门槛上处于劣势——你需要维护一个处理管道，并且当它在某个下午崩溃时，没人会补偿你。</p>
+                    <!-- cluster-link:cluster-2-post-0 -->
+                    <!-- cluster-link:cluster-2-post-1 -->
+
+                    <h2>方法5：用于CI和服务器端工作的API循环</h2>
+                    <p>当转换必须在服务器上进行时——在部署期间、在构建管道内部、从后端进行——本地工具就不再是选项了。这种模式是一个循环：使用你的Bearer密钥对每张图片进行一次无状态的POST请求，每个SVG直接写入你的资产管道。限制是每个密钥每分钟60次请求，因此请控制循环节奏，并使用指数退避算法重试受到速率限制的调用；失败的调用绝不会消耗积分。你可以 <a href="/zh/api/">使用REST API自动化整个批处理</a>——完全无需本地安装——这正是其意义所在。</p>
+                    <p>成本计算是可预测的：预付费图片在大批量时从每张0.05欧元降至0.01欧元，因此500张图片约为20欧元，10,000张图片约为200欧元——此外每个账户每月会额外增加10次免费转换。当转换必须是可重复的、服务器端的且没有本地依赖项时，选择API。当转换是本地的且交互式的，选择热文件夹。这两种方式几乎涵盖了现实世界中所有的批量处理需求。</p>
+
+                    <h2>批量PNG转SVG：五种方法全面比较</h2>
+                    <p>相同的输入，五种截然不同的契约。成本和隐私是结构性的，不是促销性质的；吞吐量假设有一名操作员（或一台普通的服务器）在现实的硬件上工作；而“色彩”指的是真正的多色矢量输出，而不是黑色的剪影。</p>
+                    <table class="vs-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">方法</th>
+                                <th scope="col">成本</th>
+                                <th scope="col">文件/天（实际）</th>
+                                <th scope="col">色彩</th>
+                                <th scope="col">质量控制</th>
+                                <th scope="col">隐私</th>
+                                <th scope="col">所需技能</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">在线转换器</th>
+                                <td data-label="成本">免费</td>
+                                <td data-label="文件/天（实际）">50-500（手动）</td>
+                                <td data-label="色彩">取决于工具</td>
+                                <td data-label="质量控制">仅限预设</td>
+                                <td data-label="隐私">各不相同 - 需检查条款</td>
+                                <td data-label="所需技能">无</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Pro 热文件夹</th>
+                                <td data-label="成本">一次性39欧元</td>
+                                <td data-label="文件/天（实际）">数千（本地CPU）</td>
+                                <td data-label="色彩">是</td>
+                                <td data-label="质量控制">一个配置文件，完整设置</td>
+                                <td data-label="隐私">100%本地</td>
+                                <td data-label="所需技能">无</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">免费桌面版 / Inkscape</th>
+                                <td data-label="成本">免费</td>
+                                <td data-label="文件/天（实际）">20-100（一次一个）</td>
+                                <td data-label="色彩">是（单文件）</td>
+                                <td data-label="质量控制">完整，针对每个文件</td>
+                                <td data-label="隐私">100%本地</td>
+                                <td data-label="所需技能">基础</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">脚本 (CLI)</th>
+                                <td data-label="成本">免费</td>
+                                <td data-label="文件/天（实际）">数千及以上（本地CPU）</td>
+                                <td data-label="色彩">Potrace 否 - VTracer 是</td>
+                                <td data-label="质量控制">完整 (参数)</td>
+                                <td data-label="隐私">本地</td>
+                                <td data-label="所需技能">命令行</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">API 循环</th>
+                                <td data-label="成本">每月10次免费，之后€0.01-0.05/张</td>
+                                <td data-label="文件/天（实际）">数万（60次请求/分钟）</td>
+                                <td data-label="色彩">是</td>
+                                <td data-label="质量控制">每次调用的引擎参数</td>
+                                <td data-label="隐私">文件被上传</td>
+                                <td data-label="所需技能">开发人员</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>如果你每个月进行一次以上的批量转换，方法2和5在使用的第一天下午就能值回票价。对于所有规模更小的工作，方法1或3除了占用你一点点时间外，没有任何成本。</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             RELATED GUIDES – internal links
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container" style="text-align:center;">
+                <h2 class="section-title">相关转换指南</h2>
+                <p class="section-intro">批量转换只是第一步。这些文章涵盖了其余部分。</p>
+
+                <div class="related-tools">
+                    
+                    <a href="/blog/vectorize-image/" class="related-tool-link">
+                        ✏️ 矢量化实际在做些什么
+                    </a>
+                    
+                    <a href="/blog/svg-vs-png/" class="related-tool-link">
+                        📈 Web端的SVG与PNG对比
+                    </a>
+                    
+                    <a href="/blog/import-svg/" class="related-tool-link">
+                        🎨 将SVG导入Figma或Canva
+                    </a>
+                    
+                    <a href="/online/" class="related-tool-link">
+                        🌐 免费在线转换器
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FAQ – FAQPage schema injected in <head>
+        ════════════════════════════════════════ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>我可以免费将PNG批量转换为SVG吗？</summary>
+                        <p>是的，有两种方式。命令行脚本（Potrace、ImageMagick、VTracer）免费且没有文件限制，免费的桌面应用程序加上Inkscape也是免费的，但它们一次只能转换一个文件。也存在免费接受多个文件的在线工具——但在发送商业艺术作品之前，只需验证它们是否真的进行了矢量化并阅读其隐私条款。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>如何在批量转换时保留颜色？</summary>
+                        <p>使用彩色描摹工具。无论你如何编写脚本，Potrace都严格限制为黑白；VTracer、PixelToPath Pro和PixelToPath API都运行着一个色彩引擎，将每个颜色区域重建为其自身的矢量形状。使用vtracer编写循环脚本，如果你不想自己维护脚本，可以使用Pro版本或API。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>我可以上传一个包含PNG的ZIP文件并获得一个包含SVG的ZIP文件吗？</summary>
+                        <p>一些在线工具（例如Pixelied）接受批量上传并返回一个ZIP。桌面批量模式和脚本将结果写入一个输出文件夹，你可以一步将其打包。API每次调用返回一个SVG，因此归档工作留给了你——这通常也是构建管道（build pipeline）所希望的方式。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>为什么我批量转换出来的都是黑色矩形？</summary>
+                        <p>那是“嵌入陷阱”：工具将每个PNG包装在SVG容器中，而不是描摹它，而你看到的是未能显示的嵌入式光栅图像。在文本编辑器中打开一个输出文件——单个base64 &lt;image&gt;标签就证实了这一点。使用能输出真正&lt;path&gt;元素的工具重新运行批量处理。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>我有50,000个文件。什么方法真正有效？</summary>
+                        <p>热文件夹或API——其他所有方法在达到这个数量之前很早就碰壁了。在每分钟60次请求的速度下，API可在约14小时的实际时间内处理50,000张图像，消耗约200欧元的预付费积分。本地热文件夹在离线状态下执行相同的工作，吞吐量由你的CPU决定。两者在整个运行过程中都能保持设置完全一致。</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FINAL CTA
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container blog-cta-wrap">
+                <h2>准备好清理积压的PNG了吗？</h2>
+                <p>在免费的在线工具中转换单个文件，在Pro版本中设置热文件夹，或者循环调用API——每条路线最终都会得到干净、真正的矢量路径。</p>
+                <div class="double-buttons">
+                    <a href="/zh/online/" class="btn primary-btn big-btn">立即免费转换一个文件 →</a>
+                    <a href="/zh/offline/" class="btn secondary-btn big-btn">⬇️ 下载桌面应用</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>支持开源开发</h3>
+        <p>PixelToPath可免费使用。如果这个工具帮助您节省了时间，请考虑请我喝杯咖啡。</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ 通过PayPal捐款</a>
+    </div>
+</section>
+    </main>
+
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/zh/">首页</a>
+        <a href="/zh/online/">在线工具</a>
+        <a href="/zh/offline/">桌面应用</a>
+        <a href="/zh/pro/">Pro</a>
+        <a href="/zh/api/">API</a>
+        <a href="/zh/blog/">博客</a>
+        <a href="https://github.com/lorrisc/PixelToPath">开源 (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">客户门户</a>
+    </div>
+</footer>
+
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
+</body>
+</html>
