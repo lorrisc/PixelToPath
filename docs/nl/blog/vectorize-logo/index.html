@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="nl" dir="ltr">
 <head>
-    <script>
-    var _paq = window._paq = window._paq || [];
-    _paq.push(['disableCookies']);
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-        var u="//stats.pixel-to-path.com/matomo/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
-        _paq.push(['setSiteId', '2']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-    })();
-</script>
+    <!-- Analytics Umami first-party : /main.7c3f9d.js et /api/e sont proxifiés
+     vers le serveur Umami par le Worker portal-proxy. Rien ne quitte
+     l'origine pixel-to-path.com : indétectable par les adblockers. -->
+<script defer src="/main.7c3f9d.js" data-website-id="77afc243-d7d0-4c23-9e8b-3badaac67041"></script>
+
     
 <script defer src="../../../assets/js/ads-lazy.js"></script>
 
