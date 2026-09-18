@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+<head>
+    <!-- Analytics Umami first-party : /main.7c3f9d.js et /api/e sont proxifiés
+     vers le serveur Umami par le Worker portal-proxy. Rien ne quitte
+     l'origine pixel-to-path.com : indétectable par les adblockers. -->
+<script defer src="/main.7c3f9d.js" data-website-id="77afc243-d7d0-4c23-9e8b-3badaac67041"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>API PixelToPath – REST API Obrázek do SVG, 10 konverzí zdarma/měsíc</title>
+    <meta name="description" content="Převeďte PNG, JPG, BMP nebo WebP na čisté SVG pomocí jednoho REST volání. Potrace pro černobílé tahy, VTracer pro barevné vektory. 10 konverzí zdarma každý měsíc, předplacené obrázky od 0,05 € (až 0,01 €/obrázek podle objemu), kredity nikdy nevyprší.">
+    <meta name="keywords" content="api pixeltopath, api obrázek do svg, api rest png do svg, api vektorizace, api potrace, api vtracer, api převodník svg">
+    <meta name="author" content="Lorris C.">
+
+    <meta property="og:title" content="API PixelToPath – REST API Obrázek do SVG, 10 konverzí zdarma/měsíc">
+    <meta property="og:description" content="Převeďte PNG, JPG, BMP nebo WebP na čisté SVG pomocí jednoho REST volání. Potrace pro černobílé tahy, VTracer pro barevné vektory. 10 konverzí zdarma každý měsíc, předplacené obrázky od 0,05 € (až 0,01 €/obrázek podle objemu), kredity nikdy nevyprší.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="PixelToPath app screenshot">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="API PixelToPath – REST API Obrázek do SVG, 10 konverzí zdarma/měsíc">
+    <meta name="twitter:description" content="Převeďte PNG, JPG, BMP nebo WebP na čisté SVG pomocí jednoho REST volání. Potrace pro černobílé tahy, VTracer pro barevné vektory. 10 konverzí zdarma každý měsíc, předplacené obrázky od 0,05 € (až 0,01 €/obrázek podle objemu), kredity nikdy nevyprší.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="PixelToPath app screenshot">
+    <meta property="og:url" content="https://pixel-to-path.com/cs/api/">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://pixel-to-path.com/cs/api/" />
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/api/" />
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/api/" />
+    <link rel="alternate" hreflang="cs" href="https://pixel-to-path.com/cs/api/" />
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/api/" />
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/api/" />
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/api/" />
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/api/" />
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/api/" />
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/api/" />
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/api/" />
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/api/" />
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/api/" />
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/api/" />
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/api/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/api/" />
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/api/" />
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/api/" />
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/api/" />
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/api/" />
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/api/" />
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/api/" />
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/api/" />
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/api/" />
+
+    <link rel="stylesheet" href="../../assets/css/bundle.7f66facb.css">
+
+
+
+    <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebService",
+  "@id": "https://pixel-to-path.com/cs/api/#api",
+  "name": "PixelToPath API",
+  "url": "https://pixel-to-path.com/cs/api/",
+  "description": "Převeďte PNG, JPG, BMP nebo WebP na čisté SVG pomocí jednoho REST volání. Potrace pro černobílé tahy, VTracer pro barevné vektory. 10 konverzí zdarma každý měsíc, předplacené obrázky od 0,05 € (až 0,01 €/obrázek podle objemu), kredity nikdy nevyprší.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://pixel-to-path.com/#organization",
+    "name": "PixelToPath"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "Vektorizujte ve velkém přímo z vašeho kódu. Jedno REST volání: odešlete obrázek, získejte čisté SVG."
+  },
+  "isPartOf": {
+    "@id": "https://pixel-to-path.com/#website"
+  }
+}</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Co se počítá jako konverze?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Úspěšné volání POST /v1/convert, které vrací SVG. Neúspěšná volání (neplatný obrázek, špatné parametry, dosažený limit požadavků, chyba serveru) a volání GET /v1/me se nikdy neúčtují."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jak se počítá měsíční bezplatná kvóta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Na účet, podle kalendářního měsíce UTC — resetuje se 1. dne v měsíci v 00:00 UTC. Vytvořením více API klíčů se bezplatná kvóta nenásobí: všechny klíče pod stejným účtem sdílejí stejných 10 bezplatných konverzí."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vyprší platnost kreditů?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ne. Zakoupené kredity zůstávají na vašem účtu, dokud je nevyužijete. Spotřebovávají se pouze po vyčerpání 10 měsíčních bezplatných konverzí."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jak získám více konverzí v měsíci?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kupte si předplacené obrázky z klientského portálu — libovolné množství, v balíčcích po 50. Vždy vidíte přesně, kolik obrázků dostanete: 50 obrázků za 2,50 €, 500 obrázků za 20 €, 2 500 obrázků za 75 €, 10 000 obrázků za 200 €, 50 000 obrázků za 500 €. Kredity se na váš účet přidají automaticky během několika sekund po zaplacení — žádný licenční klíč, nic k zadávání."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Co se stane, když ztratím svůj API klíč?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Klíče jsou uloženy zahašované, a proto je nelze obnovit. Odvolejte ztracený klíč v portálu a vytvořte si nový — bude okamžitě aktivní."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jaké formáty obrázků jsou podporovány?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG, JPEG, BMP a WebP, do velikosti 20 MB a rozlišení 50 megapixelů a nejméně 64×64 pixelů. Obrázky, jejichž nejdelší strana přesahuje 1500 px, se před konverzí zmenší, přesně jako na bezplatném webu."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/cs/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "API",
+      "item": "https://pixel-to-path.com/cs/api/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/cs/" class="brand">
+            <img src="../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/cs/"
+            class="">Domů</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Produkty <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/cs/online/"
+                       class="">Online nástroj</a>
+                    <a href="/cs/offline/"
+                       class="">Desktopová aplikace</a>
+                    <a href="/cs/pro/"
+                       class="">Pro desktopová aplikace</a>
+                    <a href="/cs/api/"
+                       class="active">API</a>
+                </div>
+            </div>
+
+            <a href="/cs/pricing/"
+               class="">Ceník</a>
+
+            <div class="lang-switch">
+                <span>🇨🇿 CS</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/api/">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/api/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/cs/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Domů</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">Produkty</span>
+            <div class="mobile-sublist">
+                <a href="/cs/online/"
+                   class="">Online nástroj</a>
+                <a href="/cs/offline/"
+                   class="">Desktopová aplikace</a>
+                <a href="/cs/pro/"
+                   class="">Pro desktopová aplikace</a>
+                <a href="/cs/api/"
+                   class="active">API</a>
+            </div>
+
+            <a href="/cs/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Ceník</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Jazyk</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/api/" class="mobile-lang-btn">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/api/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/api/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/api/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/api/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- Hero -->
+        <div class="api-hero">
+            <div class="container">
+                <span class="api-tag">API</span>
+                <h1>API PixelToPath</h1>
+                <p class="api-hero__text">Vektorizujte své obrázky programově pomocí <strong>jednoho REST volání</strong>. Odešlete soubor PNG, JPG, BMP nebo WebP a získejte čisté SVG, připravené pro produkci. Černobílé kresby jsou vektorizovány pomocí <strong>Potrace</strong>, barevné obrázky pomocí <strong>VTracer</strong> — stejné enginy jako bezplatný online převodník.</p>
+                <div class="api-hero__cta">
+                    <a class="btn primary-btn big-btn" href="/portal/"> Získat API klíč</a>
+                    <a class="btn secondary-btn big-btn" href="/portal/">Přihlásit se do portálu</a>
+                    <a class="api-hero__docs" href="#quickstart">Přečíst si dokumentaci ↓</a>
+                </div>
+                <p class="api-hero__note">10 konverzí zdarma každý měsíc · Není nutná kreditní karta</p>
+            </div>
+        </div>
+
+        <!-- Accroche -->
+        <div class="api-strip">
+            <div class="container">
+                <p>10 konverzí zdarma / měsíc • <strong>1 REST volání</strong> • Enginy Potrace + VTracer • Kredity <strong>nikdy nevyprší</strong></p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="api-body">
+            <div class="container">
+                <div class="api-layout">
+
+                    <!-- TOC -->
+                    <aside class="api-toc">
+                        <p class="api-toc__title">Na této stránce</p>
+                        <ul>
+                            
+                            <li><a href="#quickstart">Rychlý start</a></li>
+                            <li><a href="#authentication">Ověřování</a></li>
+                            <li><a href="#convert">POST /v1/convert</a></li>
+                            <li><a href="#engines">Enginy</a></li>
+                            <li><a href="#response">Odpověď</a></li>
+                            <li><a href="#errors">Chyby</a></li>
+                            <li><a href="#limits">Limity požadavků</a></li>
+                            <li><a href="#pricing">Ceník</a></li>
+                            <li><a href="#examples">Příklady kódu</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Content -->
+                    <article class="api-content">
+
+                        <!-- Quickstart -->
+                        <section id="quickstart" class="api-section">
+                            <h2>Rychlý start</h2>
+                            <p>Ve třech krocích převedete obrázky do SVG z vašeho terminálu, skriptů nebo aplikace.</p>
+                            <div class="api-steps">
+                                <div class="api-step">
+                                    <h3>1 · Vytvořte si účet</h3>
+                                    <p>Zaregistrujte se na klientském portálu pomocí e-mailové adresy a hesla (více než 10 znaků). Není nutná kreditní karta.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>2 · Vytvořte API klíč</h3>
+                                    <p>V portálu si vytvořte klíč. Zobrazí se <strong>pouze jednou</strong> — pečlivě si ho uschovejte. Klíče vypadají jako <code>ptp_live_…</code> a lze je kdykoli odvolat.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>3 · Zavolejte /v1/convert</h3>
+                                    <p>Odešlete svůj obrázek jako multipart/form-data se svým klíčem v hlavičce Authorization. SVG vám bude vráceno v těle odpovědi.</p>
+                                </div>
+                            </div>
+
+                            <p class="api-code-label">Vaše první konverze</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@logo.png" \
+  -F "colormode=binary" \
+  -o logo.svg</code></pre>
+                            <p class="api-note">Interaktivní reference: <a href="https://api.pixel-to-path.com/v1/docs">pixel-to-path.com/v1/docs</a> (OpenAPI/Swagger).</p>
+                        </section>
+
+                        <!-- Authentication -->
+                        <section id="authentication" class="api-section">
+                            <h2>Ověřování</h2>
+                            <p>Každý požadavek je ověřen pomocí Bearer tokenu v hlavičce <code>Authorization</code>:</p>
+                            <pre class="api-code"><code>Authorization: Bearer ptp_live_0123abc…</code></pre>
+                            <ul class="api-list">
+                                <li><strong>Klíče jsou tajné:</strong> jsou uloženy na serveru zahašované a zobrazí se pouze jednou při vytvoření. Ztratili jste klíč? Odvolejte ho a vytvořte si nový.</li>
+                                <li><strong>Jeden účet, více klíčů:</strong> vytvořte si až 5 aktivních klíčů pro oddělení vašich projektů. Vaše měsíční bezplatná kvóta se počítá na účet, ne na klíč.</li>
+                                <li><strong>Okamžité odvolání:</strong> odvolaný klíč okamžitě přestane fungovat, ať už z portálu nebo prostřednictvím odpovědi API zablokovaného účtu.</li>
+                            </ul>
+                        </section>
+
+                        <!-- POST /v1/convert -->
+                        <section id="convert" class="api-section">
+                            <h2><span class="api-method api-method--post">POST</span> /v1/convert</h2>
+                            <p>Nahrání a konverze v jednom bezstavovém volání. Úspěšné volání stojí maximálně 1 kredit — neúspěšná volání, neplatná volání nebo volání omezená limitem požadavků nestojí nic.</p>
+
+                            <h3>Požadavek (multipart/form-data)</h3>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Pole</th>
+                                            <th>Typ</th>
+                                            <th>Výchozí</th>
+                                            <th>Popis</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>file</code></td>
+                                            <td>file</td>
+                                            <td>—</td>
+                                            <td>Obrázek k převodu. PNG, JPEG, BMP nebo WebP · max 20 MB · max 50 Mpx · min 64×64 px.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>colormode</code></td>
+                                            <td>string</td>
+                                            <td><code>color</code></td>
+                                            <td>&lt;code&gt;color&lt;/code&gt; používá engine VTracer, &lt;code&gt;binary&lt;/code&gt; používá Potrace (černobíle).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>mode</code></td>
+                                            <td>string</td>
+                                            <td><code>spline</code></td>
+                                            <td>Pouze pro Color (VTracer) — ignorováno v binárním režimu. <code>spline</code> | <code>polygon</code> | <code>none</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>hierarchical</code></td>
+                                            <td>string</td>
+                                            <td><code>stacked</code></td>
+                                            <td>Pouze pro Color (VTracer) — ignorováno v binárním režimu. <code>stacked</code> | <code>cutout</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>filter_speckle</code></td>
+                                            <td>int</td>
+                                            <td><code>4</code></td>
+                                            <td>Pouze pro Color (VTracer) — ignorováno v binárním režimu. 0–16 — odstraní malé skvrny šumu.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>color_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>6</code></td>
+                                            <td>Pouze pro Color (VTracer) — ignorováno v binárním režimu. 1–8 — počet platných bitů na barevný kanál.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>layer_difference</code></td>
+                                            <td>int</td>
+                                            <td><code>16</code></td>
+                                            <td>Pouze pro Color (VTracer) — ignorováno v binárním režimu. 0–64 — vzdálenost mezi barevnými vrstvami.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>corner_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>60</code></td>
+                                            <td>0–180 — úhel pro detekci rohů (oba enginy).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>length_threshold</code></td>
+                                            <td>float</td>
+                                            <td><code>4.0</code></td>
+                                            <td>3.5–10 — minimální délka segmentu (oba enginy).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>splice_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>45</code></td>
+                                            <td>0–180 — úhel oříznutí cesty (oba enginy).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>path_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>3</code></td>
+                                            <td>0–8 — počet desetinných míst v souřadnicích cesty.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>invert</code></td>
+                                            <td>bool</td>
+                                            <td><code>false</code></td>
+                                            <td>Pouze pro Binary (Potrace) — ignorováno v barevném režimu. Sledovat světlé oblasti místo tmavých oblastí.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>turdsize</code></td>
+                                            <td>int</td>
+                                            <td><code>2</code></td>
+                                            <td>Pouze pro Binary (Potrace) — ignorováno v barevném režimu. 0–20 — odstraní malé skvrny až do této velikosti.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>alphamax</code></td>
+                                            <td>float</td>
+                                            <td><code>1.0</code></td>
+                                            <td>Pouze pro Binary (Potrace) — ignorováno v barevném režimu. 0–1.334 — práh pro vyhlazení rohů.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>opttolerance</code></td>
+                                            <td>float</td>
+                                            <td><code>0.2</code></td>
+                                            <td>Pouze pro Binary (Potrace) — ignorováno v barevném režimu. 0–10 — tolerance optimalizace křivek.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Engines -->
+                        <section id="engines" class="api-section">
+                            <h2>Dva enginy, vybrané pomocí &#34;colormode&#34;</h2>
+                            <p>API spouští přesně stejné enginy jako bezplatný online převodník a desktopová aplikace:</p>
+                            <div class="grid-3">
+                                <div class="card api-engine">
+                                    <h3>binary — Potrace</h3>
+                                    <p>Černobílé trasování pro perokresby, skeny, náčrty a loga. Tmavá část obrázku (stupně šedi &lt; 50 %) je převedena na bílé pozadí. Vylaďte výsledek pomocí <code>turdsize</code> (odstranění šumu), <code>alphamax</code> (vyhlazení rohů) a <code>opttolerance</code> (optimalizace cest).</p>
+                                </div>
+                                <div class="card api-engine">
+                                    <h3>color — VTracer</h3>
+                                    <p>Vektorizace ve vrstvených barvách pro ilustrace, kreslené filmy a fotografie. Ovládejte úroveň detailů pomocí <code>filter_speckle</code>, <code>color_precision</code>, <code>layer_difference</code> a přizpůsobení křivek pomocí <code>mode</code> (spline, polygon, none).</p>
+                                </div>
+                            </div>
+                            <p class="api-note">Obrázky jsou předzpracovány přesně tak, jak na webu: nejdelší strana je před konverzí změněna na 1500 px a API vrací zjištěný typ obrázku (<code>line_art</code>, <code>logo</code>, <code>photo</code> nebo <code>illustration</code>) v hlavičce <code>X-Detected-Type</code>.</p>
+                        </section>
+
+                        <!-- Response -->
+                        <section id="response" class="api-section">
+                            <h2>Odpověď</h2>
+                            <p>Při úspěchu: <code>200 OK</code> s <code>image/svg+xml</code> — tělem odpovědi je samotný soubor SVG. Informační hlavičky:</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Hlavička</th>
+                                            <th>Popis</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><code>X-Credits-Remaining</code></td><td>Zbývající placené kredity na účtu po odečtení tohoto volání.</td></tr>
+                                        <tr><td><code>X-Free-Remaining</code></td><td>Zbývající bezplatné konverze tento měsíc.</td></tr>
+                                        <tr><td><code>X-Detected-Type</code></td><td>Zjištěný typ obrázku (info): line_art, logo, photo nebo illustration.</td></tr>
+                                        <tr><td><code>X-Processing-Time</code></td><td>Čas zpracování na serveru v sekundách.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>GET /v1/me</h3>
+                            <p>Stav účtu pro klíč použitý při volání. <strong>Zdarma</strong> — nikdy se neodečítá z vaší kvóty, nikdy se neúčtuje.</p>
+                            <p class="api-code-label">Příklad odpovědi</p>
+                            <pre class="api-code"><code>GET /v1/me
+Authorization: Bearer ptp_live_…
+
+{
+  "key": { "name": "prod", "prefix": "ptp_live_0123abc", … },
+  "usage": {
+    "month": "2026-09", "free_used": 7, "free_limit": 10,
+    "free_remaining": 3, "resets_at": "2026-10-01T00:00:00+00:00"
+  },
+  "credits": { "balance": 120 }
+}</code></pre>
+                        </section>
+
+                        <!-- Errors -->
+                        <section id="errors" class="api-section">
+                            <h2>Chyby</h2>
+                            <p>Každá chyba vrací konzistentní JSON objekt. Neúspěšná volání nikdy nespotřebují kredity.</p>
+                            <pre class="api-code"><code>HTTP/1.1 402 Payment Required
+{
+  "error": {
+    "code": "quota_exceeded",
+    "message": "Monthly free quota used and no credits left.",
+    "usage": { "free_used": 10, "free_limit": 10, "credits": 0 }
+  }
+}</code></pre>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>HTTP</th>
+                                            <th>Kód</th>
+                                            <th>Kdy</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>401</td><td><code>invalid_api_key</code></td><td>Chybějící, špatně zformovaný, neznámý nebo odvolaný API klíč.</td></tr>
+                                        <tr><td>402</td><td><code>quota_exceeded</code></td><td>Měsíční bezplatná kvóta byla vyčerpána a nezbývají žádné kredity.</td></tr>
+                                        <tr><td>403</td><td><code>account_banned</code></td><td>Účet je zablokován — všechny jeho klíče jsou odmítnuty.</td></tr>
+                                        <tr><td>403</td><td><code>ip_blocked</code></td><td>IP adresa volajícího je na černé listině.</td></tr>
+                                        <tr><td>413</td><td><code>file_too_large</code></td><td>Soubor je větší než 20 MB.</td></tr>
+                                        <tr><td>422</td><td><code>invalid_image</code> / <code>image_too_small</code> / <code>invalid_params</code></td><td>Neplatný obrázek, příliš malý obrázek nebo neplatná hodnota parametru.</td></tr>
+                                        <tr><td>429</td><td><code>rate_limited</code></td><td>Překročen limit požadavků na klíč (viz níže). Zahrnuje hlavičku Retry-After.</td></tr>
+                                        <tr><td>500</td><td><code>internal_error</code></td><td>Selhání konverze na straně serveru — nejsou účtovány žádné kredity.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Rate limits -->
+                        <section id="limits" class="api-section">
+                            <h2>Limity požadavků</h2>
+                            <p>Limity se vztahují na API klíč, nikoli na IP adresu, takže sdílená kancelář nebo CI agent nebude nikdy penalizován provozem někoho jiného.</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Limit</th>
+                                            <th>Hodnota</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Požadavky za minutu, na klíč</td><td><strong>60</strong></td></tr>
+                                        <tr><td>Požadavky za den, na klíč</td><td><strong>2 000</strong></td></tr>
+                                        <tr><td>Souběžné konverze, na klíč</td><td>2 (další volání čekají, pak 429)</td></tr>
+                                        <tr><td>Max. velikost souboru / rozlišení</td><td>20 MB / 50 Mpx</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Pricing -->
+                        <section id="pricing" class="api-section">
+                            <h2>Ceník</h2>
+                            <p>Každý nový účet získává <strong>10 konverzí zdarma každý měsíc</strong>, bez kreditní karty. Potřebujete více? Kupte si předplacené obrázky — libovolné množství (v balíčcích po 50), s množstevními slevami. Nikdy nevyprší a sčítají se s vaší měsíční bezplatnou kvótou (bezplatné konverze se spotřebují jako první).</p>
+                            <div class="api-pricing">
+                                <div class="card api-price-card">
+                                    <h3>Zdarma</h3>
+                                    <p class="api-price">0 €<span>/ měsíc</span></p>
+                                    <ul class="checklist">
+                                        <li>10 konverzí / měsíc</li>
+                                        <li>Oba enginy (Potrace + VTracer)</li>
+                                        <li>Až 5 API klíčů</li>
+                                    </ul>
+                                    <a class="btn secondary-btn" href="/portal/">Vytvořit účet</a>
+                                </div>
+                                <div class="card api-price-card api-price-card--highlight">
+                                    <h3>Předplacené obrázky</h3>
+                                    <p class="api-price">0,050 €<span>/ obrázek</span></p>
+                                    <table class="tiers">
+                                        <caption>Množstevní slevy — čím více obrázků koupíte, tím méně vás každý stojí</caption>
+                                        <tr><th scope="row">Obrázky</th><td>50–450</td><td>500–2 450</td><td>2 500–9 950</td><td>10 000–49 950</td><td>50 000+</td></tr>
+                                        <tr><th scope="row">€/image</th><td>0.050</td><td>0.040</td><td>0.030</td><td>0.020</td><td>0.010</td></tr>
+                                    </table>
+                                    <ul class="checklist">
+                                        <li>1 zakoupený obrázek = 1 konverze (kredity nikdy nevyprší)</li>
+                                        <li>Nikdy nevyprší, sčítá se s úrovní zdarma</li>
+                                        <li>Libovolné množství: 0,040 €/obrázek od 500, až po 0,010 €/obrázek</li>
+                                    </ul>
+                                    <a class="btn primary-btn" href="/portal/">Koupit obrázky</a>
+                                </div>
+                            </div>
+                            <p class="api-note">Automatické připsání: váš zůstatek se aktualizuje během několika sekund po zaplacení, prostřednictvím platebního webhooku. Vrácení peněz odečítá zakoupené kredity, v rámci aktuálního zůstatku. Bezpečná platba přes Lemon Squeezy (DPH je spravována automaticky).</p>
+                        </section>
+
+                        <!-- Code examples -->
+                        <section id="examples" class="api-section">
+                            <h2>Příklady kódu</h2>
+                            <p>Zkopírujte a upravte. API používá standardní multipart/form-data, takže funguje jakýkoli HTTP klient.</p>
+
+                            <p class="api-code-label">cURL</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@photo.jpg" \
+  -F "colormode=color" \
+  -F "filter_speckle=4" \
+  -o photo.svg</code></pre>
+
+                            <p class="api-code-label">Python</p>
+                            <pre class="api-code"><code>import requests
+
+resp = requests.post(
+    "https://api.pixel-to-path.com/v1/convert",
+    headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
+    files={"file": open("photo.jpg", "rb")},
+    data={"colormode": "color", "filter_speckle": 4},
+)
+resp.raise_for_status()
+print(resp.headers["X-Credits-Remaining"], "credits left")
+with open("photo.svg", "wb") as f:
+    f.write(resp.content)</code></pre>
+
+                            <p class="api-code-label">JavaScript</p>
+                            <pre class="api-code"><code>const form = new FormData();
+form.append("file", new Blob([imageBytes]), "photo.jpg");
+form.append("colormode", "color");
+
+const resp = await fetch("https://api.pixel-to-path.com/v1/convert", {
+  method: "POST",
+  headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
+  body: form,
+});
+if (!resp.ok) {
+  const { error } = await resp.json();
+  throw new Error(`${error.code}: ${error.message}`);
+}
+const svg = await resp.text();
+console.log(resp.headers.get("X-Credits-Remaining"), "credits left");</code></pre>
+                        </section>
+
+                        <!-- FAQ -->
+                        <section id="faq" class="api-section">
+                            <h2>Často kladené otázky</h2>
+                            <details class="api-faq-item">
+                                <summary>Co se počítá jako konverze?</summary>
+                                <p>Úspěšné volání POST /v1/convert, které vrací SVG. Neúspěšná volání (neplatný obrázek, špatné parametry, dosažený limit požadavků, chyba serveru) a volání GET /v1/me se nikdy neúčtují.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Jak se počítá měsíční bezplatná kvóta?</summary>
+                                <p>Na účet, podle kalendářního měsíce UTC — resetuje se 1. dne v měsíci v 00:00 UTC. Vytvořením více API klíčů se bezplatná kvóta nenásobí: všechny klíče pod stejným účtem sdílejí stejných 10 bezplatných konverzí.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Vyprší platnost kreditů?</summary>
+                                <p>Ne. Zakoupené kredity zůstávají na vašem účtu, dokud je nevyužijete. Spotřebovávají se pouze po vyčerpání 10 měsíčních bezplatných konverzí.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Jak získám více konverzí v měsíci?</summary>
+                                <p>Kupte si předplacené obrázky z klientského portálu — libovolné množství, v balíčcích po 50. Vždy vidíte přesně, kolik obrázků dostanete: 50 obrázků za 2,50 €, 500 obrázků za 20 €, 2 500 obrázků za 75 €, 10 000 obrázků za 200 €, 50 000 obrázků za 500 €. Kredity se na váš účet přidají automaticky během několika sekund po zaplacení — žádný licenční klíč, nic k zadávání.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Co se stane, když ztratím svůj API klíč?</summary>
+                                <p>Klíče jsou uloženy zahašované, a proto je nelze obnovit. Odvolejte ztracený klíč v portálu a vytvořte si nový — bude okamžitě aktivní.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>Jaké formáty obrázků jsou podporovány?</summary>
+                                <p>PNG, JPEG, BMP a WebP, do velikosti 20 MB a rozlišení 50 megapixelů a nejméně 64×64 pixelů. Obrázky, jejichž nejdelší strana přesahuje 1500 px, se před konverzí zmenší, přesně jako na bezplatném webu.</p>
+                            </details>
+                        </section>
+
+                        <!-- Autres versions -->
+                        <!-- Versions : les 4 façons d'utiliser PixelToPath (clés pv_* — fallback EN) -->
+<section class="section versions-section">
+    <div class="container">
+        <h2 class="section-title">Vyberte si svou verzi</h2>
+        <p class="section-intro">Stejně výkonný engine - vyberte si formát, který odpovídá vašemu pracovnímu postupu.</p>
+
+        <div class="versions-grid">
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🌐</div>
+                <h3>Online nástroj</h3>
+                <p class="versions-card__price">Zdarma</p>
+                <p class="versions-card__desc">Převádějte své obrázky v prohlížeči. Není co instalovat, žádný účet.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/cs/online/">Otevřít nástroj</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">💻</div>
+                <h3>Desktopová aplikace</h3>
+                <p class="versions-card__price">Zdarma &amp; open source</p>
+                <p class="versions-card__desc">Kompletní převodník na vašem počítači, pro Windows &amp; Linux.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/cs/offline/">Stáhnout zdarma</a>
+            </article>
+
+            <article class="card versions-card versions-card--highlight">
+                <div class="versions-card__icon">⌨️</div>
+                <h3>Pro desktopová aplikace</h3>
+                <p class="versions-card__price">Jednorázově 39 €</p>
+                <p class="versions-card__desc">Sledovaná složka (hot folder), hromadný převod a CLI pro velké objemy.</p>
+                <a class="btn primary-btn versions-card__cta" href="/cs/pro/">Získat Pro</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🔌</div>
+                <h3>API</h3>
+                <p class="versions-card__price">Úroveň zdarma + balíčky</p>
+                <p class="versions-card__desc">Jedno REST volání: odešlete obrázek, získejte čisté SVG. 10 zdarma/měsíc.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/cs/api/">Získat API klíč</a>
+            </article>
+
+        </div>
+
+        <p class="versions-links">
+            <a href="/cs/pricing/">Porovnat verze &amp; ceny →</a>
+        </p>
+        <p class="versions-links versions-links--portal">
+            Už máte účet?
+            <a href="/portal/">Přejít na klientský portál →</a>
+        </p>
+    </div>
+</section>
+
+
+                        <!-- CTA finale -->
+                        <section class="api-cta">
+                            <h2>Připraveni vektorizovat ve velkém?</h2>
+                            <p>Vytvořte si účet, získejte klíč a proveďte své první volání za méně než dvě minuty.</p>
+                            <a class="btn primary-btn big-btn" href="/portal/">Získat bezplatný API klíč</a>
+                        </section>
+
+                        <p class="api-footer-note">Máte otázky k API? Otevřete ticket na <a href="https://github.com/lorrisc/PixelToPath" target="_blank" rel="noopener">GitHubu</a>.</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/cs/">Domů</a>
+        <a href="/cs/online/">Online nástroj</a>
+        <a href="/cs/offline/">Desktopová aplikace</a>
+        <a href="/cs/pro/">Pro</a>
+        <a href="/cs/api/">API</a>
+        <a href="/cs/blog/">Blog</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Klientský portál</a>
+    </div>
+</footer>
+
+<script src="../../assets/js/docunest-strings.js" defer></script>
+<script src="../../assets/js/docunest-popup.js" data-asset="../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../assets/js/ui-state.js"></script>
+</body>
+</html>

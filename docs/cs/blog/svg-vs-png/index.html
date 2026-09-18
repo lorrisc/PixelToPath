@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+<head>
+    <!-- Analytics Umami first-party : /main.7c3f9d.js et /api/e sont proxifiés
+     vers le serveur Umami par le Worker portal-proxy. Rien ne quitte
+     l'origine pixel-to-path.com : indétectable par les adblockers. -->
+<script defer src="/main.7c3f9d.js" data-website-id="77afc243-d7d0-4c23-9e8b-3badaac67041"></script>
+
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SVG vs PNG/JPG: Core Web Vitals a SEO | PixelToPath</title>
+    <meta name="description" content="Nahraďte loga a ikony PNG/JPG za SVG: lehčí soubory, ostrost Retina a 4K, lepší LCP a CLS. Průvodce pro vývojáře a SEO.">
+    <meta name="keywords" content="svg vs png, svg vs jpg, svg core web vitals, svg seo, výkon svg, logo svg vs png, ikona svg, vektorizovat logo web, lcp cls svg, pixeltopath">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="SVG vs PNG/JPG: Core Web Vitals a SEO | PixelToPath">
+    <meta property="og:description" content="Nahraďte loga a ikony PNG/JPG za SVG: lehčí soubory, ostrost Retina a 4K, lepší LCP a CLS. Průvodce pro vývojáře a SEO.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-photo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a photo next to its vectorized SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SVG vs PNG/JPG: Core Web Vitals a SEO | PixelToPath">
+    <meta name="twitter:description" content="Nahraďte loga a ikony PNG/JPG za SVG: lehčí soubory, ostrost Retina a 4K, lepší LCP a CLS. Průvodce pro vývojáře a SEO.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-photo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a photo next to its vectorized SVG output by PixelToPath">
+    <meta property="og:url" content="https://pixel-to-path.com/cs/blog/svg-vs-png/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/cs/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="cs" href="https://pixel-to-path.com/cs/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/cs/blog/svg-vs-png/">
+
+    <link rel="stylesheet" href="../../../assets/css/bundle.b1ddb27b.css">
+
+    <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: BlogPosting -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/cs/blog/svg-vs-png/#article",
+  "headline": "SVG vs PNG/JPG: proč je vektorový formát zásadní pro výkon a SEO",
+  "description": "Nahraďte loga a ikony PNG/JPG za SVG: lehčí soubory, ostrost Retina a 4K, lepší LCP a CLS. Průvodce pro vývojáře a SEO.",
+  "url": "https://pixel-to-path.com/cs/blog/svg-vs-png/",
+  "mainEntityOfPage": "https://pixel-to-path.com/cs/blog/svg-vs-png/",
+  "inLanguage": "cs",
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-09-09",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/cs/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-photo.jpg"
+}</script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Je SVG vždy lehčí než PNG nebo JPG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pro logo, ikonu nebo ilustraci s plochými barvami: ano, téměř vždy, obzvláště pokud porovnáváte PNG s jeho verzí Retina. V případě fotografie naopak ne: „foto“ SVG se stane složitou strukturou křivek, která bude těžší než JPG nebo WebP. Vektorizujte uživatelské rozhraní, u fotografií používejte kompresi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Skutečně SVG zlepšuje Core Web Vitals a SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zlepšuje to, co mohou obrázky uživatelského rozhraní zlepšit: menší velikost v bajtech (pokud je logo nebo ilustrace hlavním prvkem LCP), předvídatelný rámeček (CLS), méně variant ke stahování. Google využívá rychlost jako signál, především na mobilních zařízeních. Nejedná se o žádnou zkratku k lepšímu umístění ve výsledcích, jde o technickou hygienu, která se dá změřit v PageSpeed Insights."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Měl by se každý obrázek na webu nahradit formátem SVG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ne. Používejte JPG, WebP nebo AVIF pro fotky, snímky obrazovky, textury a komplexní gradienty. Pro loga, ikony, schémata, piktogramy a ploché ilustrace pak použijte SVG. Pokud má SVG příliš mnoho detailů, může snížit INP. Režim Photo v PixelToPath je k dosažení specifického vzhledu a ne na úplnou náhradu obsahu v JPEG formátu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jak vložit SVG bez způsobení CLS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vždy poskytněte šířku a výšku (nebo hodnotu pro poměr stran v CSS), které se shodují s viewBox. Při použití značky \u003Cimg> (src, šířka, výška, alt) si prohlížeč vyhradí prostor před začátkem stahování. V případě inline SVG uchovejte viewBox a nezačínejte vložením kódu až po prvním načtení stránky, aniž byste určili rozměry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jak získám SVG loga z PNG pomocí PixelToPath?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Otevřete online nástroj, přetáhněte PNG (ideálně s transparentním pozadím a v dostatečně velké velikosti), vyberte Černobílá nebo Plakát, upravte úroveň detailů a pak soubor konvertujte. Překontrolujte křivky v prohlížeči nebo ve Figmě a následně výsledek vložte na web. Zcela zdarma, bez účtu, soubory neukládáme."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/cs/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Naučte se převádět obrázky do SVG",
+      "item": "https://pixel-to-path.com/cs/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SVG vs PNG/JPG: proč je vektorový formát zásadní pro výkon a SEO",
+      "item": "https://pixel-to-path.com/cs/blog/svg-vs-png/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/cs/" class="brand">
+            <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/cs/"
+            class="">Domů</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Produkty <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/cs/online/"
+                       class="">Online nástroj</a>
+                    <a href="/cs/offline/"
+                       class="">Desktopová aplikace</a>
+                    <a href="/cs/pro/"
+                       class="">Pro desktopová aplikace</a>
+                    <a href="/cs/api/"
+                       class="">API</a>
+                </div>
+            </div>
+
+            <a href="/cs/pricing/"
+               class="">Ceník</a>
+
+            <div class="lang-switch">
+                <span>🇨🇿 CS</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/svg-vs-png/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/svg-vs-png/">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/svg-vs-png/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/svg-vs-png/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/svg-vs-png/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/svg-vs-png/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/svg-vs-png/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/svg-vs-png/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/svg-vs-png/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/svg-vs-png/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/svg-vs-png/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/svg-vs-png/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/svg-vs-png/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/svg-vs-png/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/svg-vs-png/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/svg-vs-png/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/svg-vs-png/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/cs/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Domů</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">Produkty</span>
+            <div class="mobile-sublist">
+                <a href="/cs/online/"
+                   class="">Online nástroj</a>
+                <a href="/cs/offline/"
+                   class="">Desktopová aplikace</a>
+                <a href="/cs/pro/"
+                   class="">Pro desktopová aplikace</a>
+                <a href="/cs/api/"
+                   class="">API</a>
+            </div>
+
+            <a href="/cs/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Ceník</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Jazyk</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/svg-vs-png/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/svg-vs-png/" class="mobile-lang-btn">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/svg-vs-png/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/svg-vs-png/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/svg-vs-png/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/svg-vs-png/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/svg-vs-png/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/svg-vs-png/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/svg-vs-png/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/svg-vs-png/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/svg-vs-png/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/svg-vs-png/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO – above the fold, H1 + CTA
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>SVG vs PNG/JPG: proč je vektorový formát zásadní pro výkon a SEO</h1>
+                <p class="blog-hero__subtitle">Méně KB ke stažení, ostré vykreslení od mobilu po 4K, lepší Core Web Vitals. Zde je důvod, proč vývojáři a SEO specialisté převádějí svá loga a ikony do SVG.</p>
+
+                <!-- Format badges -->
+                <div class="big-badges">
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">JPG</span>
+                    
+                    <span class="fmt-arrow">→</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">SVG</span>
+                    
+                </div>
+
+                <!-- Trust badges -->
+                <div class="badges">
+                    <span class="badge__item badge__item--accent">✓ Core Web Vitals</span>
+                    <span class="badge__item">Technické SEO</span>
+                    <span class="badge__item">Ostrost Retina · 4K</span>
+                    <span class="badge__item">100% Zdarma</span>
+                </div>
+
+                <a href="/cs/online/" class="btn primary-btn blog-hero__cta">Vektorizovat mé logo do SVG →</a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             HOW TO – 3-step guide
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Jak zmenšit velikost loga PNG nebo JPG pomocí SVG (3 kroky)</h2>
+                <p class="section-intro">Není potřeba Illustrator. PixelToPath vektorizuje váš soubor a vrátí vám SVG připravené k integraci do HTML.</p>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-card__number">1</div>
+                        <div class="step-card__icon">📁</div>
+                        <h3>Nahrajte PNG nebo JPG</h3>
+                        <p>Přetáhněte logo, ikonu nebo piktogram, který je aktuálně ve formátu PNG nebo JPG. Čím je cesta jednodušší (jednobarevné pozadí, ostré obrysy), tím bude SVG lehčí.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card__number">2</div>
+                        <div class="step-card__icon">⚙️</div>
+                        <h3>Vyberte správnou předvolbu</h3>
+                        <p>Černobílá pro jednobarevné logo nebo ikonu. Plakát, pokud má logo několik plochých barev. Vyhněte se Fotografie: příliš mnoho detailů dělá SVG těžším bez vizuálního zisku u loga.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card__number">3</div>
+                        <div class="step-card__icon">💾</div>
+                        <h3>Integrovat SVG na web</h3>
+                        <p>Stáhněte si soubor a použijte jej jako obrázek, v rámci sprite nebo jako inline SVG. Jediný soubor nahradí varianty @1x, @2x a @3x.</p>
+                    </div>
+                </div>
+
+                <div class="steps-cta">
+                    <a href="/cs/online/" class="btn primary-btn">Vektorizovat mé logo do SVG →</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             EDUCATIONAL CONTENT
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>PNG a JPG: ideální pro fotografie, příliš těžké pro rozhraní</h2>
+                    <p>PNG a JPG jsou rastrové formáty: obrázek je mřížka pixelů. Logo exportované do PNG 512×512 „vyfotografuje“ každý bod. Aby zůstalo ostré na obrazovce Retina, musíte často poskytnout verzi dvakrát nebo třikrát větší, tedy dvakrát nebo třikrát více KB. JPG komprimuje fotografie lépe, ale ničí plné barvy, přidává artefakty kolem textu a nepodporuje průhlednost. Ani jeden formát není určen pro logotyp nebo ikonu, která se musí zobrazit ve velikosti 24 px v navigaci a 240 px v banneru.</p>
+                    <p>SVG (Scalable Vector Graphics) popisuje tvary pomocí křivek a souřadnic, nikoliv pixelů. Vektorizovat PNG pomocí PixelToPath znamená nahradit statickou bitmapu cestou, kterou prohlížeč překreslí v přesné velikosti obrazovky. Výsledek: obecně mnohem lehčí soubor a identická ostrost na mobilu, počítači i 4K panelu.</p>
+
+                    <h3>Co SVG konkrétně mění u webových stránek</h3>
+                    <p>Pro rozhraní není SVG jen estetické „plus“. Je to páka pro zvýšení výkonu: méně bajtů v síti, méně variant k údržbě, jednodušší mezipaměť a nativní vektorové vykreslování ve všech moderních prohlížečích.</p>
+                    <p>Nejviditelnější výhody pro vývojáře nebo SEO specialistu:</p>
+                    <ul>
+                        <li>Hmotnost: jednoduché logo často klesne ze 40 na 80 KB v PNG na pár KB v SVG a vy odstraníte exporty @2x / @3x</li>
+                        <li>Škálovatelnost: jeden jediný soubor, ostrý při 16 px jako na celé obrazovce 4K, bez nutnosti použití srcset nebo media queries pro obrázky</li>
+                        <li>Core Web Vitals: méně dat ke stažení (LCP) a stabilní vyhrazené místo pomocí viewBox (CLS)</li>
+                        <li>Technické SEO: rychlejší stránky na mobilních zařízeních, formát, který Google dokáže interpretovat, a text případně obsažený v SVG</li>
+                    </ul>
+
+                    <h2>PNG vs SVG: váha loga není zanedbatelná</h2>
+                    <p>Obrázky zůstávají jedním z hlavních zdrojů velikosti stránky. Optimalizujeme fotografie ve formátu WebP, zapomínáme na logo v hlavičce a dvacet PNG ikon v CSS. Tyto soubory se přitom opakují na všech URL: každá ztracená milisekunda se projeví na celém webu.</p>
+                    <p>Zde je srovnání orientačních velikostí po vektorizaci pomocí PixelToPath v typickém scénáři vizitky nebo webové aplikace:</p>
+                    <table class="vs-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Scénář</th>
+                                <th scope="col">PNG / JPG</th>
+                                <th scope="col">SVG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Logo 512 px s průhledností</th>
+                                <td data-label="PNG / JPG">40 až 80 KB</td>
+                                <td class="yes" data-label="SVG">2 až 12 KB v závislosti na barvách a uzlech</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Stejné logo v @2x (1024 px) pro Retina displeje</th>
+                                <td data-label="PNG / JPG">Hmotnost se zdvojnásobí, někdy ztrojnásobí</td>
+                                <td class="yes" data-label="SVG">Jeden soubor, beze změny</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">20 ikon rozhraní exportovaných v @3x (72×72)</th>
+                                <td data-label="PNG / JPG">O 40 až 160 KB více</td>
+                                <td class="yes" data-label="SVG">Celkem několik KB</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Jednobarevné logo z JPG</th>
+                                <td data-label="PNG / JPG">Artefakty a svatozáře kolem tvarů a textu</td>
+                                <td class="yes" data-label="SVG">Ostré hrany a ještě lehčí soubor</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Pravidlo je jednoduché: vše, co tvoří tvar, text, piktogram nebo logotyp, by mělo být ve formátu SVG. Fotografie a snímky obrazovky zůstávají ve formátech JPG, WebP nebo AVIF. SVG není univerzální náhradou: je to správný formát pro rozhraní.</p>
+
+                    <h2>Škálovatelnost: ostrý soubor ze smartphonu na 4K</h2>
+                    <p>PNG je ostré pouze ve svém nativním rozlišení. Při zvětšení vidíme pixely. Při drastickém zmenšení musí prohlížeč převzorkovat. Proto ta gymnastika kolem souborů @1x, @2x, @3x, atributů srcset a hustot CSS. Každý nový bod zlomu nebo nová hustota pixelů (Retina, novější telefony, 4K monitory) vyžaduje nový export, nebo soubor, který je „pro jistotu“ příliš velký.</p>
+                    <p>SVG toto omezení ignoruje. Vykreslovací engine vypočítá křivky na požadovanou velikost CSS. Favicon 32 px, logo 48 px v navigaci, stejná značka na 400 px v banneru, 4K projekce: je to tentýž soubor. Žádné rozmazání, žádný aliasing, žádný druhý požadavek na verzi s vysokou hustotou. U knihovny komponent to znamená také menší dluh: jedna ikona, jeden soubor, všechny velikosti.</p>
+
+                    
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/logo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="Stejné logo zvětšené na 400 %: vlevo jsou viditelné pixely PNG; vpravo zůstávají křivky SVG dokonale hladké.">
+    <figcaption>Stejné logo zvětšené na 400 %: vlevo jsou viditelné pixely PNG; vpravo zůstávají křivky SVG dokonale hladké.</figcaption>
+</figure>
+
+                    
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/photo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="Přiblížení na 400 % na horkovzdušný balón: rozmazání JPEG a pixely vlevo, ploché vektorové barvy vpravo.">
+    <figcaption>Přiblížení na 400 % na horkovzdušný balón: rozmazání JPEG a pixely vlevo, ploché vektorové barvy vpravo.</figcaption>
+</figure>
+
+
+                    <h2>Core Web Vitals a SEO: proč Google dbá na formát</h2>
+                    <p>Rychlost na mobilních zařízeních je faktorem hodnocení. <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener">Core Web Vitals</a> (LCP, INP, CLS) měří, co uživatel prožívá. Nahrazení těžkého PNG loga nebo velkého množství rastrových ikon formátem SVG nezmenší stránku z 4 MB na 40 KB. U designu webu je však efekt okamžitý, zvláště v 4G sítích nebo v případech, kdy je LCP blokován logem v hlavičce.</p>
+                    <p>Vektorový formát konkrétně pomáhá třem metrikám, pokud zůstanete u přiměřené složitosti cesty:</p>
+                    <ul>
+                        <li><a href="https://web.dev/articles/optimize-lcp" target="_blank" rel="noopener">LCP</a> (Largest Contentful Paint): Pokud je největším viditelným prvkem logo nebo plochá ilustrace, několik kilobajtové SVG se načte dříve než 150KB PNG @2x. Méně síťového zatížení pro zbytek stránky.</li>
+                        <li><a href="https://web.dev/articles/optimize-cls" target="_blank" rel="noopener">CLS</a> (Cumulative Layout Shift): SVG s hodnotami width, height a viewBox si rezervuje místo již během parsování HTML. Už žádné čekání na dekódování bitmapy k určení poměru stran, tedy i méně posunů rozvržení.</li>
+                        <li><a href="https://web.dev/articles/inp" target="_blank" rel="noopener">INP</a> a hlavní vlákno (Main thread): jednoduché SVG (logo, ikona) je na vykreslení nenáročné. Vyhněte se naopak „foto“ SVG s několika tisíci cest: ty mohou být větší než PNG a zatěžovat procesor. Proto je lepší mít čistou cestu přes PixelToPath, nikoliv kopii pixel po pixelu.</li>
+                        <li>SEO nad rámec rychlosti: Google indexuje SVG. Integrované logo může mít přístupný titulek. Základem je také použití alt u obrázků SVG. A odlehčená stránka snižuje míru okamžitého opuštění z technických důvodů, což je signál, který algoritmus hodnocení bere v úvahu.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             WHY PIXELTOPATH – feature cards
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Proč k vektorizaci raději použít PixelToPath místo ručního exportu?</h2>
+                <p class="section-intro">Už máte PNG od klienta, nikoliv zdrojový soubor z Illustratoru. PixelToPath vytváří čisté, bezplatné cesty, které jsou připravené pro web.</p>
+
+                <div class="grid-3">
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">📉</div>
+                        <h3>Lehké SVG, připravené k použití</h3>
+                        <p>Engine vytváří využitelné cesty, nikoliv změť uzlů. Ideální pro logo nebo ikonu, kterou budete používat na každé stránce.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🆓</div>
+                        <h3>Zcela zdarma</h3>
+                        <p>Žádné předplatné pro designery, žádný vodoznak na SVG. Vektorizujte celý firemní styl (logo, favicon, sadu ikon) s nulovými náklady.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🔒</div>
+                        <h3>Soukromí souborů</h3>
+                        <p>Značkové soubory se po zpracování zlikvidují. Nic se neukládá, nic se nevyužívá opakovaně. Vhodné pro designové systémy a loga, na která se vztahuje smlouva o mlčenlivosti.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🎨</div>
+                        <h3>Předvolby pro loga a piktogramy</h3>
+                        <p>Černobílá pro černobílou ikonu, Plakát pro logo s plochými barvami. Před stažením můžete ovládat úroveň detailů.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">💻</div>
+                        <h3>Dávkové zpracování na desktopu</h3>
+                        <p>Máte sadu PNG ikon, kterou chcete převést na SVG? Open source aplikace pro Windows / Linux je zpracuje offline bez omezení.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">♾️</div>
+                        <h3>PNG, JPG, BMP, WebP</h3>
+                        <p>Jediný nástroj bez ohledu na to, zda logo přijde jako průhledné PNG, naskenované JPG nebo exportované WebP z Figmy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             USE CASES
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Kde SVG na reálném webu poráží PNG/JPG</h2>
+                    <p>Není to jen teorie. Zde jsou oblasti, kde se vektorový formát vyplatí okamžitě:</p>
+                    <ul>
+                        <li>Logo v hlavičce a v zápatí: jeden soubor, čistý v Retina, často jeden z nejsledovanějších prvků a na minimalistické domovské stránce to může být i LCP.</li>
+                        <li>Systém ikon: již žádné sprite obrázky z PNG 1x/2x. Každý piktogram je SVG (nebo SVG sprite), který lze upravit přes CSS (currentColor) bez nutnosti dalšího exportu.</li>
+                        <li>Favicon a apple-touch: moderní SVG favicon plus záložní PNG vás ušetří nutnosti udržovat velikosti 16, 32 a 180 px.</li>
+                        <li>Ilustrace rozhraní a prázdné stavy: ploché, vektorizované kresby zůstávají ostré na celé obrazovce a nezatěžují tak stránku jako velké obrázky z hlavičky.</li>
+                        <li>SEO vstupní stránka: každý ušetřený KB na rozhraní zlepšuje Lighthouse, PageSpeed Insights a dojem na mobilních zařízeních – signály, které hodnocení agreguje.</li>
+                    </ul>
+                    <p>Ponechte JPG/WebP pro fotografie. Přepněte loga, piktogramy a ploché ilustrace na SVG. Tento postup rozdělení aplikují nejrychlejší stránky již nyní.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             RELATED TOOLS – internal links
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container" style="text-align:center;">
+                <h2 class="section-title">Související průvodce převodem</h2>
+                <p class="section-intro">Vektorizujte své soubory a podívejte se blíže na formát, který vás zajímá.</p>
+
+                <div class="related-tools">
+                    
+                    <a href="/cs/blog/vectorize-logo/" class="related-tool-link">
+                        🔧 Vektorizovat rozmazané logo
+                    </a>
+                    
+                    <a href="/cs/blog/jpg-to-svg/" class="related-tool-link">
+                        🔄 Převodník JPG na SVG
+                    </a>
+                    
+                    <a href="/cs/blog/vectorize-image/" class="related-tool-link">
+                        ✏️ Vektorizovat obrázek
+                    </a>
+                    
+                    <a href="/cs/blog/import-svg/" class="related-tool-link">
+                        🎨 Import SVG do Figmy, Canvy, WP
+                    </a>
+                    
+                    <a href="/cs/online/" class="related-tool-link">
+                        🌐 Online nástroj
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FAQ – FAQPage schema injected in <head>
+        ════════════════════════════════════════ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">Často kladené otázky</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Je SVG vždy lehčí než PNG nebo JPG?</summary>
+                        <p>Pro logo, ikonu nebo ilustraci s plochými barvami: ano, téměř vždy, obzvláště pokud porovnáváte PNG s jeho verzí Retina. V případě fotografie naopak ne: „foto“ SVG se stane složitou strukturou křivek, která bude těžší než JPG nebo WebP. Vektorizujte uživatelské rozhraní, u fotografií používejte kompresi.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Skutečně SVG zlepšuje Core Web Vitals a SEO?</summary>
+                        <p>Zlepšuje to, co mohou obrázky uživatelského rozhraní zlepšit: menší velikost v bajtech (pokud je logo nebo ilustrace hlavním prvkem LCP), předvídatelný rámeček (CLS), méně variant ke stahování. Google využívá rychlost jako signál, především na mobilních zařízeních. Nejedná se o žádnou zkratku k lepšímu umístění ve výsledcích, jde o technickou hygienu, která se dá změřit v PageSpeed Insights.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Měl by se každý obrázek na webu nahradit formátem SVG?</summary>
+                        <p>Ne. Používejte JPG, WebP nebo AVIF pro fotky, snímky obrazovky, textury a komplexní gradienty. Pro loga, ikony, schémata, piktogramy a ploché ilustrace pak použijte SVG. Pokud má SVG příliš mnoho detailů, může snížit INP. Režim Photo v PixelToPath je k dosažení specifického vzhledu a ne na úplnou náhradu obsahu v JPEG formátu.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Jak vložit SVG bez způsobení CLS?</summary>
+                        <p>Vždy poskytněte šířku a výšku (nebo hodnotu pro poměr stran v CSS), které se shodují s viewBox. Při použití značky <img> (src, šířka, výška, alt) si prohlížeč vyhradí prostor před začátkem stahování. V případě inline SVG uchovejte viewBox a nezačínejte vložením kódu až po prvním načtení stránky, aniž byste určili rozměry.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Jak získám SVG loga z PNG pomocí PixelToPath?</summary>
+                        <p>Otevřete online nástroj, přetáhněte PNG (ideálně s transparentním pozadím a v dostatečně velké velikosti), vyberte Černobílá nebo Plakát, upravte úroveň detailů a pak soubor konvertujte. Překontrolujte křivky v prohlížeči nebo ve Figmě a následně výsledek vložte na web. Zcela zdarma, bez účtu, soubory neukládáme.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FINAL CTA
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container blog-cta-wrap">
+                <h2>Změňte vaše PNG logo na SVG, a změřte váhu souboru</h2>
+                <p>Nahrajte současný soubor, stáhněte si SVG a porovnejte si hodnoty v KB. Zdarma, bez registrace. Omezit tyto soubory je většinou prvním krokem k vylepšení u Core Web Vitals.</p>
+                <div class="double-buttons">
+                    <a href="/cs/online/" class="btn primary-btn big-btn">Vektorizovat mé logo do SVG →</a>
+                    <a href="/cs/offline/" class="btn secondary-btn big-btn">Stáhnout desktopovou aplikaci →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>Podpořte vývoj Open Source</h3>
+        <p>PixelToPath je zdarma. Pokud vám tento nástroj ušetřil čas, zvažte, že mi koupíte kávu.</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Přispět přes PayPal</a>
+    </div>
+</section>
+    </main>
+
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/cs/">Domů</a>
+        <a href="/cs/online/">Online nástroj</a>
+        <a href="/cs/offline/">Desktopová aplikace</a>
+        <a href="/cs/pro/">Pro</a>
+        <a href="/cs/api/">API</a>
+        <a href="/cs/blog/">Blog</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Klientský portál</a>
+    </div>
+</footer>
+
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
+</body>
+</html>

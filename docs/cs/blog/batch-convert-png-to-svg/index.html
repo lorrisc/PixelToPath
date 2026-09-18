@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+<head>
+    <!-- Analytics Umami first-party : /main.7c3f9d.js et /api/e sont proxifiés
+     vers le serveur Umami par le Worker portal-proxy. Rien ne quitte
+     l'origine pixel-to-path.com : indétectable par les adblockers. -->
+<script defer src="/main.7c3f9d.js" data-website-id="77afc243-d7d0-4c23-9e8b-3badaac67041"></script>
+
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jak hromadně převádět PNG na SVG (porovnání 5 metod)</title>
+    <meta name="description" content="Jak hromadně převádět PNG na SVG: 5 testovaných a porovnaných metod - online nástroje, Pro hot folder, Inkscape, CLI skripty a API. Pro 10 nebo 10 000 souborů.">
+    <meta name="keywords" content="jak hromadně převádět png na svg, převést více png na svg najednou, vektorizovat obrázky hromadně, převést více souborů png na svg online, nejlepší převodník png na svg hromadně, nejlepší dávkový převodník png na svg">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Jak hromadně převádět PNG na SVG (porovnání 5 metod)">
+    <meta property="og:description" content="Jak hromadně převádět PNG na SVG: 5 testovaných a porovnaných metod - online nástroje, Pro hot folder, Inkscape, CLI skripty a API. Pro 10 nebo 10 000 souborů.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jak hromadně převádět PNG na SVG (porovnání 5 metod)">
+    <meta name="twitter:description" content="Jak hromadně převádět PNG na SVG: 5 testovaných a porovnaných metod - online nástroje, Pro hot folder, Inkscape, CLI skripty a API. Pro 10 nebo 10 000 souborů.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta property="og:url" content="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="cs" href="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/">
+
+    <link rel="stylesheet" href="../../../assets/css/bundle.b1ddb27b.css">
+
+    <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: BlogPosting -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/#article",
+  "headline": "Jak hromadně převádět PNG na SVG (porovnání 5 metod)",
+  "description": "Jak hromadně převádět PNG na SVG: 5 testovaných a porovnaných metod - online nástroje, Pro hot folder, Inkscape, CLI skripty a API. Pro 10 nebo 10 000 souborů.",
+  "url": "https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/",
+  "mainEntityOfPage": "https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/",
+  "inLanguage": "cs",
+  "datePublished": "2026-09-12",
+  "dateModified": "2026-09-12",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/cs/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-logo.jpg"
+}</script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Mohu hromadně převádět PNG na SVG zdarma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ano, dvěma způsoby. Skripty pro příkazový řádek (Potrace, ImageMagick, VTracer) jsou zdarma bez omezení počtu souborů, bezplatná desktopová aplikace a Inkscape jsou také zdarma, ale převádějí vždy jeden soubor. Existují i bezplatné online nástroje, které přijmou více souborů – jen si ověřte, zda opravdu vektorizují, a před odesláním komerční grafiky si přečtěte jejich zásady ochrany osobních údajů."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jak zachovám barvy při hromadném převodu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Použijte barevný trasovač. Potrace je striktně černobílý, ať ho naskriptujete jakkoliv; VTracer, PixelToPath Pro i PixelToPath API spouští barevný engine, který znovu sestaví každou barevnou oblast jako její vlastní vektorový tvar. Naskriptujte si smyčku pomocí vtracer, nebo použijte verzi Pro či API, pokud se raději chcete vyhnout její údržbě."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mohu nahrát ZIP s PNG a získat ZIP se SVG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Některé online nástroje (například Pixelied) podporují hromadné nahrávání a vrátí vám ZIP. Dávkové režimy v desktopových aplikacích a skripty zapisují výsledky do výstupní složky, kterou si můžete v jednom kroku zazipovat sami. API vrací jedno SVG za volání, takže archivace je na vás - což je to, co build pipeline obvykle stejně vyžaduje."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Proč je moje dávka plná černých obdélníků?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To je past s vloženými obrázky (embed): nástroj místo trasování zabalil každé PNG do kontejneru SVG a to, co vidíte, je vložený rastrový obrázek, který se nezobrazil. Otevřete výstupní soubor v textovém editoru - jedna značka base64 &lt;image&gt; to potvrdí. Spusťte dávku znovu s nástrojem, který vytváří skutečné elementy &lt;path&gt;."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mám 50 000 souborů. Co opravdu funguje?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hot folder nebo API - všechno ostatní narazí na své limity dávno předtím. Při rychlosti 60 požadavků za minutu zvládne API zpracovat 50 000 obrázků přibližně za 14 hodin reálného času, což bude stát zhruba 200 € v předplacených kreditech. Lokální hot folder provede stejnou práci offline, přičemž rychlost závisí na vašem procesoru. Obě řešení zachovají konzistentní nastavení pro celou dávku."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/cs/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Naučte se převádět obrázky do SVG",
+      "item": "https://pixel-to-path.com/cs/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Jak hromadně převádět PNG na SVG (porovnání 5 metod)",
+      "item": "https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/cs/" class="brand">
+            <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/cs/"
+            class="">Domů</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Produkty <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/cs/online/"
+                       class="">Online nástroj</a>
+                    <a href="/cs/offline/"
+                       class="">Desktopová aplikace</a>
+                    <a href="/cs/pro/"
+                       class="">Pro desktopová aplikace</a>
+                    <a href="/cs/api/"
+                       class="">API</a>
+                </div>
+            </div>
+
+            <a href="/cs/pricing/"
+               class="">Ceník</a>
+
+            <div class="lang-switch">
+                <span>🇨🇿 CS</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/cs/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Domů</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">Produkty</span>
+            <div class="mobile-sublist">
+                <a href="/cs/online/"
+                   class="">Online nástroj</a>
+                <a href="/cs/offline/"
+                   class="">Desktopová aplikace</a>
+                <a href="/cs/pro/"
+                   class="">Pro desktopová aplikace</a>
+                <a href="/cs/api/"
+                   class="">API</a>
+            </div>
+
+            <a href="/cs/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Ceník</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Jazyk</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO – above the fold, H1 + CTA
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>Jak hromadně převádět PNG na SVG (porovnání 5 metod)</h1>
+                <p class="blog-hero__subtitle">Pět ověřených způsobů, jak převést více souborů PNG na SVG najednou - online nástroje, sledovaná složka (hot folder), bezplatné desktopové aplikace, skripty a API - porovnáno z hlediska ceny, výkonu, podpory barev a soukromí.</p>
+
+                <!-- Format badges -->
+                <div class="big-badges">
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG × 10</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG × 10 000</span>
+                    
+                    <span class="fmt-arrow">→</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">SVG</span>
+                    
+                </div>
+
+                <!-- Trust badges -->
+                <div class="badges">
+                    <span class="badge__item badge__item--accent">✓ 5 porovnaných metod</span>
+                    <span class="badge__item">10 nebo 10 000 souborů</span>
+                    <span class="badge__item">Včetně možností zdarma</span>
+                    <span class="badge__item">Skutečná vektorizace, žádné vkládání (embed)</span>
+                </div>
+
+                <a href="/cs/online/" class="btn primary-btn blog-hero__cta">Nyní převést soubor zdarma →</a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             INTRO – the batch problem + embed-vs-trace warning
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Problém hromadného zpracování - a past, které se vyhnout</h2>
+                    <p>Máte deset PNG. Nebo čtyři sta. Nebo - jako designér, jehož otázka na 51 000 souborů vyvolala jedno z nejdelších vláken na komunitních fórech Adobe - celou knihovnu podkladů, které je třeba převést na vektory. Převést jeden obrázek ručně je snadné; jakmile je jich více, potřebujete hromadný pracovní postup: proces, který přemění celou složku rastrových obrázků na složku SVG. A pokud vám dnes jde skutečně jen o jeden důležitý soubor, <a href="/cs/online/">bezplatný online převodník PNG na SVG</a> odvede práci za méně než minutu - tento průvodce pokrývá vše, co následuje potom.</p>
+                    <p>Než začneme metody porovnávat, je tu jedna definice. Skutečný hromadný převod znamená, že každé PNG je vektorizováno: jeho tvary jsou překresleny jako matematické cesty, což je <a href="/cs/blog/vectorize-image/">to, co vektorizace skutečně dělá</a>. Mnoho nástrojů tento krok zcela přeskakuje a to zásadně mění výsledek.</p>
+                    <p class="content-callout content-callout--warn">Hlavní typ selhání: některé „převodníky SVG“ netrasují vůbec nic - jen zabalí vaše PNG do souboru .svg jako vložený obrázek (embed). Výsledek se při změně velikosti „perfektně“ chová, protože se stále jedná o maskovaný rastrový obrázek. Otevřete jakýkoli z těchto výstupních souborů v textovém editoru: obrovská base64 značka &lt;image&gt; místo elementů &lt;path&gt; znamená, že jste nevektorizovali vůbec nic. Každá níže uvedená metoda je posuzována na základě skutečného trasování.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             REAL OUTPUT – before/after traced by the tool
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Skutečné výsledky z převodníku</h2>
+                
+
+<figure class="ba-compare ba-compare--sample">
+    <div class="ba-compare__pair">
+        <div class="ba-panel ba-panel--before">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">Před · originál</span>
+                <span class="size-badge">5 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-input.png" width="320" height="320" loading="lazy" decoding="async" alt="Soubor PNG: tmavě modré kruhové logo s bílou šipkou">
+            </div>
+        </div>
+        <span class="ba-compare__arrow" aria-hidden="true">→</span>
+        <div class="ba-panel ba-panel--after">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">Po · SVG</span>
+                <span class="size-badge">Předvolba Č&amp;B · 2 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-bw.svg" width="320" height="320" loading="lazy" decoding="async" alt="Stejné logo převedené do SVG pomocí předvolby Černobíle: plynulé křivky, černé vyplnění">
+            </div>
+        </div>
+    </div>
+    <figcaption>Skutečný převod provedený tímto nástrojem: původní PNG vlevo byl vektorizován pomocí předvolby Černobíle na SVG vpravo — vektorový soubor, který zůstává ostrý při jakékoli úrovni přiblížení.</figcaption>
+</figure>
+
+                
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/logo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="Stejné logo zvětšené na 400 %: vlevo jsou viditelné pixely PNG; vpravo zůstávají křivky SVG dokonale hladké.">
+    <figcaption>Stejné logo zvětšené na 400 %: vlevo jsou viditelné pixely PNG; vpravo zůstávají křivky SVG dokonale hladké.</figcaption>
+</figure>
+
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             METHODS 1–3 – online, hot folder, free desktop
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Metoda 1: Online dávkové převodníky</h2>
+                    <p>Nejrychlejší cesta pro malou dávku. Několik online nástrojů přijímá více souborů najednou: to.imagestool.com vám umožňuje přetáhnout sadu PNG a zpracuje je lokálně v prohlížeči; Pixelied přijímá hromadné nahrávání a vrátí vám ZIP s výsledky; webová zkušební verze ImageResizer.com a reaConverter fungují podobně. Žádná instalace, žádný příkazový řádek - vložte soubory, stáhněte si výsledky.</p>
+                    <p>Předtím, než jednomu z nich svěříte skutečnou práci, proveďte dvě kontroly. Zaprvé se ujistěte, že nástroj skutečně trasuje: některé „dávkové“ weby jednoduše spustí převod jednoho souboru ve smyčce na serveru a vrátí ZIP pseudo-SVG souborů - past s vloženými obrázky zmíněná výše. Zadruhé si přečtěte zásady ochrany osobních údajů, pokud se jedná o komerční umělecká díla nebo díla podléhající NDA: nástroje v prohlížeči vaše soubory nikdy nenahrávají, ty serverové posílají každý obrázek na cizí počítač. V zájmu transparentnosti: vlastní bezplatný online převodník PixelToPath je záměrně omezen na jeden soubor. Je to ten správný nástroj pro jedno důležité logo, ne pro složku čtyř set souborů - a přesně takto v tomto porovnání figuruje.</p>
+
+                    <h2>Metoda 2: Desktopová aplikace s funkcí hot folder (PixelToPath Pro)</h2>
+                    <p>Pokud jsou dávky spíše každotýdenní než příležitostnou záležitostí, sledovaná složka (hot folder) ruční krok zcela eliminuje. PixelToPath Pro (Windows a Linux) sleduje vybranou složku a automaticky převede každý obrázek, který se v ní objeví. Celý proces probíhá ve čtyřech krocích:</p>
+                    <ol>
+                        <li>Vyberte si složky: vyberte složku, kterou chcete sledovat, a výstupní složku, kam se mají ukládat SVG.</li>
+                        <li>Vložte svá PNG: uložte, zkopírujte nebo přetáhněte celou dávku do vstupní složky - ať už jde o deset souborů nebo několik stovek.</li>
+                        <li>Nechte ho pracovat: každý soubor se ihned po vložení przetrasuje s vaším uloženým profilem nastavení, zcela na vašem počítači.</li>
+                        <li>Vyzvedněte si SVG: výsledky se objeví ve výstupní složce, pojmenované podle původních souborů.</li>
+                    </ol>
+                    <p>To, co je pro hromadné zpracování zásadní: jeden profil nastavení se aplikuje na celou frontu. Převeďte ručně čtyři sta ikon a soubor 300 se nikdy nebude úplně shodovat se souborem 12; s profilem je každý výsledek konzistentní - což je detail, který u manuálních pracovních postupů hraje velkou roli. Vše běží lokálně, takže neexistuje žádný limit pro nahrávání a žádný soubor nikdy neopustí váš počítač. Verze Pro stojí 39 € (jednorázově, bez DPH) za doživotní licenci pro jednoho uživatele na až 3 počítačích; <a href="/cs/pro/">hromadný převod přes hot-folder</a> detailně popisuje vše, co je zahrnuto. Je to jedna z pěti zde uvedených možností - ale je to jediná možnost navržená tak, aby se hromadný převod stal krokem, na který už nebudete muset myslet.</p>
+
+                    <h2>Metoda 3: Bezplatné desktopové aplikace a Inkscape</h2>
+                    <p>Už používáte bezplatnou desktopovou aplikaci? Převádí PNG, JPG, BMP a WebP na SVG offline, bez omezení počtu souborů a s plným přístupem k pokročilým nastavením trasování - ale pouze jeden soubor po druhém. Hromadné zpracování je přesně tím, co přidává aktualizace Pro, a je lepší si to říct na rovinu, než předstírat opak. Pokud chcete nástroj, který je zdarma, běží lokálně a má grafické rozhraní, <a href="/cs/offline/">bezplatný desktopový převodník</a> je upřímnou volbou pro jednotlivé soubory: reálná propustnost je v řádu desítek souborů denně, ne stovek.</p>
+                    <p>Inkscape je dalším nezbytným bezplatným nástrojem. Jeho dialogové okno Vektorizovat rastr je také určeno pro jeden obrázek, a ačkoliv Inkscape nabízí možnosti příkazového řádku, které lze naskriptovat do smyčky, zkušenost je to pracná a málo dokumentovaná. GIMP mimochodem nemá žádný nativní dávkový export vektorů - jeho fóra to pravidelně potvrzují. Než strávíte hodiny snahou o nastavení pracovního postupu přes grafické rozhraní, ověřte si, zda skutečně potřebujete vektory pro každý soubor: srovnání <a href="/cs/blog/svg-vs-png/">SVG vs PNG pro web</a> vysvětluje, kdy se převod vyplatí.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             METHODS 4–5 + COMPARISON TABLE
+             cluster-link placeholders: CLI (cluster-2-post-0)
+             and potrace/imagemagick (cluster-2-post-1) articles
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Metoda 4: Skripty pro příkazový řádek (ImageMagick, Potrace, VTracer)</h2>
+                    <p>Pro jednorázové hromadné úkoly překoná desetřádkový shell skript všechna grafická rozhraní. Klasický černobílý řetězec spojuje ImageMagick s Potrace - převede a pak przetrasuje: <code>magick input.png input.pbm &amp;&amp; potrace -s -o input.svg input.pbm</code></p>
+                    <p>Zabalte to do cyklu "for" přes vaši složku a Potrace vytvoří skutečné vektorové cesty rychlostí vašeho procesoru - ale striktně černobíle. Pro barvu namiřte stejný cyklus na vtracer, open-source trasovač v Rustu, který pohání i PixelToPath. Oba nástroje mají dostatek možností na zaplnění manuálu, a proto má každý z nich vyhrazeného průvodce (po zveřejnění zde bude odkaz). Skripty vyhrávají v nákladech (zdarma), soukromí (lokálně) a objemu (tisíce za jeden běh); prohrávají u vstupu - musíte udržovat celý řetězec, a nikdo vám nevrátí to odpoledne, když to přestane fungovat.</p>
+                    <!-- cluster-link:cluster-2-post-0 -->
+                    <!-- cluster-link:cluster-2-post-1 -->
+
+                    <h2>Metoda 5: API smyčka pro CI a serverové operace</h2>
+                    <p>Když k převodům musí dojít na serveru - během nasazování, uvnitř build pipeline, z backendu - místní nástroje už nejsou možností. Vzorem je smyčka: jedno bezstavové volání POST na obrázek s vaším Bearer klíčem, každé SVG je zapsáno přímo do vaší asset pipeline. Limit je 60 požadavků za minutu na klíč, takže přizpůsobte tempo smyčky a zopakujte omezená volání s exponenciálním odstupem; neúspěšná volání nikdy nespotřebovávají kredity. Můžete <a href="/cs/api/">automatizovat celou dávku pomocí REST API</a> bez jakékoli místní instalace - což je přesně ten cíl.</p>
+                    <p>Výpočet nákladů je předvídatelný: předplacené obrázky stojí od 0,05 € do 0,01 € za kus při větším objemu, takže 500 obrázků vyjde zhruba na 20 € a 10 000 přibližně na 200 € - a každý účet k tomu dostává 10 bezplatných konverzí měsíčně. Zvolte API, když převody musí být opakovatelné, prováděné na straně serveru a bez lokálních závislostí. Zvolte hot folder, když jsou převody lokální a interaktivní. Tyto dvě možnosti pokrývají téměř všechny scénáře hromadného zpracování v reálném světě.</p>
+
+                    <h2>Hromadný převod PNG na SVG: Porovnání pěti metod</h2>
+                    <p>Stejný vstup, pět velmi odlišných dohod. Náklady a soukromí jsou strukturální, nikoli propagační; propustnost předpokládá operátora (nebo průměrný server) na reálném hardwaru; a „barva“ znamená skutečný vícebarevný vektorový výstup, ne černou siluetu.</p>
+                    <table class="vs-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Metoda</th>
+                                <th scope="col">Náklady</th>
+                                <th scope="col">Souborů/den (reálně)</th>
+                                <th scope="col">Barva</th>
+                                <th scope="col">Kontrola kvality</th>
+                                <th scope="col">Soukromí</th>
+                                <th scope="col">Požadované dovednosti</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Online převodníky</th>
+                                <td data-label="Náklady">Zdarma</td>
+                                <td data-label="Souborů/den (reálně)">50-500 (ručně)</td>
+                                <td data-label="Barva">Závisí na nástroji</td>
+                                <td data-label="Kontrola kvality">Pouze předvolby</td>
+                                <td data-label="Soukromí">Proměnlivé - zkontrolujte podmínky</td>
+                                <td data-label="Požadované dovednosti">Žádné</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Hot folder Pro</th>
+                                <td data-label="Náklady">39 € jednorázově</td>
+                                <td data-label="Souborů/den (reálně)">Tisíce (lokální CPU)</td>
+                                <td data-label="Barva">Ano</td>
+                                <td data-label="Kontrola kvality">Jeden profil, plná nastavení</td>
+                                <td data-label="Soukromí">100% lokální</td>
+                                <td data-label="Požadované dovednosti">Žádné</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Zdarma Desktop / Inkscape</th>
+                                <td data-label="Náklady">Zdarma</td>
+                                <td data-label="Souborů/den (reálně)">20-100 (jeden po druhém)</td>
+                                <td data-label="Barva">Ano (jednotlivé soubory)</td>
+                                <td data-label="Kontrola kvality">Kompletní, pro každý soubor</td>
+                                <td data-label="Soukromí">100% lokální</td>
+                                <td data-label="Požadované dovednosti">Základní</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Skripty (CLI)</th>
+                                <td data-label="Náklady">Zdarma</td>
+                                <td data-label="Souborů/den (reálně)">Tisíce+ (lokální CPU)</td>
+                                <td data-label="Barva">Potrace ne - VTracer ano</td>
+                                <td data-label="Kontrola kvality">Kompletní (možnosti)</td>
+                                <td data-label="Soukromí">Lokální</td>
+                                <td data-label="Požadované dovednosti">Příkazový řádek</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Smyčka API</th>
+                                <td data-label="Náklady">10 zdarma/měsíc, pak 0,01-0,05 €/obr</td>
+                                <td data-label="Souborů/den (reálně)">Desítky tisíc (60 pož./min)</td>
+                                <td data-label="Barva">Ano</td>
+                                <td data-label="Kontrola kvality">Nastavení enginu při každém volání</td>
+                                <td data-label="Soukromí">Soubory se nahrávají</td>
+                                <td data-label="Požadované dovednosti">Vývojář</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Pokud hromadně převádíte více než jednou měsíčně, metody 2 a 5 se zaplatí už za první odpoledne. Pro cokoliv menšího vás metoda 1 nebo 3 nestojí nic než trochu vašeho času.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             RELATED GUIDES – internal links
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container" style="text-align:center;">
+                <h2 class="section-title">Související průvodci převodem</h2>
+                <p class="section-intro">Hromadný převod je první krok. Tyto pokrývají ten zbytek.</p>
+
+                <div class="related-tools">
+                    
+                    <a href="/cs/blog/vectorize-image/" class="related-tool-link">
+                        ✏️ Co vektorizace skutečně dělá
+                    </a>
+                    
+                    <a href="/cs/blog/svg-vs-png/" class="related-tool-link">
+                        📈 SVG vs PNG pro web
+                    </a>
+                    
+                    <a href="/cs/blog/import-svg/" class="related-tool-link">
+                        🎨 Importujte vaše SVG do Figmy nebo Canvy
+                    </a>
+                    
+                    <a href="/cs/online/" class="related-tool-link">
+                        🌐 Bezplatný online převodník
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FAQ – FAQPage schema injected in <head>
+        ════════════════════════════════════════ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">Často kladené otázky</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Mohu hromadně převádět PNG na SVG zdarma?</summary>
+                        <p>Ano, dvěma způsoby. Skripty pro příkazový řádek (Potrace, ImageMagick, VTracer) jsou zdarma bez omezení počtu souborů, bezplatná desktopová aplikace a Inkscape jsou také zdarma, ale převádějí vždy jeden soubor. Existují i bezplatné online nástroje, které přijmou více souborů – jen si ověřte, zda opravdu vektorizují, a před odesláním komerční grafiky si přečtěte jejich zásady ochrany osobních údajů.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Jak zachovám barvy při hromadném převodu?</summary>
+                        <p>Použijte barevný trasovač. Potrace je striktně černobílý, ať ho naskriptujete jakkoliv; VTracer, PixelToPath Pro i PixelToPath API spouští barevný engine, který znovu sestaví každou barevnou oblast jako její vlastní vektorový tvar. Naskriptujte si smyčku pomocí vtracer, nebo použijte verzi Pro či API, pokud se raději chcete vyhnout její údržbě.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Mohu nahrát ZIP s PNG a získat ZIP se SVG?</summary>
+                        <p>Některé online nástroje (například Pixelied) podporují hromadné nahrávání a vrátí vám ZIP. Dávkové režimy v desktopových aplikacích a skripty zapisují výsledky do výstupní složky, kterou si můžete v jednom kroku zazipovat sami. API vrací jedno SVG za volání, takže archivace je na vás - což je to, co build pipeline obvykle stejně vyžaduje.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Proč je moje dávka plná černých obdélníků?</summary>
+                        <p>To je past s vloženými obrázky (embed): nástroj místo trasování zabalil každé PNG do kontejneru SVG a to, co vidíte, je vložený rastrový obrázek, který se nezobrazil. Otevřete výstupní soubor v textovém editoru - jedna značka base64 &lt;image&gt; to potvrdí. Spusťte dávku znovu s nástrojem, který vytváří skutečné elementy &lt;path&gt;.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Mám 50 000 souborů. Co opravdu funguje?</summary>
+                        <p>Hot folder nebo API - všechno ostatní narazí na své limity dávno předtím. Při rychlosti 60 požadavků za minutu zvládne API zpracovat 50 000 obrázků přibližně za 14 hodin reálného času, což bude stát zhruba 200 € v předplacených kreditech. Lokální hot folder provede stejnou práci offline, přičemž rychlost závisí na vašem procesoru. Obě řešení zachovají konzistentní nastavení pro celou dávku.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FINAL CTA
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container blog-cta-wrap">
+                <h2>Jste připraveni vyprázdnit svou složku s PNG?</h2>
+                <p>Převeďte jeden soubor v bezplatném online nástroji, nastavte si hot folder ve verzi Pro, nebo vytvořte smyčku s API - každá z těchto cest vede k čistým a skutečným vektorovým cestám.</p>
+                <div class="double-buttons">
+                    <a href="/cs/online/" class="btn primary-btn big-btn">Nyní převést soubor zdarma →</a>
+                    <a href="/cs/offline/" class="btn secondary-btn big-btn">⬇️ Stáhnout desktopovou aplikaci</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>Podpořte vývoj Open Source</h3>
+        <p>PixelToPath je zdarma. Pokud vám tento nástroj ušetřil čas, zvažte, že mi koupíte kávu.</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Přispět přes PayPal</a>
+    </div>
+</section>
+    </main>
+
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/cs/">Domů</a>
+        <a href="/cs/online/">Online nástroj</a>
+        <a href="/cs/offline/">Desktopová aplikace</a>
+        <a href="/cs/pro/">Pro</a>
+        <a href="/cs/api/">API</a>
+        <a href="/cs/blog/">Blog</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Klientský portál</a>
+    </div>
+</footer>
+
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
+</body>
+</html>

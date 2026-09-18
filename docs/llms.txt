@@ -41,11 +41,12 @@ Author: Lorris C. (Lorrisc)
 
 ## Locales
 
-Localized versions of the site (home, online, offline, blog, pro): 21 languages.
+Localized versions of the site (home, online, offline, blog, pro): 22 languages.
 
 - [English](https://pixel-to-path.com/)
 - [العربية](https://pixel-to-path.com/ar/)
 - [বাংলা](https://pixel-to-path.com/bn/)
+- [Čeština](https://pixel-to-path.com/cs/)
 - [Deutsch](https://pixel-to-path.com/de/)
 - [Español](https://pixel-to-path.com/es/)
 - [فارسی](https://pixel-to-path.com/fa/)

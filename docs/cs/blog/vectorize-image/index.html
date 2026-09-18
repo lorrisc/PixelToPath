@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+<head>
+    <!-- Analytics Umami first-party : /main.7c3f9d.js et /api/e sont proxifiés
+     vers le serveur Umami par le Worker portal-proxy. Rien ne quitte
+     l'origine pixel-to-path.com : indétectable par les adblockers. -->
+<script defer src="/main.7c3f9d.js" data-website-id="77afc243-d7d0-4c23-9e8b-3badaac67041"></script>
+
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vektorizovat obrázek zdarma - Rastr do vektoru</title>
+    <meta name="description" content="Vektorizujte jakýkoli obrázek zdarma online. Převeďte soubory PNG, JPG, BMP nebo WebP na čisté SVG vektory. Rychlé, bez registrace.">
+    <meta name="keywords" content="vektorizovat obrázek, vektorizovat obrázek zdarma, rastr na vektor, vektorizátor obrázků, vektorizovat png, vektorizovat jpg, auto trace obrázek">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Vektorizovat obrázek zdarma - Rastr do vektoru">
+    <meta property="og:description" content="Vektorizujte jakýkoli obrázek zdarma online. Převeďte soubory PNG, JPG, BMP nebo WebP na čisté SVG vektory. Rychlé, bez registrace.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-photo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a photo next to its vectorized SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vektorizovat obrázek zdarma - Rastr do vektoru">
+    <meta name="twitter:description" content="Vektorizujte jakýkoli obrázek zdarma online. Převeďte soubory PNG, JPG, BMP nebo WebP na čisté SVG vektory. Rychlé, bez registrace.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-photo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a photo next to its vectorized SVG output by PixelToPath">
+    <meta property="og:url" content="https://pixel-to-path.com/cs/blog/vectorize-image/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/cs/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="cs" href="https://pixel-to-path.com/cs/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/vectorize-image/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/cs/blog/vectorize-image/">
+
+    <link rel="stylesheet" href="../../../assets/css/bundle.b1ddb27b.css">
+
+    <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: BlogPosting -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/cs/blog/vectorize-image/#article",
+  "headline": "Bezplatný online vektorizátor obrázků",
+  "description": "Vektorizujte jakýkoli obrázek zdarma online. Převeďte soubory PNG, JPG, BMP nebo WebP na čisté SVG vektory. Rychlé, bez registrace.",
+  "url": "https://pixel-to-path.com/cs/blog/vectorize-image/",
+  "mainEntityOfPage": "https://pixel-to-path.com/cs/blog/vectorize-image/",
+  "inLanguage": "cs",
+  "datePublished": "2026-04-06",
+  "dateModified": "2026-09-09",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/cs/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-photo.jpg"
+}</script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Co to je vektorizace fotky?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vektorizace fotky je proces převodu fotky složené z pixelů, do formátu s vektorovou grafikou (SVG).  Tento finální soubor je tvořen z matematických křivek."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Je vektorizace zadarmo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ano je zcela zadarmo. Žádný účet, bez vodoznaků a bez omezeného počtu souborů, to my garantujeme."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Které fotky nebo obrázky jsou pro vektorizováni nejlepší?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nejlépe se vektorizují obrázky, které mají zřetelné tvary a velký kontrast. Jedná se např. o loga, ikony, ilustrace a nebo nákresy. Na stylizovaný vzhled však lze převést úplně jakoukoliv fotku."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Zda-li mohu používat takové soubory v přístrojích typu Cricut?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ano, programy z edice Cricut a další podobné dokážou přečíst formát s názvem SVG. Vy tedy můžete z vektorizovat obrázek a poslat ho přímo do onoho přístroje."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A jak tedy mám udělat z obyčejného obrázku to vektorové logo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nejprve na PixelToPath nahrajte soubor s logem, následně klikněte na Černobílou možnost a upravte hodnotu detailů. Hned pak jen dejte stáhnout SVG a to je vlastně celé."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/cs/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Naučte se převádět obrázky do SVG",
+      "item": "https://pixel-to-path.com/cs/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Bezplatný online vektorizátor obrázků",
+      "item": "https://pixel-to-path.com/cs/blog/vectorize-image/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/cs/" class="brand">
+            <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/cs/"
+            class="">Domů</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Produkty <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/cs/online/"
+                       class="">Online nástroj</a>
+                    <a href="/cs/offline/"
+                       class="">Desktopová aplikace</a>
+                    <a href="/cs/pro/"
+                       class="">Pro desktopová aplikace</a>
+                    <a href="/cs/api/"
+                       class="">API</a>
+                </div>
+            </div>
+
+            <a href="/cs/pricing/"
+               class="">Ceník</a>
+
+            <div class="lang-switch">
+                <span>🇨🇿 CS</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/vectorize-image/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/vectorize-image/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/vectorize-image/">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/vectorize-image/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/vectorize-image/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/vectorize-image/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/vectorize-image/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/vectorize-image/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/vectorize-image/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/vectorize-image/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/vectorize-image/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/vectorize-image/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/vectorize-image/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/vectorize-image/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/vectorize-image/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/vectorize-image/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/vectorize-image/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/vectorize-image/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/vectorize-image/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/vectorize-image/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/vectorize-image/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/vectorize-image/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/cs/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Domů</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">Produkty</span>
+            <div class="mobile-sublist">
+                <a href="/cs/online/"
+                   class="">Online nástroj</a>
+                <a href="/cs/offline/"
+                   class="">Desktopová aplikace</a>
+                <a href="/cs/pro/"
+                   class="">Pro desktopová aplikace</a>
+                <a href="/cs/api/"
+                   class="">API</a>
+            </div>
+
+            <a href="/cs/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Ceník</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Jazyk</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/vectorize-image/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/vectorize-image/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/vectorize-image/" class="mobile-lang-btn">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/vectorize-image/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/vectorize-image/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/vectorize-image/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/vectorize-image/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/vectorize-image/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/vectorize-image/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/vectorize-image/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/ja/blog/vectorize-image/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/vectorize-image/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/vectorize-image/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/vectorize-image/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/vectorize-image/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/vectorize-image/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/vectorize-image/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/vectorize-image/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/vectorize-image/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/vectorize-image/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/vectorize-image/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/vectorize-image/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO – above the fold, H1 + CTA
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>Bezplatný online vektorizátor obrázků</h1>
+                <p class="blog-hero__subtitle">Automaticky vektorizujte jakýkoli rastrový obrázek a převeďte jej na čistý vektor SVG - zdarma, okamžitě a bez účtu.</p>
+
+                <!-- Format badges -->
+                <div class="big-badges">
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">JPG</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">BMP</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">WebP</span>
+                    
+                    <span class="fmt-arrow">→</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">SVG</span>
+                    
+                </div>
+
+                <!-- Trust badges -->
+                <div class="badges">
+                    <span class="badge__item badge__item--accent">✓ Auto-Trace technologie</span>
+                    <span class="badge__item">Žádná registrace</span>
+                    <span class="badge__item">PNG · JPG · BMP · WebP</span>
+                    <span class="badge__item">100% Zdarma</span>
+                </div>
+
+                <a href="/cs/online/" class="btn primary-btn blog-hero__cta">Vektorizovat můj obrázek →</a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             HOW TO – 3-step guide
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Jak vektorizovat obrázek online</h2>
+                <p class="section-intro">Automatická vektorizace obrázků ve třech jednoduchých krocích - bez nutnosti Illustratoru nebo dovedností v oblasti designu.</p>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-card__number">1</div>
+                        <div class="step-card__icon">🖼️</div>
+                        <h3>Nahrajte svůj obrázek</h3>
+                        <p>Přetáhněte obrázek PNG, JPG, BMP nebo WebP. Jakýkoli rastrový formát je přijatelný.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card__number">2</div>
+                        <div class="step-card__icon">🎛️</div>
+                        <h3>Upravte nastavení vektorizace</h3>
+                        <p>Vyberte předvolbu a dolaďte nastavení, jako je počet barev a detaily trasování.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card__number">3</div>
+                        <div class="step-card__icon">✅</div>
+                        <h3>Stáhněte si svůj SVG vektor</h3>
+                        <p>Získejte čistý, optimalizovaný soubor SVG, který je připraven k použití v libovolném editoru.</p>
+                    </div>
+                </div>
+
+                <div class="steps-cta">
+                    <a href="/cs/online/" class="btn primary-btn">Vektorizovat můj obrázek →</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             REAL OUTPUT – before/after traced by the tool
+             (one compact pair per preset: bw / poster / photo)
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Skutečné výsledky z převodníku</h2>
+                
+
+<figure class="ba-compare ba-compare--sample ba-compare--compact">
+    <div class="ba-compare__pair">
+        <div class="ba-panel ba-panel--before">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">Před · originál</span>
+                <span class="size-badge">5 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-input.png" width="260" height="260" loading="lazy" decoding="async" alt="Soubor PNG: tmavě modré kruhové logo s bílou šipkou">
+            </div>
+        </div>
+        <span class="ba-compare__arrow" aria-hidden="true">→</span>
+        <div class="ba-panel ba-panel--after">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">Po · SVG</span>
+                <span class="size-badge">Předvolba Č&amp;B · 2 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-bw.svg" width="260" height="260" loading="lazy" decoding="async" alt="Stejné logo převedené do SVG pomocí předvolby Černobíle: plynulé křivky, černé vyplnění">
+            </div>
+        </div>
+    </div>
+    <figcaption>Skutečný převod provedený tímto nástrojem: původní PNG vlevo byl vektorizován pomocí předvolby Černobíle na SVG vpravo — vektorový soubor, který zůstává ostrý při jakékoli úrovni přiblížení.</figcaption>
+</figure>
+
+                
+
+<figure class="ba-compare ba-compare--sample ba-compare--compact">
+    <div class="ba-compare__pair">
+        <div class="ba-panel ba-panel--before">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">Před · originál</span>
+                <span class="size-badge">11 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/sticker-input.png" width="260" height="260" loading="lazy" decoding="async" alt="Soubor PNG: retro samolepka v plných barvách s pruhy oblohy, sluncem a horami">
+            </div>
+        </div>
+        <span class="ba-compare__arrow" aria-hidden="true">→</span>
+        <div class="ba-panel ba-panel--after">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">Po · SVG</span>
+                <span class="size-badge">Předvolba Plakát · 15 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/sticker-poster.svg" width="260" height="260" loading="lazy" decoding="async" alt="Stejná samolepka převedená do SVG pomocí předvolby Plakát: každá barevná plocha se stává upravitelným vektorovým tvarem">
+            </div>
+        </div>
+    </div>
+    <figcaption>Samolepka v plných barvách vektorizovaná pomocí předvolby Plakát: každá barevná plocha se stává čistým a upravitelným vektorovým tvarem.</figcaption>
+</figure>
+
+                
+
+<figure class="ba-compare ba-compare--sample ba-compare--compact">
+    <div class="ba-compare__pair">
+        <div class="ba-panel ba-panel--before">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">Před · originál</span>
+                <span class="size-badge">24 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/photo-input.jpg" width="260" height="195" loading="lazy" decoding="async" alt="Fotografie JPG: horkovzdušný balón na modré obloze">
+            </div>
+        </div>
+        <span class="ba-compare__arrow" aria-hidden="true">→</span>
+        <div class="ba-panel ba-panel--after">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">Po · SVG</span>
+                <span class="size-badge">Předvolba Fotografie · 42 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/photo-photo.svg" width="260" height="195" loading="lazy" decoding="async" alt="Stejná fotografie převedená do SVG pomocí předvolby Fotografie: plochy plných barev ve vektorech">
+            </div>
+        </div>
+    </div>
+    <figcaption>Skutečná fotografie zpracovaná pomocí předvolby Fotografie: horkovzdušný balón je zrekonstruován do vrstev vektorových ploch — je to náročnější než vektorizace loga, ale zvětšuje se bez jakékoli pixelizace.</figcaption>
+</figure>
+
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             EDUCATIONAL CONTENT – "What is X / SVG"
+             This section carries most of the word count.
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Co znamená vektorizovat obrázek?</h2>
+                    <p>Vektorizovat obrázek znamená proces převodu rastrového grafického formátu – tvořeného pixely – na vektorový formát, který se skládá z matematických cest a tvarů. Tato technika se často označuje jako <a href="https://www.visioncortex.org/vtracer-docs/" target="_blank" rel="noopener">automatické trasování (auto trace) nebo trasování obrázku (image tracing)</a>.</p>
+                    <p>Když vektorizujete obrázek, software analyzuje barvy a okraje originálu a rekonstruuje je v podobě geometrických objektů uložených do formátu <a href="https://www.w3.org/TR/SVG2/" target="_blank" rel="noopener">SVG</a>. Výsledný soubor je nezávislý na rozlišení.</p>
+
+                    <h3>Rastr vs. Vektor: Proč na tom záleží</h3>
+                    <p>Rastrové obrázky (PNG, JPG, BMP) ukládají data ve formě mřížky pixelů. Pokud je zvětšíte, uvidíte čtverce. To je vážné omezení pro profesionální pracovní postupy.</p>
+                    <p>Vektorové obrázky (SVG, AI, EPS) ukládají tvary matematicky. Výhody jsou značné:</p>
+                    <ul>
+                        <li>Neomezená škálovatelnost: Vektorizované logo vypadá identicky při 100px i na ploše 10 metrů.</li>
+                        <li>Upravitelná geometrie: Můžete manipulovat s jednotlivými tvary a uzly.</li>
+                        <li>Malá velikost souboru: Ikony a loga ve formátu SVG jsou velmi lehké.</li>
+                        <li>Připraveno pro stroje: Laserové a CNC řezačky vyžadují vektory.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             WHY PIXELTOPATH – feature cards
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Proč použít k vektorizaci obrázků PixelToPath?</h2>
+                <p class="section-intro">PixelToPath je navržen speciálně pro čisté výsledky v profesionální kvalitě.</p>
+
+                <div class="grid-3">
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🆓</div>
+                        <h3>Zdarma, Vždy</h3>
+                        <p>Žádné předplatné ani vodoznaky. Vektorizujte neomezené množství obrázků zdarma.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">⚡</div>
+                        <h3>Dedikované Předvolby</h3>
+                        <p>Předvolby Černobílá, Plakát a Fotografie nabízejí různé strategie trasování.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🔒</div>
+                        <h3>Funguje i Offline</h3>
+                        <p>Stáhněte si bezplatnou aplikaci PixelToPath pro systémy Windows nebo Linux.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🎨</div>
+                        <h3>Neukládáme Soubory</h3>
+                        <p>Vaše obrázky jsou zpracovány a poté okamžitě vymazány. Vaše soubory nikdy neukládáme.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">💻</div>
+                        <h3>Čistý SVG Výstup</h3>
+                        <p>Optimalizované cesty s minimálním množstvím nadbytečných uzlů – výsledné soubory SVG jsou lehké a připravené na úpravu.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">♾️</div>
+                        <h3>Open Source</h3>
+                        <p>PixelToPath je open source. Můžete si prohlédnout náš kód, případně rovnou přispět na našem GitHubu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             USE CASES
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Populární využití vektorizace obrázků</h2>
+                    <p>Vektorizace je nezbytná v mnoha kreativních oborech:</p>
+                    <ul>
+                        <li>Modernizace log: vezměte staré rozpixelované logo a překonvertujte jej na čistý vektor.</li>
+                        <li>Řezací stroje: uživatelé Cricut a Silhouette potřebují SVG soubory.</li>
+                        <li>Ilustrace: z vektorizujte nascanované kresby, na úpravu v Illustratoru.</li>
+                        <li>Výšivky a tisk na textil: Mnoho programů na výšivky požadují vektor na začátku.</li>
+                        <li>Architektura a inženýrství: z vektorizujte nascanované modré tisky pro CAO.</li>
+                    </ul>
+                    <p>Vektorizace transformuje rozbitelný a zakostičkovaný soubor do flexibilního souboru, který má profesionální kvalitu.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             RELATED TOOLS – internal links
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container" style="text-align:center;">
+                <h2 class="section-title">Související nástroje</h2>
+                <p class="section-intro">Více nástrojů zadarmo na konverzi, které pocházejí z PixelToPath.</p>
+
+                <div class="related-tools">
+                    
+                    <a href="/cs/blog/jpg-to-svg/" class="related-tool-link">
+                        🔄 JPG na SVG
+                    </a>
+                    
+                    <a href="/cs/blog/image-to-svg/" class="related-tool-link">
+                        🖼️ Obrázek na SVG
+                    </a>
+                    
+                    <a href="/cs/online/" class="related-tool-link">
+                        🌐 Online nástroj
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FAQ – FAQPage schema injected in <head>
+        ════════════════════════════════════════ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">Často kladené otázky</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Co to je vektorizace fotky?</summary>
+                        <p>Vektorizace fotky je proces převodu fotky složené z pixelů, do formátu s vektorovou grafikou (SVG).  Tento finální soubor je tvořen z matematických křivek.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Je vektorizace zadarmo?</summary>
+                        <p>Ano je zcela zadarmo. Žádný účet, bez vodoznaků a bez omezeného počtu souborů, to my garantujeme.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Které fotky nebo obrázky jsou pro vektorizováni nejlepší?</summary>
+                        <p>Nejlépe se vektorizují obrázky, které mají zřetelné tvary a velký kontrast. Jedná se např. o loga, ikony, ilustrace a nebo nákresy. Na stylizovaný vzhled však lze převést úplně jakoukoliv fotku.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Zda-li mohu používat takové soubory v přístrojích typu Cricut?</summary>
+                        <p>Ano, programy z edice Cricut a další podobné dokážou přečíst formát s názvem SVG. Vy tedy můžete z vektorizovat obrázek a poslat ho přímo do onoho přístroje.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>A jak tedy mám udělat z obyčejného obrázku to vektorové logo?</summary>
+                        <p>Nejprve na PixelToPath nahrajte soubor s logem, následně klikněte na Černobílou možnost a upravte hodnotu detailů. Hned pak jen dejte stáhnout SVG a to je vlastně celé.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FINAL CTA
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container blog-cta-wrap">
+                <h2>Překonvertujte si fotku zadarmo a hned</h2>
+                <p>Pošlete k nám váš obrázek a dostanete váš SVG vektorový soubor pod minutu vašeho času.</p>
+                <div class="double-buttons">
+                    <a href="/cs/online/" class="btn primary-btn big-btn">Vektorizovat můj obrázek →</a>
+                    <a href="/cs/offline/" class="btn secondary-btn big-btn">⬇️ Stáhnout desktopovou aplikaci</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>Podpořte vývoj Open Source</h3>
+        <p>PixelToPath je zdarma. Pokud vám tento nástroj ušetřil čas, zvažte, že mi koupíte kávu.</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Přispět přes PayPal</a>
+    </div>
+</section>
+    </main>
+
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/cs/">Domů</a>
+        <a href="/cs/online/">Online nástroj</a>
+        <a href="/cs/offline/">Desktopová aplikace</a>
+        <a href="/cs/pro/">Pro</a>
+        <a href="/cs/api/">API</a>
+        <a href="/cs/blog/">Blog</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Klientský portál</a>
+    </div>
+</footer>
+
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
+</body>
+</html>
