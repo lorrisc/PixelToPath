@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+    <!-- Analytics Umami first-party : /main.7c3f9d.js et /api/e sont proxifiés
+     vers le serveur Umami par le Worker portal-proxy. Rien ne quitte
+     l'origine pixel-to-path.com : indétectable par les adblockers. -->
+<script defer src="/main.7c3f9d.js" data-website-id="77afc243-d7d0-4c23-9e8b-3badaac67041"></script>
+
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Come convertire in batch da PNG a SVG (5 metodi a confronto)</title>
+    <meta name="description" content="Come convertire in batch file PNG in SVG: 5 metodi testati a confronto - strumenti online, hot folder Pro, Inkscape, script CLI e API. Per 10 o 10.000 file.">
+    <meta name="keywords" content="come convertire in batch png in svg, convertire più png in svg contemporaneamente, vettorializzare immagini in batch, convertire più file png in svg online, miglior convertitore png in svg in batch, miglior convertitore batch png in svg">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Come convertire in batch da PNG a SVG (5 metodi a confronto)">
+    <meta property="og:description" content="Come convertire in batch file PNG in SVG: 5 metodi testati a confronto - strumenti online, hot folder Pro, Inkscape, script CLI e API. Per 10 o 10.000 file.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Come convertire in batch da PNG a SVG (5 metodi a confronto)">
+    <meta name="twitter:description" content="Come convertire in batch file PNG in SVG: 5 metodi testati a confronto - strumenti online, hot folder Pro, Inkscape, script CLI e API. Per 10 o 10.000 file.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta property="og:url" content="https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="cs" href="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="it" href="https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">
+
+    <link rel="stylesheet" href="../../../assets/css/bundle.b1ddb27b.css">
+
+    <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: BlogPosting -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/#article",
+  "headline": "Come convertire in batch da PNG a SVG (5 metodi a confronto)",
+  "description": "Come convertire in batch file PNG in SVG: 5 metodi testati a confronto - strumenti online, hot folder Pro, Inkscape, script CLI e API. Per 10 o 10.000 file.",
+  "url": "https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/",
+  "mainEntityOfPage": "https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/",
+  "inLanguage": "it",
+  "datePublished": "2026-09-12",
+  "dateModified": "2026-09-12",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/it/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-logo.jpg"
+}</script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Posso convertire in batch da PNG a SVG gratuitamente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì, in due modi. Gli script da riga di comando (Potrace, ImageMagick, VTracer) sono gratuiti e senza limiti di file, e l'app desktop gratuita più Inkscape sono gratuiti ma convertono un file alla volta. Esistono anche strumenti online che accettano più file gratuitamente: verifica solo che vettorializzino realmente e leggi i loro termini sulla privacy prima di inviare artwork commerciali."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come faccio a mantenere i colori quando converto in batch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usa un tracciatore a colori. Potrace è strettamente in bianco e nero, non importa come lo scripti; VTracer, PixelToPath Pro e l'API PixelToPath eseguono tutti un motore a colori che ricostruisce ogni area di colore come forma vettoriale indipendente. Scrivi uno script per il loop con vtracer, o usa Pro o l'API se preferisci non mantenerlo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso caricare uno ZIP di PNG e ottenere uno ZIP di SVG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alcuni strumenti online (Pixelied, ad esempio) accettano caricamenti multipli e restituiscono uno ZIP. Le modalità batch su desktop e gli script scrivono i risultati in una cartella di output che puoi zippare in un unico passaggio. L'API restituisce un SVG per chiamata, quindi l'archiviazione rimane a tuo carico, che di solito è ciò che richiede una build pipeline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Perché il mio batch è risultato essere una serie di rettangoli neri?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quella è la trappola dell'incorporamento: lo strumento ha avvolto ogni PNG in un contenitore SVG invece di tracciarlo, e ciò che stai vedendo è il raster incorporato che non viene visualizzato correttamente. Apri un file di output in un editor di testo: un singolo tag &lt;image&gt; in base64 lo confermerà. Riesegui il batch con uno strumento che produce veri elementi &lt;path&gt;."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ho 50.000 file. Cosa funziona davvero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Una hot folder o l'API: tutto il resto si ferma molto prima. A 60 richieste al minuto, l'API smaltisce 50.000 immagini in circa 14 ore di tempo reale per circa 200 € in crediti prepagati. Una hot folder locale esegue lo stesso lavoro offline, con una velocità di elaborazione stabilita dalla tua CPU. Entrambe le soluzioni mantengono le stesse impostazioni per l'intera esecuzione."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/it/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Impara la Conversione da Immagine a SVG",
+      "item": "https://pixel-to-path.com/it/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Come convertire in batch da PNG a SVG (5 metodi a confronto)",
+      "item": "https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/it/" class="brand">
+            <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/it/"
+            class="">Home</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Prodotti <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/it/online/"
+                       class="">Strumento Online</a>
+                    <a href="/it/offline/"
+                       class="">App Desktop</a>
+                    <a href="/it/pro/"
+                       class="">App Desktop Pro</a>
+                    <a href="/it/api/"
+                       class="">API</a>
+                </div>
+            </div>
+
+            <a href="/it/pricing/"
+               class="">Prezzi</a>
+
+            <div class="lang-switch">
+                <span>🇮🇹 IT</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/">🇮🇹 Italiano</a>
+                    <a href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/it/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Home</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">Prodotti</span>
+            <div class="mobile-sublist">
+                <a href="/it/online/"
+                   class="">Strumento Online</a>
+                <a href="/it/offline/"
+                   class="">App Desktop</a>
+                <a href="/it/pro/"
+                   class="">App Desktop Pro</a>
+                <a href="/it/api/"
+                   class="">API</a>
+            </div>
+
+            <a href="/it/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Prezzi</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Lingua</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇹 Italiano</a>
+                    <a href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO – above the fold, H1 + CTA
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>Come convertire in batch da PNG a SVG (5 metodi a confronto)</h1>
+                <p class="blog-hero__subtitle">Cinque modi collaudati per convertire più file PNG in SVG contemporaneamente - strumenti online, una hot folder, app desktop gratuite, script e un'API - messi a confronto per costo, velocità, supporto colori e privacy.</p>
+
+                <!-- Format badges -->
+                <div class="big-badges">
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG × 10</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG × 10.000</span>
+                    
+                    <span class="fmt-arrow">→</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">SVG</span>
+                    
+                </div>
+
+                <!-- Trust badges -->
+                <div class="badges">
+                    <span class="badge__item badge__item--accent">✓ 5 metodi a confronto</span>
+                    <span class="badge__item">10 o 10.000 file</span>
+                    <span class="badge__item">Opzioni gratuite incluse</span>
+                    <span class="badge__item">Tracciamento reale, nessun incorporamento</span>
+                </div>
+
+                <a href="/it/online/" class="btn primary-btn blog-hero__cta">Converti un file gratis ora →</a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             INTRO – the batch problem + embed-vs-trace warning
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Il problema del batch - e la trappola da evitare</h2>
+                    <p>Hai dieci PNG. O quattrocento. Oppure - come il designer la cui domanda su 51.000 file apre uno dei thread più lunghi sui forum della community di Adobe - un'intera libreria di risorse che deve diventare vettoriale. Convertire un'immagine a mano va bene; superato quel punto hai bisogno di un flusso di lavoro in batch: un singolo processo che trasforma un'intera cartella di raster in una cartella di SVG. E se oggi è davvero solo un file importante, il <a href="/it/online/">convertitore online gratuito da PNG a SVG</a>fa il lavoro in meno di un minuto - questa guida copre tutto ciò che va oltre.</p>
+                    <p>Una definizione prima di confrontare i metodi. La vera conversione in batch significa che ogni PNG viene vettorializzato: le sue forme vengono ridisegnate come tracciati matematici, che è <a href="/it/blog/vectorize-image/">ciò che fa effettivamente la vettorializzazione</a>. Molti strumenti saltano completamente quel passaggio, e questo cambia tutto del risultato finale.</p>
+                    <p class="content-callout content-callout--warn">La modalità di errore n. 1: alcuni "convertitori SVG" non tracciano nulla - avvolgono il tuo PNG all'interno di un file .svg come immagine incorporata. Il risultato scala in modo "perfetto" perché è ancora una bitmap sotto mentite spoglie. Apri qualsiasi file di output in un editor di testo: un gigantesco tag &lt;image&gt; in base64 invece di elementi &lt;path&gt; significa che non hai vettorializzato nulla. Ogni metodo descritto di seguito viene giudicato in base al tracciamento reale.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             REAL OUTPUT – before/after traced by the tool
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Risultati reali dal convertitore</h2>
+                
+
+<figure class="ba-compare ba-compare--sample">
+    <div class="ba-compare__pair">
+        <div class="ba-panel ba-panel--before">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">Prima · originale</span>
+                <span class="size-badge">5 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-input.png" width="320" height="320" loading="lazy" decoding="async" alt="File PNG: logo circolare blu scuro con uno scaglione bianco">
+            </div>
+        </div>
+        <span class="ba-compare__arrow" aria-hidden="true">→</span>
+        <div class="ba-panel ba-panel--after">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">Dopo · SVG</span>
+                <span class="size-badge">Preset B&amp;N · 2 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-bw.svg" width="320" height="320" loading="lazy" decoding="async" alt="Lo stesso logo convertito in SVG con il preset Bianco e Nero: curve morbide, riempimento nero">
+            </div>
+        </div>
+    </div>
+    <figcaption>Una vera conversione effettuata con questo strumento: il PNG originale a sinistra è stato tracciato con il preset Bianco &amp; Nero nell'SVG a destra — un file vettoriale che rimane nitido a qualsiasi livello di zoom.</figcaption>
+</figure>
+
+                
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/logo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="Lo stesso logo ingrandito al 400%: a sinistra, i pixel del PNG diventano visibili; a destra, le curve dell&#39;SVG rimangono perfettamente fluide.">
+    <figcaption>Lo stesso logo ingrandito al 400%: a sinistra, i pixel del PNG diventano visibili; a destra, le curve dell'SVG rimangono perfettamente fluide.</figcaption>
+</figure>
+
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             METHODS 1–3 – online, hot folder, free desktop
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Metodo 1: Convertitori batch online</h2>
+                    <p>Il percorso più veloce per un piccolo lotto. Diversi strumenti online accettano più file contemporaneamente: to.imagestool.com ti permette di trascinare e rilasciare un set di PNG e li elabora localmente nel browser; Pixelied accetta caricamenti in blocco e ti restituisce uno ZIP con i risultati; ImageResizer.com e la versione di prova web di reaConverter funzionano allo stesso modo. Nessuna installazione, nessuna riga di comando - rilascia i file, scarica i risultati.</p>
+                    <p>Due controlli prima di affidarsi a uno di questi per un lavoro vero. Primo, assicurati che lo strumento esegua realmente il tracciamento: alcuni siti "batch" eseguono semplicemente in loop conversioni di singoli file su un server e restituiscono uno ZIP di pseudo-SVG - la trappola dell'incorporamento di cui all'avviso precedente. Secondo, leggi i termini sulla privacy se l'artwork è commerciale o sotto NDA: gli strumenti basati sul browser non caricano mai i tuoi file, quelli basati su server inviano ogni immagine alla macchina di qualcun altro. Per trasparenza: il convertitore online gratuito di PixelToPath elabora volutamente un singolo file alla volta. È lo strumento giusto per l'unico logo importante, non per una cartella di quattrocento - e si trova in questo confronto esattamente con questo ruolo.</p>
+
+                    <h2>Metodo 2: Un'app desktop con una Hot Folder (PixelToPath Pro)</h2>
+                    <p>Se i batch sono un'operazione settimanale piuttosto che un evento una tantum, una hot folder (cartella di controllo) elimina del tutto il passaggio manuale. PixelToPath Pro (Windows e Linux) monitora una cartella e converte automaticamente ogni immagine che vi finisce dentro. L'intero flusso si compone di quattro passaggi:</p>
+                    <ol>
+                        <li>Scegli le cartelle: scegli la cartella da monitorare e la cartella di output in cui devono essere salvati gli SVG.</li>
+                        <li>Rilascia i tuoi PNG: salva, copia o trascina l'intero batch nella cartella di input - dieci o diverse centinaia di file.</li>
+                        <li>Lascialo lavorare: ogni file viene tracciato all'arrivo con il profilo delle impostazioni salvate, interamente sulla tua macchina.</li>
+                        <li>Raccogli gli SVG: i risultati appaiono nella cartella di output, con lo stesso nome dei file originali.</li>
+                    </ol>
+                    <p>La parte importante per i batch: un profilo di impostazioni si applica all'intera coda. Converti quattrocento icone a mano e il file numero 300 non corrisponderà mai perfettamente al file numero 12; con un profilo, ogni output è coerente - il dettaglio che uccide i flussi di lavoro manuali. Tutto funziona localmente, quindi non c'è limite di caricamento e nessun file lascia mai la tua macchina. Pro costa 39 € una tantum (IVA esclusa), una licenza a vita per un utente su un massimo di 3 macchine; la pagina della <a href="/it/pro/">conversione batch con hot folder</a> descrive in dettaglio tutto ciò che è incluso. È una delle cinque opzioni qui presentate - ma è l'unica pensata per rendere la conversione in batch un passaggio a cui smetti di pensare.</p>
+
+                    <h2>Metodo 3: App desktop gratuite e Inkscape</h2>
+                    <p>Stai già usando l'app desktop gratuita? Converte PNG, JPG, BMP e WebP in SVG offline, senza limiti di numero di file e con accesso completo alle impostazioni avanzate di tracciamento - ma un file alla volta. Il batch è esattamente ciò che aggiunge l'upgrade a Pro, e vale la pena dirlo chiaramente piuttosto che fingere il contrario. Se cerchi una soluzione gratuita, locale e basata su GUI, il <a href="/it/offline/">convertitore desktop gratuito</a> è la scelta onesta per i file singoli: la velocità di elaborazione realistica è di decine di file al giorno, non centinaia.</p>
+                    <p>Inkscape è l'altro cavallo di battaglia gratuito. Anche la sua finestra di dialogo Traccia Bitmap è per singola immagine e, sebbene Inkscape offra opzioni da riga di comando che possono essere programmate in un loop, l'esperienza è grezza e scarsamente documentata. GIMP, per la cronaca, non ha alcuna esportazione vettoriale nativa in batch - i thread del suo forum lo confermano regolarmente. Prima di dedicare ore a un flusso di lavoro basato su GUI, verifica di aver effettivamente bisogno di vettori per ogni file: il confronto <a href="/it/blog/svg-vs-png/">SVG vs PNG per il web</a> spiega quando la conversione ne vale la pena.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             METHODS 4–5 + COMPARISON TABLE
+             cluster-link placeholders: CLI (cluster-2-post-0)
+             and potrace/imagemagick (cluster-2-post-1) articles
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Metodo 4: Script da riga di comando (ImageMagick, Potrace, VTracer)</h2>
+                    <p>Per lavori in blocco una tantum, uno script di shell di dieci righe batte qualsiasi GUI. La classica pipeline in bianco e nero incatena ImageMagick a Potrace - converti, poi traccia: <code>magick input.png input.pbm &amp;&amp; potrace -s -o input.svg input.pbm</code></p>
+                    <p>Avvolgi il tutto in un ciclo for sulla tua cartella e Potrace produrrà veri tracciati vettoriali alla velocità della tua CPU - ma rigorosamente in bianco e nero. Per il colore, punta lo stesso ciclo su vtracer, il tracciatore open source in Rust che alimenta anche PixelToPath. Entrambi gli strumenti hanno abbastanza flag per riempire un manuale, motivo per cui ognuno ha una guida dedicata (linkata qui una volta pubblicata). Gli script vincono in termini di costo (gratis), privacy (locale) e volume (migliaia per esecuzione); perdono all'inizio - sei tu a mantenere la pipeline e nessuno rimborsa i pomeriggi in cui si rompe.</p>
+                    <!-- cluster-link:cluster-2-post-0 -->
+                    <!-- cluster-link:cluster-2-post-1 -->
+
+                    <h2>Metodo 5: Un loop API per CI e lavoro lato server</h2>
+                    <p>Quando le conversioni devono avvenire su un server - durante un deploy, all'interno di una build pipeline, da un backend - gli strumenti locali cessano di essere un'opzione. Il modello è un loop: un POST stateless per immagine con la tua chiave Bearer, e ogni SVG viene scritto direttamente nella tua pipeline di asset. Il limite è di 60 richieste al minuto per chiave, quindi regola il ritmo del loop e riprova le chiamate limitate con un backoff esponenziale; le chiamate non riuscite non consumano mai crediti. Puoi <a href="/it/api/">automatizzare l'intero batch con l'API REST</a> senza alcuna installazione locale - il che è esattamente lo scopo.</p>
+                    <p>Il calcolo dei costi è prevedibile: le immagini prepagate vanno da 0,05 € a 0,01 € ciascuna ad alti volumi, quindi 500 immagini costano circa 20 € e 10.000 circa 200 € - e ogni account aggiunge 10 conversioni gratuite, ogni mese. Scegli l'API quando le conversioni devono essere riproducibili, lato server e prive di dipendenze locali. Scegli una hot folder quando sono locali e interattive. Le due soluzioni coprono quasi ogni lotto del mondo reale.</p>
+
+                    <h2>Da PNG a SVG in batch: tutti e cinque i metodi a confronto</h2>
+                    <p>Stesso input, cinque contratti molto diversi. Il costo e la privacy sono strutturali, non promozionali; la velocità di elaborazione presuppone un operatore (o un modesto server) su hardware realistico; e "colore" significa vero output vettoriale multicolore, non una silhouette nera.</p>
+                    <table class="vs-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Metodo</th>
+                                <th scope="col">Costo</th>
+                                <th scope="col">File/giorno (realistico)</th>
+                                <th scope="col">Colore</th>
+                                <th scope="col">Controllo qualità</th>
+                                <th scope="col">Privacy</th>
+                                <th scope="col">Competenze</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Convertitori online</th>
+                                <td data-label="Costo">Gratis</td>
+                                <td data-label="File/giorno (realistico)">50-500 (manuale)</td>
+                                <td data-label="Colore">Dipende dallo strumento</td>
+                                <td data-label="Controllo qualità">Solo preset</td>
+                                <td data-label="Privacy">Variabile - controlla i termini</td>
+                                <td data-label="Competenze">Nessuna</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Hot folder Pro</th>
+                                <td data-label="Costo">39 € una tantum</td>
+                                <td data-label="File/giorno (realistico)">Migliaia (CPU locale)</td>
+                                <td data-label="Colore">Sì</td>
+                                <td data-label="Controllo qualità">Un profilo, impostazioni complete</td>
+                                <td data-label="Privacy">100% locale</td>
+                                <td data-label="Competenze">Nessuna</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Desktop gratuito / Inkscape</th>
+                                <td data-label="Costo">Gratis</td>
+                                <td data-label="File/giorno (realistico)">20-100 (uno alla volta)</td>
+                                <td data-label="Colore">Sì (file singoli)</td>
+                                <td data-label="Controllo qualità">Completo, per file</td>
+                                <td data-label="Privacy">100% locale</td>
+                                <td data-label="Competenze">Base</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Script (CLI)</th>
+                                <td data-label="Costo">Gratis</td>
+                                <td data-label="File/giorno (realistico)">Migliaia+ (CPU locale)</td>
+                                <td data-label="Colore">Potrace no - VTracer sì</td>
+                                <td data-label="Controllo qualità">Completo (flag)</td>
+                                <td data-label="Privacy">Locale</td>
+                                <td data-label="Competenze">Riga di comando</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Loop API</th>
+                                <td data-label="Costo">10 gratis/mese, poi 0,01-0,05 €/immagine</td>
+                                <td data-label="File/giorno (realistico)">Decine di migliaia (60 rich/min)</td>
+                                <td data-label="Colore">Sì</td>
+                                <td data-label="Controllo qualità">Parametri motore per chiamata</td>
+                                <td data-label="Privacy">File caricati</td>
+                                <td data-label="Competenze">Sviluppatore</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Se converti batch più spesso di una volta al mese, i Metodi 2 e 5 si ripagano nel primo pomeriggio. Per tutto ciò che è più piccolo, il Metodo 1 o 3 costa solo un po' del tuo tempo.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             RELATED GUIDES – internal links
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container" style="text-align:center;">
+                <h2 class="section-title">Guide alla conversione correlate</h2>
+                <p class="section-intro">La conversione in batch è il primo passo. Queste coprono il resto.</p>
+
+                <div class="related-tools">
+                    
+                    <a href="/blog/vectorize-image/" class="related-tool-link">
+                        ✏️ Cosa fa effettivamente la vettorializzazione
+                    </a>
+                    
+                    <a href="/blog/svg-vs-png/" class="related-tool-link">
+                        📈 SVG vs PNG per il web
+                    </a>
+                    
+                    <a href="/blog/import-svg/" class="related-tool-link">
+                        🎨 Importa i tuoi SVG in Figma o Canva
+                    </a>
+                    
+                    <a href="/online/" class="related-tool-link">
+                        🌐 Convertitore online gratuito
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FAQ – FAQPage schema injected in <head>
+        ════════════════════════════════════════ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">Domande frequenti</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Posso convertire in batch da PNG a SVG gratuitamente?</summary>
+                        <p>Sì, in due modi. Gli script da riga di comando (Potrace, ImageMagick, VTracer) sono gratuiti e senza limiti di file, e l'app desktop gratuita più Inkscape sono gratuiti ma convertono un file alla volta. Esistono anche strumenti online che accettano più file gratuitamente: verifica solo che vettorializzino realmente e leggi i loro termini sulla privacy prima di inviare artwork commerciali.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Come faccio a mantenere i colori quando converto in batch?</summary>
+                        <p>Usa un tracciatore a colori. Potrace è strettamente in bianco e nero, non importa come lo scripti; VTracer, PixelToPath Pro e l'API PixelToPath eseguono tutti un motore a colori che ricostruisce ogni area di colore come forma vettoriale indipendente. Scrivi uno script per il loop con vtracer, o usa Pro o l'API se preferisci non mantenerlo.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Posso caricare uno ZIP di PNG e ottenere uno ZIP di SVG?</summary>
+                        <p>Alcuni strumenti online (Pixelied, ad esempio) accettano caricamenti multipli e restituiscono uno ZIP. Le modalità batch su desktop e gli script scrivono i risultati in una cartella di output che puoi zippare in un unico passaggio. L'API restituisce un SVG per chiamata, quindi l'archiviazione rimane a tuo carico, che di solito è ciò che richiede una build pipeline.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Perché il mio batch è risultato essere una serie di rettangoli neri?</summary>
+                        <p>Quella è la trappola dell'incorporamento: lo strumento ha avvolto ogni PNG in un contenitore SVG invece di tracciarlo, e ciò che stai vedendo è il raster incorporato che non viene visualizzato correttamente. Apri un file di output in un editor di testo: un singolo tag &lt;image&gt; in base64 lo confermerà. Riesegui il batch con uno strumento che produce veri elementi &lt;path&gt;.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Ho 50.000 file. Cosa funziona davvero?</summary>
+                        <p>Una hot folder o l'API: tutto il resto si ferma molto prima. A 60 richieste al minuto, l'API smaltisce 50.000 immagini in circa 14 ore di tempo reale per circa 200 € in crediti prepagati. Una hot folder locale esegue lo stesso lavoro offline, con una velocità di elaborazione stabilita dalla tua CPU. Entrambe le soluzioni mantengono le stesse impostazioni per l'intera esecuzione.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FINAL CTA
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container blog-cta-wrap">
+                <h2>Pronto a smaltire il tuo arretrato di PNG?</h2>
+                <p>Converti un singolo file nello strumento online gratuito, configura una hot folder in Pro o esegui l'API in loop: ogni percorso termina in tracciati vettoriali veri e puliti.</p>
+                <div class="double-buttons">
+                    <a href="/it/online/" class="btn primary-btn big-btn">Converti un file gratis ora →</a>
+                    <a href="/it/offline/" class="btn secondary-btn big-btn">⬇️ Scarica l'app desktop</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>Supporta lo Sviluppo Open Source</h3>
+        <p>PixelToPath è gratuito. Se questo strumento ti ha aiutato a risparmiare tempo, considera di offrirmi un caffè.</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL" target="_blank" class="donate-btn">❤️ Dona tramite PayPal</a>
+    </div>
+</section>
+    </main>
+
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/it/">Home</a>
+        <a href="/it/online/">Strumento Online</a>
+        <a href="/it/offline/">App Desktop</a>
+        <a href="/it/pro/">Pro</a>
+        <a href="/it/api/">API</a>
+        <a href="/it/blog/">Blog</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Open Source (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Portale Clienti</a>
+    </div>
+</footer>
+
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
+</body>
+</html>
