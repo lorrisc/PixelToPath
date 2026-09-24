@@ -31,6 +31,7 @@ Author: Lorris C. (Lorrisc)
 - [Vectorize a blurry logo to SVG for free](https://pixel-to-path.com/blog/vectorize-logo/): Blurry JPG or PNG logo on a poster or website? Vectorize it to a crisp SVG with PixelToPath: free, no Illustrator, in under a minute.
 - [Import an SVG into Figma, Canva, WordPress](https://pixel-to-path.com/blog/import-svg/): Your PixelToPath SVG is ready. Import it into Figma to change colors, into Canva, or onto WordPress without security flaws. A guide for designers.
 - [How to Batch Convert PNG to SVG (5 Methods Compared)](https://pixel-to-path.com/blog/batch-convert-png-to-svg/): How to batch convert PNG to SVG: 5 tested methods compared - online tools, Pro hot folder, Inkscape, CLI scripts and the API. For 10 files or 10,000.
+- [PNG to Vector: Free PNG to Vector Converter (SVG Output)](https://pixel-to-path.com/blog/png-to-vector/): Turn a PNG into a true vector graphic - not a wrapped raster. Free online converter with quality presets, plus how to get SVG, EPS or AI from any PNG.
 
 ## Project & source
 
