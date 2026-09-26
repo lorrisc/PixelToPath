@@ -11,16 +11,19 @@ let currentSvg = null;
 let currentSession = null;
 let abortCtrl = null;
 
-// Soft donate nudge — shown after sustained use, never blocks the UI
-const DONATE_URL = "https://www.paypal.com/donate/?hosted_button_id=6TCT576QMTBAL";
-const DONATE_UPLOAD_THRESHOLD = 3;
-const DONATE_CONV_THRESHOLD = 15;
-const DONATE_SNOOZE_MS = 14 * 24 * 60 * 60 * 1000; // 14 days
+// Download gate — appel au don Ko-fi à chaque téléchargement : anneau 10 s puis
+// le fichier se télécharge, la popup RESTE ouverte (état ✓) jusqu'à fermeture.
+// Un clic sur Ko-fi = plus jamais.
+const DONATE_URL = "https://ko-fi.com/lorrisfrompixeltopath";
+const DL_GATE_SECONDS = 10;
+const DL_GATE_RING_R = 34; // rayon de l'anneau SVG (viewBox 80×80)
+const DL_GATE_RING_CIRC = 2 * Math.PI * DL_GATE_RING_R;
 const LS_UPLOADS = "ptp_uploads";
 const LS_CONVERSIONS = "ptp_conversions";
-const LS_DONATE_SNOOZE = "ptp_donate_nudge_snooze";
-const LS_DONATE_DONE = "ptp_donate_nudge_done";
-let donateNudgeTimer = null;
+const LS_DONATE_DONE = "ptp_donate_done";
+let gateTimer = null;      // interval du compte à rebours
+let gateVisible = false;
+let downloaded = false;    // fichier déjà parti → popup en état ✓
 
 // ── Language detection ────────────────────────────────────────────────────────
 function detectLang() {
@@ -241,7 +244,7 @@ function applyRecommendedParams(params, detectedType) {
     if (detectedType && labels[detectedType]) setStatus(labels[detectedType] + " " + T.type_adjusted, "info");
 }
 
-// ── Soft donate nudge ─────────────────────────────────────────────────────────
+// ── Download gate : appel au don Ko-fi avant chaque téléchargement ────────────
 function lsGetInt(key) {
     const n = parseInt(localStorage.getItem(key) || "0", 10);
     return Number.isFinite(n) ? n : 0;
@@ -251,86 +254,125 @@ function bumpUsageCounter(key) {
     try { localStorage.setItem(key, String(next)); } catch (_) { /* private mode */ }
     return next;
 }
-function canShowDonateNudge() {
-    try {
-        if (localStorage.getItem(LS_DONATE_DONE) === "1") return false;
-        if (Date.now() < lsGetInt(LS_DONATE_SNOOZE)) return false;
-    } catch (_) { return false; }
-    return lsGetInt(LS_UPLOADS) >= DONATE_UPLOAD_THRESHOLD
-        || lsGetInt(LS_CONVERSIONS) >= DONATE_CONV_THRESHOLD;
+function donorAlready() {
+    try { return localStorage.getItem(LS_DONATE_DONE) === "1"; } catch (_) { return false; }
 }
-function snoozeDonateNudge() {
-    try { localStorage.setItem(LS_DONATE_SNOOZE, String(Date.now() + DONATE_SNOOZE_MS)); } catch (_) {}
-}
-function dismissDonateNudgeForever() {
+function markDonor() {
     try { localStorage.setItem(LS_DONATE_DONE, "1"); } catch (_) {}
 }
-function hideDonateNudge() {
-    const el = document.getElementById("donate-nudge");
+function runDownload() {
+    if (!currentSvg) return;
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([currentSvg], { type: "image/svg+xml" }));
+    a.download = (currentFile?.name.replace(/\.[^.]+$/, "") || "output") + ".svg";
+    a.click(); URL.revokeObjectURL(a.href); setStatus(T.saved(a.download), "ok");
+}
+function onDlGateKeydown(e) {
+    if (e.key === "Escape") {
+        e.preventDefault();
+        closeDlGate(true); // Échap = fichier garanti, popup fermée
+    }
+}
+// downloadIfNeeded : fermeture anticipée = le fichier part quand même.
+// Après le décompte (déjà téléchargé), on ferme simplement.
+function closeDlGate(downloadIfNeeded) {
+    if (gateTimer) { clearInterval(gateTimer); gateTimer = null; }
+    gateVisible = false;
+    if (downloadIfNeeded && !downloaded) runDownload();
+    const el = document.getElementById("donate-gate");
     if (!el) return;
     el.classList.remove("is-visible");
     document.body.classList.remove("donate-nudge-open");
-    document.removeEventListener("keydown", onDonateNudgeKeydown);
+    document.removeEventListener("keydown", onDlGateKeydown);
     setTimeout(() => el.remove(), 280);
 }
-function onDonateNudgeKeydown(e) {
-    if (e.key === "Escape") {
-        snoozeDonateNudge();
-        hideDonateNudge();
-    }
-}
-function ensureDonateNudge() {
-    let el = document.getElementById("donate-nudge");
-    if (el) return el;
-    el = document.createElement("div");
-    el.id = "donate-nudge";
+function openDlGate() {
+    gateVisible = true;
+    downloaded = false;
+    const el = document.createElement("div");
+    el.id = "donate-gate";
     el.className = "donate-nudge";
     el.setAttribute("role", "dialog");
     el.setAttribute("aria-modal", "true");
-    el.setAttribute("aria-labelledby", "donate-nudge-title");
-    const ctaLabel = T.donate_nudge_cta || "Donate via PayPal";
+    el.setAttribute("aria-labelledby", "donate-gate-title");
     el.innerHTML = `
         <div class="donate-nudge__card">
             <button type="button" class="donate-nudge__close" aria-label="Close">&times;</button>
-            <h3 class="donate-nudge__title" id="donate-nudge-title"></h3>
+            <h3 class="donate-nudge__title" id="donate-gate-title"></h3>
+            <div class="donate-nudge__timer" role="timer" aria-live="off">
+                <svg viewBox="0 0 80 80" aria-hidden="true">
+                    <circle class="donate-nudge__ring-bg" cx="40" cy="40" r="${DL_GATE_RING_R}"></circle>
+                    <circle class="donate-nudge__ring" cx="40" cy="40" r="${DL_GATE_RING_R}"></circle>
+                </svg>
+                <div class="donate-nudge__count">
+                    <span class="donate-nudge__secs"></span>
+                    <span class="donate-nudge__unit"></span>
+                </div>
+                <div class="donate-nudge__done" aria-hidden="true">✓</div>
+            </div>
             <p class="donate-nudge__text"></p>
             <div class="donate-nudge__actions">
                 <a class="donate-btn donate-nudge__cta" href="${DONATE_URL}" target="_blank" rel="noopener noreferrer"></a>
                 <button type="button" class="donate-nudge__later"></button>
             </div>
         </div>`;
-    el.querySelector(".donate-nudge__title").textContent = T.donate_nudge_title || "Enjoying PixelToPath?";
-    el.querySelector(".donate-nudge__text").textContent = T.donate_nudge_text || "This tool is free and open source. A small donation helps keep it running.";
-    el.querySelector(".donate-nudge__cta").textContent = "❤️ " + ctaLabel;
-    el.querySelector(".donate-nudge__later").textContent = T.donate_nudge_later || "Maybe later";
-    const dismiss = () => { snoozeDonateNudge(); hideDonateNudge(); };
-    el.querySelector(".donate-nudge__close").addEventListener("click", dismiss);
-    el.querySelector(".donate-nudge__later").addEventListener("click", dismiss);
+    el.querySelector(".donate-nudge__title").textContent = T.dl_gate_title || "Your download is starting…";
+    el.querySelector(".donate-nudge__text").textContent = T.dl_gate_text || "PixelToPath is free. A small donation helps cover the hosting costs.";
+    el.querySelector(".donate-nudge__cta").textContent = T.dl_gate_cta || "❤️ Donate on Ko-fi";
+    el.querySelector(".donate-nudge__later").textContent = T.dl_gate_now || "Download now";
+    const secs = el.querySelector(".donate-nudge__secs");
+    const unit = el.querySelector(".donate-nudge__unit");
+    const ring = el.querySelector(".donate-nudge__ring");
+    let left = DL_GATE_SECONDS;
+    secs.textContent = left;
+    unit.textContent = T.dl_gate_unit || "s";
+    ring.style.strokeDasharray = DL_GATE_RING_CIRC;
+
+    // Décompte fini : le fichier part, la popup RESTE ouverte (état ✓) —
+    // elle ne se ferme plus que par X, Échap ou clic sur le fond.
+    function complete() {
+        if (gateTimer) { clearInterval(gateTimer); gateTimer = null; }
+        if (!downloaded) { downloaded = true; runDownload(); }
+        el.classList.add("is-done");
+        el.querySelector(".donate-nudge__title").textContent = T.dl_gate_done || "✓ Downloaded!";
+    }
+    // Fermeture anticipée : le fichier part quand même (jamais retenu en otage)
+    const finish = () => closeDlGate(true);
+
+    el.querySelector(".donate-nudge__close").addEventListener("click", finish);
+    el.querySelector(".donate-nudge__later").addEventListener("click", finish);
+    // Clic don = soutien confirmé : la popup ne se réaffichera jamais
     el.querySelector(".donate-nudge__cta").addEventListener("click", () => {
-        dismissDonateNudgeForever();
-        hideDonateNudge();
-    });
-    // Click on backdrop closes; click on card does not
-    el.addEventListener("click", e => { if (e.target === el) dismiss(); });
-    document.body.appendChild(el);
-    return el;
-}
-function scheduleDonateNudge() {
-    if (!canShowDonateNudge()) return;
-    if (document.getElementById("donate-nudge")?.classList.contains("is-visible")) return;
-    clearTimeout(donateNudgeTimer);
-    donateNudgeTimer = setTimeout(() => {
-        if (!canShowDonateNudge()) return;
-        const el = ensureDonateNudge();
-        snoozeDonateNudge();
-        document.body.classList.add("donate-nudge-open");
-        document.addEventListener("keydown", onDonateNudgeKeydown);
-        requestAnimationFrame(() => el.classList.add("is-visible"));
-        window.trackEvent?.("donate_nudge_shown", {
+        markDonor();
+        window.trackEvent?.("donate_kofi_click", {
             uploads: lsGetInt(LS_UPLOADS),
             conversions: lsGetInt(LS_CONVERSIONS),
         });
-    }, 2000);
+        finish();
+    });
+    // Clic sur le backdrop ferme ; clic sur la carte non
+    el.addEventListener("click", (e) => { if (e.target === el) finish(); });
+    document.body.appendChild(el);
+    document.body.classList.add("donate-nudge-open");
+    document.addEventListener("keydown", onDlGateKeydown);
+    requestAnimationFrame(() => el.classList.add("is-visible"));
+
+    gateTimer = setInterval(() => {
+        left -= 1;
+        secs.textContent = Math.max(left, 0);
+        ring.style.strokeDashoffset = DL_GATE_RING_CIRC * (1 - Math.max(left, 0) / DL_GATE_SECONDS);
+        if (left <= 0) complete();
+    }, 1000);
+    window.trackEvent?.("download_gate_shown", {
+        uploads: lsGetInt(LS_UPLOADS),
+        conversions: lsGetInt(LS_CONVERSIONS),
+    });
+}
+function gateDownload() {
+    if (!currentSvg) return;
+    if (gateVisible) return; // popup déjà ouverte : ignorer les clics répétés
+    if (donorAlready()) { runDownload(); return; }
+    openDlGate();
 }
 
 // ── Upload + Convert pipeline ─────────────────────────────────────────────────
@@ -382,7 +424,6 @@ async function runConversion() {
             total_duration_ms: totalDurationMs 
         });
         bumpUsageCounter(LS_CONVERSIONS);
-        scheduleDonateNudge();
     } catch(e) {
         if (e.name === "AbortError") return;
         setOverlay(false); setLive("error"); setStatus(T.conv_error(e.message), "error");
@@ -438,13 +479,7 @@ document.querySelectorAll(".seg").forEach(seg => {
     });
 });
 document.getElementById("sw-invert").addEventListener("change", () => { if (currentSession) runConversion(); });
-document.getElementById("btn-dl").addEventListener("click", () => {
-    if (!currentSvg) return;
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(new Blob([currentSvg],{type:"image/svg+xml"}));
-    a.download = (currentFile?.name.replace(/\.[^.]+$/,"") || "output") + ".svg";
-    a.click(); URL.revokeObjectURL(a.href); setStatus(T.saved(a.download), "ok");
-});
+document.getElementById("btn-dl").addEventListener("click", gateDownload);
 document.getElementById("adv-toggle").addEventListener("click", () => {
     const open = document.getElementById("adv-content").classList.toggle("open");
     document.getElementById("adv-arrow").textContent = open ? "\u25B4" : "\u25BE";

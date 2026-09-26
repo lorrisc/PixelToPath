@@ -16,7 +16,10 @@
     font-weight: bold;
 }
 
-/* Blocking donation modal */
+/* Download gate : modale Ko-fi affichée à chaque clic sur « Download »
+ * (online.js), anneau de 10 s puis le fichier se télécharge — la popup
+ * reste ouverte (état ✓). Un clic sur le lien Ko-fi la désactive
+ * définitivement (localStorage). */
 .donate-nudge {
     position: fixed;
     inset: 0;
@@ -88,6 +91,88 @@
     font-size: 1rem;
     line-height: 1.55;
     color: var(--gray);
+}
+
+/* Anneau de compte à rebours (10 s), nombre au centre */
+.donate-nudge__timer {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 1rem auto 0.4rem;
+}
+
+.donate-nudge__timer svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.donate-nudge__ring-bg,
+.donate-nudge__ring {
+    fill: none;
+    stroke-width: 6;
+}
+
+.donate-nudge__ring-bg {
+    stroke: rgba(255, 196, 57, 0.25);
+}
+
+.donate-nudge__ring {
+    stroke: #ffc439;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s linear;
+}
+
+.donate-nudge__count {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.donate-nudge__secs {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.donate-nudge__unit {
+    margin-top: 2px;
+    font-size: 0.72rem;
+    color: var(--gray);
+}
+
+/* État « téléchargé » : le fichier est parti, la popup reste ouverte
+ * jusqu'à fermeture manuelle — le ✓ remplace l'anneau. */
+.donate-nudge__done {
+    display: none;
+    position: absolute;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #2e9e44;
+}
+
+.donate-nudge.is-done .donate-nudge__ring-bg,
+.donate-nudge.is-done .donate-nudge__ring,
+.donate-nudge.is-done .donate-nudge__count,
+.donate-nudge.is-done .donate-nudge__later {
+    display: none;
+}
+
+.donate-nudge.is-done .donate-nudge__done {
+    display: flex;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .donate-nudge__ring {
+        transition: none;
+    }
 }
 
 .donate-nudge__actions {
