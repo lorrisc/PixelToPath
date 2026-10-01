@@ -1,7 +1,7 @@
 /**
  * online.i18n.js - Translations for all hardcoded strings in online.js
  * Covers: overlay messages, status, live badge, detected type labels, param tooltips
- * Languages: ar, bn, de, en, es, fa, fr, hi, id, ja, ko, nl, pl, pt-BR, ru, th, tr, uk, ur, vi, zh
+ * Languages: ar, bn, cs, de, en, es, fa, fr, hi, id, it, ja, ko, nl, pl, pt-BR, ru, th, tr, uk, ur, vi, zh
  */
 window.PTP_I18N = {
 
@@ -362,6 +362,46 @@ window.PTP_I18N = {
       turdsize:         { title: "Filter bintik", text: "Mengabaikan bentuk yang lebih kecil dari area ini (piksel): lebih tinggi = lebih sedikit noise." },
       alphamax:         { title: "Penghalusan sudut", text: "0 mempertahankan sudut tajam (poligon); nilai lebih tinggi menghasilkan kurva lebih halus (bawaan Potrace: 1.0)." },
       opttolerance:     { title: "Optimasi kurva", text: "Toleransi penggabungan segmen kurva: lebih tinggi = lebih sedikit node dan SVG lebih ringan." },
+    },
+  },
+
+  it: {
+    uploading:    "Caricamento…",
+    converting:   "Conversione…",
+    format_error: "Formato non accettato - solo PNG, JPG, BMP o WebP",
+    upload_error: (msg) => `✕ Caricamento: ${msg}`,
+    conv_error:   (msg) => `✕ ${msg}`,
+    ready:        (kb)  => `✓ Pronto · ${kb} KB`,
+    saved:        (n)   => `✓ Salvato come ${n}`,
+    live_converting: "conversione…",
+    live_error:      "errore",
+    live_ready:      "live",
+    type_photo:        "📷 Rilevata una foto",
+    type_illustration: "🎨 Rilevata un'illustrazione",
+    type_logo:         "✦ Rilevato un logo / icona",
+    type_line_art:     "✏️ Rilevato un line art",
+    type_adjusted:     "— impostazioni regolate automaticamente",
+    dl_gate_title: 'Il download è in partenza…',
+    dl_gate_text:  'PixelToPath è gratuito. Una piccola donazione aiuta a coprire i costi di hosting.',
+    dl_gate_cta:   '❤️ Fai una donazione su Ko-fi',
+    dl_gate_now:   'Scarica ora',
+    dl_gate_unit:  's',
+    dl_gate_done:  '✓ Scaricato!',
+    params: {
+      colormode:        { title: "Modalità colore",     text: "A colori vettorizza ogni colore. Bianco e nero converte prima in bianco e nero - ideale per schizzi, line art e logo a colore unico." },
+      hierarchical:     { title: "Gerarchia",           text: "Come si sovrappongono i livelli di colore. Sovrapposto li impila come pittura. Ritagliato scava buchi tra i livelli, come uno stencil." },
+      color_precision:  { title: "Precisione colore",   text: "Bit significativi per canale RGB usati per raggruppare colori simili. Più alto = più colori distinti, file più grande. Più basso = blocchi meno numerosi e più decisi." },
+      layer_difference: { title: "Differenza livelli",  text: "Distanza minima di colore tra livelli adiacenti. Bassa = transizioni morbide. Alta = blocchi di colore meno numerosi e più decisi. Aumenta per un effetto poster flat." },
+      mode:             { title: "Modalità curve",      text: "Spline = curve Bézier morbide, migliore per la maggior parte delle immagini. Poligono = solo segmenti rettilinei. Pixel = nessuna smussatura, segue esattamente i bordi dei pixel." },
+      filter_speckle:   { title: "Filtro speckle",      text: "Rimuove le macchie isolate più piccole di questa dimensione (px). Aumenta per pulire rumore, grana JPEG o artefatti di compressione." },
+      corner_threshold: { title: "Soglia angolo",       text: "Angolo minimo (°) rilevato come spigolo vivo. Basso = molti angoli. Alto = curve più morbide. Imposta 180 per eliminare tutti gli angoli." },
+      length_threshold: { title: "Soglia lunghezza",    text: "Lunghezza minima di un segmento spline prima della suddivisione. Più alta = curve più semplici. Più bassa = più dettaglio e più segmenti." },
+      splice_threshold: { title: "Soglia splice",       text: "Angolo minimo per spezzare una spline in due segmenti. Più basso = più spezzature, dettaglio più fine. Più alto = curve interrotte più lunghe." },
+      path_precision:   { title: "Precisione tracciato",text: "Cifre decimali nelle coordinate dei path SVG. Più alta = più accuratezza, file più grande. 2–3 è ideale per la maggior parte degli usi web." },
+      invert:           { title: "Inverti",             text: "Inverte bianco e nero prima della vettorializzazione. Usalo quando il disegno ha linee bianche su sfondo scuro o sembra un negativo." },
+      turdsize:         { title: "Despeckle", text: "Ignora le forme più piccole di quest'area (in pixel): più alto = meno rumore." },
+      alphamax:         { title: "Smussatura angoli", text: "0 mantiene gli angoli netti (poligono); valori più alti danno curve più morbide (default Potrace: 1.0)." },
+      opttolerance:     { title: "Ottimizzazione curve", text: "Tolleranza per unire segmenti di curva: più alta = meno nodi e un SVG più leggero." },
     },
   },
 

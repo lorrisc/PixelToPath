@@ -1061,83 +1061,83 @@
         <!-- i18n du convertisseur : seule la locale de la page est inlinée (généré au build) -->
         <script>window.PTP_I18N={
   "it": {
-    "uploading": "Uploading…",
-    "converting": "Converting…",
-    "format_error": "Format not accepted - PNG, JPG, BMP or WebP only",
-    "upload_error": (msg) => `✕ Upload: ${msg}`,
+    "uploading": "Caricamento…",
+    "converting": "Conversione…",
+    "format_error": "Formato non accettato - solo PNG, JPG, BMP o WebP",
+    "upload_error": (msg) => `✕ Caricamento: ${msg}`,
     "conv_error": (msg) => `✕ ${msg}`,
-    "ready": (kb)  => `✓ Ready · ${kb} KB`,
-    "saved": (n)   => `✓ Saved as ${n}`,
-    "live_converting": "converting…",
-    "live_error": "error",
+    "ready": (kb)  => `✓ Pronto · ${kb} KB`,
+    "saved": (n)   => `✓ Salvato come ${n}`,
+    "live_converting": "conversione…",
+    "live_error": "errore",
     "live_ready": "live",
-    "type_photo": "📷 Photo detected",
-    "type_illustration": "🎨 Illustration detected",
-    "type_logo": "✦ Logo / Icon detected",
-    "type_line_art": "✏️ Line art detected",
-    "type_adjusted": "— settings adjusted automatically",
-    "dl_gate_title": "Your download is starting…",
-    "dl_gate_text": "PixelToPath is free. A small donation helps cover the hosting costs.",
-    "dl_gate_cta": "❤️ Donate on Ko-fi",
-    "dl_gate_now": "Download now",
+    "type_photo": "📷 Rilevata una foto",
+    "type_illustration": "🎨 Rilevata un'illustrazione",
+    "type_logo": "✦ Rilevato un logo / icona",
+    "type_line_art": "✏️ Rilevato un line art",
+    "type_adjusted": "— impostazioni regolate automaticamente",
+    "dl_gate_title": "Il download è in partenza…",
+    "dl_gate_text": "PixelToPath è gratuito. Una piccola donazione aiuta a coprire i costi di hosting.",
+    "dl_gate_cta": "❤️ Fai una donazione su Ko-fi",
+    "dl_gate_now": "Scarica ora",
     "dl_gate_unit": "s",
-    "dl_gate_done": "✓ Downloaded!",
+    "dl_gate_done": "✓ Scaricato!",
     "params": {
       "colormode": {
-        "title": "Color Mode",
-        "text": "Full color vectorizes every color. B&W converts to black and white first - ideal for sketches, line art, and single-color logos."
+        "title": "Modalità colore",
+        "text": "A colori vettorizza ogni colore. Bianco e nero converte prima in bianco e nero - ideale per schizzi, line art e logo a colore unico."
       },
       "hierarchical": {
-        "title": "Hierarchical",
-        "text": "How color layers overlap. Stacked builds layers on top of each other like paint. Cutout carves holes through layers, like a stencil."
+        "title": "Gerarchia",
+        "text": "Come si sovrappongono i livelli di colore. Sovrapposto li impila come pittura. Ritagliato scava buchi tra i livelli, come uno stencil."
       },
       "color_precision": {
-        "title": "Color Precision",
-        "text": "Significant bits per RGB channel used to group similar colors. Higher = more distinct colors, larger file. Lower = fewer, bolder blocks."
+        "title": "Precisione colore",
+        "text": "Bit significativi per canale RGB usati per raggruppare colori simili. Più alto = più colori distinti, file più grande. Più basso = blocchi meno numerosi e più decisi."
       },
       "layer_difference": {
-        "title": "Layer Difference",
-        "text": "Minimum color distance between adjacent layers. Low = smooth transitions. High = fewer, bolder color blocks. Increase for a flat poster look."
+        "title": "Differenza livelli",
+        "text": "Distanza minima di colore tra livelli adiacenti. Bassa = transizioni morbide. Alta = blocchi di colore meno numerosi e più decisi. Aumenta per un effetto poster flat."
       },
       "mode": {
-        "title": "Curve Mode",
-        "text": "Spline = smooth Bézier curves, best for most images. Polygon = straight segments only. Pixel = no smoothing, follows pixel edges exactly."
+        "title": "Modalità curve",
+        "text": "Spline = curve Bézier morbide, migliore per la maggior parte delle immagini. Poligono = solo segmenti rettilinei. Pixel = nessuna smussatura, segue esattamente i bordi dei pixel."
       },
       "filter_speckle": {
-        "title": "Filter Speckle",
-        "text": "Removes isolated patches smaller than this size (px). Increase to clean up noise, JPEG grain, or compression artifacts."
+        "title": "Filtro speckle",
+        "text": "Rimuove le macchie isolate più piccole di questa dimensione (px). Aumenta per pulire rumore, grana JPEG o artefatti di compressione."
       },
       "corner_threshold": {
-        "title": "Corner Threshold",
-        "text": "Minimum angle (°) detected as a sharp corner. Low = many corners. High = smoother curves. Set to 180 to eliminate all corners."
+        "title": "Soglia angolo",
+        "text": "Angolo minimo (°) rilevato come spigolo vivo. Basso = molti angoli. Alto = curve più morbide. Imposta 180 per eliminare tutti gli angoli."
       },
       "length_threshold": {
-        "title": "Length Threshold",
-        "text": "Minimum length of a spline segment before subdivision. Higher = simpler curves. Lower = more detail and more segments."
+        "title": "Soglia lunghezza",
+        "text": "Lunghezza minima di un segmento spline prima della suddivisione. Più alta = curve più semplici. Più bassa = più dettaglio e più segmenti."
       },
       "splice_threshold": {
-        "title": "Splice Threshold",
-        "text": "Minimum angle to break a spline into two segments. Lower = more breaks, finer detail. Higher = longer unbroken curves."
+        "title": "Soglia splice",
+        "text": "Angolo minimo per spezzare una spline in due segmenti. Più basso = più spezzature, dettaglio più fine. Più alto = curve interrotte più lunghe."
       },
       "path_precision": {
-        "title": "Path Precision",
-        "text": "Decimal places in SVG path coordinates. Higher = more accurate, larger file. 2–3 is ideal for most web uses."
+        "title": "Precisione tracciato",
+        "text": "Cifre decimali nelle coordinate dei path SVG. Più alta = più accuratezza, file più grande. 2–3 è ideale per la maggior parte degli usi web."
       },
       "invert": {
-        "title": "Invert",
-        "text": "Swaps black and white before vectorizing. Use when your drawing has white lines on a dark background or looks like a negative."
+        "title": "Inverti",
+        "text": "Inverte bianco e nero prima della vettorializzazione. Usalo quando il disegno ha linee bianche su sfondo scuro o sembra un negativo."
       },
       "turdsize": {
         "title": "Despeckle",
-        "text": "Ignores shapes smaller than this area (in pixels): higher = less noise."
+        "text": "Ignora le forme più piccole di quest'area (in pixel): più alto = meno rumore."
       },
       "alphamax": {
-        "title": "Corner smoothing",
-        "text": "0 keeps sharp corners (polygon); higher values give smoother curves (Potrace default: 1.0)."
+        "title": "Smussatura angoli",
+        "text": "0 mantiene gli angoli netti (poligono); valori più alti danno curve più morbide (default Potrace: 1.0)."
       },
       "opttolerance": {
-        "title": "Curve optimization",
-        "text": "Tolerance for merging curve segments: higher = fewer nodes and a lighter SVG."
+        "title": "Ottimizzazione curve",
+        "text": "Tolleranza per unire segmenti di curva: più alta = meno nodi e un SVG più leggero."
       }
     }
   }
