@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+<head>
+    <!-- Analytics Umami first-party : /main.7c3f9d.js et /api/e sont proxifiés
+     vers le serveur Umami par le Worker portal-proxy. Rien ne quitte
+     l'origine pixel-to-path.com : indétectable par les adblockers. -->
+<script defer src="/main.7c3f9d.js" data-website-id="77afc243-d7d0-4c23-9e8b-3badaac67041"></script>
+
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hur man batchkonverterar PNG till SVG (5 metoder jämförda)</title>
+    <meta name="description" content="Hur man batchkonverterar PNG till SVG: 5 testade metoder jämförda - onlineverktyg, Pro bevakad mapp, Inkscape, CLI-skript och API:et. För 10 filer eller 10 000.">
+    <meta name="keywords" content="hur man batchkonverterar png till svg, konvertera flera png till svg samtidigt, batchvektorisera bilder, konvertera flera png-filer till svg online, bästa png till svg konverterare batch, bästa batch png till svg konverterare">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Hur man batchkonverterar PNG till SVG (5 metoder jämförda)">
+    <meta property="og:description" content="Hur man batchkonverterar PNG till SVG: 5 testade metoder jämförda - onlineverktyg, Pro bevakad mapp, Inkscape, CLI-skript och API:et. För 10 filer eller 10 000.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hur man batchkonverterar PNG till SVG (5 metoder jämförda)">
+    <meta name="twitter:description" content="Hur man batchkonverterar PNG till SVG: 5 testade metoder jämförda - onlineverktyg, Pro bevakad mapp, Inkscape, CLI-skript och API:et. För 10 filer eller 10 000.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta property="og:url" content="https://pixel-to-path.com/sv/blog/batch-convert-png-to-svg/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/sv/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="cs" href="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="it" href="https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="sv" href="https://pixel-to-path.com/sv/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">
+
+    <link rel="stylesheet" href="../../../assets/css/bundle.e62b5d6b.css">
+
+    <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: BlogPosting -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/sv/blog/batch-convert-png-to-svg/#article",
+  "headline": "Hur man batchkonverterar PNG till SVG (5 metoder jämförda)",
+  "description": "Hur man batchkonverterar PNG till SVG: 5 testade metoder jämförda - onlineverktyg, Pro bevakad mapp, Inkscape, CLI-skript och API:et. För 10 filer eller 10 000.",
+  "url": "https://pixel-to-path.com/sv/blog/batch-convert-png-to-svg/",
+  "mainEntityOfPage": "https://pixel-to-path.com/sv/blog/batch-convert-png-to-svg/",
+  "inLanguage": "sv",
+  "datePublished": "2026-09-12",
+  "dateModified": "2026-09-12",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/sv/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-logo.jpg"
+}</script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Kan jag batchkonvertera PNG till SVG gratis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, på två sätt. Kommandoradsskript (Potrace, ImageMagick, VTracer) är gratis utan filbegränsningar, och den kostnadsfria skrivbordsappen plus Inkscape är gratis men konverterar en fil i taget. Onlineverktyg som accepterar flera filer gratis finns också - verifiera bara att de verkligen vektoriserar och läs deras sekretessvillkor innan du skickar kommersiell konst."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hur behåller jag färgerna när jag batchkonverterar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Använd en färgspårare. Potrace är strikt svartvitt oavsett hur du skriptar det; VTracer, PixelToPath Pro och PixelToPath API kör alla en färgmotor som återskapar varje färgregion som en egen vektorform. Skripta loopen med vtracer, eller använd Pro eller API:et om du hellre slipper underhålla den."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan jag ladda upp en ZIP-fil med PNG:er och få en ZIP-fil med SVG:er?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vissa onlineverktyg (Pixelied, till exempel) tar emot massuppladdningar och returnerar en ZIP-fil. Skrivbords-batchlägen och skript skriver resultaten till en utdatamapp som du kan zippa i ett steg. API:et returnerar en SVG per anrop, så arkiveringen stannar på din sida - vilket oftast är vad en byggpipeline vill ha i vilket fall som helst."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Varför blev min batch svarta rektanglar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Det är inbäddningsfällan: verktyget svepte in varje PNG i ett SVG-omslag i stället för att spåra det, och det du ser är att den inbäddade rastern misslyckas med att visas. Öppna en utdatafil i en textredigerare - en enda base64 &lt;image&gt;-tagg bekräftar det. Kör om batchen med ett verktyg som matar ut riktiga &lt;path&gt;-element."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jag har 50 000 filer. Vad fungerar faktiskt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En hot folder eller API:et - allt annat tar stopp långt innan dess. Med 60 förfrågningar per minut klarar API:et 50 000 bilder på cirka 14 timmar i väggklockstid för ungefär 200 € i förbetalda krediter. En lokal hot folder gör samma jobb offline, med kapacitet bestämd av din CPU. Båda håller inställningarna identiska under hela körningen."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/sv/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Lär dig bild-till-SVG-konvertering",
+      "item": "https://pixel-to-path.com/sv/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Hur man batchkonverterar PNG till SVG (5 metoder jämförda)",
+      "item": "https://pixel-to-path.com/sv/blog/batch-convert-png-to-svg/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/sv/" class="brand">
+            <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/sv/"
+            class="">Hem</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Produkter <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/sv/online/"
+                       class="">Onlineverktyg</a>
+                    <a href="/sv/offline/"
+                       class="">Skrivbordsapp</a>
+                    <a href="/sv/pro/"
+                       class="">Skrivbordsapp Pro</a>
+                    <a href="/sv/api/"
+                       class="">API</a>
+                </div>
+            </div>
+
+            <a href="/sv/pricing/"
+               class="">Priser</a>
+
+            <div class="lang-switch">
+                <span>🇸🇪 SV</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/">🇮🇹 Italiano</a>
+                    <a href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/sv/blog/batch-convert-png-to-svg/">🇸🇪 Svenska</a>
+                    <a href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/sv/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Hem</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">Produkter</span>
+            <div class="mobile-sublist">
+                <a href="/sv/online/"
+                   class="">Onlineverktyg</a>
+                <a href="/sv/offline/"
+                   class="">Skrivbordsapp</a>
+                <a href="/sv/pro/"
+                   class="">Skrivbordsapp Pro</a>
+                <a href="/sv/api/"
+                   class="">API</a>
+            </div>
+
+            <a href="/sv/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Priser</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Språk</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇹 Italiano</a>
+                    <a href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/sv/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇸🇪 Svenska</a>
+                    <a href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO – above the fold, H1 + CTA
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>Hur man batchkonverterar PNG till SVG (5 metoder jämförda)</h1>
+                <p class="blog-hero__subtitle">Fem testade sätt att konvertera flera PNG-filer till SVG samtidigt - onlineverktyg, en bevakad mapp, gratis skrivbordsappar, skript och ett API - jämförda avseende kostnad, kapacitet, färgstöd och integritet.</p>
+
+                <!-- Format badges -->
+                <div class="big-badges">
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG × 10</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG × 10 000</span>
+                    
+                    <span class="fmt-arrow">→</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">SVG</span>
+                    
+                </div>
+
+                <!-- Trust badges -->
+                <div class="badges">
+                    <span class="badge__item badge__item--accent">✓ 5 metoder jämförda</span>
+                    <span class="badge__item">10 filer eller 10 000</span>
+                    <span class="badge__item">Gratisalternativ ingår</span>
+                    <span class="badge__item">Riktig spårning, inga inbäddningar</span>
+                </div>
+
+                <a href="/sv/online/" class="btn primary-btn blog-hero__cta">Konvertera en fil gratis nu →</a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             INTRO – the batch problem + embed-vs-trace warning
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Batchproblemet - och fällan att undvika</h2>
+                    <p>Du har tio PNG-filer. Eller fyrahundra. Eller - som designern vars fråga om 51 000 filer inleder en av de längsta trådarna på Adobes communityforum - ett helt bibliotek av tillgångar som måste bli vektorer. Att konvertera en bild för hand går bra; förbi den punkten behöver du ett batcharbetsflöde: en process som förvandlar en hel mapp med raster till en mapp med SVG:er. Och om det i dag verkligen bara är en viktig fil, gör den <a href="/sv/online/">gratis online-konverteraren från PNG till SVG</a>jobbet på under en minut - den här guiden täcker allt bortom det.</p>
+                    <p>En definition innan vi jämför metoder. Riktig batchkonvertering innebär att varje PNG vektoriseras: dess former ritas om som matematiska banor, vilket är <a href="/sv/blog/vectorize-image/">vad vektorisering faktiskt gör</a>. Många verktyg hoppar över det steget helt, och det förändrar allt när det gäller utdata.</p>
+                    <p class="content-callout content-callout--warn">Den vanligaste orsaken till misslyckande: vissa "SVG-konverterare" spårar ingenting - de bäddar in din PNG inuti en .svg-fil som en inkapslad bild. Resultatet skalas "perfekt" eftersom det fortfarande är en bitmapp i förklädnad. Öppna valfri utdatafil i en textredigerare: en gigantisk base64 &lt;image&gt;-tagg i stället för &lt;path&gt;-element betyder att du inte vektoriserade någonting. Varje metod nedan bedöms utifrån riktig spårning.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             REAL OUTPUT – before/after traced by the tool
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Faktiska resultat från konverteraren</h2>
+                
+
+<figure class="ba-compare ba-compare--sample">
+    <div class="ba-compare__pair">
+        <div class="ba-panel ba-panel--before">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">Före · original</span>
+                <span class="size-badge">5 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-input.png" width="320" height="320" loading="lazy" decoding="async" alt="PNG-fil: cirkulär marinblå logotyp med en vit chevron">
+            </div>
+        </div>
+        <span class="ba-compare__arrow" aria-hidden="true">→</span>
+        <div class="ba-panel ba-panel--after">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">Efter · SVG</span>
+                <span class="size-badge">Svartvit förinställning · 2 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-bw.svg" width="320" height="320" loading="lazy" decoding="async" alt="Samma logotyp konverterad till SVG med den svartvita förinställningen: mjuka kurvor, svart fyllning">
+            </div>
+        </div>
+    </div>
+    <figcaption>En riktig konvertering gjord med detta verktyg: original-PNG till vänster spårades med den svartvita förinställningen till SVG-filen till höger — en vektorfil som förblir skarp vid vilken zoomnivå som helst.</figcaption>
+</figure>
+
+                
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/logo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="Samma logotyp förstorad till 400 %: till vänster blir PNG-pixlarna synliga; till höger förblir SVG-kurvorna perfekt mjuka.">
+    <figcaption>Samma logotyp förstorad till 400 %: till vänster blir PNG-pixlarna synliga; till höger förblir SVG-kurvorna perfekt mjuka.</figcaption>
+</figure>
+
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             METHODS 1–3 – online, hot folder, free desktop
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Metod 1: Online batch-konverterare</h2>
+                    <p>Den snabbaste vägen för en liten batch. Flera onlineverktyg accepterar flera filer samtidigt: to.imagestool.com låter dig dra och släppa en uppsättning PNG-filer och bearbetar dem lokalt i webbläsaren; Pixelied tar emot massuppladdningar och ger dig en ZIP-fil med resultat; ImageResizer.com och reaConverters webbtest fungerar på samma sätt. Ingen installation, ingen kommandorad - släpp filerna, ladda ner resultaten.</p>
+                    <p>Två kontroller innan du anförtror en av dem med riktigt arbete. För det första, se till att verktyget faktiskt spårar: vissa "batch"-sajter loopar bara enkelfilskonverteringar på en server och returnerar en ZIP-fil med pseudo-SVG:er - inbäddningsfällan från varningen ovan. För det andra, läs integritetsvillkoren om konsten är kommersiell eller under NDA: webbläsarbaserade verktyg laddar aldrig upp dina filer, serverbaserade skickar varje bild till någon annans maskin. För transparensens skull: PixelToPaths egna gratis online-konverterare är avsiktligt för enkelfiler. Det är rätt verktyg för den där ena viktiga logotypen, inte för en mapp med fyrahundra - och den är med i denna jämförelse som exakt det.</p>
+
+                    <h2>Metod 2: En skrivbordsapp med en bevakad mapp (hot folder) (PixelToPath Pro)</h2>
+                    <p>Om batcher är en veckohändelse snarare än en engångsföreteelse tar en bevakad mapp bort det manuella steget helt. PixelToPath Pro (Windows och Linux) övervakar en mapp och konverterar varje bild som hamnar i den, automatiskt. Hela flödet består av fyra steg:</p>
+                    <ol>
+                        <li>Välj dina mappar: välj mappen att bevaka och utdatamappen där SVG:erna ska hamna.</li>
+                        <li>Släpp dina PNG-filer: spara, kopiera eller dra hela batchen till inmatningsmappen - tio filer eller flera hundra.</li>
+                        <li>Låt det arbeta: varje fil spåras vid ankomst med din sparade inställningsprofil, helt på din maskin.</li>
+                        <li>Samla in SVG:erna: resultaten visas i utdatamappen, namngivna efter originalfilerna.</li>
+                    </ol>
+                    <p>Den del som är viktig för batcher: en inställningsprofil gäller för hela kön. Konvertera fyrahundra ikoner för hand och fil 300 matchar aldrig riktigt fil 12; med en profil är varje utdata konsekvent - detaljen som dödar manuella arbetsflöden. Allt körs lokalt, så det finns inget uppladdningstak och ingen fil lämnar någonsin din maskin. Pro kostar 39 € som en engångsavgift (exkl. moms), en livstidslicens för en användare på upp till 3 maskiner; sidan för <a href="/sv/pro/">hot folder-batchkonvertering</a> bryter ner allt som ingår. Det är ett alternativ bland fem här - men det är det enda som är byggt för att göra batchkonvertering till ett steg du slutar tänka på.</p>
+
+                    <h2>Metod 3: Gratis skrivbordsappar och Inkscape</h2>
+                    <p>Använder du redan den gratis skrivbordsappen? Den konverterar PNG, JPG, BMP och WebP till SVG offline, utan någon begränsning av filantalet och med full tillgång till de avancerade spårningsinställningarna - men en fil i taget. Batch är exakt vad Pro-uppgraderingen lägger till, och det är värt att säga rakt ut istället för att låtsas som något annat. Om du vill ha gratis, lokalt och GUI-baserat, är <a href="/sv/offline/">den gratis skrivbordskonverteraren</a> det ärliga valet för enkelfiler: realistisk kapacitet är tiotals filer per dag, inte hundratals.</p>
+                    <p>Inkscape är den andra gratisarbetshästen. Dess dialogruta för spåra bitmapp är också för enskilda bilder, och även om Inkscape levereras med kommandoradsalternativ som kan skriptas till en loop, är upplevelsen grov och knappt dokumenterad. GIMP, för protokollet, har ingen inbyggd batch-vektorexport alls - dess forumtrådar bekräftar det regelbundet. Innan du lägger timmar på ett GUI-arbetsflöde, kontrollera att du faktiskt behöver vektorer för varje fil: jämförelsen <a href="/sv/blog/svg-vs-png/">SVG vs PNG för webben</a> täcker när konverteringen är värd det.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             METHODS 4–5 + COMPARISON TABLE
+             cluster-link placeholders: CLI (cluster-2-post-0)
+             and potrace/imagemagick (cluster-2-post-1) articles
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Metod 4: Kommandoradsskript (ImageMagick, Potrace, VTracer)</h2>
+                    <p>För engångsbruk av massjobb slår ett skalskript på tio rader varje GUI. Den klassiska svartvita rörledningen kedjar ImageMagick in i Potrace - konvertera, sedan spåra: <code>magick input.png input.pbm &amp;&amp; potrace -s -o input.svg input.pbm</code></p>
+                    <p>Lid in det i en for-loop över din mapp så matar Potrace ut sanna vektorbanor med hastigheten av din CPU - men strikt i svartvitt. För färg, rikta samma loop mot vtracer, den öppna källkodstracern i Rust som också driver PixelToPath. Båda verktygen bär på tillräckligt med flaggor för att fylla en manual, vilket är anledningen till att var och en har en dedikerad guide (länkad här när den publicerats). Skript vinner på kostnad (gratis), integritet (lokalt) och volym (tusentals per körning); de förlorar på ingången - du underhåller en rörledning, och ingen ersätter den eftermiddag den går sönder.</p>
+                    <!-- cluster-link:cluster-2-post-0 -->
+                    <!-- cluster-link:cluster-2-post-1 -->
+
+                    <h2>Metod 5: En API-loop för CI och arbete på serversidan</h2>
+                    <p>När konverteringar måste ske på en server - under en driftsättning, inuti en byggpipeline, från en backend - upphör lokala verktyg att vara ett alternativ. Mönstret är en loop: en tillståndslös POST per bild med din Bearer-nyckel, varje SVG skriven direkt i din tillgångspipeline. Gränsen är 60 förfrågningar per minut per nyckel, så anpassa takten på loopen och försök igen med rate-limitade anrop med exponentiell backoff; misslyckade anrop förbrukar aldrig krediter. Du kan <a href="/sv/api/">automatisera hela batchen med REST API:et</a> helt utan lokala installationer - vilket precis är poängen.</p>
+                    <p>Kostnadsmatten är förutsägbar: förbetalda bilder kostar från 0,05 € ner till 0,01 € per styck vid volym, så 500 bilder kostar cirka 20 € och 10 000 cirka 200 € - och varje konto lägger till 10 gratiskonverteringar ovanpå, varje månad. Välj API:et när konverteringar måste vara reproducerbara, på serversidan och fria från lokala beroenden. Välj en hot folder när de är lokala och interaktiva. De två täcker nästan varje verklig batch.</p>
+
+                    <h2>Batch PNG till SVG: Alla fem metoder jämförda</h2>
+                    <p>Samma inmatning, fem mycket olika kontrakt. Kostnad och integritet är strukturella, inte reklamrelaterade; kapaciteten förutsätter en operatör (eller en blygsam server) på realistisk hårdvara; och "färg" betyder äkta flerfärgad vektorutmatning, inte en svart siluett.</p>
+                    <table class="vs-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Metod</th>
+                                <th scope="col">Kostnad</th>
+                                <th scope="col">Filer/dag (realistiskt)</th>
+                                <th scope="col">Färg</th>
+                                <th scope="col">Kvalitetskontroll</th>
+                                <th scope="col">Integritet</th>
+                                <th scope="col">Kompetens som krävs</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Onlinekonverterare</th>
+                                <td data-label="Kostnad">Gratis</td>
+                                <td data-label="Filer/dag (realistiskt)">50-500 (manuellt)</td>
+                                <td data-label="Färg">Beror på verktyg</td>
+                                <td data-label="Kvalitetskontroll">Endast förinställningar</td>
+                                <td data-label="Integritet">Varierar - kolla villkor</td>
+                                <td data-label="Kompetens som krävs">Ingen</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Pro hot folder</th>
+                                <td data-label="Kostnad">39 € engångs</td>
+                                <td data-label="Filer/dag (realistiskt)">Tusentals (lokal CPU)</td>
+                                <td data-label="Färg">Ja</td>
+                                <td data-label="Kvalitetskontroll">En profil, alla inställningar</td>
+                                <td data-label="Integritet">100 % lokalt</td>
+                                <td data-label="Kompetens som krävs">Ingen</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Gratis skrivbord / Inkscape</th>
+                                <td data-label="Kostnad">Gratis</td>
+                                <td data-label="Filer/dag (realistiskt)">20-100 (en i taget)</td>
+                                <td data-label="Färg">Ja (enskilda filer)</td>
+                                <td data-label="Kvalitetskontroll">Full, per fil</td>
+                                <td data-label="Integritet">100 % lokalt</td>
+                                <td data-label="Kompetens som krävs">Grundläggande</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Skript (CLI)</th>
+                                <td data-label="Kostnad">Gratis</td>
+                                <td data-label="Filer/dag (realistiskt)">Tusentals+ (lokal CPU)</td>
+                                <td data-label="Färg">Potrace nej - VTracer ja</td>
+                                <td data-label="Kvalitetskontroll">Full (flaggor)</td>
+                                <td data-label="Integritet">Lokalt</td>
+                                <td data-label="Kompetens som krävs">Kommandorad</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">API-loop</th>
+                                <td data-label="Kostnad">10 gratis/mån, sen 0,01-0,05 €/bild</td>
+                                <td data-label="Filer/dag (realistiskt)">Tiotusentals (60 förfråg/min)</td>
+                                <td data-label="Färg">Ja</td>
+                                <td data-label="Kvalitetskontroll">Motorparametrar per anrop</td>
+                                <td data-label="Integritet">Filer laddas upp</td>
+                                <td data-label="Kompetens som krävs">Utvecklare</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Om du konverterar batcher oftare än en gång i månaden, betalar sig metoder 2 och 5 under den första eftermiddagen. För allt mindre kostar metod 1 eller 3 ingenting utom lite av din tid.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             RELATED GUIDES – internal links
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container" style="text-align:center;">
+                <h2 class="section-title">Relaterade konverteringsguider</h2>
+                <p class="section-intro">Batchkonvertering är steg ett. Dessa täcker resten.</p>
+
+                <div class="related-tools">
+                    
+                    <a href="/blog/vectorize-image/" class="related-tool-link">
+                        ✏️ Vad vektorisering faktiskt gör
+                    </a>
+                    
+                    <a href="/blog/svg-vs-png/" class="related-tool-link">
+                        📈 SVG vs PNG för webben
+                    </a>
+                    
+                    <a href="/blog/import-svg/" class="related-tool-link">
+                        🎨 Importera dina SVG:er till Figma eller Canva
+                    </a>
+                    
+                    <a href="/online/" class="related-tool-link">
+                        🌐 Gratis online-konverterare
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FAQ – FAQPage schema injected in <head>
+        ════════════════════════════════════════ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">Vanliga frågor</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Kan jag batchkonvertera PNG till SVG gratis?</summary>
+                        <p>Ja, på två sätt. Kommandoradsskript (Potrace, ImageMagick, VTracer) är gratis utan filbegränsningar, och den kostnadsfria skrivbordsappen plus Inkscape är gratis men konverterar en fil i taget. Onlineverktyg som accepterar flera filer gratis finns också - verifiera bara att de verkligen vektoriserar och läs deras sekretessvillkor innan du skickar kommersiell konst.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Hur behåller jag färgerna när jag batchkonverterar?</summary>
+                        <p>Använd en färgspårare. Potrace är strikt svartvitt oavsett hur du skriptar det; VTracer, PixelToPath Pro och PixelToPath API kör alla en färgmotor som återskapar varje färgregion som en egen vektorform. Skripta loopen med vtracer, eller använd Pro eller API:et om du hellre slipper underhålla den.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Kan jag ladda upp en ZIP-fil med PNG:er och få en ZIP-fil med SVG:er?</summary>
+                        <p>Vissa onlineverktyg (Pixelied, till exempel) tar emot massuppladdningar och returnerar en ZIP-fil. Skrivbords-batchlägen och skript skriver resultaten till en utdatamapp som du kan zippa i ett steg. API:et returnerar en SVG per anrop, så arkiveringen stannar på din sida - vilket oftast är vad en byggpipeline vill ha i vilket fall som helst.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Varför blev min batch svarta rektanglar?</summary>
+                        <p>Det är inbäddningsfällan: verktyget svepte in varje PNG i ett SVG-omslag i stället för att spåra det, och det du ser är att den inbäddade rastern misslyckas med att visas. Öppna en utdatafil i en textredigerare - en enda base64 &lt;image&gt;-tagg bekräftar det. Kör om batchen med ett verktyg som matar ut riktiga &lt;path&gt;-element.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Jag har 50 000 filer. Vad fungerar faktiskt?</summary>
+                        <p>En hot folder eller API:et - allt annat tar stopp långt innan dess. Med 60 förfrågningar per minut klarar API:et 50 000 bilder på cirka 14 timmar i väggklockstid för ungefär 200 € i förbetalda krediter. En lokal hot folder gör samma jobb offline, med kapacitet bestämd av din CPU. Båda håller inställningarna identiska under hela körningen.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FINAL CTA
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container blog-cta-wrap">
+                <h2>Redo att rensa din PNG-eftersläpning?</h2>
+                <p>Konvertera en enskild fil i det kostnadsfria onlineverktyget, ställ in en bevakad mapp i Pro, eller loopa API:et - varje väg slutar i rena, riktiga vektorbanor.</p>
+                <div class="double-buttons">
+                    <a href="/sv/online/" class="btn primary-btn big-btn">Konvertera en fil gratis nu →</a>
+                    <a href="/sv/offline/" class="btn secondary-btn big-btn">⬇️ Ladda ner skrivbordsappen</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>Stöd öppen källkodsutveckling</h3>
+        <p>PixelToPath är gratis att använda. Om detta verktyg hjälpte dig att spara tid, överväg att bjuda mig på en kaffe.</p>
+        <a href="https://ko-fi.com/lorrisfrompixeltopath" target="_blank" class="donate-btn">❤️ Donera på Ko-fi</a>
+    </div>
+</section>
+    </main>
+
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/sv/">Hem</a>
+        <a href="/sv/online/">Onlineverktyg</a>
+        <a href="/sv/offline/">Skrivbordsapp</a>
+        <a href="/sv/pro/">Pro</a>
+        <a href="/sv/api/">API</a>
+        <a href="/sv/blog/">Blogg</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Öppen källkod (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Kundportal</a>
+    </div>
+</footer>
+
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
+</body>
+</html>

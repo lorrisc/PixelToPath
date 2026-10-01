@@ -1,7 +1,7 @@
 /**
  * online.i18n.js - Translations for all hardcoded strings in online.js
  * Covers: overlay messages, status, live badge, detected type labels, param tooltips
- * Languages: ar, bn, cs, de, en, es, fa, fr, hi, id, it, ja, ko, nl, pl, pt-BR, ru, th, tr, uk, ur, vi, zh
+ * Languages: ar, bn, cs, de, en, es, fa, fr, hi, id, it, ja, ko, nl, pl, pt-BR, ru, sv, th, tr, uk, ur, vi, zh
  */
 window.PTP_I18N = {
 
@@ -922,6 +922,46 @@ window.PTP_I18N = {
       turdsize:         { title: "Filtr skvrn", text: "Ignoruje tvary menší než tato plocha (v pixelech): výš = méně šumu." },
       alphamax:         { title: "Vyhlazení rohů", text: "0 zachovává ostré rohy (polygon); vyšší hodnoty dávají hladší křivky (výchozí Potrace: 1,0)." },
       opttolerance:     { title: "Optimalizace křivek", text: "Tolerance pro spojování segmentů křivek: výš = méně uzlů a lehčí SVG." },
+    },
+  },
+
+  sv: {
+    uploading:    "Laddar upp…",
+    converting:   "Konverterar…",
+    format_error: "Formatet accepteras inte - endast PNG, JPG, BMP eller WebP",
+    upload_error: (msg) => `✕ Uppladdning: ${msg}`,
+    conv_error:   (msg) => `✕ ${msg}`,
+    ready:        (kb)  => `✓ Klar · ${kb} KB`,
+    saved:        (n)   => `✓ Sparad som ${n}`,
+    live_converting: "konverterar…",
+    live_error:      "fel",
+    live_ready:      "live",
+    type_photo:        "📷 Foto identifierat",
+    type_illustration: "🎨 Illustration identifierad",
+    type_logo:         "✦ Logotyp / Ikon identifierad",
+    type_line_art:     "✏️ Linjekonst identifierad",
+    type_adjusted:     "— inställningar justerades automatiskt",
+    dl_gate_title: 'Nedladdningen startar…',
+    dl_gate_text:  'PixelToPath är gratis. En liten donation hjälper till att täcka hostingkostnaderna.',
+    dl_gate_cta:   '❤️ Donera på Ko-fi',
+    dl_gate_now:   'Ladda ner nu',
+    dl_gate_unit:  's',
+    dl_gate_done:  '✓ Nedladdat!',
+    params: {
+      colormode:        { title: "Färgläge",             text: "Färg vektoriserar alla färger. Svartvitt konverterar först till gråskala - idealiskt för skisser, linjekonst och enfärgade logotyper." },
+      hierarchical:     { title: "Hierarki",             text: "Hur färglager överlappar. Staplat bygger lager ovanpå varandra som färg. Urklipp skär hål genom lagren, som en schablon." },
+      color_precision:  { title: "Färgprecision",        text: "Signifikanta bitar per RGB-kanal för att gruppera liknande färger. Högre = fler distinkta färger, större fil. Lägre = färre, kraftfullare färgblock." },
+      layer_difference: { title: "Lagerskillnad",        text: "Minimal färgavstånd mellan intilliggande lager. Låg = mjuka övergångar. Hög = färre, kraftfullare färgblock. Öka för ett platt posterutseende." },
+      mode:             { title: "Kurvläge",             text: "Spline = mjuka Bézier-kurvor, bäst för de flesta bilder. Polygon = endast raka segment. Pixel = ingen utjämning, följer pixelkanter exakt." },
+      filter_speckle:   { title: "Fläckfilter",          text: "Tar bort isolerade fläckar mindre än denna storlek (px). Öka för att rensa brus, JPEG-korn eller komprimeringsartefakter." },
+      corner_threshold: { title: "Hörntröskel",          text: "Minsta vinkel (°) som detekteras som ett vass hörn. Låg = många hörn. Hög = mjukare kurvor. Ställ in på 180 för att eliminera alla hörn." },
+      length_threshold: { title: "Längdtröskel",         text: "Minsta längd på ett spline-segment före underdelning. Högre = enklare kurvor. Lägre = mer detaljer och fler segment." },
+      splice_threshold: { title: "Delningströskel",      text: "Minsta vinkel för att dela en spline i två segment. Lägre = fler delningar, finare detaljer. Högre = längre oavbrutna kurvor." },
+      path_precision:   { title: "Sökvägsprecision",     text: "Decimaler i SVG-sökvägens koordinater. Högre = mer exakt, större fil. 2–3 är idealiskt för de flesta webbanvändningar." },
+      invert:           { title: "Invertera",            text: "Byter svart och vitt före vektorisering. Använd när din teckning har vita linjer på mörk bakgrund eller ser ut som ett negativ." },
+      turdsize:         { title: "Avbrusning", text: "Ignorerar former mindre än denna yta (i pixlar): högre = mindre brus." },
+      alphamax:         { title: "Hörnutjämning", text: "0 behåller vassa hörn (polygon); högre värden ger mjukare kurvor (Potrace-standard: 1,0)." },
+      opttolerance:     { title: "Kurvoptimering", text: "Tolerans för att slå ihop kurvsegment: högre = färre noder och en lättare SVG." },
     },
   },
 

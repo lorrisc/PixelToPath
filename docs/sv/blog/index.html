@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+<head>
+    <!-- Analytics Umami first-party : /main.7c3f9d.js et /api/e sont proxifiés
+     vers le serveur Umami par le Worker portal-proxy. Rien ne quitte
+     l'origine pixel-to-path.com : indétectable par les adblockers. -->
+<script defer src="/main.7c3f9d.js" data-website-id="77afc243-d7d0-4c23-9e8b-3badaac67041"></script>
+
+    
+<script defer src="../../assets/js/ads-lazy.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guider &amp; tips för SVG-konvertering – PixelToPath Blogg</title>
+    <meta name="description" content="Gratis guider om konvertering av PNG, JPG och andra bilder till SVG. Lär dig vektorisering, bästa praxis och hur du får ut mesta möjliga av PixelToPath.">
+    <meta name="keywords" content="svg konverteringsguide, png till svg handledning, vektorisera bild handledning, bild till svg hur, svg konverterare tips, pixeltopath blogg">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Guider &amp; tips för SVG-konvertering – PixelToPath Blogg">
+    <meta property="og:description" content="Gratis guider om konvertering av PNG, JPG och andra bilder till SVG. Lär dig vektorisering, bästa praxis och hur du får ut mesta möjliga av PixelToPath.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="PixelToPath app screenshot">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Guider &amp; tips för SVG-konvertering – PixelToPath Blogg">
+    <meta name="twitter:description" content="Gratis guider om konvertering av PNG, JPG och andra bilder till SVG. Lär dig vektorisering, bästa praxis och hur du får ut mesta möjliga av PixelToPath.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="PixelToPath app screenshot">
+    <meta property="og:url" content="https://pixel-to-path.com/blog/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/sv/blog/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/">
+    
+    <link rel="alternate" hreflang="cs" href="https://pixel-to-path.com/cs/blog/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/">
+    
+    <link rel="alternate" hreflang="it" href="https://pixel-to-path.com/it/blog/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/">
+    
+    <link rel="alternate" hreflang="sv" href="https://pixel-to-path.com/sv/blog/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/">
+    
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/blog/">
+
+    <link rel="stylesheet" href="../../assets/css/bundle.f01ab142.css">
+
+    <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: Blog -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://pixel-to-path.com/sv/blog/#blog",
+  "name": "Guider & tips för SVG-konvertering – PixelToPath Blogg",
+  "url": "https://pixel-to-path.com/sv/blog/",
+  "inLanguage": "sv",
+  "description": "Gratis guider om konvertering av PNG, JPG och andra bilder till SVG. Lär dig vektorisering, bästa praxis och hur du får ut mesta möjliga av PixelToPath.",
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Gratis JPG till SVG-konverterare online",
+      "description": "Förvandla vilket JPEG-foto eller illustration som helst till en skalbar SVG-vektor. Upptäck när JPG-till-SVG-konvertering är användbart och hur du får bästa resultat.",
+      "url": "https://pixel-to-path.com/sv/blog/jpg-to-svg/"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Gratis bildvektoriserare online",
+      "description": "Vad innebär det egentligen att vektorisera en bild? Denna guide förklarar raster-till-vektor-konvertering, när det spelar roll och hur man får skarpa resultat med PixelToPath.",
+      "url": "https://pixel-to-path.com/sv/blog/vectorize-image/"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Gratis bild till SVG-konverterare",
+      "description": "En komplett nybörjarguide för bild-till-SVG-konvertering. Lär dig vad SVG är, varför det är viktigt och hur du konverterar vilket bildformat som helst till skalbar vektorgrafik gratis.",
+      "url": "https://pixel-to-path.com/sv/blog/image-to-svg/"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Gratis SVG-filer för Cricut, Silhouette & Laserskärning",
+      "description": "Skärmaskiner behöver vektorer, inte pixlar. Lär dig hur du gör om en PNG eller JPG till en ren SVG redo för Cricut, Silhouette eller en laserskärare.",
+      "url": "https://pixel-to-path.com/sv/blog/svg-cricut/"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "SVG mot PNG/JPG: Core Web Vitals och SEO",
+      "description": "Varför SVG-logotyper och ikoner väger mindre, förblir skarpa från mobil till 4K, och förbättrar LCP, CLS och SEO med hjälp av PixelToPath.",
+      "url": "https://pixel-to-path.com/sv/blog/svg-vs-png/"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Är din logotyp suddig? Vektorisera den till SVG på 1 minut",
+      "description": "Har du bara din logotyp i JPG eller PNG? Den blir pixlig på en affisch. Fixa den till en skarp SVG, gratis, utan Illustrator.",
+      "url": "https://pixel-to-path.com/sv/blog/vectorize-logo/"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Hur du importerar och redigerar dina SVG-filer i Figma, Canva eller WordPress",
+      "description": "Steget efter konvertering: dra in PixelToPath SVG-filen i Figma för att ändra en färg, öppna den i Canva eller ladda upp den säkert till WordPress.",
+      "url": "https://pixel-to-path.com/sv/blog/import-svg/"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Hur man satsvis konverterar PNG till SVG (5 metoder jämförs)",
+      "description": "Tio filer eller tiotusen: onlinekonverterare, en bevakad mapp, gratis skrivbordsappar, CLI-skript och API:et - jämfört på pris, kapacitet, färg och sekretess.",
+      "url": "https://pixel-to-path.com/sv/blog/batch-convert-png-to-svg/"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "PNG till vektor: Gratis onlinekonverterare & guide",
+      "description": "Vad \"vektor\" egentligen betyder, vilket format du ska välja (SVG, EPS, AI) och hur du gör om vilken PNG som helst till en ren, skalbar vektor gratis.",
+      "url": "https://pixel-to-path.com/sv/blog/png-to-vector/"
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/sv/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Lär dig bild-till-SVG-konvertering",
+      "item": "https://pixel-to-path.com/sv/blog/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/sv/" class="brand">
+            <img src="../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/sv/"
+            class="">Hem</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">Produkter <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/sv/online/"
+                       class="">Onlineverktyg</a>
+                    <a href="/sv/offline/"
+                       class="">Skrivbordsapp</a>
+                    <a href="/sv/pro/"
+                       class="">Skrivbordsapp Pro</a>
+                    <a href="/sv/api/"
+                       class="">API</a>
+                </div>
+            </div>
+
+            <a href="/sv/pricing/"
+               class="">Priser</a>
+
+            <div class="lang-switch">
+                <span>🇸🇪 SV</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/it/blog/">🇮🇹 Italiano</a>
+                    <a href="https://pixel-to-path.com/ja/blog/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/sv/blog/">🇸🇪 Svenska</a>
+                    <a href="https://pixel-to-path.com/th/blog/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/sv/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">Hem</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">Produkter</span>
+            <div class="mobile-sublist">
+                <a href="/sv/online/"
+                   class="">Onlineverktyg</a>
+                <a href="/sv/offline/"
+                   class="">Skrivbordsapp</a>
+                <a href="/sv/pro/"
+                   class="">Skrivbordsapp Pro</a>
+                <a href="/sv/api/"
+                   class="">API</a>
+            </div>
+
+            <a href="/sv/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">Priser</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">Språk</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/" class="mobile-lang-btn">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/hi/blog/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/it/blog/" class="mobile-lang-btn">🇮🇹 Italiano</a>
+                    <a href="https://pixel-to-path.com/ja/blog/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/sv/blog/" class="mobile-lang-btn">🇸🇪 Svenska</a>
+                    <a href="https://pixel-to-path.com/th/blog/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <div class="blog-hero__eyebrow">📖 Guider & Resurser</div>
+                <h1>Lär dig bild-till-SVG-konvertering</h1>
+                <p class="blog-hero__subtitle">Praktiska guider om att konvertera rasterbilder till skalbar vektorgrafik - gratis verktyg, tydliga förklaringar och verkliga användningsfall.</p>
+            </div>
+        </section>
+
+
+        <!-- ═══════════════════════════════════════
+             META STRIP (article count)
+        ════════════════════════════════════════ -->
+        <div class="container">
+            <div class="blog-meta-strip">
+                <p class="blog-meta-strip__count">
+                    Bläddrar i <strong>9</strong> guider
+                </p>
+                <span class="blog-meta-strip__tag">SVG · Vector · Conversion</span>
+            </div>
+        </div>
+
+
+        <!-- ═══════════════════════════════════════
+             FEATURED ARTICLE – jpg to svg
+        ════════════════════════════════════════ -->
+        <section class="blog-featured">
+            <div class="container">
+                <a href="/sv/blog/jpg-to-svg/" class="featured-card">
+
+                    <!-- Visual panel -->
+                    <div class="featured-card__visual">
+                        <span class="featured-label">★ Mest populära</span>
+                        <div class="featured-card__fmt-stack">
+                            <div class="featured-card__fmt-from">
+                                <span class="fmt-pill">JPG</span>
+                            </div>
+                            <span class="fmt-arrow-lg">↓</span>
+                            <div class="featured-card__fmt-from">
+                                <span class="fmt-pill fmt-pill--success">SVG</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content panel -->
+                    <div class="featured-card__content">
+                        <span class="article-tag">Formatkonverterare</span>
+                        <h3>Gratis JPG till SVG-konverterare online</h3>
+                        <p>Förvandla vilket JPEG-foto eller illustration som helst till en skalbar SVG-vektor. Upptäck när JPG-till-SVG-konvertering är användbart och hur du får bästa resultat.</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ 5 min läsning</span>
+                            <span class="article-cta">Läs guide →</span>
+                        </div>
+                    </div>
+
+                </a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             ARTICLES GRID – remaining 4
+        ════════════════════════════════════════ -->
+        <section class="blog-grid">
+            <div class="container">
+                <div class="articles-grid">
+
+                    
+                    <!-- Batch convert PNG to SVG – cluster entry point -->
+                    <a href="/sv/blog/batch-convert-png-to-svg/" class="article-card">
+                        <div class="article-card__icon">📚</div>
+                        <span class="article-tag">Satsvis & Automatisering</span>
+                        <h3>Hur man satsvis konverterar PNG till SVG (5 metoder jämförs)</h3>
+                        <p>Tio filer eller tiotusen: onlinekonverterare, en bevakad mapp, gratis skrivbordsappar, CLI-skript och API:et - jämfört på pris, kapacitet, färg och sekretess.</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ 7 min läsning</span>
+                            <span class="article-cta">Läs guide →</span>
+                        </div>
+                    </a>
+                    
+
+                    
+                    <!-- PNG to vector – gap GSC "png to vector" -->
+                    <a href="/sv/blog/png-to-vector/" class="article-card">
+                        <div class="article-card__icon">📐</div>
+                        <span class="article-tag">Vektorisering</span>
+                        <h3>PNG till vektor: Gratis onlinekonverterare & guide</h3>
+                        <p>Vad "vektor" egentligen betyder, vilket format du ska välja (SVG, EPS, AI) och hur du gör om vilken PNG som helst till en ren, skalbar vektor gratis.</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ 6 min läsning</span>
+                            <span class="article-cta">Läs guide →</span>
+                        </div>
+                    </a>
+                    
+
+                    
+                    <!-- Photo to SVG – gap GSC "photo/picture to svg" -->
+                    <a href="/sv/blog/photo-to-svg/" class="article-card">
+                        <div class="article-card__icon">🖼️</div>
+                        <span class="article-tag">Foton & Pyssel</span>
+                        <h3>Foto till SVG: Gör om en bild till en vektorfil</h3>
+                        <p>Silhuett, linjekonst eller fullfärg: vilken förinställning du ska välja för porträtt, hur du förbereder bilden och vilka foton som bör förbli i raster.</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ 7 min läsning</span>
+                            <span class="article-cta">Läs guide →</span>
+                        </div>
+                    </a>
+                    
+
+                    
+                    <!-- Importer un SVG – Figma, Canva, WordPress -->
+                    <a href="/sv/blog/import-svg/" class="article-card">
+                        <div class="article-card__icon">🎨</div>
+                        <span class="article-tag">Designers & Integration</span>
+                        <h3>Hur du importerar och redigerar dina SVG-filer i Figma, Canva eller WordPress</h3>
+                        <p>Steget efter konvertering: dra in PixelToPath SVG-filen i Figma för att ändra en färg, öppna den i Canva eller ladda upp den säkert till WordPress.</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ 8 min läsning</span>
+                            <span class="article-cta">Läs guide →</span>
+                        </div>
+                    </a>
+                    
+
+                    
+                    <!-- Vectoriser un logo flou – entreprises / freelances -->
+                    <a href="/sv/blog/vectorize-logo/" class="article-card">
+                        <div class="article-card__icon">🔧</div>
+                        <span class="article-tag">Företag & Frilans</span>
+                        <h3>Är din logotyp suddig? Vektorisera den till SVG på 1 minut</h3>
+                        <p>Har du bara din logotyp i JPG eller PNG? Den blir pixlig på en affisch. Fixa den till en skarp SVG, gratis, utan Illustrator.</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ 7 min läsning</span>
+                            <span class="article-cta">Läs guide →</span>
+                        </div>
+                    </a>
+                    
+
+                    
+                    <!-- SVG vs PNG/JPG – performance & SEO -->
+                    <a href="/sv/blog/svg-vs-png/" class="article-card">
+                        <div class="article-card__icon">📈</div>
+                        <span class="article-tag">Prestanda & SEO</span>
+                        <h3>SVG mot PNG/JPG: Core Web Vitals och SEO</h3>
+                        <p>Varför SVG-logotyper och ikoner väger mindre, förblir skarpa från mobil till 4K, och förbättrar LCP, CLS och SEO med hjälp av PixelToPath.</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ 8 min läsning</span>
+                            <span class="article-cta">Läs guide →</span>
+                        </div>
+                    </a>
+                    
+
+                    <!-- SVG for Cricut / Silhouette / laser -->
+                    <a href="/sv/blog/svg-cricut/" class="article-card">
+                        <div class="article-card__icon">✂️</div>
+                        <span class="article-tag">DIY & Pyssel</span>
+                        <h3>Gratis SVG-filer för Cricut, Silhouette & Laserskärning</h3>
+                        <p>Skärmaskiner behöver vektorer, inte pixlar. Lär dig hur du gör om en PNG eller JPG till en ren SVG redo för Cricut, Silhouette eller en laserskärare.</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ 6 min läsning</span>
+                            <span class="article-cta">Läs guide →</span>
+                        </div>
+                    </a>
+
+                    <!-- Vectorize Image -->
+                    <a href="/sv/blog/vectorize-image/" class="article-card">
+                        <div class="article-card__icon">✏️</div>
+                        <span class="article-tag">Vektorisering</span>
+                        <h3>Gratis bildvektoriserare online</h3>
+                        <p>Vad innebär det egentligen att vektorisera en bild? Denna guide förklarar raster-till-vektor-konvertering, när det spelar roll och hur man får skarpa resultat med PixelToPath.</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ 6 min läsning</span>
+                            <span class="article-cta">Läs guide →</span>
+                        </div>
+                    </a>
+
+                    <!-- Image to SVG -->
+                    <a href="/sv/blog/image-to-svg/" class="article-card">
+                        <div class="article-card__icon">🖼️</div>
+                        <span class="article-tag">Nybörjarguide</span>
+                        <h3>Gratis bild till SVG-konverterare</h3>
+                        <p>En komplett nybörjarguide för bild-till-SVG-konvertering. Lär dig vad SVG är, varför det är viktigt och hur du konverterar vilket bildformat som helst till skalbar vektorgrafik gratis.</p>
+                        <div class="article-footer">
+                            <span class="article-readtime">⏱ 5 min läsning</span>
+                            <span class="article-cta">Läs guide →</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ═══════════════════════════════════════
+             BOTTOM CTA – push to the tool
+        ════════════════════════════════════════ -->
+        <section class="blog-cta-section section bg-light">
+            <div class="container">
+                <h2>Redo att prova själv?</h2>
+                <p>Sluta läsa - börja konvertera. Ladda upp din första bild och ladda ner en ren SVG på under en minut, gratis, inget konto krävs.</p>
+                <div class="double-buttons">
+                    <a href="/sv/online/" class="btn primary-btn big-btn">Öppna onlineverktyget →</a>
+                    <a href="/sv/offline/" class="btn secondary-btn big-btn">⬇️ Ladda ner skrivbordsappen</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>Stöd öppen källkodsutveckling</h3>
+        <p>PixelToPath är gratis att använda. Om detta verktyg hjälpte dig att spara tid, överväg att bjuda mig på en kaffe.</p>
+        <a href="https://ko-fi.com/lorrisfrompixeltopath" target="_blank" class="donate-btn">❤️ Donera på Ko-fi</a>
+    </div>
+</section>
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+    </main>
+
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/sv/">Hem</a>
+        <a href="/sv/online/">Onlineverktyg</a>
+        <a href="/sv/offline/">Skrivbordsapp</a>
+        <a href="/sv/pro/">Pro</a>
+        <a href="/sv/api/">API</a>
+        <a href="/sv/blog/">Blogg</a>
+        <a href="https://github.com/lorrisc/PixelToPath">Öppen källkod (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">Kundportal</a>
+    </div>
+</footer>
+
+<script src="../../assets/js/docunest-strings.js" defer></script>
+<script src="../../assets/js/docunest-popup.js" data-asset="../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../assets/js/ui-state.js"></script>
+</body>
+</html>

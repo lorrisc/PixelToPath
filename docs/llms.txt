@@ -43,7 +43,7 @@ Author: Lorris C. (Lorrisc)
 
 ## Locales
 
-Localized versions of the site (home, online, offline, blog, pro): 23 languages.
+Localized versions of the site (home, online, offline, blog, pro): 24 languages.
 
 - [English](https://pixel-to-path.com/)
 - [العربية](https://pixel-to-path.com/ar/)
@@ -62,6 +62,7 @@ Localized versions of the site (home, online, offline, blog, pro): 23 languages.
 - [Polski](https://pixel-to-path.com/pl/)
 - [Português (Brasil)](https://pixel-to-path.com/pt/)
 - [Русский](https://pixel-to-path.com/ru/)
+- [Svenska](https://pixel-to-path.com/sv/)
 - [ไทย](https://pixel-to-path.com/th/)
 - [Türkçe](https://pixel-to-path.com/tr/)
 - [Українська](https://pixel-to-path.com/uk/)
