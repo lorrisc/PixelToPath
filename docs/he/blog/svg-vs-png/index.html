@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <!-- Analytics Umami first-party : /main.7c3f9d.js et /api/e sont proxifiés
+     vers le serveur Umami par le Worker portal-proxy. Rien ne quitte
+     l'origine pixel-to-path.com : indétectable par les adblockers. -->
+<script defer src="/main.7c3f9d.js" data-website-id="77afc243-d7d0-4c23-9e8b-3badaac67041"></script>
+
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SVG מול PNG/JPG: Core Web Vitals ו-SEO | PixelToPath</title>
+    <meta name="description" content="החליפו לוגואים ואייקונים מ-PNG/JPG ב-SVG: קבצים קלים יותר, חדות ב-Retina ו-4K, LCP ו-CLS טובים יותר. מדריך למפתחים ולמומחי SEO.">
+    <meta name="keywords" content="svg vs png, svg vs jpg, svg core web vitals, svg seo, svg performance, svg vs png logo, svg icon, vectorize web logo, svg lcp cls, pixeltopath">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="SVG מול PNG/JPG: Core Web Vitals ו-SEO | PixelToPath">
+    <meta property="og:description" content="החליפו לוגואים ואייקונים מ-PNG/JPG ב-SVG: קבצים קלים יותר, חדות ב-Retina ו-4K, LCP ו-CLS טובים יותר. מדריך למפתחים ולמומחי SEO.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-photo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a photo next to its vectorized SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SVG מול PNG/JPG: Core Web Vitals ו-SEO | PixelToPath">
+    <meta name="twitter:description" content="החליפו לוגואים ואייקונים מ-PNG/JPG ב-SVG: קבצים קלים יותר, חדות ב-Retina ו-4K, LCP ו-CLS טובים יותר. מדריך למפתחים ולמומחי SEO.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-photo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a photo next to its vectorized SVG output by PixelToPath">
+    <meta property="og:url" content="https://pixel-to-path.com/he/blog/svg-vs-png/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/he/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="cs" href="https://pixel-to-path.com/cs/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="he" href="https://pixel-to-path.com/he/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="it" href="https://pixel-to-path.com/it/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="sv" href="https://pixel-to-path.com/sv/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/svg-vs-png/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/blog/svg-vs-png/">
+
+    <link rel="stylesheet" href="../../../assets/css/bundle.e62b5d6b.css">
+
+    <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: BlogPosting -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/he/blog/svg-vs-png/#article",
+  "headline": "SVG מול PNG/JPG: למה פורמטי וקטור חיוניים לביצועים ול-SEO",
+  "description": "החליפו לוגואים ואייקונים מ-PNG/JPG ב-SVG: קבצים קלים יותר, חדות ב-Retina ו-4K, LCP ו-CLS טובים יותר. מדריך למפתחים ולמומחי SEO.",
+  "url": "https://pixel-to-path.com/he/blog/svg-vs-png/",
+  "mainEntityOfPage": "https://pixel-to-path.com/he/blog/svg-vs-png/",
+  "inLanguage": "he",
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-09-09",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/he/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-photo.jpg"
+}</script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "האם SVG תמיד קל יותר מ-PNG או מ-JPG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ללוגו, לאייקון או לאיור אחיד: כן, כמעט תמיד, במיוחד אם משווים את ה-PNG לגרסת ה-Retina שלו. לצילום: לא. SVG ״צילומי״ הופך לענן נתיבים כבד יותר מ-JPG או WebP. המירו את הממשק לווקטור, דחסו את הצילומים."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "האם SVG באמת משפר את Core Web Vitals ואת ה-SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "הוא משפר את מה שתמונות ממשק יכולות לשפר: פחות בייטים (LCP אם הלוגו או האיור הוא האלמנט המרכזי), תיבת תצוגה צפויה (CLS), פחות גרסאות להורדה. Google משתמש במהירות כאות, במיוחד במובייל. זו לא קסם דירוג, זו היגיינה טכנית שנמדדת ב-PageSpeed Insights."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "כדאי להחליף את כל תמונות האתר ב-SVG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "לא. צילומים, צילומי מסך, מרקמים, מעברי גוון מורכבים: JPG, WebP או AVIF. SVG ללוגואים, לאייקונים, לדיאגרמות, לפיקטוגרמות ולאיורים אחידים. SVG מפורט מדי יכול לפגוע ב-INP. פריסט הצילום של PixelToPath מיועד לסטיילינג, לא להחליף JPEG של תוכן."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "איך מטמיעים SVG בלי לגרום ל-CLS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "תמיד ספקו width ו-height (או aspect-ratio ב-CSS) שתואמים ל-viewBox. עם תגית תמונה (src, width, height, alt) הדפדפן שומר את המקום לפני ההורדה. ב-SVG מוטמע, שמרו על ה-viewBox והימנעו מהזרקת הקוד אחרי הציור הראשון בלי ממדים."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "איך מקבלים לוגו SVG מ-PNG עם PixelToPath?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "פתחו את הכלי האונליין, שחררו את ה-PNG (מומלץ על רקע שקוף ובגודל סביר), בחרו שחור-לבן או פוסטר, כווננו את הפירוט ואז המירו. פתחו את ה-SVG בדפדפן או ב-Figma כדי לבדוק את הקווים המקיפים, ואז הגישו אותו בפרודקשן. חינם, בלי חשבון, והקבצים לא נשמרים."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/he/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "למדו המרת תמונה ל-SVG",
+      "item": "https://pixel-to-path.com/he/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SVG מול PNG/JPG: למה פורמטי וקטור חיוניים לביצועים ול-SEO",
+      "item": "https://pixel-to-path.com/he/blog/svg-vs-png/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/he/" class="brand">
+            <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/he/"
+            class="">ראשי</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">מוצרים <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/he/online/"
+                       class="">כלי אונליין</a>
+                    <a href="/he/offline/"
+                       class="">אפליקציית דסקטופ</a>
+                    <a href="/he/pro/"
+                       class="">אפליקציית דסקטופ Pro</a>
+                    <a href="/he/api/"
+                       class="">API</a>
+                </div>
+            </div>
+
+            <a href="/he/pricing/"
+               class="">מחירון</a>
+
+            <div class="lang-switch">
+                <span>🇮🇱 HE</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/svg-vs-png/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/svg-vs-png/">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/svg-vs-png/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/svg-vs-png/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/svg-vs-png/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/svg-vs-png/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/svg-vs-png/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/he/blog/svg-vs-png/">🇮🇱 עברית</a>
+                    <a href="https://pixel-to-path.com/hi/blog/svg-vs-png/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/svg-vs-png/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/it/blog/svg-vs-png/">🇮🇹 Italiano</a>
+                    <a href="https://pixel-to-path.com/ja/blog/svg-vs-png/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/svg-vs-png/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/svg-vs-png/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/svg-vs-png/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/svg-vs-png/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/svg-vs-png/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/sv/blog/svg-vs-png/">🇸🇪 Svenska</a>
+                    <a href="https://pixel-to-path.com/th/blog/svg-vs-png/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/svg-vs-png/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/he/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">ראשי</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">מוצרים</span>
+            <div class="mobile-sublist">
+                <a href="/he/online/"
+                   class="">כלי אונליין</a>
+                <a href="/he/offline/"
+                   class="">אפליקציית דסקטופ</a>
+                <a href="/he/pro/"
+                   class="">אפליקציית דסקטופ Pro</a>
+                <a href="/he/api/"
+                   class="">API</a>
+            </div>
+
+            <a href="/he/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">מחירון</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">שפה</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/svg-vs-png/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/svg-vs-png/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/svg-vs-png/" class="mobile-lang-btn">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/svg-vs-png/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/svg-vs-png/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/svg-vs-png/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/he/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇱 עברית</a>
+                    <a href="https://pixel-to-path.com/hi/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/it/blog/svg-vs-png/" class="mobile-lang-btn">🇮🇹 Italiano</a>
+                    <a href="https://pixel-to-path.com/ja/blog/svg-vs-png/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/svg-vs-png/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/svg-vs-png/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/svg-vs-png/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/svg-vs-png/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/svg-vs-png/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/sv/blog/svg-vs-png/" class="mobile-lang-btn">🇸🇪 Svenska</a>
+                    <a href="https://pixel-to-path.com/th/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/svg-vs-png/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/svg-vs-png/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/svg-vs-png/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/svg-vs-png/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/svg-vs-png/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO – above the fold, H1 + CTA
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>SVG מול PNG/JPG: למה פורמטי וקטור חיוניים לביצועים ול-SEO</h1>
+                <p class="blog-hero__subtitle">פחות ק״ב להורדה, תצוגה חדה ממובייל ועד 4K, Core Web Vitals טובים יותר. הנה למה מפתחים ומומחי SEO מעבירים את הלוגואים והאייקונים שלהם ל-SVG.</p>
+
+                <!-- Format badges -->
+                <div class="big-badges">
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">JPG</span>
+                    
+                    <span class="fmt-arrow">→</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">SVG</span>
+                    
+                </div>
+
+                <!-- Trust badges -->
+                <div class="badges">
+                    <span class="badge__item badge__item--accent">✓ Core Web Vitals</span>
+                    <span class="badge__item">SEO טכני</span>
+                    <span class="badge__item">חדות Retina · 4K</span>
+                    <span class="badge__item">100% חינם</span>
+                </div>
+
+                <a href="/he/online/" class="btn primary-btn blog-hero__cta">המרת הלוגו שלי ל-SVG ←</a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             HOW TO – 3-step guide
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">איך ממטבים לוגו PNG או JPG ל-SVG (3 שלבים)</h2>
+                <p class="section-intro">בלי Illustrator. PixelToPath ממיר את הקובץ שלכם לווקטור ונותן לכם SVG מוכן לשילוב ב-HTML.</p>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-card__number">1</div>
+                        <div class="step-card__icon">📁</div>
+                        <h3>העלו את ה-PNG או ה-JPG</h3>
+                        <p>שחררו את הלוגו, האייקון או הפיקטוגרמה שמוגשים כיום כ-PNG או JPG. ככל שהנתיב פשוט יותר (צבעים אחידים, קצוות חדים), ה-SVG יהיה קל יותר.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card__number">2</div>
+                        <div class="step-card__icon">⚙️</div>
+                        <h3>בחרו את הפריסט הנכון</h3>
+                        <p>שחור-לבן ללוגוטיפ או לאייקון מונוכרומטי. פוסטר אם ללוגו יש כמה צבעים אחידים. הימנעו מצילום: יותר מדי פירוט מנפח את ה-SVG בלי שום רווח ויזואלי ללוגו.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card__number">3</div>
+                        <div class="step-card__icon">💾</div>
+                        <h3>שלבו את ה-SVG באתר</h3>
+                        <p>הורידו את הקובץ והגישו אותו כתמונה, כספרייט או כ-SVG מוטמע. קובץ אחד מחליף את גרסאות ה-@1x, ה-@2x וה-@3x.</p>
+                    </div>
+                </div>
+
+                <div class="steps-cta">
+                    <a href="/he/online/" class="btn primary-btn">המרת הלוגו שלי ל-SVG ←</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             EDUCATIONAL CONTENT
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>PNG ו-JPG: מושלמים לצילומים, כבדים מדי לממשק</h2>
+                    <p>PNG ו-JPG הם פורמטי רסטר: התמונה היא רשת של פיקסלים. לוגו שיוצא כ-PNG בגודל 512×512 ״מצלם״ כל נקודה. כדי להישאר חד על צג Retina, צריך לרוב להגיש גרסה גדולה פי שניים או שלושה – כלומר פי שניים או שלושה יותר ק״ב. JPG דוחס צילומים טוב יותר, אבל הוא הורס צבעים אחידים, מוסיף ארטיפקטים סביב טקסט ולא תומך בשקיפות. אף אחד מהם לא מיועד ללוגוטיפ או לאייקון שצריך להופיע ב-24px בניווט וב-240px בבאנר הראשי.</p>
+                    <p>SVG (Scalable Vector Graphics) מתאר צורות באמצעות עקומות וקואורדינטות, לא פיקסלים. המרת PNG לווקטור עם PixelToPath פירושה להחליף מפת סיביות סטטית בנתיב שהדפדפן מצייר מחדש בדיוק בגודל המסך. התוצאה: בדרך כלל קובץ קל בהרבה, וחדות זהה במובייל, בדסקטופ ובצגי 4K.</p>
+
+                    <h3>מה SVG משנה בפועל לאתר</h3>
+                    <p>לממשק, SVG הוא לא ״בונוס״ אסתטי. זה מנוף ביצועים: פחות בייטים ברשת, פחות גרסאות לתחזוקה, שמירה במטמון פשוטה יותר, ותצוגת וקטור טבעית בכל הדפדפנים המודרניים.</p>
+                    <p>הרווחים הנראים לעין ביותר למפתח או למומחה SEO:</p>
+                    <ul>
+                        <li>משקל: לוגו פשוט עובר בדרך כלל מ-40 עד 80 ק״ב ב-PNG לכמה ק״ב ב-SVG, ומבטלים את הייצוא ל-@2x / @3x</li>
+                        <li>התרחבות: קובץ אחד, חד גם ב-16px וגם בצג 4K מלא, בלי srcset ובלי media queries לתמונות</li>
+                        <li>Core Web Vitals: פחות נתונים להורדה (LCP) ומקום שמור יציב בזכות viewBox (CLS)</li>
+                        <li>SEO טכני: עמודים מהירים יותר במובייל, פורמט ש-Google מבין, וטקסט שעשוי להיות נוכח בתוך ה-SVG</li>
+                    </ul>
+
+                    <h2>PNG מול SVG: משקל של לוגו לא טריוויאלי</h2>
+                    <p>תמונות נשארות אחד מרכיבי המשקל הגדולים ביותר של עמוד. ממטבים צילומים ב-WebP, אבל שוכחים מהלוגו בכותרת ומעשרים אייקוני ה-PNG ב-CSS. והקבצים האלה חוזרים על עצמם בכל ה-URL: כל מילישנייה שאובדת אובדת בכל האתר.</p>
+                    <p>סדרי גודל שנמדדו אחרי המרה לווקטור עם PixelToPath, בתרחיש הטיפוסי של אתר תדמית או אפליקציית אינטרנט:</p>
+                    <table class="vs-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">תרחיש</th>
+                                <th scope="col">PNG / JPG</th>
+                                <th scope="col">SVG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">לוגו 512px עם שקיפות</th>
+                                <td data-label="PNG / JPG">40 עד 80 ק״ב</td>
+                                <td class="yes" data-label="SVG">2 עד 12 ק״ב בהתאם לצבעים ולצמתים</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">אותו לוגו בהגשה @2x (1024px) ל-Retina</th>
+                                <td data-label="PNG / JPG">המשקל מוכפל, לפעמים משולש</td>
+                                <td class="yes" data-label="SVG">קובץ אחד בלבד, ללא שינוי</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">20 אייקוני ממשק שיוצאו @3x (72×72)</th>
+                                <td data-label="PNG / JPG">40 עד 160 ק״ב שמצטרפים לממשק</td>
+                                <td class="yes" data-label="SVG">כמה ק״ב בסך הכול</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">לוגו בצבע אחיד שמגיע מ-JPG</th>
+                                <td data-label="PNG / JPG">ארטיפקטים והילות סביב צורות וטקסט</td>
+                                <td class="yes" data-label="SVG">קצוות נקיים, וקובץ קל עוד יותר</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>הכלל פשוט: כל מה שהוא צורה, טקסט, פיקטוגרמה או לוגוטיפ – מרוויח מלהיות SVG. צילומים וצילומי מסך נשארים ב-JPG, WebP או AVIF. SVG הוא לא החלפה אוניברסלית: הוא הפורמט הנכון לממשק.</p>
+
+                    <h2>התרחבות: קובץ אחד חד מהסמארטפון ועד 4K</h2>
+                    <p>PNG חד רק ברזולוציית המקור שלו. מגדילים אותו – רואים את הפיקסלים. מקטינים אותו בכוח – הדפדפן צריך לדגום מחדש. מכאן ההתעמלות עם קובצי @1x, @2x, @3x, עם srcset ועם צפיפויות CSS. כל נקודת שבירה חדשה או צפיפות מסך חדשה (Retina, סמארטפונים חדשים, צגי 4K) דורשת ייצוא נוסף, או קובץ גדול מדי ״ליתר ביטחון״.</p>
+                    <p>SVG מתעלם מהאילוץ הזה. מנוע התצוגה מחשב את העקומות בגודל ה-CSS המבוקש. פאביקון של 32px, לוגו של 48px בניווט, אותו סימן מותג ב-400px בבאנר, הקרנה ב-4K: זה אותו קובץ. בלי טשטוש, בלי השחזה, בלי בקשה שנייה לגרסת הצפיפות הגבוהה. לספריית קומפוננטות זה גם אומר פחות חוב טכני: אייקון אחד, קובץ אחד, כל הגדלים.</p>
+
+                    
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/logo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="אותו לוגו בהגדלה של 400%: משמאל רואים את הפיקסלים של ה-PNG; מימין עקומות ה-SVG נשארות חלקות להפליא.">
+    <figcaption>אותו לוגו בהגדלה של 400%: משמאל רואים את הפיקסלים של ה-PNG; מימין עקומות ה-SVG נשארות חלקות להפליא.</figcaption>
+</figure>
+
+                    
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/photo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="זום 400% על הכדור הפורח: משמאל טשטוש ופיקסלים של JPEG, מימין צבעי וקטור בסגנון פוסטר.">
+    <figcaption>זום 400% על הכדור הפורח: משמאל טשטוש ופיקסלים של JPEG, מימין צבעי וקטור בסגנון פוסטר.</figcaption>
+</figure>
+
+
+                    <h2>Core Web Vitals ו-SEO: למה אכפת ל-Google מהפורמט</h2>
+                    <p>מהירות במובייל היא גורם דירוג. <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener">Core Web Vitals (LCP, INP, CLS)</a> מודדים את מה שהמשתמש חווה. החלפת לוגו PNG כבד או חבורת אייקוני רסטר ב-SVG לא תוריד עמוד מ-4 מ״ב ל-40 ק״ב. אבל על התצוגה הראשונית של האתר האפקט מיידי, במיוחד ברשת 4G או כש-LCP נחסם על ידי לוגו הכותרת.</p>
+                    <p>בפועל, הפורמט הווקטורי עוזר לשלושה מדדים, בתנאי ששומרים על מורכבות נתיבים סבירה:</p>
+                    <ul>
+                        <li><a href="https://web.dev/articles/optimize-lcp" target="_blank" rel="noopener">LCP (Largest Contentful Paint)</a>: אם האלמנט הגדול ביותר שנראה הוא לוגו או איור אחיד, SVG של כמה ק״ב מגיע מוקדם יותר מ-PNG של 150 ק״ב ב-@2x. פחות עומס רשת לשאר העמוד</li>
+                        <li><a href="https://web.dev/articles/optimize-cls" target="_blank" rel="noopener">CLS (Cumulative Layout Shift)</a>: SVG עם width, height ו-viewBox שומר את התיבה שלו כבר בזמן פענוח ה-HTML. אין עוד המתנה לפענוח מפת-סיביות כדי לדעת את היחס – ולכן פחות זזות פריסה</li>
+                        <li><a href="https://web.dev/articles/inp" target="_blank" rel="noopener">INP והתהליך הראשי</a>: SVG פשוט (לוגו, אייקון) זול לציור. עם זאת, הימנעו מ-SVG מסוג ״צילום״ עם אלפי נתיבים: הם יכולים לשקול יותר מ-PNG ולהעמיס על המעבד. מכאן הערך של שרטוט נקי דרך PixelToPath, ולא העתקה פיקסל-פיקסל</li>
+                        <li>SEO מעבר למהירות: Google מאנדקס SVG. ללוגו מוטמע יכול להיות כותרת נגישה. תמונת SVG עם תכונת alt נשארת בסיס. ועמוד קל יותר מקטין את שיעור הנטישה הטכני – אות חוויה שנכנס לדירוג</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             WHY PIXELTOPATH – feature cards
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">למה להמיר לווקטור עם PixelToPath ולא לייצא ידנית?</h2>
+                <p class="section-intro">יש לכם את ה-PNG של הלקוח, לא את קובץ המקור מ-Illustrator. PixelToPath בונה מחדש נתיבים נקיים, בחינם ומוכנים לאינטרנט.</p>
+
+                <div class="grid-3">
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">📉</div>
+                        <h3>SVG קל, מוכן לשימוש</h3>
+                        <p>המנוע מפיק נתיבים שמוכנים לעבודה, לא מפעל צמתים. אידיאלי ללוגו או לאייקון שיגישו בכל צפייה בעמוד.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🆓</div>
+                        <h3>חינם לחלוטין</h3>
+                        <p>בלי מנוי עיצוב, בלי סימן מים על ה-SVG. המירו לווקטור את כל שפת המותג (לוגו, פאביקון, סט אייקונים) בעלות אפס.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🔒</div>
+                        <h3>פרטיות הקבצים</h3>
+                        <p>קובצי המותג מעובדים ואז נזרקים. שום דבר לא נשמר, שום דבר לא בשימוש חוזר. מתאים לשפות מותג תחת NDA.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">🎨</div>
+                        <h3>פריסטים ללוגואים ולפיקטוגרמות</h3>
+                        <p>שחור-לבן לאייקונים מונוכרומטיים, פוסטר ללוגואים בצבע אחיד. אתם שולטים ברמת הפירוט לפני הייצוא.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">💻</div>
+                        <h3>עיבוד באצווה בדסקטופ</h3>
+                        <p>יש לכם סט אייקוני PNG להמרה ל-SVG? אפליקציית הקוד הפתוח ל-Windows / Linux מעבדת קבצים באופליין, בלי מכסות.</p>
+                    </div>
+                    <div class="card card--ta-center">
+                        <div style="font-size:2rem;margin-bottom:.75rem;">♾️</div>
+                        <h3>PNG, JPG, BMP, WebP</h3>
+                        <p>כלי אחד ויחיד, בין אם הלוגו מגיע כ-PNG שקוף, כ-JPG סרוק או כייצוא WebP מ-Figma.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             USE CASES
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>איפה SVG מנצח את PNG/JPG באתר אמיתי</h2>
+                    <p>זה לא תיאורטי. אלה המקומות שבהם הפורמט הווקטורי משתלם מיד:</p>
+                    <ul>
+                        <li>לוגו בכותרת ובכותרת התחתונה: קובץ אחד, חד ב-Retina, לרוב אחד האלמנטים הנצפים ביותר, ולפעמים ה-LCP בעמוד בית מינימליסטי</li>
+                        <li>מערכת אייקונים: די לספרייטי PNG של 1x/2x. כל פיקטוגרמה היא SVG (או ספרייט SVG), שניתן לעיצוב עם CSS (currentColor) בלי ייצוא חדש</li>
+                        <li>פאביקון ו-apple-touch: פאביקון SVG מודרני ועוגן נסיגה PNG חוסכים תחזוקה של חבורת גדלים 16, 32, 180px</li>
+                        <li>איורי ממשק ומצבי ״ריק״: שרטוטי וקטור אחידים נשארים חדים במסך מלא, בלי לשלם את משקל תמונת גיבור</li>
+                        <li>עמוד נחיתה ל-SEO: כל ק״ב שנחסך בתצוגה הראשונית משפר את Lighthouse, PageSpeed Insights ואת חוויית המובייל – אותות שהדירוג מצרף</li>
+                    </ul>
+                    <p>השאירו JPG/WebP לצילומים. העבירו לוגואים, פיקטוגרמות ואיורים אחידים ל-SVG. זה הפיצול שהאתרים המהירים ביותר כבר מיישמים.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             RELATED TOOLS – internal links
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container" style="text-align:center;">
+                <h2 class="section-title">מדריכי המרה נוספים</h2>
+                <p class="section-intro">המירו את הקבצים שלכם לווקטור, ואז העמיקו בפורמט שנוגע אליכם.</p>
+
+                <div class="related-tools">
+                    
+                    <a href="/blog/jpg-to-svg/" class="related-tool-link">
+                        🔄 ממיר JPG ל-SVG
+                    </a>
+                    
+                    <a href="/blog/vectorize-image/" class="related-tool-link">
+                        ✏️ המרת תמונה לווקטור
+                    </a>
+                    
+                    <a href="/blog/image-to-svg/" class="related-tool-link">
+                        🖼️ תמונה ל-SVG
+                    </a>
+                    
+                    <a href="/online/" class="related-tool-link">
+                        🌐 הכלי האונליין
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FAQ – FAQPage schema injected in <head>
+        ════════════════════════════════════════ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">שאלות נפוצות</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>האם SVG תמיד קל יותר מ-PNG או מ-JPG?</summary>
+                        <p>ללוגו, לאייקון או לאיור אחיד: כן, כמעט תמיד, במיוחד אם משווים את ה-PNG לגרסת ה-Retina שלו. לצילום: לא. SVG ״צילומי״ הופך לענן נתיבים כבד יותר מ-JPG או WebP. המירו את הממשק לווקטור, דחסו את הצילומים.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>האם SVG באמת משפר את Core Web Vitals ואת ה-SEO?</summary>
+                        <p>הוא משפר את מה שתמונות ממשק יכולות לשפר: פחות בייטים (LCP אם הלוגו או האיור הוא האלמנט המרכזי), תיבת תצוגה צפויה (CLS), פחות גרסאות להורדה. Google משתמש במהירות כאות, במיוחד במובייל. זו לא קסם דירוג, זו היגיינה טכנית שנמדדת ב-PageSpeed Insights.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>כדאי להחליף את כל תמונות האתר ב-SVG?</summary>
+                        <p>לא. צילומים, צילומי מסך, מרקמים, מעברי גוון מורכבים: JPG, WebP או AVIF. SVG ללוגואים, לאייקונים, לדיאגרמות, לפיקטוגרמות ולאיורים אחידים. SVG מפורט מדי יכול לפגוע ב-INP. פריסט הצילום של PixelToPath מיועד לסטיילינג, לא להחליף JPEG של תוכן.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>איך מטמיעים SVG בלי לגרום ל-CLS?</summary>
+                        <p>תמיד ספקו width ו-height (או aspect-ratio ב-CSS) שתואמים ל-viewBox. עם תגית תמונה (src, width, height, alt) הדפדפן שומר את המקום לפני ההורדה. ב-SVG מוטמע, שמרו על ה-viewBox והימנעו מהזרקת הקוד אחרי הציור הראשון בלי ממדים.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>איך מקבלים לוגו SVG מ-PNG עם PixelToPath?</summary>
+                        <p>פתחו את הכלי האונליין, שחררו את ה-PNG (מומלץ על רקע שקוף ובגודל סביר), בחרו שחור-לבן או פוסטר, כווננו את הפירוט ואז המירו. פתחו את ה-SVG בדפדפן או ב-Figma כדי לבדוק את הקווים המקיפים, ואז הגישו אותו בפרודקשן. חינם, בלי חשבון, והקבצים לא נשמרים.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FINAL CTA
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container blog-cta-wrap">
+                <h2>המירו את לוגו ה-PNG שלכם ל-SVG ומדדו את המשקל</h2>
+                <p>העלו את הקובץ הנוכחי שלכם, הורידו את ה-SVG והשוו את הק״ב. חינם, בלי הרשמה. מנוף ה-Core Web Vitals הראשון נמצא בדיוק שם.</p>
+                <div class="double-buttons">
+                    <a href="/he/online/" class="btn primary-btn big-btn">המרת הלוגו שלי ל-SVG ←</a>
+                    <a href="/he/offline/" class="btn secondary-btn big-btn">הורדת אפליקציית הדסקטופ ←</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>תמכו בפיתוח קוד פתוח</h3>
+        <p>PixelToPath חינם לשימוש. אם הכלי חסך לכם זמן, שקלו לפנק אותי בכוס קפה.</p>
+        <a href="https://ko-fi.com/lorrisfrompixeltopath" target="_blank" class="donate-btn">❤️ לתרומה ב-Ko-fi</a>
+    </div>
+</section>
+    </main>
+
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/he/">ראשי</a>
+        <a href="/he/online/">כלי אונליין</a>
+        <a href="/he/offline/">אפליקציית דסקטופ</a>
+        <a href="/he/pro/">Pro</a>
+        <a href="/he/api/">API</a>
+        <a href="/he/blog/">בלוג</a>
+        <a href="https://github.com/lorrisc/PixelToPath">קוד פתוח (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">פורטל לקוחות</a>
+    </div>
+</footer>
+
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
+</body>
+</html>

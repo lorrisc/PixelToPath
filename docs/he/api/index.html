@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <!-- Analytics Umami first-party : /main.7c3f9d.js et /api/e sont proxifiés
+     vers le serveur Umami par le Worker portal-proxy. Rien ne quitte
+     l'origine pixel-to-path.com : indétectable par les adblockers. -->
+<script defer src="/main.7c3f9d.js" data-website-id="77afc243-d7d0-4c23-9e8b-3badaac67041"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelToPath API – ממשק REST להמרת תמונות ל-SVG</title>
+    <meta name="description" content="המירו PNG, JPG, BMP או WebP ל-SVG נקי בקריאת REST אחת. Potrace לשחור-לבן, VTracer לצבע. 10 המרות חינם בחודש, קרדיטים מ-€0.05 וללא תפוגה.">
+    <meta name="keywords" content="pixeltopath api, image to svg api, png to svg rest api, vectorize api, ממשק api להמרת תמונות ל svg, api וקטוריזציה">
+    <meta name="author" content="Lorris C.">
+
+    <meta property="og:title" content="PixelToPath API – ממשק REST להמרת תמונות ל-SVG">
+    <meta property="og:description" content="המירו PNG, JPG, BMP או WebP ל-SVG נקי בקריאת REST אחת. Potrace לשחור-לבן, VTracer לצבע. 10 המרות חינם בחודש, קרדיטים מ-€0.05 וללא תפוגה.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="PixelToPath app screenshot">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PixelToPath API – ממשק REST להמרת תמונות ל-SVG">
+    <meta name="twitter:description" content="המירו PNG, JPG, BMP או WebP ל-SVG נקי בקריאת REST אחת. Potrace לשחור-לבן, VTracer לצבע. 10 המרות חינם בחודש, קרדיטים מ-€0.05 וללא תפוגה.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="PixelToPath app screenshot">
+    <meta property="og:url" content="https://pixel-to-path.com/he/api/">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://pixel-to-path.com/he/api/" />
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/api/" />
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/api/" />
+    <link rel="alternate" hreflang="cs" href="https://pixel-to-path.com/cs/api/" />
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/api/" />
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/api/" />
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/api/" />
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/api/" />
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/api/" />
+    <link rel="alternate" hreflang="he" href="https://pixel-to-path.com/he/api/" />
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/api/" />
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/api/" />
+    <link rel="alternate" hreflang="it" href="https://pixel-to-path.com/it/api/" />
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/api/" />
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/api/" />
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/api/" />
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/api/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/api/" />
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/api/" />
+    <link rel="alternate" hreflang="sv" href="https://pixel-to-path.com/sv/api/" />
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/api/" />
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/api/" />
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/api/" />
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/api/" />
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/api/" />
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/api/" />
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/api/" />
+
+    <link rel="stylesheet" href="../../assets/css/bundle.a7228571.css">
+
+
+
+    <link rel="icon" type="image/png" href="../../assets/favicon/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebService",
+  "@id": "https://pixel-to-path.com/he/api/#api",
+  "name": "PixelToPath API",
+  "url": "https://pixel-to-path.com/he/api/",
+  "description": "המירו PNG, JPG, BMP או WebP ל-SVG נקי בקריאת REST אחת. Potrace לשחור-לבן, VTracer לצבע. 10 המרות חינם בחודש, קרדיטים מ-€0.05 וללא תפוגה.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://pixel-to-path.com/#organization",
+    "name": "PixelToPath"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "המירו לווקטור בקנה מידה מהקוד שלכם. קריאת REST אחת: שולחים תמונה, מקבלים SVG נקי."
+  },
+  "isPartOf": {
+    "@id": "https://pixel-to-path.com/#website"
+  }
+}</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "מה נחשב המרה אחת?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "קריאת POST ‎/v1/convert מוצלחת אחת שמחזירה SVG. קריאות שנכשלו (תמונה לא תקינה, פרמטרים שגויים, חסימת קצב, שגיאת שרת) וקריאות GET ‎/v1/me לעולם לא נחייבות."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "איך נספרת מכסת החינם החודשית?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "לחשבון, על פי חודש היומן של UTC — מתאפסת ב-1 בחודש ב-00:00 UTC. יצירת כמה מפתחות API לא מכפילה את המכסה החינמית: כל המפתחות של חשבון חולקים את אותן 10 ההמרות החינמיות."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "האם הקרדיטים פגים?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "לא. קרדיטים שנקנו נשארים בחשבון שלכם עד שתשתמשו בהם. הם נצרכים רק אחרי ש-10 ההמרות החינמיות החודשיות שלכם מומשו."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "איך משיגים יותר המרות בחודש?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "קנו תמונות בתשלום מראש מפורטל הלקוחות — בכל כמות, בחבילות של 50. תמיד רואים בדיוק כמה תמונות מקבלים: 50 תמונות €2.50, 500 תמונות €20, 2,500 תמונות €75, 10,000 תמונות €200, 50,000 תמונות €500. הקרדיטים מתווספים לחשבון אוטומטית תוך שניות מהתשלום — בלי מפתח רישיון ובלי שום דבר להקליד."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "מה קורה אם איבדתי את מפתח ה-API?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "מפתחות נשמרים מוצפנים (hash), ולכן אי אפשר לשחזר אותם. שללו את המפתח שאבד בפורטל וצרו חדש — השינוי נכנס לתוקף מיד."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "אילו פורמטי תמונה נתמכים?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG, JPEG, BMP ו-WebP, עד 20 מ״ב ו-50 מגפיקסל, לפחות 64×64 פיקסל. תמונות שצלען הארוכה עולה על 1500 פיקסל משונות לפני ההמרה, בדיוק כמו באתר החינמי."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/he/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "API",
+      "item": "https://pixel-to-path.com/he/api/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/he/" class="brand">
+            <img src="../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/he/"
+            class="">ראשי</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">מוצרים <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/he/online/"
+                       class="">כלי אונליין</a>
+                    <a href="/he/offline/"
+                       class="">אפליקציית דסקטופ</a>
+                    <a href="/he/pro/"
+                       class="">אפליקציית דסקטופ Pro</a>
+                    <a href="/he/api/"
+                       class="active">API</a>
+                </div>
+            </div>
+
+            <a href="/he/pricing/"
+               class="">מחירון</a>
+
+            <div class="lang-switch">
+                <span>🇮🇱 HE</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/api/">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/api/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/he/api/">🇮🇱 עברית</a>
+                    <a href="https://pixel-to-path.com/hi/api/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/it/api/">🇮🇹 Italiano</a>
+                    <a href="https://pixel-to-path.com/ja/api/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/sv/api/">🇸🇪 Svenska</a>
+                    <a href="https://pixel-to-path.com/th/api/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/he/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">ראשי</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">מוצרים</span>
+            <div class="mobile-sublist">
+                <a href="/he/online/"
+                   class="">כלי אונליין</a>
+                <a href="/he/offline/"
+                   class="">אפליקציית דסקטופ</a>
+                <a href="/he/pro/"
+                   class="">אפליקציית דסקטופ Pro</a>
+                <a href="/he/api/"
+                   class="active">API</a>
+            </div>
+
+            <a href="/he/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">מחירון</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">שפה</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/api/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/api/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/api/" class="mobile-lang-btn">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/api/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/api/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/api/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/api/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/api/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/he/api/" class="mobile-lang-btn">🇮🇱 עברית</a>
+                    <a href="https://pixel-to-path.com/hi/api/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/api/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/it/api/" class="mobile-lang-btn">🇮🇹 Italiano</a>
+                    <a href="https://pixel-to-path.com/ja/api/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/api/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/api/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/api/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/api/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/api/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/sv/api/" class="mobile-lang-btn">🇸🇪 Svenska</a>
+                    <a href="https://pixel-to-path.com/th/api/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/api/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/api/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/api/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/api/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/api/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- Hero -->
+        <div class="api-hero">
+            <div class="container">
+                <span class="api-tag">API</span>
+                <h1>PixelToPath API</h1>
+                <p class="api-hero__text">המירו תמונות לווקטור באופן תוכנתי באמצעות <strong>קריאת REST אחת</strong>. העלו קובץ PNG, JPG, BMP או WebP וקבלו בחזרה SVG נקי ומוכן לפרודקשן. איור קו שחור-לבן משורטט על ידי <strong>Potrace</strong>, ותמונות צבעוניות על ידי <strong>VTracer</strong> — אותם מנועים כמו הממיר האונליין החינמי.</p>
+                <div class="api-hero__cta">
+                    <a class="btn primary-btn big-btn" href="/portal/"> קבלו את מפתח ה-API</a>
+                    <a class="btn secondary-btn big-btn" href="/portal/">כניסה לפורטל</a>
+                    <a class="api-hero__docs" href="#quickstart">קראו את התיעוד ↓</a>
+                </div>
+                <p class="api-hero__note">10 המרות חינם בכל חודש · בלי כרטיס אשראי</p>
+            </div>
+        </div>
+
+        <!-- Accroche -->
+        <div class="api-strip">
+            <div class="container">
+                <p>10 המרות חינם / חודש • <strong>קריאת REST אחת</strong> • מנועי Potrace + VTracer • הקרדיטים <strong>ללא תפוגה</strong></p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="api-body">
+            <div class="container">
+                <div class="api-layout">
+
+                    <!-- TOC -->
+                    <aside class="api-toc">
+                        <p class="api-toc__title">בעמוד הזה</p>
+                        <ul>
+                            
+                            <li><a href="#quickstart">התחלה מהירה</a></li>
+                            <li><a href="#authentication">אימות</a></li>
+                            <li><a href="#convert">POST /v1/convert</a></li>
+                            <li><a href="#engines">מנועים</a></li>
+                            <li><a href="#response">תגובה</a></li>
+                            <li><a href="#errors">שגיאות</a></li>
+                            <li><a href="#limits">הגבלות קצב</a></li>
+                            <li><a href="#pricing">מחירון</a></li>
+                            <li><a href="#examples">דוגמאות קוד</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Content -->
+                    <article class="api-content">
+
+                        <!-- Quickstart -->
+                        <section id="quickstart" class="api-section">
+                            <h2>התחלה מהירה</h2>
+                            <p>שלושה צעדים ואתם ממירים תמונות ל-SVG מהטרמינל, מהסקריפטים או מהאפליקציה שלכם.</p>
+                            <div class="api-steps">
+                                <div class="api-step">
+                                    <h3>1 · יצירת החשבון</h3>
+                                    <p>נרשמו בפורטל הלקוחות עם האימייל וסיסמה (10+ תווים). בלי כרטיס אשראי.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>2 · יצירת מפתח API</h3>
+                                    <p>בפורטל, צרו מפתח. הוא מוצג <strong>פעם אחת</strong> — שמרו אותו בבטחה. מפתחות נראים כמו <code>ptp_live_…</code> ואפשר לשלול אותם בכל עת.</p>
+                                </div>
+                                <div class="api-step">
+                                    <h3>3 · קריאה ל-/v1/convert</h3>
+                                    <p>שלחו את התמונה כ-multipart/form-data עם המפתח בכותרת Authorization. ה-SVG חוזר בגוף התגובה.</p>
+                                </div>
+                            </div>
+
+                            <p class="api-code-label">ההמרה הראשונה שלכם</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@logo.png" \
+  -F "colormode=binary" \
+  -o logo.svg</code></pre>
+                            <p class="api-note">מסמך אינטראקטיבי: <a href="https://api.pixel-to-path.com/v1/docs">pixel-to-path.com/v1/docs</a> (OpenAPI/Swagger).</p>
+                        </section>
+
+                        <!-- Authentication -->
+                        <section id="authentication" class="api-section">
+                            <h2>אימות</h2>
+                            <p>כל בקשה מאומתת עם אסימון Bearer בכותרת <code>Authorization</code>:</p>
+                            <pre class="api-code"><code>Authorization: Bearer ptp_live_0123abc…</code></pre>
+                            <ul class="api-list">
+                                <li><strong>מפתחות הם סודות:</strong> הם נשמרים מוצפנים (hash) בשרת ומוצגים רק פעם אחת ביצירה. איבדתם מפתח? שללו אותו וצרו חדש.</li>
+                                <li><strong>חשבון אחד, כמה מפתחות:</strong> צרו עד 5 מפתחות פעילים להפרדת הפרויקטים שלכם. מכסת החינם החודשית נספרת לחשבון, לא למפתח.</li>
+                                <li><strong>שלילה מיידית:</strong> מפתח שנשלל מפסיק לעבוד מיד, מהפורטל או מתגובת ה-API של חשבון חסום.</li>
+                            </ul>
+                        </section>
+
+                        <!-- POST /v1/convert -->
+                        <section id="convert" class="api-section">
+                            <h2><span class="api-method api-method--post">POST</span> /v1/convert</h2>
+                            <p>העלאה + המרה בקריאה אחת חסרת מצב. כל קריאה מוצלחת עולה לכל היותר קרדיט 1 — קריאות שנכשלו, לא תקינות או שחסמו מהירותן לא עולות דבר.</p>
+
+                            <h3>הבקשה (multipart/form-data)</h3>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>שדה</th>
+                                            <th>סוג</th>
+                                            <th>ברירת מחדל</th>
+                                            <th>תיאור</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>file</code></td>
+                                            <td>file</td>
+                                            <td>—</td>
+                                            <td>התמונה להמרה. PNG, JPEG, BMP או WebP · עד 20 מ״ב · עד 50 מגפיקסל · לפחות 64×64 פיקסל.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>colormode</code></td>
+                                            <td>string</td>
+                                            <td><code>color</code></td>
+                                            <td>&lt;code&gt;color&lt;/code&gt; משתמש במנוע VTracer, &lt;code&gt;binary&lt;/code&gt; משתמש ב-Potrace (שחור-לבן).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>mode</code></td>
+                                            <td>string</td>
+                                            <td><code>spline</code></td>
+                                            <td>מצב צבע (VTracer) בלבד — מתעלם במצב בינארי. <code>spline</code> | <code>polygon</code> | <code>none</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>hierarchical</code></td>
+                                            <td>string</td>
+                                            <td><code>stacked</code></td>
+                                            <td>מצב צבע (VTracer) בלבד — מתעלם במצב בינארי. <code>stacked</code> | <code>cutout</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>filter_speckle</code></td>
+                                            <td>int</td>
+                                            <td><code>4</code></td>
+                                            <td>מצב צבע (VTracer) בלבד — מתעלם במצב בינארי. 0–16 — הסרת כתמי רעש קטנים.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>color_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>6</code></td>
+                                            <td>מצב צבע (VTracer) בלבד — מתעלם במצב בינארי. 1–8 — מספר הסיביות המשמעותיות לכל ערוץ צבע.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>layer_difference</code></td>
+                                            <td>int</td>
+                                            <td><code>16</code></td>
+                                            <td>מצב צבע (VTracer) בלבד — מתעלם במצב בינארי. 0–64 — המרחק בין שכבות צבע.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>corner_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>60</code></td>
+                                            <td>0–180 — זווית לזיהוי פינות (שני המנועים).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>length_threshold</code></td>
+                                            <td>float</td>
+                                            <td><code>4.0</code></td>
+                                            <td>3.5–10 — אורך מקטע מינימלי (שני המנועים).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>splice_threshold</code></td>
+                                            <td>int</td>
+                                            <td><code>45</code></td>
+                                            <td>0–180 — זווית לחיבור מקטעי נתיב (שני המנועים).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>path_precision</code></td>
+                                            <td>int</td>
+                                            <td><code>3</code></td>
+                                            <td>0–8 — ספרות אחרי הנקודה בקואורדינטות הנתיב.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>invert</code></td>
+                                            <td>bool</td>
+                                            <td><code>false</code></td>
+                                            <td>מצב בינארי (Potrace) בלבד — מתעלם במצב צבע. שרטוט האזורים הבהירים במקום הכהים.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>turdsize</code></td>
+                                            <td>int</td>
+                                            <td><code>2</code></td>
+                                            <td>מצב בינארי (Potrace) בלבד — מתעלם במצב צבע. 0–20 — השחקת כתמים עד לגודל הזה.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>alphamax</code></td>
+                                            <td>float</td>
+                                            <td><code>1.0</code></td>
+                                            <td>מצב בינארי (Potrace) בלבד — מתעלם במצב צבע. 0–1.334 — סף עיגול פינות.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>opttolerance</code></td>
+                                            <td>float</td>
+                                            <td><code>0.2</code></td>
+                                            <td>מצב בינארי (Potrace) בלבד — מתעלם במצב צבע. 0–10 — סובלנות לאופטימיזציית עקומות.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Engines -->
+                        <section id="engines" class="api-section">
+                            <h2>שני מנועים, נבחרים לפי ״colormode״</h2>
+                            <p>ה-API מריץ בדיוק את אותם מנועים כמו הממיר האונליין החינמי ואפליקציית הדסקטופ:</p>
+                            <div class="grid-3">
+                                <div class="card api-engine">
+                                    <h3>binary — Potrace</h3>
+                                    <p>שרטוט שחור-לבן של איורי קו, סריקות, סקיצות ולוגואים. החלק הכהה של התמונה (גווני אפור &lt; 50%) שורטט על רקע לבן. כווננו את הפלט עם <code>turdsize</code> (הסרת רעשים), <code>alphamax</code> (עיגול פינות) ו-<code>opttolerance</code> (אופטימיזציית נתיבים).</p>
+                                </div>
+                                <div class="card api-engine">
+                                    <h3>color — VTracer</h3>
+                                    <p>וקטוריזציית צבע בשכבות לאיורים, לקריקטורות ולצילומים. שלטו ברמת הפירוט עם <code>filter_speckle</code>, <code>color_precision</code>, <code>layer_difference</code> ובהתאמת העקומות עם <code>mode</code> (ספליין, מצולע, ללא).</p>
+                                </div>
+                            </div>
+                            <p class="api-note">תמונות עוברות עיבוד מקדים בדיוק כמו באתר: הצלע הארוכה משונה ל-1500 פיקסל לפני ההמרה, וה-API מחזיר את סוג התמונה שזוהתה (<code>line_art</code>, <code>logo</code>, <code>photo</code> או <code>illustration</code>) בכותרת <code>X-Detected-Type</code>.</p>
+                        </section>
+
+                        <!-- Response -->
+                        <section id="response" class="api-section">
+                            <h2>תגובה</h2>
+                            <p>בהצלחה: <code>200 OK</code> עם <code>image/svg+xml</code> — הגוף הוא קובץ ה-SVG עצמו. כותרות מידע:</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>כותרת</th>
+                                            <th>תיאור</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><code>X-Credits-Remaining</code></td><td>הקרדיטים המשולמים שנותרו בחשבון, אחרי החיוב של הקריאה הזו.</td></tr>
+                                        <tr><td><code>X-Free-Remaining</code></td><td>ההמרות החינמיות שנותרו החודש.</td></tr>
+                                        <tr><td><code>X-Detected-Type</code></td><td>סוג התמונה שזוהתה (מידע): line_art, logo, photo או illustration.</td></tr>
+                                        <tr><td><code>X-Processing-Time</code></td><td>זמן העיבוד בשרת, בשניות.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>GET /v1/me</h3>
+                            <p>מצב החשבון עבור המפתח שבו נעשתה הקריאה. <strong>חינם</strong> — לעולם לא נספרת מהמכסה שלכם ולעולם לא נחייבת.</p>
+                            <p class="api-code-label">תגובה לדוגמה</p>
+                            <pre class="api-code"><code>GET /v1/me
+Authorization: Bearer ptp_live_…
+
+{
+  "key": { "name": "prod", "prefix": "ptp_live_0123abc", … },
+  "usage": {
+    "month": "2026-09", "free_used": 7, "free_limit": 10,
+    "free_remaining": 3, "resets_at": "2026-10-01T00:00:00+00:00"
+  },
+  "credits": { "balance": 120 }
+}</code></pre>
+                        </section>
+
+                        <!-- Errors -->
+                        <section id="errors" class="api-section">
+                            <h2>שגיאות</h2>
+                            <p>כל שגיאה מחזירה מעטפת JSON עקבית. קריאות שנכשלו לעולם לא צורכות קרדיטים.</p>
+                            <pre class="api-code"><code>HTTP/1.1 402 Payment Required
+{
+  "error": {
+    "code": "quota_exceeded",
+    "message": "Monthly free quota used and no credits left.",
+    "usage": { "free_used": 10, "free_limit": 10, "credits": 0 }
+  }
+}</code></pre>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>HTTP</th>
+                                            <th>קוד</th>
+                                            <th>מתי</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>401</td><td><code>invalid_api_key</code></td><td>מפתח API חסר, פגום, לא מוכר או שנשלל.</td></tr>
+                                        <tr><td>402</td><td><code>quota_exceeded</code></td><td>מכסת החינם החודשית מומשת ולא נותרו קרדיטים.</td></tr>
+                                        <tr><td>403</td><td><code>account_banned</code></td><td>החשבון נחסם — כל המפתחות שלו נדחים.</td></tr>
+                                        <tr><td>403</td><td><code>ip_blocked</code></td><td>כתובת ה-IP של הקורא נמצאת ברשימה חסומה.</td></tr>
+                                        <tr><td>413</td><td><code>file_too_large</code></td><td>קובץ גדול מ-20 מ״ב.</td></tr>
+                                        <tr><td>422</td><td><code>invalid_image</code> / <code>image_too_small</code> / <code>invalid_params</code></td><td>תמונה לא תקינה, תמונה קטנה מדי או ערך פרמטר לא תקין.</td></tr>
+                                        <tr><td>429</td><td><code>rate_limited</code></td><td>חריגה מהגבלת הקצב למפתח (ראו למטה). כולל כותרת Retry-After.</td></tr>
+                                        <tr><td>500</td><td><code>internal_error</code></td><td>ההמרה נכשלה בשרת — לא נגבה קרדיט.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Rate limits -->
+                        <section id="limits" class="api-section">
+                            <h2>הגבלות קצב</h2>
+                            <p>ההגבלות חלות למפתח ולא לכתובת IP, כך שמשרד משותף או ריצת CI לא ייפגעו מהתנועה של מישהו אחר.</p>
+                            <div class="api-table-wrap">
+                                <table class="api-table">
+                                    <thead>
+                                        <tr>
+                                            <th>הגבלה</th>
+                                            <th>ערך</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>בקשות לדקה, למפתח</td><td><strong>60</strong></td></tr>
+                                        <tr><td>בקשות ליום, למפתח</td><td><strong>2 000</strong></td></tr>
+                                        <tr><td>המרות במקביל, למפתח</td><td>2 (קריאות נוספות ממתינות, ואז 429)</td></tr>
+                                        <tr><td>גודל קובץ / רזולוציה מקסימליים</td><td>20 מ״ב / 50 מגפיקסל</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Pricing -->
+                        <section id="pricing" class="api-section">
+                            <h2>מחירון</h2>
+                            <p>כל חשבון חדש מקבל <strong>10 המרות חינם בכל חודש</strong>, בלי כרטיס אשראי. צריכים יותר? קנו תמונות בתשלום מראש — בכל כמות (בחבילות של 50), עם הנחות כמות. הן לעולם לא פגות ומצטברות עם מכסת החינם החודשית (ההמרות החינמיות נצרכות קודם).</p>
+                            <div class="api-pricing">
+                                <div class="card api-price-card">
+                                    <h3>חינם</h3>
+                                    <p class="api-price">€0<span>/ חודש</span></p>
+                                    <ul class="checklist">
+                                        <li>10 המרות / חודש</li>
+                                        <li>שני המנועים (Potrace + VTracer)</li>
+                                        <li>עד 5 מפתחות API</li>
+                                    </ul>
+                                    <a class="btn secondary-btn" href="/portal/">יצירת חשבון</a>
+                                </div>
+                                <div class="card api-price-card api-price-card--highlight">
+                                    <h3>תמונות בתשלום מראש</h3>
+                                    <p class="api-price">€0.050<span>/ תמונה</span></p>
+                                    <table class="tiers">
+                                        <caption>מחירון כמויות — ככל שקונים יותר תמונות, כל אחת יוצאת זולה יותר</caption>
+                                        <tr><th scope="row">תמונות</th><td>50–450</td><td>500–2 450</td><td>2 500–9 950</td><td>10 000–49 950</td><td>50 000+</td></tr>
+                                        <tr><th scope="row">€/image</th><td>0.050</td><td>0.040</td><td>0.030</td><td>0.020</td><td>0.010</td></tr>
+                                    </table>
+                                    <ul class="checklist">
+                                        <li>תמונה שנקנתה = המרה אחת (הקרדיטים ללא תפוגה)</li>
+                                        <li>לא פגות לעולם, מצטברות עם החבילה החינמית</li>
+                                        <li>בכל כמות: €0.040 לתמונה מ-500, ועד €0.010 לתמונה</li>
+                                    </ul>
+                                    <a class="btn primary-btn" href="/portal/">קנו תמונות</a>
+                                </div>
+                            </div>
+                            <p class="api-note">זיכוי אוטומטי: היתרה מתעדכנת תוך שניות מהתשלום, דרך ה-webhook של התשלום. החזרים מנכים את הקרדיטים שנקנו, עד גובה היתרה הנוכחית. תשלום מאובטח דרך Lemon Squeezy (מע״מ מטופל אוטומטית).</p>
+                        </section>
+
+                        <!-- Code examples -->
+                        <section id="examples" class="api-section">
+                            <h2>דוגמאות קוד</h2>
+                            <p>העתיקו, הדביקו והתאימו. ה-API מדבר multipart/form-data פשוט, ולכן כל לקוח HTTP עובד.</p>
+
+                            <p class="api-code-label">cURL</p>
+                            <pre class="api-code"><code>curl -sS -f -X POST https://api.pixel-to-path.com/v1/convert \
+  -H "Authorization: Bearer ptp_live_YOUR_KEY" \
+  -F "file=@photo.jpg" \
+  -F "colormode=color" \
+  -F "filter_speckle=4" \
+  -o photo.svg</code></pre>
+
+                            <p class="api-code-label">Python</p>
+                            <pre class="api-code"><code>import requests
+
+resp = requests.post(
+    "https://api.pixel-to-path.com/v1/convert",
+    headers={"Authorization": "Bearer ptp_live_YOUR_KEY"},
+    files={"file": open("photo.jpg", "rb")},
+    data={"colormode": "color", "filter_speckle": 4},
+)
+resp.raise_for_status()
+print(resp.headers["X-Credits-Remaining"], "credits left")
+with open("photo.svg", "wb") as f:
+    f.write(resp.content)</code></pre>
+
+                            <p class="api-code-label">JavaScript</p>
+                            <pre class="api-code"><code>const form = new FormData();
+form.append("file", new Blob([imageBytes]), "photo.jpg");
+form.append("colormode", "color");
+
+const resp = await fetch("https://api.pixel-to-path.com/v1/convert", {
+  method: "POST",
+  headers: { "Authorization": "Bearer ptp_live_YOUR_KEY" },
+  body: form,
+});
+if (!resp.ok) {
+  const { error } = await resp.json();
+  throw new Error(`${error.code}: ${error.message}`);
+}
+const svg = await resp.text();
+console.log(resp.headers.get("X-Credits-Remaining"), "credits left");</code></pre>
+                        </section>
+
+                        <!-- FAQ -->
+                        <section id="faq" class="api-section">
+                            <h2>שאלות נפוצות</h2>
+                            <details class="api-faq-item">
+                                <summary>מה נחשב המרה אחת?</summary>
+                                <p>קריאת POST ‎/v1/convert מוצלחת אחת שמחזירה SVG. קריאות שנכשלו (תמונה לא תקינה, פרמטרים שגויים, חסימת קצב, שגיאת שרת) וקריאות GET ‎/v1/me לעולם לא נחייבות.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>איך נספרת מכסת החינם החודשית?</summary>
+                                <p>לחשבון, על פי חודש היומן של UTC — מתאפסת ב-1 בחודש ב-00:00 UTC. יצירת כמה מפתחות API לא מכפילה את המכסה החינמית: כל המפתחות של חשבון חולקים את אותן 10 ההמרות החינמיות.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>האם הקרדיטים פגים?</summary>
+                                <p>לא. קרדיטים שנקנו נשארים בחשבון שלכם עד שתשתמשו בהם. הם נצרכים רק אחרי ש-10 ההמרות החינמיות החודשיות שלכם מומשו.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>איך משיגים יותר המרות בחודש?</summary>
+                                <p>קנו תמונות בתשלום מראש מפורטל הלקוחות — בכל כמות, בחבילות של 50. תמיד רואים בדיוק כמה תמונות מקבלים: 50 תמונות €2.50, 500 תמונות €20, 2,500 תמונות €75, 10,000 תמונות €200, 50,000 תמונות €500. הקרדיטים מתווספים לחשבון אוטומטית תוך שניות מהתשלום — בלי מפתח רישיון ובלי שום דבר להקליד.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>מה קורה אם איבדתי את מפתח ה-API?</summary>
+                                <p>מפתחות נשמרים מוצפנים (hash), ולכן אי אפשר לשחזר אותם. שללו את המפתח שאבד בפורטל וצרו חדש — השינוי נכנס לתוקף מיד.</p>
+                            </details>
+                            <details class="api-faq-item">
+                                <summary>אילו פורמטי תמונה נתמכים?</summary>
+                                <p>PNG, JPEG, BMP ו-WebP, עד 20 מ״ב ו-50 מגפיקסל, לפחות 64×64 פיקסל. תמונות שצלען הארוכה עולה על 1500 פיקסל משונות לפני ההמרה, בדיוק כמו באתר החינמי.</p>
+                            </details>
+                        </section>
+
+                        <!-- Autres versions -->
+                        <!-- Versions : les 4 façons d'utiliser PixelToPath (clés pv_* — fallback EN) -->
+<section class="section versions-section">
+    <div class="container">
+        <h2 class="section-title">בחרו את הגרסה שלכם</h2>
+        <p class="section-intro">אותו מנוע חזק – בחרו את הפורמט שמתאים לזרימת העבודה שלכם.</p>
+
+        <div class="versions-grid">
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🌐</div>
+                <h3>כלי אונליין</h3>
+                <p class="versions-card__price">חינם</p>
+                <p class="versions-card__desc">המירו תמונות ישירות בדפדפן. בלי התקנה, בלי חשבון.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/he/online/">פתחו את הכלי</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">💻</div>
+                <h3>אפליקציית דסקטופ</h3>
+                <p class="versions-card__price">חינם וקוד פתוח</p>
+                <p class="versions-card__desc">הממיר המלא על המחשב שלכם, ל-Windows ו-Linux.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/he/offline/">הורידו חינם</a>
+            </article>
+
+            <article class="card versions-card versions-card--highlight">
+                <div class="versions-card__icon">⌨️</div>
+                <h3>אפליקציית דסקטופ Pro</h3>
+                <p class="versions-card__price">€39 חד-פעמי</p>
+                <p class="versions-card__desc">תיקייה חמה, המרה באצווה ו-CLI לעומסי עבודה כבדים.</p>
+                <a class="btn primary-btn versions-card__cta" href="/he/pro/">לרכישת Pro</a>
+            </article>
+
+            <article class="card versions-card">
+                <div class="versions-card__icon">🔌</div>
+                <h3>API</h3>
+                <p class="versions-card__price">חבילה חינמית + חבילות קרדיטים</p>
+                <p class="versions-card__desc">קריאת REST אחת: שולחים תמונה, מקבלים SVG נקי. 10 חינם בחודש.</p>
+                <a class="btn secondary-btn versions-card__cta" href="/he/api/">הוציאו מפתח API</a>
+            </article>
+
+        </div>
+
+        <p class="versions-links">
+            <a href="/he/pricing/">השוו בין כל הגרסאות והמחירים ←</a>
+        </p>
+        <p class="versions-links versions-links--portal">
+            כבר יש לכם חשבון?
+            <a href="/portal/">כניסה לפורטל לקוחות ←</a>
+        </p>
+    </div>
+</section>
+
+
+                        <!-- CTA finale -->
+                        <section class="api-cta">
+                            <h2>מוכנים להמיר לווקטור בקנה מידה?</h2>
+                            <p>צרו חשבון, קחו מפתח ובצעו את הקריאה הראשונה שלכם בפחות משתי דקות.</p>
+                            <a class="btn primary-btn big-btn" href="/portal/">קבלו מפתח API חינם</a>
+                        </section>
+
+                        <p class="api-footer-note">יש שאלות על ה-API? פתחו issue ב-<a href="https://github.com/lorrisc/PixelToPath" target="_blank" rel="noopener">GitHub</a>.</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/he/">ראשי</a>
+        <a href="/he/online/">כלי אונליין</a>
+        <a href="/he/offline/">אפליקציית דסקטופ</a>
+        <a href="/he/pro/">Pro</a>
+        <a href="/he/api/">API</a>
+        <a href="/he/blog/">בלוג</a>
+        <a href="https://github.com/lorrisc/PixelToPath">קוד פתוח (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">פורטל לקוחות</a>
+    </div>
+</footer>
+
+<script src="../../assets/js/docunest-strings.js" defer></script>
+<script src="../../assets/js/docunest-popup.js" data-asset="../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../assets/js/ui-state.js"></script>
+</body>
+</html>

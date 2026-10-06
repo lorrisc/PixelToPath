@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <!-- Analytics Umami first-party : /main.7c3f9d.js et /api/e sont proxifiés
+     vers le serveur Umami par le Worker portal-proxy. Rien ne quitte
+     l'origine pixel-to-path.com : indétectable par les adblockers. -->
+<script defer src="/main.7c3f9d.js" data-website-id="77afc243-d7d0-4c23-9e8b-3badaac67041"></script>
+
+    
+<script defer src="../../../assets/js/ads-lazy.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>איך ממירים PNG ל-SVG באצווה (5 שיטות בהשוואה)</title>
+    <meta name="description" content="איך ממירים PNG ל-SVG באצווה: 5 שיטות שנבדקו בהשוואה – כלים אונליין, תיקייה חמה ב-Pro, Inkscape, סקריפטים של CLI וה-API. ל-10 קבצים או 10,000.">
+    <meta name="keywords" content="איך ממירים png ל svg באצווה, המרת כמה קובצי png ל svg בבת אחת, וקטוריזציה באצווה, המרת png ל svg אונליין באצווה, ממיר png ל svg באצווה, ממיר אצווה png ל svg">
+    <meta name="author" content="Lorris C.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="איך ממירים PNG ל-SVG באצווה (5 שיטות בהשוואה)">
+    <meta property="og:description" content="איך ממירים PNG ל-SVG באצווה: 5 שיטות שנבדקו בהשוואה – כלים אונליין, תיקייה חמה ב-Pro, Inkscape, סקריפטים של CLI וה-API. ל-10 קבצים או 10,000.">
+    <meta property="og:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="איך ממירים PNG ל-SVG באצווה (5 שיטות בהשוואה)">
+    <meta name="twitter:description" content="איך ממירים PNG ל-SVG באצווה: 5 שיטות שנבדקו בהשוואה – כלים אונליין, תיקייה חמה ב-Pro, Inkscape, סקריפטים של CLI וה-API. ל-10 קבצים או 10,000.">
+    <meta name="twitter:image" content="https://pixel-to-path.com/assets/images/og/og-logo.jpg">
+    <meta name="twitter:image:alt" content="Before and after: a PNG logo next to the same logo traced to crisp SVG output by PixelToPath">
+    <meta property="og:url" content="https://pixel-to-path.com/he/blog/batch-convert-png-to-svg/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PixelToPath">
+
+    <link rel="canonical" href="https://pixel-to-path.com/he/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ar" href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="bn" href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="cs" href="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="de" href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="en" href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="es" href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="fa" href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="fr" href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="he" href="https://pixel-to-path.com/he/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="hi" href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="id" href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="it" href="https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ja" href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ko" href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="nl" href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="pl" href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="pt-BR" href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ru" href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="sv" href="https://pixel-to-path.com/sv/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="th" href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="tr" href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="uk" href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="ur" href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="vi" href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="zh" href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">
+
+    <link rel="stylesheet" href="../../../assets/css/bundle.e62b5d6b.css">
+
+    <link rel="icon" type="image/png" href="../../../assets/favicon/favicon-96x96.png" sizes="96x96">
+
+    <!-- Schema: BlogPosting -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://pixel-to-path.com/he/blog/batch-convert-png-to-svg/#article",
+  "headline": "איך ממירים PNG ל-SVG באצווה (5 שיטות בהשוואה)",
+  "description": "איך ממירים PNG ל-SVG באצווה: 5 שיטות שנבדקו בהשוואה – כלים אונליין, תיקייה חמה ב-Pro, Inkscape, סקריפטים של CLI וה-API. ל-10 קבצים או 10,000.",
+  "url": "https://pixel-to-path.com/he/blog/batch-convert-png-to-svg/",
+  "mainEntityOfPage": "https://pixel-to-path.com/he/blog/batch-convert-png-to-svg/",
+  "inLanguage": "he",
+  "datePublished": "2026-09-12",
+  "dateModified": "2026-09-12",
+  "author": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C.",
+    "url": "https://github.com/lorrisc"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://pixel-to-path.com/#lorris",
+    "name": "Lorris C."
+  },
+  "isPartOf": "https://pixel-to-path.com/he/blog/",
+  "image": "https://pixel-to-path.com/assets/images/og/og-logo.jpg"
+}</script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "אפשר להמיר PNG ל-SVG באצווה בחינם?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "כן, בשתי דרכים. סקריפטים לשורת הפקודה (Potrace, ImageMagick, VTracer) הם חינם ובלי הגבלת קבצים, ואפליקציית הדסקטופ החינמית יחד עם Inkscape הן חינמיות אך ממירות קובץ אחד בכל פעם. קיימים גם כלים אונליין שמקבלים כמה קבצים בחינם — רק ודאו שהם באמת מבצעים וקטוריזציה וקראו את תנאי הפרטיות לפני ששולחים עבודה מסחרית."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "איך שומרים על הצבעים בהמרת אצווה?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "משתמשים במשרטט צבעוני. Potrace נשאר שחור-לבן אך ורק, לא משנה איך מתכנתים אותו; VTracer, PixelToPath Pro וה-API של PixelToPath מריצים מנוע צבע שבונה מחדש כל אזור צבע כצורת וקטור נפרדת. מתכנתים את הלולאה עם vtracer, או משתמשים ב-Pro או ב-API אם לא רוצים לתחזק את זה בעצמכם."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "אפשר להעלות ZIP של PNG ולקבל ZIP של SVG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "חלק מהכלים האונלייניים (Pixelied למשל) מקבלים העלאות מרובות ומחזירים ZIP. מצבי האצווה בדסקטופ והסקריפטים כותבים תוצאות לתיקיית פלט שאפשר לדחוס בצעד אחד. ה-API מחזיר SVG אחד לכל קריאה, ולכן הארכיון נשאר אצלכם — שזה בדרך כלל בדיוק מה שצינור בנייה רוצה."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "למה האצווה שלי יצאה כמלבנים שחורים?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "זו מלכודת ההטמעה: הכלי עטף כל PNG במעטפת SVG במקום לשרטט אותו, ומה שרואים הוא התמונה המוטמעת שלא מוצגת. פתחו קובץ פלט אחד בעורך טקסט — תג &lt;image&gt; יחיד ב-base64 מאשר זאת. מריצים את האצווה שוב עם כלי שמפיק אלמנטים אמיתיים של &lt;path&gt;."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "יש לי 50,000 קבצים. מה באמת עובד?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "תיקייה חמה או ה-API — הכול אחר נתקע הרבה לפני זה. בקצב של 60 בקשות בדקה, ה-API מסיים 50,000 תמונות בכ-14 שעות שעון, בכ-200 יורו בקרדיטים בתשלום מראש. תיקייה חמה מקומית עושה את אותה עבודה באופליין, בקצב שנקבע לפי המעבד שלכם. שניהם שומרים על הגדרות זהות לאורך כל ההרצה."
+      }
+    }
+  ]
+}</script>
+<!-- Schema: Entity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pixel-to-path.com/#organization",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "logo": "https://pixel-to-path.com/assets/images/logo.png",
+      "sameAs": [
+        "https://github.com/lorrisc/PixelToPath",
+        "https://sourceforge.net/projects/pixeltopath/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pixel-to-path.com/#website",
+      "name": "PixelToPath",
+      "url": "https://pixel-to-path.com/",
+      "publisher": {
+        "@id": "https://pixel-to-path.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pixel-to-path.com/#lorris",
+      "name": "Lorris C.",
+      "alternateName": "Lorrisc",
+      "url": "https://github.com/lorrisc",
+      "sameAs": [
+        "https://github.com/lorrisc"
+      ]
+    }
+  ]
+}
+</script>
+<!-- Schema: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "PixelToPath",
+      "item": "https://pixel-to-path.com/he/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "למדו המרת תמונה ל-SVG",
+      "item": "https://pixel-to-path.com/he/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "איך ממירים PNG ל-SVG באצווה (5 שיטות בהשוואה)",
+      "item": "https://pixel-to-path.com/he/blog/batch-convert-png-to-svg/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container nav-container">
+
+        <a href="/he/" class="brand">
+            <img src="../../../assets/images/logo.png" alt="PixelToPath Logo" width="30" height="30">
+            PixelToPath
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/he/"
+            class="">ראשי</a>
+
+            <!-- Products : Online Tool, Desktop App, Pro, API -->
+            <div class="nav-products">
+                <span class="nav-products__label">מוצרים <small>▾</small></span>
+                <div class="products-dropdown">
+                    <a href="/he/online/"
+                       class="">כלי אונליין</a>
+                    <a href="/he/offline/"
+                       class="">אפליקציית דסקטופ</a>
+                    <a href="/he/pro/"
+                       class="">אפליקציית דסקטופ Pro</a>
+                    <a href="/he/api/"
+                       class="">API</a>
+                </div>
+            </div>
+
+            <a href="/he/pricing/"
+               class="">מחירון</a>
+
+            <div class="lang-switch">
+                <span>🇮🇱 HE</span>
+                <div class="lang-dropdown">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/he/blog/batch-convert-png-to-svg/">🇮🇱 עברית</a>
+                    <a href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/">🇮🇹 Italiano</a>
+                    <a href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/sv/blog/batch-convert-png-to-svg/">🇸🇪 Svenska</a>
+                    <a href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger button (mobile only) -->
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+
+        <div class="mobile-menu-links">
+            <a href="/he/"
+               class="mobile-link ">
+                <span class="mobile-link-number">01</span>
+                <span class="mobile-link-text">ראשי</span>
+            </a>
+
+            <span class="mobile-link mobile-link--group">מוצרים</span>
+            <div class="mobile-sublist">
+                <a href="/he/online/"
+                   class="">כלי אונליין</a>
+                <a href="/he/offline/"
+                   class="">אפליקציית דסקטופ</a>
+                <a href="/he/pro/"
+                   class="">אפליקציית דסקטופ Pro</a>
+                <a href="/he/api/"
+                   class="">API</a>
+            </div>
+
+            <a href="/he/pricing/"
+               class="mobile-link ">
+                <span class="mobile-link-number">02</span>
+                <span class="mobile-link-text">מחירון</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-lang">
+                <span class="mobile-lang-label">שפה</span>
+                <div class="mobile-lang-options">
+                    
+                    <a href="https://pixel-to-path.com/ar/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇸🇦 العربية</a>
+                    <a href="https://pixel-to-path.com/bn/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇧🇩 বাংলা</a>
+                    <a href="https://pixel-to-path.com/cs/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇨🇿 Čeština</a>
+                    <a href="https://pixel-to-path.com/de/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇩🇪 Deutsch</a>
+                    <a href="https://pixel-to-path.com/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇺🇸 English</a>
+                    <a href="https://pixel-to-path.com/es/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇪🇸 Español</a>
+                    <a href="https://pixel-to-path.com/fa/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇷 فارسی</a>
+                    <a href="https://pixel-to-path.com/fr/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇫🇷 Français</a>
+                    <a href="https://pixel-to-path.com/he/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇱 עברית</a>
+                    <a href="https://pixel-to-path.com/hi/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇳 हिन्दी</a>
+                    <a href="https://pixel-to-path.com/id/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇩 Bahasa Indonesia</a>
+                    <a href="https://pixel-to-path.com/it/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇮🇹 Italiano</a>
+                    <a href="https://pixel-to-path.com/ja/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇯🇵 日本語</a>
+                    <a href="https://pixel-to-path.com/ko/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇰🇷 한국어</a>
+                    <a href="https://pixel-to-path.com/nl/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇳🇱 Nederlands</a>
+                    <a href="https://pixel-to-path.com/pl/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇵🇱 Polski</a>
+                    <a href="https://pixel-to-path.com/pt/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇧🇷 Português (Brasil)</a>
+                    <a href="https://pixel-to-path.com/ru/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇷🇺 Русский</a>
+                    <a href="https://pixel-to-path.com/sv/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇸🇪 Svenska</a>
+                    <a href="https://pixel-to-path.com/th/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇹🇭 ไทย</a>
+                    <a href="https://pixel-to-path.com/tr/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇹🇷 Türkçe</a>
+                    <a href="https://pixel-to-path.com/uk/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇺🇦 Українська</a>
+                    <a href="https://pixel-to-path.com/ur/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇵🇰 اردو</a>
+                    <a href="https://pixel-to-path.com/vi/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇻🇳 Tiếng Việt</a>
+                    <a href="https://pixel-to-path.com/zh/blog/batch-convert-png-to-svg/" class="mobile-lang-btn">🇨🇳 中文 (简体)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const burgerBtn  = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+        const isOpen = burgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO – above the fold, H1 + CTA
+        ════════════════════════════════════════ -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>איך ממירים PNG ל-SVG באצווה (5 שיטות בהשוואה)</h1>
+                <p class="blog-hero__subtitle">חמש דרכים שנבדקו להמרת כמה קובצי PNG ל-SVG בבת אחת — כלים אונליין, תיקייה חמה, אפליקציות דסקטופ חינמיות, סקריפטים ו-API — בהשוואה לפי עלות, תפוקה, תמיכה בצבע ופרטיות.</p>
+
+                <!-- Format badges -->
+                <div class="big-badges">
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG × 10</span>
+                    
+                    <span class="big-badges__item big-badges__item--primary">PNG × 10,000</span>
+                    
+                    <span class="fmt-arrow">→</span>
+                    
+                    <span class="big-badges__item big-badges__item--success">SVG</span>
+                    
+                </div>
+
+                <!-- Trust badges -->
+                <div class="badges">
+                    <span class="badge__item badge__item--accent">✓ 5 שיטות בהשוואה</span>
+                    <span class="badge__item">10 קבצים או 10,000</span>
+                    <span class="badge__item">כולל אפשרויות חינמיות</span>
+                    <span class="badge__item">שרטוט אמיתי, בלי הטמעות</span>
+                </div>
+
+                <a href="/he/online/" class="btn primary-btn blog-hero__cta">המירו קובץ אחד חינם עכשיו ←</a>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             INTRO – the batch problem + embed-vs-trace warning
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>בעיית האצווה — והמלכודת שכדאי להימנע ממנה</h2>
+                    <p>יש לכם עשרה PNG. או ארבע מאות. או — כמו המעצבת שהשאלה שלה על 51,000 קבצים פותחת אחד השרשורים הארוכים בפורומים הקהילתיים של Adobe — ספריית נכסים שלמה שצריכה להפוך לווקטור. להמיר תמונה אחת ידנית זה בסדר; מעבר לזה צריך זרימת עבודה של אצווה: תהליך אחד שהופך תיקייה שלמה של תמונות רסטר לתיקייה של SVG. ואם היום זה באמת קובץ חשוב אחד בלבד,  <a href="/he/online/">הממיר החינמי האונליין מ-PNG ל-SVG</a> עושה את העבודה בפחות מדקה — המדריך הזה עוסק בכל מה שמעבר לכך.</p>
+                    <p>הגדרה אחת לפני ההשוואה. המרת אצווה אמיתית אומרת שכל PNG עובר וקטוריזציה: הצורות שלו נציירות מחדש כנתיבים מתמטיים — זה בדיוק  <a href="/he/blog/vectorize-image/">מה וקטוריזציה עושה בפועל</a>. הרבה כלים מדלגים על השלב הזה לגמרי, וזה משנה הכול בפלט.</p>
+                    <p class="content-callout content-callout--warn">מצב הכשל מספר 1: חלק מה״ממירי SVG״ לא משרטטים כלום — הם עוטפים את ה-PNG שלכם בתוך קובץ svg כתמונה מוטמעת. התוצאה ״מתרחבת מושלם״ כי מדובר עדיין במפת סיביות בתחפושת. פתחו כל קובץ פלט בעורך טקסט: תג &lt;image&gt; אחד ענק ב-base64 במקום אלמנטים מסוג &lt;path&gt; אומר שלא בוצעה וקטוריזציה. כל שיטה להלן נשפטת לפי שרטוט אמיתי.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             REAL OUTPUT – before/after traced by the tool
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">תוצאות אמיתיות של הממיר</h2>
+                
+
+<figure class="ba-compare ba-compare--sample">
+    <div class="ba-compare__pair">
+        <div class="ba-panel ba-panel--before">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">לפני · המקור</span>
+                <span class="size-badge">5 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-input.png" width="320" height="320" loading="lazy" decoding="async" alt="קובץ PNG: לוגו כחול-כהה עגול עם חץ כפול לבן">
+            </div>
+        </div>
+        <span class="ba-compare__arrow" aria-hidden="true">→</span>
+        <div class="ba-panel ba-panel--after">
+            <div class="ba-panel__head">
+                <span class="ba-panel__label">אחרי · SVG</span>
+                <span class="size-badge">פריסט שחור-לבן · 2 KB</span>
+            </div>
+            <div class="ba-stage">
+                <img src="../../../assets/images/samples/logo-bw.svg" width="320" height="320" loading="lazy" decoding="async" alt="אותו לוגו שהומר ל-SVG עם פריסט שחור-לבן: עקומות חלקות, מילוי שחור">
+            </div>
+        </div>
+    </div>
+    <figcaption>המרה אמיתית שבוצעה עם הכלי: ה-PNG המקורי משמאל שורטט עם פריסט שחור-לבן ל-SVG שמימין — קובץ וקטור שנשאר חד לחלוטין בכל רמת זום.</figcaption>
+</figure>
+
+                
+<figure class="zoom-strip">
+    <img src="../../../assets/images/samples/logo-zoom.webp" width="1600" height="700" loading="lazy" decoding="async" alt="אותו לוגו בהגדלה של 400%: משמאל רואים את הפיקסלים של ה-PNG; מימין עקומות ה-SVG נשארות חלקות להפליא.">
+    <figcaption>אותו לוגו בהגדלה של 400%: משמאל רואים את הפיקסלים של ה-PNG; מימין עקומות ה-SVG נשארות חלקות להפליא.</figcaption>
+</figure>
+
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             METHODS 1–3 – online, hot folder, free desktop
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="content-section">
+                    <h2>שיטה 1: ממירי אצווה אונליין</h2>
+                    <p>הדרך המהירה לאצווה קטנה. כמה כלים אונליין מקבלים כמה קבצים בבת אחת: to.imagestool.com מאפשר לגרור קבוצת PNG ומעבד אותה מקומית בדפדפן; Pixelied מקבל העלאות מרובות ומחזיר ZIP של תוצאות; ImageResizer.com וגרסת הניסיון באתר של reaConverter פועלות באותו אופן. בלי התקנה, בלי שורת פקודה — משחררים את הקבצים ומורידים את התוצאות.</p>
+                    <p>שתי בדיקות לפני שסומכים על אחד מהם עם עבודה אמיתית. ראשית, ודאו שהכלי באמת משרטט: חלק מאתרי ה״אצווה״ רק מריצים המרות קובץ-בודד בשרת ומחזירים ZIP של סופר-SVG — המלכודת מהאזהרה למעלה. שנית, קראו את תנאי הפרטיות אם העבודה מסחרית או תחת הסכם סודיות: כלים מבוססי דפדפן לא מעלים את הקבצים שלכם, כלים מבוססי שרת שולחים כל תמונה למחשב של מישהו אחר. לשם שקיפות: הממיר האונליין החינמי של PixelToPath עצמו הוא במכוון לקובץ בודד. זה הכלי הנכון ללוגו החשוב האחד, לא לתיקייה של ארבע מאות — והוא נכלל בהשוואה הזאת בדיוק בתור זה.</p>
+
+                    <h2>שיטה 2: אפליקציית דסקטופ עם תיקייה חמה (PixelToPath Pro)</h2>
+                    <p>אם אצוות הן עניין שבועי ולא חד-פעמי, תיקייה חמה מוחקת לגמרי את הצעד הידני. PixelToPath Pro (Windows ו-Linux) מנטר תיקייה וממיר כל תמונה שנוחתת בה, אוטומטית. כל הזרימה היא ארבעה צעדים:</p>
+                    <ol>
+                        <li>בוחרים תיקיות: את התיקייה לניטור ואת תיקיית הפלט שאליה ה-SVG אמור להגיע.</li>
+                        <li>משחררים את ה-PNG: שומרים, מעתיקים או גוררים את כל האצווה לתיקיית הקלט — עשרה קבצים או כמה מאות.</li>
+                        <li>נותנים לזה לעבוד: כל קובץ נשרטט בהגעה עם פרופיל ההגדרות השמור שלכם, כולו על המחשב שלכם.</li>
+                        <li>אוספים את ה-SVG: התוצאות מופיעות בתיקיית הפלט, בשמות הקבצים המקוריים.</li>
+                    </ol>
+                    <p>החלק שחשוב לאצוות: פרופיל הגדרות אחד חל על כל התור. להמיר ארבע מאות אייקונים ידנית — קובץ 300 לעולם לא ידמה בדיוק לקובץ 12; עם פרופיל, כל פלט עקבי — זה הפרט שהורג זרימות עבודה ידניות. הכול רץ מקומית, ולכן אין תקרת העלאה ואף קובץ לא עוזב את המחשב. Pro עולה 39 יורו חד-פעמי (לפני מע״מ), רישיון לכל החיים למשתמש אחד על עד 3 מחשבים; העמוד של  <a href="/he/pro/">המרת האצווה עם תיקייה חמה</a> מפרט את כל מה שכלול. זו אחת מחמש אפשרויות כאן — אבל היא היחידה שנבנתה כדי שהמרת אצווה תהיה צעד שמפסיקים לחשוב עליו.</p>
+
+                    <h2>שיטה 3: אפליקציות דסקטופ חינמיות ו-Inkscape</h2>
+                    <p>כבר משתמשים באפליקציית הדסקטופ החינמית? היא ממירה PNG, JPG, BMP ו-WebP ל-SVG באופליין, בלי הגבלת מספר קבצים ועם גישה מלאה להגדרות השרטוט המתקדמות — אבל קובץ אחד בכל פעם. אצווה היא בדיוק מה שהשדרוג ל-Pro מוסיף, ושווה לומר את זה ישירות במקום להעלים עין. אם רוצים חינם, מקומי ועם ממשק גרפי,  <a href="/he/offline/">ממיר הדסקטופ החינמי</a> היא הבחירה הכנה לקובץ בודד: התפוקה הריאלית היא עשרות קבצים ביום, לא מאות.</p>
+                    <p>Inkscape היא סוס העבודה החינמי השני. תיבת הדו-שיח Trace Bitmap שלה גם היא לתמונה בודדת, ולמרות ש-Inkscape כוללת אפשרויות שורת פקודה שאפשר לשרשר בלולאה, החוויה מגושמת וכמעט לא מתועדת. GIMP, לידיעת הקורא, אין ייצוא וקטור אצוותי מובנה בכלל — שרשורי הפורומים שלה מאשרים זאת באופן קבוע. לפני שמשקיעים שעות בזרימת עבודה גרפית, כדאי לוודא שבאמת צריך וקטורים לכל קובץ: ההשוואה  <a href="/he/blog/svg-vs-png/">SVG מול PNG לאינטרנט</a> עוסקת בשאלה מתי ההמרה משתלמת.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             METHODS 4–5 + COMPARISON TABLE
+             cluster-link placeholders: CLI (cluster-2-post-0)
+             and potrace/imagemagick (cluster-2-post-1) articles
+        ════════════════════════════════════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>שיטה 4: סקריפטים לשורת הפקודה (ImageMagick, Potrace, VTracer)</h2>
+                    <p>לעבודות אצווה חד-פעמיות, סקריפט של עשר שורות מנצח כל ממשק גרפי. צינור שחור-לבן קלאסי משרשר ImageMagick לתוך Potrace — המרה, ואז שרטוט: <code>magick input.png input.pbm &amp;&amp; potrace -s -o input.svg input.pbm</code></p>
+                    <p>עוטפים את זה בלולאת for על התיקייה ו-Potrace מפיק נתיבי וקטור אמיתיים במהירות המעבד שלכם — אבל אך ורק בשחור-לבן. לצבע, מכוונים את אותה לולאה אל vtracer, משרטט ה-Rust בקוד פתוח שמניע גם את PixelToPath. לשני הכלים מספיק דגלים כדי למלא מדריך שלם, ולכן לכל אחד מוקדש מדריך נפרד (יקושר עם הפרסום). סקריפטים מנצחים בעלות (חינם), בפרטיות (מקומי) ובנפח (אלפים בכל הרצה); הם מפסידים בכניסה אליהם — אתם מתחזקים צינור עיבוד, ואף אחד לא מחזיר את אחר הצהריים שבו הוא התקלקל.</p>
+                    <!-- cluster-link:cluster-2-post-0 -->
+                    <!-- cluster-link:cluster-2-post-1 -->
+
+                    <h2>שיטה 5: לולאת API ל-CI ולעבודה בצד השרת</h2>
+                    <p>כשההמרות חייבות לקרות בשרת — במהלך דיפלוי, בתוך צינור בנייה, מהבק-אנד — כלים מקומיים מפסיקים להיות אופציה. התבנית היא לולאה: POST חסר-מצב אחד לכל תמונה עם מפתח ה-Bearer שלכם, וכל SVG נכתב ישירות לצינור הנכסים שלכם. המגבלה היא 60 בקשות בדקה לכל מפתח, אז מקצבים את הלולאה ומנסים שוב בקריאות שנחסמו עם backoff מעריכי; קריאות שנכשלו לא צורכות קרדיטים. אפשר  <a href="/he/api/">לאוטומט את כל האצווה עם ה-REST API</a> בלי שום התקנה מקומית — וזו בדיוק המטרה.</p>
+                    <p>חשבון העלות צפוי: תמונות בתשלום מראש יורדות מ-0.05 יורו עד 0.01 יורו לתמונה בנפחים גדולים, כך ש-500 תמונות עולות כ-20 יורו ו-10,000 כ-200 יורו — וכל חשבון מוסיף 10 המרות חינם מעל זה, בכל חודש. בוחרים API כשההמרות חייבות להיות ניתנות לשחזור, בצד השרת ובלי תלות מקומית. בוחרים תיקייה חמה כשהן מקומיות ואינטראקטיביות. השניים יחד מכסים כמעט כל אצווה בעולם האמיתי.</p>
+
+                    <h2>PNG ל-SVG באצווה: כל חמש השיטות בהשוואה</h2>
+                    <p>אותו קלט, חמישה חוזים שונים לגמרי. עלות ופרטיות הם מבניים, לא פרסומיים; התפוקה מניחה מפעיל אחד (או שרת צנוע אחד) על חומרה ריאלית; ו״צבע״ פירושו פלט וקטור רב-צבעי אמיתי, לא צללית שחורה.</p>
+                    <table class="vs-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">שיטה</th>
+                                <th scope="col">עלות</th>
+                                <th scope="col">קבצים/יום (ריאלי)</th>
+                                <th scope="col">צבע</th>
+                                <th scope="col">שליטה באיכות</th>
+                                <th scope="col">פרטיות</th>
+                                <th scope="col">מיומנות נדרשת</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">ממירים אונליין</th>
+                                <td data-label="עלות">חינם</td>
+                                <td data-label="קבצים/יום (ריאלי)">50-500 (ידני)</td>
+                                <td data-label="צבע">תלוי בכלי</td>
+                                <td data-label="שליטה באיכות">פריסטים בלבד</td>
+                                <td data-label="פרטיות">משתנה — בדקו תנאים</td>
+                                <td data-label="מיומנות נדרשת">אין</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">תיקייה חמה ב-Pro</th>
+                                <td data-label="עלות">39 יורו חד-פעמי</td>
+                                <td data-label="קבצים/יום (ריאלי)">אלפים (מעבד מקומי)</td>
+                                <td data-label="צבע">כן</td>
+                                <td data-label="שליטה באיכות">פרופיל אחד, כל ההגדרות</td>
+                                <td data-label="פרטיות">100% מקומי</td>
+                                <td data-label="מיומנות נדרשת">אין</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">דסקטופ חינמי / Inkscape</th>
+                                <td data-label="עלות">חינם</td>
+                                <td data-label="קבצים/יום (ריאלי)">20-100 (אחד בכל פעם)</td>
+                                <td data-label="צבע">כן (קבצים בודדים)</td>
+                                <td data-label="שליטה באיכות">מלאה, לכל קובץ</td>
+                                <td data-label="פרטיות">100% מקומי</td>
+                                <td data-label="מיומנות נדרשת">בסיסית</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">סקריפטים (CLI)</th>
+                                <td data-label="עלות">חינם</td>
+                                <td data-label="קבצים/יום (ריאלי)">אלפים+ (מעבד מקומי)</td>
+                                <td data-label="צבע">Potrace לא — VTracer כן</td>
+                                <td data-label="שליטה באיכות">מלאה (דגלים)</td>
+                                <td data-label="פרטיות">מקומי</td>
+                                <td data-label="מיומנות נדרשת">שורת פקודה</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">לולאת API</th>
+                                <td data-label="עלות">10 חינם/חודש, ואז 0.01-0.05 יורו/תמונה</td>
+                                <td data-label="קבצים/יום (ריאלי)">עשרות אלפים (60 בקשות/דקה)</td>
+                                <td data-label="צבע">כן</td>
+                                <td data-label="שליטה באיכות">פרמטרי מנוע לכל קריאה</td>
+                                <td data-label="פרטיות">הקבצים מועלים</td>
+                                <td data-label="מיומנות נדרשת">מפתח</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>אם ממירים אצוות יותר מפעם בחודש, שיטות 2 ו-5 מחזירות את עצמן כבר אחר הצהריים הראשון. לכל מה שקטן יותר, שיטה 1 או 3 עולה רק קצת מהזמן שלכם.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             RELATED GUIDES – internal links
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container" style="text-align:center;">
+                <h2 class="section-title">מדריכי המרה נוספים</h2>
+                <p class="section-intro">המרת אצווה היא הצעד הראשון. אלה מכסים את ההמשך.</p>
+
+                <div class="related-tools">
+                    
+                    <a href="/blog/vectorize-image/" class="related-tool-link">
+                        ✏️ מה וקטוריזציה עושה בפועל
+                    </a>
+                    
+                    <a href="/blog/svg-vs-png/" class="related-tool-link">
+                        📈 SVG מול PNG לאינטרנט
+                    </a>
+                    
+                    <a href="/blog/import-svg/" class="related-tool-link">
+                        🎨 ייבוא קובצי ה-SVG ל-Figma או ל-Canva
+                    </a>
+                    
+                    <a href="/online/" class="related-tool-link">
+                        🌐 ממיר אונליין חינם
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FAQ – FAQPage schema injected in <head>
+        ════════════════════════════════════════ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">שאלות נפוצות</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>אפשר להמיר PNG ל-SVG באצווה בחינם?</summary>
+                        <p>כן, בשתי דרכים. סקריפטים לשורת הפקודה (Potrace, ImageMagick, VTracer) הם חינם ובלי הגבלת קבצים, ואפליקציית הדסקטופ החינמית יחד עם Inkscape הן חינמיות אך ממירות קובץ אחד בכל פעם. קיימים גם כלים אונליין שמקבלים כמה קבצים בחינם — רק ודאו שהם באמת מבצעים וקטוריזציה וקראו את תנאי הפרטיות לפני ששולחים עבודה מסחרית.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>איך שומרים על הצבעים בהמרת אצווה?</summary>
+                        <p>משתמשים במשרטט צבעוני. Potrace נשאר שחור-לבן אך ורק, לא משנה איך מתכנתים אותו; VTracer, PixelToPath Pro וה-API של PixelToPath מריצים מנוע צבע שבונה מחדש כל אזור צבע כצורת וקטור נפרדת. מתכנתים את הלולאה עם vtracer, או משתמשים ב-Pro או ב-API אם לא רוצים לתחזק את זה בעצמכם.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>אפשר להעלות ZIP של PNG ולקבל ZIP של SVG?</summary>
+                        <p>חלק מהכלים האונלייניים (Pixelied למשל) מקבלים העלאות מרובות ומחזירים ZIP. מצבי האצווה בדסקטופ והסקריפטים כותבים תוצאות לתיקיית פלט שאפשר לדחוס בצעד אחד. ה-API מחזיר SVG אחד לכל קריאה, ולכן הארכיון נשאר אצלכם — שזה בדרך כלל בדיוק מה שצינור בנייה רוצה.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>למה האצווה שלי יצאה כמלבנים שחורים?</summary>
+                        <p>זו מלכודת ההטמעה: הכלי עטף כל PNG במעטפת SVG במקום לשרטט אותו, ומה שרואים הוא התמונה המוטמעת שלא מוצגת. פתחו קובץ פלט אחד בעורך טקסט — תג &lt;image&gt; יחיד ב-base64 מאשר זאת. מריצים את האצווה שוב עם כלי שמפיק אלמנטים אמיתיים של &lt;path&gt;.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>יש לי 50,000 קבצים. מה באמת עובד?</summary>
+                        <p>תיקייה חמה או ה-API — הכול אחר נתקע הרבה לפני זה. בקצב של 60 בקשות בדקה, ה-API מסיים 50,000 תמונות בכ-14 שעות שעון, בכ-200 יורו בקרדיטים בתשלום מראש. תיקייה חמה מקומית עושה את אותה עבודה באופליין, בקצב שנקבע לפי המעבד שלכם. שניהם שומרים על הגדרות זהות לאורך כל ההרצה.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="container ads-slot">
+    
+    <!-- display1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1281752767600519"
+         data-ad-slot="5925419098"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+
+        <!-- ═══════════════════════════════════════
+             FINAL CTA
+        ════════════════════════════════════════ -->
+        <section class="section bg-light">
+            <div class="container blog-cta-wrap">
+                <h2>מוכנים לחסל את תור ה-PNG?</h2>
+                <p>ממירים קובץ בודד בכלי האונליין החינמי, מקימים תיקייה חמה ב-Pro או מריצים לולאת API — כל הדרכים מסתיימות בנתיבי וקטור נקיים ואמיתיים.</p>
+                <div class="double-buttons">
+                    <a href="/he/online/" class="btn primary-btn big-btn">המירו קובץ אחד חינם עכשיו ←</a>
+                    <a href="/he/offline/" class="btn secondary-btn big-btn">⬇️ הורדת אפליקציית הדסקטופ</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section donate-section">
+    <div class="container">
+        <h3>תמכו בפיתוח קוד פתוח</h3>
+        <p>PixelToPath חינם לשימוש. אם הכלי חסך לכם זמן, שקלו לפנק אותי בכוס קפה.</p>
+        <a href="https://ko-fi.com/lorrisfrompixeltopath" target="_blank" class="donate-btn">❤️ לתרומה ב-Ko-fi</a>
+    </div>
+</section>
+    </main>
+
+    
+
+<footer>
+    <div class="container" id="footernavigation">
+        <p>2025 PixelToPath</p>
+        <a href="/he/">ראשי</a>
+        <a href="/he/online/">כלי אונליין</a>
+        <a href="/he/offline/">אפליקציית דסקטופ</a>
+        <a href="/he/pro/">Pro</a>
+        <a href="/he/api/">API</a>
+        <a href="/he/blog/">בלוג</a>
+        <a href="https://github.com/lorrisc/PixelToPath">קוד פתוח (MIT)</a>
+    </div>
+    <div class="container" id="footerlegal">
+        <a href="/legal/">Legal notice</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/portal/">פורטל לקוחות</a>
+    </div>
+</footer>
+
+<script src="../../../assets/js/docunest-strings.js" defer></script>
+<script src="../../../assets/js/docunest-popup.js" data-asset="../../../assets/" defer></script>
+
+
+
+
+    <script defer src="../../../assets/js/ui-state.js"></script>
+</body>
+</html>

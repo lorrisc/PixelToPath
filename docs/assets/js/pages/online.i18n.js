@@ -1,7 +1,7 @@
 /**
  * online.i18n.js - Translations for all hardcoded strings in online.js
  * Covers: overlay messages, status, live badge, detected type labels, param tooltips
- * Languages: ar, bn, cs, de, en, es, fa, fr, hi, id, it, ja, ko, nl, pl, pt-BR, ru, sv, th, tr, uk, ur, vi, zh
+ * Languages: ar, bn, cs, de, en, es, fa, fr, he, hi, id, it, ja, ko, nl, pl, pt-BR, ru, sv, th, tr, uk, ur, vi, zh
  */
 window.PTP_I18N = {
 
@@ -962,6 +962,46 @@ window.PTP_I18N = {
       turdsize:         { title: "Avbrusning", text: "Ignorerar former mindre än denna yta (i pixlar): högre = mindre brus." },
       alphamax:         { title: "Hörnutjämning", text: "0 behåller vassa hörn (polygon); högre värden ger mjukare kurvor (Potrace-standard: 1,0)." },
       opttolerance:     { title: "Kurvoptimering", text: "Tolerans för att slå ihop kurvsegment: högre = färre noder och en lättare SVG." },
+    },
+  },
+
+  he: {
+    uploading:    "מעלה…",
+    converting:   "ממיר…",
+    format_error: "הפורמט אינו נתמך – PNG, JPG, BMP או WebP בלבד",
+    upload_error: (msg) => `✕ העלאה: ${msg}`,
+    conv_error:   (msg) => `✕ ${msg}`,
+    ready:        (kb)  => `✓ מוכן · ${kb} ק״ב`,
+    saved:        (n)   => `✓ נשמר בשם ${n}`,
+    live_converting: "ממיר…",
+    live_error:      "שגיאה",
+    live_ready:      "חי",
+    type_photo:        "📷 זוהה צילום",
+    type_illustration: "🎨 זוהה איור",
+    type_logo:         "✦ זוהה לוגו / אייקון",
+    type_line_art:     "✏️ זוהה איור קו",
+    type_adjusted:     "— ההגדרות כווננו אוטומטית",
+    dl_gate_title: 'ההורדה מתחילה…',
+    dl_gate_text:  'PixelToPath חינם. תרומה קטנה עוזרת לכסות את עלויות האחסון.',
+    dl_gate_cta:   '❤️ תרומה ב-Ko-fi',
+    dl_gate_now:   'הורדה עכשיו',
+    dl_gate_unit:  'שנ׳',
+    dl_gate_done:  '✓ הורד!',
+    params: {
+      colormode:        { title: "מצב צבע",             text: "צבע ממיר את כל הצבעים לווקטור. שחור-לבן ממיר קודם לגווני אפור – אידיאלי לסקיצות, לאיורי קו וללוגואים בצבע אחיד." },
+      hierarchical:     { title: "היררכיה",             text: "שכבות מעורבות = השכבות מונחות זו על גבי זו כמו צבע. חיתוך פנימי = שכבות חוצבות זו בזו, כמו סטנסיל." },
+      color_precision:  { title: "דיוק צבע",            text: "סיביות משמעותיות לכל ערוץ RGB לקיבוץ צבעים דומים. גבוה = יותר צבעים מובחנים וקובץ כבד יותר. נמוך = פחות צבעים, משטחי צבע רחבים." },
+      layer_difference: { title: "הפרש בין שכבות",     text: "המרחק הצבעוני המזערי בין שכבות סמוכות. נמוך = מעברים עדינים. גבוה = משטחי צבע רחבים בסגנון פוסטר." },
+      mode:             { title: "מצב עקומות",          text: "ספליין = עקומות בזייה חלקות, הטוב ביותר לרוב התמונות. מצולע = מקטעים ישרים בלבד. פיקסל = בלי החלקה, עוקב אחרי גבולות הפיקסל בדיוק מלא." },
+      filter_speckle:   { title: "סינון כתמים",         text: "מסיר כתמים מבודדים הקטנים מהגודל הזה (px). הגדילו כדי לנקות רעשים, גרעיניות JPEG או פגמי דחיסה." },
+      corner_threshold: { title: "סף פינות",            text: "הזווית המזערית (°) שתיחשב פינה חדה. נמוך = יותר פינות. גבוה = עקומות חלקות יותר. הגדירו 180 כדי לחסל את כל הפינות." },
+      length_threshold: { title: "סף אורך",             text: "האורך המזערי של מקטע ספליין לפני חלוקה. גבוה = עקומות פשוטות יותר. נמוך = יותר פירוט ויותר מקטעים." },
+      splice_threshold: { title: "סף חיבור מקטעים",     text: "הזווית המזערית לחלוקת ספליין לשני מקטעים. נמוך = יותר חלוקות ופירוט עדין. גבוה = עקומות רצופות ארוכות יותר." },
+      path_precision:   { title: "דיוק נתיב",           text: "ספרות אחרי הנקודה בקואורדינטות נתיב ה-SVG. גבוה = מדויק יותר וקובץ כבד יותר. 2–3 אידיאלי לרוב השימושים באינטרנט." },
+      invert:           { title: "היפוך",               text: "מחליף שחור ולבן לפני ההמרה לווקטור. שימושי כשהציור מכיל קווים לבנים על רקע כהה או נראה כמו שלילי." },
+      turdsize:         { title: "ניקוי רעשים", text: "מתעלם מצורות הקטנות מהשטח הזה (בפיקסלים): גבוה יותר = פחות רעש." },
+      alphamax:         { title: "עיגול פינות", text: "0 שומר על פינות חדות (מצולע); ערכים גבוהים יותר מחליקים לעקומות (ברירת מחדל של Potrace: 1.0)." },
+      opttolerance:     { title: "אופטימיזציית עקומות", text: "סף למיזוג מקטעי עקומה: גבוה יותר = פחות צמתים ו-SVG קל יותר." },
     },
   },
 
